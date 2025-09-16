@@ -1,0 +1,783 @@
+"PLEASE do not sort this page, it will break the scripts (But manually add stuff where appropriate)",,,,Can be completed with v1.2.x data. Leave the class columns empty.
+Class (Reference only) added to help with organizing efforts. Be nice and add them as you go.
+,Game,,Server,Changed,,Client Duplicates
+class (for reference only),Reference,class (for reference only),Reference,Name,Notes,188
+a (PathPoint),func_1179_a,,func_730_a,isAssigned,Returns true if this point has already been assigned to a path,,[1]
+a (PathPoint),func_1180_a,,func_731_a,distanceTo,Returns the linear distance to another path point
+ad (IsomPreviewCanvas),func_1263_a,*,*,getDataFolder,Gets the minecraft directory.
+aj (Vec3D),func_1246_b,,*,crossProduct,Returns a new vector with the result of this vector x the specified vector.
+aj (Vec3D),func_1247_a,aw (Vec3D),func_766_a,getIntermediateWithXValue,"Returns a new vector with x value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible."
+aj (Vec3D),func_1248_b,aw (Vec3D),func_768_b,createVector,Static method to create a new vector in the vector list and return it.
+aj (Vec3D),func_1249_b,,*,rotateAroundY,Rotates the vector around the y axis by the specified angle.
+aj (Vec3D),func_1250_b,aw (Vec3D),func_763_b,getIntermediateWithYValue,"Returns a new vector with y value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible."
+aj (Vec3D),func_1251_c,aw (Vec3D),func_767_a,distanceTo,"Euclidean distance between this and the specified vector, returned as double."
+aj (Vec3D),func_1252_b,aw (Vec3D),func_758_b,normalize,Normalizes the vector to a length of 1 (except if it is the zero vector)
+aj (Vec3D),func_1253_c,aw (Vec3D),func_765_c,lengthVector,Returns the length of the vector.
+aj (Vec3D),func_1254_e,aw (Vec3D),func_756_e,setComponents,"Sets the x,y,z components of the vector as specified."
+aj (Vec3D),func_1255_d,aw (Vec3D),func_759_d,squareDistanceTo,"The square of the Euclidean distance between this and the vector of x,y,z components passed in."
+aj (Vec3D),func_1256_c,aw (Vec3D),func_762_c,getIntermediateWithZValue,"Returns a new vector with z value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible."
+aj (Vec3D),func_1257_c,aw (Vec3D),func_757_c,addVector,"Adds the specified x,y,z vector components to this vector and returns the resulting vector. Does not change this vector."
+aj (Vec3D),func_1258_a,,*,rotateAroundX,Rotates the vector around the x axis by the specified angle.
+aj (Vec3D),func_1259_a,aw (Vec3D),func_761_a,initialize,Initializes the next empty vector slot in the list to 0.
+aj (Vec3D),func_1260_a,aw (Vec3D),func_760_a,createVectorHelper,"Static method for creating a new Vec3D given the three x,y,z values. This is only called from the other static method which creates and places it in the list."
+aj (Vec3D),func_1261_d,aw (Vec3D),func_764_b,squareDistanceTo,The square of the Euclidean distance between this and the specified vector.
+aj (Vec3D),func_1262_e,,*,subtract,Returns a new vector with the result of the specified vector minus this.
+an (SlotCrafting),func_4105_a,,*,isItemValid,Check if the stack is a valid item for this slot. Always true beside for the armor slots.
+ar (CraftingInventoryCB),func_1103_a,,*,onCraftMatrixChanged,Callback for when the crafting matrix is changed.
+ar (CraftingInventoryCB),func_1104_a,,*,onCraftGuiClosed,Callback for when the crafting gui is closed.
+av (ItemBlock),func_192_a,,func_78_a,onItemUse,"Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS !"
+aw (IChunkProvider),func_534_a,,func_4055_a,populate,Populates chunk with ores etc etc
+az (SpawnerAnimals),func_1149_a,,func_441_a,createRandomSpawn,Spawn one random creature (possibly a Skeleton on a Spider) at a random location.
+az (SpawnerAnimals),func_4154_a,,func_442_a,spawnCreatures,Spawn three random creatures of types in the subclass array.,DUPLICATE,DUPLICATE
+az (SpawnerAnimals),func_4153_a,,func_440_a,getRandomPosition,Generate a random location in the specified chunk.,DUPLICATE,DUPLICATE
+b (BlockChest),func_286_h,,func_297_g,isThereANeighborChest,"Checks the neighbor blocks to see if there is a chest there. Args: world, x, y, z"
+bd (TileEntityMobSpawner),func_475_b,,func_184_b,updateEntity,"Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count ticks and creates a new spawn inside its implementation."
+bd (TileEntityMobSpawner),func_481_b,,func_188_b,writeToNBT,Writes a tile entity to NBT.
+bd (TileEntityMobSpawner),func_482_a,,func_186_a,readFromNBT,Reads a tile entity from NBT.
+bd (TileEntityMobSpawner),func_483_c,,func_196_d,updateDelay,Sets the delay before a new spawn (base delay of 200 + random number up to 600).
+be (OpenGlCapsChecker),func_1213_a,,*,checkARBOcclusion,Checks if we support OpenGL occlusion.
+bf (ThreadDownloadResources),func_1208_b,,*,closeMinecraft,Called when Minecraft is closing down.
+bf (ThreadDownloadResources),func_1209_a,,*,loadResource,Loads a resource and passes it to Minecraft to install.
+bf (ThreadDownloadResources),func_1210_a,,*,reloadResources,Reloads the resource folder and passes the resources to Minecraft to install.
+bf (ThreadDownloadResources),func_1211_a,,*,downloadAndInstallResource,Downloads the resource and saves it to disk then installs it.
+bf (ThreadDownloadResources),func_1212_a,,*,downloadResource,Downloads the resource and saves it to disk.
+bh (GuiScreen),func_6447_a,,*,validate,Causes the screen to lay out its subcomponents again. This is the equivalent of the Java call Container.validate().,DUPLICATE,DUPLICATE
+bh (GuiScreen),func_564_d,,*,handleInput,Delegates mouse and keyboard input.
+bh (GuiScreen),func_565_a,,*,mouseClicked,Called when the mouse is clicked.
+bh (GuiScreen),func_566_e,,*,handleMouseInput,Handles mouse input.
+bh (GuiScreen),func_568_a,,*,deleteWorld,Deletes the selected world.
+bh (GuiScreen),func_569_f,,*,handleKeyboardInput,Handles keyboard input.
+bh (GuiScreen),func_570_g,,*,updateScreen,Called from the main game loop to update the screen.
+bh (GuiScreen),func_571_a,,*,drawScreen,Draws the screen and all the components in it.
+bh (GuiScreen),func_572_a,,*,actionPerformed,Fired when a control is clicked. This is the equivalent of ActionListener.actionPerformed(ActionEvent e).
+bh (GuiScreen),func_573_b,,*,mouseMoved,Called when the mouse is moved.,DUPLICATE,DUPLICATE
+bh (GuiScreen),func_574_c,,*,getClipboardString,Returns a string stored in the system clipboard.
+bh (GuiScreen),func_6448_a,,*,initGui,"Initialises the GUI screen, adding and layout out the components.",DUPLICATE,DUPLICATE
+bh (GuiScreen),func_6449_h,,*,dispose,Called when the screen is unloaded. Used to disable keyboard repeat events.,DUPLICATE,DUPLICATE
+bh (GuiScreen),func_580_a,,*,keyTyped,Fired when a key is typed. This is the equivalent of KeyListener.keyTyped(KeyEvent e).
+bl (PathEntity),func_1205_a,,func_727_a,getPosition,Gets the position that an entity should be at in the current point in the path
+bl (PathEntity),func_1206_a,,func_728_a,incrementPathIndex,Directs this path to the next point in its array
+bl (PathEntity),func_1207_b,,func_729_b,isFinished,Returns true if this path has reached the end
+bn (WorldRenderer),func_1194_f,,*,MarkDirty,Marks the current renderer data as dirty and needing to be updated
+bs (ItemTool),func_4017_a,,*,isFull3D,Returns True is the item is renderer in full 3D when hold.
+bs (ItemTool),func_4020_a,,*,getDamageVsEntity,Returns the damage against a given entity.
+bs (ItemTool),func_4021_a,,*,hitEntity,Current implementations of this method in child classes do not use the entry argument beside ev. They just raise the damage on the stack.
+bs (ItemTool),func_203_a,,func_75_a,hitBlock,Current implementations of this method in child classes do not use the entry argument beside ev. They just raise the damage on the stack.
+bs (ItemTool),func_204_a,,func_79_a,getStrVsBlock,"Returns the strength of the stack against a given block. 1.0F base, (Quality+1)*2 if correct blocktype, 1.5F if sword"
+bv (CraftingRecipe),func_1182_a,,*,matchRecipe,Returns true if the passed in array of item ids matches the recipe
+bv (CraftingRecipe),func_1183_b,,*,createResult,Returns a new item stack that this recipe makes
+bv (CraftingRecipe),func_1184_a,,*,getRecipeSize,Returns the size of the recipe area
+bv (CraftingRecipe),func_1185_a,,*,matches,Returns true if a specific recipe location matches
+cf (AxisAlignedBB),func_1160_c,dg (AxisAlignedBB),func_711_b,copy,Returns a copy of the bounding box.
+cf (AxisAlignedBB),func_1161_b,dg (AxisAlignedBB),func_693_b,getBoundingBoxFromPool,"Returns a bounding box with the specified bounds from the pool.  Args: minX, minY, minZ, maxX, maxY, maxZ"
+cf (AxisAlignedBB),func_1164_b,,*,getAverageEdgeLength,Returns the average length of the edges of the bounding box.
+cf (AxisAlignedBB),func_1165_c,dg (AxisAlignedBB),func_695_c,setBounds,"Sets the bounds of the bounding box. Args: minX, minY, minZ, maxX, maxY, maxZ"
+cf (AxisAlignedBB),func_1168_a,dg (AxisAlignedBB),func_698_a,getBoundingBox,"Returns a bounding box with the specified bounds. Args: minX, minY, minZ, maxX, maxY, maxZ"
+cf (AxisAlignedBB),func_1170_a,dg (AxisAlignedBB),func_700_a,addCoord,"Adds the coordinates to the bounding box extending it if the point lies outside the current ranges. Args: x, y, z"
+cf (AxisAlignedBB),func_1174_d,dg (AxisAlignedBB),func_702_d,offset,"Offsets the current bounding box by the specified coordinates. Args: x, y, z"
+cf (AxisAlignedBB),func_1177_b,dg (AxisAlignedBB),func_708_b,expands,"Returns a bounding box expanded by the specified vector (if negative numbers are given it will shrink). Args: x, y, z"
+cf (AxisAlignedBB),func_1178_a,dg (AxisAlignedBB),func_704_a,intersectsWith,Returns whether the given bounding box intersects with this one. Args: axisAlignedBB
+cf (AxisAlignedBB),func_1166_c,dg (AxisAlignedBB),func_696_c,getOffsetBoundingBox,"Returns a bounding box offseted by the specified vector (if negative numbers are given it will shrink). Args: x, y, z"
+cf (AxisAlignedBB),func_1171_b,dg (AxisAlignedBB),func_699_b,setBB,Sets the bounding box to the same bounds as the bounding box passed in. Args: axisAlignedBB
+cf (AxisAlignedBB),func_1167_a,dg (AxisAlignedBB),func_697_a,isVecInYZ,Checks if the specified vector is within the YZ dimensions of the bounding box. Args: Vec3D
+cf (AxisAlignedBB),func_1175_b,dg (AxisAlignedBB),func_705_b,isVecInXZ,Checks if the specified vector is within the XZ dimensions of the bounding box. Args: Vec3D
+cf (AxisAlignedBB),func_1176_c,dg (AxisAlignedBB),func_707_c,isVecInXY,Checks if the specified vector is within the XY dimensions of the bounding box. Args: Vec3D
+cf (AxisAlignedBB),func_4150_a,,*,isVecInside,Checks if the specified vector is within bounds of the bounding box. Args: vec3D
+cf (AxisAlignedBB),func_4149_a,dg (AxisAlignedBB),func_703_a,clearBoundingBoxPool,Sets the number of bounding boxes in use from the pool to 0 so they will be reused
+cn (World),func_598_c,dy (World),func_455_j,getLightBrightness,"Returns how bright the block is shown as which is the block's light value looked up in a lookup table (light values aren't linear for brihgtness). Args: x, y, z"
+cn (World),func_601_g,dy (World),func_445_d,doesBlockAllowAttachment,"Returns if the block at the specified coordinates allow attachment Args: x, y, z"
+cn (World),func_609_a,dy (World),func_472_a,getClosestPlayerToEntity,"Gets the closest player to the entity within the specified distance (if distance is less than 0 then ignored). Args: entity, dist"
+cn (World),func_611_g,dy (World),func_449_g,notifyBlocksOfNeighborChange,"Notifies neighboring blocks that this specified block changed  Args: x, y, z, blockID"
+cn (World),func_615_b,,*,deleteWorld,Deletes the specified world.
+cn (World),func_617_e,dy (World),func_454_e,notifyBlockChange,"The block type change and need to notify other systems  Args: x, y, z, blockID"
+cn (World),func_618_j,dy (World),func_495_h,getBlockLightValue,Gets the light value of a block location
+cn (World),func_620_h,dy (World),func_447_g,chunkExists,"Returns whether a chunk exists at chunk coordinates x, y"
+cn (World),func_621_b,dy (World),func_487_a,countEntities,Counts how many entities of an entity class exist in the world. Args: entityClass
+cn (World),func_623_a,dy (World),func_506_a,playSoundAtEntity,"Plays a sound at the entity's position. Args: entity, sound, unknown1, unknown2"
+cn (World),func_624_b,dy (World),func_453_a,isDaytime,Checks whether its daytime by seeing if the light subtracted from the skylight is less than 4
+cn (World),func_625_o,dy (World),func_474_n,isBlockIndirectlyGettingPowered,"Used to see if one of the blocks next to you or your block is getting power from a neighboring block. Used by items like TNT or Doors so they don't have redstone going straight into them.  Args: x, y, z"
+cn (World),func_634_a,dy (World),func_462_a,setBlock,"Sets the block to the specified blockID at the block coordinates Args x, y, z, blockID"
+cn (World),func_635_c,dy (World),func_463_c,setBlockMetadata,Set the metadata of a block in global coordinates
+cn (World),func_640_a,dy (World),func_466_a,checkChunksExist,"Checks between a min and max all the chunks inbetween actually exist. Args: minX, minY, minZ, maxX, maxY, maxZ"
+cn (World),func_641_a,dy (World),func_512_a,getSavedLightValue,Returns saved light value without taking into account the time of day.  Either looks in the sky light map or block light map based on the enumSkyBlock arg.
+cn (World),func_644_f,dy (World),func_465_d,calculateInitialSkylight,Called on construction of the World class to setup the initial skylight values
+cn (World),func_646_n,dy (World),func_496_m,isBlockGettingPowered,"Whether one of the neighboring blocks is putting power into this block. Args: x, y, z"
+cn (World),func_647_i,dy (World),func_497_g,canBlockSeeTheSky,Checks if the specified block is able to see the sky
+cn (World),func_648_a,,*,setWorldTime,Sets the world time.
+cn (World),func_649_g,dy (World),func_4071_f,tick,Runs a single tick for the world
+cn (World),func_653_a,,*,deleteFiles,Recursively deletes files from a folder.
+cn (World),func_655_l,dy (World),func_527_k,notifyBlockOfNeighborChange,"Notifies a block that one of its neighbor change to the specified type Args: x, y, z, blockID"
+cn (World),func_657_a,dy (World),func_457_a,getEntitiesWithinAABB,"Returns all entities of the specified class type which intersect with the AABB. Args: entityClass, aabb"
+cn (World),func_659_b,dy (World),func_450_b,getEntitiesWithinAABBExcludingEntity,"Will get all entities within the specified AABB excluding the one passed into it. Args: entityToExclude, aabb"
+cn (World),func_662_b,dy (World),func_469_b,getIsAnyLiquid,Returns if any of the blocks within the aabb are liquids. Args: aabb
+cn (World),func_664_b,dy (World),func_529_b,setLightValue,"Sets the light value either into the sky map or block map depending on if enumSkyBlock is set to sky or block. Args: enumSkyBlock, x, y, z, lightValue"
+cn (World),func_666_c,dy (World),func_488_c,getHeightValue,"Returns the y coordinate with a block in it at this x, z coordinate"
+cn (World),func_668_j,dy (World),func_448_i,isBlockProvidingPowerTo,"Is this block powering in the specified direction Args: x, y, z, direction"
+cn (World),func_670_a,dy (World),func_491_a,playRecord,"Plays a record at the specified coordinates of the specified name. Args: recordName, x, y, z"
+cn (World),func_671_a,dy (World),func_493_a,calculateSkylightSubtracted,Returns the amount of skylight subtracted for the current time
+cn (World),func_673_a,dy (World),func_492_a,getChunkFromBlockCoords,"Returns a chunk looked up by block coordinates. Args: x, y"
+cn (World),func_674_a,dy (World),func_526_a,entityJoinedWorld,Called when an entity is spawned in the world. This includes players.
+cn (World),func_676_a,dy (World),func_468_a,createExplosion,"Creates an explosion at the position with the specified force. Args: entity, x, y, z, force"
+cn (World),func_677_m,,*,randomDisplayUpdates,"Randomly will call the random display update on a 1000 blocks within 16 units of the specified position. Args: x, y, z"
+cn (World),func_681_h,dy (World),func_499_h,scheduleBlockUpdate,"Schedules a specific block to be to ticked by its specified delay. Args: x, y, z, blockID"
+cn (World),func_683_a,dy (World),func_456_a,getClosestPlayer,"Gets the closest player to the point within the specified distance (distance can be set to less than 0 to not limit the distance). Args: x, y, z, dist"
+cn (World),func_684_a,dy (World),func_502_a,playSoundEffect,"Play a sound effect. Many many parameters for this function. Not sure what they do, but a classic call is : (double)i + 0.5D, (double)j + 0.5D, (double)k + 0.5D, ""random.door_open"", 1.0F, world.rand.nextFloat() * 0.1F + 0.9F with i,j,k position of the block."
+cn (World),func_690_d,dy (World),func_508_d,setBlockWithNotify,"Sets a block and notifies relevant systems with the block change  Args: x, y, z, blockID"
+cn (World),func_691_b,dy (World),func_511_b,setBlockMetadataWithNotify,"Sets the blocks metadata and if set will then notify blocks that this block changed. Args: x, y, z, metadata"
+cn (World),func_694_a,dy (World),func_514_a,spawnParticle,"Spawns a particle.  Args particleName, x, y, z, velX, velY, velZ"
+cn (World),func_697_a,dy (World),func_481_a,getCollidingBoundingBoxes,"Returns a list of bounding boxes that collide with aabb excluding the passed in entity's collision. Args: entity, aabb"
+cn (World),func_699_a,dy (World),func_517_a,getBlockLightValue,"Gets the light value of a block location. This is the actual function that gets the value and has a bool flag that indicates if its a half step block to get the maximum light value of a direct neighboring block (left, right, forward, back, and up)"
+cn (World),func_700_a,dy (World),func_518_a,TickUpdates,Runs through the list of updates to run and ticks them
+cn (World),func_704_b,dy (World),func_525_b,getChunkFromChunkCoords,"Returns back a chunk looked up by chunk coordinates Args: x, y"
+cn (World),func_706_k,dy (World),func_489_j,isBlockIndirectlyProvidingPowerTo,"Is a block next to you getting powered (if its an attachable block) or is it providing power directly to you.  Args: x, y, z, direction"
+cn (World),func_708_k,dy (World),func_517_a,canBlockSeeTheSky,Determines if a block can see the sky or not.  Validates it is a legitimate address for a chunk that exists then calls the corresponding function on the chunk,,DUPLICATE
+cn (World),func_4078_a,dy (World),func_4069_a,neighborLightPropagationChanged,"Called when a neighboring block's light value has changed and its propagated light might change this blocks value.  Args: enumSkyBlock, x, y, z, propagatedLight"
+cv (BlockJukeBox),func_317_e,eh (BlockJukeBox),func_286_f,ejectRecord,Ejects the current record inside of the jukebox
+cx (GuiMainMenu),func_4068_a,,*,drawLogo,Draws the imploding minecraft logo.
+cx (GuiMainMenu),func_592_j,,*,getRand,Returns the random number generator.
+cz (Pathfinder),func_1129_a,,func_656_a,addToPath,"Adds a path from start to end and returns the whole path (args: unused, start, end, unused, maxDistance)"
+cz (Pathfinder),func_1130_a,,func_652_a,createEntityPathTo,Internal implementation of creating a path from an entity to a point
+cz (Pathfinder),func_1131_a,,func_651_a,createEntityPathTo,Creates a path from an entity to a specified location within a minimum distance
+cz (Pathfinder),func_1132_a,,func_649_a,getVerticalOffset,"Given an x y z, returns a vertical offset needed to search to find a block to stand on"
+cz (Pathfinder),func_1133_b,,func_654_b,findPathOptions,"populates pathOptions with available points and returns the number of options found (args: unused1, currentPoint, unused2, targetPoint, maxDistance)"
+cz (Pathfinder),func_1134_a,,func_653_a,createEntityPath,Returns a new PathEntity for a given start and end point
+cz (Pathfinder),func_1135_a,,func_650_a,getSafePoint,Returns a point that the entity can safely move to
+cz (Pathfinder),func_1136_a,,func_655_a,openPoint,Returns a mapped point or creates and adds one
+cz (Pathfinder),func_1137_a,,func_657_a,createEntityPathTo,Creates a path from one entity to another within a minimum distance
+df (GLAllocation),func_1123_d,*,*,getDirectFloatBuffer,Returns a direct float buffer with the specified capacity. Applies native ordering to speed up access.,DUPLICATE,DUPLICATE
+df (GLAllocation),func_1124_a,*,*,generateDisplayLists,Generates the specified number of display lists and returns the first index.
+df (GLAllocation),func_1125_c,*,*,getDirectIntBuffer,Returns a direct int buffer with the specified capacity. Applies native ordering to speed up access.,DUPLICATE,DUPLICATE
+df (GLAllocation),func_1126_a,*,*,deleteTexturesAndDisplayLists,Deletes all textures and display lists. Called when Minecraft is shutdown to free up resources.
+df (GLAllocation),func_1127_b,*,*,getDirectByteBuffer,Returns a direct byte buffer with the specified capacity. Applies native ordering to speed up access.,DUPLICATE,DUPLICATE
+df (GLAllocation),func_1128_a,*,*,generateTextureNames,Generates texture names and stores them in the specified buffer.
+dh (BlockSand),func_315_h,,func_284_h,tryToFall,If there is space to fall below will start this block falling
+dh (BlockSand),func_316_a_,,func_285_g,canFallBelow,Checks to see if the sand can fall into the block below it
+di (Item),func_193_a,,func_6152_a,onItemRightClick,"Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer"
+di (Item),func_4018_a,,func_80_a,canHarvestBlock,Returns if the item (tool) can harvest results from the block type.
+di (Item),func_196_a,,*,getIconIndex,Returns the icon index of the stack given as argument.
+di (Item),func_197_c,,func_77_b,getMaxDamage,Returns the maximum damage an item can take.
+di (Item),func_4016_e,,func_4050_c,setFull3D,Sets bFull3D to True and return the object.
+di (Item),func_200_b,,func_81_a,getItemStackLimit,Returns the maximum size of the stack for a specific item. *Isn't this more a Set than a Get?*
+di (Item),func_201_b,,*,useItemOnEntity,Uses the given item on the entity.
+di (Item),func_4022_a,,func_4049_a,setIconIndex,Sets the icon index for this item. Returns the item.
+dk (Slot),func_776_b,,*,putStack,Helper fnct to put a stack in the slot.
+dk (Slot),func_777_b,,*,getStack,Helper fnct to get the stack in the slot.
+dm (EntityPlayer),func_450_a,,func_165_a,getCurrentPlayerStrVsBlock,Returns how strong the player is against the specified block at this moment
+dw (CraftingManager),func_1119_a,,*,craft,Given an array of item ids it produces the crafting result of a matching recipe if found
+dw (CraftingManager),func_1120_a,,*,getInstance,Returns the static instance of this class
+dw (CraftingManager),func_1121_a,*,*,addRecipe,Adds a recipe. See spreadsheet on first page for details.
+dy (NBTTagByteArray),func_733_a,,func_379_a,getType,Gets the type byte for the tag.
+dy (NBTTagByteArray),func_735_a,,func_381_a,writeTag,Writes the tag to the given DataOutput.,DUPLICATE,DUPLICATE
+dy (NBTTagByteArray),func_736_a,,func_382_a,readTag,Reads the tag from the given DataInput.,DUPLICATE,DUPLICATE
+eb (SoundPool),func_1117_a,,*,addSound,Adds a sound to this sound pool.
+ee (GuiContainer),func_588_a,,*,getSlotAtPosition,Returns the slot at the given coordinates or null if there is none.
+el (NBTBase),func_731_b,,func_377_b,getTagName,"Returns the string name of a tag with the specified type, or ""UNKNOWN"" if invalid."
+el (NBTBase),func_732_a,,func_385_m,setKey,Sets the key for this tag and returns this for convenience.
+el (NBTBase),func_734_b,,func_383_b,readTag,"Reads and returns a tag from the given DataInput, or the End tag if no tag could be read."
+el (NBTBase),func_737_b,,func_384_c,getKey,"Gets the key corresponding to the tag, or an empty string if none set."
+el (NBTBase),func_738_a,,func_380_a,writeTag,"Writes the specified tag to the given DataOutput, writing the type byte, the UTF string key and then calling the tag to write its data."
+el (NBTBase),func_739_a,,func_378_a,createTagOfType,"Creates and returns a new tag of the specified type, or null if invalid."
+eo (MathHelper),func_1106_a,,func_585_a,sin,sin looked up in a table
+eo (MathHelper),func_1114_b,,func_582_b,cos,cos looked up in the sin table with the appropriate offset
+eo (MathHelper),func_1107_a,,func_581_a,abs_max,Maximum of the absolute value of two numbers.
+eo (MathHelper),func_1109_a,,func_583_a,sqrt_double
+eo (MathHelper),func_1110_d,,func_588_d,convertToBlockCoord,Takes a float and converts it into a block coordinate taking into account integer conversion rounds to zero below zero.,,DUPLICATE
+eo (MathHelper),func_1108_b,,func_584_b,convertToBlockCoord,Takes a double and converts it into a block coordinate taking into account integer conversion rounds to zero below zero.,,DUPLICATE
+eo (MathHelper),func_1111_a,,*,bucketInt,"Buckets an integer with specifed bucket sizes.  Args: i, bucketSize"
+eo (MathHelper),func_1112_e,,func_587_e,abs
+eo (MathHelper),func_1113_c,,func_586_c,sqrt_float
+eu (InventoryPlayer),func_468_c,,func_82_a,getStackInSlot,Returns the stack in slot i
+eu (InventoryPlayer),func_469_c,,*,getSizeInventory,Returns the number of slots in the inventory.
+eu (InventoryPlayer),func_470_e,,func_202_d,getInventoryStackLimit,"Returns the maximum stack size for a inventory slot. Seems to always be 64, possibly will be extended. *Isn't this more of a set than a get?*"
+eu (InventoryPlayer),func_471_d,,*,getInvName,Returns the name of the inventory.
+eu (InventoryPlayer),func_472_a,,func_206_a,setInventorySlotContents,Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
+eu (InventoryPlayer),func_473_a,,*,decrStackSize,Decrease the size of the stack in slot (first int arg) by the amount of the second int arg. Returns the new stack.
+eu (InventoryPlayer),func_493_a,,func_200_a,writeToNBT,"Writes the inventory out as a list of compound tags. This is where the slot indices are used (+100 for armor, +80 for crafting)."
+eu (InventoryPlayer),func_494_a,,func_213_b,getCurrentItem,Returns the item stack currently held by the player.
+eu (InventoryPlayer),func_495_b,,func_209_a,addItemsToInventory,Adds the j items of type i to inventory and returns the number of items that couldn't fit (0 if they all fit).
+eu (InventoryPlayer),func_497_g,,func_204_c,getFirstPartialMatchingStack,Returns the first item stack in inventory that matches the given item stack and isn't full.
+eu (InventoryPlayer),func_499_j,,func_205_g,getFirstEmptyStack,Returns the first item stack that is empty.
+Render,func_146_a,*,*,renderOffsetAABB,Renders a white box with the bounds of the AABB translated by the offset. Args: aabb,x,DUPLICATE,z
+InventoryPlayer,func_496_a,*,*,setCurrentItem,Sets a specific itemID as the current item being held (only if it exists on the hotbar),,DUPLICATE
+Render,func_142_a,*,*,renderAABB,Adds to the tesselator a box using the aabb for the bounds. Args: aabb,,DUPLICATE
+Render,func_149_b,*,*,getWorldFromRenderManager,Returns the render manager's world object,,DUPLICATE
+GLAllocation,func_1125_c,*,*,createDirectIntBuffer,Creates and returns a direct int buffer with the specified capacity. Applies native ordering to speed up access.,,DUPLICATE
+GLAllocation,func_1127_b,*,*,createDirectByteBuffer,Creates and returns a direct byte buffer with the specified capacity. Applies native ordering to speed up access.,,DUPLICATE
+GLAllocation,func_1123_d,*,*,createDirectFloatBuffer,Creates and returns a direct float buffer with the specified capacity. Applies native ordering to speed up access.,,DUPLICATE
+Chunk,func_1012_a,*,*,needsSaving,Returns true if this Chunk needs to be saved,,DUPLICATE
+Chunk,func_1017_a,*,*,isAtLocation,Checks whether the chunk is at the X/Z location specified,,DUPLICATE
+ItemFishingRod,func_4023_b,*,*,shouldRotateAroundWhenRendering,Returns true if this item should be rotated by 180 degrees around the Y axis when being held in an entities hands.,,DUPLICATE
+EntityLiving,func_431_d,*,*,getSwingProgress,Returns where in the swing animation the living entity is (from 0 to 1).  Args: partialTickTime,,DUPLICATE
+EntitySpider,func_438_i,*,*,findPlayerToAttack,Finds the closest player within 16 blocks to attack,or null if this Entity isn't interested in attacking (Animals,DUPLICATE,peaceful PigZombies).
+InventoryPlayer,func_505_f,*,*,getInventorySlotContainItem,Returns a slot index in main inventory containing a specific itemID,,DUPLICATE
+InventoryPlayer,func_502_a,*,*,getDamageVsEntity,Return damage vs an entity done by the current held weapon,or 1 if nothing is held,DUPLICATE
+World,func_643_a,*,*,setBlockAndMetadata,Sets the block ID and metadata of a block in global coordinates,,DUPLICATE
+RenderEngine,func_6526_a,*,*,readTextureImage,Returns a BufferedImage read off the provided input stream.  Args: inputStream,,DUPLICATE
+RenderEngine,func_1069_b,*,*,unwrapImageByColumns,Takes an image with multiple 16-pixel-wide columns and creates a new 16-pixel-wide image where the columns are stacked vertically,,DUPLICATE
+RenderEngine,func_1068_a,*,*,setupTexture,Copy the supplied image onto the specified OpenGL texture,,DUPLICATE
+RenderEngine,func_1065_b,*,*,refreshTextures,Call setupTexture on all currently-loaded textures again to account for changes in rendering options,,DUPLICATE
+InventoryPlayer,func_510_b,*,*,consumeInventoryItem,removed one item of specified itemID from inventory (if it is in a stack,the stack size will reduce with 1),DUPLICATE
+InventoryPlayer,func_513_b,*,*,readFromNBT,Reads from the given tag list and fills the slots in the inventory with the correct items.,,DUPLICATE
+Chunk,func_995_d,*,*,onChunkLoad,Called when this Chunk is loaded by the ChunkProvider,,DUPLICATE
+Slot,func_779_d,*,*,onSlotChanged,Called when the stack in a Slot changes,,DUPLICATE
+Chunk,func_998_e,*,*,onChunkUnload,Called when this Chunk is unloaded by the ChunkProvider,,DUPLICATE
+BlockRedstoneWire,func_281_g,*,*,getMaxCurrentStrength,Returns the current strength at the specified block if it is greater than the passed value,or the passed value otherwise.  Signature: (world,DUPLICATE,y,z,strength)
+BlockRedstoneWire,func_280_h,*,*,updateAndPropagateCurrentStrength,Sets the strength of the wire current (0-15) for this block based on neighboring blocks and propagates to neighboring redstone wires,,DUPLICATE
+BlockMobSpawner,func_283_a_,*,*,SetBlockEntity,Returns the tileentity used by the block,,DUPLICATE
+BlockRedstoneWire,func_282_i,*,*,notifyWireNeighborsOfNeighborChange,Calls World.notifyBlocksOfNeighborChange() for all neighboring blocks,but only if the given block is a redstone wire.,DUPLICATE
+BlockFurnace,func_285_a,*,*,updateFurnaceBlockState,Update which block ID the furnace is using depending on whether or not it is burning,,DUPLICATE
+World,func_605_c,*,*,isBoundingBoxBurning,Returns whether or not the given bounding box is on fire or not,,DUPLICATE
+Render,func_4009_a,*,*,setRenderManager,Sets the RenderManager.,,DUPLICATE
+RenderEngine,func_1078_a,*,*,deleteTexture,Deletes a single GL texture,,DUPLICATE
+EntityList,func_1079_a,*,*,createEntityInWorld,Creates an entity of the given name in the world.,,DUPLICATE
+RenderEngine,func_1077_b,*,*,weightedAverageColor,Uses the alpha of the two colors passed in to determine the contributions of each color.  If either of them has an alpha greater than 0 then the returned alpha is 255 otherwise its zero if they are both zero. Args: color1,color2,DUPLICATE
+RenderEngine,func_1074_a,*,*,allocateAndSetupTexture,Copy the supplied image onto a newly-allocated OpenGL texture,returning the allocated texture name,DUPLICATE
+RenderEngine,func_1075_a,*,*,obtainImageData,Return a ThreadDownloadImageData instance for the given URL.  If it does not already exist,it is created and uses the passed ImageBuffer.  If it does,DUPLICATE
+RenderEngine,func_1072_a,*,*,averageColor,Takes two colors and returns the average of them. Args: color1,color2,DUPLICATE
+RenderEngine,func_1073_b,*,*,releaseImageData,Decrements the reference count for a given URL,deleting the image data if the reference count hits 0,DUPLICATE
+RenderEngine,func_1071_a,*,*,getTextureForDownloadableImage,Takes a URL of a downloadable image and the name of the local image to be used as a fallback.  If the image has been downloaded,returns the GL texture of the downloaded image,DUPLICATE
+EntityList,func_1083_b,*,*,getEntityString,gets the string representation of a specific entity,,DUPLICATE
+TileEntitySpecialRenderer,func_928_a,*,*,setTileEntityRenderer,Associate a TileEntityRenderer with this TileEntitySpecialRenderer,,DUPLICATE
+RenderItem,func_161_a,*,*,renderItemIntoGUI,Renders the item's icon or block into the UI at the specified position.,,DUPLICATE
+RenderItem,func_162_a,*,*,renderQuad,Adds a quad to the tesselator at the specified position with the set width and height and color.  Args: tessellator,x,DUPLICATE,width,height,color
+RenderItem,func_163_a,*,*,renderTexturedQuad,Adds a textured quad to the tesselator at the specified position with the specified texture coords,width and height.  Args: x,DUPLICATE,u,v,width,height
+RenderItem,func_164_b,*,*,renderItemOverlayIntoGUI,Renders the item's overlay information. Examples being stack count or damage on top of the item's image at the specified position.,,DUPLICATE
+World,func_708_k,*,*,canExistingBlockSeeTheSky,Determines if a block can see the sky or not,but if the proper chunk does not already exist,DUPLICATE
+Entity,func_365_c,*,*,setLocationAndAngles,Sets the location and Yaw/Pitch of an entity in the world,,DUPLICATE
+Entity,func_389_H,*,*,getEntityString,Returns the string that identifies this Entity's class,,DUPLICATE
+EntityBoat,func_385_d_,*,*,canBePushed,Returns true if this entity should push and be pushed by other entities when colliding.,,DUPLICATE
+RenderGlobal,func_941_a,*,*,obtainEntitySkin,Start the skin for this entity downloading,if necessary,DUPLICATE
+Render,func_6329_a,*,*,getFontRendererFromRenderManager,Returns the font renderer from the set render manager,,DUPLICATE
+TileEntitySpecialRenderer,func_6508_a,*,*,getFontRenderer,*,,DUPLICATE
+RenderManager,func_6500_a,*,*,getFontRenderer,Returns the font renderer,,DUPLICATE
+TileEntitySpecialRenderer,func_6507_a,*,*,bindTextureByName,Binds a texture to the renderEngine given a filename from the JAR.,,DUPLICATE
+Slot,func_4104_e,*,*,getSlotStackLimit,Returns the maximum stack size for a given slot (usually the same as getInventoryStackLimit(),but 1 in the case of armor slots),DUPLICATE
+WorldProviderHell,func_4100_a,*,*,calculateCelestialAngle,Calculates the angle of sun and moon in the sky relative to a specified time (usually worldTime),,DUPLICATE
+SlotCrafting,func_4103_a,*,*,onPickupFromSlot,Called when the player picks up an item from an inventory slot,,DUPLICATE
+WorldProviderHell,func_4102_a,*,*,canCoordinateBeSpawn,Will check if the x,z position specified is alright to be set as the map spawn point,DUPLICATE
+GuiScreen,func_579_b,*,*,drawBackground,Draws the background (i is always 0 as of 1.2.2),,DUPLICATE
+GuiScreen,func_578_i,*,*,drawDefaultBackground,Draws either a gradient over the background screen (when it exists) or a flat gradient over background.png,,DUPLICATE
+GuiScreen,func_573_b,*,*,mouseMovedOrUp,Called when the mouse is moved or a mouse button is released.  Signature: (mouseX,mouseY,DUPLICATE,which==0 or which==1 is mouseUp
+EntityPlayer,func_374_q,*,*,preparePlayerToSpawn,Keeps moving the entity up so it isn't colliding with blocks and other requirements for this entity to be spawned (only actually used on players though its also on Entity),,DUPLICATE
+TileEntityRenderer,func_6516_a,*,*,getFontRenderer,*,,DUPLICATE
+GuiContainer,func_590_a,*,*,drawSlotInventory,Draws an inventory slot,,DUPLICATE
+Render,func_144_c,*,*,renderShadow,Renders the entity shadows at the position,shadow alpha and partialTickTime. Args: entity,DUPLICATE,y,z,shadowAlpha,partialTickTime
+Render,func_145_a,*,*,renderShadowOnBlock,Renders a shadow projected down onto the specified block. Brightness of the block plus how far away on the Y axis determines the alpha of the shadow.  Args: block,centerX,DUPLICATE,centerZ,blockX,blockY,blockZ,baseAlpha,shadowSize,xOffset,yOffset,zOffset
+TileEntityFurnace,func_490_a,*,*,getCookProgressScaled,Returns an integer between 0 and the passed value representing how close the current item is to being completely cooked,,DUPLICATE
+TileEntityFurnace,func_491_j,*,*,canSmelt,Returns true if the furnace can smelt an item,i.e. has a source item,DUPLICATE,etc.
+InventoryPlayer,func_492_d,*,*,armorItemInSlot,returns a player armor item (as itemstack) contained in specified armor slot.,,DUPLICATE
+Render,func_141_b,*,*,doRenderShadowAndFire,Renders the entity's shadow and fire (if its on fire). Args: entity,x,DUPLICATE,z,yaw,partialTickTime
+InventoryPlayer,func_498_a,*,*,changeCurrentItem,Switch the current item to the next one or the previous one,,DUPLICATE
+Render,func_148_a,*,*,renderEntityOnFire,Renders fire on top of the entity. Args: entity,x,DUPLICATE,z,partialTickTime
+ChunkProviderLoadOrGenerate,func_540_b,*,*,saveChunk,Save a given Chunk,recording the time in lastSaveTime,DUPLICATE
+ChunkProviderLoadOrGenerate,func_541_a,*,*,saveExtraChunkData,Save extra data associated with this Chunk not normally saved during autosave,only during chunk unload.  Currently unused.,DUPLICATE
+IChunkLoader,func_811_b,*,*,saveExtraData,Save extra data not associated with any Chunk.  Not saved during autosave,only during world unload.  Currently unused.,DUPLICATE
+IChunkLoader,func_812_a,*,*,saveChunk,*,,DUPLICATE
+IChunkLoader,func_813_a,*,*,loadChunk,Loads the specified(XZ) chunk into the specified world.,,DUPLICATE
+IChunkLoader,func_815_b,*,*,saveExtraChunkData,Save extra data associated with this Chunk not normally saved during autosave,only during chunk unload.  Currently unused.,DUPLICATE
+ChunkLoader,func_816_a,*,*,loadChunkIntoWorldFromCompound,Parses the data in the compound into a Chunk in the specified world.,,DUPLICATE
+ChunkLoader,func_817_a,*,*,chunkFileForXZ,*,,DUPLICATE
+ChunkLoader,func_818_a,*,*,storeChunkInCompound,Stores the chunk into the supplied Compound. (could even be private static),,DUPLICATE
+ModelRenderer,func_923_a,*,*,entityLimbDefine,Takes seven arguements for X,Y,DUPLICATE,width,length,height,and a size multiplier and creates an entity limb.
+GuiGameOver,func_6450_b,*,*,doesGuiPauseGame,Returns true if this GUI should pause the game when it is displayed in single-player,,DUPLICATE
+TileEntityRenderer,func_1031_b,*,*,getSpecialRendererForEntity,Returns the TileEntitySpecialRenderer used to render this TileEntity instance,or null if it has no special renderer,DUPLICATE
+TileEntityFurnace,func_487_i,*,*,smeltItem,Turn one item from the furnace source stack into the appropriate smelted item in the furnace result stack,,DUPLICATE
+TileEntityFurnace,func_486_d,*,*,getSmeltingResultItem,Returns the item ID of the result of smelting the given item ID,or -1 if the given item can't be smelted.,DUPLICATE
+TileEntityFurnace,func_485_a,*,*,isBurning,Returns true if the furnace is currently burning,,DUPLICATE
+TileEntityMobSpawner,func_484_a,*,*,anyPlayerInRange,Returns true if there is a player in range (using World.getClosestPlayer),,DUPLICATE
+TileEntityFurnace,func_489_b,*,*,getBurnTimeRemainingScaled,Returns an integer between 0 and the passed value representing how much burn time is left on the current fuel item,where 0 means that the item is exhausted and the passed value means that the item is fresh,DUPLICATE
+TileEntityFurnace,func_488_a,*,*,getItemBurnTime,Returns the number of ticks that the supplied fuel item will keep the furnace burning,or 0 if the item isn't fuel,DUPLICATE
+EntityList,func_1084_a,*,*,createEntity,create a new instance of an entity by using an entityID,,DUPLICATE
+EntityList,func_1081_a,*,*,createEntityFromNBT,create a new instance of an entity from NBT store,,DUPLICATE
+EntityList,func_1080_a,*,*,addMapping,adds a mapping between Entity classes and both a string representation and an ID,,DUPLICATE
+NBTTagFloat,func_735_a,*,*,writeTagContents,Write the actual data contents of the tag,implemented in NBT extension classes,DUPLICATE
+NBTTagFloat,func_736_a,*,*,readTagContents,Read the actual data contents of the tag,implemented in NBT extension classes,DUPLICATE
+TileEntitySignRenderer,func_932_a,*,*,renderTileEntitySignAt,*,,DUPLICATE
+TileEntityMobSpawnerRenderer,func_930_a,*,*,renderTileEntityAt,*,,DUPLICATE
+RenderGlobal,func_938_b,*,*,releaseEntitySkin,Decrement the reference counter for this entity's skin image data,,DUPLICATE
+ItemRenderer,func_4132_a,*,*,renderItem,Renders the item stack for being in an entity's hand Args: itemStack,,DUPLICATE
+EntityList,func_1082_a,*,*,getEntityID,gets the entityID of a specific entity,,DUPLICATE
+ItemStack,func_1099_b,*,*,canHarvestBlock,Checks if the itemStack object can harvest a specified block,,DUPLICATE
+GuiChest,func_589_a,*,*,drawGuiContainerBackgroundLayer,Draw the background layer for the GuiContainer (everything behind the items),,DUPLICATE
+GuiChest,func_587_j,*,*,drawGuiContainerForegroundLayer,Draw the foreground layer for the GuiContainer (everythin in front of the items),,DUPLICATE
+World,func_630_d,*,*,blockExists,Returns whether a block exists at world coordinates x,y,DUPLICATE
+Timer,func_904_a,*,*,updateTimer,Updates all fields of the Timer using the current time,,DUPLICATE
+Minecraft,func_6272_a,*,*,displayGuiScreen,Sets the argument GuiScreen as the main (topmost visible) screen.,,DUPLICATE
+RenderHelper,func_1159_a,*,*,disableStandardItemLighting,Disables the OpenGL lighting properties enabled by enableStandardItemLighting,,DUPLICATE
+RenderHelper,func_1158_b,*,*,enableStandardItemLighting,Sets the OpenGL lighting properties to the values used when rendering blocks as items,,DUPLICATE
+Block,func_222_c,*,*,setHardness,Sets how many hits it takes to break a block.,,DUPLICATE
+Minecraft,func_6264_a,*,*,getAppDir,gets the working dir (OS specific) for the specific application (which is always minecraft),,DUPLICATE
+CompressedStreamTools,func_1143_a,*,*,writeGzippedCompoundToOutputStream,Write the compound,gzipped,DUPLICATE
+Block,func_219_b,*,*,setResistance,Sets the the blocks resistance to explosions. Returns the object for convenience in constructing.,,DUPLICATE
+World,func_692_l,*,*,removeBlockTileEntity,Removes the TileEntity for a given block in X,Y,DUPLICATE
+EntityPlayer,func_454_b,*,*,canHarvestBlock,Checks if the player has the ability to harvest a block (checks current inventory item for a tool if necessary),,DUPLICATE
+World,func_678_c,*,*,releaseEntitySkin,Decrement the reference counter for this entity's skin image data,,DUPLICATE
+World,func_672_b,*,*,removeWorldAccess,Removes a worldAccess from the worldAccesses object,,DUPLICATE
+World,func_654_a,*,*,setBlockTileEntity,Sets the TileEntity for a given block in X,Y,DUPLICATE
+WorldProviderHell,func_4092_a,*,*,getChunkLoader,Returns the chunk loader back for the world provider. Args: fileName,,DUPLICATE
+WorldProvider,func_4095_a,*,*,registerWorld,associate an existing world with a World provider,and setup its lightbrightness table,DUPLICATE
+WorldProviderHell,func_4094_c,*,*,getChunkProvider,Returns the chunk provider back for the world provider,,DUPLICATE
+WorldProviderHell,func_4098_a,*,*,registerWorldChunkManager,creates a new world chunk manager for WorldProvider,,DUPLICATE
+WorldChunkManagerHell,func_4071_a,*,*,getTemperatures,Returns a list of temperatures to use for the specified blocks.  Args: listToReuse,x,DUPLICATE,width,length
+World,func_688_b,*,*,setBlockAndMetadataWithNotify,Sets the block ID and metadata,then notifies neighboring blocks of the change,DUPLICATE
+World,func_669_m,*,*,saveLevel,Saves the global data associated with this World,,DUPLICATE
+NetClientHandler,func_848_a,*,*,processReadPackets,Processes the packets that have been read since the last call to this function.,,DUPLICATE
+NetClientHandler,func_847_a,*,*,addToSendQueue,Adds the packet to the send queue,,DUPLICATE
+World,func_660_k,*,*,sendQuittingDisconnectingPacket,If on MP,sends a quitting packet.,DUPLICATE
+InventoryPlayer,func_474_j_,*,*,onInventoryChanged,Called when an the contents of an Inventory change,usually,DUPLICATE
+BlockRedstoneWire,func_279_b,*,*,isPowerProviderOrWire,Calls canProvidePower() on the specified block and returns the result,but bypasses the wiresProvidePower flag,DUPLICATE
+BlockRedstoneTorch,func_273_a,*,*,checkForBurnout,*,,DUPLICATE
+ItemRenderer,func_898_a,*,*,renderInsideOfBlock,Renders the texture of the block the player is inside as an overlay. Args: partialTickTime,blockTextureIndex,DUPLICATE
+ItemRenderer,func_890_d,*,*,renderFireInFirstPerson,Renders the fire on the screen for first person mode. Arg: partialTickTime,,DUPLICATE
+ItemRenderer,func_892_c,*,*,renderWarpedTextureOverlay,Renders a texture that warps around based on the direction the player is looking. Texture needs to be bound before being called. Used for the water overlay. Args: parialTickTime,,DUPLICATE
+ItemRenderer,func_893_b,*,*,renderOverlays,Renders all the overlays that are in first person mode. Args: partialTickTime,,DUPLICATE
+MathHelper,func_1110_d,*,*,convertToBlockCoord_float,Takes a float and converts it into a block coordinate taking into account integer conversion rounds to zero below zero.,,DUPLICATE
+ItemRenderer,func_4133_a,*,*,renderItemInFirstPerson,Renders the active item in the player's hand when in first person mode. Args: partialTickTime,,DUPLICATE
+Chunk,func_1023_e,*,*,removeChunkBlockTileEntity,Removes the TileEntity for a given block in this chunk,,DUPLICATE
+TileEntityRenderer,func_1028_a,*,*,hasSpecialRenderer,Returns true if this TileEntity instance has a TileEntitySpecialRenderer associated with it,false otherwise.,DUPLICATE
+World,func_607_d,*,*,setEntityDead,Not sure what this does 100%,but from the calling methods this method should be called like this.,DUPLICATE
+World,func_606_b,*,*,obtainEntitySkin,Start the skin for this entity downloading,if necessary,DUPLICATE
+ChunkCache,func_603_b,*,*,getBlockTileEntity,Returns the TileEntity associated with a given block in X,Y,DUPLICATE,or null if no TileEntity exists
+BlockPressurePlate,func_318_h,*,*,setStateIfMobInteractsWithPlate,Checks if there are mobs on the plate. If a mob is on the plate and it is off,it turns it on,DUPLICATE
+BlockLever,func_267_h,*,*,checkIfAttachedToBlock,Checks if the block is attached to another block. If it is not,it returns false and drops the block as an item. If it is it returns true.,DUPLICATE
+BlockRedstoneTorch,func_6356_h,*,*,isAttachedBlockProvidingPower,Check if the block this torch is attached to is powering it (i.e. turning it off),,DUPLICATE
+MathHelper,func_1108_b,*,*,convertToBlockCoord_double,Takes a double and converts it into a block coordinate taking into account integer conversion rounds to zero below zero.,,DUPLICATE
+TileEntityRenderer,func_1032_a,*,*,renderTileEntityAt,Render this TileEntity at a given set of coordinates,,DUPLICATE
+TileEntityRenderer,func_1030_a,*,*,renderTileEntity,Render this TileEntity at its current position from the player,,DUPLICATE
+EntitySkeleton,func_4045_l,*,*,getHeldItem,Returns the item that this EntityLiving is holding,if any.,DUPLICATE
+EntityPigZombie,func_4049_h,*,*,becomeAngryAt,Causes this PigZombie to become angry at the supplied Entity (which will be a player).,,DUPLICATE
+World,func_639_a,*,*,saveWorld,Saves the data for this World.  If passed true,then only save up to 2 chunks,DUPLICATE,save all chunks.
+IChunkProvider,func_533_b,*,*,provideChunk,Will return back a chunk,if it doesn't exist and its not a MP client it will generates all the blocks for the specified chunk from the map seed and chunk seed,DUPLICATE
+IChunkProvider,func_535_a,*,*,saveChunks,Two modes of operation: if passed true,save all Chunks in one go.  If passed false,DUPLICATE
+Chunk,func_1006_f,*,*,setChunkModified,Sets the isModified flag for this Chunk,,DUPLICATE
+Chunk,func_1005_a,*,*,setChunkBlockTileEntity,Sets the TileEntity for a given block in this chunk,,DUPLICATE
+Chunk,func_1002_d,*,*,getChunkBlockTileEntity,Gets the TileEntity for a given block in this chunk,,DUPLICATE
+TileEntityRenderer,func_4144_a,*,*,getSpecialRendererForClass,Returns the TileEntitySpecialRenderer used to render this TileEntity class,or null if it has no special renderer,DUPLICATE
+EntityFireball,func_401_c_,*,*,canBeCollidedWith,Returns true if other Entities should be prevented from moving through this Entity.,,DUPLICATE
+TileEntityRenderer,func_1026_a,*,*,setRenderingContext,Sets references to the World,RenderEngine,DUPLICATE,and EntityPlayer,as well as calculating the player's current position/angle within the current tick
+WorldGenDungeons,func_531_b,*,*,pickMobSpawner,Randomly decides which spawner to use in a dungeon,,DUPLICATE
+WorldGenDungeons,func_530_a,*,*,pickCheckLootItem,Picks potentially a random item to add to a dungeon chest.,,DUPLICATE
+*,*,WorldProviderHell,func_4086_a,getChunkLoader,Returns the chunk loader back for the world provider. Args: fileName,,DUPLICATE
+*,*,WorldProviderHell,func_4087_c,getChunkProvider,Returns the chunk provider back for the world provider,,DUPLICATE
+*,*,WorldChunkManagerHell,func_4068_a,getTemperatures,Returns a list of temperatures to use for the specified blocks.  Args: listToReuse,x,DUPLICATE,width,length
+*,*,Block,func_237_c,setHardness,Sets how many hits it takes to break a block.,,DUPLICATE
+*,*,WorldProviderHell,func_4092_a,canCoordinateBeSpawn,Will check if the x,z position specified is alright to be set as the map spawn point,DUPLICATE
+*,*,NBTTagInt,func_381_a,writeTagContents,Write the actual data contents of the tag,implemented in NBT extension classes,DUPLICATE
+*,*,NBTTagInt,func_382_a,readTagContents,Read the actual data contents of the tag,implemented in NBT extension classes,DUPLICATE
+*,*,Block,func_232_b,setResistance,Sets the the blocks resistance to explosions. Returns the object for convenience in constructing.,,DUPLICATE
+*,*,MathHelper,func_588_d,convertToBlockCoord_float,Takes a float and converts it into a block coordinate taking into account integer conversion rounds to zero below zero.,,DUPLICATE
+*,*,MathHelper,func_584_b,convertToBlockCoord_double,Takes a double and converts it into a block coordinate taking into account integer conversion rounds to zero below zero.,,DUPLICATE
+jf (NextTickListEntry),func_900_a,bv (NextTickListEntry),func_733_a,setScheduledTime,Sets the scheduled time for this tick entry
+jq (GuiSelectWorld),func_586_d,,*,getWorldName,Returns the name of the selected world.
+kd (FontRenderer),func_871_a,,*,getStringWidth,Returns the width of this string. Equivalent of FontMetrics.stringWidth(String s).
+kd (FontRenderer),func_872_a,,*,renderString,The actual rendering takes place here.
+kd (FontRenderer),func_873_b,,*,drawString,Draws the specified string.
+kd (FontRenderer),func_874_a,,*,drawStringWithShadow,Draws the specified string with a drop shadow.
+kh (Entity),func_347_a,dj (Entity),func_86_a,setPosition,"Sets the x,y,z of the entity from the given parameters. Also seems to set up a bounding box."
+kh (Entity),func_348_f,dj (Entity),func_87_f,addVelocity,"Adds to the current velocity of the entity. Args: x, y, z"
+kh (Entity),func_349_c,dj (Entity),func_88_c,moveEntity,"Tries to moves the entity by the passed in displacement. Args: x, y, z"
+kh (Entity),func_352_a,dj (Entity),func_97_a,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
+kh (Entity),func_353_a,dj (Entity),func_122_m,interact,"Called when a player interacts with a mob. e.g. gets milk from a cow, gets into the saddle on a pig."
+kh (Entity),func_357_b,dj (Entity),func_99_b,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
+kh (Entity),func_360_d,dj (Entity),func_101_d,getDistanceSq,"Gets the squared distance to the position. Args: x, y, z"
+kh (Entity),func_361_e,dj (Entity),func_103_e,getDistance,"Gets the distance to the position. Args: x, y, z"
+kh (Entity),func_363_d,dj (Entity),func_98_d,writeToNBT,Save the entity to NBT (calls an abstract helper method to write extra data)
+kh (Entity),func_367_b,dj (Entity),func_128_a,dropItem,"Drops an item stack at the entity's position. Args: itemID, count"
+kh (Entity),func_368_e,dj (Entity),func_100_e,readFromNBT,Reads the entity from NBT (calls an abstract helper method to read specialized data)
+kh (Entity),func_370_e_,dj (Entity),func_106_b_,onUpdate,Called to update the entity's position/logic.,,--
+kh (Entity),func_371_a,dj (Entity),func_113_a,setSize,"Sets the width and height of the entity. Args: width, height"
+kh (Entity),func_376_c,dj (Entity),func_6096_b,setRotation,Sets the rotation of the entity
+kh (Entity),func_378_a,*,*,setPositionAndRotation2,"Sets the position and rotation. Only difference from the other one is no bounding on the rotation. Args: posX, posY, posZ, yaw, pitch"
+kh (Entity),func_379_d,dj (Entity),func_94_a,getDistanceToEntity,Returns the distance to the entity. Args: entity
+kh (Entity),func_380_f,dj (Entity),func_92_c,applyEntityCollision,Applies a velocity to each of the entities pushing them away from each other. Args: entity
+kh (Entity),func_382_a,dj (Entity),func_108_b,getEntityBrightness,Gets how bright this entity is.
+kh (Entity),func_6377_h,*,*,mountEntity,"Called when a player mounts an entity. e.g. mounts a pig, mounts a boat.",,--
+kh (Entity),func_387_e,dj (Entity),func_102_b,getDistanceSqToEntity,Returns the squared distance to the entity. Args: entity
+kh (Entity),func_393_a,dj (Entity),func_110_a,isInsideOfMaterial,Checks if the current block the entity is within of the specified material type
+kh (Entity),func_394_a,dj (Entity),func_123_a,dropItemWithOffset,"Drops an item stack with a specified y offset. Args: itemID, count, yOffset"
+kh (Entity),func_395_F,dj (Entity),func_118_j,setEntityDead,Will get destroyed next tick
+kh (Entity),func_396_a,dj (Entity),func_121_a,attackEntity,Called when the entity is attacked.
+kh (Entity),func_397_g_,dj (Entity),func_119_o,handleWaterMovement,Returns if this entity is in water and will end up adding the waters velocity to the entity
+kh (Entity),func_398_a,*,*,setWorld,Sets the reference to the World object.
+kh (Entity),func_399_b,dj (Entity),func_6095_b,setPositionAndRotation,"Sets the entity's position and rotation. Args: posX, posY, posZ, yaw, pitch"
+kh (Entity),func_400_c,dj (Entity),func_114_a,fall,Called when the mob is falling. Calculates and applies fall damage.
+kh (Entity),func_6375_a,*,*,setVelocity,"Sets the velocity to the args. Args: x, y, z"
+kh (Entity),func_6378_b,dj (Entity),func_6093_b,onCollideWithPlayer,Called by a player entity when they collide with an entity
+ki (NBTTagList),func_740_c,*,func_387_b,tagCount,Returns the number of tags in the list.
+ki (NBTTagList),func_741_a,*,func_388_a,tagAt,Retrieves the tag at the specified index from the list.
+ki (NBTTagList),func_742_a,*,func_386_a,setTag,Adds the provided tag to the end of the list. There is no check to verify this tag is of the same type as any previous tag.
+lb (NetHandler),func_819_a,ej (NetHandler),func_24_a,handlePlace
+lb (NetHandler),func_820_a,ej (NetHandler),func_4002_a,handleNamedEntitySpawn
+lb (NetHandler),func_821_a,ej (NetHandler),func_26_a,handleBlockDig
+lb (NetHandler),func_822_a,ej (NetHandler),func_12_a,handleBlockChange
+lb (NetHandler),func_823_a,ej (NetHandler),func_6_a,handleErrorMessage
+lb (NetHandler),func_824_a,ej (NetHandler),func_13_a,handleMultiBlockChange
+lb (NetHandler),func_825_a,ej (NetHandler),func_3_a,handleArmAnimation
+lb (NetHandler),func_826_a,ej (NetHandler),func_29_a,handlePreChunk
+lb (NetHandler),func_827_a,ej (NetHandler),func_30_a,handleEntity
+lb (NetHandler),func_828_a,ej (NetHandler),func_4006_a,handleMobSpawn
+lb (NetHandler),func_829_a,ej (NetHandler),func_4007_a,handleEntityTeleport
+lb (NetHandler),func_830_a,ej (NetHandler),func_17_a,handleAddToInventory
+lb (NetHandler),func_4113_a,ej (NetHandler),func_23_a,handleChat
+lb (NetHandler),func_832_a,ej (NetHandler),func_4004_a,handlePickupSpawn
+lb (NetHandler),func_833_a,ej (NetHandler),func_4_a,handleMapChunk
+lb (NetHandler),func_834_a,ej (NetHandler),func_28_a,handleCollect
+lb (NetHandler),func_835_a,ej (NetHandler),func_4003_a,handleVehicleSpawn
+lb (NetHandler),func_836_a,ej (NetHandler),func_21_a,handleUnexpected
+lb (NetHandler),func_837_a,ej (NetHandler),func_18_a,handleFlying
+lb (NetHandler),func_838_a,ej (NetHandler),func_6004_a,handleHandshake
+lb (NetHandler),func_839_a,ej (NetHandler),func_8_a,handleDestroyEntity
+lb (NetHandler),func_4115_a,ej (NetHandler),func_4001_a,handleLogin
+lb (NetHandler),func_841_a,ej (NetHandler),func_11_a,handleBlockItemSwitch
+lb (NetHandler),func_842_a,ej (NetHandler),func_6005_a,handleComplexEntity
+lb (NetHandler),func_843_a,ej (NetHandler),func_16_a,handlePlayerInventory
+lb (NetHandler),func_844_a,ej (NetHandler),func_4009_a,handleKickDisconnect
+lb (NetHandler),func_845_a,ej (NetHandler),func_15_a,handleSpawnPosition
+lb (NetHandler),func_846_a,ej (NetHandler),func_25_a,handleUpdateTime
+lm (Gui),func_547_b,*,*,drawString,Renders the specified text to the screen.
+lm (Gui),func_548_a,*,*,drawCenteredString,"Renders the specified text to the screen, center-aligned."
+lu (GuiIngame),func_4066_a,*,*,renderGameOverlay,"Render the ingame overlay with quick icon bar, ..."
+ly (Block),func_207_d,*,*,colorMultiplier,Returns a integer with hex for 0xrrggbb with this color multiplied against the blocks color. Note only called when first determining what to render.
+ly (Block),func_208_a,*,func_221_a,updateTick,Ticks the block if it's been scheduled
+ly (Block),func_209_d,*,func_225_d,canProvidePower,Can this block provide power. Only wire currently seems to have this change based on its state.
+ly (Block),func_210_f,*,*,getRenderType,The type of render function that is called for this block
+ly (Block),func_211_a,*,*,getBlockTexture,"Retrieves the block texture to use based on the display side. Args: iBlockAccess, x, y, z, side"
+ly (Block),func_212_i,*,func_261_f,unusedMethod,Only used to fill an unused field
+ly (Block),func_213_a,*,func_229_a,setBlockBounds,"Sets the bounds of the block.  minX, minY, minZ, maxX, maxY, maxZ",,--
+ly (Block),func_214_b,*,func_242_b,onBlockRemoval,Called whenever the block is removed.
+ly (Block),func_216_a,*,func_227_a,dropBlockAsItemWithChance,Drops the block items with a specified chance of dropping the specified items
+ly (Block),func_256_d,*,func_258_c,setLightOpacity,Sets how much light is blocked going through this block. Returns the object for convenience in constructing.
+ly (Block),func_215_a,*,func_224_a,setLightValue,Sets the amount of light emitted by a block from 0.0f to 1.0f (converts internally to 0-15). Returns the object for convenience in constructing.
+ly (Block),func_217_b,*,func_240_b,allowsAttachment,"Can a block attach to this one?  Checked by torches, redstone wire, buttons, etc"
+ly (Block),func_218_a,*,func_241_a,getBlockTextureFromSide,Returns the block texture based on the side being looked at.  Args: side
+ly (Block),func_219_a,*,func_232_b,setHardness,Sets the amount of damage required to break a block of this type. Returns the object for convenience in constructing.
+ly (Block),func_221_d,*,func_248_d,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+ly (Block),func_223_g,*,func_220_f,canBlockStay,Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
+ly (Block),func_224_a,*,func_243_a,canCollideCheck,"Returns whether this block is collideable based on the arguments passed in Args: blockMetaData, unknownFlag"
+ly (Block),func_228_c,*,func_238_d,isIndirectlyPoweringTo,Is this block indirectly powering the block on the specified side
+ly (Block),func_229_a,*,func_244_a,quantityDropped,Returns the quantity of items to drop on block destruction.
+ly (Block),func_230_a,*,func_264_a,getCollidingBoundingBoxes,"Adds to the supplied array any colliding bounding boxes with the passed in bounding box. Args: world, x, y, z, axisAlignedBB, arrayList"
+ly (Block),func_231_b,*,func_239_b,isPoweringTo,Is this block powering the block on the specified side
+ly (Block),func_232_a,*,*,getBlockTextureFromSideAndMetadata,"From the specified side and block metadata retrieves the blocks texture. Args: side, metadata"
+ly (Block),func_233_b,*,func_235_b,onBlockClicked,"Called when the block is clicked by a player. Args: x, y, z, entityPlayer"
+ly (Block),func_235_e,*,func_250_e,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
+ly (Block),func_240_a,*,func_252_a,idDropped,Returns the ID of the items to drop on destruction.
+ly (Block),func_250_a,*,func_246_a,blockActivated,"Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block."
+ly (Block),func_246_f,*,*,getSelectedBoundingBoxFromPool,Returns the bounding box of the wired rectangular prism to render.
+ly (Block),func_247_b,*,*,randomDisplayTick,A randomly called display update to be able to add particles or other items for display
+ly (Block),func_226_a,*,func_234_b,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+ly (Block),func_236_b,*,func_263_a,onEntityCollidedWithBlock,"Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity"
+ly (Block),func_238_a,*,func_233_a,setBlockBoundsBasedOnState,"Updates the blocks bounds based on its current state. Args: world, x, y, z"
+ly (Block),func_241_c,*,*,getBlockBrightness,"How bright to render this block based on the light its receiving. Args: iBlockAccess, x, y, z"
+ly (Block),func_242_c,*,*,renderAsNormalBlock,"If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)"
+ly (Block),func_243_a,*,func_259_a,canPlaceBlockAt,"Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z"
+ly (Block),func_244_a,*,func_223_a,isVecInsideYZBounds,Checks if a vector is within the Y and Z bounds of the block. 
+ly (Block),func_245_h,*,func_245_e,isCollidable,"Returns if this block is collidable (only used by Fire). Args: x, y, z"
+ly (Block),func_249_b,*,func_228_b,isVecInsideXZBounds,Checks if a vector is within the X and Z bounds of the block. 
+ly (Block),func_251_c,*,func_236_c,isVecInsideXYBounds,Checks if a vector is within the X and Y bounds of the block. 
+ly (Block),func_252_b,*,func_251_a,onBlockDestroyedByPlayer,"Called right before the block is destroyed by a player.  Args: world, x, y, z, metaData"
+ly (Block),func_253_b,*,func_231_a,setTickOnLoad,Sets whether this block type will tick on loading the block or not
+ly (Block),func_254_a,*,func_249_b,onEntityWalking,"Called whenever an entity is walking on top of this block. Args: world, x, y, z, entity"
+ly (Block),func_255_a,*,func_262_a,collisionRayTrace,"Ray traces through the blocks collision from start vector to end vector returning a ray trace hit. Args: world, x, y, z, startVec, endVec"
+ly (Block),func_257_a,*,func_230_a,velocityToAddToEntity,"Can add to the passed in vector for a movement vector to be applied to the entity. Args: x, y, z, entity, vec3d"
+ly (Block),func_258_d,*,func_255_c,onBlockPlaced,"Called when a block is placed using an item. Used often for taking the facing and figuring out how to position the item. Args: x, y, z, facing"
+ly (Block),func_259_b_,*,func_247_a_,dropBlockAsItem,Drops the specified block items
+ly (Block),func_260_c,*,func_253_a,isSideInsideCoordinate,"Checks to see if the side is within the normal 1 meter cube (if its on the edge its not considered inside).  If an invalid side is given it returns instead the not of allowing attachment (note not actually used in code). Args: blockAccess, x, y, z, side"
+ly (Block),func_4024_a,*,func_4026_a,setStepSound,Sets the footstep sound for the block. Returns the object for convenience in constructing.
+ly (Block),func_4025_d,*,func_4028_b,tickRate,How many world ticks before ticking
+ly (Block),func_4026_a,*,func_4027_a,onBlockPlacedBy,"Called when a block is using an item and passed in who placed it. Args: x, y, z, entityLiving"
+ly (Block),func_4027_c,*,func_4029_c,onBlockDestroyedByExplosion,Called upon the block being destroyed by an explosion
+lz (ChunkProviderClient),func_537_a,ij (ChunkProviderServer),func_365_a,chunkExists,"Checks to see if a chunk exists at x, y"
+mm (SlotInventory),func_781_a,*,*,isAtCursorPos,Return True if the cursor position passed as argument is inside the slot.
+mn (GuiConnecting),func_581_a,*,*,isCancelled,"Returns true if the connection attempt has been cancelled, false otherwise."
+mn (GuiConnecting),func_582_a,*,*,setNetClientHandler,Sets the NetClientHandler.
+mn (GuiConnecting),func_583_b,*,*,getNetClientHandler,Gets the NetClientHandler.
+mq (BlockFlower),func_269_b,*,func_277_b,canThisPlantGrowOnThisBlockID,Gets passed in the blockID of the block below and supposed to return true if its allowed to grow on the type of blockID passed in. Args: blockID
+mu (NibbleArray),func_769_a,*,func_560_a,isValid,Returns if the byte array is null or not.
+mu (NibbleArray),func_770_a,*,func_561_a,setNibble,Sets the nibble of data at i << 11 | k << 7 | j to l.
+mu (NibbleArray),func_771_a,*,func_562_a,getNibble,"Returns the nibble of data corresponding to the passed in i,j,k. j is at most 6 bits, k is at most 4. "
+,func_549_a,*,*,drawGradientRect,Draws a rectangle with a vertical gradient between the specified colors.
+,func_550_b,*,*,drawTexturedModalRect,Draws a textured rectangle at the stored z-value.
+,func_551_a,*,*,drawRect,Draws a solid color rectangle with the specified coordinates and color.
+mx (HashEntry),func_767_b,*,*,getValue,Returns the object stored in this entry
+mx (HashEntry),func_768_a,*,*,getHash,Returns the hash code for this entry
+net/minecraft/client/Minecraft,func_6240_b,*,*,getDataFolder,Gets the minecraft directory.,DUPLICATE,DUPLICATE
+net/minecraft/client/Minecraft,func_6244_d,*,*,shutdown,"Called when the window is closing. Sets ""running"" to false which allows the game loop to exit cleanly."
+net/minecraft/client/Minecraft,func_110_a,*,*,handleException,Creates a new crash report and displays it in the main window.
+net/minecraft/client/Minecraft,func_6267_r,*,*,getOs
+net/minecraft/client/Minecraft,func_6249_a,*,*,resize,Called to resize the current screen.
+net/minecraft/client/Minecraft,func_6250_c,*,*,checkGLError,"Checks for an OpenGL error. If there is one, prints the error ID and error string."
+net/minecraft/client/Minecraft,func_6260_j,*,*,isMultiplayerWorld,"Checks if the current world is a multiplayer world, returns true if it is, false otherwise."
+net/minecraft/client/Minecraft,func_6239_p,*,*,respawn,Called when the respawn button is pressed after the player dies.
+net/minecraft/client/Minecraft,func_6257_q,*,*,loadScreen,Displays a new screen.
+net/minecraft/client/Minecraft,func_6242_u,*,*,forceReload,Forces a reload of the sound manager and all the resources. Called in game by holding 'F3' and pressing 'S'.
+net/minecraft/client/Minecraft,func_6268_a,*,*,installResource,Installs a resource. Currently only sounds are download so this method just adds them to the SoundManager.
+net/minecraft/client/Minecraft,func_6270_h,*,*,toggleFullscreen,Toggles fullscreen mode.
+net/minecraft/client/MinecraftApplet,func_6232_b,*,*,shutdown,Called when the applet window is closed.
+nm (IBlockAccess),func_599_f,hq,func_443_c,getBlockMaterial,Returns the block's material.
+nm (IBlockAccess),func_600_a,hq,func_444_a,getBlockId,"Returns the block ID at coords x,y,z"
+nm (IBlockAccess),func_602_e,hq,func_446_b,getBlockMetadata,"Returns the block metadata at coords x,y,z"
+of (SoundManager),func_330_b,*,*,closeMinecraft,Called when Minecraft is closing down.
+of (SoundManager),func_332_a,*,*,addSound,Adds an audio file to the sounds SoundPool.
+of (SoundManager),func_6373_b,*,*,addStreaming,Adds an audio file to the streaming SoundPool.
+of (SoundManager),func_6374_c,*,*,addMusic,Adds an audio file to the music SoundPool.
+og (BlockFire),func_261_b,il,func_269_b,canBlockCatchFire,"Checks the specified block coordinate to see if it can catch fire.  Args: blockAccess, x, y, z"
+og (BlockFire),func_262_i,il,func_270_h,getChanceOfNeighborsEncouragingFire,Gets the highest chance of a neighbor block encouraging this block to catch fire
+og (BlockFire),func_264_a,il,func_267_a,setBurnRate,"Sets the burn rate for a block. The larger abilityToCatchFire the more easily it will catch on fire Args: blockID, unknown1, abilityToCatchFire"
+og (BlockFire),func_265_g,il,func_265_f,getChanceToEncourageFire,"Retrieves a specified block's chance to encourage their neighbors to burn and if the number is greater than the current number passed in it will return its number instead of the passed in one.  Args: world, x, y, z, curChanceToEncourageFire"
+og (BlockFire),func_266_a,il,func_266_a,tryToCatchBlockOnFire,"Rolls a random number to see if the block coordinates specified will catch fire. Will catch fire if random.nextInt(fireRange)<abilityToCatchFire Args: world, x, y, z, fireRange, random"
+om (WorldProvider),func_4093_b,ie (WorldProvider),func_4088_b,generateLightBrightnessTable,Creates the light to brightness table
+(BlockPortal),func_4032_a_,(BlockPortal),func_4030_a_,tryToCreatePortal,"Checks to see if this location is valid to create a portal and will return True if it does. Args: world, x, y, z"
+v (NoiseGeneratorPerlin),func_802_a,af (NoiseGeneratorPerlin),func_643_a,generateNoise
+v (NoiseGeneratorPerlin),func_803_a,af (NoiseGeneratorPerlin),func_644_a,grad
+v (NoiseGeneratorPerlin),func_804_b,af (NoiseGeneratorPerlin),func_645_b,lerp
+*,*,cq (PropertyManager),func_720_a,getStringProperty,Returns a string property. If the property doesn't exist the default is returned.,,--
+*,*,cq (PropertyManager),func_721_b,saveProperties,Writes the properties to the properties file.,,DUPLICATE
+*,*,cq (PropertyManager),func_722_a,getIntProperty,Returns an integer property. If the property doesn't exist the default is returned.,,--
+*,*,cq (PropertyManager),func_723_a,generateNewProperties,Generates a new properties file.,,--
+*,*,cq (PropertyManager),func_724_a,getBooleanProperty,Returns a boolean property. If the property doesn't exist the default is returned.,,--
+*,*,dw (IUpdatePlayerListBox),func_690_a,update,Updates the Jlist with a new model.,,DUPLICATE
+*,*,ea (PlayerNBTManager),func_725_b,readPlayerData,Reads the player data from disk into the specified PlayerEntityMP.,,DUPLICATE
+*,*,ea (PlayerNBTManager),func_726_a,writePlayerData,Writes the player data to disk from the specified PlayerEntityMP.,,DUPLICATE
+*,*,ef (ICommandListener),func_1_c,getUsername,Gets the players username.,,DUPLICATE
+*,*,ef (ICommandListener),func_2_b,log,Logs the message with a level of INFO.,,DUPLICATE
+*,*,ew (NetLoginHandler),func_31_a,setLoginPacket,Sets and returns the login packet provided.,,DUPLICATE
+*,*,ew (NetLoginHandler),func_32_a,getServerId,Returns the server Id randomly generated by this login handler.,,DUPLICATE
+*,*,ew (NetLoginHandler),func_33_a,tryLogin,"Logs the user in if a login packet is found, otherwise keeps processing network packets unless the timeout has occurred.",,DUPLICATE
+*,*,ew (NetLoginHandler),func_34_b,kickUser,Disconnects the user with the given reason.,,DUPLICATE
+*,*,ew (NetLoginHandler),func_35_b,getUserAndIPString,Returns the user name (if any) and the remote address as a string.,,DUPLICATE
+*,*,ew (NetLoginHandler),func_6007_b,doLogin,Processes the login packet and sends response packets to the user.,,DUPLICATE
+*,*,fk (ConsoleLogManager),func_641_a,init,Initialises the console logger.,,DUPLICATE
+*,*,fo (ServerGui),func_44_a,getMinecraftServer,Returns the MinecraftServer associated with the ServerGui.,,DUPLICATE
+*,*,fo (ServerGui),func_45_a,getStatsComponent,Returns a new JPanel with a new GuiStatsComponent inside.,,--
+*,*,fo (ServerGui),func_46_a,initGui,Initialises the GUI components.,,--
+*,*,fo (ServerGui),func_47_d,getLogComponent,Returns a new JPanel with a new GuiStatsComponent inside.,,DUPLICATE
+*,*,fo (ServerGui),func_48_b,getPlayerListComponent,Returns a new JScrollPane with a new PlayerListBox inside.,,DUPLICATE
+*,*,ft (ServerConfigurationManager),func_612_j,writeOps,Writes the OPs file to disk.,,DUPLICATE
+*,*,ft (ServerConfigurationManager),func_4094_d,removeBannedIP,Removes an IP from the banned list.,,--
+*,*,ft (ServerConfigurationManager),func_4095_a,addBannedPlayer,Adds a player to the banned list.,,--
+*,*,ft (ServerConfigurationManager),func_616_c,playerLoggedOut,Called when a player disconnects from the game. Writes player data to disk and removes them from the world.,,--
+*,*,ft (ServerConfigurationManager),func_619_a,login,Called when a player tries to login. Checks whether they are banned/server is full etc.,,--
+*,*,ft (ServerConfigurationManager),func_623_e,readBannedPlayers,Reads the banned players file from disk.,,DUPLICATE
+*,*,ft (ServerConfigurationManager),func_4096_e,addOp,Adds a player to the OP list.,,--
+*,*,ft (ServerConfigurationManager),func_4097_b,removeBannedPlayer,Removes a player from the banned list.,,--
+*,*,ft (ServerConfigurationManager),func_626_f,writeBannedPlayers,Writes the banned players file to disk.,,--
+*,*,ft (ServerConfigurationManager),func_627_a,playerLoggedIn,Called when a player successfully logs in. Reads player data from disk and inserts the player into the world.,,--
+*,*,ft (ServerConfigurationManager),func_629_g,readBannedIPs,Reads the banned IPs file from disk.,,--
+*,*,ft (ServerConfigurationManager),func_4098_f,removeOp,Removes a player from the OP list.,,--
+*,*,ft (ServerConfigurationManager),func_4099_c,addBannedIP,Adds an IP to the banned list.,,--
+*,*,ft (ServerConfigurationManager),func_635_h,writeBannedIPs,Writes the banned IPs file to disk.,,DUPLICATE
+*,*,ft (ServerConfigurationManager),func_638_i,readOps,Reads the OPs file from disk.,,DUPLICATE
+*,*,ft (ServerConfigurationManager),func_639_g,isOp,"Returns true if the player is an OP, false otherwise.",,--
+*,*,hf (MCHashTable),func_556_b,containsItem,Returns true if this hash table contains the specified item.,,DUPLICATE
+*,*,hf (MCHashTable),func_548_c,lookupEntry,Returns the internal entry for a key,,DUPLICATE
+*,*,hg (PlayerManager),func_540_a,getMinecraftServer,Returns the MinecraftServer associated with the PlayerManager.,,DUPLICATE
+*,*,hx (GuiStatsComponent),func_435_a,update,Public static accessor to call updateStats.,,--
+*,*,hx (GuiStatsComponent),func_436_a,updateStats,Updates the stat values and calls paint to redraw the component.,,DUPLICATE
+*,*,id (NetServerHandler),func_39_b,sendPacket,Adds the packet to the underlying network manager's send queue.,,DUPLICATE
+*,*,MinecraftServer,func_6010_a,addCommand,Adds a command to the command list for processing.,--,--
+*,*,MinecraftServer,func_6009_a,getFile,Returns a File object from the specified string.,,DUPLICATE
+*,*,MinecraftServer,func_6021_b,commandLineParser,Parse the command line and call the corresponding action.,,DUPLICATE
+,func_4154_a,SpawnerAnimals,,performSpawning,The main spawning algorithm,DUPLICATE,DUPLICATE
+,func_4153_a,SpawnerAnimals,,getRandomSpawningPointInChunk,"Given a chunk, find a random position in it.",DUPLICATE,DUPLICATE
+,func_613_a,World,,addWorldAccess,Adds a IWorldAccess to the list of worldAccesses
+MobSpawnerBase,func_4118_a,MobSpawnerBase,func_4081_a,getEntitiesForType
+MobSpawnerBase,func_4119_a,MobSpawnerBase,func_4078_a,getBiome
+MobSpawnerBase,func_4120_a,MobSpawnerBase,func_4084_a,generateBiomeLookup
+MobSpawnerBase,func_4121_a,MobSpawnerBase,func_4085_a,getBiomeFromLookup
+MobSpawnerBase,func_4125_a,MobSpawnerBase,func_4082_a,setBiomeName
+Render,func_4009_a,,,setRenderManager,,DUPLICATE,DUPLICATE
+Render,func_147_a,,,doRender,"Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic (Render<T extends Entity) and this method has signature public void func_147_a(T entity, double d, double d1, double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that."
+Render,func_151_a,,,loadTexture,loads the specified texture
+World,func_607_d,,,setEntityDead,,DUPLICATE,DUPLICATE
+WorldChunkManager,func_4060_a,,func_4057_a,generateTerrain,Generates the shape of the terrain for the chunk though its all stone though the water is frozen if the temperature is low enough
+WorldChunkManager,func_4062_a,,func_4056_a,replaceBlocksForBiome,Replaces the stone that was placed in with blocks that match the biome
+WorldChunkManager,func_4070_a,,func_4064_a,loadBlockGeneratorData,"Returns biomes to use for the blocks and loads the other data like temperature and humidity onto the WorldChunkManager Args: oldBiomeList, x, z, width, depth"
+WorldChunkManager,func_4071_a,,func_4068_a,getTemperatures,"Returns a list of temperatures to use for the specified blocks.  Args: listToReuse, x, y, width, length",,DUPLICATE
+World,func_603_b,,func_451_k,getBlock,"Returns a given block (X, Y, Z) from the world.",DUPLICATE,DUPLICATE
+GuiScreen,func_6448_a,,,initGui,Adds the buttons (and other controls) to the screen in question.,DUPLICATE,DUPLICATE
+GuiScreen,func_6447_a,,,setWorldAndResolution,,DUPLICATE,DUPLICATE
+GuiScreen,func_6449_h,,,onGuiClosed,called when the screen closes.,DUPLICATE,DUPLICATE
+GuiScreen,func_579_b,,,drawBackground,i is always zero (as of 1.2.2),DUPLICATE,DUPLICATE
+NetClientHandler,func_847_a,,,addToSendQueue,,DUPLICATE,DUPLICATE
+NetClientHandler,func_848_a,,,processReadPackets,,DUPLICATE,DUPLICATE
+Minecraft,func_6272_a,,,displayGuiScreen,,DUPLICATE,DUPLICATE
+GuiScreen,func_578_i,,,drawDefaultBackground,,DUPLICATE,DUPLICATE
+Minecraft,func_6264_a,,,getAppDir,gets the working dir (OS specific) for the specific application (which is always minecraft),DUPLICATE,DUPLICATE
+Minecraft,func_6240_b,,,getMinecraftDir,gets the working dir (OS specific) for minecraft,DUPLICATE,DUPLICATE
+World,func_660_k,,,sendQuittingDisconnectPacket,"If on MP, sends a quitting packet.",DUPLICATE,DUPLICATE
+Render,func_146_a,*,*,renderOffsetAABB,"Renders a white box with the bounds of the AABB translated by the offset. Args: aabb, x, y, z",DUPLICATE,DUPLICATE
+InventoryPlayer,func_496_a,*,*,setCurrentItem,Sets a specific itemID as the current item being held (only if it exists on the hotbar),DUPLICATE,DUPLICATE
+Render,func_145_a,*,*,renderShadowOnBlock,"Renders a shadow projected down onto the specified block. Brightness of the block plus how far away on the Y axis determines the alpha of the shadow.  Args: block, centerX, centerY, centerZ, blockX, blockY, blockZ, baseAlpha, shadowSize, xOffset, yOffset, zOffset",DUPLICATE,DUPLICATE
+Render,func_142_a,*,*,renderAABB,Adds to the tesselator a box using the aabb for the bounds. Args: aabb,DUPLICATE,DUPLICATE
+Render,func_141_b,*,*,doRenderShadowAndFire,"Renders the entity's shadow and fire (if its on fire). Args: entity, x, y, z, yaw, partialTickTime",DUPLICATE,DUPLICATE
+Render,func_149_b,*,*,getWorldFromRenderManager,Returns the render manager's world object,DUPLICATE,DUPLICATE
+GLAllocation,func_1125_c,*,*,createDirectIntBuffer,Creates and returns a direct int buffer with the specified capacity. Applies native ordering to speed up access.,DUPLICATE,DUPLICATE
+GLAllocation,func_1127_b,*,*,createDirectByteBuffer,Creates and returns a direct byte buffer with the specified capacity. Applies native ordering to speed up access.,DUPLICATE,DUPLICATE
+GLAllocation,func_1123_d,*,*,createDirectFloatBuffer,Creates and returns a direct float buffer with the specified capacity. Applies native ordering to speed up access.,DUPLICATE,DUPLICATE
+Chunk,func_1012_a,*,*,needsSaving,Returns true if this Chunk needs to be saved,DUPLICATE,DUPLICATE
+Chunk,func_1017_a,*,*,isAtLocation,Checks whether the chunk is at the X/Z location specified,DUPLICATE,DUPLICATE
+ItemFishingRod,func_4023_b,*,*,shouldRotateAroundWhenRendering,Returns true if this item should be rotated by 180 degrees around the Y axis when being held in an entities hands.,DUPLICATE,DUPLICATE
+EntityLiving,func_431_d,*,*,getSwingProgress,Returns where in the swing animation the living entity is (from 0 to 1).  Args: partialTickTime,DUPLICATE,DUPLICATE
+EntitySpider,func_438_i,*,*,findPlayerToAttack,"Finds the closest player within 16 blocks to attack, or null if this Entity isn't interested in attacking (Animals, Spiders at day, peaceful PigZombies).",DUPLICATE,DUPLICATE
+InventoryPlayer,func_505_f,*,*,getInventorySlotContainItem,Returns a slot index in main inventory containing a specific itemID,DUPLICATE,DUPLICATE
+InventoryPlayer,func_502_a,*,*,getDamageVsEntity,"Return damage vs an entity done by the current held weapon, or 1 if nothing is held",DUPLICATE,DUPLICATE
+World,func_643_a,*,*,setBlockAndMetadata,Sets the block ID and metadata of a block in global coordinates,DUPLICATE,DUPLICATE
+RenderEngine,func_6526_a,*,*,readTextureImage,Returns a BufferedImage read off the provided input stream.  Args: inputStream,DUPLICATE,DUPLICATE
+RenderEngine,func_1069_b,*,*,unwrapImageByColumns,Takes an image with multiple 16-pixel-wide columns and creates a new 16-pixel-wide image where the columns are stacked vertically,DUPLICATE,DUPLICATE
+RenderEngine,func_1068_a,*,*,setupTexture,Copy the supplied image onto the specified OpenGL texture,DUPLICATE,DUPLICATE
+RenderEngine,func_1065_b,*,*,refreshTextures,Call setupTexture on all currently-loaded textures again to account for changes in rendering options,DUPLICATE,DUPLICATE
+InventoryPlayer,func_510_b,*,*,consumeInventoryItem,"removed one item of specified itemID from inventory (if it is in a stack, the stack size will reduce with 1)",DUPLICATE,DUPLICATE
+InventoryPlayer,func_513_b,*,*,readFromNBT,Reads from the given tag list and fills the slots in the inventory with the correct items.,DUPLICATE,DUPLICATE
+Chunk,func_995_d,*,*,onChunkLoad,Called when this Chunk is loaded by the ChunkProvider,DUPLICATE,DUPLICATE
+Slot,func_779_d,*,*,onSlotChanged,Called when the stack in a Slot changes,DUPLICATE,DUPLICATE
+Chunk,func_998_e,*,*,onChunkUnload,Called when this Chunk is unloaded by the ChunkProvider,DUPLICATE,DUPLICATE
+BlockRedstoneWire,func_281_g,*,*,getMaxCurrentStrength,"Returns the current strength at the specified block if it is greater than the passed value, or the passed value otherwise.  Signature: (world, x, y, z, strength)",DUPLICATE,DUPLICATE
+BlockRedstoneWire,func_280_h,*,*,updateAndPropagateCurrentStrength,Sets the strength of the wire current (0-15) for this block based on neighboring blocks and propagates to neighboring redstone wires,DUPLICATE,DUPLICATE
+BlockMobSpawner,func_283_a_,*,*,SetBlockEntity,Returns the tileentity used by the block,DUPLICATE,DUPLICATE
+BlockRedstoneWire,func_282_i,*,*,notifyWireNeighborsOfNeighborChange,"Calls World.notifyBlocksOfNeighborChange() for all neighboring blocks, but only if the given block is a redstone wire.",DUPLICATE,DUPLICATE
+BlockFurnace,func_285_a,*,*,updateFurnaceBlockState,Update which block ID the furnace is using depending on whether or not it is burning,DUPLICATE,DUPLICATE
+World,func_605_c,*,*,isBoundingBoxBurning,Returns whether or not the given bounding box is on fire or not,DUPLICATE,DUPLICATE
+Render,func_4009_a,*,*,setRenderManager,Sets the RenderManager.,DUPLICATE,DUPLICATE
+RenderEngine,func_1078_a,*,*,deleteTexture,Deletes a single GL texture,DUPLICATE,DUPLICATE
+EntityList,func_1079_a,*,*,createEntityInWorld,Creates an entity of the given name in the world.,DUPLICATE,DUPLICATE
+RenderEngine,func_1077_b,*,*,weightedAverageColor,"Uses the alpha of the two colors passed in to determine the contributions of each color.  If either of them has an alpha greater than 0 then the returned alpha is 255 otherwise its zero if they are both zero. Args: color1, color2",DUPLICATE,DUPLICATE
+RenderEngine,func_1074_a,*,*,allocateAndSetupTexture,"Copy the supplied image onto a newly-allocated OpenGL texture, returning the allocated texture name",DUPLICATE,DUPLICATE
+RenderEngine,func_1075_a,*,*,obtainImageData,"Return a ThreadDownloadImageData instance for the given URL.  If it does not already exist, it is created and uses the passed ImageBuffer.  If it does, its reference count is incremented.",DUPLICATE,DUPLICATE
+RenderEngine,func_1072_a,*,*,averageColor,"Takes two colors and returns the average of them. Args: color1, color2",DUPLICATE,DUPLICATE
+RenderEngine,func_1073_b,*,*,releaseImageData,"Decrements the reference count for a given URL, deleting the image data if the reference count hits 0",DUPLICATE,DUPLICATE
+RenderEngine,func_1071_a,*,*,getTextureForDownloadableImage,"Takes a URL of a downloadable image and the name of the local image to be used as a fallback.  If the image has been downloaded, returns the GL texture of the downloaded image, otherwise returns the GL texture of the fallback image.",DUPLICATE,DUPLICATE
+EntityList,func_1083_b,*,*,getEntityString,gets the string representation of a specific entity,DUPLICATE,DUPLICATE
+TileEntitySpecialRenderer,func_928_a,*,*,setTileEntityRenderer,Associate a TileEntityRenderer with this TileEntitySpecialRenderer,DUPLICATE,DUPLICATE
+RenderItem,func_161_a,*,*,renderItemIntoGUI,Renders the item's icon or block into the UI at the specified position.,DUPLICATE,DUPLICATE
+RenderItem,func_162_a,*,*,renderQuad,"Adds a quad to the tesselator at the specified position with the set width and height and color.  Args: tessellator, x, y, width, height, color",DUPLICATE,DUPLICATE
+RenderItem,func_163_a,*,*,renderTexturedQuad,"Adds a textured quad to the tesselator at the specified position with the specified texture coords, width and height.  Args: x, y, u, v, width, height",DUPLICATE,DUPLICATE
+RenderItem,func_164_b,*,*,renderItemOverlayIntoGUI,Renders the item's overlay information. Examples being stack count or damage on top of the item's image at the specified position.,DUPLICATE,DUPLICATE
+World,func_708_k,*,*,canExistingBlockSeeTheSky,"Determines if a block can see the sky or not, but if the proper chunk does not already exist, it does not create a new one.",DUPLICATE,DUPLICATE
+Entity,func_365_c,*,*,setLocationAndAngles,Sets the location and Yaw/Pitch of an entity in the world,DUPLICATE,DUPLICATE
+Entity,func_389_H,*,*,getEntityString,Returns the string that identifies this Entity's class,DUPLICATE,DUPLICATE
+EntityBoat,func_385_d_,*,*,canBePushed,Returns true if this entity should push and be pushed by other entities when colliding.,DUPLICATE,DUPLICATE
+RenderGlobal,func_941_a,*,*,obtainEntitySkin,"Start the skin for this entity downloading, if necessary, and increment its reference counter",DUPLICATE,DUPLICATE
+Render,func_6329_a,*,*,getFontRendererFromRenderManager,Returns the font renderer from the set render manager,DUPLICATE,DUPLICATE
+TileEntitySpecialRenderer,func_6508_a,*,*,getFontRenderer,*,DUPLICATE,DUPLICATE
+RenderManager,func_6500_a,*,*,getFontRenderer,Returns the font renderer,DUPLICATE,DUPLICATE
+TileEntitySpecialRenderer,func_6507_a,*,*,bindTextureByName,Binds a texture to the renderEngine given a filename from the JAR.,DUPLICATE,DUPLICATE
+Slot,func_4104_e,*,*,getSlotStackLimit,"Returns the maximum stack size for a given slot (usually the same as getInventoryStackLimit(), but 1 in the case of armor slots)",DUPLICATE,DUPLICATE
+WorldProviderHell,func_4100_a,*,*,calculateCelestialAngle,Calculates the angle of sun and moon in the sky relative to a specified time (usually worldTime),DUPLICATE,DUPLICATE
+SlotCrafting,func_4103_a,*,*,onPickupFromSlot,Called when the player picks up an item from an inventory slot,DUPLICATE,DUPLICATE
+WorldProviderHell,func_4102_a,*,*,canCoordinateBeSpawn,"Will check if the x, z position specified is alright to be set as the map spawn point",DUPLICATE,DUPLICATE
+GuiScreen,func_579_b,*,*,drawBackground,Draws the background (i is always 0 as of 1.2.2),DUPLICATE,DUPLICATE
+GuiScreen,func_578_i,*,*,drawDefaultBackground,Draws either a gradient over the background screen (when it exists) or a flat gradient over background.png,DUPLICATE,DUPLICATE
+GuiScreen,func_573_b,*,*,mouseMovedOrUp,"Called when the mouse is moved or a mouse button is released.  Signature: (mouseX, mouseY, which) which==-1 is mouseMove, which==0 or which==1 is mouseUp",DUPLICATE,DUPLICATE
+EntityPlayer,func_374_q,*,*,preparePlayerToSpawn,Keeps moving the entity up so it isn't colliding with blocks and other requirements for this entity to be spawned (only actually used on players though its also on Entity),DUPLICATE,DUPLICATE
+TileEntityRenderer,func_6516_a,*,*,getFontRenderer,*,DUPLICATE,DUPLICATE
+GuiContainer,func_590_a,*,*,drawSlotInventory,Draws an inventory slot,DUPLICATE,DUPLICATE
+Render,func_144_c,*,*,renderShadow,"Renders the entity shadows at the position, shadow alpha and partialTickTime. Args: entity, x, y, z, shadowAlpha, partialTickTime",DUPLICATE,DUPLICATE
+TileEntityFurnace,func_490_a,*,*,getCookProgressScaled,Returns an integer between 0 and the passed value representing how close the current item is to being completely cooked,DUPLICATE,DUPLICATE
+TileEntityFurnace,func_491_j,*,*,canSmelt,"Returns true if the furnace can smelt an item, i.e. has a source item, destination stack isn't full, etc.",DUPLICATE,DUPLICATE
+InventoryPlayer,func_492_d,*,*,armorItemInSlot,returns a player armor item (as itemstack) contained in specified armor slot.,DUPLICATE,DUPLICATE
+InventoryPlayer,func_498_a,*,*,changeCurrentItem,Switch the current item to the next one or the previous one,DUPLICATE,DUPLICATE
+Render,func_148_a,*,*,renderEntityOnFire,"Renders fire on top of the entity. Args: entity, x, y, z, partialTickTime",DUPLICATE,DUPLICATE
+ChunkProviderLoadOrGenerate,func_540_b,*,*,saveChunk,"Save a given Chunk, recording the time in lastSaveTime",DUPLICATE,DUPLICATE
+ChunkProviderLoadOrGenerate,func_541_a,*,*,saveExtraChunkData,"Save extra data associated with this Chunk not normally saved during autosave, only during chunk unload.  Currently unused.",DUPLICATE,DUPLICATE
+IChunkLoader,func_811_b,*,*,saveExtraData,"Save extra data not associated with any Chunk.  Not saved during autosave, only during world unload.  Currently unused.",DUPLICATE,DUPLICATE
+IChunkLoader,func_812_a,*,*,saveChunk,*,DUPLICATE,DUPLICATE
+IChunkLoader,func_813_a,*,*,loadChunk,Loads the specified(XZ) chunk into the specified world.,DUPLICATE,DUPLICATE
+IChunkLoader,func_815_b,*,*,saveExtraChunkData,"Save extra data associated with this Chunk not normally saved during autosave, only during chunk unload.  Currently unused.",DUPLICATE,DUPLICATE
+ChunkLoader,func_816_a,*,*,loadChunkIntoWorldFromCompound,Parses the data in the compound into a Chunk in the specified world.,DUPLICATE,DUPLICATE
+ChunkLoader,func_817_a,*,*,chunkFileForXZ,*,DUPLICATE,DUPLICATE
+ChunkLoader,func_818_a,*,*,storeChunkInCompound,Stores the chunk into the supplied Compound. (could even be private static),DUPLICATE,DUPLICATE
+ModelRenderer,func_923_a,*,*,entityLimbDefine,"Takes seven arguements for X, Y, Z positioning, width, length, height, and a size multiplier and creates an entity limb.",DUPLICATE,DUPLICATE
+GuiGameOver,func_6450_b,*,*,doesGuiPauseGame,Returns true if this GUI should pause the game when it is displayed in single-player,DUPLICATE,DUPLICATE
+TileEntityRenderer,func_1031_b,*,*,getSpecialRendererForEntity,"Returns the TileEntitySpecialRenderer used to render this TileEntity instance, or null if it has no special renderer",DUPLICATE,DUPLICATE
+TileEntityFurnace,func_487_i,*,*,smeltItem,Turn one item from the furnace source stack into the appropriate smelted item in the furnace result stack,DUPLICATE,DUPLICATE
+TileEntityFurnace,func_486_d,*,*,getSmeltingResultItem,"Returns the item ID of the result of smelting the given item ID, or -1 if the given item can't be smelted.",DUPLICATE,DUPLICATE
+TileEntityFurnace,func_485_a,*,*,isBurning,Returns true if the furnace is currently burning,DUPLICATE,DUPLICATE
+TileEntityMobSpawner,func_484_a,*,*,anyPlayerInRange,Returns true if there is a player in range (using World.getClosestPlayer),DUPLICATE,DUPLICATE
+TileEntityFurnace,func_489_b,*,*,getBurnTimeRemainingScaled,"Returns an integer between 0 and the passed value representing how much burn time is left on the current fuel item, where 0 means that the item is exhausted and the passed value means that the item is fresh",DUPLICATE,DUPLICATE
+TileEntityFurnace,func_488_a,*,*,getItemBurnTime,"Returns the number of ticks that the supplied fuel item will keep the furnace burning, or 0 if the item isn't fuel",DUPLICATE,DUPLICATE
+EntityList,func_1084_a,*,*,createEntity,create a new instance of an entity by using an entityID,DUPLICATE,DUPLICATE
+EntityList,func_1081_a,*,*,createEntityFromNBT,create a new instance of an entity from NBT store,DUPLICATE,DUPLICATE
+EntityList,func_1080_a,*,*,addMapping,adds a mapping between Entity classes and both a string representation and an ID,DUPLICATE,DUPLICATE
+NBTTagFloat,func_735_a,*,*,writeTagContents,"Write the actual data contents of the tag, implemented in NBT extension classes",DUPLICATE,DUPLICATE
+NBTTagFloat,func_736_a,*,*,readTagContents,"Read the actual data contents of the tag, implemented in NBT extension classes",DUPLICATE,DUPLICATE
+TileEntitySignRenderer,func_932_a,*,*,renderTileEntitySignAt,*,DUPLICATE,DUPLICATE
+TileEntityMobSpawnerRenderer,func_930_a,*,*,renderTileEntityAt,*,DUPLICATE,DUPLICATE
+RenderGlobal,func_938_b,*,*,releaseEntitySkin,Decrement the reference counter for this entity's skin image data,DUPLICATE,DUPLICATE
+ItemRenderer,func_4132_a,*,*,renderItem,Renders the item stack for being in an entity's hand Args: itemStack,DUPLICATE,DUPLICATE
+EntityList,func_1082_a,*,*,getEntityID,gets the entityID of a specific entity,DUPLICATE,DUPLICATE
+ItemStack,func_1099_b,*,*,canHarvestBlock,Checks if the itemStack object can harvest a specified block,DUPLICATE,DUPLICATE
+GuiChest,func_589_a,*,*,drawGuiContainerBackgroundLayer,Draw the background layer for the GuiContainer (everything behind the items),DUPLICATE,DUPLICATE
+GuiChest,func_587_j,*,*,drawGuiContainerForegroundLayer,Draw the foreground layer for the GuiContainer (everythin in front of the items),DUPLICATE,DUPLICATE
+World,func_630_d,*,*,blockExists,"Returns whether a block exists at world coordinates x, y, z",DUPLICATE,DUPLICATE
+Timer,func_904_a,*,*,updateTimer,Updates all fields of the Timer using the current time,DUPLICATE,DUPLICATE
+Minecraft,func_6272_a,*,*,displayGuiScreen,Sets the argument GuiScreen as the main (topmost visible) screen.,DUPLICATE,DUPLICATE
+RenderHelper,func_1159_a,*,*,disableStandardItemLighting,Disables the OpenGL lighting properties enabled by enableStandardItemLighting,DUPLICATE,DUPLICATE
+RenderHelper,func_1158_b,*,*,enableStandardItemLighting,Sets the OpenGL lighting properties to the values used when rendering blocks as items,DUPLICATE,DUPLICATE
+Block,func_222_c,*,*,setHardness,Sets how many hits it takes to break a block.,DUPLICATE,DUPLICATE
+Minecraft,func_6264_a,*,*,getAppDir,gets the working dir (OS specific) for the specific application (which is always minecraft),DUPLICATE,DUPLICATE
+CompressedStreamTools,func_1143_a,*,*,writeGzippedCompoundToOutputStream,"Write the compound, gzipped, to the outputstream.",DUPLICATE,DUPLICATE
+Block,func_219_b,*,*,setResistance,Sets the the blocks resistance to explosions. Returns the object for convenience in constructing.,DUPLICATE,DUPLICATE
+World,func_692_l,*,*,removeBlockTileEntity,"Removes the TileEntity for a given block in X,Y,Z coordinates",DUPLICATE,DUPLICATE
+EntityPlayer,func_454_b,*,*,canHarvestBlock,Checks if the player has the ability to harvest a block (checks current inventory item for a tool if necessary),DUPLICATE,DUPLICATE
+World,func_678_c,*,*,releaseEntitySkin,Decrement the reference counter for this entity's skin image data,DUPLICATE,DUPLICATE
+World,func_672_b,*,*,removeWorldAccess,Removes a worldAccess from the worldAccesses object,DUPLICATE,DUPLICATE
+World,func_654_a,*,*,setBlockTileEntity,"Sets the TileEntity for a given block in X, Y, Z coordinates",DUPLICATE,DUPLICATE
+WorldProviderHell,func_4092_a,*,*,getChunkLoader,Returns the chunk loader back for the world provider. Args: fileName,DUPLICATE,DUPLICATE
+WorldProvider,func_4095_a,*,*,registerWorld,"associate an existing world with a World provider, and setup its lightbrightness table",DUPLICATE,DUPLICATE
+WorldProviderHell,func_4094_c,*,*,getChunkProvider,Returns the chunk provider back for the world provider,DUPLICATE,DUPLICATE
+WorldProviderHell,func_4098_a,*,*,registerWorldChunkManager,creates a new world chunk manager for WorldProvider,DUPLICATE,DUPLICATE
+WorldChunkManagerHell,func_4071_a,*,*,getTemperatures,"Returns a list of temperatures to use for the specified blocks.  Args: listToReuse, x, y, width, length",DUPLICATE,DUPLICATE
+World,func_688_b,*,*,setBlockAndMetadataWithNotify,"Sets the block ID and metadata, then notifies neighboring blocks of the change",DUPLICATE,DUPLICATE
+World,func_669_m,*,*,saveLevel,Saves the global data associated with this World,DUPLICATE,DUPLICATE
+NetClientHandler,func_848_a,*,*,processReadPackets,Processes the packets that have been read since the last call to this function.,DUPLICATE,DUPLICATE
+NetClientHandler,func_847_a,*,*,addToSendQueue,Adds the packet to the send queue,DUPLICATE,DUPLICATE
+World,func_660_k,*,*,sendQuittingDisconnectingPacket,"If on MP, sends a quitting packet.",DUPLICATE,DUPLICATE
+InventoryPlayer,func_474_j_,*,*,onInventoryChanged,"Called when an the contents of an Inventory change, usually",DUPLICATE,DUPLICATE
+BlockRedstoneWire,func_279_b,*,*,isPowerProviderOrWire,"Calls canProvidePower() on the specified block and returns the result, but bypasses the wiresProvidePower flag",DUPLICATE,DUPLICATE
+BlockRedstoneTorch,func_273_a,*,*,checkForBurnout,*,DUPLICATE,DUPLICATE
+ItemRenderer,func_898_a,*,*,renderInsideOfBlock,"Renders the texture of the block the player is inside as an overlay. Args: partialTickTime, blockTextureIndex",DUPLICATE,DUPLICATE
+ItemRenderer,func_890_d,*,*,renderFireInFirstPerson,Renders the fire on the screen for first person mode. Arg: partialTickTime,DUPLICATE,DUPLICATE
+ItemRenderer,func_892_c,*,*,renderWarpedTextureOverlay,Renders a texture that warps around based on the direction the player is looking. Texture needs to be bound before being called. Used for the water overlay. Args: parialTickTime,DUPLICATE,DUPLICATE
+ItemRenderer,func_893_b,*,*,renderOverlays,Renders all the overlays that are in first person mode. Args: partialTickTime,DUPLICATE,DUPLICATE
+MathHelper,func_1110_d,*,*,convertToBlockCoord_float,Takes a float and converts it into a block coordinate taking into account integer conversion rounds to zero below zero.,DUPLICATE,DUPLICATE
+ItemRenderer,func_4133_a,*,*,renderItemInFirstPerson,Renders the active item in the player's hand when in first person mode. Args: partialTickTime,DUPLICATE,DUPLICATE
+Chunk,func_1023_e,*,*,removeChunkBlockTileEntity,Removes the TileEntity for a given block in this chunk,DUPLICATE,DUPLICATE
+TileEntityRenderer,func_1028_a,*,*,hasSpecialRenderer,"Returns true if this TileEntity instance has a TileEntitySpecialRenderer associated with it, false otherwise.",DUPLICATE,DUPLICATE
+World,func_607_d,*,*,setEntityDead,"Not sure what this does 100%, but from the calling methods this method should be called like this.",DUPLICATE,DUPLICATE
+World,func_606_b,*,*,obtainEntitySkin,"Start the skin for this entity downloading, if necessary, and increment its reference counter",DUPLICATE,DUPLICATE
+ChunkCache,func_603_b,*,*,getBlockTileEntity,"Returns the TileEntity associated with a given block in X,Y,Z coordinates, or null if no TileEntity exists",DUPLICATE,DUPLICATE
+BlockPressurePlate,func_318_h,*,*,setStateIfMobInteractsWithPlate,"Checks if there are mobs on the plate. If a mob is on the plate and it is off, it turns it on, and vice versa.",DUPLICATE,DUPLICATE
+BlockLever,func_267_h,*,*,checkIfAttachedToBlock,"Checks if the block is attached to another block. If it is not, it returns false and drops the block as an item. If it is it returns true.",DUPLICATE,DUPLICATE
+BlockRedstoneTorch,func_6356_h,*,*,isAttachedBlockProvidingPower,Check if the block this torch is attached to is powering it (i.e. turning it off),DUPLICATE,DUPLICATE
+MathHelper,func_1108_b,*,*,convertToBlockCoord_double,Takes a double and converts it into a block coordinate taking into account integer conversion rounds to zero below zero.,DUPLICATE,DUPLICATE
+TileEntityRenderer,func_1032_a,*,*,renderTileEntityAt,Render this TileEntity at a given set of coordinates,DUPLICATE,DUPLICATE
+TileEntityRenderer,func_1030_a,*,*,renderTileEntity,Render this TileEntity at its current position from the player,DUPLICATE,DUPLICATE
+EntitySkeleton,func_4045_l,*,*,getHeldItem,"Returns the item that this EntityLiving is holding, if any.",DUPLICATE,DUPLICATE
+EntityPigZombie,func_4049_h,*,*,becomeAngryAt,Causes this PigZombie to become angry at the supplied Entity (which will be a player).,DUPLICATE,DUPLICATE
+World,func_639_a,*,*,saveWorld,"Saves the data for this World.  If passed true, then only save up to 2 chunks, otherwise, save all chunks.",DUPLICATE,DUPLICATE
+IChunkProvider,func_533_b,*,*,provideChunk,"Will return back a chunk, if it doesn't exist and its not a MP client it will generates all the blocks for the specified chunk from the map seed and chunk seed",DUPLICATE,DUPLICATE
+IChunkProvider,func_535_a,*,*,saveChunks,"Two modes of operation: if passed true, save all Chunks in one go.  If passed false, save up to two chunks.  Return true if all chunks have been saved.",DUPLICATE,DUPLICATE
+Chunk,func_1006_f,*,*,setChunkModified,Sets the isModified flag for this Chunk,DUPLICATE,DUPLICATE
+Chunk,func_1005_a,*,*,setChunkBlockTileEntity,Sets the TileEntity for a given block in this chunk,DUPLICATE,DUPLICATE
+Chunk,func_1002_d,*,*,getChunkBlockTileEntity,Gets the TileEntity for a given block in this chunk,DUPLICATE,DUPLICATE
+TileEntityRenderer,func_4144_a,*,*,getSpecialRendererForClass,"Returns the TileEntitySpecialRenderer used to render this TileEntity class, or null if it has no special renderer",DUPLICATE,DUPLICATE
+EntityFireball,func_401_c_,*,*,canBeCollidedWith,Returns true if other Entities should be prevented from moving through this Entity.,DUPLICATE,DUPLICATE
+TileEntityRenderer,func_1026_a,*,*,setRenderingContext,"Sets references to the World, RenderEngine, FontRenderer, and EntityPlayer, as well as calculating the player's current position/angle within the current tick",DUPLICATE,DUPLICATE
+WorldGenDungeons,func_531_b,*,*,pickMobSpawner,Randomly decides which spawner to use in a dungeon,DUPLICATE,DUPLICATE
+WorldGenDungeons,func_530_a,*,*,pickCheckLootItem,Picks potentially a random item to add to a dungeon chest.,DUPLICATE,DUPLICATE
+*,*,WorldProviderHell,func_4086_a,getChunkLoader,Returns the chunk loader back for the world provider. Args: fileName,,DUPLICATE
+*,*,WorldProviderHell,func_4087_c,getChunkProvider,Returns the chunk provider back for the world provider,,DUPLICATE
+*,*,WorldChunkManagerHell,func_4068_a,getTemperatures,"Returns a list of temperatures to use for the specified blocks.  Args: listToReuse, x, y, width, length",,DUPLICATE
+*,*,Block,func_237_c,setHardness,Sets how many hits it takes to break a block.,,DUPLICATE
+*,*,WorldProviderHell,func_4092_a,canCoordinateBeSpawn,"Will check if the x, z position specified is alright to be set as the map spawn point",,DUPLICATE
+*,*,NBTTagInt,func_381_a,writeTagContents,"Write the actual data contents of the tag, implemented in NBT extension classes",,DUPLICATE
+*,*,NBTTagInt,func_382_a,readTagContents,"Read the actual data contents of the tag, implemented in NBT extension classes",,DUPLICATE
+*,*,Block,func_232_b,setResistance,Sets the the blocks resistance to explosions. Returns the object for convenience in constructing.,,DUPLICATE
+*,*,MathHelper,func_588_d,convertToBlockCoord_float,Takes a float and converts it into a block coordinate taking into account integer conversion rounds to zero below zero.,,DUPLICATE
+*,*,MathHelper,func_584_b,convertToBlockCoord_double,Takes a double and converts it into a block coordinate taking into account integer conversion rounds to zero below zero.,,DUPLICATE
+EntityPlayer,func_364_b,*,*,addToPlayerScore,"Adds a value to the player score. Currently not actually used and the entity passed in does nothing. Args: entity, scoreToAdd"
+EntityPlayerSP,func_452_a,*,*,displayGUIChest,"Displays the GUI for interacting with a chest inventory. Args: chestInventory"
+EntityPlayerSP,func_453_a,*,*,displayGUIFurnace,"Displays the furnace GUI for the passed in furnace entity. Args: tileEntityFurnace"
+EntityPlayerSP,func_445_l,*,*,displayGUICrafting,"Displays the crafting GUI for a workbench."
+EntityPlayerSP,func_4052_a,*,*,displayGUIEditSign,"Displays the GUI for editing a sign. Args: tileEntitySign"
