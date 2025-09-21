@@ -180,7 +180,7 @@ def alpha_csv_format(mc_ver : str, config_path : str, out_path : str, classes_ve
     map = build_descriptor_map_moj(mc_ver)
     os.makedirs(dirname(out_path), exist_ok=True)
     
-    out = TinyV1Writer(["official", "named"])
+    out = TinyV1Writer(["official","intermediary", "named"])
     
 
     with open(join(config_path, "classes.csv"), "r") as f:
@@ -193,7 +193,7 @@ def alpha_csv_format(mc_ver : str, config_path : str, out_path : str, classes_ve
         for entry in clsreader:
             if entry[classes_version] == "*":
                 continue
-            out.add_class(entry[classes_version], entry[0])
+            out.add_class(entry[classes_version], entry[classes_version], entry[0])
 
     # We first need to figure out the
     # intermidiary mappings
@@ -201,6 +201,7 @@ def alpha_csv_format(mc_ver : str, config_path : str, out_path : str, classes_ve
     field_map = {}
     with open(join(config_path, "minecraft.rgs"), "r") as f:
         for l in f.readlines():
+            l=l.strip()
             if l.startswith(".method_map"):
                 _, off_name, desc, inter = l.strip().split(" ")
                 method_map[inter] = [off_name, desc]
@@ -216,23 +217,26 @@ def alpha_csv_format(mc_ver : str, config_path : str, out_path : str, classes_ve
             next(fieldreader)
 
         for entry in fieldreader:
+            if len(entry) < 7:
+                # Quick sanity checks
+                continue
             inter_name = entry[2]
 
             if inter_name == "*":
                 continue
             
+
+            named_name = entry[6]
+
             if not inter_name in field_map:
                 if do_warnings:
-                    print(f"WARNING: {inter_name} cannot be mapped back to function.")
+                    print(f"WARNING: {named_name} aka {inter_name} cannot be mapped back to function.")
                 continue
 
             off_path = field_map[inter_name]
             off_cls = "/".join(off_path.split("/")[:-1])
             off_name = off_path.split("/")[-1]
             
-
-            named_name = entry[6]
-
 
             if not off_cls in map:
                 if do_warnings:
@@ -244,7 +248,7 @@ def alpha_csv_format(mc_ver : str, config_path : str, out_path : str, classes_ve
                 print(f"WARNING: field {off_name} cannot be resolved in {off_cls}: {descs.keys()}")
                 continue
 
-            out.add_field(off_cls, descs[off_name], off_name, named_name)
+            out.add_field(off_cls, descs[off_name], off_name, inter_name,  named_name)
 
 
         
@@ -256,6 +260,8 @@ def alpha_csv_format(mc_ver : str, config_path : str, out_path : str, classes_ve
             next(methodreader)
 
         for entry in methodreader:
+            entry = [e.strip() for e in entry]
+            
             if len(entry) < 5:
                 continue
             if entry[1] == "*" or len(entry[1]) == 0:
@@ -270,7 +276,7 @@ def alpha_csv_format(mc_ver : str, config_path : str, out_path : str, classes_ve
 
             if not inter_name in method_map:
                 if do_warnings:
-                    print(f"WARNING: {inter_name} cannot be mapped back to method")
+                    print(f"WARNING: {named_name} aka {inter_name} cannot be mapped back to method")
                 continue
 
             off_path, o_desc = method_map[inter_name]
@@ -282,6 +288,7 @@ def alpha_csv_format(mc_ver : str, config_path : str, out_path : str, classes_ve
                 o_desc,
 
                 off_name,
+                inter_name,
                 named_name
             )
 
@@ -291,16 +298,31 @@ def alpha_csv_format(mc_ver : str, config_path : str, out_path : str, classes_ve
 
 
 STYLE_REGENGPACK = [
-    ("a1.1.2", "revengpack16")
+    ("a1.1.2", "a1.1.2", "revengpack16")
 ]
 
 STYLE_OLD_ALPHA = [
-    ("a1.2.1_01", "mcp20"),
-    ("a1.2.1_01", "mcp20a"),
+    ("a1.2.1_01", "a1.2.1_01", "mcp20"),
+    ("a1.2.1_01", "a1.2.1_01", "mcp20a"),
+
+    # I have NO IDEA what 1.2.2 is being refered to in the config names
+    # the wiki tells me that a lost version exists and a1.2.2a is a debug build.
+    #
+    # So I am assuming using a1.2.2b is the best bet.
+    ("a1.2.2b", "a1.2.2", "mcp21"),
+    ("a1.2.2b", "a1.2.2", "mcp22"),
+    ("a1.2.2b", "a1.2.2", "mcp22a"),
+
+
+    ("a1.2.3_02", "a1.2.3_04", "mcp23"),
+
+    ("a1.2.3_02", "a1.2.5", "mcp24"),
+
+    ("a1.2.6", "a1.2.6", "mcp25"),
 ]
 
-def generate_all_tiny(do_warnings = False):
-    for ver, sub in STYLE_REGENGPACK:
+def generate_all_tiny(do_warnings = True):
+    for mcver, ver, sub in STYLE_REGENGPACK:
         config_dir = join("configs", ver)
 
         diR = join(config_dir, sub)
@@ -308,9 +330,9 @@ def generate_all_tiny(do_warnings = False):
         if exists(out):
             continue
         print(f"Generating {out}")
-        revengpack_format(ver, diR, out, do_warnings=do_warnings)
+        revengpack_format(mcver, diR, out, do_warnings=do_warnings)
 
-    for ver, sub, *classes_versions  in STYLE_OLD_ALPHA:
+    for mcver, ver, sub, *classes_versions  in STYLE_OLD_ALPHA:
 
         config_dir = join("configs", ver)
         diR = join(config_dir, sub)
@@ -318,7 +340,7 @@ def generate_all_tiny(do_warnings = False):
         if exists(out):
             continue
         print(f"Generating {out}")
-        alpha_csv_format(ver, diR, out, **(
+        alpha_csv_format(mcver, diR, out, **(
             {"classes_version": classes_versions[0]} if len(classes_versions) else {}
         ), do_warnings=do_warnings)
     
