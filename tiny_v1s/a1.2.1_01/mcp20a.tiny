@@ -1,6 +1,7 @@
 v1	official	named
 CLASS	cf	AxisAlignedBB
 CLASS	ly	Block
+
 CLASS	ds	BlockBookshelf
 CLASS	fc	BlockBreakable
 CLASS	hu	BlockButton
