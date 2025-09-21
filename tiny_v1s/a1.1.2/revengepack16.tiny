@@ -1,0 +1,902 @@
+v1	official	named
+CLASS	a	PathPoint
+CLASS	aa	TextureCompassFX
+CLASS	ab	RenderItem
+CLASS	ac	ItemBucket
+CLASS	ad	IsoListener
+CLASS	ad	IsomPreviewCanvas
+CLASS	ae	WorldGenFlowers
+CLASS	af	IChunkLoader
+CLASS	ag	EntityAnimals
+CLASS	ah	SoundPoolEntry
+CLASS	ai	BlockRedstoneOre
+CLASS	aj	Vec3D
+CLASS	ak	Render
+CLASS	al	BlockPressurePlate
+CLASS	am	EntityCow
+CLASS	an	SlotCrafting
+CLASS	ao	EntitySnowball
+CLASS	ap	ItemSoup
+CLASS	aq	GuiCrashReport
+CLASS	ar	CraftingInventoryCB
+CLASS	as	GuiUnused
+CLASS	at	TextureLavaFX
+CLASS	au	GuiGameOver
+CLASS	av	ItemBlock
+CLASS	aw	IChunkProvider
+CLASS	ax	EntitySpider
+CLASS	ay	GuiOptions
+CLASS	az	SpawnerAnimals
+CLASS	b	BlockChest
+CLASS	ba	EntityBubbleFX
+CLASS	bb	StepSound
+CLASS	bc	RenderBlocks
+CLASS	bd	TileEntityMobSpawner
+CLASS	be	OpenGlCapsChecker
+CLASS	bf	ThreadDownloadResources
+CLASS	bg	BlockRedstoneTorch
+CLASS	bh	GuiScreen
+CLASS	bi	EntityPlayerSP
+CLASS	bj	BlockMobSpawner
+CLASS	bk	NoiseGenerator
+CLASS	bl	PathEntity
+CLASS	bm	Packet22Collect
+CLASS	bn	WorldRenderer
+CLASS	bo	EntitySheep
+CLASS	bp	ItemSnowball
+CLASS	bq	EffectRenderer
+CLASS	br	BlockLadder
+CLASS	bs	ItemTool
+CLASS	bt	ClippingHelper
+CLASS	bu	RenderPlayer
+CLASS	bv	CraftingRecipe
+CLASS	bw	RenderPainting
+CLASS	bx	ModelSheep1
+CLASS	by	EnumSkyBlock
+CLASS	bz	Packet51MapChunk
+CLASS	c	BlockOreBlock
+CLASS	ca	ModelPig
+CLASS	cb	ModelZombie
+CLASS	cc	DownloadImageThreadData
+CLASS	cc	ThreadDownloadImageData
+CLASS	cd	EntityPickupFX
+CLASS	ce	BlockStone
+CLASS	cf	AxisAlignedBB
+CLASS	cg	WorldGenDungeons
+CLASS	ch	Packet13PlayerLookMove
+CLASS	ci	ChunkCache
+CLASS	cj	GuiConnectFailed
+CLASS	ck	ChunkProviderIso
+CLASS	cl	ModelBoat
+CLASS	cm	BlockObsidian
+CLASS	cn	World
+CLASS	co	IMobs
+CLASS	cp	RenderBoat
+CLASS	cq	EntityLavaFX
+CLASS	cr	ModelBiped
+CLASS	cs	BlockWorkbench
+CLASS	ct	BlockGlass
+CLASS	cu	WorldGenMinable
+CLASS	cv	BlockJukeBox
+CLASS	cw	EntitySkeleton
+CLASS	cx	GuiMainMenu
+CLASS	cy	MapGenBase
+CLASS	cz	Pathfinder
+CLASS	d	RenderCreeper
+CLASS	da	WorldGenCactus
+CLASS	db	MajongLogoCanvas
+CLASS	dc	EntityBoat
+CLASS	dd	EntityCreeper
+CLASS	de	GuiChat
+CLASS	df	GLAllocation
+CLASS	dg	GuiDownloadTerrain
+CLASS	dh	BlockSand
+CLASS	di	Item
+CLASS	dj	RenderFallingSand
+CLASS	dk	Slot
+CLASS	dl	Session
+CLASS	dm	EntityPlayer
+CLASS	dn	RenderLiving
+CLASS	do	Packet15Place
+CLASS	dp	EntityExplodeFX
+CLASS	dq	EntityMobs
+CLASS	dr	RecipesTools
+CLASS	ds	BlockBookshelf
+CLASS	dt	BlockSapling
+CLASS	du	Packet4UpdateTime
+CLASS	dv	ModelCow
+CLASS	dw	CraftingManager
+CLASS	dx	EntityItem
+CLASS	dy	NBTTagByteArray
+CLASS	dz	Packet16BlockItemSwitch
+CLASS	e	RenderGlobal
+CLASS	ea	GuiChest
+CLASS	eb	SoundPool
+CLASS	ec	ItemDoor
+CLASS	ed	PositionTexureVertex
+CLASS	ee	GuiContainer
+CLASS	ef	ItemRedstone
+CLASS	eg	TextureLavaFlowFX
+CLASS	eh	Packet10Flying
+CLASS	ei	RenderSnowball
+CLASS	ej	WorldGenBigTree
+CLASS	ek	EntityCreature
+CLASS	el	NBTBase
+CLASS	em	ModelCreeper
+CLASS	en	EntityReddustFX
+CLASS	eo	MathHelper
+CLASS	ep	CodecMus
+CLASS	eq	RenderChicken
+CLASS	er	EnumArt
+CLASS	es	WorldGenReed
+CLASS	et	CraftingInventoryWorkbenchCB
+CLASS	eu	InventoryPlayer
+CLASS	ev	ItemStack
+CLASS	ew	EntityList
+CLASS	ex	TileEntitySpecialRenderer
+CLASS	ey	RenderEngine
+CLASS	ez	Packet24MobSpawn
+CLASS	f	NBTTagFloat
+CLASS	fa	EnumOS1
+CLASS	fb	EntitySorter
+CLASS	fc	BlockBreakable
+CLASS	fd	BlockSnow
+CLASS	fe	TileEntityChest
+CLASS	ff	EntityFallingSand
+CLASS	fg	Packet14BlockDig
+CLASS	fh	BlockFence
+CLASS	fi	MCHashTable
+CLASS	fj	RecipesCrafting
+CLASS	fk	GuiButton
+CLASS	fl	ThreadSleepForever
+CLASS	fm	MinecraftImpl
+CLASS	fn	Packet
+CLASS	fo	ModelBase
+CLASS	fp	GameWindowListener
+CLASS	fq	EnumOSMappingHelper
+CLASS	fr	GameSettings
+CLASS	fs	RecipeSorter
+CLASS	ft	ChunkProviderLoadOrGenerate
+CLASS	fu	ItemHoe
+CLASS	fv	ModelSkeleton
+CLASS	fw	BlockDoor
+CLASS	fx	Path
+CLASS	fy	NBTTagEnd
+CLASS	fz	TileEntityRenderer
+CLASS	g	MinecraftAppletImpl
+CLASS	ga	Chunk
+CLASS	gb	Material
+CLASS	gc	GuiMultiplayer
+CLASS	gd	MovementInputFromOptions
+CLASS	ge	EntityLiving
+CLASS	gf	ItemReed
+CLASS	gg	MaterialTransparent
+CLASS	gh	IInventory
+CLASS	gi	Packet0KeepAlive
+CLASS	gj	RenderEntity
+CLASS	gk	RenderArrow
+CLASS	gl	RenderSorter
+CLASS	gm	RenderPig
+CLASS	gn	NBTTagLong
+CLASS	go	UnexpectedThrowable
+CLASS	gp	Packet20NamedEntitySpawn
+CLASS	gq	RenderSlime
+CLASS	gr	LoadingScreenRenderer
+CLASS	gs	WorldClient
+CLASS	gt	Packet2Handshake
+CLASS	gu	InventoryCrafting
+CLASS	gv	WorldGenClay
+CLASS	gw	BlockOre
+CLASS	gx	ModelSheep2
+CLASS	gy	NetClientHandler
+CLASS	gz	BlockGravel
+CLASS	h	MCAppletCanvas
+CLASS	ha	Packet21PickupSpawn
+CLASS	hb	ImageBuffer
+CLASS	hc	ChunkCoordinates
+CLASS	hd	BlockCrops
+CLASS	he	BlockIce
+CLASS	hf	Packet18ArmAnimation
+CLASS	hg	ModelQuadraped
+CLASS	hh	ModelSlime
+CLASS	hi	BlockLeavesBase
+CLASS	hj	ModelMinecart
+CLASS	hk	MusInputStream
+CLASS	hl	EntityZombieSimple
+CLASS	hm	NBTTagCompound
+CLASS	hn	BlockStationary
+CLASS	ho	Tessellator
+CLASS	hp	Packet1Login
+CLASS	hq	PlayerController
+CLASS	hr	RecipesFood
+CLASS	hs	InventoryLargeChest
+CLASS	ht	TexureWaterFlowFX
+CLASS	hu	BlockButton
+CLASS	hv	BlockFlowing
+CLASS	hw	RenderTNTPrimed
+CLASS	hx	GuiCrafting
+CLASS	hy	BlockCactus
+CLASS	hz	BlockDirt
+CLASS	i	RenderHelper
+CLASS	ia	PlayerControllerSP
+CLASS	ib	GuiDeleteWorld
+CLASS	ic	TileEntity
+CLASS	id	GuiFurnace
+CLASS	ie	GuiIngameMenu
+CLASS	if	BlockMinecartTrack
+CLASS	ig	EntitySlimeFX
+CLASS	ih	EnumOS2
+CLASS	ii	NetworkManager
+CLASS	ij	Packet3Chat
+CLASS	ik	WorldGenerator
+CLASS	il	PlayerControllerTest
+CLASS	im	IWorldAccess
+CLASS	in	TileEntitySignRenderer
+CLASS	io	NBTTagInt
+CLASS	ip	ModelRenderer
+CLASS	iq	EntityRenderer
+CLASS	ir	Timer
+CLASS	is	Packet33RelEntityMoveLook
+CLASS	it	KeyBinding
+CLASS	iu	ItemSword
+CLASS	iv	GuiConflictWarning
+CLASS	iw	EntityDiggingFX
+CLASS	ix	NBTTagByte
+CLASS	iy	ScaledResolution
+CLASS	iz	BlockLeaves
+CLASS	j	ClippingHelperImplementation
+CLASS	ja	GuiYesNo
+CLASS	jb	EntityFlameFX
+CLASS	jc	EntityPainting
+CLASS	jd	EntityTNTPrimed
+CLASS	je	Explosion
+CLASS	jf	NextTickListEntry
+CLASS	jg	ItemBow
+CLASS	jh	ItemRenderer
+CLASS	ji	Packet6SpawnPosition
+CLASS	jj	IsoImageBuffer
+CLASS	jk	SignModel
+CLASS	jl	Packet34EntityTeleport
+CLASS	jm	BlockReed
+CLASS	jn	ItemSeeds
+CLASS	jo	ItemMinecart
+CLASS	jp	BlockFluids
+CLASS	jq	GuiSelectWorld
+CLASS	jr	ImageBufferDownload
+CLASS	js	EnumMobType
+CLASS	jt	BlockContainer
+CLASS	ju	Packet29DestroyEntity
+CLASS	jv	BlockClay
+CLASS	jw	ItemSaddle
+CLASS	jx	Packet32EntityLook
+CLASS	jy	ModelSpider
+CLASS	jz	TextureFlamesFX
+CLASS	k	SpawnerMonsters
+CLASS	ka	Packet50PreChunk
+CLASS	kb	MaterialLiquid
+CLASS	kc	LogoEffectRandomizer
+CLASS	kd	FontRenderer
+CLASS	ke	TileEntityFurnace
+CLASS	kf	BlockRedstoneWire
+CLASS	kg	EntityArrow
+CLASS	kh	Entity
+CLASS	ki	NBTTagList
+CLASS	kj	Packet23VehicleSpawn
+CLASS	kk	MapGenCaves
+CLASS	kl	Frustrum
+CLASS	km	BlockStairs
+CLASS	kn	MetadataChunkBlock
+CLASS	ko	ChatLine
+CLASS	kp	Packet31RelEntityMove
+CLASS	kq	EntitySplashFX
+CLASS	kr	NBTTagDouble
+CLASS	ks	ItemAxe
+CLASS	kt	RenderMinecart
+CLASS	ku	BlockFurnace
+CLASS	kv	ModelChicken
+CLASS	kw	RenderList
+CLASS	kx	RenderManager
+CLASS	ky	BlockMushroom
+CLASS	kz	ThreadDownloadImage
+CLASS	l	RecipesArmor
+CLASS	la	EntityClientPlayerMP
+CLASS	lb	NetHandler
+CLASS	lc	WorldBlockPositionType
+CLASS	ld	Packet17AddToInventory
+CLASS	le	ChunkLoader
+CLASS	lf	RecipesIngots
+CLASS	lg	ItemRecord
+CLASS	lh	ThreadRunIsoClient
+CLASS	li	Packet53BlockChange
+CLASS	lj	SlotArmor
+CLASS	lk	WorldIso
+CLASS	ll	TexturedQuad
+CLASS	lm	Gui
+CLASS	ln	OsMap
+CLASS	lo	GuiInventory
+CLASS	lp	NoiseGeneratorOctaves
+CLASS	lq	Packet30Entity
+CLASS	lr	BlockSign
+CLASS	ls	NBTTagShort
+CLASS	lt	TerrainTextureManager
+CLASS	lu	GuiIngame
+CLASS	lv	MovementInput
+CLASS	lw	GuiControls
+CLASS	lx	MinecraftException
+CLASS	ly	Block
+CLASS	lz	ChunkProviderClient
+CLASS	m	Packet5PlayerInventory
+CLASS	ma	EntitySlime
+CLASS	mb	EntityZombie
+CLASS	mc	RenderCow
+CLASS	md	ItemSign
+CLASS	me	ItemBoat
+CLASS	mf	MovingObjectPosition
+CLASS	mg	BlockLog
+CLASS	mh	Packet12PlayerLook
+CLASS	mi	BlockSoil
+CLASS	mj	BlockTorch
+CLASS	mk	MinecartTrackLogic
+CLASS	ml	TextureWaterFX
+CLASS	mm	SlotInventory
+CLASS	mn	GuiConnecting
+CLASS	mo	GuiSlider
+CLASS	mp	MouseHelper
+CLASS	mq	BlockFlower
+CLASS	mr	ItemArmor
+CLASS	ms	ItemSpade
+CLASS	mt	ChunkPosition
+CLASS	mu	NibbleArray
+CLASS	mv	EntityPig
+CLASS	mw	InventoryCraftResult
+CLASS	mx	HashEntry
+CLASS	my	BlockGrass
+CLASS	mz	EntityChicken
+CLASS	n	CraftingInventoryPlayerCB
+CLASS	na	Packet52MultiBlockChange
+CLASS	nc	ThreadConnectToServer
+CLASS	nd	RecipesWeapons
+CLASS	ne	NBTTagString
+CLASS	nf	EntityRainFX
+CLASS	ng	BlockSponge
+CLASS	nh	NetworkMasterThread
+CLASS	ni	NetworkReaderThread
+CLASS	nj	PlayerControllerMP
+CLASS	nk	NetworkWriterThread
+CLASS	nl	EntitySmokeFX
+CLASS	nm	IBlockAccess
+CLASS	nn	WorldGenLiquids
+CLASS	no	BlockLever
+CLASS	np	RedstoneUpdateInfo
+CLASS	nq	EntityFX
+CLASS	nr	MinecraftError
+CLASS	ns	RenderSheep
+CLASS	nt	EntityOtherPlayerMP
+CLASS	nu	IProgressUpdate
+CLASS	nv	GuiEditSign
+CLASS	nw	ChunkProviderGenerate
+CLASS	nx	ItemFlintAndSteel
+CLASS	ny	Packet59ComplexEntity
+CLASS	nz	RenderZombieSimple
+CLASS	o	GuiSmallButton
+CLASS	oa	WorldGenTrees
+CLASS	ob	TileEntitySign
+CLASS	oc	EntityMinecart
+CLASS	od	ItemPainting
+CLASS	oe	ICamera
+CLASS	of	SoundManager
+CLASS	og	BlockFire
+CLASS	oh	Packet255KickDisconnect
+CLASS	oi	BlockStep
+CLASS	oj	ItemFood
+CLASS	ok	RenderSpider
+CLASS	ol	ChunkCoordIntPair
+CLASS	p	BlockSnowBlock
+CLASS	q	BlockTNT
+CLASS	r	TileEntityMobSpawnerRenderer
+CLASS	s	Packet11PlayerPosition
+CLASS	t	StepSoundSand
+CLASS	u	StepSoundStone
+CLASS	v	NoiseGeneratorPerlin
+CLASS	w	MaterialLogic
+CLASS	x	CompressedStreamTools
+CLASS	y	ItemPickaxe
+CLASS	z	TextureFX
+FIELD	ad	Ljava/io/File;	e	dataFolder
+FIELD	an	Lgh;	c	craftMatrix
+FIELD	ay	Ljava/lang/String;	a	screenTitle
+FIELD	ay	Lbh;	h	parentScreen
+FIELD	ay	Lfr;	i	options
+FIELD	az	I	a	maxSpawns
+FIELD	az	Ljava/lang/Class;	b	spawnBaseClass
+FIELD	az	[Ljava/lang/Class;	c	spawnSubclasses
+FIELD	az	Ljava/util/Set;	d	nearbyChunkSet
+FIELD	bd	I	a	delay
+FIELD	bd	Ljava/lang/String;	b	entityID
+FIELD	bh	Lnet/minecraft/client/Minecraft;	b	mc
+FIELD	bh	I	c	width
+FIELD	bh	I	d	height
+FIELD	bh	Ljava/util/List;	e	controlList
+FIELD	bv	I	a	resultId
+FIELD	bv	I	b	width
+FIELD	bv	I	c	height
+FIELD	bv	[I	d	ingredientMap
+FIELD	bv	Lev;	e	resultStack
+FIELD	by	Lby;	a	Sky
+FIELD	by	Lby;	b	Block
+FIELD	cn	Lhm;	I	nbtCompoundPlayer
+FIELD	cn	J	c	worldTime
+FIELD	cn	Z	d	snowCovered
+FIELD	cn	Ljava/util/List;	k	playerEntities
+FIELD	cn	I	o	spawnX
+FIELD	cn	I	p	spawnY
+FIELD	cn	I	q	spawnZ
+FIELD	cn	J	u	randomSeed
+FIELD	cn	J	v	sizeOnDisk
+FIELD	cx	Ljava/util/Random;	h	rand
+FIELD	cx	Ljava/lang/String;	l	splashString
+FIELD	di	Ldi;	A	axeDiamond
+FIELD	di	Ldi;	B	stick
+FIELD	di	Ldi;	C	bowlEmpty
+FIELD	di	Ldi;	D	bowlSoup
+FIELD	di	Ldi;	E	swordGold
+FIELD	di	Ldi;	F	shovelGold
+FIELD	di	Ldi;	G	pickaxeGold
+FIELD	di	Ldi;	H	axeGold
+FIELD	di	Ldi;	I	silk
+FIELD	di	Ldi;	J	feather
+FIELD	di	Ldi;	K	gunpowder
+FIELD	di	Ldi;	L	hoeWood
+FIELD	di	Ldi;	M	hoeStone
+FIELD	di	Ldi;	N	hoeSteel
+FIELD	di	Ldi;	O	hoeDiamond
+FIELD	di	Ldi;	P	hoeGold
+FIELD	di	Ldi;	Q	seeds
+FIELD	di	Ldi;	R	wheat
+FIELD	di	Ldi;	S	bread
+FIELD	di	Ldi;	T	helmetLeather
+FIELD	di	Ldi;	U	plateLeather
+FIELD	di	Ldi;	V	legsLeather
+FIELD	di	Ldi;	W	bootsLeather
+FIELD	di	Ldi;	X	helmetChain
+FIELD	di	Ldi;	Y	plateChain
+FIELD	di	Ldi;	Z	legsChain
+FIELD	di	Ldi;	aA	redstone
+FIELD	di	Ldi;	aB	snowball
+FIELD	di	Ldi;	aC	boat
+FIELD	di	Ldi;	aD	leather
+FIELD	di	Ldi;	aE	bucketMilk
+FIELD	di	Ldi;	aF	brick
+FIELD	di	Ldi;	aG	clay
+FIELD	di	Ldi;	aH	reed
+FIELD	di	Ldi;	aI	paper
+FIELD	di	Ldi;	aJ	book
+FIELD	di	Ldi;	aK	slimeBall
+FIELD	di	Ldi;	aL	minecartBox
+FIELD	di	Ldi;	aM	minecartEngine
+FIELD	di	Ldi;	aN	egg
+FIELD	di	Ldi;	aO	compass
+FIELD	di	Ldi;	aP	fishingRod
+FIELD	di	Ldi;	aQ	record13
+FIELD	di	Ldi;	aR	recordCat
+FIELD	di	I	aS	swiftedIndex
+FIELD	di	I	aT	maxStackSize
+FIELD	di	I	aU	maxDmg
+FIELD	di	I	aV	iconIndex
+FIELD	di	Z	aW	bFull3D
+FIELD	di	Ldi;	aa	bootsChain
+FIELD	di	Ldi;	ab	helmetSteel
+FIELD	di	Ldi;	ac	plateSteel
+FIELD	di	Ldi;	ad	legsSteel
+FIELD	di	Ldi;	ae	bootsSteel
+FIELD	di	Ldi;	af	helmetDiamond
+FIELD	di	Ldi;	ag	plateDiamond
+FIELD	di	Ldi;	ah	legsDiamond
+FIELD	di	Ldi;	ai	bootsDiamond
+FIELD	di	Ldi;	aj	helmetGold
+FIELD	di	Ldi;	ak	plateGold
+FIELD	di	Ldi;	al	legsGold
+FIELD	di	Ldi;	am	bootsGold
+FIELD	di	Ldi;	an	flint
+FIELD	di	Ldi;	ao	porkRaw
+FIELD	di	Ldi;	ap	porkCooked
+FIELD	di	Ldi;	aq	painting
+FIELD	di	Ldi;	ar	appleGold
+FIELD	di	Ldi;	as	sign
+FIELD	di	Ldi;	at	doorWood
+FIELD	di	Ldi;	au	bucketEmpty
+FIELD	di	Ldi;	av	bucketWater
+FIELD	di	Ldi;	aw	bucketLava
+FIELD	di	Ldi;	ax	minecartEmpty
+FIELD	di	Ldi;	ay	saddle
+FIELD	di	Ldi;	az	doorSteel
+FIELD	di	Ljava/util/Random;	b	rand
+FIELD	di	[Ldi;	c	itemsList
+FIELD	di	Ldi;	d	shovel
+FIELD	di	Ldi;	e	pickaxeSteel
+FIELD	di	Ldi;	f	axeSteel
+FIELD	di	Ldi;	g	striker
+FIELD	di	Ldi;	h	appleRed
+FIELD	di	Ldi;	i	bow
+FIELD	di	Ldi;	j	arrow
+FIELD	di	Ldi;	k	coal
+FIELD	di	Ldi;	l	diamond
+FIELD	di	Ldi;	m	ingotIron
+FIELD	di	Ldi;	n	ingotGold
+FIELD	di	Ldi;	o	swordSteel
+FIELD	di	Ldi;	p	swordWood
+FIELD	di	Ldi;	q	shovelWood
+FIELD	di	Ldi;	r	pickaxeWood
+FIELD	di	Ldi;	s	axeWood
+FIELD	di	Ldi;	t	swordStone
+FIELD	di	Ldi;	u	shovelStone
+FIELD	di	Ldi;	v	pickaxeStone
+FIELD	di	Ldi;	w	axeStone
+FIELD	di	Ldi;	x	swordDiamond
+FIELD	di	Ldi;	y	shovelDiamond
+FIELD	di	Ldi;	z	pickaxeDiamond
+FIELD	dk	I	a	slotIndex
+FIELD	dk	Lgh;	b	inventory
+FIELD	do	I	a	ID
+FIELD	do	I	b	X
+FIELD	do	I	c	Y
+FIELD	do	I	d	Z
+FIELD	do	I	e	Direction
+FIELD	dw	Ldw;	a	instance
+FIELD	dw	Ljava/util/List;	b	recipes
+FIELD	dx	Lev;	a	item
+FIELD	dx	I	b	age
+FIELD	dx	I	f	health
+FIELD	dy	[B	a	byteArray
+FIELD	ee	I	a	xSize_ee
+FIELD	ee	I	h	ySize_ee
+FIELD	ee	Lab;	j	itemRenderer
+FIELD	el	Ljava/lang/String;	a	key
+FIELD	er	Ler;	a	Kebab
+FIELD	er	Ler;	b	Aztec
+FIELD	er	Ler;	c	Alban
+FIELD	er	Ler;	d	Aztec2
+FIELD	er	Ler;	e	Bomb
+FIELD	er	Ler;	f	Plant
+FIELD	er	Ler;	g	Wasteland
+FIELD	er	Ler;	h	Pool
+FIELD	er	Ler;	i	Courbet
+FIELD	er	Ler;	j	Sea
+FIELD	er	Ler;	k	Sunset
+FIELD	er	Ler;	l	Creebet
+FIELD	er	Ler;	m	Wanderer
+FIELD	er	Ler;	n	Graham
+FIELD	er	Ler;	o	Match
+FIELD	er	Ler;	p	Bust
+FIELD	er	Ler;	q	Stage
+FIELD	er	Ler;	r	Void
+FIELD	er	Ler;	s	SkullAndRoses
+FIELD	er	Ler;	t	Fighters
+FIELD	er	Ler;	u	PigScene
+FIELD	er	Ler;	v	Pointer
+FIELD	er	Ler;	w	Skeleton
+FIELD	er	Ler;	x	DonkeyKong
+FIELD	et	Lgu;	a	craftMatrix
+FIELD	et	Lgh;	b	craftResult
+FIELD	eu	[Lev;	a	mainInventory
+FIELD	eu	[Lev;	b	armorInventory
+FIELD	eu	[Lev;	c	craftingInventory
+FIELD	eu	I	d	currentItem
+FIELD	eu	Ldm;	g	player
+FIELD	ev	I	a	stackSize
+FIELD	ev	I	b	animationsToGo
+FIELD	ev	I	c	itemID
+FIELD	ev	I	d	itemDmg
+FIELD	ey	Ljava/util/HashMap;	b	textureMap
+FIELD	f	F	a	floatValue
+FIELD	fa	Lfa;	a	linux
+FIELD	fa	Lfa;	b	solaris
+FIELD	fa	Lfa;	c	windows
+FIELD	fa	Lfa;	d	macos
+FIELD	fa	Lfa;	e	unknown
+FIELD	fg	I	a	X
+FIELD	fg	I	b	Y
+FIELD	fg	I	c	Z
+FIELD	fg	I	d	Face
+FIELD	fg	I	e	Status
+FIELD	fi	[Lmx;	a	slots
+FIELD	fi	I	b	count
+FIELD	fi	I	c	size
+FIELD	fk	I	a	width
+FIELD	fk	I	b	height
+FIELD	fk	I	c	xPosition
+FIELD	fk	I	d	yPosition
+FIELD	fk	Ljava/lang/String;	e	displayString
+FIELD	fk	I	f	id
+FIELD	fk	Z	g	enabled
+FIELD	fk	Z	h	enabled2
+FIELD	fm	Ljava/awt/Frame;	a	mainFrame
+FIELD	fn	Ljava/util/Map;	a	packetIdToClassMap
+FIELD	fn	Ljava/util/Map;	b	packetClassToIdMap
+FIELD	fr	Ljava/io/File;	A	optionsFile
+FIELD	fr	F	a	musicVolume
+FIELD	fr	F	b	soundVolume
+FIELD	fr	F	c	mouseSensitivity
+FIELD	fr	Z	d	invertMouse
+FIELD	fr	I	e	renderDistance
+FIELD	fr	Z	f	viewBobbing
+FIELD	fr	Z	g	anaglyph
+FIELD	fr	Z	h	limitFramerate
+FIELD	fr	Z	i	fancyGraphics
+FIELD	fr	Lit;	j	keyBindForward
+FIELD	fr	Lit;	k	keyBindLeft
+FIELD	fr	Lit;	l	keyBindBack
+FIELD	fr	Lit;	m	keyBindRight
+FIELD	fr	Lit;	n	keyBindJump
+FIELD	fr	Lit;	o	keyBindInventory
+FIELD	fr	Lit;	p	keyBindDrop
+FIELD	fr	Lit;	q	keyBindChat
+FIELD	fr	Lit;	r	keyBindToggleFog
+FIELD	fr	Lit;	s	keyBindSneak
+FIELD	fr	[Lit;	t	keyBindings
+FIELD	fr	Lnet/minecraft/client/Minecraft;	u	mc
+FIELD	fr	I	v	numberOfOptions
+FIELD	fr	I	w	difficulty
+FIELD	fr	Z	x	thirdPersonView
+FIELD	fr	[Ljava/lang/String;	y	RENDER_DISTANCES
+FIELD	fr	[Ljava/lang/String;	z	DIFFICULTY_LEVELS
+FIELD	g	Lnet/minecraft/client/MinecraftApplet;	a	mainFrame
+FIELD	ga	[B	b	blocks
+FIELD	ga	Lmu;	e	data
+FIELD	ga	Lmu;	f	skylightMap
+FIELD	ga	Lmu;	g	blocklightMap
+FIELD	ga	[B	h	heightMap
+FIELD	ga	I	j	xPos
+FIELD	ga	I	k	zPos
+FIELD	ga	Z	n	isTerrainPopulated
+FIELD	ga	Z	o	isModified
+FIELD	gb	Lgb;	a	air
+FIELD	gb	Lgb;	b	ground
+FIELD	gb	Lgb;	c	wood
+FIELD	gb	Lgb;	d	rock
+FIELD	gb	Lgb;	e	iron
+FIELD	gb	Lgb;	f	water
+FIELD	gb	Lgb;	g	lava
+FIELD	gb	Lgb;	h	leaves
+FIELD	gb	Lgb;	i	plants
+FIELD	gb	Lgb;	j	sponge
+FIELD	gb	Lgb;	k	cloth
+FIELD	gb	Lgb;	l	fire
+FIELD	gb	Lgb;	m	sand
+FIELD	gb	Lgb;	n	circuits
+FIELD	gb	Lgb;	o	glass
+FIELD	gb	Lgb;	p	tnt
+FIELD	gb	Lgb;	q	unused
+FIELD	gb	Lgb;	r	ice
+FIELD	gb	Lgb;	s	snow
+FIELD	gb	Lgb;	t	builtSnow
+FIELD	gb	Lgb;	u	cactus
+FIELD	gb	Lgb;	v	clay
+FIELD	gb	Z	w	canBurn
+FIELD	ge	I	E	health
+FIELD	ge	I	G	hurtTime
+FIELD	ge	I	J	deathTime
+FIELD	ge	I	K	attackTime
+FIELD	gn	J	a	longValue
+FIELD	go	Ljava/lang/String;	a	description
+FIELD	go	Ljava/lang/Throwable;	b	exception
+FIELD	gu	[Lev;	a	stackList
+FIELD	gu	I	b	nbrSlots
+FIELD	gu	Lar;	c	eventHandler
+FIELD	hk	[B	a	buffer
+FIELD	hk	Lep;	b	codecMus
+FIELD	hk	I	c	hash
+FIELD	hk	Ljava/io/InputStream;	d	inputStream
+FIELD	hm	Ljava/util/Map;	a	tagMap
+FIELD	hs	Ljava/lang/String;	a	name
+FIELD	hs	Lgh;	b	upperChest
+FIELD	hs	Lgh;	c	lowerChest
+FIELD	ic	Ljava/util/Map;	a	nameToClassMap
+FIELD	ic	Ljava/util/Map;	b	classToNameMap
+FIELD	ic	Lcn;	e	world
+FIELD	ic	I	f	x
+FIELD	ic	I	g	y
+FIELD	ic	I	h	z
+FIELD	ih	Lih;	a	linux
+FIELD	ih	Lih;	b	solaris
+FIELD	ih	Lih;	c	windows
+FIELD	ih	Lih;	d	macos
+FIELD	ih	Lih;	e	unknown
+FIELD	io	I	a	intValue
+FIELD	it	Ljava/lang/String;	a	keyDescription
+FIELD	it	I	b	keyCode
+FIELD	ix	B	a	byteValue
+FIELD	iy	I	a	scaleFactor
+FIELD	iy	I	b	scaledWidth
+FIELD	iy	I	c	scaledHeight
+FIELD	k	Lia;	a	unused
+FIELD	kg	I	a	arrowShake
+FIELD	kg	I	b	xTile
+FIELD	kg	I	c	yTile
+FIELD	kg	I	d	zTile
+FIELD	kg	I	e	inTile
+FIELD	kg	Z	f	inGround
+FIELD	kh	F	aH	fallDistance
+FIELD	kh	I	aT	fire
+FIELD	kh	I	aX	air
+FIELD	kh	D	ak	posX
+FIELD	kh	D	al	posY
+FIELD	kh	D	am	posZ
+FIELD	kh	D	an	motionX
+FIELD	kh	D	ao	motionY
+FIELD	kh	D	ap	motionZ
+FIELD	kh	F	aq	rotationYaw
+FIELD	kh	F	ar	rotationPitch
+FIELD	kh	Lcf;	au	boundingBox
+FIELD	kh	Z	av	onGround
+FIELD	ki	Ljava/util/List;	a	tagList
+FIELD	ki	B	b	tagType
+FIELD	kr	D	a	doubleValue
+FIELD	li	I	a	X
+FIELD	li	I	b	Y
+FIELD	li	I	c	Z
+FIELD	li	I	d	ID
+FIELD	li	I	e	Metadata
+FIELD	lo	F	l	xSize_lo
+FIELD	lo	F	m	ySize_lo
+FIELD	ls	S	a	shortValue
+FIELD	lw	Ljava/lang/String;	a	screenTitle
+FIELD	lw	Lbh;	h	parentScreen
+FIELD	lw	Lfr;	i	options
+FIELD	lw	I	j	buttonId
+FIELD	ly	Lly;	A	bedrock
+FIELD	ly	Lly;	B	waterStill
+FIELD	ly	Lly;	C	waterMoving
+FIELD	ly	Lly;	D	lavaStill
+FIELD	ly	Lly;	E	lavaMoving
+FIELD	ly	Lly;	F	sand
+FIELD	ly	Lly;	G	gravel
+FIELD	ly	Lly;	H	oreGold
+FIELD	ly	Lly;	I	oreIron
+FIELD	ly	Lly;	J	oreCoal
+FIELD	ly	Lly;	K	wood
+FIELD	ly	Liz;	L	leaves
+FIELD	ly	Lly;	M	sponge
+FIELD	ly	Lly;	N	glass
+FIELD	ly	Lly;	aA	crops
+FIELD	ly	Lly;	aB	tilledField
+FIELD	ly	Lly;	aC	stoneOvenIdle
+FIELD	ly	Lly;	aD	stoneOvenActive
+FIELD	ly	Lly;	aE	pressurePlateWoodActive
+FIELD	ly	Lly;	aF	doorWood
+FIELD	ly	Lly;	aG	ladder
+FIELD	ly	Lly;	aH	minecartTrack
+FIELD	ly	Lly;	aI	stairCompactStone
+FIELD	ly	Lly;	aJ	pressurePlateWoodIdle
+FIELD	ly	Lly;	aK	lever
+FIELD	ly	Lly;	aL	pressurePlateStone
+FIELD	ly	Lly;	aM	doorSteel
+FIELD	ly	Lly;	aN	pressurePlateWood
+FIELD	ly	Lly;	aO	oreRedstone
+FIELD	ly	Lly;	aP	oreRedstoneGlowing
+FIELD	ly	Lly;	aQ	torchRedstoneIdle
+FIELD	ly	Lly;	aR	torchRedstoneActive
+FIELD	ly	Lly;	aS	button
+FIELD	ly	Lly;	aT	snow
+FIELD	ly	Lly;	aU	ice
+FIELD	ly	Lly;	aV	blockSnow
+FIELD	ly	Lly;	aW	cactus
+FIELD	ly	Lly;	aX	blockClay
+FIELD	ly	Lly;	aY	reed
+FIELD	ly	Lly;	aZ	jukebox
+FIELD	ly	Lly;	ac	cloth
+FIELD	ly	Lmq;	ae	plantYellow
+FIELD	ly	Lmq;	af	plantRed
+FIELD	ly	Lmq;	ag	mushroomBrown
+FIELD	ly	Lmq;	ah	mushroomRed
+FIELD	ly	Lly;	ai	blockGold
+FIELD	ly	Lly;	aj	blockSteel
+FIELD	ly	Lly;	ak	stairDouble
+FIELD	ly	Lly;	al	stairSingle
+FIELD	ly	Lly;	am	brick
+FIELD	ly	Lly;	an	tnt
+FIELD	ly	Lly;	ao	bookShelf
+FIELD	ly	Lly;	ap	cobblestoneMossy
+FIELD	ly	Lly;	aq	obsidian
+FIELD	ly	Lly;	ar	torchWood
+FIELD	ly	Log;	as	fire
+FIELD	ly	Lly;	at	mobSpawner
+FIELD	ly	Lly;	au	stairCompact_Wood
+FIELD	ly	Lly;	av	crate
+FIELD	ly	Lly;	aw	redstoneWire
+FIELD	ly	Lly;	ax	oreDiamond
+FIELD	ly	Lly;	ay	blockDiamond
+FIELD	ly	Lly;	az	workbench
+FIELD	ly	Lly;	ba	fence
+FIELD	ly	I	bc	blockID
+FIELD	ly	F	be	hardness
+FIELD	ly	Lbb;	bl	stepSound
+FIELD	ly	Lgb;	bn	material
+FIELD	ly	Lbb;	e	soundPowderFootstep
+FIELD	ly	Lbb;	f	soundWoodFootstep
+FIELD	ly	Lbb;	g	soundGravelFootstep
+FIELD	ly	Lbb;	h	soundGrassFootstep
+FIELD	ly	Lbb;	i	soundStoneFootstep
+FIELD	ly	Lbb;	j	soundMetalFootstep
+FIELD	ly	Lbb;	k	soundGlassFootstep
+FIELD	ly	Lbb;	l	soundClothFootstep
+FIELD	ly	Lbb;	m	soundSandFootstep
+FIELD	ly	[Lly;	n	allBlocks
+FIELD	ly	[Lly;	n	blocksList
+FIELD	ly	Lly;	u	stone
+FIELD	ly	Lmy;	v	grass
+FIELD	ly	Lly;	w	dirt
+FIELD	ly	Lly;	x	cobblestone
+FIELD	ly	Lly;	y	planks
+FIELD	ly	Lly;	z	sapling
+FIELD	mm	Lee;	c	guiHandler
+FIELD	mm	I	e	xPos
+FIELD	mm	I	f	yPos
+FIELD	mo	F	i	value
+FIELD	mo	Z	j	dragging
+FIELD	mo	I	l	idFloat
+FIELD	mu	[B	a	data
+FIELD	mw	[Lev;	a	stackResult
+FIELD	mx	I	a	hash
+FIELD	mx	Ljava/lang/Object;	b	value
+FIELD	mx	Lmx;	c	next
+FIELD	mx	I	d	slotHash
+FIELD	n	Lgu;	a	craftMatrix
+FIELD	n	Lgh;	b	craftResult
+FIELD	ne	Ljava/lang/String;	a	stringValue
+FIELD	net/minecraft/client/Minecraft	Z	J	enableRain
+FIELD	net/minecraft/client/Minecraft	Ljava/io/File;	W	dataFolder
+FIELD	net/minecraft/client/Minecraft	I	c	displayWidth
+FIELD	net/minecraft/client/Minecraft	I	d	displayHeight
+FIELD	net/minecraft/client/Minecraft	Lfr;	y	options
+FIELD	ob	[Ljava/lang/String;	a	signText
+FIELD	ob	I	b	lineBeingEdited
+FIELD	oc	I	d	minecartType
+FIELD	oc	I	e	fuel
+FIELD	oc	D	f	pushX
+FIELD	oc	D	g	pushZ
+FIELD	oc	[Lev;	h	cargoItems
+FIELD	by	Lby;	a	Sky
+FIELD	by	Lby;	b	Block
+FIELD	er	Ler;	a	Kebab
+FIELD	er	Ler;	b	Aztec
+FIELD	er	Ler;	c	Alban
+FIELD	er	Ler;	d	Aztec2
+FIELD	er	Ler;	e	Bomb
+FIELD	er	Ler;	f	Plant
+FIELD	er	Ler;	g	Wasteland
+FIELD	er	Ler;	h	Pool
+FIELD	er	Ler;	i	Courbet
+FIELD	er	Ler;	j	Sea
+FIELD	er	Ler;	k	Sunset
+FIELD	er	Ler;	l	Creebet
+FIELD	er	Ler;	m	Wanderer
+FIELD	er	Ler;	n	Graham
+FIELD	er	Ler;	o	Match
+FIELD	er	Ler;	p	Bust
+FIELD	er	Ler;	q	Stage
+FIELD	er	Ler;	r	Void
+FIELD	er	Ler;	s	SkullAndRoses
+FIELD	er	Ler;	t	Fighters
+FIELD	er	Ler;	u	Pointer
+FIELD	er	Ler;	v	Pigscene
+FIELD	er	Ler;	w	Skeleton
+FIELD	er	Ler;	x	DonkeyKong
+FIELD	fa	Lfa;	a	linux
+FIELD	fa	Lfa;	b	solaris
+FIELD	fa	Lfa;	c	windows
+FIELD	fa	Lfa;	d	macos
+FIELD	fa	Lfa;	e	unknown
+FIELD	ih	Lih;	a	linux
+FIELD	ih	Lih;	b	solaris
+FIELD	ih	Lih;	c	windows
+FIELD	ih	Lih;	d	macos
+FIELD	ih	Lih;	e	unknown
+FIELD	js	Ljs;	a	everything
+FIELD	js	Ljs;	b	mobs
+FIELD	js	Ljs;	c	players
+FIELD	net/minecraft/client/Minecraft	Ljava/io/File;	W	dataFolder
+FIELD	ad	Ljava/io/File;	e	dataFolder
+METHOD	er	()[Ler;	values	values
+METHOD	fa	()[Lfa;	values	values
+METHOD	ih	()[Lih;	values	values
