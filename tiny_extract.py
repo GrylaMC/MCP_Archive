@@ -22,7 +22,11 @@ Formatting details throughout history:
     - Contains classes.csv, removed in later versions
     - Contains minecraft.rgs, but is only intermediary
     - Also has minecraft_rav.rgs, which seem to map backwards
-
+        - This gets remove in mcp20a
+ - b1.1_02: 
+    - Seems to not have class definitions for beta...
+ - b1.2.1_01:
+    - Actually has some beta class mappings
 
 
 Copyright (C) 2025 - PsychedelicPalimpsest
@@ -42,12 +46,12 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 """
+import csv
+import os
+import sys
+from os.path import abspath, dirname, exists, join
 
-import sys, os, csv
-from os.path import *
-
-
-SCRIPTS_DIR = join(dirname(dirname(abspath(__file__))), "utils", "scripts" )
+SCRIPTS_DIR = join(dirname(dirname(abspath(__file__))), "utils", "scripts")
 if not exists(SCRIPTS_DIR):
     raise RuntimeError("Refusing to run without use of official workspace")
 
@@ -55,16 +59,16 @@ sys.path.append(SCRIPTS_DIR)
 
 from mc import download_mojang_file
 from jawa.classloader import ClassLoader
+import tempfile
 
-
-
-CONFIGS_DIR = join(dirname(abspath(__file__)), "configs")
 OUT_DIR = join(dirname(abspath(__file__)), "tiny_v1s")
+
 
 class TinyV1Writer:
     def __init__(self, namespaces):
         """
-        namespaces: list of namespace names (e.g. ["official", "intermediary", "named"])
+        namespaces: list of namespace names (e.g. ["official", "intermediary",
+        "named"])
         """
         self.namespaces = namespaces
         self.lines = [f"v1\t" + "\t".join(namespaces)]
@@ -85,15 +89,17 @@ class TinyV1Writer:
         with open(path, "w", encoding="utf-8") as f:
             f.write("\n".join(self.lines) + "\n")
 
+
 def build_descriptor_map_jar(jar_path: str):
     """
-    Build {className: {fieldName: descriptor}} from the obfuscated jar.
-    Keys are JVM internal names (slashes, e.g. kd, ko$1, net/minecraft/SomeClass).
+    Build {className: {fieldOrMethodName(+func): descriptor}} from the
+    obfuscated jar. Keys are JVM internal names (slashes, e.g. kd, ko$1,
+    net/minecraft/SomeClass).
     """
     desc_map = {}
     loader = ClassLoader(jar_path)
 
-    for class_name in loader.classes:  # keys like 'kd', 'ko$1', 'net/minecraft/util/EnumChatFormatting'
+    for class_name in loader.classes:
         jclass = loader[class_name]
         inner_map = {}
         for entry in jclass.fields:
@@ -105,64 +111,60 @@ def build_descriptor_map_jar(jar_path: str):
     return desc_map
 
 
-def build_descriptor_map_moj(mc_ver: str):
+def build_descriptor_map_moj(mc_ver: str, mc_dir : str):
     """
-    Downloads the obfuscated Minecraft client jar for a given version
-    and builds the descriptor map.
+    Downloads the obfuscated Minecraft client jar for a given version and
+    builds the descriptor map.
     """
-    jar_path = "tmp.jar"
-    download_mojang_file(mc_ver, "client", jar_path)
-    map = build_descriptor_map_jar(jar_path)
-    os.remove("tmp.jar")
-    return map 
+    jar_path = join(mc_dir, mc_ver + ".jar")
+
+    if not exists(jar_path):
+        download_mojang_file(mc_ver, "client", jar_path)
+    desc_map = build_descriptor_map_jar(jar_path)
+    return desc_map
 
 
-
-def revengpack_format(mc_ver : str, config_path : str, out_path : str, do_warnings = True):
-    map = build_descriptor_map_moj(mc_ver)
+def revengpack_format(
+    mc_ver: str, mc_dir : str, config_path: str, out_path: str, do_warnings: bool = True
+):
+    desc_map = build_descriptor_map_moj(mc_ver, mc_dir)
     os.makedirs(dirname(out_path), exist_ok=True)
-    
-    out = TinyV1Writer(["official", "named"])
-    
 
-    with open(join(config_path, "minecraft.rgs"), "r") as f:
+    out = TinyV1Writer(["official", "named"])
+
+    with open(join(config_path, "minecraft.rgs"), "r", encoding="utf-8") as f:
         lines = f.readlines()
 
-    
     for line in lines:
         line = line.strip()
 
         if line.startswith(".class_map"):
             _, off, named = line.split(" ")
             out.add_class(off, named)
+
         elif line.startswith(".method_map"):
             _, off, desc, named = line.split(" ")
             owner = "/".join(off.split("/")[:-1])
             off_name = off.split("/")[-1]
-
             out.add_method(owner, desc, off_name, named)
+
         elif line.startswith(".field_map"):
             _, off, named = line.split(" ")
             owner = "/".join(off.split("/")[:-1])
             off_name = off.split("/")[-1]
 
-            if not owner in map:
+            if owner not in desc_map:
                 if do_warnings:
                     print(f"WARNING: {owner} not found in provided jar")
                 continue
-            descs = map[owner]
 
-            if not off_name in descs:
+            owner_descs = desc_map[owner]
+            if off_name not in owner_descs:
                 if do_warnings:
                     print(f"WARNING: field {named} cannot be resolved in {owner}/")
                 continue
 
-            out.add_field(
-                owner,
-                descs[off_name],
-                off_name,
-                named
-            )
+            out.add_field(owner, owner_descs[off_name], off_name, named)
 
         elif line.startswith("### GENERATED MAPPINGS:"):
             break
@@ -170,21 +172,26 @@ def revengpack_format(mc_ver : str, config_path : str, out_path : str, do_warnin
     out.write(out_path)
 
 
-def alpha_csv_format(mc_ver : str, config_path : str, out_path : str, classes_version : int = 1, do_warnings = True):
+def alpha_csv_format(
+    mc_ver: str,
+    mc_dir : str,
+    config_path: str,
+    out_path: str,
+    classes_version: int = 1,
+    do_warnings: bool = True,
+):
     """
-    
-    :param classes_version: alpha format csv classes.csv files can contain multiple versions. 
-                            This param selects the version to use
+    :param classes_version: alpha format csv classes.csv files can contain
+                            multiple versions. This param selects the version
+                            to use
     """
-
-    map = build_descriptor_map_moj(mc_ver)
+    desc_map = build_descriptor_map_moj(mc_ver, mc_dir)
     os.makedirs(dirname(out_path), exist_ok=True)
-    
-    out = TinyV1Writer(["official","intermediary", "named"])
-    
 
-    with open(join(config_path, "classes.csv"), "r") as f:
-        clsreader = iter(csv.reader(f, delimiter=',',quotechar='"'))
+    out = TinyV1Writer(["official", "intermediary", "named"])
+
+    with open(join(config_path, "classes.csv"), "r", encoding="utf-8") as f:
+        clsreader = iter(csv.reader(f, delimiter=",", quotechar='"'))
 
         # Skip headers
         for _ in range(4):
@@ -195,162 +202,173 @@ def alpha_csv_format(mc_ver : str, config_path : str, out_path : str, classes_ve
                 continue
             out.add_class(entry[classes_version], entry[classes_version], entry[0])
 
-    # We first need to figure out the
-    # intermidiary mappings
+    # Build intermediary maps first
     method_map = {}
     field_map = {}
-    with open(join(config_path, "minecraft.rgs"), "r") as f:
+    with open(join(config_path, "minecraft.rgs"), "r", encoding="utf-8") as f:
         for l in f.readlines():
-            l=l.strip()
+            l = l.strip()
             if l.startswith(".method_map"):
-                _, off_name, desc, inter = l.strip().split(" ")
+                _, off_name, desc, inter = l.split(" ")
                 method_map[inter] = [off_name, desc]
             if l.startswith(".field_map"):
-                _, off_name, inter = l.strip().split(" ")
+                _, off_name, inter = l.split(" ")
                 field_map[inter] = off_name
 
+    with open(join(config_path, "fields.csv"), "r", encoding="utf-8") as f:
+        fieldreader = iter(csv.reader(f, delimiter=",", quotechar='"'))
 
-    with open(join(config_path, "fields.csv"), "r") as f:
-        fieldreader = iter(csv.reader(f, delimiter=',',quotechar='"'))
-
+        # Skip headers
         for _ in range(3):
             next(fieldreader)
 
         for entry in fieldreader:
             if len(entry) < 7:
-                # Quick sanity checks
                 continue
-            inter_name = entry[2]
 
+            inter_name = entry[2]
             if inter_name == "*":
                 continue
-            
 
             named_name = entry[6]
 
-            if not inter_name in field_map:
+            if inter_name not in field_map:
                 if do_warnings:
-                    print(f"WARNING: {named_name} aka {inter_name} cannot be mapped back to function.")
+                    print(
+                        f"WARNING: {named_name} aka {inter_name} cannot be mapped "
+                        f"back to function."
+                    )
                 continue
 
             off_path = field_map[inter_name]
             off_cls = "/".join(off_path.split("/")[:-1])
             off_name = off_path.split("/")[-1]
-            
 
-            if not off_cls in map:
+            if off_cls not in desc_map:
                 if do_warnings:
                     print(f"WARNING: {off_cls} not found in provided jar")
                 continue
-    
-            descs = map[off_cls]
-            if not off_name in descs:
-                print(f"WARNING: field {off_name} cannot be resolved in {off_cls}: {descs.keys()}")
+
+            owner_descs = desc_map[off_cls]
+            if off_name not in owner_descs:
+                if do_warnings:
+                    print(
+                        f"WARNING: field {off_name} cannot be resolved in {off_cls}: "
+                        f"{list(owner_descs.keys())}"
+                    )
                 continue
 
-            out.add_field(off_cls, descs[off_name], off_name, inter_name,  named_name)
+            out.add_field(
+                off_cls, owner_descs[off_name], off_name, inter_name, named_name
+            )
 
+    with open(join(config_path, "methods.csv"), "r", encoding="utf-8") as f:
+        methodreader = iter(csv.reader(f, delimiter=",", quotechar='"'))
 
-        
-    with open(join(config_path, "methods.csv"), "r") as f:
-        methodreader = iter(csv.reader(f, delimiter=',',quotechar='"'))
-
-
+        # Skip headers
         for _ in range(4):
             next(methodreader)
 
         for entry in methodreader:
             entry = [e.strip() for e in entry]
-            
+
             if len(entry) < 5:
                 continue
             if entry[1] == "*" or len(entry[1]) == 0:
                 continue
-            
+
             inter_name = entry[1]
-            
             named_name = entry[4]
 
             assert named_name != "*", "Mapping issue"
 
-
-            if not inter_name in method_map:
+            if inter_name not in method_map:
                 if do_warnings:
-                    print(f"WARNING: {named_name} aka {inter_name} cannot be mapped back to method")
+                    print(
+                        f"WARNING: {named_name} aka {inter_name} cannot be mapped "
+                        f"back to method"
+                    )
                 continue
 
             off_path, o_desc = method_map[inter_name]
-            off_cls =  "/".join(off_path.split("/")[:-1])
-            off_name = off_path.split("/")[-1] 
+            off_cls = "/".join(off_path.split("/")[:-1])
+            off_name = off_path.split("/")[-1]
 
-            out.add_method(
-                off_cls,
-                o_desc,
-
-                off_name,
-                inter_name,
-                named_name
-            )
-
+            out.add_method(off_cls, o_desc, off_name, inter_name, named_name)
 
     out.write(out_path)
 
 
-
 STYLE_REGENGPACK = [
-    ("a1.1.2", "a1.1.2", "revengpack16")
+    {"mcver": "a1.1.2", "ver": "a1.1.2", "sub": "revengpack16"},
 ]
 
 STYLE_OLD_ALPHA = [
-    ("a1.2.1_01", "a1.2.1_01", "mcp20"),
-    ("a1.2.1_01", "a1.2.1_01", "mcp20a"),
+    {"ver": "a1.2.1_01", "sub": "mcp20",  "mcver": "a1.1.2", "out": "a1.1.2-mcp20",  "classes_version" : 1},
+    {"ver": "a1.2.1_01", "sub": "mcp20a", "mcver": "a1.1.2", "out": "a1.1.2-mcp20a", "classes_version" : 1},
 
-    # I have NO IDEA what 1.2.2 is being refered to in the config names
-    # the wiki tells me that a lost version exists and a1.2.2a is a debug build.
-    #
-    # So I am assuming using a1.2.2b is the best bet.
-    ("a1.2.2b", "a1.2.2", "mcp21"),
-    ("a1.2.2b", "a1.2.2", "mcp22"),
-    ("a1.2.2b", "a1.2.2", "mcp22a"),
+    {"ver": "a1.2.1_01", "sub": "mcp20",  "mcver": "a1.2.0", "out": "a1.2.0-mcp20",  "classes_version" : 2},
+    {"ver": "a1.2.1_01", "sub": "mcp20a", "mcver": "a1.2.0", "out": "a1.2.0-mcp20a", "classes_version" : 2},
 
 
-    ("a1.2.3_02", "a1.2.3_04", "mcp23"),
+    # I have NO IDEA what 1.2.2 is being referred to in the config names
+    # the wiki tells me that a lost version exists and a1.2.2a is a debug
+    # build. So I am assuming using a1.2.2b is the best bet.
 
-    ("a1.2.3_02", "a1.2.5", "mcp24"),
+    {"ver": "a1.2.2", "sub": "mcp21",  "mcver": "a1.1.2", "out": "a1.1.2-mcp21",  "classes_version" : 1},
+    {"ver": "a1.2.2", "sub": "mcp21",  "mcver": "a1.2.0", "out": "a1.2.0-mcp21",  "classes_version" : 2},
 
-    ("a1.2.6", "a1.2.6", "mcp25"),
+
+    {"ver": "a1.2.2", "sub": "mcp22",  "mcver": "a1.2.0", "out": "a1.2.0-mcp22",  "classes_version" : 1},
+    {"ver": "a1.2.2", "sub": "mcp22",  "mcver": "a1.2.2b", "out": "a1.2.2b-mcp22",  "classes_version" : 2},
+
+    {"ver": "a1.2.2", "sub": "mcp22a",  "mcver": "a1.2.0", "out": "a1.2.0-mcp22a",  "classes_version" : 1},
+    {"ver": "a1.2.2", "sub": "mcp22a",  "mcver": "a1.2.2b", "out": "a1.2.2b-mcp22a",  "classes_version" : 2},
+
+    {"ver": "a1.2.3_04", "sub": "mcp23", "mcver": "a1.2.2b", "out": "a1.2.2-mcp23", "classes_version": 1},
+    {"ver": "a1.2.3_04", "sub": "mcp23", "mcver": "a1.2.3_02", "out": "a1.2.3_02-mcp23", "classes_version": 2},
+
+    {"ver": "a1.2.5", "sub": "mcp24", "mcver": "a1.2.2b", "out": "a1.2.2-mcp24", "classes_version": 1},
+    {"ver": "a1.2.5", "sub": "mcp24", "mcver": "a1.2.3_02", "out": "a1.2.3_02-mcp24", "classes_version": 2},
+
+    {"ver": "a1.2.6", "sub": "mcp25", "mcver": "a1.2.5", "out": "a1.2.5-mcp25", "classes_version": 1},
+    {"ver": "a1.2.6", "sub": "mcp25", "mcver": "a1.2.6", "out": "a1.2.6-mcp25", "classes_version": 2},
 ]
 
-def generate_all_tiny(do_warnings = True):
-    for mcver, ver, sub in STYLE_REGENGPACK:
-        config_dir = join("configs", ver)
+def generate_all_tiny(do_warnings):
+    with tempfile.TemporaryDirectory() as temp_mc_dir:
+        for cfg in STYLE_REGENGPACK:
+            config_dir = join("configs", cfg["ver"])
+            dir_ = join(config_dir, cfg["sub"])
 
-        diR = join(config_dir, sub)
-        out = join(OUT_DIR, ver, sub+".tiny")
-        if exists(out):
-            continue
-        print(f"Generating {out}")
-        revengpack_format(mcver, diR, out, do_warnings=do_warnings)
+            outf = f'{cfg["sub"] if not "out" in cfg else cfg["out"]}.tiny'
+            out = join(OUT_DIR, cfg["ver"], outf)
 
-    for mcver, ver, sub, *classes_versions  in STYLE_OLD_ALPHA:
+            if exists(out):
+                continue
+            print(f"Generating {out}")
+            revengpack_format(cfg["mcver"], temp_mc_dir, dir_, out, do_warnings=do_warnings)
 
-        config_dir = join("configs", ver)
-        diR = join(config_dir, sub)
-        out = join(OUT_DIR, ver, sub+".tiny")
-        if exists(out):
-            continue
-        print(f"Generating {out}")
-        alpha_csv_format(mcver, diR, out, **(
-            {"classes_version": classes_versions[0]} if len(classes_versions) else {}
-        ), do_warnings=do_warnings)
-    
+        for cfg in STYLE_OLD_ALPHA:
+            config_dir = join("configs", cfg["ver"])
+            dir_ = join(config_dir, cfg["sub"])
+
+            outf = f'{cfg["sub"] if not "out" in cfg else cfg["out"]}.tiny'
+            out = join(OUT_DIR, cfg["ver"], outf)
+
+            if exists(out):
+                continue
+            print(f"\tGenerating {out}")
+            kwargs = {}
+            if "classes_version" in cfg:
+                kwargs["classes_version"] = cfg["classes_version"]
+            alpha_csv_format(
+                cfg["mcver"], temp_mc_dir, dir_, out, do_warnings=do_warnings, **kwargs
+            )
+
 
 def main():
-    generate_all_tiny()
-
-
-
-
+    generate_all_tiny(False)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,2482 @@
+v1	official	intermediary	named
+CLASS	co	co	AxisAlignedBB
+CLASS	nq	nq	Block
+CLASS	qb	qb	BlockBloodStone
+CLASS	eh	eh	BlockBookshelf
+CLASS	fy	fy	BlockBreakable
+CLASS	iy	iy	BlockButton
+CLASS	je	je	BlockCactus
+CLASS	c	c	BlockChest
+CLASS	lj	lj	BlockClay
+CLASS	lh	lh	BlockContainer
+CLASS	ig	ig	BlockCrops
+CLASS	jf	jf	BlockDirt
+CLASS	gv	gv	BlockDoor
+CLASS	gd	gd	BlockFence
+CLASS	qh	qh	BlockFire
+CLASS	ok	ok	BlockFlower
+CLASS	ja	ja	BlockFlowing
+CLASS	ld	ld	BlockFluids
+CLASS	mj	mj	BlockFurnace
+CLASS	de	de	BlockGlass
+CLASS	os	os	BlockGrass
+CLASS	ic	ic	BlockGravel
+CLASS	ih	ih	BlockIce
+CLASS	dg	dg	BlockJukeBox
+CLASS	ca	ca	BlockLadder
+CLASS	km	km	BlockLeaves
+CLASS	il	il	BlockLeavesBase
+CLASS	pl	pl	BlockLever
+CLASS	hk	hk	BlockLightStone
+CLASS	ny	ny	BlockLog
+CLASS	jn	jn	BlockMinecartTrack
+CLASS	br	br	BlockMobSpawner
+CLASS	mr	mr	BlockMushroom
+CLASS	cw	cw	BlockObsidian
+CLASS	hz	hz	BlockOre
+CLASS	e	e	BlockOreBlock
+CLASS	x	x	BlockPortal
+CLASS	ap	ap	BlockPressurePlate
+CLASS	cx	cx	BlockPumpkin
+CLASS	an	an	BlockRedstoneOre
+CLASS	bo	bo	BlockRedstoneTorch
+CLASS	lu	lu	BlockRedstoneWire
+CLASS	kz	kz	BlockReed
+CLASS	dw	dw	BlockSand
+CLASS	ej	ej	BlockSapling
+CLASS	ni	ni	BlockSign
+CLASS	it	it	BlockSlowSand
+CLASS	fz	fz	BlockSnow
+CLASS	s	s	BlockSnowBlock
+CLASS	oa	oa	BlockSoil
+CLASS	pd	pd	BlockSponge
+CLASS	mb	mb	BlockStairs
+CLASS	ir	ir	BlockStationary
+CLASS	qj	qj	BlockStep
+CLASS	cn	cn	BlockStone
+CLASS	v	v	BlockTNT
+CLASS	ob	ob	BlockTorch
+CLASS	dd	dd	BlockWorkbench
+CLASS	ow	ow	CanvasCrashReport
+CLASS	ah	ah	CanvasIsomPreview
+CLASS	do	do	CanvasMajongLogo
+CLASS	j	j	CanvasMinecraftApplet
+CLASS	me	me	ChatLine
+CLASS	ha	ha	Chunk
+CLASS	cs	cs	ChunkCache
+CLASS	if	if	ChunkCoordinates
+CLASS	qm	qm	ChunkCoordIntPair
+CLASS	mu	mu	ChunkLoader
+CLASS	on	on	ChunkPosition
+CLASS	nr	nr	ChunkProviderClient
+CLASS	px	px	ChunkProviderGenerate
+CLASS	kj	kj	ChunkProviderHell
+CLASS	cu	cu	ChunkProviderIso
+CLASS	gs	gs	ChunkProviderLoadOrGenerate
+CLASS	cc	cc	ClippingHelper
+CLASS	n	n	ClippingHelperImplementation
+CLASS	fj	fj	CodecMus
+CLASS	ft	ft	ColorizerFoliage
+CLASS	ev	ev	ColorizerGrass
+CLASS	ab	ab	CompressedStreamTools
+CLASS	ax	ax	CraftingInventoryCB
+CLASS	q	q	CraftingInventoryPlayerCB
+CLASS	fn	fn	CraftingInventoryWorkbenchCB
+CLASS	en	en	CraftingManager
+CLASS	cd	cd	CraftingRecipe
+CLASS	bz	bz	EffectRenderer
+CLASS	lw	lw	Entity
+CLASS	ak	ak	EntityAnimals
+CLASS	lv	lv	EntityArrow
+CLASS	dp	dp	EntityBoat
+CLASS	bh	bh	EntityBubbleFX
+CLASS	ou	ou	EntityChicken
+CLASS	mp	mp	EntityClientPlayerMP
+CLASS	as	as	EntityCow
+CLASS	fc	fc	EntityCreature
+CLASS	dq	dq	EntityCreeper
+CLASS	ki	ki	EntityDiggingFX
+CLASS	ee	ee	EntityExplodeFX
+CLASS	gb	gb	EntityFallingSand
+CLASS	az	az	EntityFireball
+CLASS	hj	hj	EntityFish
+CLASS	ko	ko	EntityFlameFX
+CLASS	ot	ot	EntityFlying
+CLASS	pp	pp	EntityFX
+CLASS	am	am	EntityGhast
+CLASS	eo	eo	EntityItem
+CLASS	db	db	EntityLavaFX
+CLASS	fq	fq	EntityList
+CLASS	hf	hf	EntityLiving
+CLASS	qd	qd	EntityMinecart
+CLASS	ef	ef	EntityMobs
+CLASS	ps	ps	EntityOtherPlayerMP
+CLASS	kp	kp	EntityPainting
+CLASS	cm	cm	EntityPickupFX
+CLASS	op	op	EntityPig
+CLASS	pt	pt	EntityPigZombie
+CLASS	eb	eb	EntityPlayer
+CLASS	bq	bq	EntityPlayerSP
+CLASS	jd	jd	EntityPortalFX
+CLASS	pc	pc	EntityRainFX
+CLASS	fh	fh	EntityReddustFX
+CLASS	kb	kb	EntityRenderer
+CLASS	bx	bx	EntitySheep
+CLASS	dh	dh	EntitySkeleton
+CLASS	ns	ns	EntitySlime
+CLASS	jo	jo	EntitySlimeFX
+CLASS	pi	pi	EntitySmokeFX
+CLASS	at	at	EntitySnowball
+CLASS	fx	fx	EntitySorter
+CLASS	be	be	EntitySpider
+CLASS	mf	mf	EntitySplashFX
+CLASS	kr	kr	EntityTNTPrimed
+CLASS	nt	nt	EntityZombie
+CLASS	ip	ip	EntityZombieSimple
+CLASS	fl	fl	EnumArt
+CLASS	gy	gy	EnumCreatureType
+CLASS	lg	lg	EnumMobType
+CLASS	fw	fw	EnumOS1
+CLASS	jp	jp	EnumOS2
+CLASS	go	go	EnumOSMappingHelper
+CLASS	ch	ch	EnumSkyBlock
+CLASS	ks	ks	Explosion
+CLASS	ls	ls	FontRenderer
+CLASS	ma	ma	Frustrum
+CLASS	gq	gq	GameSettings
+CLASS	gn	gn	GameWindowListener
+CLASS	ds	ds	GLAllocation
+CLASS	nb	nb	Gui
+CLASS	gh	gh	GuiButton
+CLASS	dr	dr	GuiChat
+CLASS	er	er	GuiChest
+CLASS	kh	kh	GuiConflictWarning
+CLASS	ct	ct	GuiConnectFailed
+CLASS	og	og	GuiConnecting
+CLASS	ex	ex	GuiContainer
+CLASS	nm	nm	GuiControls
+CLASS	jc	jc	GuiCrafting
+CLASS	jh	jh	GuiDeleteWorld
+CLASS	du	du	GuiDownloadTerrain
+CLASS	pv	pv	GuiEditSign
+CLASS	jj	jj	GuiFurnace
+CLASS	bb	bb	GuiGameOver
+CLASS	nl	nl	GuiIngame
+CLASS	jl	jl	GuiIngameMenu
+CLASS	ne	ne	GuiInventory
+CLASS	dj	dj	GuiMainMenu
+CLASS	hd	hd	GuiMultiplayer
+CLASS	bf	bf	GuiOptions
+CLASS	bp	bp	GuiScreen
+CLASS	le	le	GuiSelectWorld
+CLASS	oh	oh	GuiSlider
+CLASS	r	r	GuiSmallButton
+CLASS	dk	dk	GuiTexturePacks
+CLASS	ay	ay	GuiUnused
+CLASS	kn	kn	GuiYesNo
+CLASS	or	or	HashEntry
+CLASS	pk	pk	IBlockAccess
+CLASS	qf	qf	ICamera
+CLASS	ai	ai	IChunkLoader
+CLASS	bd	bd	IChunkProvider
+CLASS	hi	hi	IInventory
+CLASS	ie	ie	ImageBuffer
+CLASS	lf	lf	ImageBufferDownload
+CLASS	cz	cz	IMobs
+CLASS	hx	hx	InventoryCrafting
+CLASS	oq	oq	InventoryCraftResult
+CLASS	ix	ix	InventoryLargeChest
+CLASS	fo	fo	InventoryPlayer
+CLASS	pu	pu	IProgressUpdate
+CLASS	kw	kw	IsoImageBuffer
+CLASS	dx	dx	Item
+CLASS	oj	oj	ItemArmor
+CLASS	mg	mg	ItemAxe
+CLASS	bc	bc	ItemBlock
+CLASS	nw	nw	ItemBoat
+CLASS	kt	kt	ItemBow
+CLASS	ag	ag	ItemBucket
+CLASS	eu	eu	ItemDoor
+CLASS	bj	bj	ItemFishingRod
+CLASS	pw	pw	ItemFlintAndSteel
+CLASS	qk	qk	ItemFood
+CLASS	gt	gt	ItemHoe
+CLASS	lb	lb	ItemMinecart
+CLASS	qe	qe	ItemPainting
+CLASS	ac	ac	ItemPickaxe
+CLASS	mw	mw	ItemRecord
+CLASS	ey	ey	ItemRedstone
+CLASS	hh	hh	ItemReed
+CLASS	ku	ku	ItemRenderer
+CLASS	lk	lk	ItemSaddle
+CLASS	la	la	ItemSeeds
+CLASS	nv	nv	ItemSign
+CLASS	by	by	ItemSnowball
+CLASS	au	au	ItemSoup
+CLASS	ol	ol	ItemSpade
+CLASS	fp	fp	ItemStack
+CLASS	kg	kg	ItemSword
+CLASS	cb	cb	ItemTool
+CLASS	jv	jv	IWorldAccess
+CLASS	ke	ke	KeyBinding
+CLASS	hu	hu	LoadingScreenRenderer
+CLASS	lr	lr	LogoEffectRandomizer
+CLASS	dl	dl	MapGenBase
+CLASS	lx	lx	MapGenCaves
+CLASS	ju	ju	MapGenCavesHell
+CLASS	hb	hb	Material
+CLASS	lo	lo	MaterialLiquid
+CLASS	aa	aa	MaterialLogic
+CLASS	hg	hg	MaterialTransparent
+CLASS	fi	fi	MathHelper
+CLASS	ge	ge	MCHashTable
+CLASS	mc	mc	MetadataChunkBlock
+CLASS	oc	oc	MinecartTrackLogic
+CLASS	i	i	MinecraftAppletImpl
+CLASS	pq	pq	MinecraftError
+CLASS	np	np	MinecraftException
+CLASS	gj	gj	MinecraftImpl
+CLASS	gg	gg	MobSpawnerBase
+CLASS	di	di	MobSpawnerDesert
+CLASS	k	k	MobSpawnerHell
+CLASS	ml	ml	MobSpawnerSwamp
+CLASS	gm	gm	ModelBase
+CLASS	dc	dc	ModelBiped
+CLASS	cv	cv	ModelBoat
+CLASS	mk	mk	ModelChicken
+CLASS	el	el	ModelCow
+CLASS	fg	fg	ModelCreeper
+CLASS	hc	hc	ModelGhast
+CLASS	im	im	ModelMinecart
+CLASS	cj	cj	ModelPig
+CLASS	ij	ij	ModelQuadraped
+CLASS	ka	ka	ModelRenderer
+CLASS	cg	cg	ModelSheep1
+CLASS	ia	ia	ModelSheep2
+CLASS	gu	gu	ModelSkeleton
+CLASS	ik	ik	ModelSlime
+CLASS	lm	lm	ModelSpider
+CLASS	ck	ck	ModelZombie
+CLASS	oi	oi	MouseHelper
+CLASS	nn	nn	MovementInput
+CLASS	he	he	MovementInputFromOptions
+CLASS	nx	nx	MovingObjectPosition
+CLASS	in	in	MusInputStream
+CLASS	fd	fd	NBTBase
+CLASS	kk	kk	NBTTagByte
+CLASS	ep	ep	NBTTagByteArray
+CLASS	iq	iq	NBTTagCompound
+CLASS	mh	mh	NBTTagDouble
+CLASS	gx	gx	NBTTagEnd
+CLASS	h	h	NBTTagFloat
+CLASS	jy	jy	NBTTagInt
+CLASS	ly	ly	NBTTagList
+CLASS	hq	hq	NBTTagLong
+CLASS	nj	nj	NBTTagShort
+CLASS	pb	pb	NBTTagString
+CLASS	ib	ib	NetClientHandler
+CLASS	mo	mo	NetHandler
+CLASS	jq	jq	NetworkManager
+CLASS	pe	pe	NetworkMasterThread
+CLASS	pf	pf	NetworkReaderThread
+CLASS	ph	ph	NetworkWriterThread
+CLASS	kq	kq	NextTickListEntry
+CLASS	oo	oo	NibbleArray
+CLASS	bs	bs	NoiseGenerator
+CLASS	aw	aw	NoiseGenerator2
+CLASS	nf	nf	NoiseGeneratorOctaves
+CLASS	ng	ng	NoiseGeneratorOctaves2
+CLASS	z	z	NoiseGeneratorPerlin
+CLASS	bm	bm	OpenGlCapsChecker
+CLASS	nd	nd	OsMap
+CLASS	gk	gk	Packet
+CLASS	hl	hl	Packet0KeepAlive
+CLASS	fa	fa	Packet10Flying
+CLASS	t	t	Packet11PlayerPosition
+CLASS	nz	nz	Packet12PlayerLook
+CLASS	cr	cr	Packet13PlayerLookMove
+CLASS	gc	gc	Packet14BlockDig
+CLASS	ed	ed	Packet15Place
+CLASS	eq	eq	Packet16BlockItemSwitch
+CLASS	mt	mt	Packet17AddToInventory
+CLASS	ii	ii	Packet18ArmAnimation
+CLASS	iu	iu	Packet1Login
+CLASS	hs	hs	Packet20NamedEntitySpawn
+CLASS	id	id	Packet21PickupSpawn
+CLASS	bu	bu	Packet22Collect
+CLASS	lz	lz	Packet23VehicleSpawn
+CLASS	fv	fv	Packet24MobSpawn
+CLASS	qi	qi	Packet255KickDisconnect
+CLASS	dv	dv	Packet28
+CLASS	li	li	Packet29DestroyEntity
+CLASS	hw	hw	Packet2Handshake
+CLASS	nh	nh	Packet30Entity
+CLASS	md	md	Packet31RelEntityMove
+CLASS	ll	ll	Packet32EntityLook
+CLASS	kd	kd	Packet33RelEntityMoveLook
+CLASS	ky	ky	Packet34EntityTeleport
+CLASS	fs	fs	Packet38
+CLASS	io	io	Packet39
+CLASS	jr	jr	Packet3Chat
+CLASS	ek	ek	Packet4UpdateTime
+CLASS	lq	lq	Packet50PreChunk
+CLASS	ci	ci	Packet51MapChunk
+CLASS	ov	ov	Packet52MultiBlockChange
+CLASS	mx	mx	Packet53BlockChange
+CLASS	py	py	Packet59ComplexEntity
+CLASS	p	p	Packet5PlayerInventory
+CLASS	lc	lc	Packet60
+CLASS	kv	kv	Packet6SpawnPosition
+CLASS	a	a	Packet7
+CLASS	cq	cq	Packet8
+CLASS	jk	jk	Packet9
+CLASS	av	av	PanelCrashReport
+CLASS	gw	gw	Path
+CLASS	bt	bt	PathEntity
+CLASS	dm	dm	Pathfinder
+CLASS	b	b	PathPoint
+CLASS	iv	iv	PlayerController
+CLASS	pg	pg	PlayerControllerMP
+CLASS	jg	jg	PlayerControllerSP
+CLASS	jt	jt	PlayerControllerTest
+CLASS	ew	ew	PositionTexureVertex
+CLASS	o	o	RecipesArmor
+CLASS	gf	gf	RecipesCrafting
+CLASS	iw	iw	RecipesFood
+CLASS	mv	mv	RecipesIngots
+CLASS	gr	gr	RecipeSorter
+CLASS	eg	eg	RecipesTools
+CLASS	pa	pa	RecipesWeapons
+CLASS	pn	pn	RedstoneUpdateInfo
+CLASS	aq	aq	Render
+CLASS	hn	hn	RenderArrow
+CLASS	m	m	RenderBiped
+CLASS	bk	bk	RenderBlocks
+CLASS	da	da	RenderBoat
+CLASS	fk	fk	RenderChicken
+CLASS	nu	nu	RenderCow
+CLASS	g	g	RenderCreeper
+CLASS	fu	fu	RenderEngine
+CLASS	hm	hm	RenderEntity
+CLASS	dy	dy	RenderFallingSand
+CLASS	gl	gl	RenderFireball
+CLASS	jw	jw	RenderFish
+CLASS	jz	jz	RenderGhast
+CLASS	f	f	RenderGlobal
+CLASS	l	l	RenderHelper
+CLASS	af	af	RenderItem
+CLASS	mm	mm	RenderList
+CLASS	ec	ec	RenderLiving
+CLASS	mn	mn	RenderManager
+CLASS	mi	mi	RenderMinecart
+CLASS	cf	cf	RenderPainting
+CLASS	hp	hp	RenderPig
+CLASS	ce	ce	RenderPlayer
+CLASS	pr	pr	RenderSheep
+CLASS	ht	ht	RenderSlime
+CLASS	fb	fb	RenderSnowball
+CLASS	ho	ho	RenderSorter
+CLASS	ql	ql	RenderSpider
+CLASS	jb	jb	RenderTNTPrimed
+CLASS	pz	pz	RenderZombieSimple
+CLASS	kl	kl	ScaledResolution
+CLASS	em	em	ScreenShotHelper
+CLASS	ea	ea	Session
+CLASS	kx	kx	SignModel
+CLASS	dz	dz	Slot
+CLASS	na	na	SlotArmor
+CLASS	ar	ar	SlotCrafting
+CLASS	of	of	SlotInventory
+CLASS	qg	qg	SoundManager
+CLASS	es	es	SoundPool
+CLASS	al	al	SoundPoolEntry
+CLASS	bg	bg	SpawnerAnimals
+CLASS	bi	bi	StepSound
+CLASS	w	w	StepSoundSand
+CLASS	y	y	StepSoundStone
+CLASS	no	no	Teleporter
+CLASS	nk	nk	TerrainTextureManager
+CLASS	is	is	Tessellator
+CLASS	ae	ae	TextureCompassFX
+CLASS	nc	nc	TexturedQuad
+CLASS	ln	ln	TextureFlamesFX
+CLASS	ad	ad	TextureFX
+CLASS	ez	ez	TextureLavaFlowFX
+CLASS	ba	ba	TextureLavaFX
+CLASS	d	d	TexturePackBase
+CLASS	od	od	TexturePackCustom
+CLASS	jm	jm	TexturePackDefault
+CLASS	ff	ff	TexturePackList
+CLASS	et	et	TexturePortalFX
+CLASS	gp	gp	TextureWatchFX
+CLASS	oe	oe	TextureWaterFX
+CLASS	iz	iz	TexureWaterFlowFX
+CLASS	oy	oy	ThreadConnectToServer
+CLASS	mq	mq	ThreadDownloadImage
+CLASS	cl	cl	ThreadDownloadImageData
+CLASS	bn	bn	ThreadDownloadResources
+CLASS	my	my	ThreadRunIsoClient
+CLASS	gi	gi	ThreadSleepForever
+CLASS	ji	ji	TileEntity
+CLASS	ga	ga	TileEntityChest
+CLASS	lt	lt	TileEntityFurnace
+CLASS	bl	bl	TileEntityMobSpawner
+CLASS	u	u	TileEntityMobSpawnerRenderer
+CLASS	gz	gz	TileEntityRenderer
+CLASS	qc	qc	TileEntitySign
+CLASS	jx	jx	TileEntitySignRenderer
+CLASS	fr	fr	TileEntitySpecialRenderer
+CLASS	kc	kc	Timer
+CLASS	hr	hr	UnexpectedThrowable
+CLASS	ao	ao	Vec3D
+CLASS	cy	cy	World
+CLASS	ms	ms	WorldBlockPositionType
+CLASS	po	po	WorldChunkManager
+CLASS	ei	ei	WorldChunkManagerHell
+CLASS	hv	hv	WorldClient
+CLASS	fe	fe	WorldGenBigTree
+CLASS	dn	dn	WorldGenCactus
+CLASS	hy	hy	WorldGenClay
+CLASS	cp	cp	WorldGenDungeons
+CLASS	js	js	WorldGenerator
+CLASS	pm	pm	WorldGenFire
+CLASS	aj	aj	WorldGenFlowers
+CLASS	kf	kf	WorldGenHellLava
+CLASS	bv	bv	WorldGenLakes
+CLASS	dt	dt	WorldGenLightStone1
+CLASS	lp	lp	WorldGenLightStone2
+CLASS	pj	pj	WorldGenLiquids
+CLASS	df	df	WorldGenMinable
+CLASS	ox	ox	WorldGenPumpkin
+CLASS	fm	fm	WorldGenReed
+CLASS	qa	qa	WorldGenTrees
+CLASS	mz	mz	WorldIso
+CLASS	oz	oz	WorldProvider
+CLASS	om	om	WorldProviderHell
+CLASS	bw	bw	WorldRenderer
+FIELD	b	I	a	field_1718_a	xCoord
+FIELD	b	I	b	field_1717_b	yCoord
+FIELD	b	I	c	field_1716_c	zCoord
+FIELD	b	I	d	field_1715_d	hash
+FIELD	b	I	e	field_1714_e	index
+FIELD	b	F	f	field_1713_f	totalPathDistance
+FIELD	b	F	g	field_1712_g	distanceToNext
+FIELD	b	F	h	field_1711_h	distanceToTarget
+FIELD	b	Lb;	i	field_1710_i	previous
+FIELD	b	Z	j	field_1709_j	isFirst
+FIELD	ae	Lnet/minecraft/client/Minecraft;	g	field_4231_g	mc
+FIELD	ah	Lcy;	d	field_1790_d	worldObj
+FIELD	ah	Ljava/io/File;	e	field_1789_e	dataFolder
+FIELD	aj	I	a	field_885_a	plantBlockId
+FIELD	al	Ljava/lang/String;	a	field_1781_a	soundName
+FIELD	al	Ljava/net/URL;	b	field_1780_b	soundUrl
+FIELD	ao	D	a	field_1776_a	xCoord
+FIELD	ao	D	b	field_1775_b	yCoord
+FIELD	ao	D	c	field_1779_c	zCoord
+FIELD	ao	Ljava/util/List;	d	field_1778_d	vectorList
+FIELD	ao	I	e	field_1777_e	nextVector
+FIELD	ap	Llg;	a	field_467_a	triggerMobType
+FIELD	as	Z	a	field_761_a	unusedBoolean
+FIELD	ar	Lhi;	c	field_1125_c	craftMatrix
+FIELD	ax	Ljava/util/List;	c	field_1618_c	unusedList
+FIELD	ay	Ljava/lang/String;	a	field_997_a	message1
+FIELD	ay	Ljava/lang/String;	h	field_998_h	message2
+FIELD	bf	Ljava/lang/String;	a	field_994_a	screenTitle
+FIELD	bf	Lbp;	h	field_996_h	parentScreen
+FIELD	bf	Lgq;	i	field_995_i	options
+FIELD	bl	I	a	field_829_a	delay
+FIELD	bl	Ljava/lang/String;	b	field_828_b	entityID
+FIELD	bm	Z	a	field_1770_a	tryCheckOcclusionCapable
+FIELD	bn	Ljava/io/File;	a	field_1768_a	resourcesFolder
+FIELD	bn	Lnet/minecraft/client/Minecraft;	b	field_1767_b	mc
+FIELD	bn	Z	c	field_1769_c	closing
+FIELD	bo	Ljava/util/List;	b	field_450_b	torchUpdates
+FIELD	bo	Z	a	field_451_a	torchActive
+FIELD	bp	Lnet/minecraft/client/Minecraft;	b	field_945_b	mc
+FIELD	bp	I	c	field_951_c	width
+FIELD	bp	I	d	field_950_d	height
+FIELD	bp	Ljava/util/List;	e	field_949_e	controlList
+FIELD	bt	I	a	field_1765_a	pathLength
+FIELD	bt	[Lb;	b	field_1764_b	points
+FIELD	bt	I	c	field_1766_c	pathIndex
+FIELD	bu	I	a	field_581_a	collectedEntityId
+FIELD	bu	I	b	field_580_b	collectorEntityId
+FIELD	bw	Lcy;	a	field_1763_a	worldObj
+FIELD	bw	Z	u	field_1738_u	needsUpdate
+FIELD	bx	Z	a	field_760_a	sheared
+FIELD	bz	Lcy;	a	field_1729_a	worldObj
+FIELD	bz	Ljava/util/Random;	d	field_1730_d	rand
+FIELD	cd	I	a	field_1724_a	resultId
+FIELD	cd	I	b	field_1723_b	width
+FIELD	cd	I	c	field_1727_c	height
+FIELD	cd	[I	d	field_1726_d	ingredientMap
+FIELD	cd	Lfp;	e	field_1725_e	resultStack
+FIELD	cf	Ljava/util/Random;	a	field_199_d	rand
+FIELD	ci	I	a	field_573_a	xPosition
+FIELD	ci	I	b	field_572_b	yPosition
+FIELD	ci	I	c	field_579_c	zPosition
+FIELD	ci	I	d	field_578_d	xSize
+FIELD	ci	I	e	field_577_e	ySize
+FIELD	ci	I	f	field_576_f	zSize
+FIELD	ci	[B	g	field_575_g	chunk
+FIELD	ci	I	h	field_574_h	chunkSize
+FIELD	cl	Ljava/awt/image/BufferedImage;	a	field_1706_a	image
+FIELD	co	D	a	field_1698_a	minX
+FIELD	co	D	b	field_1697_b	minY
+FIELD	co	D	c	field_1704_c	minZ
+FIELD	co	D	d	field_1703_d	maxX
+FIELD	co	D	e	field_1702_e	maxY
+FIELD	co	D	f	field_1701_f	maxZ
+FIELD	co	I	h	field_1699_h	numBoundingBoxesInUse
+FIELD	co	Ljava/util/List;	g	field_1700_g	boundingBoxes
+FIELD	cs	Lcy;	d	field_1061_d	worldObj
+FIELD	ct	Ljava/lang/String;	a	field_992_a	errorMessage
+FIELD	ct	Ljava/lang/String;	h	field_993_h	errorDetail
+FIELD	cu	[Lha;	b	field_898_b	chunks
+FIELD	cu	Lcy;	c	field_901_c	worldObj
+FIELD	cy	I	f	field_1046_e	skylightSubtracted
+FIELD	cy	J	e	field_1048_c	worldTime
+FIELD	cy	Liq;	H	field_1016_I	nbtCompoundPlayer
+FIELD	cy	Lbd;	G	field_1017_H	chunkProvider
+FIELD	cy	Ljava/util/List;	d	field_1040_k	playerEntities
+FIELD	cy	Ljava/util/Random;	l	field_1037_n	rand
+FIELD	cy	I	m	field_1036_o	spawnX
+FIELD	cy	I	n	field_4210_n	spawnY
+FIELD	cy	I	o	field_1034_q	spawnZ
+FIELD	cy	J	u	field_1030_u	randomSeed
+FIELD	cy	J	v	field_1029_v	sizeOnDisk
+FIELD	cy	Z	z	field_1026_y	multiplayerWorld
+FIELD	df	I	a	field_884_a	minableBlockId
+FIELD	df	I	b	field_883_b	numberOfBlocks
+FIELD	dj	[Ljava/lang/String;	a	field_4187_a	logoBlockLayers
+FIELD	dj	Ljava/util/Random;	h	field_6463_h	rand
+FIELD	dj	[[Llr;	i	field_990_i	logoEffects
+FIELD	dj	F	j	field_989_j	updateCounter
+FIELD	dj	Ljava/lang/String;	l	field_6462_l	splashString
+FIELD	dm	Lpk;	a	field_1674_a	worldMap
+FIELD	dm	Lgw;	b	field_1673_b	path
+FIELD	dm	Lge;	c	field_1676_c	pointMap
+FIELD	dm	[Lb;	d	field_1675_d	pathOptions
+FIELD	do	Ljava/awt/image/BufferedImage;	a	field_1672_a	logo
+FIELD	dr	Ljava/lang/String;	a	field_985_a	message
+FIELD	dr	I	h	field_986_h	updateCounter
+FIELD	ds	Ljava/util/List;	a	field_1671_a	displayLists
+FIELD	ds	Ljava/util/List;	b	field_1670_b	textureNames
+FIELD	du	Lib;	a	field_983_a	netHandler
+FIELD	du	I	h	field_984_h	updateCounter
+FIELD	dw	Z	a	field_466_a	fallInstantly
+FIELD	dx	Ldx;	A	field_268_A	axeDiamond
+FIELD	dx	Ldx;	aa	field_286_aa	bootsChain
+FIELD	dx	Ldx;	aA	field_309_aA	redstone
+FIELD	dx	Ldx;	ab	field_285_ab	helmetSteel
+FIELD	dx	Ldx;	aB	field_308_aB	snowball
+FIELD	dx	Ldx;	ac	field_284_ac	plateSteel
+FIELD	dx	Ldx;	aC	field_4031_aC	boat
+FIELD	dx	Ldx;	ad	field_283_ad	legsSteel
+FIELD	dx	Ldx;	aD	field_306_aD	leather
+FIELD	dx	Ldx;	ae	field_282_ae	bootsSteel
+FIELD	dx	Ldx;	aE	field_305_aE	bucketMilk
+FIELD	dx	Ldx;	af	field_281_af	helmetDiamond
+FIELD	dx	Ldx;	aF	field_4030_aF	brick
+FIELD	dx	Ldx;	ag	field_280_ag	plateDiamond
+FIELD	dx	Ldx;	aG	field_303_aG	clay
+FIELD	dx	Ldx;	ah	field_279_ah	legsDiamond
+FIELD	dx	Ldx;	aH	field_302_aH	reed
+FIELD	dx	Ldx;	ai	field_278_ai	bootsDiamond
+FIELD	dx	Ldx;	aI	field_4029_aI	paper
+FIELD	dx	Ldx;	aj	field_277_aj	helmetGold
+FIELD	dx	Ldx;	aJ	field_4028_aJ	book
+FIELD	dx	Ldx;	ak	field_276_ak	plateGold
+FIELD	dx	Ldx;	aK	field_299_aK	slimeBall
+FIELD	dx	Ldx;	al	field_275_al	legsGold
+FIELD	dx	Ldx;	aL	field_4027_aL	minecartCrate
+FIELD	dx	Ldx;	am	field_274_am	bootsGold
+FIELD	dx	Ldx;	aM	field_4026_aM	minecartPowered
+FIELD	dx	Ldx;	an	field_273_an	flint
+FIELD	dx	Ldx;	aN	field_296_aN	egg
+FIELD	dx	Ldx;	ao	field_272_ao	porkRaw
+FIELD	dx	Ldx;	aO	field_4025_aO	compass
+FIELD	dx	Ldx;	ap	field_4017_ap	porkCooked
+FIELD	dx	Ldx;	aP	field_4024_aP	fishingRod
+FIELD	dx	Ldx;	aq	field_270_aq	painting
+FIELD	dx	Ldx;	aU	field_293_aQ	record13
+FIELD	dx	Ldx;	ar	field_269_ar	appleGold
+FIELD	dx	Ldx;	aV	field_4019_aV	recordCat
+FIELD	dx	Ldx;	as	field_267_as	sign
+FIELD	dx	I	aW	field_291_aS	swiftedIndex
+FIELD	dx	I	aX	field_290_aT	maxStackSize
+FIELD	dx	Ldx;	at	field_265_at	doorWood
+FIELD	dx	Ldx;	au	field_262_au	bucketEmpty
+FIELD	dx	I	aY	field_289_aU	maxDamage
+FIELD	dx	I	aZ	field_4018_aZ	iconIndex
+FIELD	dx	Ldx;	av	field_4016_av	bucketWater
+FIELD	dx	Ldx;	aw	field_258_aw	bucketLava
+FIELD	dx	Z	ba	field_287_aW	bFull3D
+FIELD	dx	Ldx;	ax	field_256_ax	minecartEmpty
+FIELD	dx	Ldx;	ay	field_254_ay	saddle
+FIELD	dx	Ldx;	az	field_252_az	doorSteel
+FIELD	dx	Ldx;	B	field_266_B	stick
+FIELD	dx	[Ldx;	c	field_233_c	itemsList
+FIELD	dx	Ldx;	C	field_264_C	bowlEmpty
+FIELD	dx	Ldx;	d	field_232_d	shovelSteel
+FIELD	dx	Ldx;	D	field_263_D	bowlSoup
+FIELD	dx	Ldx;	e	field_231_e	pickaxeSteel
+FIELD	dx	Ldx;	E	field_261_E	swordGold
+FIELD	dx	Ldx;	f	field_230_f	axeSteel
+FIELD	dx	Ldx;	F	field_259_F	shovelGold
+FIELD	dx	Ldx;	g	field_4014_g	flintAndSteel
+FIELD	dx	Ldx;	G	field_257_G	pickaxeGold
+FIELD	dx	Ldx;	h	field_228_h	appleRed
+FIELD	dx	Ldx;	H	field_255_H	axeGold
+FIELD	dx	Ldx;	i	field_227_i	bow
+FIELD	dx	Ldx;	I	field_253_I	silk
+FIELD	dx	Ldx;	j	field_226_j	arrow
+FIELD	dx	Ldx;	J	field_251_J	feather
+FIELD	dx	Ldx;	k	field_225_k	coal
+FIELD	dx	Ldx;	K	field_250_K	gunpowder
+FIELD	dx	Ldx;	l	field_224_l	diamond
+FIELD	dx	Ldx;	L	field_249_L	hoeWood
+FIELD	dx	Ldx;	m	field_223_m	ingotIron
+FIELD	dx	Ldx;	M	field_248_M	hoeStone
+FIELD	dx	Ldx;	n	field_222_n	ingotGold
+FIELD	dx	Ldx;	N	field_247_N	hoeSteel
+FIELD	dx	Ldx;	o	field_221_o	swordSteel
+FIELD	dx	Ldx;	O	field_246_O	hoeDiamond
+FIELD	dx	Ldx;	p	field_220_p	swordWood
+FIELD	dx	Ldx;	P	field_245_P	hoeGold
+FIELD	dx	Ldx;	q	field_219_q	shovelWood
+FIELD	dx	Ldx;	Q	field_244_Q	seeds
+FIELD	dx	Ldx;	r	field_218_r	pickaxeWood
+FIELD	dx	Ldx;	R	field_243_R	wheat
+FIELD	dx	Ldx;	s	field_217_s	axeWood
+FIELD	dx	Ldx;	S	field_242_S	bread
+FIELD	dx	Ldx;	t	field_216_t	swordStone
+FIELD	dx	Ldx;	T	field_241_T	helmetLeather
+FIELD	dx	Ldx;	u	field_215_u	shovelStone
+FIELD	dx	Ldx;	U	field_240_U	plateLeather
+FIELD	dx	Ldx;	v	field_214_v	pickaxeStone
+FIELD	dx	Ldx;	V	field_239_V	legsLeather
+FIELD	dx	Ldx;	w	field_213_w	axeStone
+FIELD	dx	Ldx;	W	field_238_W	bootsLeather
+FIELD	dx	Ldx;	x	field_212_x	swordDiamond
+FIELD	dx	Ldx;	X	field_237_X	helmetChain
+FIELD	dx	Ldx;	y	field_211_y	shovelDiamond
+FIELD	dx	Ldx;	Y	field_236_Y	plateChain
+FIELD	dx	Ldx;	z	field_210_z	pickaxeDiamond
+FIELD	dx	Ldx;	Z	field_235_Z	legsChain
+FIELD	lw	F	aE	field_603_as	prevRotationYaw
+FIELD	lw	F	aF	field_602_at	prevRotationPitch
+FIELD	dz	I	a	field_1119_a	slotIndex
+FIELD	dz	Lhi;	b	field_1118_b	inventory
+FIELD	eb	Lfo;	e	field_778_b	inventory
+FIELD	ed	I	a	field_566_a	id
+FIELD	ed	I	b	field_565_b	xPosition
+FIELD	ed	I	c	field_569_c	yPosition
+FIELD	ed	I	d	field_568_d	zPosition
+FIELD	ed	I	e	field_567_e	direction
+FIELD	ek	J	a	field_564_a	time
+FIELD	en	Len;	a	field_6541_a	instance
+FIELD	en	Ljava/util/List;	b	field_1662_b	recipes
+FIELD	eo	Lfp;	a	field_801_a	item
+FIELD	eo	I	b	field_800_b	age
+FIELD	eo	I	f	field_802_f	health
+FIELD	ep	[B	a	field_1096_a	byteArray
+FIELD	eq	I	a	field_563_a	unused
+FIELD	eq	I	b	field_562_b	id
+FIELD	f	Lcy;	k	field_1448_k	worldObj
+FIELD	f	Lnet/minecraft/client/Minecraft;	t	field_1439_t	mc
+FIELD	ex	I	a	field_971_a	xSize
+FIELD	ex	I	h	field_974_h	ySize
+FIELD	ex	Ljava/util/List;	i	field_973_i	inventorySlots
+FIELD	ex	Laf;	j	field_972_j	itemRenderer
+FIELD	fa	D	a	field_561_a	xPosition
+FIELD	fa	D	b	field_560_b	yPosition
+FIELD	fa	D	c	field_559_c	zPosition
+FIELD	fa	D	d	field_558_d	stance
+FIELD	fa	F	e	field_557_e	yaw
+FIELD	fa	F	f	field_556_f	pitch
+FIELD	fa	Z	g	field_555_g	onGround
+FIELD	fa	Z	h	field_554_h	moving
+FIELD	fa	Z	i	field_553_i	rotating
+FIELD	fe	Lcy;	c	field_880_c	worldObj
+FIELD	fd	Ljava/lang/String;	a	field_1087_a	key
+FIELD	fn	Lhx;	a	field_1622_a	craftMatrix
+FIELD	fn	Lhi;	b	field_1621_b	craftResult
+FIELD	fo	[Lfp;	a	field_843_a	mainInventory
+FIELD	fo	[Lfp;	b	field_842_b	armorInventory
+FIELD	fo	[Lfp;	c	field_848_c	craftingInventory
+FIELD	fo	I	d	field_847_d	currentItem
+FIELD	fo	Leb;	g	field_844_g	player
+FIELD	fp	I	a	field_1615_a	stackSize
+FIELD	fp	I	b	field_1614_b	animationsToGo
+FIELD	fp	I	c	field_1617_c	itemID
+FIELD	fp	I	d	field_1616_d	itemDamage
+FIELD	fu	Ljava/util/HashMap;	b	field_6528_b	textureMap
+FIELD	fu	Ljava/nio/ByteBuffer;	e	field_1605_e	imageData
+FIELD	fv	I	a	field_547_a	entityId
+FIELD	fv	B	b	field_546_b	type
+FIELD	fv	I	c	field_552_c	xPosition
+FIELD	fv	I	d	field_551_d	yPosition
+FIELD	fv	I	e	field_550_e	zPosition
+FIELD	fv	B	f	field_549_f	yaw
+FIELD	fv	B	g	field_548_g	pitch
+FIELD	h	F	a	field_1097_a	floatValue
+FIELD	gc	I	a	field_542_a	xPosition
+FIELD	gc	I	b	field_541_b	yPosition
+FIELD	gc	I	c	field_545_c	zPosition
+FIELD	gc	I	d	field_544_d	face
+FIELD	gc	I	e	field_543_e	status
+FIELD	ge	[Lor;	a	field_1590_a	slots
+FIELD	ge	I	b	field_1589_b	count
+FIELD	ge	I	c	field_1593_c	threshold
+FIELD	ge	F	d	field_1592_d	growFactor
+FIELD	ge	I	e	field_1591_e	versionStamp
+FIELD	gh	I	a	field_935_a	width
+FIELD	gh	I	b	field_934_b	height
+FIELD	gh	I	c	field_941_c	xPosition
+FIELD	gh	I	d	field_940_d	yPosition
+FIELD	gh	Ljava/lang/String;	e	field_939_e	displayString
+FIELD	gh	I	f	field_938_f	id
+FIELD	gh	Z	g	field_937_g	enabled
+FIELD	gh	Z	h	field_936_h	enabled2
+FIELD	gi	Lnet/minecraft/client/Minecraft;	a	field_1588_a	mc
+FIELD	gj	Ljava/awt/Frame;	a	field_185_a	mainFrame
+FIELD	gk	Ljava/util/Map;	a	field_471_a	packetIdToClassMap
+FIELD	gk	Ljava/util/Map;	b	field_470_b	packetClassToIdMap
+FIELD	gk	Z	j	field_472_j	isChunkDataPacket
+FIELD	gn	Lnet/minecraft/client/Minecraft;	a	field_1587_a	mc
+FIELD	gn	Ljava/lang/Thread;	b	field_1586_b	mcThread
+FIELD	gq	F	a	field_1584_a	musicVolume
+FIELD	gq	Ljava/io/File;	C	field_6522_B	optionsFile
+FIELD	gq	F	b	field_1583_b	soundVolume
+FIELD	gq	F	c	field_1582_c	mouseSensitivity
+FIELD	gq	Z	d	field_1581_d	invertMouse
+FIELD	gq	I	e	field_1580_e	renderDistance
+FIELD	gq	Z	f	field_1579_f	viewBobbing
+FIELD	gq	Z	g	field_1578_g	anaglyph
+FIELD	gq	Z	h	field_1577_h	limitFramerate
+FIELD	gq	Z	i	field_1576_i	fancyGraphics
+FIELD	gq	Lke;	k	field_1575_j	keyBindForward
+FIELD	gq	Lke;	l	field_1574_k	keyBindLeft
+FIELD	gq	Lke;	m	field_1573_l	keyBindBack
+FIELD	gq	Lke;	n	field_1572_m	keyBindRight
+FIELD	gq	Lke;	o	field_1571_n	keyBindJump
+FIELD	gq	Lke;	p	field_1570_o	keyBindInventory
+FIELD	gq	Lke;	q	field_6523_q	keyBindDrop
+FIELD	gq	Lke;	r	field_6521_r	keyBindChat
+FIELD	gq	Lke;	s	field_6520_s	keyBindToggleFog
+FIELD	gq	Lke;	t	field_1565_s	keyBindSneak
+FIELD	gq	[Lke;	u	field_1564_t	keyBindings
+FIELD	gq	Lnet/minecraft/client/Minecraft;	v	field_1563_u	mc
+FIELD	gq	I	w	field_1562_v	numberOfOptions
+FIELD	gq	I	x	field_1561_w	difficulty
+FIELD	gq	Z	y	field_1560_x	thirdPersonView
+FIELD	gq	[Ljava/lang/String;	A	field_1559_y	RENDER_DISTANCES
+FIELD	gq	[Ljava/lang/String;	B	field_1558_z	DIFFICULTY_LEVELS
+FIELD	gs	[Lha;	f	field_894_f	chunks
+FIELD	gs	Lcy;	g	field_893_g	worldObj
+FIELD	gw	[Lb;	a	field_1556_a	pathPoints
+FIELD	gw	I	b	field_1555_b	count
+FIELD	gg	[Lgg;	t	field_4237_t	biomeLookupTable
+FIELD	gg	[Ljava/lang/Class;	s	field_4238_s	biomeCreatures
+FIELD	gg	[Ljava/lang/Class;	r	field_4239_r	biomeMonsters
+FIELD	gg	Lgg;	a	field_4256_a	rainforest
+FIELD	gg	B	p	field_4241_p	fillerBlock
+FIELD	gg	B	o	field_4242_o	topBlock
+FIELD	gg	Lgg;	b	field_4255_b	swampland
+FIELD	gg	Lgg;	c	field_4254_c	seasonalForest
+FIELD	gg	Lgg;	d	field_4253_d	forest
+FIELD	gg	Lgg;	e	field_4252_e	savanna
+FIELD	gg	Lgg;	f	field_4251_f	shrubland
+FIELD	gg	Lgg;	g	field_4250_g	taiga
+FIELD	gg	Lgg;	h	field_4249_h	desert
+FIELD	gg	Lgg;	i	field_4248_i	plains
+FIELD	gg	Lgg;	j	field_4247_j	iceDesert
+FIELD	gg	Lgg;	k	field_4246_k	tundra
+FIELD	gg	Lgg;	l	field_4245_l	hell
+FIELD	gg	Ljava/lang/String;	m	field_6504_m	biomeName
+FIELD	gz	Lcy;	f	field_1549_f	worldObj
+FIELD	i	Lnet/minecraft/client/MinecraftApplet;	a	field_186_a	mainFrame
+FIELD	ha	[B	b	field_1539_b	blocks
+FIELD	ha	Lcy;	d	field_1537_d	worldObj
+FIELD	ha	Loo;	e	field_1536_e	data
+FIELD	ha	Loo;	f	field_1535_f	skylightMap
+FIELD	ha	Loo;	g	field_1534_g	blocklightMap
+FIELD	ha	[B	h	field_1533_h	heightMap
+FIELD	ha	I	j	field_1531_j	xPosition
+FIELD	ha	I	k	field_1530_k	zPosition
+FIELD	ha	Z	n	field_1527_n	isTerrainPopulated
+FIELD	ha	[Ljava/util/List;	m	field_1528_m	entities
+FIELD	ha	Z	o	field_1526_o	isModified
+FIELD	hb	Lhb;	a	field_1337_a	air
+FIELD	hb	Lhb;	b	field_1336_b	ground
+FIELD	hb	Lhb;	c	field_1335_c	wood
+FIELD	hb	Lhb;	d	field_1334_d	rock
+FIELD	hb	Lhb;	e	field_1333_e	iron
+FIELD	hb	Lhb;	f	field_1332_f	water
+FIELD	hb	Lhb;	g	field_1331_g	lava
+FIELD	hb	Lhb;	h	field_4265_h	leaves
+FIELD	hb	Lhb;	i	field_1329_i	plants
+FIELD	hb	Lhb;	j	field_1328_j	sponge
+FIELD	hb	Lhb;	k	field_4264_k	cloth
+FIELD	hb	Lhb;	l	field_1326_l	fire
+FIELD	hb	Lhb;	m	field_1325_m	sand
+FIELD	hb	Lhb;	n	field_1324_n	circuits
+FIELD	hb	Lhb;	o	field_4263_o	glass
+FIELD	hb	Lhb;	p	field_1322_p	tnt
+FIELD	hb	Lhb;	q	field_4262_q	unused
+FIELD	hb	Lhb;	r	field_1320_r	ice
+FIELD	hb	Lhb;	s	field_1319_s	snow
+FIELD	hb	Lhb;	t	field_1318_t	builtSnow
+FIELD	hb	Lhb;	u	field_1317_u	cactus
+FIELD	hb	Lhb;	v	field_1316_v	clay
+FIELD	hb	Z	y	field_4259_y	canBurn
+FIELD	hd	Lbp;	a	field_968_a	updateCounter
+FIELD	hd	I	h	field_970_h	parentScreen
+FIELD	hd	Ljava/lang/String;	i	field_969_i	serverAddress
+FIELD	hf	I	L	field_715_G	hurtTime
+FIELD	hf	I	O	field_712_J	deathTime
+FIELD	hq	J	a	field_1095_a	longValue
+FIELD	hr	Ljava/lang/String;	a	field_6515_a	description
+FIELD	hr	Ljava/lang/Throwable;	b	field_6514_b	exception
+FIELD	hs	I	a	field_534_a	entityId
+FIELD	hs	Ljava/lang/String;	b	field_533_b	name
+FIELD	hs	I	c	field_540_c	xPosition
+FIELD	hs	I	d	field_539_d	yPosition
+FIELD	hs	I	e	field_538_e	zPosition
+FIELD	hs	B	f	field_537_f	rotation
+FIELD	hs	B	g	field_536_g	pitch
+FIELD	hs	I	h	field_535_h	currentItem
+FIELD	hu	Lnet/minecraft/client/Minecraft;	b	field_1003_b	mc
+FIELD	hw	Ljava/lang/String;	a	field_532_a	username
+FIELD	hx	[Lfp;	a	field_840_a	stackList
+FIELD	hx	I	b	field_839_b	nbrSlots
+FIELD	hx	Lax;	c	field_841_c	eventHandler
+FIELD	hy	I	a	field_867_a	clayBlockId
+FIELD	hy	I	b	field_866_b	numberOfBlocks
+FIELD	ib	Ljava/util/Random;	b	field_1208_b	rand
+FIELD	ib	Z	c	field_1214_c	disconnected
+FIELD	ib	Ljq;	d	field_1213_d	netManager
+FIELD	ib	Lnet/minecraft/client/Minecraft;	e	field_1212_e	mc
+FIELD	j	Lnet/minecraft/client/MinecraftApplet;	a	field_1696_a	mcApplet
+FIELD	id	I	a	field_531_a	entityId
+FIELD	id	I	b	field_530_b	xPosition
+FIELD	id	I	c	field_529_c	yPosition
+FIELD	id	I	d	field_528_d	zPosition
+FIELD	id	B	e	field_527_e	rotation
+FIELD	id	B	f	field_526_f	pitch
+FIELD	id	B	g	field_525_g	roll
+FIELD	id	I	h	field_524_h	itemId
+FIELD	id	I	i	field_523_i	count
+FIELD	ii	I	a	field_522_a	entityId
+FIELD	ii	I	b	field_521_b	animate
+FIELD	il	Z	a	field_6359_a	graphicsLevel
+FIELD	in	[B	a	field_1514_a	buffer
+FIELD	in	Lfj;	b	field_1513_b	codec
+FIELD	in	I	c	field_1516_c	hash
+FIELD	in	Ljava/io/InputStream;	d	field_1515_d	inputStream
+FIELD	iq	Ljava/util/Map;	a	field_1094_a	tagMap
+FIELD	iu	I	a	field_519_a	protocolVersion
+FIELD	iu	Ljava/lang/String;	b	field_518_b	username
+FIELD	iu	Ljava/lang/String;	c	field_520_c	password
+FIELD	iv	Lnet/minecraft/client/Minecraft;	a	field_1065_a	mc
+FIELD	ix	Ljava/lang/String;	a	field_837_a	name
+FIELD	ix	Lhi;	b	field_836_b	upperChest
+FIELD	ix	Lhi;	c	field_838_c	lowerChest
+FIELD	ji	Ljava/util/Map;	a	field_820_a	nameToClassMap
+FIELD	ji	Ljava/util/Map;	b	field_819_b	classToNameMap
+FIELD	ji	Lcy;	e	field_824_e	worldObj
+FIELD	ji	I	f	field_823_f	xCoord
+FIELD	ji	I	g	field_822_g	yCoord
+FIELD	ji	I	h	field_821_h	zCoord
+FIELD	jl	I	a	field_966_a	updateCounter2
+FIELD	jl	I	h	field_967_h	updateCounter
+FIELD	jp	Ljp;	e	field_6512_e	unknown
+FIELD	jq	Ljava/lang/Object;	a	field_1478_a	threadSyncObject
+FIELD	jq	I	b	field_1477_b	numReadThreads
+FIELD	jq	I	c	field_1476_c	numWriteThreads
+FIELD	jq	Ljava/lang/Object;	d	field_1475_d	sendQueueLock
+FIELD	jq	Ljava/net/SocketAddress;	f	field_1474_e	networkSocket
+FIELD	jq	Ljava/io/DataInputStream;	g	field_1473_f	socketInputStream
+FIELD	jq	Ljava/io/DataOutputStream;	h	field_1472_g	socketOutputStream
+FIELD	jq	Z	i	field_1471_h	isRunning
+FIELD	jq	Ljava/util/List;	j	field_1470_i	readPackets
+FIELD	jq	Ljava/util/List;	k	field_1469_j	dataPackets
+FIELD	jq	Ljava/util/List;	l	field_1468_k	chunkDataPackets
+FIELD	jq	Lmo;	m	field_1467_l	netHandler
+FIELD	jq	Z	n	field_1466_m	isServerTerminating
+FIELD	jq	Ljava/lang/Thread;	o	field_1465_n	writeThread
+FIELD	jq	Ljava/lang/Thread;	p	field_1464_o	readThread
+FIELD	jq	Z	q	field_1463_p	isTerminating
+FIELD	jq	Ljava/lang/String;	r	field_1462_q	terminationReason
+FIELD	jq	I	s	field_1461_r	timeSinceLastRead
+FIELD	jq	I	t	field_1460_s	sendQueueByteLength
+FIELD	jq	I	u	field_1459_t	chunkDataSendCounter
+FIELD	jr	Ljava/lang/String;	a	field_517_a	message
+FIELD	jy	I	a	field_1093_a	intValue
+FIELD	ka	[Lew;	j	field_1401_j	corners
+FIELD	ka	[Lnc;	k	field_1400_k	faces
+FIELD	is	Lis;	a	field_1512_a	instance
+FIELD	is	I	z	field_1485_z	vboIndex
+FIELD	is	Ljava/nio/IntBuffer;	y	field_1486_y	vertexBuffers
+FIELD	is	Z	x	field_1487_x	useVBO
+FIELD	is	Z	w	field_1488_w	isDrawing
+FIELD	is	I	v	field_1489_v	normal
+FIELD	is	D	u	field_1490_u	zOffset
+FIELD	is	D	t	field_1491_t	yOffset
+FIELD	is	D	s	field_1492_s	xOffset
+FIELD	is	I	r	field_1493_r	drawMode
+FIELD	is	I	B	field_1494_B	bufferSize
+FIELD	is	Z	q	field_1495_q	isColorDisabled
+FIELD	is	I	A	field_1496_A	vboCount
+FIELD	is	I	p	field_1497_p	addedVertices
+FIELD	is	I	o	field_1498_o	rawBufferIndex
+FIELD	is	Z	n	field_1499_n	hasNormals
+FIELD	is	Z	m	field_1500_m	hasTexture
+FIELD	is	Z	l	field_1501_l	hasColor
+FIELD	is	I	k	field_1502_k	color
+FIELD	is	D	j	field_1503_j	textureV
+FIELD	is	D	i	field_1504_i	textureU
+FIELD	is	I	h	field_1505_h	vertexCount
+FIELD	is	[I	g	field_1506_g	rawBuffer
+FIELD	is	Ljava/nio/FloatBuffer;	f	field_1507_f	floatBuffer
+FIELD	is	Ljava/nio/IntBuffer;	e	field_1508_e	intBuffer
+FIELD	is	Ljava/nio/ByteBuffer;	d	field_1509_d	byteBuffer
+FIELD	is	Z	c	field_1510_c	tryVBO
+FIELD	is	Z	b	field_1511_b	convertQuadsToTriangles
+FIELD	kb	Lnet/minecraft/client/Minecraft;	h	field_1388_h	mc
+FIELD	ke	Ljava/lang/String;	a	field_1371_a	keyDescription
+FIELD	ke	I	b	field_1370_b	keyCode
+FIELD	kh	I	a	field_965_a	updateCounter
+FIELD	kk	B	a	field_1092_a	byteValue
+FIELD	kl	I	a	field_1368_a	scaleFactor
+FIELD	kl	I	b	field_1367_b	scaledWidth
+FIELD	kl	I	c	field_1369_c	scaledHeight
+FIELD	km	I	b	field_463_b	baseIndexInPNG
+FIELD	kn	Lbp;	a	field_961_a	parentScreen
+FIELD	kn	Ljava/lang/String;	h	field_964_h	message1
+FIELD	kn	Ljava/lang/String;	i	field_963_i	message2
+FIELD	kn	I	j	field_962_j	worldNumber
+FIELD	kr	I	a	field_689_a	fuse
+FIELD	kq	J	f	field_1363_f	nextTickEntryID
+FIELD	kq	I	a	field_1361_a	xCoord
+FIELD	kq	I	b	field_1360_b	yCoord
+FIELD	kq	I	c	field_1366_c	zCoord
+FIELD	kq	J	e	field_1364_e	scheduledTime
+FIELD	kq	I	d	field_1365_d	blockID
+FIELD	kq	J	g	field_1362_g	tickEntryID
+FIELD	ku	Lnet/minecraft/client/Minecraft;	a	field_1356_a	mc
+FIELD	kv	I	a	field_515_a	xPosition
+FIELD	kv	I	b	field_514_b	yPosition
+FIELD	kv	I	c	field_516_c	zPosition
+FIELD	kw	Lcy;	b	field_1347_b	worldObj
+FIELD	ky	I	a	field_509_a	entityId
+FIELD	ky	I	b	field_508_b	xPosition
+FIELD	ky	I	c	field_513_c	yPosition
+FIELD	ky	I	d	field_512_d	zPosition
+FIELD	ky	B	e	field_511_e	yaw
+FIELD	ky	B	f	field_510_f	pitch
+FIELD	le	Lbp;	a	field_958_a	parentScreen
+FIELD	le	Ljava/lang/String;	h	field_960_h	screenTitle
+FIELD	le	Z	i	field_959_i	selected
+FIELD	li	I	a	field_507_a	entityId
+FIELD	lq	I	a	field_505_a	xPosition
+FIELD	lq	I	b	field_504_b	yPosition
+FIELD	lq	Z	c	field_506_c	mode
+FIELD	lr	Ldj;	d	field_1313_d	mainMenu
+FIELD	ls	Ljava/nio/IntBuffer;	d	field_1309_d	buffer
+FIELD	lv	I	a	field_688_a	arrowShake
+FIELD	lw	Lcy;	as	field_615_ag	worldObj
+FIELD	lw	D	aw	field_611_ak	posX
+FIELD	lw	D	ax	field_610_al	posY
+FIELD	lw	D	ay	field_609_am	posZ
+FIELD	lw	D	az	field_608_an	motionX
+FIELD	lw	D	aA	field_607_ao	motionY
+FIELD	lw	D	aB	field_606_ap	motionZ
+FIELD	lw	F	aC	field_605_aq	rotationYaw
+FIELD	lw	F	aD	field_604_ar	rotationPitch
+FIELD	lw	Lco;	aG	field_601_au	boundingBox
+FIELD	lw	F	aQ	field_643_aD	height
+FIELD	lw	F	aP	field_644_aC	width
+FIELD	ly	Ljava/util/List;	a	field_1091_a	tagList
+FIELD	ly	B	b	field_1090_b	tagType
+FIELD	lz	I	a	field_500_a	entityId
+FIELD	lz	I	b	field_499_b	xPosition
+FIELD	lz	I	c	field_503_c	yPosition
+FIELD	lz	I	d	field_502_d	zPosition
+FIELD	lz	I	e	field_501_e	type
+FIELD	me	Ljava/lang/String;	a	field_1297_a	message
+FIELD	me	I	b	field_1296_b	updateCounter
+FIELD	mh	D	a	field_1089_a	doubleValue
+FIELD	mn	Lcy;	g	field_1227_g	worldObj
+FIELD	mn	Lgq;	k	field_1223_k	options
+FIELD	mn	Ljava/util/Map;	o	field_6501_o	entityRenderMap
+FIELD	mq	Ljava/lang/String;	a	field_1216_a	location
+FIELD	mq	Lie;	b	field_1215_b	buffer
+FIELD	mq	Lcl;	c	field_1217_c	imageData
+FIELD	mt	I	a	field_497_a	id
+FIELD	mt	I	b	field_496_b	count
+FIELD	mt	I	c	field_498_c	durability
+FIELD	mw	Ljava/lang/String;	a	field_316_a	recordName
+FIELD	mx	I	a	field_492_a	xPosition
+FIELD	mx	I	b	field_491_b	yPosition
+FIELD	mx	I	c	field_495_c	zPosition
+FIELD	mx	I	d	field_494_d	type
+FIELD	mx	I	e	field_493_e	metadata
+FIELD	nb	F	k	field_923_k	zLevel
+FIELD	ne	F	l	field_976_l	xSize_lo
+FIELD	ne	F	m	field_975_m	ySize_lo
+FIELD	nh	I	a	field_485_a	entityId
+FIELD	nh	B	b	field_484_b	xPosition
+FIELD	nh	B	c	field_490_c	yPosition
+FIELD	nh	B	d	field_489_d	zPosition
+FIELD	nh	B	e	field_488_e	yaw
+FIELD	nh	B	f	field_487_f	pitch
+FIELD	nh	Z	g	field_486_g	rotating
+FIELD	nj	S	a	field_1088_a	shortValue
+FIELD	nl	Ljava/util/List;	e	field_929_e	chatMessageList
+FIELD	nm	Ljava/lang/String;	a	field_954_a	screenTitle
+FIELD	nm	Lbp;	h	field_957_h	parentScreen
+FIELD	nm	Lgq;	i	field_956_i	options
+FIELD	nm	I	j	field_955_j	buttonId
+FIELD	nq	Lnq;	z	field_403_A	bedrock
+FIELD	nq	Lnq;	az	field_447_aA	crops
+FIELD	nq	Lnq;	aA	field_446_aB	tilledField
+FIELD	nq	Lnq;	aB	field_445_aC	stoneOvenIdle
+FIELD	nq	Lnq;	ab	field_419_ac	cloth
+FIELD	nq	Lnq;	aC	field_444_aD	stoneOvenActive
+FIELD	nq	Lok;	ad	field_417_ae	plantYellow
+FIELD	nq	Lnq;	aD	field_443_aE	signPost
+FIELD	nq	Lok;	ae	field_416_af	plantRed
+FIELD	nq	Lnq;	aE	field_442_aF	doorWood
+FIELD	nq	Lok;	af	field_415_ag	mushroomBrown
+FIELD	nq	Lnq;	aF	field_441_aG	ladder
+FIELD	nq	Lok;	ag	field_414_ah	mushroomRed
+FIELD	nq	Lnq;	aG	field_440_aH	minecartTrack
+FIELD	nq	Lnq;	ah	field_413_ai	blockGold
+FIELD	nq	Lnq;	aH	field_4069_aI	stairCompactCobblestone
+FIELD	nq	Lnq;	ai	field_412_aj	blockSteel
+FIELD	nq	Lnq;	aI	field_4068_aJ	signWall
+FIELD	nq	Lnq;	aj	field_411_ak	stairDouble
+FIELD	nq	Lnq;	aJ	field_4067_aK	lever
+FIELD	nq	Lnq;	ak	field_410_al	stairSingle
+FIELD	nq	Lnq;	aK	field_4066_aL	pressurePlateStone
+FIELD	nq	Lnq;	al	field_409_am	brick
+FIELD	nq	Lnq;	aL	field_435_aM	doorSteel
+FIELD	nq	Lnq;	am	field_408_an	tnt
+FIELD	nq	Lnq;	aM	field_4065_aN	pressurePlatePlanks
+FIELD	nq	Lnq;	an	field_407_ao	bookShelf
+FIELD	nq	Lnq;	aN	field_433_aO	oreRedstone
+FIELD	nq	Lnq;	ao	field_406_ap	cobblestoneMossy
+FIELD	nq	Lnq;	aO	field_432_aP	oreRedstoneGlowing
+FIELD	nq	Lnq;	ap	field_405_aq	obsidian
+FIELD	nq	Lnq;	aP	field_431_aQ	torchRedstoneIdle
+FIELD	nq	Lnq;	aq	field_404_ar	torchWood
+FIELD	nq	Lnq;	aQ	field_430_aR	torchRedstoneActive
+FIELD	nq	Lqh;	ar	field_402_as	fire
+FIELD	nq	Lnq;	aR	field_4064_aS	button
+FIELD	nq	Lnq;	as	field_400_at	mobSpawner
+FIELD	nq	Lnq;	aS	field_428_aT	snow
+FIELD	nq	Lnq;	at	field_4059_au	stairCompactPlanks
+FIELD	nq	Lnq;	au	field_396_av	crate
+FIELD	nq	Lnq;	aU	field_426_aV	blockSnow
+FIELD	nq	Lnq;	av	field_394_aw	redstoneWire
+FIELD	nq	Lnq;	aV	field_425_aW	cactus
+FIELD	nq	Lnq;	aw	field_391_ax	oreDiamond
+FIELD	nq	Lnq;	aW	field_424_aX	blockClay
+FIELD	nq	Lnq;	ax	field_389_ay	blockDiamond
+FIELD	nq	Lnq;	aX	field_423_aY	reed
+FIELD	nq	Lnq;	ay	field_387_az	workbench
+FIELD	nq	Lnq;	aY	field_422_aZ	jukebox
+FIELD	nq	Lnq;	A	field_401_B	waterStill
+FIELD	nq	Lnq;	aZ	field_4057_ba	fence
+FIELD	nq	I	bg	field_378_bb	blockIndexInTexture
+FIELD	nq	I	bh	field_376_bc	blockID
+FIELD	nq	F	bj	field_372_be	blockHardness
+FIELD	nq	Lbi;	bq	field_358_bl	stepSound
+FIELD	nq	Lhb;	bs	field_356_bn	blockMaterial
+FIELD	nq	Lnq;	B	field_399_C	waterMoving
+FIELD	nq	Lnq;	C	field_397_D	lavaStill
+FIELD	nq	Lbi;	d	field_354_e	soundPowderFootstep
+FIELD	nq	Lnq;	D	field_395_E	lavaMoving
+FIELD	nq	Lnq;	E	field_393_F	sand
+FIELD	nq	Lnq;	F	field_392_G	gravel
+FIELD	nq	Lnq;	G	field_390_H	oreGold
+FIELD	nq	Lnq;	H	field_388_I	oreIron
+FIELD	nq	Lnq;	I	field_386_J	oreCoal
+FIELD	nq	Lnq;	J	field_385_K	wood
+FIELD	nq	Lkm;	K	field_384_L	leaves
+FIELD	nq	Lnq;	L	field_383_M	sponge
+FIELD	nq	[Lnq;	m	field_345_n	blocksList
+FIELD	nq	Lnq;	M	field_382_N	glass
+FIELD	nq	Lnq;	t	field_338_u	stone
+FIELD	nq	Los;	u	field_337_v	grass
+FIELD	nq	Lnq;	v	field_336_w	dirt
+FIELD	nq	Lnq;	w	field_335_x	cobblestone
+FIELD	nq	Lnq;	x	field_334_y	planks
+FIELD	nq	Lnq;	y	field_333_z	sapling
+FIELD	nq	[I	s	field_339_t	lightValue
+FIELD	nq	[I	q	field_341_r	lightOpacity
+FIELD	nq	[Z	p	field_342_q	isBlockContainer
+FIELD	nq	[Z	n	field_344_o	tickOnLoad
+FIELD	nq	F	bt	field_355_bo	slipperiness
+FIELD	nq	D	bl	field_368_bg	minY
+FIELD	nq	D	bm	field_366_bh	minZ
+FIELD	nq	D	bn	field_364_bi	maxX
+FIELD	nq	D	bo	field_362_bj	maxY
+FIELD	nq	D	bp	field_360_bk	maxZ
+FIELD	nr	Lcy;	d	field_888_d	worldObj
+FIELD	p	I	a	field_571_a	type
+FIELD	p	[Lfp;	b	field_570_b	stacks
+FIELD	nx	I	a	field_1167_a	typeOfHit
+FIELD	nx	I	b	field_1166_b	blockX
+FIELD	nx	I	c	field_1172_c	blockY
+FIELD	nx	I	d	field_1171_d	blockZ
+FIELD	nx	I	e	field_1170_e	sideHit
+FIELD	nx	Lao;	f	field_1169_f	hitVec
+FIELD	nx	Llw;	g	field_1168_g	entityHit
+FIELD	oc	Lcy;	b	field_1159_b	worldObj
+FIELD	of	Lex;	c	field_1122_c	guiHandler
+FIELD	of	I	e	field_1121_e	xPos
+FIELD	of	I	f	field_1120_f	yPos
+FIELD	og	Lib;	a	field_952_a	clientHandler
+FIELD	og	Z	h	field_953_h	cancelled
+FIELD	oh	F	i	field_944_i	sliderValue
+FIELD	oh	Z	j	field_943_j	dragging
+FIELD	oh	I	l	field_942_l	idFloat
+FIELD	oo	[B	a	field_1109_a	data
+FIELD	op	Z	a	field_759_a	rideable
+FIELD	oq	[Lfp;	a	field_818_a	stackResult
+FIELD	or	I	a	field_1106_a	hashEntry
+FIELD	or	Ljava/lang/Object;	b	field_1105_b	valueEntry
+FIELD	or	Lor;	c	field_1108_c	nextEntry
+FIELD	or	I	d	field_1107_d	slotHash
+FIELD	ou	I	i	field_754_i	timeUntilNextEgg
+FIELD	q	Lhx;	a	field_1620_a	craftMatrix
+FIELD	q	Lhi;	b	field_1619_b	craftResult
+FIELD	ov	I	a	field_479_a	xPosition
+FIELD	ov	I	b	field_478_b	zPosition
+FIELD	ov	[S	c	field_483_c	coordinateArray
+FIELD	ov	[B	d	field_482_d	typeArray
+FIELD	ov	[B	e	field_481_e	metadataArray
+FIELD	ov	I	f	field_480_f	size
+FIELD	oy	Lnet/minecraft/client/Minecraft;	a	field_1102_a	mc
+FIELD	oy	Ljava/lang/String;	b	field_1101_b	hostName
+FIELD	oy	I	c	field_1104_c	port
+FIELD	oy	Log;	d	field_1103_d	connectingGui
+FIELD	pb	Ljava/lang/String;	a	field_1098_a	stringValue
+FIELD	net/minecraft/client/Minecraft	I	c	field_6326_c	displayWidth
+FIELD	net/minecraft/client/Minecraft	I	d	field_6325_d	displayHeight
+FIELD	net/minecraft/client/Minecraft	Lcy;	e	field_6324_e	worldObj
+FIELD	net/minecraft/client/Minecraft	Lgq;	y	field_6304_y	options
+FIELD	net/minecraft/client/Minecraft	Ljava/io/File;	Z	field_6275_Z	dataFolder
+FIELD	net/minecraft/client/Minecraft	Lqg;	A	field_6301_A	sndManager
+FIELD	net/minecraft/client/Minecraft	Loi;	B	field_6299_B	mouseHelper
+FIELD	net/minecraft/client/Minecraft	Z	H	field_6293_H	running
+FIELD	net/minecraft/client/Minecraft	Lbn;	Q	field_6284_Q	downloadResourcesThread
+FIELD	net/minecraft/client/MinecraftApplet	Ljava/awt/Canvas;	a	field_6235_a	mcCanvas
+FIELD	net/minecraft/client/MinecraftApplet	Lnet/minecraft/client/Minecraft;	b	field_6234_b	mc
+FIELD	net/minecraft/client/MinecraftApplet	Ljava/lang/Thread;	c	field_6236_c	mcThread
+FIELD	pe	Ljq;	a	field_1086_a	netManager
+FIELD	pf	Ljq;	a	field_1085_a	netManager
+FIELD	ph	Ljq;	a	field_1063_a	netManager
+FIELD	pj	I	a	field_4157_a	liquidBlockId
+FIELD	pv	Ljava/lang/String;	a	field_999_a	screenTitle
+FIELD	pv	Lqc;	h	field_1002_h	entitySign
+FIELD	pv	I	i	field_4189_i	updateCounter
+FIELD	pv	I	j	field_1000_j	editLine
+FIELD	px	Ljava/util/Random;	j	field_913_j	rand
+FIELD	px	Lcy;	p	field_907_p	worldObj
+FIELD	px	[Lgg;	v	field_4179_v	biomesForGeneration
+FIELD	py	I	a	field_474_a	xPosition
+FIELD	py	I	b	field_473_b	yPosition
+FIELD	py	I	c	field_477_c	zPosition
+FIELD	py	[B	d	field_476_d	entityData
+FIELD	py	Liq;	e	field_475_e	entityNBT
+FIELD	qc	[Ljava/lang/String;	a	field_826_a	signText
+FIELD	qc	I	b	field_825_b	lineBeingEdited
+FIELD	lw	D	d	field_861_d	minecartType
+FIELD	qd	[Lfp;	h	field_857_h	cargoItems
+FIELD	qg	Lpaulscode/sound/SoundSystem;	a	field_591_a	sndSystem
+FIELD	qg	Les;	b	field_590_b	soundPoolSounds
+FIELD	qg	Les;	c	field_589_c	soundPoolStreaming
+FIELD	qg	Les;	d	field_588_d	soundPoolMusic
+FIELD	qg	Lgq;	f	field_586_f	options
+FIELD	qg	Z	g	field_585_g	loaded
+FIELD	qg	Ljava/util/Random;	h	field_584_h	rand
+FIELD	qh	[I	b	field_448_b	abilityToCatchFire
+FIELD	qh	[I	a	field_449_a	chanceToEncourageFire
+FIELD	qi	Ljava/lang/String;	a	field_582_a	reason
+FIELD	qk	I	a	field_332_a	healAmount
+FIELD	oz	[F	f	field_4219_d	lightBrightnessTable
+FIELD	z	D	a	field_1188_a	xCoord
+FIELD	z	D	b	field_1187_b	yCoord
+FIELD	z	D	c	field_1190_c	zCoord
+FIELD	z	[I	d	field_1189_d	permutations
+FIELD	nr	Ljava/util/List;	c	field_889_c	unusedChunkList
+FIELD	bg	Ljava/util/Set;	a	field_6544_a	eligibleChunksForSpawning
+FIELD	cy	I	n	field_4210_n	spawnY
+FIELD	gy	I	d	field_4277_d	maxNumberOfEntityType
+FIELD	cy	Loz;	q	field_4209_q	worldProvider
+FIELD	net/minecraft/client/Minecraft	Lcy;	e	field_6324_e	theWorld
+FIELD	nq	Lnq;	ba	field_4055_bb	pumpkin
+FIELD	nq	Lnq;	bb	field_4053_bc	bloodStone
+FIELD	nq	Lnq;	bc	field_4051_bd	slowSand
+FIELD	nq	Lnq;	bd	field_4049_be	lightStone
+FIELD	nq	Lx;	be	field_4047_bf	portal
+FIELD	nq	Lnq;	bf	field_4045_bg	pumpkinLantern
+FIELD	dx	Ldx;	aQ	field_4023_aQ	pocketSundial
+FIELD	dx	Ldx;	aR	field_4022_aR	lightStoneDust
+FIELD	dx	Ldx;	aS	field_4021_aS	fishRaw
+FIELD	dx	Ldx;	aT	field_4020_aT	fishCooked
+FIELD	aq	Lmn;	b	field_191_a	renderManager
+FIELD	mn	Lfu;	e	field_1229_e	renderEngine
+FIELD	af	Lbk;	a	field_201_d	renderBlocks
+FIELD	af	Ljava/util/Random;	e	field_200_e	random
+FIELD	nl	Laf;	d	field_930_d	itemRenderer
+FIELD	lw	Ljava/lang/String;	bl	field_622_aY	skinUrl
+FIELD	net/minecraft/client/Minecraft	Lbq;	g	field_6322_g	thePlayer
+FIELD	eb	I	m	field_4129_m	dimension
+FIELD	lw	Z	aN	field_646_aA	isDead
+FIELD	po	[D	a	field_4198_a	temperature
+FIELD	po	[D	b	field_4197_b	humidity
+FIELD	net/minecraft/client/Minecraft	Lfu;	n	field_6315_n	renderEngine
+FIELD	net/minecraft/client/Minecraft	Lbp;	p	field_6313_p	currentScreen
+FIELD	bp	Lls;	g	field_6451_g	fontRenderer
+FIELD	bp	Lgh;	a	field_946_a	selectedButton
+FIELD	net/minecraft/client/Minecraft	Lgq;	y	field_6304_y	gameSettings
+FIELD	net/minecraft/client/Minecraft	Ljava/io/File;	Z	field_6275_Z	minecraftDir
+FIELD	dj	Ljava/lang/String;	l	field_6462_l	splashText
+FIELD	dj	[Ljava/lang/String;	a	field_4187_a	minecraftLogo
+FIELD	dj	Ljava/util/Random;	h	field_6463_h	rand
+FIELD	hv	Lib;	B	field_1052_A	sendQueue
+FIELD	ka	F	d	field_1407_d	walkingRangeOfMotion
+FIELD	nq	F	bj	field_372_be	blockResistance
+FIELD	nq	F	bi	field_374_bd	blockHardness
+FIELD	pn	I	b	field_1008_b	y
+FIELD	pn	I	a	field_1009_a	x
+FIELD	gz	Lfu;	e	field_1550_e	renderEngine
+FIELD	gz	D	d	field_1551_d	staticPlayerZ
+FIELD	gz	D	c	field_1552_c	staticPlayerY
+FIELD	gz	D	b	field_1553_b	staticPlayerX
+FIELD	bp	Lls;	g	field_6451_g	fontRenderer
+FIELD	nq	[Z	o	field_343_p	allowsAttachmentLookup
+FIELD	lt	[Lfp;	a	field_833_a	furnaceItemStacks
+FIELD	lt	I	b	field_832_b	furnaceBurnTime
+FIELD	lt	I	c	field_835_c	currentItemBurnTime
+FIELD	lt	I	d	field_834_d	furnaceCookTime
+FIELD	fu	Z	i	field_4281_i	clampTexture
+FIELD	fu	Z	j	field_4280_j	blurTexture
+FIELD	kc	F	a	field_1380_a	ticksPerSecond
+FIELD	gz	D	l	field_1543_l	playerZ
+FIELD	pn	J	d	field_1010_d	updateTime
+FIELD	gz	Lls;	n	field_1541_n	fontRenderer
+FIELD	gz	F	i	field_1546_i	playerPitch
+FIELD	gz	D	j	field_1545_j	playerX
+FIELD	gz	D	k	field_1544_k	playerY
+FIELD	gz	Leb;	g	field_1548_g	entityPlayer
+FIELD	pn	I	c	field_1011_c	z
+FIELD	fc	Llw;	g	field_751_f	playerToAttack
+FIELD	ha	Z	c	field_1538_c	isChunkLoaded
+FIELD	f	Lfu;	l	field_1447_l	renderEngine
+FIELD	gz	Ljava/util/Map;	m	field_6517_m	specialRendererMap
+FIELD	cb	[Lnq;	bb	field_325_aX	blocksEffectiveAgainst
+FIELD	dx	Ljava/util/Random;	b	field_4015_b	itemRand
+FIELD	cl	I	c	field_1708_c	textureName
+FIELD	cl	I	b	field_1705_b	referenceCount
+FIELD	cl	Z	d	field_1707_d	textureSetupComplete
+FIELD	cy	I	k	field_1039_l	difficultySetting
+FIELD	ha	Z	p	field_1525_p	neverSave
+FIELD	ha	Z	r	field_1523_r	hasEntities
+FIELD	ha	J	s	field_1522_s	lastSaveTime
+FIELD	ha	Ljava/util/Map;	l	field_1529_l	chunkTileEntityMap
+FIELD	ag	I	a	field_331_a	isFull
+FIELD	fu	Ljava/nio/IntBuffer;	d	field_1606_d	singleIntBuffer
+FIELD	fu	Ljava/util/HashMap;	c	field_1607_c	textureNameToImageMap
+FIELD	fu	Lgq;	h	field_1602_h	options
+FIELD	fu	Ljava/util/Map;	g	field_1603_g	urlToImageDataMap
+FIELD	fu	Z	a	field_1609_a	useMipmaps
+FIELD	cy	Ljava/util/List;	c	field_1049_b	loadedTileEntityList
+FIELD	dc	Lka;	g	field_1280_g	bipedLeftLeg
+FIELD	dc	Lka;	f	field_1281_f	bipedRightLeg
+FIELD	dc	Lka;	e	field_1282_e	bipedLeftArm
+FIELD	dc	Lka;	d	field_1283_d	bipedRightArm
+FIELD	dc	Lka;	a	field_1286_a	bipedHead
+FIELD	mu	Z	b	field_1199_b	createIfNecessary
+FIELD	cu	Lai;	d	field_900_d	chunkLoader
+FIELD	hv	Lib;	B	field_1052_A	sendQueue
+FIELD	fq	Ljava/util/Map;	c	field_1613_c	IDtoClassMapping
+FIELD	fq	Ljava/util/Map;	d	field_1612_d	classToIDMapping
+FIELD	fq	Ljava/util/Map;	a	field_1611_a	stringToClassMapping
+FIELD	fq	Ljava/util/Map;	b	field_1610_b	classToStringMapping
+FIELD	dh	Lfp;	a	field_4119_a	defaultHeldItem
+FIELD	jx	Lkx;	b	field_1413_b	signModel
+FIELD	gz	Lgz;	a	field_1554_a	instance
+FIELD	fr	Lgz;	a	field_6509_a	tileEntityRenderer
+FIELD	dx	I	aW	field_291_aS	shiftedIndex
+FIELD	ni	Ljava/lang/Class;	a	field_455_a	signEntityClass
+FIELD	ni	Z	b	field_454_b	isFreestanding
+FIELD	lu	Z	a	field_453_a	wiresProvidePower
+FIELD	dj	Ljava/util/Random;	h	field_6463_h	rand
+FIELD	pt	I	a	field_4117_a	angerLevel
+FIELD	pt	I	b	field_4116_b	randomSoundDelay
+FIELD	fo	Lfp;	e	field_846_e	draggingItemStack
+FIELD	oz	Lpo;	b	field_4215_b	worldChunkMgr
+FIELD	oz	Lcy;	a	field_4216_a	worldObj
+FIELD	pt	Lfp;	c	field_4118_c	defaultHeldItem
+FIELD	lw	Llw;	aq	field_617_ae	riddenByEntity
+FIELD	lw	Llw;	ar	field_616_af	ridingEntity
+FIELD	bp	Lgh;	a	field_946_a	selectedButton
+FIELD	dq	I	c	field_766_c	fuseTime
+FIELD	gz	F	h	field_1547_h	playerYaw
+FIELD	lw	D	aW	field_637_aJ	lastTickPosY
+FIELD	lw	D	aX	field_636_aK	lastTickPosZ
+FIELD	lw	D	aV	field_638_aI	lastTickPosX
+FIELD	qm	I	b	field_188_b	chunkZPos
+FIELD	net/minecraft/client/Minecraft	Lbp;	p	field_6313_p	currentScreen
+FIELD	net/minecraft/client/Minecraft	Lfu;	n	field_6315_n	renderEngine
+FIELD	gs	Lai;	e	field_895_e	chunkLoader
+FIELD	gs	I	b	field_890_b	lastQueriedChunkZPos
+FIELD	cy	Ljava/util/List;	b	field_1050_a	loadedEntityList
+FIELD	mn	Lmn;	a	field_1233_a	instance
+FIELD	nr	Ljava/util/Map;	b	field_886_b	chunkMapping
+FIELD	nr	Lha;	a	field_887_a	blankChunk
+FIELD	mu	Ljava/io/File;	a	field_1200_a	saveDir
+FIELD	dj	[Ljava/lang/String;	a	field_4187_a	minecraftLogo
+FIELD	kc	F	c	field_1378_c	renderPartialTicks
+FIELD	kc	I	b	field_1379_b	elapsedTicks
+FIELD	kc	D	i	field_1372_i	timeSyncAdjustment
+FIELD	kc	J	h	field_1373_h	lastSyncHRClock
+FIELD	kc	J	g	field_1374_g	lastSyncSysClock
+FIELD	kc	D	f	field_1375_f	lastHRTime
+FIELD	kc	F	e	field_1376_e	elapsedPartialTicks
+FIELD	kc	F	d	field_1377_d	timerSpeed
+FIELD	dq	I	d	field_765_d	creeperState
+FIELD	dq	I	a	field_764_a	timeSinceIgnited
+FIELD	dq	I	b	field_763_b	lastActiveTime
+FIELD	qm	I	a	field_189_a	chunkXPos
+FIELD	gs	Lha;	c	field_897_c	blankChunk
+FIELD	gs	Lbd;	d	field_896_d	chunkProvider
+FIELD	gs	Lha;	h	field_892_h	lastQueriedChunk
+FIELD	gs	I	a	field_891_a	lastQueriedChunkXPos
+FIELD	ka	F	e	field_1406_e	rotateAngleY
+FIELD	ka	F	d	field_1407_d	rotateAngleX
+FIELD	ka	Z	g	field_1404_g	mirror
+FIELD	ka	F	f	field_1405_f	rotateAngleZ
+FIELD	ka	F	c	field_1408_c	offsetZ
+FIELD	ka	F	b	field_1409_b	offsetY
+FIELD	net/minecraft/client/Minecraft	Lff;	C	field_6298_C	texturePackList
+FIELD	aq	Lgm;	a	field_195_d	unusedModelBiped
+FIELD	aq	Lbk;	e	field_203_d	unusedRenderBlocks
+FIELD	ce	[Ljava/lang/String;	i	field_206_i	armorFilenamePrefix
+FIELD	bk	Z	c	field_1774_c	flipTexture
+FIELD	bk	I	b	field_1771_b	overrideBlockTexture
+FIELD	bk	Lpk;	a	field_1772_a	blockAccess
+FIELD	bk	Z	d	field_1773_d	renderAllFaces
+FIELD	ka	I	o	field_1396_o	displayList
+FIELD	ka	Z	n	field_1397_n	compiled
+FIELD	fc	Lbt;	a	field_749_a	pathToEntity
+FIELD	net/minecraft/client/Minecraft	Lbm;	O	field_6286_O	glCapabilities
+FIELD	net/minecraft/client/Minecraft	I	R	field_6283_R	ticksRan
+FIELD	nq	[Z	o	field_343_p	opaqueCubeLookup
+FIELD	fc	Z	h	field_750_g	hasAttacked
+FIELD	ff	Lnet/minecraft/client/Minecraft;	e	field_6537_e	mc
+FIELD	ff	Ljava/io/File;	f	field_6536_f	texturePackDir
+FIELD	ff	Ld;	a	field_6534_a	selectedTexturePack
+FIELD	hj	D	t	field_6380_t	velocityZ
+FIELD	hj	D	s	field_6381_s	velocityY
+FIELD	hj	D	r	field_6382_r	velocityX
+FIELD	nf	[Lz;	a	field_1192_a	generatorCollection
+FIELD	oe	I	k	field_1154_k	tickCounter
+FIELD	eb	Lhj;	n	field_4128_n	fishEntity
+FIELD	ac	[Lnq;	bb	field_329_aX	blocksEffectiveAgainst
+FIELD	cb	F	bc	field_324_aY	efficiencyOnProperMaterial
+FIELD	mg	[Lnq;	bb	field_327_aX	blocksEffectiveAgainst
+FIELD	ol	[Lnq;	bb	field_326_aX	blocksEffectiveAgainst
+FIELD	cb	I	bd	field_323_aZ	damageVsEntity
+FIELD	cb	I	a	field_322_a	ingredientQuality
+FIELD	bq	Lnet/minecraft/client/Minecraft;	bx	field_788_bg	mc
+FIELD	hb	Lhb;	w	field_4261_w	pumpkin
+FIELD	lw	D	av	field_9283_av	prevPosZ
+FIELD	lw	D	au	field_9284_au	prevPosY
+FIELD	lw	D	at	field_9285_at	prevPosX
+FIELD	lw	F	aU	field_9288_aU	fallDistance
+FIELD	lw	Z	aT	field_9289_aT	entityWalks
+FIELD	ff	Ljava/util/List;	b	field_6533_b	availableTexturePacks
+FIELD	bc	I	a	field_330_a	blockID
+FIELD	hc	[Lka;	b	field_4257_b	tentacles
+FIELD	hc	Lka;	a	field_4258_a	body
+FIELD	hb	Z	y	field_4259_y	canBurn
+FIELD	lw	F	aO	field_9292_aO	yOffset
+FIELD	lw	Z	aH	field_9298_aH	onGround
+FIELD	cq	I	a	field_9275_a	healthMP
+FIELD	cy	Ljava/util/TreeSet;	C	field_1058_B	scheduledTickTreeSet
+FIELD	cy	Ljava/util/Set;	D	field_1056_C	scheduledTickSet
+FIELD	ka	I	m	field_1398_m	textureOffsetY
+FIELD	ka	I	l	field_1399_l	textureOffsetX
+FIELD	nq	Lbi;	k	field_9248_k	soundClothFootstep
+FIELD	nq	Lbi;	j	field_9249_j	soundGlassFootstep
+FIELD	net/minecraft/client/Minecraft	Ljava/awt/Canvas;	k	field_9244_k	mcCanvas
+FIELD	nq	Lbi;	l	field_9247_l	soundSandFootstep
+FIELD	net/minecraft/client/Minecraft	Lnet/minecraft/client/MinecraftApplet;	z	field_9241_z	mcApplet
+FIELD	ka	F	a	field_1410_a	offsetX
+FIELD	oj	[I	bf	field_314_bb	maxDamageArray
+FIELD	oj	I	a	field_310_a	armorLevel
+FIELD	oj	I	bd	field_311_aZ	renderIndex
+FIELD	oj	I	bb	field_313_aX	armorType
+FIELD	kg	I	a	field_319_a	weaponDamage
+FIELD	ij	Lka;	h	field_1262_h	leg3
+FIELD	ij	Lka;	g	field_1263_g	leg2
+FIELD	ij	Lka;	i	field_1261_i	leg4
+FIELD	ij	Lka;	d	field_1266_d	head
+FIELD	el	Lka;	b	field_1267_b	horn1
+FIELD	ij	Lka;	f	field_1264_f	leg1
+FIELD	ij	Lka;	e	field_1265_e	body
+FIELD	el	Lka;	a	field_1268_a	udders
+FIELD	el	Lka;	c	field_1269_c	horn2
+FIELD	ea	Ljava/lang/String;	b	field_1666_b	inventory
+FIELD	ea	Ljava/util/List;	a	field_1667_a	registeredBlocksList
+FIELD	es	Ljava/util/Map;	d	field_1660_d	nameToSoundPoolEntriesMapping
+FIELD	es	Ljava/util/Random;	c	field_1661_c	rand
+FIELD	nq	Lbi;	f	field_9253_f	soundGravelFootstep
+FIELD	nq	Lbi;	g	field_9252_g	soundGrassFootstep
+FIELD	nq	Lbi;	h	field_9251_h	soundStoneFootstep
+FIELD	nq	Lbi;	i	field_9250_i	soundMetalFootstep
+FIELD	nq	Lbi;	e	field_9254_e	soundWoodFootstep
+FIELD	mj	Z	a	field_456_a	isActive
+FIELD	mb	Lnq;	a	field_452_a	modelBlock
+FIELD	fg	Lka;	a	field_1271_a	head
+FIELD	fg	Lka;	b	field_1270_b	unusedModel
+FIELD	fg	Lka;	f	field_1273_f	leg3
+FIELD	fg	Lka;	g	field_1272_g	leg4
+FIELD	fg	Lka;	d	field_1275_d	leg1
+FIELD	fg	Lka;	e	field_1274_e	leg2
+FIELD	fg	Lka;	c	field_1276_c	body
+FIELD	lw	Ljava/util/Random;	bd	field_9312_bd	rand
+FIELD	lv	I	f	field_9316_f	inTile
+FIELD	lv	I	e	field_9317_e	zTile
+FIELD	lv	Z	g	field_9315_g	inGround
+FIELD	lv	I	d	field_9318_d	yTile
+FIELD	lv	I	c	field_9319_c	xTile
+FIELD	ls	[I	b	field_1307_b	charWidth
+FIELD	gq	Ljava/lang/String;	j	field_6524_j	skin
+FIELD	qd	I	e	field_9418_e	fuel
+FIELD	qd	D	f	field_9417_f	pushX
+FIELD	qd	D	g	field_9416_g	pushZ
+FIELD	net/minecraft/client/Minecraft	Lkc;	P	field_9237_P	timer
+FIELD	lw	I	bk	field_9305_bk	air
+FIELD	lw	Z	bm	field_9304_bm	isImmuneToFire
+FIELD	lw	I	bg	field_9309_bg	fire
+FIELD	ff	Ld;	c	field_6539_c	defaultTexturePack
+FIELD	nl	I	h	field_9421_h	updateCounter
+FIELD	nl	Lnet/minecraft/client/Minecraft;	g	field_9422_g	mc
+FIELD	nl	Ljava/util/Random;	f	field_9423_f	rand
+FIELD	ew	F	c	field_1656_c	texturePositionY
+FIELD	ew	Lao;	a	field_1655_a	vector3D
+FIELD	ew	F	b	field_1654_b	texturePositionX
+FIELD	fi	[F	a	field_1653_a	SIN_TABLE
+FIELD	es	Ljava/util/List;	e	field_1659_e	allSoundPoolEntries
+FIELD	es	I	a	field_1658_a	numberOfSoundPoolEntries
+FIELD	hf	Z	ak	field_9336_ak	isJumping
+FIELD	hf	I	J	field_9337_J	health
+FIELD	hf	I	P	field_9330_P	attackTime
+FIELD	hf	F	I	field_9339_I	swingProgress
+FIELD	oj	[I	be	field_315_ba	damageReduceAmmountArray
+FIELD	oj	I	bc	field_312_aY	damageReduceAmmount
+FIELD	net/minecraft/client/Minecraft	Lnx;	x	field_6305_x	objectMouseOver
+FIELD	net/minecraft/client/Minecraft	Lnl;	u	field_6308_u	ingameGUI
+FIELD	od	I	f	field_6495_f	texturePackName
+FIELD	jm	I	e	field_6491_e	texturePackName
+FIELD	cy	I	j	field_9435_j	autosavePeriod
+FIELD	cy	Ljava/util/List;	r	field_9434_r	worldAccesses
+FIELD	net/minecraft/client/Minecraft	Lhu;	q	field_6312_q	loadingScreen
+FIELD	net/minecraft/client/Minecraft	Lls;	o	field_6314_o	fontRenderer
+FIELD	d	Ljava/lang/String;	a	field_6487_a	texturePackFileName
+FIELD	d	Ljava/lang/String;	b	field_6486_b	firstDescriptionLine
+FIELD	d	Ljava/lang/String;	c	field_6489_c	secondDescriptionLine
+FIELD	nq	Lnq;	aT	field_4063_aU	blockIce
+FIELD	hf	Ljava/lang/String;	z	field_9357_z	texture
+FIELD	lf	I	c	field_1344_c	imageHeight
+FIELD	lf	[I	a	field_1343_a	imageData
+FIELD	lf	I	b	field_1342_b	imageWidth
+FIELD	on	I	b	field_1110_b	y
+FIELD	on	I	a	field_1111_a	x
+FIELD	on	I	c	field_1112_c	z
+FIELD	hf	F	H	field_9341_H	prevSwingProgress
+FIELD	nq	Lok;	ae	field_416_af	plantRed
+FIELD	ib	Lhv;	f	field_1211_f	worldClient
+FIELD	eb	I	g	field_9370_g	score
+METHOD	b	()Z	a	func_1179_a	isAssigned
+METHOD	b	(Lb;)F	a	func_1180_a	distanceTo
+METHOD	ah	()Ljava/io/File;	a	func_1263_a	getDataFolder
+METHOD	ao	(Lao;)Lao;	b	func_1246_b	crossProduct
+METHOD	ao	(Lao;D)Lao;	a	func_1247_a	getIntermediateWithXValue
+METHOD	ao	(DDD)Lao;	b	func_1248_b	createVector
+METHOD	ao	(F)V	b	func_1249_b	rotateAroundY
+METHOD	ao	(Lao;D)Lao;	b	func_1250_b	getIntermediateWithYValue
+METHOD	ao	(Lao;)D	c	func_1251_c	distanceTo
+METHOD	ao	()Lao;	b	func_1252_b	normalize
+METHOD	ao	()D	c	func_1253_c	lengthVector
+METHOD	ao	(DDD)Lao;	e	func_1254_e	setComponents
+METHOD	ao	(DDD)D	d	func_1255_d	squareDistanceTo
+METHOD	ao	(Lao;D)Lao;	c	func_1256_c	getIntermediateWithZValue
+METHOD	ao	(DDD)Lao;	c	func_1257_c	addVector
+METHOD	ao	(F)V	a	func_1258_a	rotateAroundX
+METHOD	ao	()V	a	func_1259_a	initialize
+METHOD	ao	(DDD)Lao;	a	func_1260_a	createVectorHelper
+METHOD	ao	(Lao;)D	d	func_1261_d	squareDistanceTo
+METHOD	ar	(Lfp;)Z	a	func_4105_a	isItemValid
+METHOD	ax	(Lhi;)V	a	func_1103_a	onCraftMatrixChanged
+METHOD	ax	(Leb;)V	a	func_1104_a	onCraftGuiClosed
+METHOD	bc	(Lfp;Leb;Lcy;IIII)Z	a	func_192_a	onItemUse
+METHOD	bd	(Lbd;II)V	a	func_534_a	populate
+METHOD	bg	(Lcy;)I	a	func_4154_a	spawnCreatures
+METHOD	bg	(Lcy;II)Lon;	a	func_4153_a	getRandomPosition
+METHOD	c	(Lcy;III)Z	h	func_286_h	isThereANeighborChest
+METHOD	bl	()V	b	func_475_b	updateEntity
+METHOD	bl	(Liq;)V	b	func_481_b	writeToNBT
+METHOD	bl	(Liq;)V	a	func_482_a	readFromNBT
+METHOD	bl	()V	c	func_483_c	updateDelay
+METHOD	bm	()Z	a	func_1213_a	checkARBOcclusion
+METHOD	bn	()V	b	func_1208_b	closeMinecraft
+METHOD	bn	(Ljava/io/File;Ljava/lang/String;)V	a	func_1209_a	loadResource
+METHOD	bn	()V	a	func_1210_a	reloadResources
+METHOD	bn	(Ljava/net/URL;Ljava/lang/String;JI)V	a	func_1211_a	downloadAndInstallResource
+METHOD	bn	(Ljava/net/URL;Ljava/io/File;J)V	a	func_1212_a	downloadResource
+METHOD	bp	(Lnet/minecraft/client/Minecraft;II)V	a	func_6447_a	validate
+METHOD	bp	()V	d	func_564_d	handleInput
+METHOD	bp	(III)V	a	func_565_a	mouseClicked
+METHOD	bp	()V	e	func_566_e	handleMouseInput
+METHOD	bp	(ZI)V	a	func_568_a	deleteWorld
+METHOD	bp	()V	f	func_569_f	handleKeyboardInput
+METHOD	bp	()V	g	func_570_g	updateScreen
+METHOD	ay	(IIF)V	a	func_571_a	drawScreen
+METHOD	bb	(Lgh;)V	a	func_572_a	actionPerformed
+METHOD	bp	(III)V	b	func_573_b	mouseMoved
+METHOD	bp	()Ljava/lang/String;	c	func_574_c	getClipboardString
+METHOD	ay	()V	a	func_6448_a	initGui
+METHOD	bp	()V	h	func_6449_h	dispose
+METHOD	ay	(CI)V	a	func_580_a	keyTyped
+METHOD	bt	(Llw;)Lao;	a	func_1205_a	getPosition
+METHOD	bt	()V	a	func_1206_a	incrementPathIndex
+METHOD	bt	()Z	b	func_1207_b	isFinished
+METHOD	bw	()V	f	func_1194_f	MarkDirty
+METHOD	bj	()Z	a	func_4017_a	isFull3D
+METHOD	cb	(Llw;)I	a	func_4020_a	getDamageVsEntity
+METHOD	cb	(Lfp;Lhf;)V	a	func_4021_a	hitEntity
+METHOD	cb	(Lfp;IIII)V	a	func_203_a	hitBlock
+METHOD	cb	(Lfp;Lnq;)F	a	func_204_a	getStrVsBlock
+METHOD	cd	([I)Z	a	func_1182_a	matchRecipe
+METHOD	cd	([I)Lfp;	b	func_1183_b	createResult
+METHOD	cd	()I	a	func_1184_a	getRecipeSize
+METHOD	cd	([IIIZ)Z	a	func_1185_a	matches
+METHOD	co	()Lco;	c	func_1160_c	copy
+METHOD	co	(DDDDDD)Lco;	b	func_1161_b	getBoundingBoxFromPool
+METHOD	co	()D	b	func_1164_b	getAverageEdgeLength
+METHOD	co	(DDDDDD)Lco;	c	func_1165_c	setBounds
+METHOD	co	(DDDDDD)Lco;	a	func_1168_a	getBoundingBox
+METHOD	co	(DDD)Lco;	a	func_1170_a	addCoord
+METHOD	co	(DDD)Lco;	d	func_1174_d	offset
+METHOD	co	(DDD)Lco;	b	func_1177_b	expands
+METHOD	co	(Lco;)Z	a	func_1178_a	intersectsWith
+METHOD	co	(DDD)Lco;	c	func_1166_c	getOffsetBoundingBox
+METHOD	co	(Lco;)V	b	func_1171_b	setBB
+METHOD	co	(Lao;)Z	b	func_1167_a	isVecInYZ
+METHOD	co	(Lao;)Z	c	func_1175_b	isVecInXZ
+METHOD	co	(Lao;)Z	d	func_1176_c	isVecInXY
+METHOD	co	(Lao;)Z	a	func_4150_a	isVecInside
+METHOD	co	()V	a	func_4149_a	clearBoundingBoxPool
+METHOD	cs	(III)F	c	func_598_c	getLightBrightness
+METHOD	cs	(III)Z	g	func_601_g	doesBlockAllowAttachment
+METHOD	cy	(Llw;D)Leb;	a	func_609_a	getClosestPlayerToEntity
+METHOD	cy	(IIII)V	g	func_611_g	notifyBlocksOfNeighborChange
+METHOD	cy	(Ljava/io/File;Ljava/lang/String;)V	b	func_615_b	deleteWorld
+METHOD	cy	(IIII)V	e	func_617_e	notifyBlockChange
+METHOD	cy	(III)I	j	func_618_j	getBlockLightValue
+METHOD	cy	(II)Z	g	func_620_h	chunkExists
+METHOD	cy	(Ljava/lang/Class;)I	b	func_621_b	countEntities
+METHOD	cy	(Llw;Ljava/lang/String;FF)V	a	func_623_a	playSoundAtEntity
+METHOD	cy	()Z	d	func_624_b	isDaytime
+METHOD	cy	(III)Z	o	func_625_o	isBlockIndirectlyGettingPowered
+METHOD	cy	(IIII)Z	a	func_634_a	setBlock
+METHOD	cy	(IIII)Z	c	func_635_c	setBlockMetadata
+METHOD	cy	(IIIIII)Z	a	func_640_a	checkChunksExist
+METHOD	cy	(Lch;III)I	a	func_641_a	getSavedLightValue
+METHOD	cy	()V	h	func_644_f	calculateInitialSkylight
+METHOD	cy	(III)Z	n	func_646_n	isBlockGettingPowered
+METHOD	cy	(III)Z	i	func_647_i	canBlockSeeTheSky
+METHOD	cy	(J)V	a	func_648_a	setWorldTime
+METHOD	cy	()V	i	func_649_g	tick
+METHOD	cy	([Ljava/io/File;)V	a	func_653_a	deleteFiles
+METHOD	cy	(IIII)V	l	func_655_l	notifyBlockOfNeighborChange
+METHOD	cy	(Ljava/lang/Class;Lco;)Ljava/util/List;	a	func_657_a	getEntitiesWithinAABB
+METHOD	cy	(Llw;Lco;)Ljava/util/List;	b	func_659_b	getEntitiesWithinAABBExcludingEntity
+METHOD	cy	(Lco;)Z	b	func_662_b	getIsAnyLiquid
+METHOD	cy	(Lch;IIII)V	b	func_664_b	setLightValue
+METHOD	cy	(II)I	d	func_666_c	getHeightValue
+METHOD	cy	(IIII)Z	j	func_668_j	isBlockProvidingPowerTo
+METHOD	cy	(Ljava/lang/String;III)V	a	func_670_a	playRecord
+METHOD	cy	(F)I	a	func_671_a	calculateSkylightSubtracted
+METHOD	cy	(II)Lha;	b	func_673_a	getChunkFromBlockCoords
+METHOD	cy	(Llw;)Z	a	func_674_a	entityJoinedWorld
+METHOD	cy	(III)V	m	func_677_m	randomDisplayUpdates
+METHOD	cy	(IIII)V	h	func_681_h	scheduleBlockUpdate
+METHOD	cy	(DDDD)Leb;	a	func_683_a	getClosestPlayer
+METHOD	cy	(DDDLjava/lang/String;FF)V	a	func_684_a	playSoundEffect
+METHOD	cy	(IIII)Z	d	func_690_d	setBlockWithNotify
+METHOD	cy	(IIII)V	b	func_691_b	setBlockMetadataWithNotify
+METHOD	cy	(Ljava/lang/String;DDDDDD)V	a	func_694_a	spawnParticle
+METHOD	cy	(Llw;Lco;)Ljava/util/List;	a	func_697_a	getCollidingBoundingBoxes
+METHOD	cy	(IIIZ)I	a	func_699_a	getBlockLightValue
+METHOD	cy	(Z)Z	a	func_700_a	TickUpdates
+METHOD	cy	(II)Lha;	c	func_704_b	getChunkFromChunkCoords
+METHOD	cy	(IIII)Z	k	func_706_k	isBlockIndirectlyProvidingPowerTo
+METHOD	cy	(III)Z	k	func_708_k	canBlockSeeTheSky
+METHOD	cy	(Lch;IIII)V	a	func_4078_a	neighborLightPropagationChanged
+METHOD	dg	(Lcy;IIII)V	e	func_317_e	ejectRecord
+METHOD	dj	(F)V	a	func_4068_a	drawLogo
+METHOD	dj	()Ljava/util/Random;	j	func_592_j	getRand
+METHOD	dm	(Llw;Lb;Lb;Lb;F)Lbt;	a	func_1129_a	addToPath
+METHOD	dm	(Llw;DDDF)Lbt;	a	func_1130_a	createEntityPathTo
+METHOD	dm	(Llw;IIIF)Lbt;	a	func_1131_a	createEntityPathTo
+METHOD	dm	(Llw;IIILb;)I	a	func_1132_a	getVerticalOffset
+METHOD	dm	(Llw;Lb;Lb;Lb;F)I	b	func_1133_b	findPathOptions
+METHOD	dm	(Lb;Lb;)Lbt;	a	func_1134_a	createEntityPath
+METHOD	dm	(Llw;IIILb;I)Lb;	a	func_1135_a	getSafePoint
+METHOD	dm	(III)Lb;	a	func_1136_a	openPoint
+METHOD	dm	(Llw;Llw;F)Lbt;	a	func_1137_a	createEntityPathTo
+METHOD	ds	(I)Ljava/nio/FloatBuffer;	d	func_1123_d	getDirectFloatBuffer
+METHOD	ds	(I)I	a	func_1124_a	generateDisplayLists
+METHOD	ds	(I)Ljava/nio/IntBuffer;	c	func_1125_c	getDirectIntBuffer
+METHOD	ds	()V	a	func_1126_a	deleteTexturesAndDisplayLists
+METHOD	ds	(I)Ljava/nio/ByteBuffer;	b	func_1127_b	getDirectByteBuffer
+METHOD	ds	(Ljava/nio/IntBuffer;)V	a	func_1128_a	generateTextureNames
+METHOD	dw	(Lcy;III)V	h	func_315_h	tryToFall
+METHOD	dw	(Lcy;III)Z	b_	func_316_a_	canFallBelow
+METHOD	ag	(Lfp;Lcy;Leb;)Lfp;	a	func_193_a	onItemRightClick
+METHOD	ac	(Lnq;)Z	a	func_4018_a	canHarvestBlock
+METHOD	dx	(Lfp;)I	a	func_196_a	getIconIndex
+METHOD	dx	()I	d	func_197_c	getMaxDamage
+METHOD	dx	()Ldx;	e	func_4016_e	setFull3D
+METHOD	dx	()I	c	func_200_b	getItemStackLimit
+METHOD	dx	(I)Ldx;	a	func_4022_a	setIconIndex
+METHOD	dz	(Lfp;)V	b	func_776_b	putStack
+METHOD	dz	()Lfp;	b	func_777_b	getStack
+METHOD	eb	(Lnq;)F	a	func_450_a	getCurrentPlayerStrVsBlock
+METHOD	en	([I)Lfp;	a	func_1119_a	craft
+METHOD	en	()Len;	a	func_1120_a	getInstance
+METHOD	en	(Lfp;[Ljava/lang/Object;)V	a	func_1121_a	addRecipe
+METHOD	h	()B	a	func_733_a	getType
+METHOD	h	(Ljava/io/DataOutput;)V	a	func_735_a	writeTag
+METHOD	h	(Ljava/io/DataInput;)V	a	func_736_a	readTag
+METHOD	es	(Ljava/lang/String;Ljava/io/File;)Lal;	a	func_1117_a	addSound
+METHOD	ex	(II)Ldz;	a	func_588_a	getSlotAtPosition
+METHOD	fd	(B)Ljava/lang/String;	b	func_731_b	getTagName
+METHOD	fd	(Ljava/lang/String;)Lfd;	a	func_732_a	setKey
+METHOD	fd	(Ljava/io/DataInput;)Lfd;	b	func_734_b	readTag
+METHOD	fd	()Ljava/lang/String;	b	func_737_b	getKey
+METHOD	fd	(Lfd;Ljava/io/DataOutput;)V	a	func_738_a	writeTag
+METHOD	fd	(B)Lfd;	a	func_739_a	createTagOfType
+METHOD	fi	(F)F	a	func_1106_a	sin
+METHOD	fi	(F)F	b	func_1114_b	cos
+METHOD	fi	(DD)D	a	func_1107_a	abs_max
+METHOD	fi	(D)F	a	func_1109_a	sqrt_double
+METHOD	fi	(F)I	d	func_1110_d	convertToBlockCoord
+METHOD	fi	(D)I	b	func_1108_b	convertToBlockCoord
+METHOD	fi	(II)I	a	func_1111_a	bucketInt
+METHOD	fi	(F)F	e	func_1112_e	abs
+METHOD	fi	(F)F	c	func_1113_c	sqrt_float
+METHOD	fo	(I)Lfp;	c	func_468_c	getStackInSlot
+METHOD	fo	()I	c	func_469_c	getSizeInventory
+METHOD	fo	()I	o_	func_470_e	getInventoryStackLimit
+METHOD	fo	()Ljava/lang/String;	d	func_471_d	getInvName
+METHOD	fo	(ILfp;)V	a	func_472_a	setInventorySlotContents
+METHOD	fo	(II)Lfp;	a	func_473_a	decrStackSize
+METHOD	fo	(Lly;)Lly;	a	func_493_a	writeToNBT
+METHOD	fo	()Lfp;	a	func_494_a	getCurrentItem
+METHOD	fo	(II)I	b	func_495_b	addItemsToInventory
+METHOD	fo	(I)I	g	func_497_g	getFirstPartialMatchingStack
+METHOD	fo	()I	j	func_499_j	getFirstEmptyStack
+METHOD	aq	(Lco;DDD)V	a	func_146_a	renderOffsetAABB
+METHOD	fo	(IZ)V	a	func_496_a	setCurrentItem
+METHOD	aq	(Lco;)V	a	func_142_a	renderAABB
+METHOD	aq	()Lcy;	b	func_149_b	getWorldFromRenderManager
+METHOD	ds	(I)Ljava/nio/IntBuffer;	c	func_1125_c	createDirectIntBuffer
+METHOD	ds	(I)Ljava/nio/ByteBuffer;	b	func_1127_b	createDirectByteBuffer
+METHOD	ds	(I)Ljava/nio/FloatBuffer;	d	func_1123_d	createDirectFloatBuffer
+METHOD	ha	(Z)Z	a	func_1012_a	needsSaving
+METHOD	ha	(II)Z	a	func_1017_a	isAtLocation
+METHOD	bj	()Z	b	func_4023_b	shouldRotateAroundWhenRendering
+METHOD	hf	(F)F	d	func_431_d	getSwingProgress
+METHOD	be	()Llw;	c_	func_438_i	findPlayerToAttack
+METHOD	fo	(I)I	f	func_505_f	getInventorySlotContainItem
+METHOD	fo	(Llw;)I	a	func_502_a	getDamageVsEntity
+METHOD	cy	(IIIII)Z	a	func_643_a	setBlockAndMetadata
+METHOD	fu	(Ljava/io/InputStream;)Ljava/awt/image/BufferedImage;	a	func_6526_a	readTextureImage
+METHOD	fu	(Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;	b	func_1069_b	unwrapImageByColumns
+METHOD	fu	(Ljava/awt/image/BufferedImage;I)V	a	func_1068_a	setupTexture
+METHOD	fu	()V	b	func_1065_b	refreshTextures
+METHOD	fo	(I)Z	b	func_510_b	consumeInventoryItem
+METHOD	fo	(Lly;)V	b	func_513_b	readFromNBT
+METHOD	ha	()V	e	func_995_d	onChunkLoad
+METHOD	dz	()V	d	func_779_d	onSlotChanged
+METHOD	ha	()V	f	func_998_e	onChunkUnload
+METHOD	lu	(Lcy;IIII)I	g	func_281_g	getMaxCurrentStrength
+METHOD	lu	(Lcy;III)V	h	func_280_h	updateAndPropagateCurrentStrength
+METHOD	br	()Lji;	a_	func_283_a_	SetBlockEntity
+METHOD	lu	(Lcy;III)V	i	func_282_i	notifyWireNeighborsOfNeighborChange
+METHOD	mj	(ZLcy;III)V	a	func_285_a	updateFurnaceBlockState
+METHOD	cy	(Lco;)Z	c	func_605_c	isBoundingBoxBurning
+METHOD	aq	(Lmn;)V	a	func_4009_a	setRenderManager
+METHOD	fu	(I)V	a	func_1078_a	deleteTexture
+METHOD	fq	(Ljava/lang/String;Lcy;)Llw;	a	func_1079_a	createEntityInWorld
+METHOD	fu	(II)I	b	func_1077_b	weightedAverageColor
+METHOD	fu	(Ljava/awt/image/BufferedImage;)I	a	func_1074_a	allocateAndSetupTexture
+METHOD	fu	(Ljava/lang/String;Lie;)Lcl;	a	func_1075_a	obtainImageData
+METHOD	fu	(II)I	a	func_1072_a	averageColor
+METHOD	fu	(Ljava/lang/String;)V	b	func_1073_b	releaseImageData
+METHOD	fu	(Ljava/lang/String;Ljava/lang/String;)I	a	func_1071_a	getTextureForDownloadableImage
+METHOD	fq	(Llw;)Ljava/lang/String;	b	func_1083_b	getEntityString
+METHOD	fr	(Lgz;)V	a	func_928_a	setTileEntityRenderer
+METHOD	af	(Lls;Lfu;Lfp;II)V	a	func_161_a	renderItemIntoGUI
+METHOD	af	(Lis;IIIII)V	a	func_162_a	renderQuad
+METHOD	af	(IIIIII)V	a	func_163_a	renderTexturedQuad
+METHOD	af	(Lls;Lfu;Lfp;II)V	b	func_164_b	renderItemOverlayIntoGUI
+METHOD	cy	(III)Z	k	func_708_k	canExistingBlockSeeTheSky
+METHOD	lw	(DDDFF)V	c	func_365_c	setLocationAndAngles
+METHOD	lw	()Ljava/lang/String;	N	func_389_H	getEntityString
+METHOD	dp	()Z	d_	func_385_d_	canBePushed
+METHOD	f	(Llw;)V	a	func_941_a	obtainEntitySkin
+METHOD	aq	()Lls;	a	func_6329_a	getFontRendererFromRenderManager
+METHOD	fr	()Lls;	a	func_6508_a	getFontRenderer
+METHOD	mn	()Lls;	a	func_6500_a	getFontRenderer
+METHOD	fr	(Ljava/lang/String;)V	a	func_6507_a	bindTextureByName
+METHOD	dz	()I	e	func_4104_e	getSlotStackLimit
+METHOD	om	(JF)F	a	func_4100_a	calculateCelestialAngle
+METHOD	ar	()V	a	func_4103_a	onPickupFromSlot
+METHOD	om	(II)Z	a	func_4102_a	canCoordinateBeSpawn
+METHOD	bp	(I)V	b	func_579_b	drawBackground
+METHOD	bp	()V	i	func_578_i	drawDefaultBackground
+METHOD	bp	(III)V	b	func_573_b	mouseMovedOrUp
+METHOD	eb	()V	t	func_374_q	preparePlayerToSpawn
+METHOD	gz	()Lls;	a	func_6516_a	getFontRenderer
+METHOD	ex	(Lof;)V	a	func_590_a	drawSlotInventory
+METHOD	aq	(Llw;DDDFF)V	c	func_144_c	renderShadow
+METHOD	aq	(Lnq;DDDIIIFFDDD)V	a	func_145_a	renderShadowOnBlock
+METHOD	lt	(I)I	a	func_490_a	getCookProgressScaled
+METHOD	lt	()Z	j	func_491_j	canSmelt
+METHOD	fo	(I)Lfp;	d	func_492_d	armorItemInSlot
+METHOD	aq	(Llw;DDDFF)V	b	func_141_b	doRenderShadowAndFire
+METHOD	fo	(I)V	a	func_498_a	changeCurrentItem
+METHOD	aq	(Llw;DDDF)V	a	func_148_a	renderEntityOnFire
+METHOD	gs	(Lha;)V	b	func_540_b	saveChunk
+METHOD	gs	(Lha;)V	a	func_541_a	saveExtraChunkData
+METHOD	ai	()V	b	func_811_b	saveExtraData
+METHOD	ai	(Lcy;Lha;)V	a	func_812_a	saveChunk
+METHOD	ai	(Lcy;II)Lha;	a	func_813_a	loadChunk
+METHOD	ai	(Lcy;Lha;)V	b	func_815_b	saveExtraChunkData
+METHOD	mu	(Lcy;Liq;)Lha;	a	func_816_a	loadChunkIntoWorldFromCompound
+METHOD	mu	(II)Ljava/io/File;	a	func_817_a	chunkFileForXZ
+METHOD	mu	(Lha;Lcy;Liq;)V	a	func_818_a	storeChunkInCompound
+METHOD	ka	(FFFIIIF)V	a	func_923_a	entityLimbDefine
+METHOD	bb	()Z	b	func_6450_b	doesGuiPauseGame
+METHOD	gz	(Lji;)Lfr;	b	func_1031_b	getSpecialRendererForEntity
+METHOD	lt	()V	i	func_487_i	smeltItem
+METHOD	lt	(I)I	d	func_486_d	getSmeltingResultItem
+METHOD	lt	()Z	a	func_485_a	isBurning
+METHOD	bl	()Z	a	func_484_a	anyPlayerInRange
+METHOD	lt	(I)I	b	func_489_b	getBurnTimeRemainingScaled
+METHOD	lt	(Lfp;)I	a	func_488_a	getItemBurnTime
+METHOD	fq	(ILcy;)Llw;	a	func_1084_a	createEntity
+METHOD	fq	(Liq;Lcy;)Llw;	a	func_1081_a	createEntityFromNBT
+METHOD	fq	(Ljava/lang/Class;Ljava/lang/String;I)V	a	func_1080_a	addMapping
+METHOD	h	(Ljava/io/DataOutput;)V	a	func_735_a	writeTagContents
+METHOD	h	(Ljava/io/DataInput;)V	a	func_736_a	readTagContents
+METHOD	jx	(Lqc;DDDF)V	a	func_932_a	renderTileEntitySignAt
+METHOD	u	(Lji;DDDF)V	a	func_930_a	renderTileEntityAt
+METHOD	f	(Llw;)V	b	func_938_b	releaseEntitySkin
+METHOD	ku	(Lfp;)V	a	func_4132_a	renderItem
+METHOD	fq	(Llw;)I	a	func_1082_a	getEntityID
+METHOD	fp	(Lnq;)Z	b	func_1099_b	canHarvestBlock
+METHOD	er	(F)V	a	func_589_a	drawGuiContainerBackgroundLayer
+METHOD	er	()V	j	func_587_j	drawGuiContainerForegroundLayer
+METHOD	cy	(III)Z	d	func_630_d	blockExists
+METHOD	kc	()V	a	func_904_a	updateTimer
+METHOD	net/minecraft/client/Minecraft	(Lbp;)V	a	func_6272_a	displayGuiScreen
+METHOD	l	()V	a	func_1159_a	disableStandardItemLighting
+METHOD	l	()V	b	func_1158_b	enableStandardItemLighting
+METHOD	nq	(F)Lnq;	c	func_222_c	setHardness
+METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;)Ljava/io/File;	a	func_6264_a	getAppDir
+METHOD	ab	(Liq;Ljava/io/OutputStream;)V	a	func_1143_a	writeGzippedCompoundToOutputStream
+METHOD	nq	(F)Lnq;	b	func_219_b	setResistance
+METHOD	cy	(III)V	l	func_692_l	removeBlockTileEntity
+METHOD	eb	(Lnq;)Z	b	func_454_b	canHarvestBlock
+METHOD	cy	(Llw;)V	c	func_678_c	releaseEntitySkin
+METHOD	cy	(Ljv;)V	b	func_672_b	removeWorldAccess
+METHOD	cy	(IIILji;)V	a	func_654_a	setBlockTileEntity
+METHOD	om	(Ljava/io/File;)Lai;	a	func_4092_a	getChunkLoader
+METHOD	oz	(Lcy;)V	a	func_4095_a	registerWorld
+METHOD	om	()Lbd;	c	func_4094_c	getChunkProvider
+METHOD	om	()V	a	func_4098_a	registerWorldChunkManager
+METHOD	ei	([DIIII)[D	a	func_4071_a	getTemperatures
+METHOD	cy	(IIIII)Z	b	func_688_b	setBlockAndMetadataWithNotify
+METHOD	cy	()V	p	func_669_m	saveLevel
+METHOD	ib	()V	a	func_848_a	processReadPackets
+METHOD	ib	(Lgk;)V	a	func_847_a	addToSendQueue
+METHOD	cy	()V	m	func_660_k	sendQuittingDisconnectingPacket
+METHOD	fo	()V	h	func_474_j_	onInventoryChanged
+METHOD	lu	(Lpk;III)Z	c	func_279_b	isPowerProviderOrWire
+METHOD	bo	(Lcy;IIIZ)Z	a	func_273_a	checkForBurnout
+METHOD	ku	(FI)V	a	func_898_a	renderInsideOfBlock
+METHOD	ku	(F)V	d	func_890_d	renderFireInFirstPerson
+METHOD	ku	(F)V	c	func_892_c	renderWarpedTextureOverlay
+METHOD	ku	(F)V	b	func_893_b	renderOverlays
+METHOD	fi	(F)I	d	func_1110_d	convertToBlockCoord_float
+METHOD	ku	(F)V	a	func_4133_a	renderItemInFirstPerson
+METHOD	ha	(III)V	e	func_1023_e	removeChunkBlockTileEntity
+METHOD	gz	(Lji;)Z	a	func_1028_a	hasSpecialRenderer
+METHOD	cy	(Llw;)V	d	func_607_d	setEntityDead
+METHOD	cy	(Llw;)V	b	func_606_b	obtainEntitySkin
+METHOD	cs	(III)Lji;	b	func_603_b	getBlockTileEntity
+METHOD	ap	(Lcy;III)V	h	func_318_h	setStateIfMobInteractsWithPlate
+METHOD	pl	(Lcy;III)Z	h	func_267_h	checkIfAttachedToBlock
+METHOD	fi	(D)I	b	func_1108_b	convertToBlockCoord_double
+METHOD	gz	(Lji;DDDF)V	a	func_1032_a	renderTileEntityAt
+METHOD	gz	(Lji;F)V	a	func_1030_a	renderTileEntity
+METHOD	dh	()Lfp;	l	func_4045_l	getHeldItem
+METHOD	pt	(Llw;)V	c	func_4049_h	becomeAngryAt
+METHOD	cy	(ZLpu;)V	a	func_639_a	saveWorld
+METHOD	bd	(II)Lha;	b	func_533_b	provideChunk
+METHOD	bd	(ZLpu;)Z	a	func_535_a	saveChunks
+METHOD	ha	()V	g	func_1006_f	setChunkModified
+METHOD	ha	(IIILji;)V	a	func_1005_a	setChunkBlockTileEntity
+METHOD	ha	(III)Lji;	d	func_1002_d	getChunkBlockTileEntity
+METHOD	gz	(Ljava/lang/Class;)Lfr;	a	func_4144_a	getSpecialRendererForClass
+METHOD	az	()Z	n_	func_401_c_	canBeCollidedWith
+METHOD	gz	(Lcy;Lfu;Lls;Leb;F)V	a	func_1026_a	setRenderingContext
+METHOD	cp	(Ljava/util/Random;)Ljava/lang/String;	b	func_531_b	pickMobSpawner
+METHOD	cp	(Ljava/util/Random;)Lfp;	a	func_530_a	pickCheckLootItem
+METHOD	kq	(J)Lkq;	a	func_900_a	setScheduledTime
+METHOD	le	(I)Ljava/lang/String;	d	func_586_d	getWorldName
+METHOD	ls	(Ljava/lang/String;)I	a	func_871_a	getStringWidth
+METHOD	ls	(Ljava/lang/String;IIIZ)V	a	func_872_a	renderString
+METHOD	ls	(Ljava/lang/String;III)V	b	func_873_b	drawString
+METHOD	ls	(Ljava/lang/String;III)V	a	func_874_a	drawStringWithShadow
+METHOD	lw	(DDD)V	b	func_347_a	setPosition
+METHOD	lw	(DDD)V	g	func_348_f	addVelocity
+METHOD	lw	(DDD)V	d	func_349_c	moveEntity
+METHOD	ak	(Liq;)V	a	func_352_a	writeEntityToNBT
+METHOD	as	(Leb;)Z	a	func_353_a	interact
+METHOD	ak	(Liq;)V	b	func_357_b	readEntityFromNBT
+METHOD	lw	(DDD)D	e	func_360_d	getDistanceSq
+METHOD	lw	(DDD)D	f	func_361_e	getDistance
+METHOD	lw	(Liq;)V	d	func_363_d	writeToNBT
+METHOD	lw	(II)Leo;	b	func_367_b	dropItem
+METHOD	lw	(Liq;)V	e	func_368_e	readFromNBT
+METHOD	at	()V	e_	func_370_e_	onUpdate
+METHOD	hf	(FF)V	a	func_371_a	setSize
+METHOD	lw	(FF)V	c	func_376_c	setRotation
+METHOD	dp	(DDDFFI)V	a	func_378_a	setPositionAndRotation2
+METHOD	lw	(Llw;)F	e	func_379_d	getDistanceToEntity
+METHOD	lw	(Llw;)V	g	func_380_f	applyEntityCollision
+METHOD	db	(F)F	a	func_382_a	getEntityBrightness
+METHOD	lw	(Llw;)V	h	func_6377_h	mountEntity
+METHOD	lw	(Llw;)D	f	func_387_e	getDistanceSqToEntity
+METHOD	lw	(Lhb;)Z	a	func_393_a	isInsideOfMaterial
+METHOD	lw	(IIF)Leo;	a	func_394_a	dropItemWithOffset
+METHOD	lw	()V	J	func_395_F	setEntityDead
+METHOD	az	(Llw;I)Z	a	func_396_a	attackEntity
+METHOD	eo	()Z	h_	func_397_g_	handleWaterMovement
+METHOD	lw	(Lcy;)V	a	func_398_a	setWorld
+METHOD	lw	(DDDFF)V	b	func_399_b	setPositionAndRotation
+METHOD	hf	(F)V	c	func_400_c	fall
+METHOD	at	(DDD)V	a	func_6375_a	setVelocity
+METHOD	at	(Leb;)V	b	func_6378_b	onCollideWithPlayer
+METHOD	ly	()I	c	func_740_c	tagCount
+METHOD	ly	(I)Lfd;	a	func_741_a	tagAt
+METHOD	ly	(Lfd;)V	a	func_742_a	setTag
+METHOD	mo	(Led;)V	a	func_819_a	handlePlace
+METHOD	ib	(Lhs;)V	a	func_820_a	handleNamedEntitySpawn
+METHOD	mo	(Lgc;)V	a	func_821_a	handleBlockDig
+METHOD	ib	(Lmx;)V	a	func_822_a	handleBlockChange
+METHOD	ib	(Ljava/lang/String;)V	a	func_823_a	handleErrorMessage
+METHOD	ib	(Lov;)V	a	func_824_a	handleMultiBlockChange
+METHOD	ib	(Lii;)V	a	func_825_a	handleArmAnimation
+METHOD	ib	(Llq;)V	a	func_826_a	handlePreChunk
+METHOD	ib	(Lnh;)V	a	func_827_a	handleEntity
+METHOD	ib	(Lfv;)V	a	func_828_a	handleMobSpawn
+METHOD	ib	(Lky;)V	a	func_829_a	handleEntityTeleport
+METHOD	ib	(Lmt;)V	a	func_830_a	handleAddToInventory
+METHOD	ib	(Ljr;)V	a	func_4113_a	handleChat
+METHOD	ib	(Lid;)V	a	func_832_a	handlePickupSpawn
+METHOD	ib	(Lci;)V	a	func_833_a	handleMapChunk
+METHOD	ib	(Lbu;)V	a	func_834_a	handleCollect
+METHOD	ib	(Llz;)V	a	func_835_a	handleVehicleSpawn
+METHOD	ib	(Lfa;)V	a	func_837_a	handleFlying
+METHOD	ib	(Lhw;)V	a	func_838_a	handleHandshake
+METHOD	ib	(Lli;)V	a	func_839_a	handleDestroyEntity
+METHOD	ib	(Liu;)V	a	func_4115_a	handleLogin
+METHOD	ib	(Leq;)V	a	func_841_a	handleBlockItemSwitch
+METHOD	ib	(Lpy;)V	a	func_842_a	handleComplexEntity
+METHOD	ib	(Lp;)V	a	func_843_a	handlePlayerInventory
+METHOD	ib	(Lqi;)V	a	func_844_a	handleKickDisconnect
+METHOD	ib	(Lkv;)V	a	func_845_a	handleSpawnPosition
+METHOD	ib	(Lek;)V	a	func_846_a	handleUpdateTime
+METHOD	nb	(Lls;Ljava/lang/String;III)V	b	func_547_b	drawString
+METHOD	nb	(Lls;Ljava/lang/String;III)V	a	func_548_a	drawCenteredString
+METHOD	nl	(FZII)V	a	func_4066_a	renderGameOverlay
+METHOD	km	(Lpk;III)I	b	func_207_d	colorMultiplier
+METHOD	an	(Lcy;IIILjava/util/Random;)V	a	func_208_a	updateTick
+METHOD	ap	()Z	e	func_209_d	canProvidePower
+METHOD	ca	()I	g	func_210_f	getRenderType
+METHOD	c	(Lpk;IIII)I	a	func_211_a	getBlockTexture
+METHOD	nq	()Z	i	func_212_i	unusedMethod
+METHOD	nq	(FFFFFF)V	a	func_213_a	setBlockBounds
+METHOD	ap	(Lcy;III)V	b	func_214_b	onBlockRemoval
+METHOD	dg	(Lcy;IIIIF)V	a	func_216_a	dropBlockAsItemWithChance
+METHOD	nq	(I)Lnq;	d	func_256_d	setLightOpacity
+METHOD	nq	(F)Lnq;	a	func_215_a	setLightValue
+METHOD	ap	()Z	a	func_217_b	allowsAttachment
+METHOD	c	(I)I	a	func_218_a	getBlockTextureFromSide
+METHOD	ap	(Lcy;III)Lco;	d	func_221_d	getCollisionBoundingBoxFromPool
+METHOD	je	(Lcy;III)Z	g	func_223_g	canBlockStay
+METHOD	ld	(IZ)Z	a	func_224_a	canCollideCheck
+METHOD	ap	(Lcy;IIII)Z	c	func_228_c	isIndirectlyPoweringTo
+METHOD	an	(Ljava/util/Random;)I	a	func_229_a	quantityDropped
+METHOD	gd	(Lcy;IIILco;Ljava/util/ArrayList;)V	a	func_230_a	getCollidingBoundingBoxes
+METHOD	ap	(Lpk;IIII)Z	c	func_231_b	isPoweringTo
+METHOD	bo	(II)I	a	func_232_a	getBlockTextureFromSideAndMetadata
+METHOD	an	(Lcy;IIILeb;)V	b	func_233_b	onBlockClicked
+METHOD	ap	(Lcy;III)V	e	func_235_e	onBlockAdded
+METHOD	an	(ILjava/util/Random;)I	a	func_240_a	idDropped
+METHOD	an	(Lcy;IIILeb;)Z	a	func_250_a	blockActivated
+METHOD	ca	(Lcy;III)Lco;	f	func_246_f	getSelectedBoundingBoxFromPool
+METHOD	an	(Lcy;IIILjava/util/Random;)V	b	func_247_b	randomDisplayTick
+METHOD	ap	(Lcy;IIII)V	a	func_226_a	onNeighborBlockChange
+METHOD	ap	(Lcy;IIILlw;)V	a	func_236_b	onEntityCollidedWithBlock
+METHOD	ap	(Lpk;III)V	a	func_238_a	setBlockBoundsBasedOnState
+METHOD	ld	(Lpk;III)F	d	func_241_c	getBlockBrightness
+METHOD	ap	()Z	b	func_242_c	renderAsNormalBlock
+METHOD	ap	(Lcy;III)Z	a	func_243_a	canPlaceBlockAt
+METHOD	nq	(Lao;)Z	a	func_244_a	isVecInsideYZBounds
+METHOD	mb	()Z	h	func_245_h	isCollidable
+METHOD	nq	(Lao;)Z	b	func_249_b	isVecInsideXZBounds
+METHOD	nq	(Lao;)Z	c	func_251_c	isVecInsideXYBounds
+METHOD	v	(Lcy;IIII)V	b	func_252_b	onBlockDestroyedByPlayer
+METHOD	nq	(Z)V	b	func_253_b	setTickOnLoad
+METHOD	an	(Lcy;IIILlw;)V	b	func_254_a	onEntityWalking
+METHOD	gv	(Lcy;IIILao;Lao;)Lnx;	a	func_255_a	collisionRayTrace
+METHOD	ld	(Lcy;IIILlw;Lao;)V	a	func_257_a	velocityToAddToEntity
+METHOD	ca	(Lcy;IIII)V	d	func_258_d	onBlockPlaced
+METHOD	mb	(Lcy;IIII)V	b_	func_259_b_	dropBlockAsItem
+METHOD	x	(Lpk;IIII)Z	b	func_260_c	isSideInsideCoordinate
+METHOD	nq	(Lbi;)Lnq;	a	func_4024_a	setStepSound
+METHOD	an	()I	d	func_4025_d	tickRate
+METHOD	cx	(Lcy;IIILhf;)V	a	func_4026_a	onBlockPlacedBy
+METHOD	v	(Lcy;III)V	c	func_4027_c	onBlockDestroyedByExplosion
+METHOD	bd	(II)Z	a	func_537_a	chunkExists
+METHOD	of	(II)Z	a	func_781_a	isAtCursorPos
+METHOD	og	(Log;)Z	a	func_581_a	isCancelled
+METHOD	og	(Log;Lib;)Lib;	a	func_582_a	setNetClientHandler
+METHOD	og	(Log;)Lib;	b	func_583_b	getNetClientHandler
+METHOD	ig	(I)Z	b	func_269_b	canThisPlantGrowOnThisBlockID
+METHOD	oo	()Z	a	func_769_a	isValid
+METHOD	oo	(IIII)V	a	func_770_a	setNibble
+METHOD	oo	(III)I	a	func_771_a	getNibble
+METHOD	nb	(IIIIII)V	a	func_549_a	drawGradientRect
+METHOD	nb	(IIIIII)V	b	func_550_b	drawTexturedModalRect
+METHOD	nb	(IIIII)V	a	func_551_a	drawRect
+METHOD	or	()Ljava/lang/Object;	b	func_767_b	getValue
+METHOD	or	()I	a	func_768_a	getHash
+METHOD	net/minecraft/client/Minecraft	()Ljava/io/File;	b	func_6240_b	getDataFolder
+METHOD	net/minecraft/client/Minecraft	()V	d	func_6244_d	shutdown
+METHOD	net/minecraft/client/Minecraft	()Ljp;	r	func_6267_r	getOs
+METHOD	net/minecraft/client/Minecraft	(II)V	a	func_6249_a	resize
+METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;)V	c	func_6250_c	checkGLError
+METHOD	net/minecraft/client/Minecraft	()Z	j	func_6260_j	isMultiplayerWorld
+METHOD	net/minecraft/client/Minecraft	()V	p	func_6239_p	respawn
+METHOD	net/minecraft/client/Minecraft	()V	q	func_6257_q	loadScreen
+METHOD	net/minecraft/client/Minecraft	()V	u	func_6242_u	forceReload
+METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;Ljava/io/File;)V	a	func_6268_a	installResource
+METHOD	net/minecraft/client/Minecraft	()V	h	func_6270_h	toggleFullscreen
+METHOD	net/minecraft/client/MinecraftApplet	()V	b	func_6232_b	shutdown
+METHOD	cs	(III)Lhb;	f	func_599_f	getBlockMaterial
+METHOD	cs	(III)I	a	func_600_a	getBlockId
+METHOD	cs	(III)I	e	func_602_e	getBlockMetadata
+METHOD	qg	()V	b	func_330_b	closeMinecraft
+METHOD	qg	(Ljava/lang/String;Ljava/io/File;)V	b	func_6373_b	addStreaming
+METHOD	qg	(Ljava/lang/String;Ljava/io/File;)V	c	func_6374_c	addMusic
+METHOD	qh	(Lpk;III)Z	c	func_261_b	canBlockCatchFire
+METHOD	qh	(Lcy;III)I	i	func_262_i	getChanceOfNeighborsEncouragingFire
+METHOD	qh	(III)V	a	func_264_a	setBurnRate
+METHOD	qh	(Lcy;IIII)I	g	func_265_g	getChanceToEncourageFire
+METHOD	qh	(Lcy;IIIILjava/util/Random;)V	a	func_266_a	tryToCatchBlockOnFire
+METHOD	om	()V	b	func_4093_b	generateLightBrightnessTable
+METHOD	x	(Lcy;III)Z	a_	func_4032_a_	tryToCreatePortal
+METHOD	z	(DDD)D	a	func_802_a	generateNoise
+METHOD	z	(IDDD)D	a	func_803_a	grad
+METHOD	z	(DDD)D	b	func_804_b	lerp
+METHOD	bg	(Lcy;)I	a	func_4154_a	performSpawning
+METHOD	bg	(Lcy;II)Lon;	a	func_4153_a	getRandomSpawningPointInChunk
+METHOD	cy	(Ljv;)V	a	func_613_a	addWorldAccess
+METHOD	gg	(Lgy;)[Ljava/lang/Class;	a	func_4118_a	getEntitiesForType
+METHOD	gg	(FF)Lgg;	a	func_4119_a	getBiome
+METHOD	gg	()V	a	func_4120_a	generateBiomeLookup
+METHOD	gg	(DD)Lgg;	a	func_4121_a	getBiomeFromLookup
+METHOD	gg	(Ljava/lang/String;)Lgg;	a	func_4125_a	setBiomeName
+METHOD	aq	(Lmn;)V	a	func_4009_a	setRenderManager
+METHOD	af	(Llw;DDDFF)V	a	func_147_a	doRender
+METHOD	aq	(Ljava/lang/String;)V	a	func_151_a	loadTexture
+METHOD	cy	(Llw;)V	d	func_607_d	setEntityDead
+METHOD	px	(II[B[Lgg;[D)V	a	func_4060_a	generateTerrain
+METHOD	px	(II[B[Lgg;)V	a	func_4062_a	replaceBlocksForBiome
+METHOD	ei	([Lgg;IIII)[Lgg;	a	func_4070_a	loadBlockGeneratorData
+METHOD	ei	([DIIII)[D	a	func_4071_a	getTemperatures
+METHOD	cs	(III)Lji;	b	func_603_b	getBlock
+METHOD	ay	()V	a	func_6448_a	initGui
+METHOD	bp	(Lnet/minecraft/client/Minecraft;II)V	a	func_6447_a	setWorldAndResolution
+METHOD	bp	()V	h	func_6449_h	onGuiClosed
+METHOD	bp	(I)V	b	func_579_b	drawBackground
+METHOD	ib	(Lgk;)V	a	func_847_a	addToSendQueue
+METHOD	ib	()V	a	func_848_a	processReadPackets
+METHOD	net/minecraft/client/Minecraft	(Lbp;)V	a	func_6272_a	displayGuiScreen
+METHOD	bp	()V	i	func_578_i	drawDefaultBackground
+METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;)Ljava/io/File;	a	func_6264_a	getAppDir
+METHOD	net/minecraft/client/Minecraft	()Ljava/io/File;	b	func_6240_b	getMinecraftDir
+METHOD	cy	()V	m	func_660_k	sendQuittingDisconnectPacket
+METHOD	aq	(Lco;DDD)V	a	func_146_a	renderOffsetAABB
+METHOD	fo	(IZ)V	a	func_496_a	setCurrentItem
+METHOD	aq	(Lnq;DDDIIIFFDDD)V	a	func_145_a	renderShadowOnBlock
+METHOD	aq	(Lco;)V	a	func_142_a	renderAABB
+METHOD	aq	(Llw;DDDFF)V	b	func_141_b	doRenderShadowAndFire
+METHOD	aq	()Lcy;	b	func_149_b	getWorldFromRenderManager
+METHOD	ds	(I)Ljava/nio/IntBuffer;	c	func_1125_c	createDirectIntBuffer
+METHOD	ds	(I)Ljava/nio/ByteBuffer;	b	func_1127_b	createDirectByteBuffer
+METHOD	ds	(I)Ljava/nio/FloatBuffer;	d	func_1123_d	createDirectFloatBuffer
+METHOD	ha	(Z)Z	a	func_1012_a	needsSaving
+METHOD	ha	(II)Z	a	func_1017_a	isAtLocation
+METHOD	bj	()Z	b	func_4023_b	shouldRotateAroundWhenRendering
+METHOD	hf	(F)F	d	func_431_d	getSwingProgress
+METHOD	be	()Llw;	c_	func_438_i	findPlayerToAttack
+METHOD	fo	(I)I	f	func_505_f	getInventorySlotContainItem
+METHOD	fo	(Llw;)I	a	func_502_a	getDamageVsEntity
+METHOD	cy	(IIIII)Z	a	func_643_a	setBlockAndMetadata
+METHOD	fu	(Ljava/io/InputStream;)Ljava/awt/image/BufferedImage;	a	func_6526_a	readTextureImage
+METHOD	fu	(Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;	b	func_1069_b	unwrapImageByColumns
+METHOD	fu	(Ljava/awt/image/BufferedImage;I)V	a	func_1068_a	setupTexture
+METHOD	fu	()V	b	func_1065_b	refreshTextures
+METHOD	fo	(I)Z	b	func_510_b	consumeInventoryItem
+METHOD	fo	(Lly;)V	b	func_513_b	readFromNBT
+METHOD	ha	()V	e	func_995_d	onChunkLoad
+METHOD	dz	()V	d	func_779_d	onSlotChanged
+METHOD	ha	()V	f	func_998_e	onChunkUnload
+METHOD	lu	(Lcy;IIII)I	g	func_281_g	getMaxCurrentStrength
+METHOD	lu	(Lcy;III)V	h	func_280_h	updateAndPropagateCurrentStrength
+METHOD	br	()Lji;	a_	func_283_a_	SetBlockEntity
+METHOD	lu	(Lcy;III)V	i	func_282_i	notifyWireNeighborsOfNeighborChange
+METHOD	mj	(ZLcy;III)V	a	func_285_a	updateFurnaceBlockState
+METHOD	cy	(Lco;)Z	c	func_605_c	isBoundingBoxBurning
+METHOD	aq	(Lmn;)V	a	func_4009_a	setRenderManager
+METHOD	fu	(I)V	a	func_1078_a	deleteTexture
+METHOD	fq	(Ljava/lang/String;Lcy;)Llw;	a	func_1079_a	createEntityInWorld
+METHOD	fu	(II)I	b	func_1077_b	weightedAverageColor
+METHOD	fu	(Ljava/awt/image/BufferedImage;)I	a	func_1074_a	allocateAndSetupTexture
+METHOD	fu	(Ljava/lang/String;Lie;)Lcl;	a	func_1075_a	obtainImageData
+METHOD	fu	(II)I	a	func_1072_a	averageColor
+METHOD	fu	(Ljava/lang/String;)V	b	func_1073_b	releaseImageData
+METHOD	fu	(Ljava/lang/String;Ljava/lang/String;)I	a	func_1071_a	getTextureForDownloadableImage
+METHOD	fq	(Llw;)Ljava/lang/String;	b	func_1083_b	getEntityString
+METHOD	fr	(Lgz;)V	a	func_928_a	setTileEntityRenderer
+METHOD	af	(Lls;Lfu;Lfp;II)V	a	func_161_a	renderItemIntoGUI
+METHOD	af	(Lis;IIIII)V	a	func_162_a	renderQuad
+METHOD	af	(IIIIII)V	a	func_163_a	renderTexturedQuad
+METHOD	af	(Lls;Lfu;Lfp;II)V	b	func_164_b	renderItemOverlayIntoGUI
+METHOD	cy	(III)Z	k	func_708_k	canExistingBlockSeeTheSky
+METHOD	lw	(DDDFF)V	c	func_365_c	setLocationAndAngles
+METHOD	lw	()Ljava/lang/String;	N	func_389_H	getEntityString
+METHOD	dp	()Z	d_	func_385_d_	canBePushed
+METHOD	f	(Llw;)V	a	func_941_a	obtainEntitySkin
+METHOD	aq	()Lls;	a	func_6329_a	getFontRendererFromRenderManager
+METHOD	fr	()Lls;	a	func_6508_a	getFontRenderer
+METHOD	mn	()Lls;	a	func_6500_a	getFontRenderer
+METHOD	fr	(Ljava/lang/String;)V	a	func_6507_a	bindTextureByName
+METHOD	dz	()I	e	func_4104_e	getSlotStackLimit
+METHOD	om	(JF)F	a	func_4100_a	calculateCelestialAngle
+METHOD	ar	()V	a	func_4103_a	onPickupFromSlot
+METHOD	om	(II)Z	a	func_4102_a	canCoordinateBeSpawn
+METHOD	bp	(I)V	b	func_579_b	drawBackground
+METHOD	bp	()V	i	func_578_i	drawDefaultBackground
+METHOD	bp	(III)V	b	func_573_b	mouseMovedOrUp
+METHOD	eb	()V	t	func_374_q	preparePlayerToSpawn
+METHOD	gz	()Lls;	a	func_6516_a	getFontRenderer
+METHOD	ex	(Lof;)V	a	func_590_a	drawSlotInventory
+METHOD	aq	(Llw;DDDFF)V	c	func_144_c	renderShadow
+METHOD	lt	(I)I	a	func_490_a	getCookProgressScaled
+METHOD	lt	()Z	j	func_491_j	canSmelt
+METHOD	fo	(I)Lfp;	d	func_492_d	armorItemInSlot
+METHOD	fo	(I)V	a	func_498_a	changeCurrentItem
+METHOD	aq	(Llw;DDDF)V	a	func_148_a	renderEntityOnFire
+METHOD	gs	(Lha;)V	b	func_540_b	saveChunk
+METHOD	gs	(Lha;)V	a	func_541_a	saveExtraChunkData
+METHOD	ai	()V	b	func_811_b	saveExtraData
+METHOD	ai	(Lcy;Lha;)V	a	func_812_a	saveChunk
+METHOD	ai	(Lcy;II)Lha;	a	func_813_a	loadChunk
+METHOD	ai	(Lcy;Lha;)V	b	func_815_b	saveExtraChunkData
+METHOD	mu	(Lcy;Liq;)Lha;	a	func_816_a	loadChunkIntoWorldFromCompound
+METHOD	mu	(II)Ljava/io/File;	a	func_817_a	chunkFileForXZ
+METHOD	mu	(Lha;Lcy;Liq;)V	a	func_818_a	storeChunkInCompound
+METHOD	ka	(FFFIIIF)V	a	func_923_a	entityLimbDefine
+METHOD	bb	()Z	b	func_6450_b	doesGuiPauseGame
+METHOD	gz	(Lji;)Lfr;	b	func_1031_b	getSpecialRendererForEntity
+METHOD	lt	()V	i	func_487_i	smeltItem
+METHOD	lt	(I)I	d	func_486_d	getSmeltingResultItem
+METHOD	lt	()Z	a	func_485_a	isBurning
+METHOD	bl	()Z	a	func_484_a	anyPlayerInRange
+METHOD	lt	(I)I	b	func_489_b	getBurnTimeRemainingScaled
+METHOD	lt	(Lfp;)I	a	func_488_a	getItemBurnTime
+METHOD	fq	(ILcy;)Llw;	a	func_1084_a	createEntity
+METHOD	fq	(Liq;Lcy;)Llw;	a	func_1081_a	createEntityFromNBT
+METHOD	fq	(Ljava/lang/Class;Ljava/lang/String;I)V	a	func_1080_a	addMapping
+METHOD	h	(Ljava/io/DataOutput;)V	a	func_735_a	writeTagContents
+METHOD	h	(Ljava/io/DataInput;)V	a	func_736_a	readTagContents
+METHOD	jx	(Lqc;DDDF)V	a	func_932_a	renderTileEntitySignAt
+METHOD	u	(Lji;DDDF)V	a	func_930_a	renderTileEntityAt
+METHOD	f	(Llw;)V	b	func_938_b	releaseEntitySkin
+METHOD	ku	(Lfp;)V	a	func_4132_a	renderItem
+METHOD	fq	(Llw;)I	a	func_1082_a	getEntityID
+METHOD	fp	(Lnq;)Z	b	func_1099_b	canHarvestBlock
+METHOD	er	(F)V	a	func_589_a	drawGuiContainerBackgroundLayer
+METHOD	er	()V	j	func_587_j	drawGuiContainerForegroundLayer
+METHOD	cy	(III)Z	d	func_630_d	blockExists
+METHOD	kc	()V	a	func_904_a	updateTimer
+METHOD	net/minecraft/client/Minecraft	(Lbp;)V	a	func_6272_a	displayGuiScreen
+METHOD	l	()V	a	func_1159_a	disableStandardItemLighting
+METHOD	l	()V	b	func_1158_b	enableStandardItemLighting
+METHOD	nq	(F)Lnq;	c	func_222_c	setHardness
+METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;)Ljava/io/File;	a	func_6264_a	getAppDir
+METHOD	ab	(Liq;Ljava/io/OutputStream;)V	a	func_1143_a	writeGzippedCompoundToOutputStream
+METHOD	nq	(F)Lnq;	b	func_219_b	setResistance
+METHOD	cy	(III)V	l	func_692_l	removeBlockTileEntity
+METHOD	eb	(Lnq;)Z	b	func_454_b	canHarvestBlock
+METHOD	cy	(Llw;)V	c	func_678_c	releaseEntitySkin
+METHOD	cy	(Ljv;)V	b	func_672_b	removeWorldAccess
+METHOD	cy	(IIILji;)V	a	func_654_a	setBlockTileEntity
+METHOD	om	(Ljava/io/File;)Lai;	a	func_4092_a	getChunkLoader
+METHOD	oz	(Lcy;)V	a	func_4095_a	registerWorld
+METHOD	om	()Lbd;	c	func_4094_c	getChunkProvider
+METHOD	om	()V	a	func_4098_a	registerWorldChunkManager
+METHOD	ei	([DIIII)[D	a	func_4071_a	getTemperatures
+METHOD	cy	(IIIII)Z	b	func_688_b	setBlockAndMetadataWithNotify
+METHOD	cy	()V	p	func_669_m	saveLevel
+METHOD	ib	()V	a	func_848_a	processReadPackets
+METHOD	ib	(Lgk;)V	a	func_847_a	addToSendQueue
+METHOD	cy	()V	m	func_660_k	sendQuittingDisconnectingPacket
+METHOD	fo	()V	h	func_474_j_	onInventoryChanged
+METHOD	lu	(Lpk;III)Z	c	func_279_b	isPowerProviderOrWire
+METHOD	bo	(Lcy;IIIZ)Z	a	func_273_a	checkForBurnout
+METHOD	ku	(FI)V	a	func_898_a	renderInsideOfBlock
+METHOD	ku	(F)V	d	func_890_d	renderFireInFirstPerson
+METHOD	ku	(F)V	c	func_892_c	renderWarpedTextureOverlay
+METHOD	ku	(F)V	b	func_893_b	renderOverlays
+METHOD	fi	(F)I	d	func_1110_d	convertToBlockCoord_float
+METHOD	ku	(F)V	a	func_4133_a	renderItemInFirstPerson
+METHOD	ha	(III)V	e	func_1023_e	removeChunkBlockTileEntity
+METHOD	gz	(Lji;)Z	a	func_1028_a	hasSpecialRenderer
+METHOD	cy	(Llw;)V	d	func_607_d	setEntityDead
+METHOD	cy	(Llw;)V	b	func_606_b	obtainEntitySkin
+METHOD	cs	(III)Lji;	b	func_603_b	getBlockTileEntity
+METHOD	ap	(Lcy;III)V	h	func_318_h	setStateIfMobInteractsWithPlate
+METHOD	pl	(Lcy;III)Z	h	func_267_h	checkIfAttachedToBlock
+METHOD	fi	(D)I	b	func_1108_b	convertToBlockCoord_double
+METHOD	gz	(Lji;DDDF)V	a	func_1032_a	renderTileEntityAt
+METHOD	gz	(Lji;F)V	a	func_1030_a	renderTileEntity
+METHOD	dh	()Lfp;	l	func_4045_l	getHeldItem
+METHOD	pt	(Llw;)V	c	func_4049_h	becomeAngryAt
+METHOD	cy	(ZLpu;)V	a	func_639_a	saveWorld
+METHOD	bd	(II)Lha;	b	func_533_b	provideChunk
+METHOD	bd	(ZLpu;)Z	a	func_535_a	saveChunks
+METHOD	ha	()V	g	func_1006_f	setChunkModified
+METHOD	ha	(IIILji;)V	a	func_1005_a	setChunkBlockTileEntity
+METHOD	ha	(III)Lji;	d	func_1002_d	getChunkBlockTileEntity
+METHOD	gz	(Ljava/lang/Class;)Lfr;	a	func_4144_a	getSpecialRendererForClass
+METHOD	az	()Z	n_	func_401_c_	canBeCollidedWith
+METHOD	gz	(Lcy;Lfu;Lls;Leb;F)V	a	func_1026_a	setRenderingContext
+METHOD	cp	(Ljava/util/Random;)Ljava/lang/String;	b	func_531_b	pickMobSpawner
+METHOD	cp	(Ljava/util/Random;)Lfp;	a	func_530_a	pickCheckLootItem
+METHOD	hf	()Ljava/lang/String;	A	func_6376_z	getEntityTexture
+METHOD	ha	()V	b	func_1018_b	generateHeightMap
+METHOD	ha	(IIII)I	c	func_1019_c	getBlockLightValue
+METHOD	ha	(IIIII)Z	a	func_1010_a	setBlockIDWithMetadata
+METHOD	ha	(Lch;IIII)V	a	func_1011_a	setLightValue
+METHOD	ha	(Ljava/lang/Class;Lco;Ljava/util/List;)V	a	func_1013_a	getEntitiesOfTypeWithinAAAB
+METHOD	bk	(Lnq;IIIFFF)Z	a	func_4152_a	renderStandardBlockWithColorMultiplier
+METHOD	hf	(I)V	c	func_432_b	heal
+METHOD	ak	()Z	a	func_433_a	getCanSpawnHere
+METHOD	hf	(F)Lao;	f	func_430_f	getLook
+METHOD	be	(Llw;F)V	a	func_437_a	attackEntity
+METHOD	ce	()V	b	func_185_b	drawFirstPersonHand
+METHOD	ib	(Lcq;)V	a	func_9446_a	handleHealth
+METHOD	fo	()I	f	func_506_f	getTotalArmorValue
+METHOD	fo	(I)V	e	func_507_e	damageArmor
+METHOD	fo	(Lfp;)Z	a	func_504_a	addItemStackToInventory
+METHOD	fo	()V	g	func_503_g	dropAllItems
+METHOD	fo	(Lfo;)Z	a	func_500_a	compareInventory
+METHOD	fo	(Lfp;Lfp;)Z	a	func_501_a	compareItemStack
+METHOD	fo	(Lnq;)F	a	func_508_a	getStrVsBlock
+METHOD	fo	(Lnq;)Z	b	func_509_b	canHarvestBlock
+METHOD	is	()V	a	func_982_a	draw
+METHOD	is	(FFF)V	b	func_980_b	setNormal
+METHOD	is	(DD)V	a	func_981_a	setTextureUV
+METHOD	is	(FFFF)V	a	func_986_a	setColorRGBA_F
+METHOD	is	(FFF)V	a	func_987_a	setColorOpaque_F
+METHOD	is	(FFF)V	c	func_988_c	setTranslationF
+METHOD	is	()V	c	func_989_c	disableColor
+METHOD	iq	(Ljava/lang/String;Lfd;)V	a	func_762_a	setTag
+METHOD	iq	(Ljava/lang/String;)Z	m	func_760_m	getBoolean
+METHOD	iq	(Ljava/lang/String;B)V	a	func_761_a	setByte
+METHOD	km	(Z)V	a	func_310_a	setGraphicsLevel
+METHOD	ck	(FFFFFF)V	a	func_863_a	setRotationAngles
+METHOD	cy	(F)F	b	func_619_c	getCelestialAngle
+METHOD	jq	(Ljq;)Z	b	func_968_b	isServerTerminating
+METHOD	jq	(Ljq;)Ljava/lang/Thread;	e	func_969_e	getReadThread
+METHOD	jq	(Ljq;)Ljava/lang/Thread;	f	func_963_f	getWriteThread
+METHOD	jq	()V	b	func_964_b	sendPacket
+METHOD	jq	(Ljq;)V	d	func_965_d	sendNetworkPacket
+METHOD	jq	(Ljq;)V	c	func_966_c	readNetworkPacket
+METHOD	jq	()V	a	func_967_a	processReadPackets
+METHOD	bk	(Lnq;III)Z	b	func_1241_b	renderBlockTorch
+METHOD	bk	(Lnq;III)Z	e	func_1242_e	renderBlockRedstoneWire
+METHOD	eb	()Lfp;	w	func_6416_v	getCurrentEquippedItem
+METHOD	bq	()I	n	func_6419_n	getPlayerArmorValue
+METHOD	fu	(Lad;)V	a	func_1066_a	registerTextureFX
+METHOD	bq	()V	k	func_425_j	onLivingUpdate
+METHOD	hf	(F)Lao;	e	func_427_e	getPosition
+METHOD	hf	(Llw;F)V	b	func_426_b	faceEntity
+METHOD	hf	(Llw;)Z	d	func_420_c	canEntityBeSeen
+METHOD	am	()I	g_	func_422_g	getDropItemId
+METHOD	hf	()Z	D	func_429_A	isOnLadder
+METHOD	fo	()V	b	func_511_b	decrementAnimations
+METHOD	fo	(Lly;)V	b	func_513_b	readFromNBT
+METHOD	fo	()Lfo;	i	func_512_i	copyInventory
+METHOD	aj	(Lcy;Ljava/util/Random;III)Z	a	func_516_a	generate
+METHOD	ha	(Llw;Lco;Ljava/util/List;)V	a	func_994_a	getEntitiesWithinAABBForEntity
+METHOD	is	(DDD)V	a	func_991_a	addVertex
+METHOD	ha	(II)I	b	func_999_b	getHeightValue
+METHOD	ld	(Lcy;III)V	j	func_287_j	checkForHarden
+METHOD	lw	()Z	L	func_359_G	handleLavaMovement
+METHOD	cy	(Lco;)Z	a	func_604_a	checkIfAABBIsClear
+METHOD	hf	()Z	E	func_354_B	isEntityAlive
+METHOD	cs	(III)Z	g	func_601_g	isBlockOpaqueCube
+METHOD	is	(III)V	a	func_979_a	setColorOpaque
+METHOD	is	(IIII)V	a	func_978_a	setColorRGBA
+METHOD	jq	()V	c	func_973_c	readPacket
+METHOD	jq	(Lgk;)V	a	func_972_a	addToSendQueue
+METHOD	jq	(Ljq;)Z	a	func_971_a	isRunning
+METHOD	jq	(Ljava/lang/Exception;)V	a	func_970_a	onNetworkError
+METHOD	is	()V	b	func_977_b	startDrawingQuads
+METHOD	jq	(Ljava/lang/String;)V	a	func_974_a	networkShutdown
+METHOD	ff	()Ljava/util/List;	b	func_6530_b	availableTexturePacks
+METHOD	ff	(Ld;)Z	a	func_6531_a	setTexturePack
+METHOD	fu	(I)V	b	func_1076_b	bindTexture
+METHOD	fu	(Ljava/lang/String;)I	a	func_1070_a	getTexture
+METHOD	bk	(Lnq;III)Z	f	func_1216_f	renderBlockMinecartTrack
+METHOD	bk	(Lnq;DDDI)V	b	func_1217_b	renderTopFace
+METHOD	bk	(Lnq;III)Z	n	func_1214_n	renderBlockStairs
+METHOD	gh	(Lnet/minecraft/client/Minecraft;II)V	b	func_560_b	mouseDragged
+METHOD	gh	(Lnet/minecraft/client/Minecraft;II)V	a	func_561_a	drawButton
+METHOD	gh	(Lnet/minecraft/client/Minecraft;II)Z	c	func_562_c	mousePressed
+METHOD	cy	(Llw;Llw;F)Lbt;	a	func_702_a	getPathToEntity
+METHOD	bk	(Lnq;III)Z	o	func_1218_o	renderBlockDoor
+METHOD	eb	(Llw;I)V	c	func_364_b	addToPlayerScore
+METHOD	f	(Lco;)V	a	func_942_a	drawOutlinedBoundingBox
+METHOD	f	(Ljava/lang/String;DDDFF)V	a	func_940_a	playSound
+METHOD	gq	(I)Ljava/lang/String;	a	func_1043_a	getKeyBinding
+METHOD	gq	(II)V	a	func_1042_a	setKeyBinding
+METHOD	gq	()V	b	func_1041_b	saveOptions
+METHOD	gq	(I)Ljava/lang/String;	d	func_1047_d	getOptionDisplayString
+METHOD	gq	(I)I	b	func_1046_b	getOptionControlType
+METHOD	gq	(II)V	b	func_1045_b	setOptionValue
+METHOD	gq	(I)F	c	func_1049_c	getOptionFloatValue
+METHOD	gq	(IF)V	a	func_1048_a	setOptionFloatValue
+METHOD	bk	(Lnq;III)Z	c	func_1229_c	renderBlockLever
+METHOD	bk	(Lnq;III)Z	k	func_1228_k	renderStandardBlock
+METHOD	bk	(Lnq;IIII)V	a	func_1223_a	renderBlockUsingTexture
+METHOD	bk	(Lnq;III)Z	j	func_1222_j	renderBlockFluids
+METHOD	bk	(Lnq;III)Z	g	func_1221_g	renderBlockLadder
+METHOD	bk	(Lnq;DDDI)V	c	func_1220_c	renderEastFace
+METHOD	bk	(Lnq;III)Z	h	func_1226_h	renderBlockReed
+METHOD	bk	(Lnq;DDDI)V	d	func_1225_d	renderWestFace
+METHOD	iv	(IIII)V	a	func_719_a	clickBlock
+METHOD	az	(Llw;I)Z	a	func_396_a	canAttackEntity
+METHOD	f	(Leb;Lnx;ILfp;F)V	b	func_955_b	drawSelectionBox
+METHOD	is	(II)V	a	func_6513_a	setColorRGBA_I
+METHOD	ge	(I)Lor;	c	func_1054_c	removeEntry
+METHOD	ge	(I)I	e	func_1055_e	computeHash
+METHOD	ge	(I)I	d	func_1056_d	getHash
+METHOD	ge	(I)Ljava/lang/Object;	a	func_1057_a	lookup
+METHOD	gq	(Ljava/lang/String;)F	a	func_1050_a	parseFloat
+METHOD	ge	(I)Ljava/lang/Object;	b	func_1052_b	removeObject
+METHOD	ge	(IILjava/lang/Object;I)V	a	func_1053_a	insert
+METHOD	ge	()V	a	func_1058_a	clearMap
+METHOD	ge	([Lor;)V	a	func_1059_a	copyTo
+METHOD	bk	(Lnq;III)Z	a	func_1234_a	renderBlockByRenderType
+METHOD	bk	(Lnq;III)Z	d	func_1235_d	renderBlockFire
+METHOD	bk	(Lnq;DDDI)V	f	func_1236_f	renderSouthFace
+METHOD	bk	(Lnq;DDDDD)V	a	func_1237_a	renderTorchAtAngle
+METHOD	bk	(Lnq;DDDI)V	e	func_1231_e	renderNorthFace
+METHOD	bk	(Lnq;III)Z	i	func_1232_i	renderBlockCrops
+METHOD	bk	(Lnq;III)Z	l	func_1233_l	renderBlockCactus
+METHOD	iv	(IIII)Z	b	func_729_b	sendBlockRemoved
+METHOD	iv	(Leb;Lcy;Lfp;IIII)Z	a	func_722_a	sendPlaceBlock
+METHOD	iv	()F	b	func_727_b	getBlockReachDistance
+METHOD	ka	(F)V	c	func_924_c	compileDisplayList
+METHOD	ka	(FFF)V	a	func_925_a	setPosition
+METHOD	kb	(F)V	e	func_920_e	hurtCameraEffect
+METHOD	ka	(F)V	a	func_922_a	render
+METHOD	ka	(FFFIIIF)V	a	func_923_a	addBox
+METHOD	is	(DDDDD)V	a	func_983_a	addVertexWithUV
+METHOD	is	(DDD)V	b	func_984_b	setTranslationD
+METHOD	is	()V	d	func_985_d	reset
+METHOD	iq	(Ljava/lang/String;)J	f	func_764_f	getLong
+METHOD	iq	(Ljava/lang/String;D)V	a	func_765_a	setDouble
+METHOD	iq	(Ljava/lang/String;Liq;)V	a	func_763_a	setCompoundTag
+METHOD	is	(I)V	b	func_990_b	setColorOpaque_I
+METHOD	gg	(F)I	a	func_4126_a	getSkyColorByTemp
+METHOD	gw	(I)V	a	func_1033_a	sortBack
+METHOD	gw	()Lb;	b	func_1036_b	dequeue
+METHOD	gw	(I)V	b	func_1037_b	sortForward
+METHOD	ji	(DDD)D	a	func_480_a	getDistanceFrom
+METHOD	fp	()I	c	func_1089_c	getMaxStackSize
+METHOD	fp	()I	b	func_1088_b	getIconIndex
+METHOD	fp	(IIII)V	a	func_1087_a	hitBlock
+METHOD	fp	(Liq;)Liq;	a	func_1086_a	writeToNBT
+METHOD	fp	(I)Lfp;	a	func_1085_a	splitStack
+METHOD	gh	(II)V	a	func_559_a	mouseReleased
+METHOD	gh	(Z)I	a	func_558_a	getHoverState
+METHOD	cy	(IIII)V	i	func_612_i	onBlockHit
+METHOD	f	(Ljava/lang/String;III)V	a	func_933_a	playRecord
+METHOD	f	(Ljava/lang/String;DDDDDD)V	a	func_939_a	spawnParticle
+METHOD	bp	()V	h	func_6449_h	onGuiClosed
+METHOD	bp	(Lnet/minecraft/client/Minecraft;II)V	a	func_6447_a	setWorldAndResolution
+METHOD	nl	(Ljava/lang/String;)V	a	func_552_a	addChatMessage
+METHOD	kb	(F)V	g	func_4138_g	orientCamera
+METHOD	kb	(FI)V	a	func_4139_a	setupCameraTransform
+METHOD	kb	(F)V	h	func_4137_h	updateFogColor
+METHOD	hb	()Lhb;	f	func_4130_f	setBurning
+METHOD	fp	(Leb;Lcy;IIII)Z	a	func_1090_a	useItem
+METHOD	fp	()Ldx;	a	func_1091_a	getItem
+METHOD	fp	(Lhf;)V	a	func_1092_a	hitEntity
+METHOD	fp	(Lcy;Leb;)Lfp;	a	func_1093_a	useItemRightClick
+METHOD	fp	()I	d	func_1094_d	getMaxDamage
+METHOD	fp	(Llw;)I	a	func_1095_a	getDamageVsEntity
+METHOD	fp	(Liq;)V	b	func_1096_b	readFromNBT
+METHOD	fp	(Lnq;)F	a	func_1098_a	getStrVsBlock
+METHOD	jh	(I)V	c	func_584_c	selectWorld
+METHOD	jh	()V	j	func_585_j	initGui2
+METHOD	gk	(I)Lgk;	a	func_325_a	getNewPacket
+METHOD	kl	()I	b	func_902_b	getScaledHeight
+METHOD	kl	()I	a	func_903_a	getScaledWidth
+METHOD	iv	(Leb;Lcy;Lfp;)Z	a	func_6471_a	sendUseItem
+METHOD	iv	(IIII)V	c	func_6470_c	sendBlockRemoving
+METHOD	iv	(Leb;)V	a	func_6476_a	flipPlayer
+METHOD	net/minecraft/client/Minecraft	()V	a	func_6271_a	startGame
+METHOD	am	()Ljava/lang/String;	d	func_6389_d	getLivingSound
+METHOD	hu	(I)V	a	func_593_a	setLoadingProgress
+METHOD	fz	(Lcy;IIII)V	a_	func_220_a_	harvestBlock
+METHOD	hu	(Ljava/lang/String;)V	d	func_595_d	displayLoadingString
+METHOD	cv	(FFFFFF)V	b	func_864_b	render
+METHOD	net/minecraft/client/Minecraft	()V	t	func_6265_t	clickMiddleMouseButton
+METHOD	am	()Ljava/lang/String;	f_	func_6394_f_	getHurtSound
+METHOD	am	()F	h	func_6393_h	getSoundVolume
+METHOD	am	()Ljava/lang/String;	f	func_6390_f	getDeathSound
+METHOD	d	()V	b	func_6480_b	closeTexturePackFile
+METHOD	bq	(I)V	a_	func_9372_a_	setHealth
+METHOD	mp	()V	Q	func_9375_Q	sendInventoryChanged
+METHOD	ap	()Z	a	func_217_b	isOpaqueCube
+METHOD	cy	(IIIIZ)Z	a	func_695_a	canBlockBePlacedAt
+METHOD	bq	(Lhi;)V	a	func_452_a	displayGUIChest
+METHOD	bq	(Llt;)V	a	func_453_a	displayGUIFurnace
+METHOD	ji	()Lnq;	g	func_478_g	getBlockType
+METHOD	bu	(Ljava/io/DataInputStream;)V	a	func_327_a	readPacketData
+METHOD	ji	()I	f	func_479_f	getBlockMetadata
+METHOD	kz	(Lcy;III)V	h	func_303_h	checkBlockCoordValid
+METHOD	ge	(ILjava/lang/Object;)V	a	func_1061_a	addKey
+METHOD	ge	(I)V	f	func_1060_f	grow
+METHOD	ge	(II)I	a	func_1062_a	getSlotIndex
+METHOD	eb	(Leo;)V	a	func_446_a	joinEntityItemWithWorld
+METHOD	bq	()V	m	func_445_l	displayWorkbenchGUI
+METHOD	eb	(Lfp;Z)V	a	func_444_a	dropPlayerItemWithRandomChoice
+METHOD	eb	(Lfp;)V	a	func_449_a	dropPlayerItem
+METHOD	eb	()V	x	func_448_u	destroyCurrentEquippedItem
+METHOD	ib	()V	b	func_849_b	disconnect
+METHOD	net/minecraft/client/Minecraft	(I)V	a	func_6243_a	clickMouse
+METHOD	net/minecraft/client/Minecraft	()V	i	func_6246_i	runTick
+METHOD	ji	(Ljava/lang/Class;Ljava/lang/String;)V	a	func_476_a	addMapping
+METHOD	ji	(Liq;)Lji;	c	func_477_c	createAndLoadEntity
+METHOD	hb	()Z	e	func_876_e	getBurning
+METHOD	hb	()Z	d	func_879_d	getIsLiquid
+METHOD	ig	(Lcy;III)F	i	func_270_i	getGrowthRate
+METHOD	kq	(Lkq;)I	a	func_899_a	comparer
+METHOD	is	(I)V	a	func_992_a	startDrawing
+METHOD	es	(Ljava/lang/String;)Lal;	a	func_1118_a	getRandomSoundFromSoundPool
+METHOD	ew	(FF)Lew;	a	func_1115_a	setTexturePosition
+METHOD	es	()Lal;	a	func_1116_a	getRandomSound
+METHOD	fi	(F)I	d	func_1110_d	floor_float
+METHOD	ha	(Llw;)V	a	func_1000_a	addEntity
+METHOD	ha	(III)I	b	func_1021_b	getBlockMetadata
+METHOD	ha	(IIII)Z	a	func_1022_a	setBlockID
+METHOD	bq	(Lqc;)V	a	func_4052_a	displayGUIEditSign
+METHOD	bq	(Ljava/lang/String;)V	a	func_461_a	sendChatMessage
+METHOD	eb	(Llw;)V	c	func_463_a	attackTargetEntityWithCurrentItem
+METHOD	cy	(Lao;Lao;Z)Lnx;	a	func_642_a	rayTraceBlocks
+METHOD	cy	(Lao;Lao;)Lnx;	a	func_645_a	rayTraceBlocks
+METHOD	bk	(Lnq;III)Z	m	func_1240_m	renderBlockFence
+METHOD	bk	(Lnq;DDDI)V	a	func_1244_a	renderBottomFace
+METHOD	x	(Lpk;IIII)Z	b	func_260_c	shouldSideBeRendered
+METHOD	aa	()Z	b	func_881_b	getCanBlockGrass
+METHOD	fi	(D)I	b	func_1108_b	floor_double
+METHOD	fp	()Lfp;	e	func_1102_e	copy
+METHOD	fp	(Lhf;)V	b	func_1100_b	useItemOnEntity
+METHOD	fp	(I)V	b	func_1101_b	damageItem
+METHOD	eb	(I)V	b	func_4044_a	damageEntity
+METHOD	gw	(Lb;)Lb;	a	func_1034_a	addPoint
+METHOD	gw	(Lb;F)V	a	func_1035_a	changeDistance
+METHOD	gw	()V	a	func_1038_a	clearPath
+METHOD	gw	()Z	c	func_1039_c	isPathEmpty
+METHOD	gq	()V	a	func_6519_a	loadOptions
+METHOD	dq	(Llw;)V	b	func_419_b	onDeath
+METHOD	hf	()V	C	func_415_z	spawnExplosionParticle
+METHOD	hf	(DF)Lnx;	a	func_416_a	rayTrace
+METHOD	hf	(FFF)F	b	func_417_b	updateRotation
+METHOD	gk	()I	b	func_326_b	getPacketId
+METHOD	gk	(Ljava/io/DataInputStream;)Lgk;	b	func_324_b	readPacket
+METHOD	cy	(Llw;IIIF)Lbt;	a	func_637_a	getEntityPathToXYZ
+METHOD	bu	(Ljava/io/DataOutputStream;)V	a	func_322_a	writePacketData
+METHOD	bu	(Lmo;)V	a	func_323_a	processPacket
+METHOD	gk	(ILjava/lang/Class;)V	a	func_321_a	addIdClassMapping
+METHOD	gk	(Lgk;Ljava/io/DataOutputStream;)V	a	func_328_a	writePacket
+METHOD	bu	()I	a	func_329_a	getPacketSize
+METHOD	iq	(Ljava/lang/String;Z)V	a	func_748_a	setBoolean
+METHOD	iq	(Ljava/lang/String;S)V	a	func_749_a	setShort
+METHOD	iq	(Ljava/lang/String;)Liq;	k	func_743_k	getCompoundTag
+METHOD	iq	(Ljava/lang/String;F)V	a	func_744_a	setFloat
+METHOD	iq	(Ljava/lang/String;)S	d	func_745_d	getShort
+METHOD	iq	(Ljava/lang/String;)B	c	func_746_c	getByte
+METHOD	iq	(Ljava/lang/String;[B)V	a	func_747_a	setByteArray
+METHOD	ha	(III)Z	c	func_1007_c	canBlockSeeTheSky
+METHOD	ha	(IIII)V	b	func_1009_b	setBlockMetadata
+METHOD	ha	(III)I	a	func_1008_a	getBlockID
+METHOD	kr	()V	k	func_409_i	explode
+METHOD	ha	(Lch;III)I	a	func_1025_a	getSavedLightValue
+METHOD	iq	(Ljava/lang/String;)[B	j	func_759_j	getByteArray
+METHOD	iq	(Ljava/lang/String;I)V	a	func_758_a	setInteger
+METHOD	iq	(Ljava/lang/String;)Lly;	l	func_753_l	getTagList
+METHOD	iq	(Ljava/lang/String;)F	g	func_752_g	getFloat
+METHOD	iq	(Ljava/lang/String;)Z	b	func_751_b	hasKey
+METHOD	iq	(Ljava/lang/String;J)V	a	func_750_a	setLong
+METHOD	iq	(Ljava/lang/String;)D	h	func_757_h	getDouble
+METHOD	iq	(Ljava/lang/String;)I	e	func_756_e	getInteger
+METHOD	iq	(Ljava/lang/String;)Ljava/lang/String;	i	func_755_i	getString
+METHOD	iq	(Ljava/lang/String;Ljava/lang/String;)V	a	func_754_a	setString
+METHOD	qg	()V	d	func_339_d	tryToSetLibraryAndCodecs
+METHOD	qg	()V	a	func_335_a	onSoundOptionsChanged

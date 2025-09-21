@@ -1,406 +1,453 @@
 v1	official	intermediary	named
-CLASS	cf	cf	AxisAlignedBB
-CLASS	ly	ly	Block
-CLASS	ds	ds	BlockBookshelf
-CLASS	fc	fc	BlockBreakable
-CLASS	hu	hu	BlockButton
-CLASS	hy	hy	BlockCactus
-CLASS	b	b	BlockChest
-CLASS	jv	jv	BlockClay
-CLASS	jt	jt	BlockContainer
-CLASS	hd	hd	BlockCrops
-CLASS	hz	hz	BlockDirt
-CLASS	fw	fw	BlockDoor
-CLASS	fh	fh	BlockFence
-CLASS	og	og	BlockFire
-CLASS	mq	mq	BlockFlower
-CLASS	hv	hv	BlockFlowing
-CLASS	jp	jp	BlockFluids
-CLASS	ku	ku	BlockFurnace
-CLASS	ct	ct	BlockGlass
-CLASS	my	my	BlockGrass
-CLASS	gz	gz	BlockGravel
-CLASS	he	he	BlockIce
-CLASS	cv	cv	BlockJukeBox
-CLASS	br	br	BlockLadder
-CLASS	iz	iz	BlockLeaves
-CLASS	hi	hi	BlockLeavesBase
-CLASS	no	no	BlockLever
-CLASS	mg	mg	BlockLog
-CLASS	if	if	BlockMinecartTrack
-CLASS	bj	bj	BlockMobSpawner
-CLASS	ky	ky	BlockMushroom
-CLASS	cm	cm	BlockObsidian
-CLASS	gw	gw	BlockOre
-CLASS	c	c	BlockOreBlock
-CLASS	al	al	BlockPressurePlate
-CLASS	ai	ai	BlockRedstoneOre
-CLASS	bg	bg	BlockRedstoneTorch
-CLASS	kf	kf	BlockRedstoneWire
-CLASS	jm	jm	BlockReed
-CLASS	dh	dh	BlockSand
-CLASS	dt	dt	BlockSapling
-CLASS	lr	lr	BlockSign
-CLASS	fd	fd	BlockSnow
-CLASS	p	p	BlockSnowBlock
-CLASS	mi	mi	BlockSoil
-CLASS	ng	ng	BlockSponge
-CLASS	km	km	BlockStairs
-CLASS	hn	hn	BlockStationary
-CLASS	oi	oi	BlockStep
-CLASS	ce	ce	BlockStone
-CLASS	q	q	BlockTNT
-CLASS	mj	mj	BlockTorch
-CLASS	cs	cs	BlockWorkbench
-CLASS	nb	nb	CanvasCrashReport
-CLASS	ko	ko	ChatLine
-CLASS	ga	ga	Chunk
-CLASS	ci	ci	ChunkCache
-CLASS	hc	hc	ChunkCoordinates
-CLASS	ol	ol	ChunkCoordIntPair
-CLASS	le	le	ChunkLoader
-CLASS	mt	mt	ChunkPosition
-CLASS	lz	lz	ChunkProviderClient
-CLASS	nw	nw	ChunkProviderGenerate
-CLASS	ck	ck	ChunkProviderIso
-CLASS	ft	ft	ChunkProviderLoadOrGenerate
-CLASS	bt	bt	ClippingHelper
-CLASS	j	j	ClippingHelperImplementation
-CLASS	ep	ep	CodecMus
-CLASS	x	x	CompressedStreamTools
-CLASS	ar	ar	CraftingInventoryCB
-CLASS	n	n	CraftingInventoryPlayerCB
-CLASS	et	et	CraftingInventoryWorkbenchCB
-CLASS	dw	dw	CraftingManager
-CLASS	bv	bv	CraftingRecipe
-CLASS	bq	bq	EffectRenderer
-CLASS	kh	kh	Entity
-CLASS	ag	ag	EntityAnimals
-CLASS	kg	kg	EntityArrow
-CLASS	dc	dc	EntityBoat
-CLASS	ba	ba	EntityBubbleFX
-CLASS	mz	mz	EntityChicken
-CLASS	la	la	EntityClientPlayerMP
-CLASS	am	am	EntityCow
-CLASS	ek	ek	EntityCreature
-CLASS	dd	dd	EntityCreeper
-CLASS	iw	iw	EntityDiggingFX
-CLASS	dp	dp	EntityExplodeFX
-CLASS	ff	ff	EntityFallingSand
-CLASS	jb	jb	EntityFlameFX
-CLASS	nq	nq	EntityFX
-CLASS	dx	dx	EntityItem
-CLASS	cq	cq	EntityLavaFX
-CLASS	ew	ew	EntityList
-CLASS	ge	ge	EntityLiving
-CLASS	oc	oc	EntityMinecart
-CLASS	dq	dq	EntityMobs
-CLASS	nt	nt	EntityOtherPlayerMP
-CLASS	jc	jc	EntityPainting
-CLASS	cd	cd	EntityPickupFX
-CLASS	mv	mv	EntityPig
-CLASS	dm	dm	EntityPlayer
-CLASS	bi	bi	EntityPlayerSP
-CLASS	nf	nf	EntityRainFX
-CLASS	en	en	EntityReddustFX
-CLASS	iq	iq	EntityRenderer
-CLASS	bo	bo	EntitySheep
-CLASS	cw	cw	EntitySkeleton
-CLASS	ma	ma	EntitySlime
-CLASS	ig	ig	EntitySlimeFX
-CLASS	nl	nl	EntitySmokeFX
-CLASS	ao	ao	EntitySnowball
-CLASS	fb	fb	EntitySorter
-CLASS	ax	ax	EntitySpider
-CLASS	kq	kq	EntitySplashFX
-CLASS	jd	jd	EntityTNTPrimed
-CLASS	mb	mb	EntityZombie
-CLASS	hl	hl	EntityZombieSimple
-CLASS	er	er	EnumArt
-CLASS	js	js	EnumMobType
-CLASS	fa	fa	EnumOS1
-CLASS	ih	ih	EnumOS2
-CLASS	fq	fq	EnumOSMappingHelper
-CLASS	by	by	EnumSkyBlock
-CLASS	je	je	Explosion
-CLASS	kd	kd	FontRenderer
-CLASS	kl	kl	Frustrum
-CLASS	fr	fr	GameSettings
-CLASS	fp	fp	GameWindowListener
-CLASS	df	df	GLAllocation
-CLASS	lm	lm	Gui
-CLASS	fk	fk	GuiButton
-CLASS	de	de	GuiChat
-CLASS	ea	ea	GuiChest
-CLASS	iv	iv	GuiConflictWarning
-CLASS	cj	cj	GuiConnectFailed
-CLASS	mn	mn	GuiConnecting
-CLASS	ee	ee	GuiContainer
-CLASS	lw	lw	GuiControls
-CLASS	hx	hx	GuiCrafting
-CLASS	aq	aq	PanelCrashReport
-CLASS	ib	ib	GuiDeleteWorld
-CLASS	dg	dg	GuiDownloadTerrain
-CLASS	nv	nv	GuiEditSign
-CLASS	id	id	GuiFurnace
-CLASS	au	au	GuiGameOver
-CLASS	lu	lu	GuiIngame
-CLASS	ie	ie	GuiIngameMenu
-CLASS	lo	lo	GuiInventory
-CLASS	cx	cx	GuiMainMenu
-CLASS	db	db	CanvasMajongLogo
-CLASS	gc	gc	GuiMultiplayer
-CLASS	ay	ay	GuiOptions
-CLASS	bh	bh	GuiScreen
-CLASS	jq	jq	GuiSelectWorld
-CLASS	mo	mo	GuiSlider
-CLASS	o	o	GuiSmallButton
-CLASS	as	as	GuiUnused
-CLASS	ja	ja	GuiYesNo
-CLASS	mx	mx	HashEntry
-CLASS	nm	nm	IBlockAccess
-CLASS	oe	oe	ICamera
-CLASS	af	af	IChunkLoader
-CLASS	aw	aw	IChunkProvider
-CLASS	gh	gh	IInventory
-CLASS	hb	hb	ImageBuffer
-CLASS	jr	jr	ImageBufferDownload
-CLASS	co	co	IMobs
-CLASS	gu	gu	InventoryCrafting
-CLASS	mw	mw	InventoryCraftResult
-CLASS	hs	hs	InventoryLargeChest
-CLASS	eu	eu	InventoryPlayer
-CLASS	nu	nu	IProgressUpdate
-CLASS	jj	jj	IsoImageBuffer
-CLASS	ad	ad	CanvasIsomPreview
-CLASS	di	di	Item
-CLASS	mr	mr	ItemArmor
-CLASS	ks	ks	ItemAxe
-CLASS	av	av	ItemBlock
-CLASS	me	me	ItemBoat
-CLASS	jg	jg	ItemBow
-CLASS	ac	ac	ItemBucket
-CLASS	ec	ec	ItemDoor
-CLASS	nx	nx	ItemFlintAndSteel
-CLASS	oj	oj	ItemFood
-CLASS	fu	fu	ItemHoe
-CLASS	jo	jo	ItemMinecart
-CLASS	od	od	ItemPainting
-CLASS	y	y	ItemPickaxe
-CLASS	lg	lg	ItemRecord
-CLASS	ef	ef	ItemRedstone
-CLASS	gf	gf	ItemReed
-CLASS	jh	jh	ItemRenderer
-CLASS	jw	jw	ItemSaddle
-CLASS	jn	jn	ItemSeeds
-CLASS	md	md	ItemSign
-CLASS	bp	bp	ItemSnowball
-CLASS	ap	ap	ItemSoup
-CLASS	ms	ms	ItemSpade
-CLASS	ev	ev	ItemStack
-CLASS	iu	iu	ItemSword
-CLASS	bs	bs	ItemTool
-CLASS	im	im	IWorldAccess
-CLASS	it	it	KeyBinding
-CLASS	gr	gr	LoadingScreenRenderer
-CLASS	kc	kc	LogoEffectRandomizer
-CLASS	cy	cy	MapGenBase
-CLASS	kk	kk	MapGenCaves
-CLASS	gb	gb	Material
-CLASS	kb	kb	MaterialLiquid
-CLASS	w	w	MaterialLogic
-CLASS	gg	gg	MaterialTransparent
-CLASS	eo	eo	MathHelper
-CLASS	h	h	CanvasMinecraftApplet
-CLASS	fi	fi	MCHashTable
-CLASS	kn	kn	MetadataChunkBlock
-CLASS	mk	mk	MinecartTrackLogic
-CLASS	g	g	MinecraftAppletImpl
-CLASS	nr	nr	MinecraftError
-CLASS	lx	lx	MinecraftException
-CLASS	fm	fm	MinecraftImpl
-CLASS	fo	fo	ModelBase
-CLASS	cr	cr	ModelBiped
-CLASS	cl	cl	ModelBoat
-CLASS	kv	kv	ModelChicken
-CLASS	dv	dv	ModelCow
-CLASS	em	em	ModelCreeper
-CLASS	hj	hj	ModelMinecart
-CLASS	ca	ca	ModelPig
-CLASS	hg	hg	ModelQuadraped
-CLASS	ip	ip	ModelRenderer
-CLASS	bx	bx	ModelSheep1
-CLASS	gx	gx	ModelSheep2
-CLASS	fv	fv	ModelSkeleton
-CLASS	hh	hh	ModelSlime
-CLASS	jy	jy	ModelSpider
-CLASS	cb	cb	ModelZombie
-CLASS	mp	mp	MouseHelper
-CLASS	lv	lv	MovementInput
-CLASS	gd	gd	MovementInputFromOptions
-CLASS	mf	mf	MovingObjectPosition
-CLASS	hk	hk	MusInputStream
-CLASS	el	el	NBTBase
-CLASS	ix	ix	NBTTagByte
-CLASS	dy	dy	NBTTagByteArray
-CLASS	hm	hm	NBTTagCompound
-CLASS	kr	kr	NBTTagDouble
-CLASS	fy	fy	NBTTagEnd
-CLASS	f	f	NBTTagFloat
-CLASS	io	io	NBTTagInt
-CLASS	ki	ki	NBTTagList
-CLASS	gn	gn	NBTTagLong
-CLASS	ls	ls	NBTTagShort
-CLASS	ne	ne	NBTTagString
-CLASS	gy	gy	NetClientHandler
-CLASS	lb	lb	NetHandler
-CLASS	ii	ii	NetworkManager
-CLASS	nh	nh	NetworkMasterThread
-CLASS	ni	ni	NetworkReaderThread
-CLASS	nk	nk	NetworkWriterThread
-CLASS	jf	jf	NextTickListEntry
-CLASS	mu	mu	NibbleArray
-CLASS	bk	bk	NoiseGenerator
-CLASS	lp	lp	NoiseGeneratorOctaves
-CLASS	v	v	NoiseGeneratorPerlin
-CLASS	be	be	OpenGlCapsChecker
-CLASS	ln	ln	OsMap
-CLASS	fn	fn	Packet
-CLASS	gi	gi	Packet0KeepAlive
-CLASS	eh	eh	Packet10Flying
-CLASS	s	s	Packet11PlayerPosition
-CLASS	mh	mh	Packet12PlayerLook
-CLASS	ch	ch	Packet13PlayerLookMove
-CLASS	fg	fg	Packet14BlockDig
-CLASS	do	do	Packet15Place
-CLASS	dz	dz	Packet16BlockItemSwitch
-CLASS	ld	ld	Packet17AddToInventory
-CLASS	hf	hf	Packet18ArmAnimation
-CLASS	hp	hp	Packet1Login
-CLASS	gp	gp	Packet20NamedEntitySpawn
-CLASS	ha	ha	Packet21PickupSpawn
-CLASS	bm	bm	Packet22Collect
-CLASS	kj	kj	Packet23VehicleSpawn
-CLASS	ez	ez	Packet24MobSpawn
-CLASS	oh	oh	Packet255KickDisconnect
-CLASS	ju	ju	Packet29DestroyEntity
-CLASS	gt	gt	Packet2Handshake
-CLASS	lq	lq	Packet30Entity
-CLASS	kp	kp	Packet31RelEntityMove
-CLASS	jx	jx	Packet32EntityLook
-CLASS	is	is	Packet33RelEntityMoveLook
-CLASS	jl	jl	Packet34EntityTeleport
-CLASS	ij	ij	Packet3Chat
-CLASS	du	du	Packet4UpdateTime
-CLASS	ka	ka	Packet50PreChunk
-CLASS	bz	bz	Packet51MapChunk
-CLASS	na	na	Packet52MultiBlockChange
-CLASS	li	li	Packet53BlockChange
-CLASS	ny	ny	Packet59ComplexEntity
-CLASS	m	m	Packet5PlayerInventory
-CLASS	ji	ji	Packet6SpawnPosition
-CLASS	fx	fx	Path
-CLASS	bl	bl	PathEntity
-CLASS	cz	cz	Pathfinder
-CLASS	a	a	PathPoint
-CLASS	hq	hq	PlayerController
-CLASS	nj	nj	PlayerControllerMP
-CLASS	ia	ia	PlayerControllerSP
-CLASS	il	il	PlayerControllerTest
-CLASS	ed	ed	PositionTexureVertex
-CLASS	l	l	RecipesArmor
-CLASS	fj	fj	RecipesCrafting
-CLASS	hr	hr	RecipesFood
-CLASS	lf	lf	RecipesIngots
-CLASS	fs	fs	RecipeSorter
-CLASS	dr	dr	RecipesTools
-CLASS	nd	nd	RecipesWeapons
-CLASS	np	np	RedstoneUpdateInfo
-CLASS	ak	ak	Render
-CLASS	gk	gk	RenderArrow
-CLASS	bc	bc	RenderBlocks
-CLASS	cp	cp	RenderBoat
-CLASS	eq	eq	RenderChicken
-CLASS	mc	mc	RenderCow
-CLASS	d	d	RenderCreeper
-CLASS	ey	ey	RenderEngine
-CLASS	gj	gj	RenderEntity
-CLASS	dj	dj	RenderFallingSand
-CLASS	e	e	RenderGlobal
-CLASS	i	i	RenderHelper
-CLASS	ab	ab	RenderItem
-CLASS	kw	kw	RenderList
-CLASS	dn	dn	RenderLiving
-CLASS	kx	kx	RenderManager
-CLASS	kt	kt	RenderMinecart
-CLASS	bw	bw	RenderPainting
-CLASS	gm	gm	RenderPig
-CLASS	bu	bu	RenderPlayer
-CLASS	ns	ns	RenderSheep
-CLASS	gq	gq	RenderSlime
-CLASS	ei	ei	RenderSnowball
-CLASS	gl	gl	RenderSorter
-CLASS	ok	ok	RenderSpider
-CLASS	hw	hw	RenderTNTPrimed
-CLASS	nz	nz	RenderZombieSimple
-CLASS	iy	iy	ScaledResolution
-CLASS	dl	dl	Session
-CLASS	jk	jk	SignModel
-CLASS	dk	dk	Slot
-CLASS	lj	lj	SlotArmor
-CLASS	an	an	SlotCrafting
-CLASS	mm	mm	SlotInventory
-CLASS	of	of	SoundManager
-CLASS	eb	eb	SoundPool
-CLASS	ah	ah	SoundPoolEntry
-CLASS	az	az	SpawnerAnimals
-CLASS	k	k	SpawnerMonsters
-CLASS	bb	bb	StepSound
-CLASS	t	t	StepSoundSand
-CLASS	u	u	StepSoundStone
-CLASS	lt	lt	TerrainTextureManager
-CLASS	ho	ho	Tessellator
-CLASS	aa	aa	TextureCompassFX
-CLASS	ll	ll	TexturedQuad
-CLASS	jz	jz	TextureFlamesFX
-CLASS	z	z	TextureFX
-CLASS	eg	eg	TextureLavaFlowFX
-CLASS	at	at	TextureLavaFX
-CLASS	ml	ml	TextureWaterFX
-CLASS	ht	ht	TexureWaterFlowFX
-CLASS	nc	nc	ThreadConnectToServer
-CLASS	kz	kz	ThreadDownloadImage
-CLASS	cc	cc	ThreadDownloadImageData
-CLASS	bf	bf	ThreadDownloadResources
-CLASS	lh	lh	ThreadRunIsoClient
-CLASS	fl	fl	ThreadSleepForever
-CLASS	ic	ic	TileEntity
-CLASS	fe	fe	TileEntityChest
-CLASS	ke	ke	TileEntityFurnace
-CLASS	bd	bd	TileEntityMobSpawner
-CLASS	r	r	TileEntityMobSpawnerRenderer
-CLASS	fz	fz	TileEntityRenderer
-CLASS	ob	ob	TileEntitySign
-CLASS	in	in	TileEntitySignRenderer
-CLASS	ex	ex	TileEntitySpecialRenderer
-CLASS	ir	ir	Timer
-CLASS	go	go	UnexpectedThrowable
-CLASS	aj	aj	Vec3D
-CLASS	cn	cn	World
-CLASS	lc	lc	WorldBlockPositionType
-CLASS	gs	gs	WorldClient
-CLASS	ej	ej	WorldGenBigTree
-CLASS	da	da	WorldGenCactus
-CLASS	gv	gv	WorldGenClay
-CLASS	cg	cg	WorldGenDungeons
-CLASS	ik	ik	WorldGenerator
-CLASS	ae	ae	WorldGenFlowers
-CLASS	nn	nn	WorldGenLiquids
-CLASS	cu	cu	WorldGenMinable
-CLASS	es	es	WorldGenReed
-CLASS	oa	oa	WorldGenTrees
-CLASS	lk	lk	WorldIso
-CLASS	bn	bn	WorldRenderer
+CLASS	nl	nl	Block
+CLASS	pw	pw	BlockBloodStone
+CLASS	ef	ef	BlockBookshelf
+CLASS	fv	fv	BlockBreakable
+CLASS	iv	iv	BlockButton
+CLASS	jb	jb	BlockCactus
+CLASS	c	c	BlockChest
+CLASS	le	le	BlockClay
+CLASS	lc	lc	BlockContainer
+CLASS	id	id	BlockCrops
+CLASS	jc	jc	BlockDirt
+CLASS	gs	gs	BlockDoor
+CLASS	ga	ga	BlockFence
+CLASS	qc	qc	BlockFire
+CLASS	of	of	BlockFlower
+CLASS	ix	ix	BlockFlowing
+CLASS	ky	ky	BlockFluids
+CLASS	me	me	BlockFurnace
+CLASS	dc	dc	BlockGlass
+CLASS	on	on	BlockGrass
+CLASS	hz	hz	BlockGravel
+CLASS	ie	ie	BlockIce
+CLASS	de	de	BlockJukeBox
+CLASS	bz	bz	BlockLadder
+CLASS	ki	ki	BlockLeaves
+CLASS	ii	ii	BlockLeavesBase
+CLASS	pg	pg	BlockLever
+CLASS	hh	hh	BlockLightStone
+CLASS	nt	nt	BlockLog
+CLASS	jj	jj	BlockMinecartTrack
+CLASS	br	br	BlockMobSpawner
+CLASS	mm	mm	BlockMushroom
+CLASS	cu	cu	BlockObsidian
+CLASS	hw	hw	BlockOre
+CLASS	e	e	BlockOreBlock
+CLASS	x	x	BlockPortal
+CLASS	ap	ap	BlockPressurePlate
+CLASS	cv	cv	BlockPumpkin
+CLASS	an	an	BlockRedstoneOre
+CLASS	bo	bo	BlockRedstoneTorch
+CLASS	lp	lp	BlockRedstoneWire
+CLASS	kv	kv	BlockReed
+CLASS	du	du	BlockSand
+CLASS	eh	eh	BlockSapling
+CLASS	nd	nd	BlockSign
+CLASS	iq	iq	BlockSlowSand
+CLASS	fw	fw	BlockSnow
+CLASS	s	s	BlockSnowBlock
+CLASS	nv	nv	BlockSoil
+CLASS	oy	oy	BlockSponge
+CLASS	lw	lw	BlockStairs
+CLASS	io	io	BlockStationary
+CLASS	qe	qe	BlockStep
+CLASS	cm	cm	BlockStone
+CLASS	v	v	BlockTNT
+CLASS	nw	nw	BlockTorch
+CLASS	db	db	BlockWorkbench
+CLASS	or	or	CanvasCrashReport
+CLASS	ah	ah	CanvasIsomPreview
+CLASS	dm	dm	CanvasMajongLogo
+CLASS	j	j	CanvasMinecraftApplet
+CLASS	ly	ly	ChatLine
+CLASS	gx	gx	Chunk
+CLASS	cq	cq	ChunkCache
+CLASS	ic	ic	ChunkCoordinates
+CLASS	qh	qh	ChunkCoordIntPair
+CLASS	mp	mp	ChunkLoader
+CLASS	oi	oi	ChunkPosition
+CLASS	nm	nm	ChunkProviderClient
+CLASS	ps	ps	ChunkProviderGenerate
+CLASS	kf	kf	ChunkProviderHell
+CLASS	cs	cs	ChunkProviderIso
+CLASS	gp	gp	ChunkProviderLoadOrGenerate
+CLASS	cb	cb	ClippingHelper
+CLASS	n	n	ClippingHelperImplementation
+CLASS	fh	fh	CodecMus
+CLASS	fq	fq	ColorizerFoliage
+CLASS	et	et	ColorizerGrass
+CLASS	ab	ab	CompressedStreamTools
+CLASS	ax	ax	CraftingInventoryCB
+CLASS	q	q	CraftingInventoryPlayerCB
+CLASS	fl	fl	CraftingInventoryWorkbenchCB
+CLASS	el	el	CraftingManager
+CLASS	cd	cd	CraftingRecipe
+CLASS	by	by	EffectRenderer
+CLASS	lr	lr	Entity
+CLASS	ak	ak	EntityAnimals
+CLASS	lq	lq	EntityArrow
+CLASS	dn	dn	EntityBoat
+CLASS	bh	bh	EntityBubbleFX
+CLASS	op	op	EntityChicken
+CLASS	mk	mk	EntityClientPlayerMP
+CLASS	as	as	EntityCow
+CLASS	fb	fb	EntityCreature
+CLASS	do	do	EntityCreeper
+CLASS	ke	ke	EntityDiggingFX
+CLASS	ec	ec	EntityExplodeFX
+CLASS	fy	fy	EntityFallingSand
+CLASS	az	az	EntityFireball
+CLASS	hg	hg	EntityFish
+CLASS	kk	kk	EntityFlameFX
+CLASS	oo	oo	EntityFlying
+CLASS	pk	pk	EntityFX
+CLASS	am	am	EntityGhast
+CLASS	em	em	EntityItem
+CLASS	cz	cz	EntityLavaFX
+CLASS	fo	fo	EntityList
+CLASS	hc	hc	EntityLiving
+CLASS	py	py	EntityMinecart
+CLASS	ed	ed	EntityMobs
+CLASS	pn	pn	EntityOtherPlayerMP
+CLASS	kl	kl	EntityPainting
+CLASS	cl	cl	EntityPickupFX
+CLASS	ok	ok	EntityPig
+CLASS	po	po	EntityPigZombie
+CLASS	dz	dz	EntityPlayer
+CLASS	bq	bq	EntityPlayerSP
+CLASS	ja	ja	EntityPortalFX
+CLASS	ox	ox	EntityRainFX
+CLASS	ff	ff	EntityReddustFX
+CLASS	jx	jx	EntityRenderer
+CLASS	bw	bw	EntitySheep
+CLASS	df	df	EntitySkeleton
+CLASS	nn	nn	EntitySlime
+CLASS	jk	jk	EntitySlimeFX
+CLASS	pd	pd	EntitySmokeFX
+CLASS	at	at	EntitySnowball
+CLASS	fu	fu	EntitySorter
+CLASS	be	be	EntitySpider
+CLASS	ma	ma	EntitySplashFX
+CLASS	kn	kn	EntityTNTPrimed
+CLASS	no	no	EntityZombie
+CLASS	im	im	EntityZombieSimple
+CLASS	fj	fj	EnumArt
+CLASS	gv	gv	EnumCreatureType
+CLASS	lb	lb	EnumMobType
+CLASS	ft	ft	EnumOS1
+CLASS	jl	jl	EnumOS2
+CLASS	gl	gl	EnumOSMappingHelper
+CLASS	cg	cg	EnumSkyBlock
+CLASS	ko	ko	Explosion
+CLASS	ln	ln	FontRenderer
+CLASS	lv	lv	Frustrum
+CLASS	gn	gn	GameSettings
+CLASS	gk	gk	GameWindowListener
+CLASS	dq	dq	GLAllocation
+CLASS	mw	mw	Gui
+CLASS	ge	ge	GuiButton
+CLASS	dp	dp	GuiChat
+CLASS	ep	ep	GuiChest
+CLASS	kd	kd	GuiConflictWarning
+CLASS	cr	cr	GuiConnectFailed
+CLASS	ob	ob	GuiConnecting
+CLASS	ev	ev	GuiContainer
+CLASS	nh	nh	GuiControls
+CLASS	iz	iz	GuiCrafting
+CLASS	je	je	GuiDeleteWorld
+CLASS	ds	ds	GuiDownloadTerrain
+CLASS	pq	pq	GuiEditSign
+CLASS	jg	jg	GuiFurnace
+CLASS	bb	bb	GuiGameOver
+CLASS	ng	ng	GuiIngame
+CLASS	jh	jh	GuiIngameMenu
+CLASS	mz	mz	GuiInventory
+CLASS	dh	dh	GuiMainMenu
+CLASS	ha	ha	GuiMultiplayer
+CLASS	bf	bf	GuiOptions
+CLASS	bp	bp	GuiScreen
+CLASS	kz	kz	GuiSelectWorld
+CLASS	oc	oc	GuiSlider
+CLASS	r	r	GuiSmallButton
+CLASS	di	di	GuiTexturePacks
+CLASS	ay	ay	GuiUnused
+CLASS	kj	kj	GuiYesNo
+CLASS	om	om	HashEntry
+CLASS	pf	pf	IBlockAccess
+CLASS	qa	qa	ICamera
+CLASS	ai	ai	IChunkLoader
+CLASS	bd	bd	IChunkProvider
+CLASS	hf	hf	IInventory
+CLASS	ib	ib	ImageBuffer
+CLASS	la	la	ImageBufferDownload
+CLASS	cx	cx	IMobs
+CLASS	hu	hu	InventoryCrafting
+CLASS	ol	ol	InventoryCraftResult
+CLASS	iu	iu	InventoryLargeChest
+CLASS	fm	fm	InventoryPlayer
+CLASS	pp	pp	IProgressUpdate
+CLASS	ks	ks	IsoImageBuffer
+CLASS	dv	dv	Item
+CLASS	oe	oe	ItemArmor
+CLASS	mb	mb	ItemAxe
+CLASS	bc	bc	ItemBlock
+CLASS	nr	nr	ItemBoat
+CLASS	kp	kp	ItemBow
+CLASS	ag	ag	ItemBucket
+CLASS	es	es	ItemDoor
+CLASS	bj	bj	ItemFishingRod
+CLASS	pr	pr	ItemFlintAndSteel
+CLASS	qf	qf	ItemFood
+CLASS	gq	gq	ItemHoe
+CLASS	kx	kx	ItemMinecart
+CLASS	pz	pz	ItemPainting
+CLASS	ac	ac	ItemPickaxe
+CLASS	mr	mr	ItemRecord
+CLASS	ew	ew	ItemRedstone
+CLASS	he	he	ItemReed
+CLASS	kq	kq	ItemRenderer
+CLASS	lf	lf	ItemSaddle
+CLASS	kw	kw	ItemSeeds
+CLASS	nq	nq	ItemSign
+CLASS	bx	bx	ItemSnowball
+CLASS	au	au	ItemSoup
+CLASS	og	og	ItemSpade
+CLASS	fn	fn	ItemStack
+CLASS	kc	kc	ItemSword
+CLASS	ca	ca	ItemTool
+CLASS	jr	jr	IWorldAccess
+CLASS	ka	ka	KeyBinding
+CLASS	hr	hr	LoadingScreenRenderer
+CLASS	lm	lm	LogoEffectRandomizer
+CLASS	dj	dj	MapGenBase
+CLASS	ls	ls	MapGenCaves
+CLASS	jq	jq	MapGenCavesHell
+CLASS	gy	gy	Material
+CLASS	lj	lj	MaterialLiquid
+CLASS	aa	aa	MaterialLogic
+CLASS	hd	hd	MaterialTransparent
+CLASS	fg	fg	MathHelper
+CLASS	gb	gb	MCHashTable
+CLASS	lx	lx	MetadataChunkBlock
+CLASS	nx	nx	MinecartTrackLogic
+CLASS	i	i	MinecraftAppletImpl
+CLASS	pl	pl	MinecraftError
+CLASS	nk	nk	MinecraftException
+CLASS	gg	gg	MinecraftImpl
+CLASS	gd	gd	MobSpawnerBase
+CLASS	dg	dg	MobSpawnerDesert
+CLASS	k	k	MobSpawnerHell
+CLASS	mg	mg	MobSpawnerSwamp
+CLASS	gj	gj	ModelBase
+CLASS	da	da	ModelBiped
+CLASS	ct	ct	ModelBoat
+CLASS	mf	mf	ModelChicken
+CLASS	ej	ej	ModelCow
+CLASS	fe	fe	ModelCreeper
+CLASS	gz	gz	ModelGhast
+CLASS	ij	ij	ModelMinecart
+CLASS	ci	ci	ModelPig
+CLASS	ig	ig	ModelQuadraped
+CLASS	jw	jw	ModelRenderer
+CLASS	cf	cf	ModelSheep1
+CLASS	hx	hx	ModelSheep2
+CLASS	gr	gr	ModelSkeleton
+CLASS	ih	ih	ModelSlime
+CLASS	lh	lh	ModelSpider
+CLASS	cj	cj	ModelZombie
+CLASS	od	od	MouseHelper
+CLASS	ni	ni	MovementInput
+CLASS	hb	hb	MovementInputFromOptions
+CLASS	ns	ns	MovingObjectPosition
+CLASS	ik	ik	MusInputStream
+CLASS	fc	fc	NBTBase
+CLASS	kg	kg	NBTTagByte
+CLASS	en	en	NBTTagByteArray
+CLASS	in	in	NBTTagCompound
+CLASS	mc	mc	NBTTagDouble
+CLASS	gu	gu	NBTTagEnd
+CLASS	h	h	NBTTagFloat
+CLASS	ju	ju	NBTTagInt
+CLASS	lt	lt	NBTTagList
+CLASS	hn	hn	NBTTagLong
+CLASS	ne	ne	NBTTagShort
+CLASS	ow	ow	NBTTagString
+CLASS	hy	hy	NetClientHandler
+CLASS	mj	mj	NetHandler
+CLASS	jm	jm	NetworkManager
+CLASS	oz	oz	NetworkMasterThread
+CLASS	pa	pa	NetworkReaderThread
+CLASS	pc	pc	NetworkWriterThread
+CLASS	km	km	NextTickListEntry
+CLASS	oj	oj	NibbleArray
+CLASS	bs	bs	NoiseGenerator
+CLASS	aw	aw	NoiseGenerator2
+CLASS	na	na	NoiseGeneratorOctaves
+CLASS	nb	nb	NoiseGeneratorOctaves2
+CLASS	z	z	NoiseGeneratorPerlin
+CLASS	bm	bm	OpenGlCapsChecker
+CLASS	my	my	OsMap
+CLASS	gh	gh	Packet
+CLASS	hi	hi	Packet0KeepAlive
+CLASS	ey	ey	Packet10Flying
+CLASS	t	t	Packet11PlayerPosition
+CLASS	nu	nu	Packet12PlayerLook
+CLASS	cp	cp	Packet13PlayerLookMove
+CLASS	fz	fz	Packet14BlockDig
+CLASS	eb	eb	Packet15Place
+CLASS	eo	eo	Packet16BlockItemSwitch
+CLASS	mo	mo	Packet17AddToInventory
+CLASS	if	if	Packet18ArmAnimation
+CLASS	ir	ir	Packet1Login
+CLASS	hp	hp	Packet20NamedEntitySpawn
+CLASS	ia	ia	Packet21PickupSpawn
+CLASS	bu	bu	Packet22Collect
+CLASS	lu	lu	Packet23VehicleSpawn
+CLASS	fs	fs	Packet24MobSpawn
+CLASS	qd	qd	Packet255KickDisconnect
+CLASS	dt	dt	Packet28
+CLASS	ld	ld	Packet29DestroyEntity
+CLASS	ht	ht	Packet2Handshake
+CLASS	nc	nc	Packet30Entity
+CLASS	lz	lz	Packet31RelEntityMove
+CLASS	lg	lg	Packet32EntityLook
+CLASS	jz	jz	Packet33RelEntityMoveLook
+CLASS	ku	ku	Packet34EntityTeleport
+CLASS	il	il	Packet39
+CLASS	jn	jn	Packet3Chat
+CLASS	ei	ei	Packet4UpdateTime
+CLASS	ll	ll	Packet50PreChunk
+CLASS	ch	ch	Packet51MapChunk
+CLASS	oq	oq	Packet52MultiBlockChange
+CLASS	ms	ms	Packet53BlockChange
+CLASS	pt	pt	Packet59ComplexEntity
+CLASS	p	p	Packet5PlayerInventory
+CLASS	kr	kr	Packet6SpawnPosition
+CLASS	a	a	Packet7
+CLASS	av	av	PanelCrashReport
+CLASS	gt	gt	Path
+CLASS	bt	bt	PathEntity
+CLASS	dk	dk	Pathfinder
+CLASS	b	b	PathPoint
+CLASS	is	is	PlayerController
+CLASS	pb	pb	PlayerControllerMP
+CLASS	jd	jd	PlayerControllerSP
+CLASS	jp	jp	PlayerControllerTest
+CLASS	eu	eu	PositionTexureVertex
+CLASS	o	o	RecipesArmor
+CLASS	gc	gc	RecipesCrafting
+CLASS	it	it	RecipesFood
+CLASS	mq	mq	RecipesIngots
+CLASS	go	go	RecipeSorter
+CLASS	ee	ee	RecipesTools
+CLASS	ov	ov	RecipesWeapons
+CLASS	pi	pi	RedstoneUpdateInfo
+CLASS	aq	aq	Render
+CLASS	hk	hk	RenderArrow
+CLASS	m	m	RenderBiped
+CLASS	bk	bk	RenderBlocks
+CLASS	cy	cy	RenderBoat
+CLASS	fi	fi	RenderChicken
+CLASS	np	np	RenderCow
+CLASS	g	g	RenderCreeper
+CLASS	fr	fr	RenderEngine
+CLASS	hj	hj	RenderEntity
+CLASS	dw	dw	RenderFallingSand
+CLASS	gi	gi	RenderFireball
+CLASS	js	js	RenderFish
+CLASS	jv	jv	RenderGhast
+CLASS	f	f	RenderGlobal
+CLASS	l	l	RenderHelper
+CLASS	af	af	RenderItem
+CLASS	mh	mh	RenderList
+CLASS	ea	ea	RenderLiving
+CLASS	mi	mi	RenderManager
+CLASS	md	md	RenderMinecart
+CLASS	ce	ce	RenderPainting
+CLASS	hm	hm	RenderPig
+CLASS	cc	cc	RenderPlayer
+CLASS	pm	pm	RenderSheep
+CLASS	hq	hq	RenderSlime
+CLASS	ez	ez	RenderSnowball
+CLASS	hl	hl	RenderSorter
+CLASS	qg	qg	RenderSpider
+CLASS	iy	iy	RenderTNTPrimed
+CLASS	pu	pu	RenderZombieSimple
+CLASS	kh	kh	ScaledResolution
+CLASS	ek	ek	ScreenShotHelper
+CLASS	dy	dy	Session
+CLASS	kt	kt	SignModel
+CLASS	dx	dx	Slot
+CLASS	mv	mv	SlotArmor
+CLASS	ar	ar	SlotCrafting
+CLASS	oa	oa	SlotInventory
+CLASS	qb	qb	SoundManager
+CLASS	eq	eq	SoundPool
+CLASS	al	al	SoundPoolEntry
+CLASS	bg	bg	SpawnerAnimals
+CLASS	bi	bi	StepSound
+CLASS	w	w	StepSoundSand
+CLASS	y	y	StepSoundStone
+CLASS	nj	nj	Teleporter
+CLASS	nf	nf	TerrainTextureManager
+CLASS	ip	ip	Tessellator
+CLASS	ae	ae	TextureCompassFX
+CLASS	mx	mx	TexturedQuad
+CLASS	li	li	TextureFlamesFX
+CLASS	ad	ad	TextureFX
+CLASS	ex	ex	TextureLavaFlowFX
+CLASS	ba	ba	TextureLavaFX
+CLASS	d	d	TexturePackBase
+CLASS	ny	ny	TexturePackCustom
+CLASS	ji	ji	TexturePackDefault
+CLASS	fd	fd	TexturePackList
+CLASS	er	er	TexturePortalFX
+CLASS	gm	gm	TextureWatchFX
+CLASS	nz	nz	TextureWaterFX
+CLASS	iw	iw	TexureWaterFlowFX
+CLASS	ot	ot	ThreadConnectToServer
+CLASS	ml	ml	ThreadDownloadImage
+CLASS	ck	ck	ThreadDownloadImageData
+CLASS	bn	bn	ThreadDownloadResources
+CLASS	mt	mt	ThreadRunIsoClient
+CLASS	gf	gf	ThreadSleepForever
+CLASS	jf	jf	TileEntity
+CLASS	fx	fx	TileEntityChest
+CLASS	lo	lo	TileEntityFurnace
+CLASS	bl	bl	TileEntityMobSpawner
+CLASS	u	u	TileEntityMobSpawnerRenderer
+CLASS	gw	gw	TileEntityRenderer
+CLASS	px	px	TileEntitySign
+CLASS	jt	jt	TileEntitySignRenderer
+CLASS	fp	fp	TileEntitySpecialRenderer
+CLASS	jy	jy	Timer
+CLASS	ho	ho	UnexpectedThrowable
+CLASS	ao	ao	Vec3D
+CLASS	cw	cw	World
+CLASS	mn	mn	WorldBlockPositionType
+CLASS	pj	pj	WorldChunkManager
+CLASS	eg	eg	WorldChunkManagerHell
+CLASS	hs	hs	WorldClient
+CLASS	fa	fa	WorldGenBigTree
+CLASS	dl	dl	WorldGenCactus
+CLASS	hv	hv	WorldGenClay
+CLASS	co	co	WorldGenDungeons
+CLASS	jo	jo	WorldGenerator
+CLASS	ph	ph	WorldGenFire
+CLASS	aj	aj	WorldGenFlowers
+CLASS	kb	kb	WorldGenHellLava
+CLASS	dr	dr	WorldGenLightStone1
+CLASS	lk	lk	WorldGenLightStone2
+CLASS	pe	pe	WorldGenLiquids
+CLASS	dd	dd	WorldGenMinable
+CLASS	os	os	WorldGenPumpkin
+CLASS	fk	fk	WorldGenReed
+CLASS	pv	pv	WorldGenTrees
+CLASS	mu	mu	WorldIso
+CLASS	ou	ou	WorldProvider
+CLASS	oh	oh	WorldProviderHell
+CLASS	bv	bv	WorldRenderer
 FIELD	b	I	a	field_1718_a	x
 FIELD	b	I	b	field_1717_b	y
 FIELD	b	I	c	field_1716_c	z
@@ -413,6 +460,7 @@ FIELD	b	Lb;	i	field_1710_i	previous
 FIELD	b	Z	j	field_1709_j	isFirst
 FIELD	ah	Lcw;	d	field_1790_d	worldObj
 FIELD	ah	Ljava/io/File;	e	field_1789_e	dataFolder
+FIELD	aj	I	a	field_885_a	plantBlockId
 FIELD	al	Ljava/lang/String;	a	field_1781_a	soundName
 FIELD	al	Ljava/net/URL;	b	field_1780_b	soundUrl
 FIELD	ao	D	a	field_1776_a	x
@@ -431,9 +479,12 @@ FIELD	bf	Lbp;	h	field_996_h	parentScreen
 FIELD	bf	Lgn;	i	field_995_i	options
 FIELD	bl	I	a	field_829_a	delay
 FIELD	bl	Ljava/lang/String;	b	field_828_b	entityID
+FIELD	bm	Z	a	field_1770_a	tryCheckOcclusionCapable
 FIELD	bn	Ljava/io/File;	a	field_1768_a	resourcesFolder
 FIELD	bn	Lnet/minecraft/client/Minecraft;	b	field_1767_b	mc
 FIELD	bn	Z	c	field_1769_c	closing
+FIELD	bo	Ljava/util/List;	b	field_450_b	torchUpdates
+FIELD	bo	Z	a	field_451_a	torchActive
 FIELD	bp	Lnet/minecraft/client/Minecraft;	b	field_945_b	mc
 FIELD	bp	I	c	field_951_c	width
 FIELD	bp	I	d	field_950_d	height
@@ -444,6 +495,7 @@ FIELD	bt	I	c	field_1766_c	pathIndex
 FIELD	bu	I	a	field_581_a	collectedEntityId
 FIELD	bu	I	b	field_580_b	collectorEntityId
 FIELD	bv	Lcw;	a	field_1763_a	worldObj
+FIELD	bv	Z	u	field_1738_u	needsUpdate
 FIELD	bw	Z	a	field_760_a	sheared
 FIELD	by	Lcw;	a	field_1729_a	worldObj
 FIELD	by	Ljava/util/Random;	d	field_1730_d	rand
@@ -462,13 +514,23 @@ FIELD	ch	I	f	field_576_f	zSize
 FIELD	ch	[B	g	field_575_g	chunk
 FIELD	ch	I	h	field_574_h	chunkSize
 FIELD	ck	Ljava/awt/image/BufferedImage;	a	field_1706_a	image
+FIELD	cn	D	a	field_1698_a	minX
+FIELD	cn	D	b	field_1697_b	minY
+FIELD	cn	D	c	field_1704_c	minZ
+FIELD	cn	D	d	field_1703_d	maxX
+FIELD	cn	D	e	field_1702_e	maxY
+FIELD	cn	D	f	field_1701_f	maxZ
+FIELD	cn	I	h	field_1699_h	numBoundingBoxesInUse
+FIELD	cn	Ljava/util/List;	g	field_1700_g	boundingBoxes
 FIELD	cq	Lcw;	d	field_1061_d	worldObj
 FIELD	cr	Ljava/lang/String;	a	field_992_a	errorMessage
 FIELD	cr	Ljava/lang/String;	h	field_993_h	errorDetail
 FIELD	cs	[Lgx;	b	field_898_b	chunks
 FIELD	cs	Lcw;	c	field_901_c	worldObj
+FIELD	cw	I	f	field_1046_e	skylightSubtracted
 FIELD	cw	J	e	field_1048_c	worldTime
 FIELD	cw	Lin;	H	field_1016_I	nbtCompoundPlayer
+FIELD	cw	Lbd;	G	field_1017_H	chunkProvider
 FIELD	cw	Ljava/util/List;	d	field_1040_k	playerEntities
 FIELD	cw	Ljava/util/Random;	l	field_1037_n	rand
 FIELD	cw	I	m	field_1036_o	spawnX
@@ -476,6 +538,10 @@ FIELD	cw	I	o	field_1034_q	spawnZ
 FIELD	cw	J	u	field_1030_u	randomSeed
 FIELD	cw	J	v	field_1029_v	sizeOnDisk
 FIELD	cw	Z	z	field_1026_y	multiplayerWorld
+FIELD	cw	Ljava/util/Set;	D	field_1022_C	scheduledTickSet
+FIELD	cw	Ljava/util/TreeSet;	C	field_1023_B	scheduledTickTreeSet
+FIELD	dd	I	a	field_884_a	minableBlockId
+FIELD	dd	I	b	field_883_b	numberOfBlocks
 FIELD	dh	[[Llm;	i	field_990_i	logoEffects
 FIELD	dh	F	j	field_989_j	updateCounter
 FIELD	dk	Lpf;	a	field_1674_a	worldMap
@@ -489,6 +555,7 @@ FIELD	dq	Ljava/util/List;	a	field_1671_a	displayLists
 FIELD	dq	Ljava/util/List;	b	field_1670_b	textureNames
 FIELD	ds	Lhy;	a	field_983_a	netHandler
 FIELD	ds	I	h	field_984_h	updateCounter
+FIELD	du	Z	a	field_466_a	fallInstantly
 FIELD	dv	Ldv;	A	field_268_A	axeDiamond
 FIELD	dv	Ldv;	aa	field_286_aa	bootsChain
 FIELD	dv	Ldv;	aA	field_309_aA	redstone
@@ -522,6 +589,7 @@ FIELD	dv	I	aX	field_290_aT	maxStackSize
 FIELD	dv	Ldv;	at	field_265_at	doorWood
 FIELD	dv	Ldv;	au	field_262_au	bucketEmpty
 FIELD	dv	I	aY	field_289_aU	maxDamage
+FIELD	dv	I	aZ	field_4018_aZ	iconIndex
 FIELD	dv	Ldv;	aw	field_258_aw	bucketLava
 FIELD	dv	Z	ba	field_287_aW	bFull3D
 FIELD	dv	Ldv;	ax	field_256_ax	minecartEmpty
@@ -530,7 +598,7 @@ FIELD	dv	Ldv;	az	field_252_az	doorSteel
 FIELD	dv	Ldv;	B	field_266_B	stick
 FIELD	dv	[Ldv;	c	field_233_c	itemsList
 FIELD	dv	Ldv;	C	field_264_C	bowlEmpty
-FIELD	dv	Ldv;	d	field_232_d	shovel
+FIELD	dv	Ldv;	d	field_232_d	shovelSteel
 FIELD	dv	Ldv;	D	field_263_D	bowlSoup
 FIELD	dv	Ldv;	e	field_231_e	pickaxeSteel
 FIELD	dv	Ldv;	E	field_261_E	swordGold
@@ -575,8 +643,13 @@ FIELD	dv	Ldv;	y	field_211_y	shovelDiamond
 FIELD	dv	Ldv;	Y	field_236_Y	plateChain
 FIELD	dv	Ldv;	z	field_210_z	pickaxeDiamond
 FIELD	dv	Ldv;	Z	field_235_Z	legsChain
+FIELD	lr	D	as	field_614_ah	prevPosX
+FIELD	lr	D	at	field_613_ai	prevPosY
+FIELD	lr	D	au	field_612_aj	prevPosZ
+FIELD	lr	F	aM	field_645_aB	yOffset
 FIELD	dx	I	a	field_1119_a	slotIndex
 FIELD	dx	Lhf;	b	field_1118_b	inventory
+FIELD	dz	Lfm;	e	field_778_b	inventory
 FIELD	eb	I	a	field_566_a	id
 FIELD	eb	I	b	field_565_b	xPosition
 FIELD	eb	I	c	field_569_c	yPosition
@@ -690,6 +763,7 @@ FIELD	gx	[B	h	field_1533_h	heightMap
 FIELD	gx	I	j	field_1531_j	xPos
 FIELD	gx	I	k	field_1530_k	zPos
 FIELD	gx	Z	n	field_1527_n	isTerrainPopulated
+FIELD	gx	[Ljava/util/List;	m	field_1528_m	entities
 FIELD	gx	Z	o	field_1526_o	isModified
 FIELD	gy	Lgy;	a	field_1337_a	air
 FIELD	gy	Lgy;	b	field_1336_b	ground
@@ -704,7 +778,7 @@ FIELD	gy	Lgy;	l	field_1326_l	fire
 FIELD	gy	Lgy;	m	field_1325_m	sand
 FIELD	gy	Lgy;	n	field_1324_n	circuits
 FIELD	gy	Lgy;	p	field_1322_p	tnt
-FIELD	gy	Lgy;	r	field_1320_r	ice
+FIELD	nl	Lnl;	aT	field_4063_aU	ice
 FIELD	gy	Lgy;	s	field_1319_s	snow
 FIELD	gy	Lgy;	t	field_1318_t	builtSnow
 FIELD	gy	Lgy;	u	field_1317_u	cactus
@@ -730,6 +804,8 @@ FIELD	ht	Ljava/lang/String;	a	field_532_a	username
 FIELD	hu	[Lfn;	a	field_840_a	stackList
 FIELD	hu	I	b	field_839_b	nbrSlots
 FIELD	hu	Lax;	c	field_841_c	eventHandler
+FIELD	hv	I	a	field_867_a	clayBlockId
+FIELD	hv	I	b	field_866_b	numberOfBlocks
 FIELD	hy	Ljava/util/Random;	b	field_1208_b	rand
 FIELD	hy	Z	c	field_1214_c	disconnected
 FIELD	hy	Ljm;	d	field_1213_d	netManager
@@ -790,6 +866,34 @@ FIELD	jn	Ljava/lang/String;	a	field_517_a	message
 FIELD	ju	I	a	field_1093_a	intValue
 FIELD	jw	[Leu;	j	field_1401_j	corners
 FIELD	jw	[Lmx;	k	field_1400_k	faces
+FIELD	ip	Lip;	a	field_1512_a	instance
+FIELD	ip	I	z	field_1485_z	vboIndex
+FIELD	ip	Ljava/nio/IntBuffer;	y	field_1486_y	vertexBuffers
+FIELD	ip	Z	x	field_1487_x	useVBO
+FIELD	ip	Z	w	field_1488_w	isDrawing
+FIELD	ip	I	v	field_1489_v	normal
+FIELD	ip	D	u	field_1490_u	zOffset
+FIELD	ip	D	t	field_1491_t	yOffset
+FIELD	ip	D	s	field_1492_s	xOffset
+FIELD	ip	I	r	field_1493_r	drawMode
+FIELD	ip	I	B	field_1494_B	bufferSize
+FIELD	ip	Z	q	field_1495_q	isColorDisabled
+FIELD	ip	I	A	field_1496_A	vboCount
+FIELD	ip	I	p	field_1497_p	addedVertices
+FIELD	ip	I	o	field_1498_o	rawBufferIndex
+FIELD	ip	Z	n	field_1499_n	hasNormals
+FIELD	ip	Z	m	field_1500_m	hasTexture
+FIELD	ip	Z	l	field_1501_l	hasColor
+FIELD	ip	I	k	field_1502_k	color
+FIELD	ip	D	j	field_1503_j	textureV
+FIELD	ip	D	i	field_1504_i	textureU
+FIELD	ip	I	h	field_1505_h	vertexCount
+FIELD	ip	[I	g	field_1506_g	rawBuffer
+FIELD	ip	Ljava/nio/FloatBuffer;	f	field_1507_f	floatBuffer
+FIELD	ip	Ljava/nio/IntBuffer;	e	field_1508_e	intBuffer
+FIELD	ip	Ljava/nio/ByteBuffer;	d	field_1509_d	byteBuffer
+FIELD	ip	Z	c	field_1510_c	tryVBO
+FIELD	ip	Z	b	field_1511_b	convertQuadsToTriangles
 FIELD	jx	Lnet/minecraft/client/Minecraft;	h	field_1388_h	mc
 FIELD	ka	Ljava/lang/String;	a	field_1371_a	keyDescription
 FIELD	ka	I	b	field_1370_b	keyCode
@@ -803,6 +907,14 @@ FIELD	kj	Lbp;	a	field_961_a	parentScreen
 FIELD	kj	Ljava/lang/String;	h	field_964_h	message1
 FIELD	kj	Ljava/lang/String;	i	field_963_i	message2
 FIELD	kj	I	j	field_962_j	worldNumber
+FIELD	kn	I	a	field_689_a	fuse
+FIELD	km	J	f	field_1363_f	nextTickEntryID
+FIELD	km	I	a	field_1361_a	x
+FIELD	km	I	b	field_1360_b	y
+FIELD	km	I	c	field_1366_c	z
+FIELD	km	J	e	field_1364_e	scheduledTime
+FIELD	km	I	d	field_1365_d	blockID
+FIELD	km	J	g	field_1362_g	tickEntryID
 FIELD	kq	Lnet/minecraft/client/Minecraft;	a	field_1356_a	mc
 FIELD	kr	I	a	field_515_a	xPosition
 FIELD	kr	I	b	field_514_b	yPosition
@@ -844,6 +956,9 @@ FIELD	lr	I	be	field_627_aT	fire
 FIELD	lr	Lcn;	aF	field_601_au	boundingBox
 FIELD	lr	Z	aG	field_600_av	onGround
 FIELD	lr	I	bi	field_623_aX	air
+FIELD	lr	Z	aR	field_640_aG	entityWalks
+FIELD	lr	F	aO	field_643_aD	height
+FIELD	lr	F	aN	field_644_aC	width
 FIELD	lt	Ljava/util/List;	a	field_1091_a	tagList
 FIELD	lt	B	b	field_1090_b	tagType
 FIELD	lu	I	a	field_500_a	entityId
@@ -856,6 +971,7 @@ FIELD	ly	I	b	field_1296_b	updateCounter
 FIELD	mc	D	a	field_1089_a	doubleValue
 FIELD	mi	Lcw;	g	field_1227_g	worldObj
 FIELD	mi	Lgn;	k	field_1223_k	options
+FIELD	mi	Ljava/util/Map;	o	field_6501_o	entityRenderMap
 FIELD	ml	Ljava/lang/String;	a	field_1216_a	location
 FIELD	ml	Lib;	b	field_1215_b	buffer
 FIELD	ml	Lck;	c	field_1217_c	imageData
@@ -868,6 +984,7 @@ FIELD	ms	I	b	field_491_b	yPosition
 FIELD	ms	I	c	field_495_c	zPosition
 FIELD	ms	I	d	field_494_d	type
 FIELD	ms	I	e	field_493_e	metadata
+FIELD	mw	F	k	field_923_k	zLevel
 FIELD	mz	F	l	field_976_l	xSize_lo
 FIELD	mz	F	m	field_975_m	ySize_lo
 FIELD	nc	I	a	field_485_a	entityId
@@ -955,9 +1072,26 @@ FIELD	nl	Lnl;	v	field_336_w	dirt
 FIELD	nl	Lnl;	w	field_335_x	cobblestone
 FIELD	nl	Lnl;	x	field_334_y	planks
 FIELD	nl	Lnl;	y	field_333_z	sapling
+FIELD	nl	[I	s	field_339_t	lightValue
+FIELD	nl	[I	q	field_341_r	lightOpacity
+FIELD	nl	[Z	p	field_342_q	isBlockContainer
+FIELD	nl	[Z	n	field_344_o	tickOnLoad
+FIELD	nl	F	bt	field_355_bo	slipperiness
+FIELD	nl	D	bl	field_368_bg	minY
+FIELD	nl	D	bm	field_366_bh	minZ
+FIELD	nl	D	bn	field_364_bi	maxX
+FIELD	nl	D	bo	field_362_bj	maxY
+FIELD	nl	D	bp	field_360_bk	maxZ
 FIELD	nm	Lcw;	d	field_888_d	worldObj
 FIELD	p	I	a	field_571_a	type
 FIELD	p	[Lfn;	b	field_570_b	stacks
+FIELD	ns	I	a	field_1167_a	typeOfHit
+FIELD	ns	I	b	field_1166_b	blockX
+FIELD	ns	I	c	field_1172_c	blockY
+FIELD	ns	I	d	field_1171_d	blockZ
+FIELD	ns	I	e	field_1170_e	sideHit
+FIELD	ns	Lao;	f	field_1169_f	hitVec
+FIELD	ns	Llr;	g	field_1168_g	entityHit
 FIELD	nx	Lcw;	b	field_1159_b	worldObj
 FIELD	oa	Lev;	c	field_1122_c	guiHandler
 FIELD	oa	I	e	field_1121_e	xPos
@@ -994,6 +1128,7 @@ FIELD	pc	Ljm;	a	field_1063_a	netManager
 FIELD	pq	Ljava/lang/String;	a	field_999_a	screenTitle
 FIELD	pq	Lpx;	h	field_1002_h	entitySign
 FIELD	pq	I	j	field_1000_j	editLine
+FIELD	ps	Ljava/util/Random;	j	field_913_j	rand
 FIELD	ps	Lcw;	p	field_907_p	worldObj
 FIELD	pt	I	a	field_474_a	xPosition
 FIELD	pt	I	b	field_473_b	yPosition
@@ -1014,8 +1149,11 @@ FIELD	qb	Leq;	d	field_588_d	soundPoolMusic
 FIELD	qb	Lgn;	f	field_586_f	options
 FIELD	qb	Z	g	field_585_g	loaded
 FIELD	qb	Ljava/util/Random;	h	field_584_h	rand
+FIELD	qc	[I	b	field_448_b	abilityToCatchFire
+FIELD	qc	[I	a	field_449_a	chanceToEncourageFire
 FIELD	qd	Ljava/lang/String;	a	field_582_a	reason
 FIELD	qf	I	a	field_332_a	healAmount
+FIELD	ou	[F	f	field_4219_d	lightBrightnessTable
 FIELD	z	D	a	field_1188_a	x
 FIELD	z	D	b	field_1187_b	y
 FIELD	z	D	c	field_1190_c	z
@@ -1023,11 +1161,6 @@ FIELD	z	[I	d	field_1189_d	permutations
 METHOD	b	()Z	a	func_1179_a	isAssigned
 METHOD	b	(Lb;)F	a	func_1180_a	distanceTo
 METHOD	ah	()Ljava/io/File;	a	func_1263_a	getDataFolder
-METHOD	ak	(Lin;)V	a	func_352_a	writeEntityToNBT
-METHOD	ak	(Lin;)V	b	func_357_b	readEntityFromNBT
-METHOD	an	(Ljava/util/Random;)I	a	func_229_a	quantityDropped
-METHOD	an	(ILjava/util/Random;)I	a	func_240_a	idDropped
-METHOD	an	(Lcw;IIILdz;)Z	a	func_250_a	blockActivated
 METHOD	ao	(Lao;)Lao;	b	func_1246_b	crossProduct
 METHOD	ao	(Lao;D)Lao;	a	func_1247_a	getIntermediateWithXValue
 METHOD	ao	(DDD)Lao;	b	func_1248_b	createVector
@@ -1048,10 +1181,12 @@ METHOD	ax	(Lhf;)V	a	func_1103_a	onCraftMatrixChanged
 METHOD	ax	(Ldz;)V	a	func_1104_a	onCraftGuiClosed
 METHOD	bc	(Lfn;Ldz;Lcw;IIII)Z	a	func_192_a	onItemUse
 METHOD	bd	(Lbd;II)V	a	func_534_a	populate
+METHOD	c	(Lcw;III)Z	h	func_286_h	isThereANeighborChest
 METHOD	bl	()V	b	func_475_b	updateEntity
 METHOD	bl	(Lin;)V	b	func_481_b	writeToNBT
 METHOD	bl	(Lin;)V	a	func_482_a	readFromNBT
 METHOD	bl	()V	c	func_483_c	updateDelay
+METHOD	bm	()Z	a	func_1213_a	checkARBOcclusion
 METHOD	bn	()V	b	func_1208_b	close
 METHOD	bn	(Ljava/io/File;Ljava/lang/String;)V	a	func_1209_a	loadResource
 METHOD	bn	()V	a	func_1210_a	reloadResources
@@ -1071,18 +1206,78 @@ METHOD	ay	(CI)V	a	func_580_a	keyTyped
 METHOD	bt	(Llr;)Lao;	a	func_1205_a	getPosition
 METHOD	bt	()V	a	func_1206_a	incrementPathIndex
 METHOD	bt	()Z	b	func_1207_b	isFinished
+METHOD	bv	()V	f	func_1194_f	MarkDirty
 METHOD	ca	(Lfn;IIII)V	a	func_203_a	hitBlock
 METHOD	ca	(Lfn;Lnl;)F	a	func_204_a	getStrVsBlock
 METHOD	cd	([I)Z	a	func_1182_a	matches
 METHOD	cd	([I)Lfn;	b	func_1183_b	createResult
 METHOD	cd	()I	a	func_1184_a	getRecipeSize
 METHOD	cd	([IIIZ)Z	a	func_1185_a	matches
+METHOD	cn	()Lcn;	c	func_1160_c	copy
+METHOD	cn	(DDDDDD)Lcn;	b	func_1161_b	getBoundingBoxFromPool
+METHOD	cn	()D	b	func_1164_b	getAverageEdgeLength
+METHOD	cn	(DDDDDD)Lcn;	c	func_1165_c	setBounds
+METHOD	cn	(DDDDDD)Lcn;	a	func_1168_a	getBoundingBox
+METHOD	cn	(DDD)Lcn;	a	func_1170_a	add
+METHOD	cn	(DDD)Lcn;	d	func_1174_d	offset
+METHOD	cn	(DDD)Lcn;	b	func_1177_b	expands
+METHOD	cn	(Lcn;)Z	a	func_1178_a	intersectsWith
+METHOD	cn	(DDD)Lcn;	c	func_1166_c	getOffsetBoundingBox
+METHOD	cn	(Lcn;)V	b	func_1171_b	set
+METHOD	cn	(Lao;)Z	b	func_1167_a	isVecInYZ
+METHOD	cn	(Lao;)Z	c	func_1175_b	isVecInXZ
+METHOD	cn	(Lao;)Z	d	func_1176_c	isVecInXY
+METHOD	cn	(Lao;)Z	a	func_4150_a	isVecInside
+METHOD	cn	()V	a	func_4149_a	clearBoundingBoxPool
+METHOD	cq	(III)F	c	func_598_c	getLightBrightness
+METHOD	cq	(III)Z	g	func_601_g	doesBlockAllowAttachment
+METHOD	cw	(Llr;D)Ldz;	a	func_609_a	getClosestPlayerToEntity
+METHOD	cw	(IIII)V	g	func_611_g	notifyBlocksOfNeighborChange
 METHOD	cw	(Ljava/io/File;Ljava/lang/String;)V	b	func_615_b	deleteWorld
+METHOD	cw	(IIII)V	e	func_617_e	notifyBlockChange
+METHOD	cw	(III)I	j	func_618_j	getBlockLightValue
+METHOD	cw	(II)Z	g	func_620_h	chunkExists
+METHOD	cw	(Ljava/lang/Class;)I	b	func_621_b	countEntities
+METHOD	cw	(Llr;Ljava/lang/String;FF)V	a	func_623_a	playSoundAtEntity
+METHOD	cw	()Z	d	func_624_b	isDaytime
+METHOD	cw	(III)Z	o	func_625_o	isBlockIndirectlyGettingPowered
+METHOD	cw	(IIII)Z	a	func_634_a	setBlock
 METHOD	cw	(IIII)Z	c	func_635_c	setBlockMetadata
+METHOD	cw	(IIIIII)Z	a	func_640_a	checkChunksExist
+METHOD	cw	(Lcg;III)I	a	func_641_a	getSavedLightValue
+METHOD	cw	()V	h	func_644_f	calculateInitialSkylight
+METHOD	cw	(III)Z	n	func_646_n	isBlockGettingPowered
+METHOD	cw	(III)Z	i	func_647_i	canBlockSeeTheSky
 METHOD	cw	(J)V	a	func_648_a	setWorldTime
+METHOD	cw	()V	i	func_649_g	tick
 METHOD	cw	([Ljava/io/File;)V	a	func_653_a	deleteFiles
+METHOD	cw	(IIII)V	l	func_655_l	notifyBlockOfNeighborChange
+METHOD	cw	(Ljava/lang/Class;Lcn;)Ljava/util/List;	a	func_657_a	getEntitiesWithinAABB
+METHOD	cw	(Llr;Lcn;)Ljava/util/List;	b	func_659_b	getEntitiesWithinAABBExcludingEntity
+METHOD	cw	(Lcn;)Z	b	func_662_b	getIsAnyLiquid
+METHOD	cw	(Lcg;IIII)V	b	func_664_b	setLightValue
+METHOD	cw	(II)I	d	func_666_c	getHeightValue
+METHOD	cw	(IIII)Z	j	func_668_j	isBlockProvidingPowerTo
+METHOD	cw	(Ljava/lang/String;III)V	a	func_670_a	playRecord
+METHOD	cw	(F)I	a	func_671_a	calculateSkylightSubtracted
+METHOD	cw	(II)Lgx;	b	func_673_a	getChunkFromBlockCoords
 METHOD	cw	(Llr;)Z	a	func_674_a	entityJoinedWorld
+METHOD	cw	(Llr;DDDF)V	a	func_676_a	createExplosion
+METHOD	cw	(III)V	m	func_677_m	randomDisplayUpdates
+METHOD	cw	(IIII)V	h	func_681_h	scheduleBlockUpdate
+METHOD	cw	(DDDD)Ldz;	a	func_683_a	getClosestPlayer
 METHOD	cw	(DDDLjava/lang/String;FF)V	a	func_684_a	playSoundEffect
+METHOD	cw	(IIII)Z	d	func_690_d	setBlockWithNotify
+METHOD	cw	(IIII)V	b	func_691_b	setBlockMetadataWithNotify
+METHOD	cw	(Ljava/lang/String;DDDDDD)V	a	func_694_a	spawnParticle
+METHOD	cw	(Llr;Lcn;)Ljava/util/List;	a	func_697_a	getCollidingBoundingBoxes
+METHOD	cw	(IIIZ)I	a	func_699_a	getBlockLightValue
+METHOD	cw	(Z)Z	a	func_700_a	TickUpdates
+METHOD	cw	(II)Lgx;	c	func_704_b	getChunkFromChunkCoords
+METHOD	cw	(IIII)Z	k	func_706_k	isBlockIndirectlyProvidingPowerTo
+METHOD	cw	(III)Z	k	func_708_k	canBlockSeeTheSky
+METHOD	cw	(Lcg;IIII)V	a	func_4078_a	neighborLightPropagationChanged
+METHOD	de	(Lcw;IIII)V	e	func_317_e	ejectRecord
 METHOD	dh	()Ljava/util/Random;	j	func_592_j	getRand
 METHOD	dk	(Llr;Lb;Lb;Lb;F)Lbt;	a	func_1129_a	addToPath
 METHOD	dk	(Llr;DDDF)Lbt;	a	func_1130_a	createEntityPathTo
@@ -1099,11 +1294,16 @@ METHOD	dq	(I)Ljava/nio/IntBuffer;	c	func_1125_c	getDirectIntBuffer
 METHOD	dq	()V	a	func_1126_a	deleteTexturesAndDisplayLists
 METHOD	dq	(I)Ljava/nio/ByteBuffer;	b	func_1127_b	getDirectByteBuffer
 METHOD	dq	(Ljava/nio/IntBuffer;)V	a	func_1128_a	generateTextureNames
+METHOD	du	(Lcw;III)V	h	func_315_h	tryToFall
+METHOD	du	(Lcw;III)Z	b_	func_316_a_	canFallBelow
+METHOD	ag	(Lfn;Lcw;Ldz;)Lfn;	a	func_193_a	onItemRightClick
 METHOD	dv	(Lfn;)I	a	func_196_a	getIconIndex
 METHOD	dv	()I	d	func_197_c	getMaxDamage
 METHOD	dv	()I	c	func_200_b	getItemStackLimit
+METHOD	dv	(I)Ldv;	a	func_4022_a	setIconIndex
 METHOD	dx	(Lfn;)V	b	func_776_b	putStack
 METHOD	dx	()Lfn;	b	func_777_b	getStack
+METHOD	dz	(Lnl;)F	a	func_450_a	getCurrentPlayerStrVsBlock
 METHOD	el	([I)Lfn;	a	func_1119_a	craft
 METHOD	el	()Lel;	a	func_1120_a	getInstance
 METHOD	el	(Lfn;[Ljava/lang/Object;)V	a	func_1121_a	addRecipe
@@ -1118,8 +1318,13 @@ METHOD	fc	(Ljava/io/DataInput;)Lfc;	b	func_734_b	readTag
 METHOD	fc	()Ljava/lang/String;	b	func_737_b	getKey
 METHOD	fc	(Lfc;Ljava/io/DataOutput;)V	a	func_738_a	writeTag
 METHOD	fc	(B)Lfc;	a	func_739_a	createTagOfType
+METHOD	fg	(F)F	a	func_1106_a	sin
+METHOD	fg	(F)F	b	func_1114_b	cos
 METHOD	fg	(DD)D	a	func_1107_a	abs_max
 METHOD	fg	(D)F	a	func_1109_a	sqrt_double
+METHOD	fg	(F)I	d	func_1110_d	convertToBlockCoord
+METHOD	fg	(D)I	b	func_1108_b	convertToBlockCoord
+METHOD	fg	(II)I	a	func_1111_a	bucketInt
 METHOD	fg	(F)F	e	func_1112_e	abs
 METHOD	fg	(F)F	c	func_1113_c	sqrt_float
 METHOD	fm	(I)Lfn;	c	func_468_c	getStackInSlot
@@ -1146,8 +1351,10 @@ METHOD	fn	(Lin;)Lin;	a	func_1086_a	writeToNBT
 METHOD	fn	(IIII)V	a	func_1087_a	hitBlock
 METHOD	fn	()I	b	func_1088_b	getIconIndex
 METHOD	fn	()I	c	func_1089_c	getMaxStackSize
+METHOD	fn	(Ldz;Lcw;IIII)Z	a	func_1090_a	useItem
 METHOD	fn	()Ldv;	a	func_1091_a	getItem
 METHOD	fn	(Lhc;)V	a	func_1092_a	hitEntity
+METHOD	fn	(Lcw;Ldz;)Lfn;	a	func_1093_a	useItemRightClick
 METHOD	fn	()I	d	func_1094_d	getMaxDamage
 METHOD	fn	(Llr;)I	a	func_1095_a	getDamageVsEntity
 METHOD	fn	(Lin;)V	b	func_1096_b	readFromNBT
@@ -1191,6 +1398,7 @@ METHOD	gn	(I)Ljava/lang/String;	d	func_1047_d	getOptionDisplayString
 METHOD	gn	(IF)V	a	func_1048_a	setOptionFloatValue
 METHOD	gn	(I)F	c	func_1049_c	getOptionFloatValue
 METHOD	gn	(Ljava/lang/String;)F	a	func_1050_a	parseFloat
+METHOD	gn	()V	a	func_6519_a	loadOptions
 METHOD	gt	(I)V	a	func_1033_a	sortBack
 METHOD	gt	(Lb;)Lb;	a	func_1034_a	add
 METHOD	gt	(Lb;F)V	a	func_1035_a	changeDistance
@@ -1198,15 +1406,30 @@ METHOD	gt	()Lb;	b	func_1036_b	dequeue
 METHOD	gt	(I)V	b	func_1037_b	sortForward
 METHOD	gt	()V	a	func_1038_a	clear
 METHOD	gt	()Z	c	func_1039_c	isEmpty
+METHOD	gx	(Llr;Lcn;Ljava/util/List;)V	a	func_994_a	getEntitiesWithinAABBForEntity
+METHOD	gx	(II)I	b	func_999_b	getHeightValue
+METHOD	gx	(Llr;)V	a	func_1000_a	addEntity
+METHOD	gx	(III)Z	c	func_1007_c	canBlockSeeTheSky
 METHOD	gx	(III)I	a	func_1008_a	getBlockID
 METHOD	gx	(IIII)V	b	func_1009_b	setBlockMetadata
+METHOD	gx	(IIIII)Z	a	func_1010_a	setBlockIDWithMetadata
+METHOD	gx	(Lcg;IIII)V	a	func_1011_a	setLightValue
+METHOD	gx	(Ljava/lang/Class;Lcn;Ljava/util/List;)V	a	func_1013_a	getEntitiesOfTypeWithinAAAB
+METHOD	gx	()V	b	func_1018_b	generateHeightMap
+METHOD	gx	(IIII)I	c	func_1019_c	getBlockLightValue
 METHOD	gx	(III)I	b	func_1021_b	getBlockMetadata
+METHOD	gx	(IIII)Z	a	func_1022_a	setBlockID
+METHOD	gx	(Lcg;III)I	a	func_1025_a	getSavedLightValue
 METHOD	gy	()Z	e	func_876_e	getBurning
+METHOD	gy	()Z	d	func_879_d	getIsLiquid
+METHOD	aa	()Z	b	func_881_b	getCanBlockGrass
 METHOD	do	(Llr;)V	b	func_419_b	onDeath
 METHOD	am	()I	g	func_422_g	getDropItemId
-METHOD	bq	()V	k	func_425_j	reactToSunlight
+METHOD	bq	()V	k	func_425_j	onLivingUpdate
 METHOD	hc	(I)V	b	func_432_b	heal
+METHOD	ak	()Z	a	func_433_a	getCanSpawnHere
 METHOD	hy	()V	b	func_849_b	disconnect
+METHOD	id	(Lcw;III)F	i	func_270_i	getGrowthRate
 METHOD	in	(Ljava/lang/String;)Lin;	k	func_743_k	getCompoundTag
 METHOD	in	(Ljava/lang/String;F)V	a	func_744_a	setFloat
 METHOD	in	(Ljava/lang/String;)S	d	func_745_d	getShort
@@ -1249,24 +1472,67 @@ METHOD	jm	(Ljm;)Z	a	func_971_a	isRunning
 METHOD	jm	(Lgh;)V	a	func_972_a	addToSendQueue
 METHOD	jm	()V	c	func_973_c	readPacket
 METHOD	jm	(Ljava/lang/String;)V	a	func_974_a	networkShutdown
+METHOD	aj	(Lcw;Ljava/util/Random;III)Z	a	func_516_a	generate
+METHOD	f	(Ljava/lang/String;III)V	a	func_933_a	playRecord
+METHOD	f	(Ljava/lang/String;DDDDDD)V	a	func_939_a	spawnParticle
+METHOD	f	(Ljava/lang/String;DDDFF)V	a	func_940_a	playSound
+METHOD	ip	()V	b	func_977_b	startDrawingQuads
+METHOD	ip	(IIII)V	a	func_978_a	setColorRGBA
+METHOD	ip	(III)V	a	func_979_a	setColorOpaque
+METHOD	ip	(FFF)V	b	func_980_b	setNormal
+METHOD	ip	(DD)V	a	func_981_a	setTextureUV
+METHOD	ip	()V	a	func_982_a	draw
+METHOD	ip	(DDDDD)V	a	func_983_a	addVertexWithUV
+METHOD	ip	(DDD)V	b	func_984_b	setTranslationD
+METHOD	ip	()V	d	func_985_d	reset
+METHOD	ip	(FFFF)V	a	func_986_a	setColorRGBA_F
+METHOD	ip	(FFF)V	a	func_987_a	setColorOpaque_F
+METHOD	ip	(FFF)V	c	func_988_c	setTranslationF
+METHOD	ip	()V	c	func_989_c	disableColor
+METHOD	ip	(I)V	b	func_990_b	setColorOpaque_I
+METHOD	ip	(DDD)V	a	func_991_a	addVertex
+METHOD	ip	(I)V	a	func_992_a	startDrawing
+METHOD	ip	(II)V	a	func_6513_a	setColorRGBA_I
 METHOD	kh	()I	b	func_902_b	getScaledHeight
 METHOD	kh	()I	a	func_903_a	getScaledWidth
 METHOD	ki	(Z)V	a	func_310_a	setGraphicsLevel
+METHOD	kn	()V	i	func_409_i	explode
+METHOD	km	(Lkm;)I	a	func_899_a	comparer
+METHOD	km	(J)Lkm;	a	func_900_a	setScheduledTime
 METHOD	kz	(I)Ljava/lang/String;	d	func_586_d	getWorldName
 METHOD	ln	(Ljava/lang/String;)I	a	func_871_a	getStringWidth
 METHOD	ln	(Ljava/lang/String;IIIZ)V	a	func_872_a	renderString
 METHOD	ln	(Ljava/lang/String;III)V	b	func_873_b	drawString
 METHOD	ln	(Ljava/lang/String;III)V	a	func_874_a	drawStringWithShadow
 METHOD	lr	(DDD)V	b	func_347_a	setPosition
+METHOD	lr	(DDD)V	g	func_348_f	addVelocity
+METHOD	lr	(DDD)V	d	func_349_c	moveEntity
 METHOD	ak	(Lin;)V	a	func_352_a	writeEntityToNBT
 METHOD	as	(Ldz;)Z	a	func_353_a	interact
 METHOD	ak	(Lin;)V	b	func_357_b	readEntityFromNBT
+METHOD	lr	(DDD)D	e	func_360_d	getDistanceSq
+METHOD	lr	(DDD)D	f	func_361_e	getDistance
 METHOD	lr	(Lin;)V	d	func_363_d	writeToNBT
 METHOD	lr	(II)Lem;	b	func_367_b	dropItem
 METHOD	lr	(Lin;)V	e	func_368_e	readFromNBT
+METHOD	at	()V	e_	func_370_e_	onUpdate
+METHOD	hc	(FF)V	a	func_371_a	setSize
+METHOD	lr	(FF)V	c	func_376_c	setRotation
+METHOD	dn	(DDDFFI)V	a	func_378_a	setPositionAndRotation2
+METHOD	lr	(Llr;)F	e	func_379_d	getDistanceToEntity
+METHOD	lr	(Llr;)V	g	func_380_f	applyEntityCollision
+METHOD	cz	(F)F	a	func_382_a	getEntityBrightness
+METHOD	lr	(Llr;)D	f	func_387_e	getDistanceSqToEntity
+METHOD	lr	(Lgy;)Z	a	func_393_a	isInsideOfMaterial
+METHOD	lr	(IIF)Lem;	a	func_394_a	dropItemWithOffset
+METHOD	lr	()V	I	func_395_F	setEntityDead
 METHOD	az	(Llr;I)Z	a	func_396_a	attackEntity
+METHOD	em	()Z	g_	func_397_g_	handleWaterMovement
 METHOD	lr	(Lcw;)V	a	func_398_a	setWorld
+METHOD	lr	(DDDFF)V	b	func_399_b	setPositionAndRotation
 METHOD	hc	(F)V	c	func_400_c	fall
+METHOD	dn	(DDD)V	a	func_6375_a	setVelocity
+METHOD	at	(Ldz;)V	b	func_6378_b	onCollideWithPlayer
 METHOD	lt	()I	c	func_740_c	tagCount
 METHOD	lt	(I)Lfc;	a	func_741_a	tagAt
 METHOD	lt	(Lfc;)V	a	func_742_a	setTag
@@ -1297,20 +1563,80 @@ METHOD	hy	(Lkr;)V	a	func_845_a	handleSpawnPosition
 METHOD	hy	(Lei;)V	a	func_846_a	handleUpdateTime
 METHOD	mw	(Lln;Ljava/lang/String;III)V	b	func_547_b	drawString
 METHOD	mw	(Lln;Ljava/lang/String;III)V	a	func_548_a	drawCenteredString
-METHOD	nl	(F)Lnl;	b	func_219_b	setHardness
+METHOD	ki	(Lpf;III)I	b	func_207_d	colorMultiplier
+METHOD	an	(Lcw;IIILjava/util/Random;)V	a	func_208_a	updateTick
+METHOD	ap	()Z	e	func_209_d	canProvidePower
+METHOD	bz	()I	g	func_210_f	getRenderType
+METHOD	c	(Lpf;IIII)I	a	func_211_a	getBlockTexture
+METHOD	nl	()Z	i	func_212_i	unusedMethod
+METHOD	nl	(FFFFFF)V	a	func_213_a	setBlockBounds
+METHOD	ap	(Lcw;III)V	b	func_214_b	onBlockRemoval
+METHOD	de	(Lcw;IIIIF)V	a	func_216_a	dropBlockAsItemWithChance
+METHOD	nl	(I)Lnl;	d	func_256_d	setLightOpacity
+METHOD	nl	(F)Lnl;	a	func_215_a	setLightValue
+METHOD	ap	()Z	a	func_217_b	allowsAttachment
+METHOD	c	(I)I	a	func_218_a	getBlockTextureFromSide
+METHOD	ap	(Lcw;III)Lcn;	d	func_221_d	getCollisionBoundingBoxFromPool
+METHOD	jb	(Lcw;III)Z	g	func_223_g	canBlockStay
+METHOD	ky	(IZ)Z	a	func_224_a	canCollideCheck
+METHOD	ap	(Lcw;IIII)Z	c	func_228_c	isIndirectlyPoweringTo
+METHOD	an	(Ljava/util/Random;)I	a	func_229_a	quantityDropped
+METHOD	ga	(Lcw;IIILcn;Ljava/util/ArrayList;)V	a	func_230_a	getCollidingBoundingBoxes
+METHOD	ap	(Lpf;IIII)Z	c	func_231_b	isPoweringTo
+METHOD	bo	(II)I	a	func_232_a	getBlockTextureFromSideAndMetadata
+METHOD	an	(Lcw;IIILdz;)V	b	func_233_b	onBlockClicked
+METHOD	ap	(Lcw;III)V	e	func_235_e	onBlockAdded
+METHOD	an	(ILjava/util/Random;)I	a	func_240_a	idDropped
+METHOD	an	(Lcw;IIILdz;)Z	a	func_250_a	blockActivated
+METHOD	bz	(Lcw;III)Lcn;	f	func_246_f	getSelectedBoundingBoxFromPool
+METHOD	an	(Lcw;IIILjava/util/Random;)V	b	func_247_b	randomDisplayTick
+METHOD	ap	(Lcw;IIII)V	a	func_226_a	onNeighborBlockChange
+METHOD	ap	(Lcw;IIILlr;)V	a	func_236_b	onEntityCollidedWithBlock
+METHOD	ap	(Lpf;III)V	a	func_238_a	setBlockBoundsBasedOnState
+METHOD	ky	(Lpf;III)F	d	func_241_c	getBlockBrightness
+METHOD	ap	()Z	b	func_242_c	renderAsNormalBlock
+METHOD	ap	(Lcw;III)Z	a	func_243_a	canPlaceBlockAt
+METHOD	nl	(Lao;)Z	a	func_244_a	isVecInsideYZBounds
+METHOD	lw	()Z	h	func_245_h	isCollidable
+METHOD	nl	(Lao;)Z	b	func_249_b	isVecInsideXZBounds
+METHOD	nl	(Lao;)Z	c	func_251_c	isVecInsideXYBounds
+METHOD	v	(Lcw;IIII)V	b	func_252_b	onBlockDestroyedByPlayer
+METHOD	nl	(Z)V	b	func_253_b	setTickOnLoad
+METHOD	an	(Lcw;IIILlr;)V	b	func_254_a	onEntityWalking
+METHOD	gs	(Lcw;IIILao;Lao;)Lns;	a	func_255_a	collisionRayTrace
+METHOD	ky	(Lcw;IIILlr;Lao;)V	a	func_257_a	velocityToAddToEntity
+METHOD	bz	(Lcw;IIII)V	d	func_258_d	onBlockPlaced
+METHOD	lw	(Lcw;IIII)V	b_	func_259_b_	dropBlockAsItem
+METHOD	x	(Lpf;IIII)Z	b	func_260_c	isSideInsideCoordinate
+METHOD	nl	(Lbi;)Lnl;	a	func_4024_a	setStepSound
+METHOD	an	()I	d	func_4025_d	tickRate
+METHOD	cv	(Lcw;IIILhc;)V	a	func_4026_a	onBlockPlacedBy
+METHOD	v	(Lcw;III)V	c	func_4027_c	onBlockDestroyedByExplosion
+METHOD	bd	(II)Z	a	func_537_a	chunkExists
 METHOD	oa	(II)Z	a	func_781_a	isAtCursorPos
 METHOD	ob	(Lob;)Z	a	func_581_a	isCancelled
 METHOD	ob	(Lob;Lhy;)Lhy;	a	func_582_a	setNetClientHandler
 METHOD	ob	(Lob;)Lhy;	b	func_583_b	getNetClientHandler
+METHOD	id	(I)Z	b	func_269_b	canThisPlantGrowOnThisBlockID
 METHOD	oj	()Z	a	func_769_a	isValid
 METHOD	oj	(IIII)V	a	func_770_a	setNibble
 METHOD	oj	(III)I	a	func_771_a	getNibble
+METHOD	mw	(IIIIII)V	a	func_549_a	drawGradientRect
+METHOD	mw	(IIIIII)V	b	func_550_b	drawTexturedModalRect
+METHOD	mw	(IIIII)V	a	func_551_a	drawRect
 METHOD	om	()Ljava/lang/Object;	b	func_767_b	getValue
 METHOD	om	()I	a	func_768_a	getHash
 METHOD	cq	(III)Lgy;	f	func_599_f	getBlockMaterial
 METHOD	cq	(III)I	a	func_600_a	getBlockId
 METHOD	cq	(III)I	e	func_602_e	getBlockMetadata
 METHOD	qb	()V	b	func_330_b	close
+METHOD	qc	(Lpf;III)Z	c	func_261_b	canBlockCatchFire
+METHOD	qc	(Lcw;III)I	i	func_262_i	getChanceOfNeighborsEncouragingFire
+METHOD	qc	(III)V	a	func_264_a	setBurnRate
+METHOD	qc	(Lcw;IIII)I	g	func_265_g	getChanceToEncourageFire
+METHOD	qc	(Lcw;IIIILjava/util/Random;)V	a	func_266_a	tryToCatchBlockOnFire
+METHOD	oh	()V	b	func_4093_b	generateLightBrightnessTable
+METHOD	x	(Lcw;III)Z	a_	func_4032_a_	tryToCreatePortal
 METHOD	z	(DDD)D	a	func_802_a	generateNoise
 METHOD	z	(IDDD)D	a	func_803_a	grad
 METHOD	z	(DDD)D	b	func_804_b	lerp
