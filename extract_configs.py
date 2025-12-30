@@ -1,6 +1,5 @@
 """
 Go through and extract all the configs.
-
 """
 import subprocess, os
 import sys
