@@ -35,6 +35,7 @@ def get_namespaces(mapping_file):
 if __name__ == "__main__":
     with tempfile.TemporaryDirectory(delete=True) as tempdir:
         for diR in sorted(os.listdir("tiny_v1s")):
+            #if not diR.startswith("b"): continue
             full_dir = os.path.join("tiny_v1s", diR)
             # for file in sorted(os.listdir(full_dir)):
             for file in sorted(os.listdir(full_dir)):

@@ -26,14 +26,14 @@ FIELD	ab	Z	c	field_1131_c
 FIELD	ab	I	d	field_1130_d
 FIELD	ab	I	e	field_1129_e
 FIELD	ab	I	f	field_1128_f
-METHOD	ab	()V	a	func_783_a
+METHOD	ab	()V	a	clear
 METHOD	ab	(Lfm;)V	a	func_782_a
 CLASS	ac	TextureCompassFX
 FIELD	ac	Lnet/minecraft/client/Minecraft;	g	field_4231_g
 FIELD	ac	[I	h	field_4230_h
 FIELD	ac	D	i	field_4229_i
 FIELD	ac	D	j	field_4228_j
-METHOD	ac	()V	a	func_783_a
+METHOD	ac	()V	a	clear
 CLASS	ad	RenderItem
 FIELD	ad	Lbi;	a	field_201_d
 FIELD	ad	Ljava/util/Random;	e	field_200_e
@@ -41,7 +41,7 @@ METHOD	ad	(Lei;DDDFF)V	a	func_165_a
 METHOD	ad	(Llg;Lfm;Lfi;II)V	a	func_161_a
 METHOD	ad	(Llg;Lfm;Lfi;II)V	b	func_164_b
 METHOD	ad	(Lij;IIIII)V	a	func_162_a
-METHOD	ad	(IIIIII)V	a	func_163_a
+METHOD	ad	(IIIIII)V	a	func_139_a
 METHOD	ad	(Llk;DDDFF)V	a	func_147_a
 CLASS	ae	ItemBucket
 FIELD	ae	I	a	field_331_a
@@ -62,15 +62,15 @@ FIELD	af	I	l	field_1782_l
 METHOD	af	()Ljava/io/File;	a	getDataFolder
 METHOD	af	(Ljava/lang/String;)Ljava/io/File;	a	func_1264_a
 METHOD	af	()Lfo;	e	func_1269_e
-METHOD	af	(Ljava/lang/String;)V	b	func_1270_b
-METHOD	af	(I)V	a	func_1266_a
-METHOD	af	()V	b	func_1272_b
-METHOD	af	()V	c	func_1273_c
+METHOD	af	(Ljava/lang/String;)V	b	func_1073_b
+METHOD	af	(I)V	a	sortBack
+METHOD	af	()V	b	close
+METHOD	af	()V	c	readPacket
 METHOD	af	(II)Lkl;	a	func_1267_a
 METHOD	af	()V	run	run
 METHOD	af	(Ljava/awt/Graphics;)V	update	update
 METHOD	af	(Ljava/awt/Graphics;)V	paint	paint
-METHOD	af	()V	d	func_1265_d
+METHOD	af	()V	d	handleInput
 METHOD	af	(Ljava/awt/Graphics2D;)V	a	func_1268_a
 METHOD	af	(Ljava/awt/event/MouseEvent;)V	mouseDragged	mouseDragged
 METHOD	af	(Ljava/awt/event/MouseEvent;)V	mouseMoved	mouseMoved
@@ -89,10 +89,10 @@ METHOD	ag	(Lcu;Ljava/util/Random;III)Z	a	func_516_a
 CLASS	ah	IChunkLoader
 CLASS	ai	EntityAnimals
 METHOD	ai	(III)F	a	func_439_a
-METHOD	ai	(Lih;)V	a	writeEntityToNBT
+METHOD	ai	(Lih;)V	a	readFromNBT
 METHOD	ai	(Lih;)V	b	readEntityFromNBT
-METHOD	ai	()Z	a	func_433_a
-METHOD	ai	()I	b	func_421_b
+METHOD	ai	()Z	a	isAssigned
+METHOD	ai	()I	b	getIconIndex
 CLASS	aj	SoundPoolEntry
 FIELD	aj	Ljava/lang/String;	a	soundName
 FIELD	aj	Ljava/net/URL;	b	soundUrl
@@ -112,20 +112,20 @@ METHOD	ak	()Ljava/lang/String;	f_	func_4048_f_
 METHOD	ak	()Ljava/lang/String;	f	func_4046_f
 METHOD	ak	()I	g	getDropItemId
 METHOD	ak	()F	h	getSoundVolume
-METHOD	ak	()Z	a	func_433_a
-METHOD	ak	()I	i	func_4047_i
+METHOD	ak	()Z	a	isAssigned
+METHOD	ak	()I	i	func_4043_i
 CLASS	al	BlockRedstoneOre
 FIELD	al	Z	a	field_468_a
-METHOD	al	()I	d	func_4025_d
+METHOD	al	()I	d	getMaxDamage
 METHOD	al	(Lcu;IIILdv;)V	b	func_233_b
 METHOD	al	(Lcu;IIILlk;)V	b	func_254_a
 METHOD	al	(Lcu;IIILdv;)Z	a	blockActivated
-METHOD	al	(Lcu;III)V	h	func_320_h
+METHOD	al	(Lcu;III)V	h	func_268_h
 METHOD	al	(Lcu;IIILjava/util/Random;)V	a	func_208_a
 METHOD	al	(ILjava/util/Random;)I	a	idDropped
 METHOD	al	(Ljava/util/Random;)I	a	quantityDropped
 METHOD	al	(Lcu;IIILjava/util/Random;)V	b	func_247_b
-METHOD	al	(Lcu;III)V	i	func_319_i
+METHOD	al	(Lcu;III)V	i	func_282_i
 CLASS	am	Vec3D
 FIELD	am	Ljava/util/List;	d	vectorList
 FIELD	am	I	e	nextVector
@@ -133,7 +133,7 @@ FIELD	am	D	a	x
 FIELD	am	D	b	y
 FIELD	am	D	c	z
 METHOD	am	(DDD)Lam;	a	createVectorHelper
-METHOD	am	()V	a	initialize
+METHOD	am	()V	a	clear
 METHOD	am	(DDD)Lam;	b	createVector
 METHOD	am	(DDD)Lam;	e	setComponents
 METHOD	am	(Lam;)Lam;	a	func_1262_a
@@ -152,30 +152,30 @@ METHOD	am	(F)V	a	rotateAroundX
 METHOD	am	(F)V	b	rotateAroundY
 CLASS	an	BlockPressurePlate
 FIELD	an	Lku;	a	triggerMobType
-METHOD	an	()I	d	func_4025_d
+METHOD	an	()I	d	getMaxDamage
 METHOD	an	(Lcu;III)Lcl;	d	func_221_d
-METHOD	an	()Z	a	func_217_b
-METHOD	an	()Z	b	func_242_c
+METHOD	an	()Z	a	isAssigned
+METHOD	an	()Z	b	isFinished
 METHOD	an	(Lcu;III)Z	a	func_243_a
 METHOD	an	(Lcu;III)V	e	func_235_e
 METHOD	an	(Lcu;IIII)V	a	func_226_a
 METHOD	an	(Lcu;IIILjava/util/Random;)V	a	func_208_a
 METHOD	an	(Lcu;IIILlk;)V	a	func_236_b
-METHOD	an	(Lcu;III)V	h	func_318_h
+METHOD	an	(Lcu;III)V	h	func_268_h
 METHOD	an	(Lcu;III)V	b	func_214_b
 METHOD	an	(Lox;III)V	a	func_238_a
 METHOD	an	(Lox;IIII)Z	c	func_231_b
 METHOD	an	(Lcu;IIII)Z	c	func_228_c
-METHOD	an	()Z	e	func_209_d
-METHOD	an	()V	f	func_237_e
+METHOD	an	()Z	e	getBurning
+METHOD	an	()V	f	handleKeyboardInput
 CLASS	ao	Render
 FIELD	ao	Lmb;	b	field_191_a
 FIELD	ao	Lge;	a	field_193_d
 FIELD	ao	Lbi;	e	field_192_e
 FIELD	ao	F	c	field_190_b
 FIELD	ao	F	d	field_194_c
-METHOD	ao	(Ljava/lang/String;)V	a	func_151_a
-METHOD	ao	(Ljava/lang/String;Ljava/lang/String;)V	a	func_140_a
+METHOD	ao	(Ljava/lang/String;)V	a	handleErrorMessage
+METHOD	ao	(Ljava/lang/String;Ljava/lang/String;)V	a	setString
 METHOD	ao	(Llk;DDDF)V	a	func_148_a
 METHOD	ao	(Llk;DDDFF)V	c	func_144_c
 METHOD	ao	()Lcu;	b	func_149_b
@@ -184,14 +184,14 @@ METHOD	ao	(Lcl;DDD)V	a	func_146_a
 METHOD	ao	(Lcl;)V	a	func_142_a
 METHOD	ao	(Lmb;)V	a	func_4009_a
 METHOD	ao	(Llk;DDDFF)V	b	func_141_b
-METHOD	ao	()Llg;	a	func_4010_a
+METHOD	ao	()Llg;	a	func_1029_a
 CLASS	ap	SlotCrafting
 FIELD	ap	Lha;	c	craftMatrix
-METHOD	ap	(Lfi;)Z	a	func_4105_a
-METHOD	ap	()V	a	func_4103_a
+METHOD	ap	(Lfi;)Z	a	addItemStackToInventory
+METHOD	ap	()V	a	clear
 CLASS	aq	EntityCow
 FIELD	aq	Z	a	unusedBoolean
-METHOD	aq	(Lih;)V	a	writeEntityToNBT
+METHOD	aq	(Lih;)V	a	readFromNBT
 METHOD	aq	(Lih;)V	b	readEntityFromNBT
 METHOD	aq	()Ljava/lang/String;	d	getLivingSound
 METHOD	aq	()Ljava/lang/String;	f_	func_4048_f_
@@ -210,9 +210,9 @@ FIELD	ar	Lgx;	g	field_811_g
 FIELD	ar	I	h	field_810_h
 FIELD	ar	I	i	field_809_i
 METHOD	ar	(D)Z	a	func_384_a
-METHOD	ar	(DDDFF)V	a	func_467_a
+METHOD	ar	(DDDFF)V	a	func_4042_a
 METHOD	ar	()V	e_	func_370_e_
-METHOD	ar	(Lih;)V	a	writeEntityToNBT
+METHOD	ar	(Lih;)V	a	readFromNBT
 METHOD	ar	(Lih;)V	b	readEntityFromNBT
 METHOD	ar	(Ldv;)V	b	func_4040_b
 METHOD	ar	()F	h_	func_392_h_
@@ -237,7 +237,7 @@ METHOD	av	(Lha;)V	a	onCraftMatrixChanged
 CLASS	aw	GuiUnused
 FIELD	aw	Ljava/lang/String;	a	message1
 FIELD	aw	Ljava/lang/String;	h	message2
-METHOD	aw	()V	a	initGui
+METHOD	aw	()V	a	clear
 METHOD	aw	(IIF)V	a	drawScreen
 METHOD	aw	(CI)V	a	keyTyped
 CLASS	ax	EntityFireball
@@ -255,7 +255,7 @@ FIELD	ax	D	c	field_4154_c
 FIELD	ax	D	d	field_4153_d
 METHOD	ax	(D)Z	a	func_384_a
 METHOD	ax	()V	e_	func_370_e_
-METHOD	ax	(Lih;)V	a	writeEntityToNBT
+METHOD	ax	(Lih;)V	a	readFromNBT
 METHOD	ax	(Lih;)V	b	readEntityFromNBT
 METHOD	ax	()Z	m_	func_401_c_
 METHOD	ax	()F	j_	func_4035_j_
@@ -266,19 +266,19 @@ FIELD	ay	[F	g	field_1147_g
 FIELD	ay	[F	h	field_1146_h
 FIELD	ay	[F	i	field_1145_i
 FIELD	ay	[F	j	field_1144_j
-METHOD	ay	()V	a	func_783_a
+METHOD	ay	()V	a	clear
 CLASS	az	GuiGameOver
-METHOD	az	()V	a	initGui
+METHOD	az	()V	a	clear
 METHOD	az	(CI)V	a	keyTyped
 METHOD	az	(Lfz;)V	a	actionPerformed
 METHOD	az	(IIF)V	a	drawScreen
-METHOD	az	()Z	b	func_577_b
+METHOD	az	()Z	b	isFinished
 CLASS	b	BlockChest
 FIELD	b	Ljava/util/Random;	a	field_457_a
 METHOD	b	(Lox;IIII)I	a	func_211_a
-METHOD	b	(I)I	a	func_218_a
+METHOD	b	(I)I	a	generateDisplayLists
 METHOD	b	(Lcu;III)Z	a	func_243_a
-METHOD	b	(Lcu;III)Z	h	func_286_h
+METHOD	b	(Lcu;III)Z	h	func_263_h
 METHOD	b	(Lcu;III)V	b	func_214_b
 METHOD	b	(Lcu;IIILdv;)Z	a	blockActivated
 METHOD	b	()Liz;	a_	func_283_a_
@@ -292,15 +292,15 @@ METHOD	bc	()Llk;	c_	func_438_i
 METHOD	bc	()Ljava/lang/String;	d	getLivingSound
 METHOD	bc	()Ljava/lang/String;	f_	func_4048_f_
 METHOD	bc	()Ljava/lang/String;	f	func_4046_f
-METHOD	bc	(Llk;F)V	a	func_437_a
-METHOD	bc	(Lih;)V	a	writeEntityToNBT
+METHOD	bc	(Llk;F)V	a	func_1189_a
+METHOD	bc	(Lih;)V	a	readFromNBT
 METHOD	bc	(Lih;)V	b	readEntityFromNBT
 METHOD	bc	()I	g	getDropItemId
 CLASS	bd	GuiOptions
 FIELD	bd	Lbn;	h	parentScreen
 FIELD	bd	Ljava/lang/String;	a	screenTitle
 FIELD	bd	Lgi;	i	options
-METHOD	bd	()V	a	initGui
+METHOD	bd	()V	a	clear
 METHOD	bd	(Lfz;)V	a	actionPerformed
 METHOD	bd	(IIF)V	a	drawScreen
 CLASS	be	SpawnerAnimals
@@ -316,10 +316,10 @@ FIELD	bg	F	c	field_1679_c
 METHOD	bg	()F	b	func_1147_b
 METHOD	bg	()F	c	func_1144_c
 METHOD	bg	()Ljava/lang/String;	a	func_1146_a
-METHOD	bg	()Ljava/lang/String;	d	func_1145_d
+METHOD	bg	()Ljava/lang/String;	d	getLivingSound
 CLASS	bh	ItemFishingRod
-METHOD	bh	()Z	a	func_4017_a
-METHOD	bh	()Z	b	func_4023_b
+METHOD	bh	()Z	a	isAssigned
+METHOD	bh	()Z	b	isFinished
 METHOD	bh	(Lfi;Lcu;Ldv;)Lfi;	a	func_193_a
 CLASS	bi	RenderBlocks
 FIELD	bi	Lox;	a	field_1772_a
@@ -363,20 +363,20 @@ FIELD	bj	I	a	delay
 FIELD	bj	Ljava/lang/String;	b	entityID
 FIELD	bj	D	c	field_831_c
 FIELD	bj	D	d	field_830_d
-METHOD	bj	()Z	a	func_484_a
-METHOD	bj	()V	b	updateEntity
-METHOD	bj	()V	c	updateDelay
+METHOD	bj	()Z	a	isAssigned
+METHOD	bj	()V	b	close
+METHOD	bj	()V	c	readPacket
 METHOD	bj	(Lih;)V	a	readFromNBT
-METHOD	bj	(Lih;)V	b	writeToNBT
+METHOD	bj	(Lih;)V	b	readEntityFromNBT
 CLASS	bk	OpenGlCapsChecker
 FIELD	bk	Z	a	field_1770_a
-METHOD	bk	()Z	a	func_1213_a
+METHOD	bk	()Z	a	isAssigned
 CLASS	bl	ThreadDownloadResources
 FIELD	bl	Ljava/io/File;	a	resourcesFolder
 FIELD	bl	Lnet/minecraft/client/Minecraft;	b	mc
 FIELD	bl	Z	c	closing
 METHOD	bl	()V	run	run
-METHOD	bl	()V	a	reloadResources
+METHOD	bl	()V	a	clear
 METHOD	bl	(Ljava/io/File;Ljava/lang/String;)V	a	loadResource
 METHOD	bl	(Ljava/net/URL;Ljava/lang/String;JI)V	a	downloadAndInstallResource
 METHOD	bl	(Ljava/net/URL;Ljava/io/File;J)V	a	downloadResource
@@ -384,18 +384,18 @@ METHOD	bl	()V	b	close
 CLASS	bm	BlockRedstoneTorch
 FIELD	bm	Z	a	field_451_a
 FIELD	bm	Ljava/util/List;	b	field_450_b
-METHOD	bm	(II)I	a	func_232_a
+METHOD	bm	(II)I	a	getSlotIndex
 METHOD	bm	(Lcu;IIIZ)Z	a	func_273_a
-METHOD	bm	()I	d	func_4025_d
+METHOD	bm	()I	d	getMaxDamage
 METHOD	bm	(Lcu;III)V	e	func_235_e
 METHOD	bm	(Lcu;III)V	b	func_214_b
 METHOD	bm	(Lox;IIII)Z	c	func_231_b
-METHOD	bm	(Lcu;III)Z	h	func_4028_h
+METHOD	bm	(Lcu;III)Z	h	func_263_h
 METHOD	bm	(Lcu;IIILjava/util/Random;)V	a	func_208_a
 METHOD	bm	(Lcu;IIII)V	a	func_226_a
 METHOD	bm	(Lcu;IIII)Z	c	func_228_c
 METHOD	bm	(ILjava/util/Random;)I	a	idDropped
-METHOD	bm	()Z	e	func_209_d
+METHOD	bm	()Z	e	getBurning
 METHOD	bm	(Lcu;IIILjava/util/Random;)V	b	func_247_b
 CLASS	bn	GuiScreen
 FIELD	bn	Lnet/minecraft/client/Minecraft;	b	mc
@@ -411,17 +411,17 @@ METHOD	bn	()Ljava/lang/String;	c	getClipboardString
 METHOD	bn	(III)V	a	mouseClicked
 METHOD	bn	(III)V	b	mouseMoved
 METHOD	bn	(Lfz;)V	a	actionPerformed
-METHOD	bn	(Lnet/minecraft/client/Minecraft;II)V	a	validate
-METHOD	bn	()V	a	initGui
+METHOD	bn	(Lnet/minecraft/client/Minecraft;II)V	a	drawButton
+METHOD	bn	()V	a	clear
 METHOD	bn	()V	d	handleInput
 METHOD	bn	()V	e	handleMouseInput
 METHOD	bn	()V	f	handleKeyboardInput
-METHOD	bn	()V	g	updateScreen
+METHOD	bn	()V	g	dropAllItems
 METHOD	bn	()V	h	dispose
-METHOD	bn	()V	i	func_578_i
-METHOD	bn	(I)V	a	func_567_a
-METHOD	bn	(I)V	b	func_579_b
-METHOD	bn	()Z	b	func_577_b
+METHOD	bn	()V	i	func_111_i
+METHOD	bn	(I)V	a	sortBack
+METHOD	bn	(I)V	b	bindTexture
+METHOD	bn	()Z	b	isFinished
 METHOD	bn	(ZI)V	a	deleteWorld
 CLASS	bo	EntityPlayerSP
 FIELD	bo	Lnb;	a	field_787_a
@@ -433,32 +433,32 @@ FIELD	bo	F	d	field_4133_d
 METHOD	bo	()V	b_	func_418_b_
 METHOD	bo	()V	k	reactToSunlight
 METHOD	bo	()V	l_	func_458_k
-METHOD	bo	(IZ)V	a	func_460_a
-METHOD	bo	(Lih;)V	a	writeEntityToNBT
+METHOD	bo	(IZ)V	a	func_119_a
+METHOD	bo	(Lih;)V	a	readFromNBT
 METHOD	bo	(Lih;)V	b	readEntityFromNBT
-METHOD	bo	(Lha;)V	a	func_452_a
+METHOD	bo	(Lha;)V	a	onCraftMatrixChanged
 METHOD	bo	(Lpp;)V	a	func_4052_a
 METHOD	bo	()V	m	func_445_l
 METHOD	bo	(Llh;)V	a	func_453_a
-METHOD	bo	(Llk;)V	a	func_463_a
+METHOD	bo	(Llk;)V	a	func_1000_a
 METHOD	bo	(Llk;I)V	b	func_443_a_
 METHOD	bo	()I	n	func_4055_n
 METHOD	bo	(Llk;)V	a_	func_4054_a_
-METHOD	bo	(Ljava/lang/String;)V	a	func_461_a
+METHOD	bo	(Ljava/lang/String;)V	a	handleErrorMessage
 METHOD	bo	()V	o	func_462_n
 METHOD	bo	()Z	p	func_381_o
-METHOD	bo	()V	q	func_4039_q
+METHOD	bo	()V	q	func_104_p
 CLASS	bp	BlockMobSpawner
 METHOD	bp	()Liz;	a_	func_283_a_
 METHOD	bp	(ILjava/util/Random;)I	a	idDropped
 METHOD	bp	(Ljava/util/Random;)I	a	quantityDropped
-METHOD	bp	()Z	a	func_217_b
+METHOD	bp	()Z	a	isAssigned
 CLASS	bq	NoiseGenerator
 CLASS	br	PathEntity
 FIELD	br	[La;	b	points
 FIELD	br	I	a	pathLength
 FIELD	br	I	c	pathIndex
-METHOD	br	()V	a	incrementPathIndex
+METHOD	br	()V	a	clear
 METHOD	br	()Z	b	isFinished
 METHOD	br	(Llk;)Lam;	a	getPosition
 CLASS	bs	Packet22Collect
@@ -467,7 +467,7 @@ FIELD	bs	I	b	collectorEntityId
 METHOD	bs	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	bs	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	bs	(Lmc;)V	a	processPacket
-METHOD	bs	()I	a	getPacketSize
+METHOD	bs	()I	a	getHash
 CLASS	bt	WorldRenderer
 FIELD	bt	Lcu;	a	worldObj
 FIELD	bt	I	C	field_1744_C
@@ -501,21 +501,21 @@ FIELD	bt	Z	A	field_1747_A
 FIELD	bt	Z	E	field_1739_E
 FIELD	bt	Ljava/util/List;	B	field_1745_B
 FIELD	bt	Ljava/util/List;	F	field_1737_F
-METHOD	bt	(III)V	a	func_1197_a
-METHOD	bt	()V	g	func_1203_g
-METHOD	bt	()V	a	func_1198_a
+METHOD	bt	(III)V	a	mouseClicked
+METHOD	bt	()V	g	dropAllItems
+METHOD	bt	()V	a	clear
 METHOD	bt	(Llk;)F	a	func_1202_a
-METHOD	bt	()V	b	func_1195_b
-METHOD	bt	()V	c	func_1204_c
-METHOD	bt	(I)I	a	func_1200_a
+METHOD	bt	()V	b	close
+METHOD	bt	()V	c	readPacket
+METHOD	bt	(I)I	a	generateDisplayLists
 METHOD	bt	(Lps;)V	a	func_1199_a
-METHOD	bt	()V	d	func_1201_d
-METHOD	bt	()Z	e	func_1196_e
-METHOD	bt	()V	f	func_1194_f
+METHOD	bt	()V	d	handleInput
+METHOD	bt	()Z	e	getBurning
+METHOD	bt	()V	f	handleKeyboardInput
 CLASS	bu	EntitySheep
 FIELD	bu	Z	a	sheared
 METHOD	bu	(Llk;I)Z	a	attackEntity
-METHOD	bu	(Lih;)V	a	writeEntityToNBT
+METHOD	bu	(Lih;)V	a	readFromNBT
 METHOD	bu	(Lih;)V	b	readEntityFromNBT
 METHOD	bu	()Ljava/lang/String;	d	getLivingSound
 METHOD	bu	()Ljava/lang/String;	f_	func_4048_f_
@@ -528,19 +528,19 @@ FIELD	bw	[Ljava/util/List;	b	field_1728_b
 FIELD	bw	Lfm;	c	field_1731_c
 FIELD	bw	Ljava/util/Random;	d	rand
 METHOD	bw	(Lpc;)V	a	func_1192_a
-METHOD	bw	()V	a	func_1193_a
+METHOD	bw	()V	a	clear
 METHOD	bw	(Llk;F)V	a	func_1189_a
 METHOD	bw	(Llk;F)V	b	func_1187_b
-METHOD	bw	(Lcu;)V	a	func_1188_a
-METHOD	bw	(III)V	a	func_1186_a
-METHOD	bw	(IIII)V	a	func_1191_a
-METHOD	bw	()Ljava/lang/String;	b	func_1190_b
+METHOD	bw	(Lcu;)V	a	setWorld
+METHOD	bw	(III)V	a	mouseClicked
+METHOD	bw	(IIII)V	a	hitBlock
+METHOD	bw	()Ljava/lang/String;	b	getKey
 CLASS	bx	BlockLadder
 METHOD	bx	(Lcu;III)Lcl;	d	func_221_d
 METHOD	bx	(Lcu;III)Lcl;	f	func_246_f
-METHOD	bx	()Z	a	func_217_b
-METHOD	bx	()Z	b	func_242_c
-METHOD	bx	()I	g	func_210_f
+METHOD	bx	()Z	a	isAssigned
+METHOD	bx	()Z	b	isFinished
+METHOD	bx	()I	g	getDropItemId
 METHOD	bx	(Lcu;III)Z	a	func_243_a
 METHOD	bx	(Lcu;IIII)V	d	func_258_d
 METHOD	bx	(Lcu;IIII)V	a	func_226_a
@@ -553,8 +553,8 @@ FIELD	by	I	a	field_322_a
 METHOD	by	(Lfi;Lne;)F	a	getStrVsBlock
 METHOD	by	(Lfi;Lgx;)V	a	func_4021_a
 METHOD	by	(Lfi;IIII)V	a	hitBlock
-METHOD	by	(Llk;)I	a	func_4020_a
-METHOD	by	()Z	a	func_4017_a
+METHOD	by	(Llk;)I	a	getDamageVsEntity
+METHOD	by	()Z	a	isAssigned
 CLASS	bz	ClippingHelper
 FIELD	bz	[[F	a	field_1688_a
 FIELD	bz	[F	b	field_1687_b
@@ -562,7 +562,7 @@ FIELD	bz	[F	c	field_1690_c
 FIELD	bz	[F	d	field_1689_d
 METHOD	bz	(DDDDDD)Z	a	func_1152_a
 CLASS	c	BlockOreBlock
-METHOD	c	(I)I	a	func_218_a
+METHOD	c	(I)I	a	generateDisplayLists
 CLASS	ca	RenderPlayer
 FIELD	ca	Lcy;	a	field_209_f
 FIELD	ca	Lcy;	g	field_208_g
@@ -572,7 +572,7 @@ METHOD	ca	(Ldv;I)Z	a	func_187_a
 METHOD	ca	(Ldv;DDDFF)V	a	func_188_a
 METHOD	ca	(Ldv;F)V	a	func_4015_a
 METHOD	ca	(Ldv;F)V	b	func_186_b
-METHOD	ca	()V	b	func_185_b
+METHOD	ca	()V	b	close
 METHOD	ca	(Lgx;F)V	a	func_168_a
 METHOD	ca	(Lgx;I)Z	a	func_166_a
 METHOD	ca	(Lgx;F)V	b	func_174_b
@@ -587,7 +587,7 @@ FIELD	cb	I	a	resultId
 METHOD	cb	([I)Z	a	matches
 METHOD	cb	([IIIZ)Z	a	matches
 METHOD	cb	([I)Lfi;	b	createResult
-METHOD	cb	()I	a	getRecipeSize
+METHOD	cb	()I	a	getHash
 CLASS	cc	RenderPainting
 FIELD	cc	Ljava/util/Random;	a	rand
 METHOD	cc	(Lke;DDDFF)V	a	func_158_a
@@ -614,10 +614,10 @@ FIELD	cf	I	h	chunkSize
 METHOD	cf	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	cf	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	cf	(Lmc;)V	a	processPacket
-METHOD	cf	()I	a	getPacketSize
+METHOD	cf	()I	a	getHash
 CLASS	cg	ModelPig
 CLASS	ch	ModelZombie
-METHOD	ch	(FFFFFF)V	a	func_863_a
+METHOD	ch	(FFFFFF)V	a	func_213_a
 CLASS	ci	ThreadDownloadImageData
 FIELD	ci	Ljava/awt/image/BufferedImage;	a	image
 FIELD	ci	I	b	field_1705_b
@@ -644,7 +644,7 @@ FIELD	cl	D	d	field_1703_d
 FIELD	cl	D	e	field_1702_e
 FIELD	cl	D	f	field_1701_f
 METHOD	cl	(DDDDDD)Lcl;	a	func_1168_a
-METHOD	cl	()V	a	func_4149_a
+METHOD	cl	()V	a	clear
 METHOD	cl	(DDDDDD)Lcl;	b	func_1161_b
 METHOD	cl	(DDDDDD)Lcl;	c	func_1165_c
 METHOD	cl	(DDD)Lcl;	a	func_1170_a
@@ -655,7 +655,7 @@ METHOD	cl	(Lcl;D)D	b	func_1172_b
 METHOD	cl	(Lcl;D)D	c	func_1162_c
 METHOD	cl	(Lcl;)Z	a	func_1178_a
 METHOD	cl	(DDD)Lcl;	d	func_1174_d
-METHOD	cl	(Lam;)Z	a	func_4150_a
+METHOD	cl	(Lam;)Z	a	func_244_a
 METHOD	cl	()D	b	func_1164_b
 METHOD	cl	()Lcl;	c	func_1160_c
 METHOD	cl	(Lam;Lam;)Lnl;	a	func_1169_a
@@ -670,27 +670,27 @@ METHOD	cm	(Ljava/util/Random;)Ljava/lang/String;	b	func_531_b
 CLASS	cn	Packet13PlayerLookMove
 METHOD	cn	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	cn	(Ljava/io/DataOutputStream;)V	a	writePacketData
-METHOD	cn	()I	a	getPacketSize
+METHOD	cn	()I	a	getHash
 CLASS	co	ChunkCache
 FIELD	co	I	a	field_1060_a
 FIELD	co	I	b	field_1059_b
 FIELD	co	[[Lgs;	c	field_1062_c
 FIELD	co	Lcu;	d	worldObj
-METHOD	co	(III)I	a	getBlockId
+METHOD	co	(III)I	a	getBlockID
 METHOD	co	(III)Liz;	b	func_603_b
 METHOD	co	(III)F	c	func_598_c
 METHOD	co	(III)I	d	func_4086_d
-METHOD	co	(IIIZ)I	a	func_716_a
-METHOD	co	(III)I	e	getBlockMetadata
+METHOD	co	(IIIZ)I	a	func_699_a
+METHOD	co	(III)I	e	getBlockMetadata_e
 METHOD	co	(III)Lgt;	f	getBlockMaterial
 METHOD	co	(III)Z	g	func_601_g
 METHOD	co	()Lpb;	a	func_4075_a
 CLASS	cp	GuiConnectFailed
 FIELD	cp	Ljava/lang/String;	a	errorMessage
 FIELD	cp	Ljava/lang/String;	h	errorDetail
-METHOD	cp	()V	g	updateScreen
+METHOD	cp	()V	g	dropAllItems
 METHOD	cp	(CI)V	a	keyTyped
-METHOD	cp	()V	a	initGui
+METHOD	cp	()V	a	clear
 METHOD	cp	(Lfz;)V	a	actionPerformed
 METHOD	cp	(IIF)V	a	drawScreen
 CLASS	cq	ChunkProviderIso
@@ -698,24 +698,24 @@ FIELD	cq	[Lgs;	b	chunks
 FIELD	cq	Lcu;	c	worldObj
 FIELD	cq	Lah;	d	field_900_d
 FIELD	cq	[B	a	field_899_a
-METHOD	cq	(II)Z	a	func_537_a
+METHOD	cq	(II)Z	a	isAtCursorPos
 METHOD	cq	(II)Lgs;	b	func_533_b
-METHOD	cq	(II)Lgs;	c	func_543_c
+METHOD	cq	(II)Lgs;	c	func_542_c
 METHOD	cq	(Lbb;II)V	a	populate
 METHOD	cq	(ZLph;)Z	a	func_535_a
-METHOD	cq	()Z	a	func_532_a
-METHOD	cq	()Z	b	func_536_b
+METHOD	cq	()Z	a	isAssigned
+METHOD	cq	()Z	b	isFinished
 CLASS	cr	ModelBoat
 FIELD	cr	[Ljp;	a	field_1287_a
 METHOD	cr	(FFFFFF)V	b	func_864_b
-METHOD	cr	(FFFFFF)V	a	func_863_a
+METHOD	cr	(FFFFFF)V	a	func_213_a
 CLASS	cs	BlockObsidian
 METHOD	cs	(Ljava/util/Random;)I	a	quantityDropped
 METHOD	cs	(ILjava/util/Random;)I	a	idDropped
 CLASS	ct	BlockPumpkin
 FIELD	ct	Z	a	field_4072_a
-METHOD	ct	(II)I	a	func_232_a
-METHOD	ct	(I)I	a	func_218_a
+METHOD	ct	(II)I	a	getSlotIndex
+METHOD	ct	(I)I	a	generateDisplayLists
 METHOD	ct	(Lcu;III)V	e	func_235_e
 METHOD	ct	(Lcu;III)Z	a	func_243_a
 METHOD	ct	(Lcu;IIILgx;)V	a	func_4026_a
@@ -764,31 +764,31 @@ METHOD	cu	(Ljava/io/File;Ljava/lang/String;)V	b	deleteWorld
 METHOD	cu	([Ljava/io/File;)V	a	deleteFiles
 METHOD	cu	()Lpb;	a	func_4075_a
 METHOD	cu	(Ljava/io/File;)Lbb;	a	func_4081_a
-METHOD	cu	()V	b	func_4076_b
-METHOD	cu	(II)I	a	func_614_g
-METHOD	cu	()V	c	func_4077_c
-METHOD	cu	(Ldv;)V	a	func_608_a
+METHOD	cu	()V	b	close
+METHOD	cu	(II)I	a	getSlotIndex
+METHOD	cu	()V	c	readPacket
+METHOD	cu	(Ldv;)V	a	onCraftGuiClosed
 METHOD	cu	(ZLph;)V	a	func_639_a
-METHOD	cu	()V	o	func_669_m
-METHOD	cu	(I)Z	a	func_650_a
-METHOD	cu	(III)I	a	getBlockId
+METHOD	cu	()V	o	func_462_n
+METHOD	cu	(I)Z	a	func_1219_a
+METHOD	cu	(III)I	a	getBlockID
 METHOD	cu	(III)Z	d	func_630_d
 METHOD	cu	(IIIIII)Z	a	func_640_a
 METHOD	cu	(II)Z	g	func_620_h
-METHOD	cu	(II)Lgs;	b	func_673_a
-METHOD	cu	(II)Lgs;	c	func_704_b
-METHOD	cu	(IIIII)Z	a	func_643_a
-METHOD	cu	(IIII)Z	a	func_634_a
+METHOD	cu	(II)Lgs;	b	func_533_b
+METHOD	cu	(II)Lgs;	c	func_542_c
+METHOD	cu	(IIIII)Z	a	func_1010_a
+METHOD	cu	(IIII)Z	a	func_1022_a
 METHOD	cu	(III)Lgt;	f	getBlockMaterial
-METHOD	cu	(III)I	e	getBlockMetadata
-METHOD	cu	(IIII)V	b	func_691_b
+METHOD	cu	(III)I	e	getBlockMetadata_e
+METHOD	cu	(IIII)V	b	setBlockMetadata
 METHOD	cu	(IIII)Z	c	setBlockMetadata
 METHOD	cu	(IIII)Z	d	func_690_d
 METHOD	cu	(IIIII)Z	b	func_688_b
 METHOD	cu	(III)V	h	func_665_h
 METHOD	cu	(IIII)V	e	func_617_e
 METHOD	cu	(IIII)V	f	func_680_f
-METHOD	cu	(IIIIII)V	b	func_701_b
+METHOD	cu	(IIIIII)V	b	func_550_b
 METHOD	cu	(IIII)V	g	func_611_g
 METHOD	cu	(IIII)V	l	func_655_l
 METHOD	cu	(III)Z	i	func_647_i
@@ -796,59 +796,59 @@ METHOD	cu	(III)I	j	func_618_j
 METHOD	cu	(IIIZ)I	a	func_699_a
 METHOD	cu	(III)Z	k	func_708_k
 METHOD	cu	(II)I	d	func_666_c
-METHOD	cu	(Lce;IIII)V	a	func_4078_a
-METHOD	cu	(Lce;III)I	a	func_641_a
+METHOD	cu	(Lce;IIII)V	a	func_1011_a
+METHOD	cu	(Lce;III)I	a	func_1025_a
 METHOD	cu	(Lce;IIII)V	b	func_664_b
 METHOD	cu	(III)F	c	func_598_c
-METHOD	cu	()Z	d	func_624_b
-METHOD	cu	(Lam;Lam;)Lnl;	a	func_645_a
+METHOD	cu	()Z	d	func_4089_d
+METHOD	cu	(Lam;Lam;)Lnl;	a	func_1169_a
 METHOD	cu	(Lam;Lam;Z)Lnl;	a	func_642_a
 METHOD	cu	(Llk;Ljava/lang/String;FF)V	a	func_623_a
 METHOD	cu	(DDDLjava/lang/String;FF)V	a	playSoundEffect
-METHOD	cu	(Ljava/lang/String;III)V	a	func_670_a
+METHOD	cu	(Ljava/lang/String;III)V	a	drawStringWithShadow
 METHOD	cu	(Ljava/lang/String;DDDDDD)V	a	func_694_a
 METHOD	cu	(Llk;)Z	a	entityJoinedWorld
-METHOD	cu	(Llk;)V	b	func_606_b
+METHOD	cu	(Llk;)V	b	onDeath
 METHOD	cu	(Llk;)V	c	func_678_c
 METHOD	cu	(Llk;)V	d	func_607_d
 METHOD	cu	(Ljk;)V	a	func_613_a
 METHOD	cu	(Ljk;)V	b	func_672_b
 METHOD	cu	(Llk;Lcl;)Ljava/util/List;	a	func_697_a
-METHOD	cu	(F)I	a	func_671_a
+METHOD	cu	(F)I	a	func_4126_a
 METHOD	cu	(Llk;F)Lam;	a	func_4079_a
-METHOD	cu	(F)F	b	func_619_c
+METHOD	cu	(F)F	b	func_1114_b
 METHOD	cu	(F)Lam;	c	func_628_d
 METHOD	cu	(F)Lam;	d	func_4082_d
 METHOD	cu	(II)I	e	func_4083_e
 METHOD	cu	(II)I	f	func_696_e
-METHOD	cu	(F)F	e	func_679_f
+METHOD	cu	(F)F	e	abs
 METHOD	cu	(IIII)V	h	func_681_h
-METHOD	cu	()V	e	func_633_c
+METHOD	cu	()V	e	handleMouseInput
 METHOD	cu	(Llk;)V	e	func_667_e
 METHOD	cu	(Llk;Z)V	a	func_4084_a
-METHOD	cu	(Lcl;)Z	a	func_604_a
+METHOD	cu	(Lcl;)Z	a	func_1178_a
 METHOD	cu	(Lcl;)Z	b	func_662_b
 METHOD	cu	(Lcl;)Z	c	func_605_c
 METHOD	cu	(Lcl;Lgt;Llk;)Z	a	func_682_a
 METHOD	cu	(Lcl;Lgt;)Z	a	func_689_a
 METHOD	cu	(Lcl;Lgt;)Z	b	func_707_b
-METHOD	cu	(Llk;DDDF)V	a	func_676_a
+METHOD	cu	(Llk;DDDF)V	a	func_148_a
 METHOD	cu	(Lam;Lcl;)F	a	func_675_a
 METHOD	cu	(IIII)V	i	func_612_i
 METHOD	cu	(Ljava/lang/Class;)Llk;	a	func_4085_a
-METHOD	cu	()Ljava/lang/String;	f	func_687_d
+METHOD	cu	()Ljava/lang/String;	f	func_4046_f
 METHOD	cu	(III)Liz;	b	func_603_b
-METHOD	cu	(IIILiz;)V	a	func_654_a
+METHOD	cu	(IIILiz;)V	a	func_1005_a
 METHOD	cu	(III)V	l	func_692_l
 METHOD	cu	(III)Z	g	func_601_g
 METHOD	cu	(Lph;)V	a	func_651_a
 METHOD	cu	()Z	g	func_638_e
 METHOD	cu	(Lce;IIIIII)V	a	func_616_a
 METHOD	cu	(Lce;IIIIIIZ)V	a	func_627_a
-METHOD	cu	()V	h	func_644_f
-METHOD	cu	()V	i	func_649_g
-METHOD	cu	()V	j	func_4080_j
-METHOD	cu	(Z)Z	a	func_700_a
+METHOD	cu	()V	h	dispose
+METHOD	cu	()V	i	func_111_i
+METHOD	cu	()V	j	initGui2
+METHOD	cu	(Z)Z	a	func_1012_a
 METHOD	cu	(III)V	m	func_677_m
 METHOD	cu	(Llk;Lcl;)Ljava/util/List;	b	func_659_b
 METHOD	cu	(Ljava/lang/Class;Lcl;)Ljava/util/List;	a	func_657_a
@@ -859,8 +859,8 @@ METHOD	cu	(Ljava/util/List;)V	a	func_636_a
 METHOD	cu	(Ljava/util/List;)V	b	func_632_b
 METHOD	cu	()V	l	func_656_j
 METHOD	cu	(IIIIZ)Z	a	func_695_a
-METHOD	cu	(Llk;Llk;F)Lbr;	a	func_702_a
-METHOD	cu	(Llk;IIIF)Lbr;	a	func_637_a
+METHOD	cu	(Llk;Llk;F)Lbr;	a	createEntityPathTo
+METHOD	cu	(Llk;IIIF)Lbr;	a	createEntityPathTo
 METHOD	cu	(IIII)Z	j	func_668_j
 METHOD	cu	(III)Z	n	func_646_n
 METHOD	cu	(IIII)Z	k	func_706_k
@@ -868,10 +868,10 @@ METHOD	cu	(III)Z	o	func_625_o
 METHOD	cu	(Llk;D)Ldv;	a	func_609_a
 METHOD	cu	(DDDD)Ldv;	a	func_683_a
 METHOD	cu	(IIIIII[B)V	a	func_693_a
-METHOD	cu	()V	m	func_660_k
+METHOD	cu	()V	m	func_445_l
 METHOD	cu	()V	n	func_663_l
 METHOD	cu	(J)V	a	setWorldTime
-METHOD	cu	(Llk;)V	f	func_705_f
+METHOD	cu	(Llk;)V	f	func_380_f
 CLASS	cv	IMobs
 CLASS	cw	RenderBoat
 FIELD	cw	Lge;	a	field_198_d
@@ -879,7 +879,7 @@ METHOD	cw	(Ldk;DDDFF)V	a	func_157_a
 METHOD	cw	(Llk;DDDFF)V	a	func_147_a
 CLASS	cx	EntityLavaFX
 FIELD	cx	F	a	field_674_a
-METHOD	cx	(F)F	a	func_382_a
+METHOD	cx	(F)F	a	func_1106_a
 METHOD	cx	(Lij;FFFFFF)V	a	func_406_a
 METHOD	cx	()V	e_	func_370_e_
 CLASS	cy	ModelBiped
@@ -894,9 +894,9 @@ FIELD	cy	Z	h	field_1279_h
 FIELD	cy	Z	i	field_1278_i
 FIELD	cy	Z	j	field_1277_j
 METHOD	cy	(FFFFFF)V	b	func_864_b
-METHOD	cy	(FFFFFF)V	a	func_863_a
+METHOD	cy	(FFFFFF)V	a	func_213_a
 CLASS	cz	BlockWorkbench
-METHOD	cz	(I)I	a	func_218_a
+METHOD	cz	(I)I	a	generateDisplayLists
 METHOD	cz	(Lcu;IIILdv;)Z	a	blockActivated
 CLASS	d	RenderGlobal
 FIELD	d	Ljava/util/List;	a	field_1458_a
@@ -944,36 +944,36 @@ FIELD	d	D	g	field_1452_g
 FIELD	d	D	h	field_1451_h
 FIELD	d	F	i	field_1450_i
 FIELD	d	I	j	field_1449_j
-METHOD	d	()V	f	func_950_f
-METHOD	d	(Lcu;)V	a	func_946_a
-METHOD	d	()V	a	func_958_a
+METHOD	d	()V	f	handleKeyboardInput
+METHOD	d	(Lcu;)V	a	setWorld
+METHOD	d	()V	a	clear
 METHOD	d	(Lam;Lps;F)V	a	func_951_a
-METHOD	d	()Ljava/lang/String;	b	func_953_b
-METHOD	d	()Ljava/lang/String;	c	func_957_c
-METHOD	d	(III)V	b	func_956_b
+METHOD	d	()Ljava/lang/String;	b	getKey
+METHOD	d	()Ljava/lang/String;	c	getClipboardString
+METHOD	d	(III)V	b	mouseMoved
 METHOD	d	(Ldv;ID)I	a	func_943_a
-METHOD	d	(II)V	a	func_962_a
+METHOD	d	(II)V	a	mouseReleased
 METHOD	d	(IIID)I	a	func_952_a
 METHOD	d	(ID)V	a	func_944_a
-METHOD	d	()V	d	func_945_d
-METHOD	d	(F)V	a	func_4142_a
-METHOD	d	(F)V	b	func_4141_b
-METHOD	d	(F)V	c	func_961_c
+METHOD	d	()V	d	handleInput
+METHOD	d	(F)V	a	rotateAroundX
+METHOD	d	(F)V	b	rotateAroundY
+METHOD	d	(F)V	c	fall
 METHOD	d	(Ldv;Z)Z	a	func_948_a
 METHOD	d	(Ldv;Lnl;ILfi;F)V	a	func_959_a
 METHOD	d	(Ldv;Lnl;ILfi;F)V	b	func_955_b
-METHOD	d	(Lcl;)V	a	func_942_a
-METHOD	d	(IIIIII)V	a	func_949_a
-METHOD	d	(III)V	a	func_934_a
-METHOD	d	(IIIIII)V	b	func_937_b
+METHOD	d	(Lcl;)V	a	func_142_a
+METHOD	d	(IIIIII)V	a	func_139_a
+METHOD	d	(III)V	a	mouseClicked
+METHOD	d	(IIIIII)V	b	func_550_b
 METHOD	d	(Lps;F)V	a	func_960_a
-METHOD	d	(Ljava/lang/String;III)V	a	func_933_a
+METHOD	d	(Ljava/lang/String;III)V	a	drawStringWithShadow
 METHOD	d	(Ljava/lang/String;DDDFF)V	a	func_940_a
-METHOD	d	(Ljava/lang/String;DDDDDD)V	a	func_939_a
-METHOD	d	(Llk;)V	a	func_941_a
-METHOD	d	(Llk;)V	b	func_938_b
-METHOD	d	()V	e	func_936_e
-METHOD	d	(IIILiz;)V	a	func_935_a
+METHOD	d	(Ljava/lang/String;DDDDDD)V	a	func_694_a
+METHOD	d	(Llk;)V	a	func_1000_a
+METHOD	d	(Llk;)V	b	onDeath
+METHOD	d	()V	e	handleMouseInput
+METHOD	d	(IIILiz;)V	a	func_1005_a
 CLASS	da	BlockGlass
 METHOD	da	(Ljava/util/Random;)I	a	quantityDropped
 CLASS	db	WorldGenMinable
@@ -981,7 +981,7 @@ FIELD	db	I	a	field_884_a
 FIELD	db	I	b	field_883_b
 METHOD	db	(Lcu;Ljava/util/Random;III)Z	a	func_516_a
 CLASS	dc	BlockJukeBox
-METHOD	dc	(I)I	a	func_218_a
+METHOD	dc	(I)I	a	generateDisplayLists
 METHOD	dc	(Lcu;IIILdv;)Z	a	blockActivated
 METHOD	dc	(Lcu;IIII)V	e	func_317_e
 METHOD	dc	(Lcu;IIIIF)V	a	func_216_a
@@ -991,8 +991,8 @@ METHOD	dd	()Ljava/lang/String;	d	getLivingSound
 METHOD	dd	()Ljava/lang/String;	f_	func_4048_f_
 METHOD	dd	()Ljava/lang/String;	f	func_4046_f
 METHOD	dd	()V	k	reactToSunlight
-METHOD	dd	(Llk;F)V	a	func_437_a
-METHOD	dd	(Lih;)V	a	writeEntityToNBT
+METHOD	dd	(Llk;F)V	a	func_1189_a
+METHOD	dd	(Lih;)V	a	readFromNBT
 METHOD	dd	(Lih;)V	b	readEntityFromNBT
 METHOD	dd	()I	g	getDropItemId
 METHOD	dd	()Lfi;	l	func_4045_l
@@ -1003,12 +1003,12 @@ FIELD	df	[Ljava/lang/String;	a	field_4187_a
 FIELD	df	[[Llf;	i	logoEffects
 FIELD	df	F	j	updateCounter
 FIELD	df	Ljava/lang/String;	l	splashString
-METHOD	df	()V	g	updateScreen
+METHOD	df	()V	g	dropAllItems
 METHOD	df	(CI)V	a	keyTyped
-METHOD	df	()V	a	initGui
+METHOD	df	()V	a	clear
 METHOD	df	(Lfz;)V	a	actionPerformed
 METHOD	df	(IIF)V	a	drawScreen
-METHOD	df	(F)V	a	func_4068_a
+METHOD	df	(F)V	a	rotateAroundX
 METHOD	df	()Ljava/util/Random;	j	getRand
 CLASS	dg	MapGenBase
 FIELD	dg	I	a	field_1306_a
@@ -1046,7 +1046,7 @@ METHOD	dk	(Llk;I)Z	a	attackEntity
 METHOD	dk	()Z	m_	func_401_c_
 METHOD	dk	()V	e_	func_370_e_
 METHOD	dk	()V	i_	func_366_i_
-METHOD	dk	(Lih;)V	a	writeEntityToNBT
+METHOD	dk	(Lih;)V	a	readFromNBT
 METHOD	dk	(Lih;)V	b	readEntityFromNBT
 METHOD	dk	()F	h_	func_392_h_
 METHOD	dk	(Ldv;)Z	a	interact
@@ -1055,21 +1055,21 @@ FIELD	dl	I	a	field_764_a
 FIELD	dl	I	b	field_763_b
 FIELD	dl	I	c	field_766_c
 FIELD	dl	I	d	field_765_d
-METHOD	dl	(Lih;)V	a	writeEntityToNBT
+METHOD	dl	(Lih;)V	a	readFromNBT
 METHOD	dl	(Lih;)V	b	readEntityFromNBT
 METHOD	dl	()V	b_	func_418_b_
 METHOD	dl	()Ljava/lang/String;	f_	func_4048_f_
 METHOD	dl	()Ljava/lang/String;	f	func_4046_f
 METHOD	dl	(Llk;)V	b	onDeath
-METHOD	dl	(Llk;F)V	a	func_437_a
-METHOD	dl	(F)F	b	func_440_b
+METHOD	dl	(Llk;F)V	a	func_1189_a
+METHOD	dl	(F)F	b	func_1114_b
 METHOD	dl	()I	g	getDropItemId
 CLASS	dm	GuiChat
 FIELD	dm	Ljava/lang/String;	a	message
 FIELD	dm	I	h	updateCounter
-METHOD	dm	()V	a	initGui
+METHOD	dm	()V	a	clear
 METHOD	dm	()V	h	dispose
-METHOD	dm	()V	g	updateScreen
+METHOD	dm	()V	g	dropAllItems
 METHOD	dm	(CI)V	a	keyTyped
 METHOD	dm	(IIF)V	a	drawScreen
 METHOD	dm	(III)V	a	mouseClicked
@@ -1080,7 +1080,7 @@ FIELD	do	Ljava/util/List;	a	displayLists
 FIELD	do	Ljava/util/List;	b	textureNames
 METHOD	do	(I)I	a	generateDisplayLists
 METHOD	do	(Ljava/nio/IntBuffer;)V	a	generateTextureNames
-METHOD	do	()V	a	deleteTexturesAndDisplayLists
+METHOD	do	()V	a	clear
 METHOD	do	(I)Ljava/nio/ByteBuffer;	b	getDirectByteBuffer
 METHOD	do	(I)Ljava/nio/IntBuffer;	c	getDirectIntBuffer
 METHOD	do	(I)Ljava/nio/FloatBuffer;	d	getDirectFloatBuffer
@@ -1088,8 +1088,8 @@ CLASS	dp	GuiDownloadTerrain
 FIELD	dp	Lht;	a	netHandler
 FIELD	dp	I	h	updateCounter
 METHOD	dp	(CI)V	a	keyTyped
-METHOD	dp	()V	a	initGui
-METHOD	dp	()V	g	updateScreen
+METHOD	dp	()V	a	clear
+METHOD	dp	()V	g	dropAllItems
 METHOD	dp	(Lfz;)V	a	actionPerformed
 METHOD	dp	(IIF)V	a	drawScreen
 CLASS	dq	BlockSand
@@ -1097,8 +1097,8 @@ FIELD	dq	Z	a	field_466_a
 METHOD	dq	(Lcu;III)V	e	func_235_e
 METHOD	dq	(Lcu;IIII)V	a	func_226_a
 METHOD	dq	(Lcu;IIILjava/util/Random;)V	a	func_208_a
-METHOD	dq	(Lcu;III)V	h	func_315_h
-METHOD	dq	()I	d	func_4025_d
+METHOD	dq	(Lcu;III)V	h	func_268_h
+METHOD	dq	()I	d	getMaxDamage
 METHOD	dq	(Lcu;III)Z	b_	func_316_a_
 CLASS	dr	Item
 FIELD	dr	Ljava/util/Random;	b	field_4015_b
@@ -1214,12 +1214,12 @@ METHOD	dr	()I	c	getItemStackLimit
 METHOD	dr	()I	d	getMaxDamage
 METHOD	dr	(Lfi;Lgx;)V	a	func_4021_a
 METHOD	dr	(Lfi;IIII)V	a	hitBlock
-METHOD	dr	(Llk;)I	a	func_4020_a
+METHOD	dr	(Llk;)I	a	getDamageVsEntity
 METHOD	dr	(Lne;)Z	a	func_4018_a
 METHOD	dr	(Lfi;Lgx;)V	b	func_4019_b
 METHOD	dr	()Ldr;	e	func_4016_e
-METHOD	dr	()Z	a	func_4017_a
-METHOD	dr	()Z	b	func_4023_b
+METHOD	dr	()Z	a	isAssigned
+METHOD	dr	()Z	b	isFinished
 CLASS	ds	RenderFallingSand
 FIELD	ds	Lbi;	a	field_197_d
 METHOD	ds	(Lft;DDDFF)V	a	func_156_a
@@ -1227,12 +1227,12 @@ METHOD	ds	(Llk;DDDFF)V	a	func_147_a
 CLASS	dt	Slot
 FIELD	dt	I	a	slotIndex
 FIELD	dt	Lha;	b	inventory
-METHOD	dt	()V	a	func_4103_a
-METHOD	dt	(Lfi;)Z	a	func_4105_a
+METHOD	dt	()V	a	clear
+METHOD	dt	(Lfi;)Z	a	addItemStackToInventory
 METHOD	dt	()Lfi;	b	getStack
 METHOD	dt	(Lfi;)V	b	putStack
-METHOD	dt	()I	c	func_775_c
-METHOD	dt	()V	d	func_779_d
+METHOD	dt	()I	c	getItemStackLimit
+METHOD	dt	()V	d	handleInput
 METHOD	dt	()I	e	func_4104_e
 CLASS	du	Session
 FIELD	du	Ljava/util/List;	a	field_1667_a
@@ -1255,23 +1255,23 @@ METHOD	dv	()V	r	func_350_p
 METHOD	dv	()V	s	func_374_q
 METHOD	dv	()V	b_	func_418_b_
 METHOD	dv	()V	k	reactToSunlight
-METHOD	dv	(Llk;)V	h	func_451_h
+METHOD	dv	(Llk;)V	h	func_4049_h
 METHOD	dv	()I	t	func_4053_t
 METHOD	dv	(Llk;)V	b	onDeath
 METHOD	dv	(Llk;I)V	c	func_364_b
-METHOD	dv	(Lfi;)V	a	func_449_a
+METHOD	dv	(Lfi;)V	a	func_4132_a
 METHOD	dv	(Lfi;Z)V	a	func_444_a
 METHOD	dv	(Lei;)V	a	func_446_a
-METHOD	dv	(Lne;)F	a	func_450_a
-METHOD	dv	(Lne;)Z	b	func_454_b
+METHOD	dv	(Lne;)F	a	getStrVsBlock
+METHOD	dv	(Lne;)Z	b	canHarvestBlock
 METHOD	dv	(Lih;)V	b	readEntityFromNBT
-METHOD	dv	(Lih;)V	a	writeEntityToNBT
-METHOD	dv	(Lha;)V	a	func_452_a
+METHOD	dv	(Lih;)V	a	readFromNBT
+METHOD	dv	(Lha;)V	a	onCraftMatrixChanged
 METHOD	dv	()V	m	func_445_l
 METHOD	dv	(Llk;I)V	b	func_443_a_
 METHOD	dv	()F	u	func_373_s
 METHOD	dv	(Llk;I)Z	a	attackEntity
-METHOD	dv	(I)V	a	func_4044_a
+METHOD	dv	(I)V	a	sortBack
 METHOD	dv	(Llh;)V	a	func_453_a
 METHOD	dv	(Lpp;)V	a	func_4052_a
 METHOD	dv	(Llk;)V	a_	func_4054_a_
@@ -1301,7 +1301,7 @@ FIELD	dx	I	e	direction
 METHOD	dx	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	dx	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	dx	(Lmc;)V	a	processPacket
-METHOD	dx	()I	a	getPacketSize
+METHOD	dx	()I	a	getHash
 CLASS	dy	EntityExplodeFX
 METHOD	dy	(Lij;FFFFFF)V	a	func_406_a
 METHOD	dy	()V	e_	func_370_e_
@@ -1311,11 +1311,11 @@ METHOD	dz	()V	k	reactToSunlight
 METHOD	dz	()V	e_	func_370_e_
 METHOD	dz	()Llk;	c_	func_438_i
 METHOD	dz	(Llk;I)Z	a	attackEntity
-METHOD	dz	(Llk;F)V	a	func_437_a
+METHOD	dz	(Llk;F)V	a	func_1189_a
 METHOD	dz	(III)F	a	func_439_a
-METHOD	dz	(Lih;)V	a	writeEntityToNBT
+METHOD	dz	(Lih;)V	a	readFromNBT
 METHOD	dz	(Lih;)V	b	readEntityFromNBT
-METHOD	dz	()Z	a	func_433_a
+METHOD	dz	()Z	a	isAssigned
 CLASS	e	RenderCreeper
 METHOD	e	(Ldl;F)V	a	func_184_a
 METHOD	e	(Ldl;FF)I	a	func_183_a
@@ -1324,9 +1324,9 @@ METHOD	e	(Lgx;FF)I	a	func_173_a
 CLASS	ea	RecipesTools
 FIELD	ea	[[Ljava/lang/String;	a	field_1665_a
 FIELD	ea	[[Ljava/lang/Object;	b	field_1664_b
-METHOD	ea	(Leh;)V	a	func_1122_a
+METHOD	ea	(Leh;)V	a	func_1051_a
 CLASS	eb	BlockBookshelf
-METHOD	eb	(I)I	a	func_218_a
+METHOD	eb	(I)I	a	generateDisplayLists
 METHOD	eb	(Ljava/util/Random;)I	a	quantityDropped
 CLASS	ec	WorldChunkManagerHell
 FIELD	ec	Lfy;	e	field_4201_e
@@ -1345,13 +1345,13 @@ FIELD	ee	J	a	time
 METHOD	ee	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	ee	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	ee	(Lmc;)V	a	processPacket
-METHOD	ee	()I	a	getPacketSize
+METHOD	ee	()I	a	getHash
 CLASS	ef	ModelCow
 FIELD	ef	Ljp;	a	field_1268_a
 FIELD	ef	Ljp;	b	field_1267_b
 FIELD	ef	Ljp;	c	field_1269_c
 METHOD	ef	(FFFFFF)V	b	func_864_b
-METHOD	ef	(FFFFFF)V	a	func_863_a
+METHOD	ef	(FFFFFF)V	a	func_213_a
 CLASS	eg	ScreenShotHelper
 FIELD	eg	Ljava/text/DateFormat;	a	field_4287_a
 FIELD	eg	Ljava/nio/ByteBuffer;	b	field_4286_b
@@ -1376,7 +1376,7 @@ METHOD	ei	()Z	g_	func_397_g_
 METHOD	ei	(DDD)Z	g	func_466_g
 METHOD	ei	(I)V	a_	func_355_a
 METHOD	ei	(Llk;I)Z	a	attackEntity
-METHOD	ei	(Lih;)V	a	writeEntityToNBT
+METHOD	ei	(Lih;)V	a	readFromNBT
 METHOD	ei	(Lih;)V	b	readEntityFromNBT
 METHOD	ei	(Ldv;)V	b	func_4040_b
 CLASS	ej	NBTTagByteArray
@@ -1391,13 +1391,13 @@ FIELD	ek	I	b	id
 METHOD	ek	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	ek	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	ek	(Lmc;)V	a	processPacket
-METHOD	ek	()I	a	getPacketSize
+METHOD	ek	()I	a	getHash
 CLASS	el	GuiChest
 FIELD	el	Lha;	j	field_982_j
 FIELD	el	Lha;	l	field_981_l
 FIELD	el	I	m	field_980_m
-METHOD	el	()V	j	func_587_j
-METHOD	el	(F)V	a	func_589_a
+METHOD	el	()V	j	initGui2
+METHOD	el	(F)V	a	rotateAroundX
 CLASS	em	SoundPool
 FIELD	em	Ljava/util/Random;	c	field_1661_c
 FIELD	em	Ljava/util/Map;	d	field_1660_d
@@ -1410,13 +1410,13 @@ METHOD	em	()Laj;	a	func_1116_a
 CLASS	en	TexturePortalFX
 FIELD	en	I	g	field_4227_g
 FIELD	en	[[B	h	field_4226_h
-METHOD	en	()V	a	func_783_a
+METHOD	en	()V	a	clear
 CLASS	eo	ItemDoor
 FIELD	eo	Lgt;	a	field_321_a
 METHOD	eo	(Lfi;Ldv;Lcu;IIII)Z	a	onItemUse
 CLASS	ep	ColorizerGrass
 FIELD	ep	[I	a	field_4284_a
-METHOD	ep	(DD)I	a	func_4147_a
+METHOD	ep	(DD)I	a	func_4146_a
 CLASS	eq	PositionTexureVertex
 FIELD	eq	Lam;	a	field_1655_a
 FIELD	eq	F	b	field_1654_b
@@ -1428,14 +1428,14 @@ FIELD	er	I	a	xSize
 FIELD	er	I	h	ySize
 FIELD	er	Ljava/util/List;	i	inventorySlots
 METHOD	er	(IIF)V	a	drawScreen
-METHOD	er	()V	j	func_587_j
+METHOD	er	()V	j	initGui2
 METHOD	er	(Lns;)V	a	func_590_a
 METHOD	er	(II)Ldt;	a	getSlotAtPosition
 METHOD	er	(III)V	a	mouseClicked
 METHOD	er	(III)V	b	mouseMoved
 METHOD	er	(CI)V	a	keyTyped
 METHOD	er	()V	h	dispose
-METHOD	er	()Z	b	func_577_b
+METHOD	er	()Z	b	isFinished
 CLASS	es	ItemRedstone
 METHOD	es	(Lfi;Ldv;Lcu;IIII)Z	a	onItemUse
 CLASS	et	TextureLavaFlowFX
@@ -1444,7 +1444,7 @@ FIELD	et	[F	h	field_1142_h
 FIELD	et	[F	i	field_1141_i
 FIELD	et	[F	j	field_1140_j
 FIELD	et	I	k	field_1139_k
-METHOD	et	()V	a	func_783_a
+METHOD	et	()V	a	clear
 CLASS	eu	Packet10Flying
 FIELD	eu	D	a	xPosition
 FIELD	eu	D	b	yPosition
@@ -1458,7 +1458,7 @@ FIELD	eu	Z	i	rotating
 METHOD	eu	(Lmc;)V	a	processPacket
 METHOD	eu	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	eu	(Ljava/io/DataOutputStream;)V	a	writePacketData
-METHOD	eu	()I	a	getPacketSize
+METHOD	eu	()I	a	getHash
 CLASS	ev	RenderSnowball
 METHOD	ev	(Lar;DDDFF)V	a	func_155_a
 METHOD	ev	(Llk;DDDFF)V	a	func_147_a
@@ -1478,29 +1478,29 @@ FIELD	ew	I	l	field_871_l
 FIELD	ew	I	m	field_870_m
 FIELD	ew	I	n	field_869_n
 FIELD	ew	[[I	o	field_868_o
-METHOD	ew	()V	a	func_521_a
+METHOD	ew	()V	a	clear
 METHOD	ew	(IIIFBI)V	a	func_523_a
 METHOD	ew	(I)F	a	func_528_a
-METHOD	ew	(I)F	b	func_526_b
-METHOD	ew	(III)V	a	func_520_a
+METHOD	ew	(I)F	b	func_288_b
+METHOD	ew	(III)V	a	mouseClicked
 METHOD	ew	([I[II)V	a	func_522_a
-METHOD	ew	()V	b	func_518_b
+METHOD	ew	()V	b	close
 METHOD	ew	(I)Z	c	func_527_c
-METHOD	ew	()V	c	func_529_c
-METHOD	ew	()V	d	func_525_d
+METHOD	ew	()V	c	readPacket
+METHOD	ew	()V	d	handleInput
 METHOD	ew	([I[I)I	a	func_524_a
-METHOD	ew	()Z	e	func_519_e
-METHOD	ew	(DDD)V	a	func_517_a
+METHOD	ew	()Z	e	getBurning
+METHOD	ew	(DDD)V	a	setPosition
 METHOD	ew	(Lcu;Ljava/util/Random;III)Z	a	func_516_a
 CLASS	ex	EntityCreature
 FIELD	ex	Lbr;	a	field_749_a
 FIELD	ex	Llk;	f	field_751_f
 FIELD	ex	Z	g	field_750_g
 METHOD	ex	()V	b_	func_418_b_
-METHOD	ex	(Llk;F)V	a	func_437_a
+METHOD	ex	(Llk;F)V	a	func_1189_a
 METHOD	ex	(III)F	a	func_439_a
 METHOD	ex	()Llk;	c_	func_438_i
-METHOD	ex	()Z	a	func_433_a
+METHOD	ex	()Z	a	isAssigned
 CLASS	ey	NBTBase
 FIELD	ey	Ljava/lang/String;	a	key
 METHOD	ey	()Ljava/lang/String;	b	getKey
@@ -1518,7 +1518,7 @@ FIELD	ez	Ljp;	e	field_1274_e
 FIELD	ez	Ljp;	f	field_1273_f
 FIELD	ez	Ljp;	g	field_1272_g
 METHOD	ez	(FFFFFF)V	b	func_864_b
-METHOD	ez	(FFFFFF)V	a	func_863_a
+METHOD	ez	(FFFFFF)V	a	func_213_a
 CLASS	f	NBTTagFloat
 FIELD	f	F	a	floatValue
 METHOD	f	(Ljava/io/DataOutput;)V	a	write
@@ -1539,7 +1539,7 @@ METHOD	fb	(F)I	d	func_1110_d
 METHOD	fb	(D)I	b	func_1108_b
 METHOD	fb	(F)F	e	abs
 METHOD	fb	(DD)D	a	abs_max
-METHOD	fb	(II)I	a	func_1111_a
+METHOD	fb	(II)I	a	getSlotIndex
 CLASS	fc	CodecMus
 METHOD	fc	()Ljava/io/InputStream;	openInputStream	openInputStream
 CLASS	fd	RenderChicken
@@ -1600,28 +1600,28 @@ METHOD	fh	()Lfi;	a	getCurrentItem
 METHOD	fh	(I)I	f	func_505_f
 METHOD	fh	(I)I	g	getFirstPartialMatchingStack
 METHOD	fh	()I	j	getFirstEmptyStack
-METHOD	fh	(IZ)V	a	func_496_a
-METHOD	fh	(I)V	a	func_498_a
+METHOD	fh	(IZ)V	a	func_119_a
+METHOD	fh	(I)V	a	sortBack
 METHOD	fh	(II)I	b	addItemsToInventory
-METHOD	fh	()V	b	decrementAnimations
-METHOD	fh	(I)Z	b	func_510_b
+METHOD	fh	()V	b	close
+METHOD	fh	(I)Z	b	func_269_b
 METHOD	fh	(Lfi;)Z	a	addItemStackToInventory
 METHOD	fh	(II)Lfi;	a	decrStackSize
 METHOD	fh	(ILfi;)V	a	setInventorySlotContents
 METHOD	fh	(Lne;)F	a	getStrVsBlock
 METHOD	fh	(Llm;)Llm;	a	writeToNBT
 METHOD	fh	(Llm;)V	b	readFromNBT
-METHOD	fh	()I	c	getSizeInventory
+METHOD	fh	()I	c	getItemStackLimit
 METHOD	fh	(I)Lfi;	c	getStackInSlot
-METHOD	fh	()Ljava/lang/String;	d	getName
+METHOD	fh	()Ljava/lang/String;	d	getLivingSound
 METHOD	fh	()I	n_	getInventoryStackLimit
-METHOD	fh	(Llk;)I	a	func_502_a
+METHOD	fh	(Llk;)I	a	getDamageVsEntity
 METHOD	fh	(Lne;)Z	b	canHarvestBlock
 METHOD	fh	(I)Lfi;	d	func_492_d
-METHOD	fh	()I	f	getTotalArmorValue
+METHOD	fh	()I	f	getBlockMetadata
 METHOD	fh	(I)V	e	damageArmor
 METHOD	fh	()V	g	dropAllItems
-METHOD	fh	()V	h	func_474_j_
+METHOD	fh	()V	h	dispose
 METHOD	fh	(Lfh;)Z	a	func_500_a
 METHOD	fh	(Lfi;Lfi;)Z	a	func_501_a
 METHOD	fh	()Lfh;	i	func_512_i
@@ -1637,15 +1637,15 @@ METHOD	fi	(Ldv;Lcu;IIII)Z	a	func_1090_a
 METHOD	fi	(Lne;)F	a	getStrVsBlock
 METHOD	fi	(Lcu;Ldv;)Lfi;	a	func_1093_a
 METHOD	fi	(Lih;)Lih;	a	writeToNBT
-METHOD	fi	(Lih;)V	b	readFromNBT
-METHOD	fi	()I	c	getMaxStackSize
+METHOD	fi	(Lih;)V	b	readEntityFromNBT
+METHOD	fi	()I	c	getItemStackLimit
 METHOD	fi	()I	d	getMaxDamage
-METHOD	fi	(I)V	b	damageItem
+METHOD	fi	(I)V	b	bindTexture
 METHOD	fi	(Lgx;)V	a	hitEntity
 METHOD	fi	(IIII)V	a	hitBlock
 METHOD	fi	(Llk;)I	a	getDamageVsEntity
-METHOD	fi	(Lne;)Z	b	func_1099_b
-METHOD	fi	(Ldv;)V	a	func_1097_a
+METHOD	fi	(Lne;)Z	b	canHarvestBlock
+METHOD	fi	(Ldv;)V	a	onCraftGuiClosed
 METHOD	fi	(Lgx;)V	b	useItemOnEntity
 METHOD	fi	()Lfi;	e	copy
 CLASS	fj	EntityList
@@ -1657,13 +1657,13 @@ METHOD	fj	(Ljava/lang/Class;Ljava/lang/String;I)V	a	func_1080_a
 METHOD	fj	(Ljava/lang/String;Lcu;)Llk;	a	func_1079_a
 METHOD	fj	(Lih;Lcu;)Llk;	a	func_1081_a
 METHOD	fj	(ILcu;)Llk;	a	func_1084_a
-METHOD	fj	(Llk;)I	a	func_1082_a
+METHOD	fj	(Llk;)I	a	getDamageVsEntity
 METHOD	fj	(Llk;)Ljava/lang/String;	b	func_1083_b
 CLASS	fk	TileEntitySpecialRenderer
 FIELD	fk	Lgr;	a	field_1411_a
-METHOD	fk	(Ljava/lang/String;)V	a	func_927_a
+METHOD	fk	(Ljava/lang/String;)V	a	handleErrorMessage
 METHOD	fk	(Lgr;)V	a	func_928_a
-METHOD	fk	()Llg;	a	func_929_a
+METHOD	fk	()Llg;	a	func_1029_a
 CLASS	fl	ColorizerFoliage
 FIELD	fl	[I	a	field_4283_a
 METHOD	fl	(DD)I	a	func_4146_a
@@ -1678,19 +1678,19 @@ FIELD	fm	Ljava/util/Map;	g	field_1603_g
 FIELD	fm	Lgi;	h	field_1602_h
 FIELD	fm	Z	i	field_4281_i
 FIELD	fm	Z	j	field_4280_j
-METHOD	fm	(Ljava/lang/String;)I	a	getTexture
+METHOD	fm	(Ljava/lang/String;)I	a	getStringWidth
 METHOD	fm	(Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;	b	func_1069_b
 METHOD	fm	(Ljava/awt/image/BufferedImage;)I	a	func_1074_a
 METHOD	fm	(Ljava/awt/image/BufferedImage;I)V	a	func_1068_a
-METHOD	fm	(I)V	a	func_1078_a
+METHOD	fm	(I)V	a	sortBack
 METHOD	fm	(Ljava/lang/String;Ljava/lang/String;)I	a	func_1071_a
 METHOD	fm	(Ljava/lang/String;Lhw;)Lci;	a	func_1075_a
 METHOD	fm	(Ljava/lang/String;)V	b	func_1073_b
 METHOD	fm	(Lab;)V	a	func_1066_a
-METHOD	fm	()V	a	func_1067_a
-METHOD	fm	(II)I	a	func_1072_a
-METHOD	fm	(II)I	b	func_1077_b
-METHOD	fm	()V	b	func_1065_b
+METHOD	fm	()V	a	clear
+METHOD	fm	(II)I	a	getSlotIndex
+METHOD	fm	(II)I	b	addItemsToInventory
+METHOD	fm	()V	b	close
 METHOD	fm	(I)V	b	bindTexture
 CLASS	fn	Packet24MobSpawn
 FIELD	fn	I	a	entityId
@@ -1703,7 +1703,7 @@ FIELD	fn	B	g	pitch
 METHOD	fn	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	fn	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	fn	(Lmc;)V	a	processPacket
-METHOD	fn	()I	a	getPacketSize
+METHOD	fn	()I	a	getHash
 CLASS	fo	EnumOS1
 FIELD	fo	Lfo;	a	linux
 FIELD	fo	Lfo;	b	solaris
@@ -1719,15 +1719,15 @@ METHOD	fp	(Lbt;Lbt;)I	a	func_1063_a
 METHOD	fp	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare
 CLASS	fq	BlockBreakable
 FIELD	fq	Z	a	field_4071_a
-METHOD	fq	()Z	a	func_217_b
+METHOD	fq	()Z	a	isAssigned
 METHOD	fq	(Lox;IIII)Z	b	func_260_c
 CLASS	fr	BlockSnow
 METHOD	fr	(Lcu;III)Lcl;	d	func_221_d
-METHOD	fr	()Z	a	func_217_b
-METHOD	fr	()Z	b	func_242_c
+METHOD	fr	()Z	a	isAssigned
+METHOD	fr	()Z	b	isFinished
 METHOD	fr	(Lcu;III)Z	a	func_243_a
 METHOD	fr	(Lcu;IIII)V	a	func_226_a
-METHOD	fr	(Lcu;III)Z	h	func_314_h
+METHOD	fr	(Lcu;III)Z	h	func_263_h
 METHOD	fr	(Lcu;IIII)V	a_	func_220_a_
 METHOD	fr	(ILjava/util/Random;)I	a	idDropped
 METHOD	fr	(Ljava/util/Random;)I	a	quantityDropped
@@ -1735,20 +1735,20 @@ METHOD	fr	(Lcu;IIILjava/util/Random;)V	a	func_208_a
 METHOD	fr	(Lox;IIII)Z	b	func_260_c
 CLASS	fs	TileEntityChest
 FIELD	fs	[Lfi;	a	field_827_a
-METHOD	fs	()I	c	getSizeInventory
+METHOD	fs	()I	c	getItemStackLimit
 METHOD	fs	(I)Lfi;	c	getStackInSlot
 METHOD	fs	(II)Lfi;	a	decrStackSize
 METHOD	fs	(ILfi;)V	a	setInventorySlotContents
-METHOD	fs	()Ljava/lang/String;	d	getName
+METHOD	fs	()Ljava/lang/String;	d	getLivingSound
 METHOD	fs	(Lih;)V	a	readFromNBT
-METHOD	fs	(Lih;)V	b	writeToNBT
+METHOD	fs	(Lih;)V	b	readEntityFromNBT
 METHOD	fs	()I	n_	getInventoryStackLimit
 CLASS	ft	EntityFallingSand
 FIELD	ft	I	a	field_799_a
 FIELD	ft	I	b	field_798_b
 METHOD	ft	()Z	m_	func_401_c_
 METHOD	ft	()V	e_	func_370_e_
-METHOD	ft	(Lih;)V	a	writeEntityToNBT
+METHOD	ft	(Lih;)V	a	readFromNBT
 METHOD	ft	(Lih;)V	b	readEntityFromNBT
 METHOD	ft	()F	h_	func_392_h_
 METHOD	ft	()Lcu;	i	func_465_i
@@ -1761,13 +1761,13 @@ FIELD	fu	I	e	status
 METHOD	fu	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	fu	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	fu	(Lmc;)V	a	processPacket
-METHOD	fu	()I	a	getPacketSize
+METHOD	fu	()I	a	getHash
 CLASS	fv	BlockFence
 METHOD	fv	(Lcu;IIILcl;Ljava/util/ArrayList;)V	a	func_230_a
 METHOD	fv	(Lcu;III)Z	a	func_243_a
-METHOD	fv	()Z	a	func_217_b
-METHOD	fv	()Z	b	func_242_c
-METHOD	fv	()I	g	func_210_f
+METHOD	fv	()Z	a	isAssigned
+METHOD	fv	()Z	b	isFinished
+METHOD	fv	()I	g	getDropItemId
 CLASS	fw	MCHashTable
 FIELD	fw	[Loe;	a	slots
 FIELD	fw	I	b	count
@@ -1808,7 +1808,7 @@ FIELD	fy	I	q	field_4240_q
 FIELD	fy	[Ljava/lang/Class;	r	field_4239_r
 FIELD	fy	[Ljava/lang/Class;	s	field_4238_s
 FIELD	fy	[Lfy;	t	field_4237_t
-METHOD	fy	()V	a	func_4120_a
+METHOD	fy	()V	a	clear
 METHOD	fy	()Lfy;	b	func_4122_b
 METHOD	fy	(Ljava/lang/String;)Lfy;	a	func_4125_a
 METHOD	fy	(I)Lfy;	a	func_4124_a
@@ -1846,7 +1846,7 @@ FIELD	gc	Ljava/util/Map;	b	packetClassToIdMap
 FIELD	gc	Z	j	isChunkDataPacket
 METHOD	gc	(ILjava/lang/Class;)V	a	addIdClassMapping
 METHOD	gc	(I)Lgc;	a	getNewPacket
-METHOD	gc	()I	b	getPacketId
+METHOD	gc	()I	b	getIconIndex
 METHOD	gc	(Ljava/io/DataInputStream;)Lgc;	b	readPacket
 METHOD	gc	(Lgc;Ljava/io/DataOutputStream;)V	a	writePacket
 CLASS	gd	RenderFireball
@@ -1856,7 +1856,7 @@ CLASS	ge	ModelBase
 FIELD	ge	F	k	field_1244_k
 FIELD	ge	Z	l	field_1243_l
 METHOD	ge	(FFFFFF)V	b	func_864_b
-METHOD	ge	(FFFFFF)V	a	func_863_a
+METHOD	ge	(FFFFFF)V	a	func_213_a
 CLASS	gf	GameWindowListener
 FIELD	gf	Lnet/minecraft/client/Minecraft;	a	mc
 FIELD	gf	Ljava/lang/Thread;	b	mcThread
@@ -1869,7 +1869,7 @@ FIELD	gh	[I	h	field_4224_h
 FIELD	gh	[I	i	field_4223_i
 FIELD	gh	D	j	field_4222_j
 FIELD	gh	D	k	field_4221_k
-METHOD	gh	()V	a	func_783_a
+METHOD	gh	()V	a	clear
 CLASS	gi	GameSettings
 FIELD	gi	[Ljava/lang/String;	y	RENDER_DISTANCES
 FIELD	gi	[Ljava/lang/String;	z	DIFFICULTY_LEVELS
@@ -1899,15 +1899,15 @@ FIELD	gi	I	v	numberOfOptions
 FIELD	gi	I	w	difficulty
 FIELD	gi	Z	x	thirdPersonView
 METHOD	gi	(I)Ljava/lang/String;	a	getKeyBinding
-METHOD	gi	(II)V	a	setKeyBinding
+METHOD	gi	(II)V	a	mouseReleased
 METHOD	gi	(IF)V	a	setOptionFloatValue
 METHOD	gi	(II)V	b	setOptionValue
 METHOD	gi	(I)I	b	getOptionControlType
 METHOD	gi	(I)F	c	getOptionFloatValue
 METHOD	gi	(I)Ljava/lang/String;	d	getOptionDisplayString
-METHOD	gi	()V	a	loadOptions
+METHOD	gi	()V	a	clear
 METHOD	gi	(Ljava/lang/String;)F	a	parseFloat
-METHOD	gi	()V	b	saveOptions
+METHOD	gi	()V	b	close
 CLASS	gj	RecipeSorter
 FIELD	gj	Leh;	a	field_1557_a
 METHOD	gj	(Lcb;Lcb;)I	a	func_1040_a
@@ -1921,28 +1921,28 @@ FIELD	gk	Lcu;	g	worldObj
 FIELD	gk	I	a	field_891_a
 FIELD	gk	I	b	field_890_b
 FIELD	gk	Lgs;	h	field_892_h
-METHOD	gk	(II)Z	a	func_537_a
+METHOD	gk	(II)Z	a	isAtCursorPos
 METHOD	gk	(II)Lgs;	b	func_533_b
 METHOD	gk	(II)Lgs;	c	func_542_c
 METHOD	gk	(Lgs;)V	a	func_541_a
 METHOD	gk	(Lgs;)V	b	func_540_b
 METHOD	gk	(Lbb;II)V	a	populate
 METHOD	gk	(ZLph;)Z	a	func_535_a
-METHOD	gk	()Z	a	func_532_a
-METHOD	gk	()Z	b	func_536_b
+METHOD	gk	()Z	a	isAssigned
+METHOD	gk	()Z	b	isFinished
 CLASS	gl	ItemHoe
 METHOD	gl	(Lfi;Ldv;Lcu;IIII)Z	a	onItemUse
-METHOD	gl	()Z	a	func_4017_a
+METHOD	gl	()Z	a	isAssigned
 CLASS	gm	ModelSkeleton
 CLASS	gn	BlockDoor
-METHOD	gn	(II)I	a	func_232_a
-METHOD	gn	()Z	a	func_217_b
-METHOD	gn	()Z	b	func_242_c
-METHOD	gn	()I	g	func_210_f
+METHOD	gn	(II)I	a	getSlotIndex
+METHOD	gn	()Z	a	isAssigned
+METHOD	gn	()Z	b	isFinished
+METHOD	gn	()I	g	getDropItemId
 METHOD	gn	(Lcu;III)Lcl;	f	func_246_f
 METHOD	gn	(Lcu;III)Lcl;	d	func_221_d
 METHOD	gn	(Lox;III)V	a	func_238_a
-METHOD	gn	(I)V	b	func_313_b
+METHOD	gn	(I)V	b	bindTexture
 METHOD	gn	(Lcu;IIILdv;)V	b	func_233_b
 METHOD	gn	(Lcu;IIILdv;)Z	a	blockActivated
 METHOD	gn	(Lcu;IIIZ)V	a	func_311_a
@@ -1959,7 +1959,7 @@ METHOD	go	()V	a	clear
 METHOD	go	()La;	b	dequeue
 METHOD	go	(La;F)V	a	changeDistance
 METHOD	go	(I)V	a	sortBack
-METHOD	go	(I)V	b	sortForward
+METHOD	go	(I)V	b	bindTexture
 METHOD	go	()Z	c	isEmpty
 CLASS	gp	NBTTagEnd
 METHOD	gp	(Ljava/io/DataInput;)V	a	read
@@ -2016,13 +2016,13 @@ FIELD	gs	Z	p	field_1525_p
 FIELD	gs	Z	q	field_1524_q
 FIELD	gs	Z	r	field_1523_r
 FIELD	gs	J	s	field_1522_s
-METHOD	gs	(II)Z	a	func_1017_a
-METHOD	gs	(II)I	b	func_999_b
-METHOD	gs	()V	a	func_1014_a
-METHOD	gs	()V	b	func_1018_b
-METHOD	gs	()V	c	func_1024_c
-METHOD	gs	()V	d	func_4143_d
-METHOD	gs	(II)V	c	func_996_c
+METHOD	gs	(II)Z	a	isAtCursorPos
+METHOD	gs	(II)I	b	addItemsToInventory
+METHOD	gs	()V	a	clear
+METHOD	gs	()V	b	close
+METHOD	gs	()V	c	readPacket
+METHOD	gs	()V	d	handleInput
+METHOD	gs	(II)V	c	func_539_c
 METHOD	gs	(III)V	f	func_1020_f
 METHOD	gs	(III)V	g	func_1003_g
 METHOD	gs	(III)I	a	getBlockID
@@ -2034,16 +2034,16 @@ METHOD	gs	(Lce;III)I	a	func_1025_a
 METHOD	gs	(Lce;IIII)V	a	func_1011_a
 METHOD	gs	(IIII)I	c	func_1019_c
 METHOD	gs	(Llk;)V	a	func_1000_a
-METHOD	gs	(Llk;)V	b	func_1015_b
+METHOD	gs	(Llk;)V	b	onDeath
 METHOD	gs	(Llk;I)V	a	func_1016_a
 METHOD	gs	(III)Z	c	func_1007_c
 METHOD	gs	(III)Liz;	d	func_1002_d
 METHOD	gs	(Liz;)V	a	func_1001_a
 METHOD	gs	(IIILiz;)V	a	func_1005_a
 METHOD	gs	(III)V	e	func_1023_e
-METHOD	gs	()V	e	func_995_d
-METHOD	gs	()V	f	func_998_e
-METHOD	gs	()V	g	func_1006_f
+METHOD	gs	()V	e	handleMouseInput
+METHOD	gs	()V	f	handleKeyboardInput
+METHOD	gs	()V	g	dropAllItems
 METHOD	gs	(Llk;Lcl;Ljava/util/List;)V	a	func_994_a
 METHOD	gs	(Ljava/lang/Class;Lcl;Ljava/util/List;)V	a	func_1013_a
 METHOD	gs	(Z)Z	a	func_1012_a
@@ -2075,23 +2075,23 @@ FIELD	gt	Lgt;	v	clay
 FIELD	gt	Lgt;	w	field_4261_w
 FIELD	gt	Lgt;	x	field_4260_x
 FIELD	gt	Z	y	field_4259_y
-METHOD	gt	()Z	d	func_879_d
-METHOD	gt	()Z	a	func_878_a
-METHOD	gt	()Z	b	func_881_b
-METHOD	gt	()Z	c	func_880_c
+METHOD	gt	()Z	d	func_4089_d
+METHOD	gt	()Z	a	isAssigned
+METHOD	gt	()Z	b	isFinished
+METHOD	gt	()Z	c	isEmpty
 METHOD	gt	()Lgt;	f	func_4130_f
 METHOD	gt	()Z	e	getBurning
 CLASS	gu	ModelGhast
 FIELD	gu	Ljp;	a	field_4258_a
 FIELD	gu	[Ljp;	b	field_4257_b
-METHOD	gu	(FFFFFF)V	a	func_863_a
+METHOD	gu	(FFFFFF)V	a	func_213_a
 METHOD	gu	(FFFFFF)V	b	func_864_b
 CLASS	gv	GuiMultiplayer
 FIELD	gv	Lbn;	a	updateCounter
 FIELD	gv	I	h	parentScreen
 FIELD	gv	Ljava/lang/String;	i	serverAddress
-METHOD	gv	()V	g	updateScreen
-METHOD	gv	()V	a	initGui
+METHOD	gv	()V	g	dropAllItems
+METHOD	gv	()V	a	clear
 METHOD	gv	(Lfz;)V	a	actionPerformed
 METHOD	gv	(Ljava/lang/String;I)I	a	func_4067_a
 METHOD	gv	(CI)V	a	keyTyped
@@ -2099,9 +2099,9 @@ METHOD	gv	(IIF)V	a	drawScreen
 CLASS	gw	MovementInputFromOptions
 FIELD	gw	[Z	f	field_1179_f
 FIELD	gw	Lgi;	g	field_1178_g
-METHOD	gw	(IZ)V	a	func_796_a
-METHOD	gw	()V	a	func_798_a
-METHOD	gw	(Ldv;)V	a	func_797_a
+METHOD	gw	(IZ)V	a	func_119_a
+METHOD	gw	()V	a	clear
+METHOD	gw	(Ldv;)V	a	onCraftGuiClosed
 CLASS	gx	EntityLiving
 FIELD	gx	I	o	field_739_j
 FIELD	gx	F	p	field_4115_p
@@ -2162,16 +2162,16 @@ METHOD	gx	()Ljava/lang/String;	z	func_4036_z
 METHOD	gx	()Z	m_	func_401_c_
 METHOD	gx	()Z	d_	func_385_d_
 METHOD	gx	()F	u	func_373_s
-METHOD	gx	()I	b	func_421_b
+METHOD	gx	()I	b	getIconIndex
 METHOD	gx	()V	A	func_391_y
 METHOD	gx	()V	B	func_415_z
 METHOD	gx	()V	r	func_350_p
 METHOD	gx	(DDDFFI)V	a	func_378_a
 METHOD	gx	()V	e_	func_370_e_
 METHOD	gx	(FF)V	a	func_371_a
-METHOD	gx	(I)V	b	heal
+METHOD	gx	(I)V	b	bindTexture
 METHOD	gx	(Llk;I)Z	a	attackEntity
-METHOD	gx	(I)V	a	func_4044_a
+METHOD	gx	(I)V	a	sortBack
 METHOD	gx	()F	h	getSoundVolume
 METHOD	gx	()Ljava/lang/String;	d	getLivingSound
 METHOD	gx	()Ljava/lang/String;	f_	func_4048_f_
@@ -2182,28 +2182,28 @@ METHOD	gx	()I	g	getDropItemId
 METHOD	gx	(F)V	c	fall
 METHOD	gx	(FF)V	b	func_435_b
 METHOD	gx	()Z	C	func_429_A
-METHOD	gx	(Lih;)V	a	writeEntityToNBT
+METHOD	gx	(Lih;)V	a	readFromNBT
 METHOD	gx	(Lih;)V	b	readEntityFromNBT
 METHOD	gx	()Z	D	func_354_B
 METHOD	gx	()V	k	reactToSunlight
 METHOD	gx	()V	E	func_424_C
 METHOD	gx	()V	b_	func_418_b_
-METHOD	gx	(Llk;F)V	b	func_426_b
+METHOD	gx	(Llk;F)V	b	func_1187_b
 METHOD	gx	(FFF)F	b	func_417_b
 METHOD	gx	()V	F	func_436_D
-METHOD	gx	()Z	a	func_433_a
+METHOD	gx	()Z	a	isAssigned
 METHOD	gx	()V	G	func_4034_G
 METHOD	gx	(F)F	d	func_431_d
 METHOD	gx	(F)Lam;	e	func_427_e
 METHOD	gx	()Lam;	H	func_4037_H
 METHOD	gx	(F)Lam;	f	func_430_f
 METHOD	gx	(DF)Lnl;	a	func_416_a
-METHOD	gx	()I	i	func_4047_i
+METHOD	gx	()I	i	func_4043_i
 METHOD	gx	()Lfi;	l	func_4045_l
 CLASS	gy	MaterialTransparent
-METHOD	gy	()Z	a	func_878_a
-METHOD	gy	()Z	b	func_881_b
-METHOD	gy	()Z	c	func_880_c
+METHOD	gy	()Z	a	isAssigned
+METHOD	gy	()Z	b	isFinished
+METHOD	gy	()Z	c	isEmpty
 CLASS	gz	ItemReed
 FIELD	gz	I	a	field_320_a
 METHOD	gz	(Lfi;Ldv;Lcu;IIII)Z	a	onItemUse
@@ -2227,7 +2227,7 @@ FIELD	hb	Llk;	c	field_4096_c
 METHOD	hb	(D)Z	a	func_384_a
 METHOD	hb	(DDDFF)V	a	func_4042_a
 METHOD	hb	()V	e_	func_370_e_
-METHOD	hb	(Lih;)V	a	writeEntityToNBT
+METHOD	hb	(Lih;)V	a	readFromNBT
 METHOD	hb	(Lih;)V	b	readEntityFromNBT
 METHOD	hb	()F	h_	func_392_h_
 METHOD	hb	()I	i	func_4043_i
@@ -2237,7 +2237,7 @@ CLASS	hd	Packet0KeepAlive
 METHOD	hd	(Lmc;)V	a	processPacket
 METHOD	hd	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	hd	(Ljava/io/DataOutputStream;)V	a	writePacketData
-METHOD	hd	()I	a	getPacketSize
+METHOD	hd	()I	a	getHash
 CLASS	he	RenderEntity
 METHOD	he	(Llk;DDDFF)V	a	func_147_a
 CLASS	hf	RenderArrow
@@ -2245,7 +2245,7 @@ METHOD	hf	(Llj;DDDFF)V	a	func_154_a
 METHOD	hf	(Llk;DDDFF)V	a	func_147_a
 CLASS	hg	RenderSorter
 FIELD	hg	Ldv;	a	field_4274_a
-METHOD	hg	(Lbt;Lbt;)I	a	func_993_a
+METHOD	hg	(Lbt;Lbt;)I	a	func_1063_a
 METHOD	hg	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare
 CLASS	hh	RenderPig
 METHOD	hh	(Loc;I)Z	a	func_180_a
@@ -2271,7 +2271,7 @@ FIELD	hk	I	h	currentItem
 METHOD	hk	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	hk	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	hk	(Lmc;)V	a	processPacket
-METHOD	hk	()I	a	getPacketSize
+METHOD	hk	()I	a	getHash
 CLASS	hl	RenderSlime
 FIELD	hl	Lge;	a	field_205_f
 METHOD	hl	(Lng;I)Z	a	func_179_a
@@ -2284,11 +2284,11 @@ FIELD	hm	Lnet/minecraft/client/Minecraft;	b	mc
 FIELD	hm	Ljava/lang/String;	c	field_1007_c
 FIELD	hm	J	d	field_1006_d
 FIELD	hm	Z	e	field_1005_e
-METHOD	hm	(Ljava/lang/String;)V	a	func_596_a
-METHOD	hm	(Ljava/lang/String;)V	b	func_594_b
-METHOD	hm	(Ljava/lang/String;)V	c	func_597_c
-METHOD	hm	(Ljava/lang/String;)V	d	func_595_d
-METHOD	hm	(I)V	a	func_593_a
+METHOD	hm	(Ljava/lang/String;)V	a	handleErrorMessage
+METHOD	hm	(Ljava/lang/String;)V	b	func_1073_b
+METHOD	hm	(Ljava/lang/String;)V	c	checkGLError
+METHOD	hm	(Ljava/lang/String;)V	d	func_120_d
+METHOD	hm	(I)V	a	sortBack
 CLASS	hn	WorldClient
 FIELD	hn	Ljava/util/LinkedList;	A	field_1057_z
 FIELD	hn	Lht;	B	field_1052_A
@@ -2297,44 +2297,44 @@ FIELD	hn	Z	D	field_1056_C
 FIELD	hn	Lfw;	E	field_1055_D
 FIELD	hn	Ljava/util/Set;	F	field_1054_E
 FIELD	hn	Ljava/util/Set;	G	field_1053_F
-METHOD	hn	()V	i	func_649_g
+METHOD	hn	()V	i	func_111_i
 METHOD	hn	(IIIIII)V	c	func_711_c
 METHOD	hn	(Ljava/io/File;)Lbb;	a	func_4081_a
-METHOD	hn	()V	b	func_4076_b
-METHOD	hn	()V	j	func_4080_j
+METHOD	hn	()V	b	close
+METHOD	hn	()V	j	initGui2
 METHOD	hn	(IIII)V	h	func_681_h
-METHOD	hn	(Z)Z	a	func_700_a
+METHOD	hn	(Z)Z	a	func_1012_a
 METHOD	hn	(IIZ)V	a	func_713_a
 METHOD	hn	(Llk;)Z	a	entityJoinedWorld
 METHOD	hn	(Llk;)V	d	func_607_d
-METHOD	hn	(Llk;)V	b	func_606_b
+METHOD	hn	(Llk;)V	b	onDeath
 METHOD	hn	(Llk;)V	c	func_678_c
 METHOD	hn	(ILlk;)V	a	func_712_a
 METHOD	hn	(I)Llk;	b	func_709_b
 METHOD	hn	(I)Llk;	c	func_710_c
 METHOD	hn	(IIII)Z	c	setBlockMetadata
-METHOD	hn	(IIIII)Z	a	func_643_a
-METHOD	hn	(IIII)Z	a	func_634_a
+METHOD	hn	(IIIII)Z	a	func_1010_a
+METHOD	hn	(IIII)Z	a	func_1022_a
 METHOD	hn	(IIIII)Z	c	func_714_c
 METHOD	hn	(IIILiz;)V	b	func_698_b
-METHOD	hn	()V	m	func_660_k
+METHOD	hn	()V	m	func_445_l
 CLASS	ho	Packet2Handshake
 FIELD	ho	Ljava/lang/String;	a	username
 METHOD	ho	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	ho	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	ho	(Lmc;)V	a	processPacket
-METHOD	ho	()I	a	getPacketSize
+METHOD	ho	()I	a	getHash
 CLASS	hp	InventoryCrafting
 FIELD	hp	[Lfi;	a	stackList
 FIELD	hp	I	b	nbrSlots
 FIELD	hp	Lav;	c	eventHandler
-METHOD	hp	()I	c	getSizeInventory
+METHOD	hp	()I	c	getItemStackLimit
 METHOD	hp	(I)Lfi;	c	getStackInSlot
-METHOD	hp	()Ljava/lang/String;	d	getName
+METHOD	hp	()Ljava/lang/String;	d	getLivingSound
 METHOD	hp	(II)Lfi;	a	decrStackSize
 METHOD	hp	(ILfi;)V	a	setInventorySlotContents
 METHOD	hp	()I	n_	getInventoryStackLimit
-METHOD	hp	()V	h	func_474_j_
+METHOD	hp	()V	h	dispose
 CLASS	hq	WorldGenClay
 FIELD	hq	I	a	field_867_a
 FIELD	hq	I	b	field_866_b
@@ -2351,7 +2351,7 @@ FIELD	ht	Lnet/minecraft/client/Minecraft;	e	mc
 FIELD	ht	Lhn;	f	field_1211_f
 FIELD	ht	Z	g	field_1210_g
 FIELD	ht	Ljava/util/Random;	b	rand
-METHOD	ht	()V	a	func_848_a
+METHOD	ht	()V	a	clear
 METHOD	ht	(Lil;)V	a	func_4115_a
 METHOD	ht	(Lhv;)V	a	handlePickupSpawn
 METHOD	ht	(Lln;)V	a	handleVehicleSpawn
@@ -2366,14 +2366,14 @@ METHOD	ht	(Lcf;)V	a	handleMapChunk
 METHOD	ht	(Lml;)V	a	handleBlockChange
 METHOD	ht	(Lpv;)V	a	handleKickDisconnect
 METHOD	ht	(Ljava/lang/String;)V	a	handleErrorMessage
-METHOD	ht	(Lgc;)V	a	func_847_a
+METHOD	ht	(Lgc;)V	a	addToSendQueue
 METHOD	ht	(Lbs;)V	a	handleCollect
 METHOD	ht	(Lek;)V	a	handleBlockItemSwitch
 METHOD	ht	(Ljg;)V	a	func_4113_a
 METHOD	ht	(Lia;)V	a	handleArmAnimation
 METHOD	ht	(Lmh;)V	a	handleAddToInventory
 METHOD	ht	(Lho;)V	a	handleHandshake
-METHOD	ht	()V	b	disconnect
+METHOD	ht	()V	b	close
 METHOD	ht	(Lfn;)V	a	handleMobSpawn
 METHOD	ht	(Lee;)V	a	handleUpdateTime
 METHOD	ht	(Ln;)V	a	handlePlayerInventory
@@ -2394,7 +2394,7 @@ FIELD	hv	I	i	count
 METHOD	hv	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	hv	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	hv	(Lmc;)V	a	processPacket
-METHOD	hv	()I	a	getPacketSize
+METHOD	hv	()I	a	getHash
 CLASS	hw	ImageBuffer
 CLASS	hx	ChunkCoordinates
 FIELD	hx	I	a	field_1518_a
@@ -2405,13 +2405,13 @@ CLASS	hy	BlockCrops
 METHOD	hy	(I)Z	b	func_269_b
 METHOD	hy	(Lcu;IIILjava/util/Random;)V	a	func_208_a
 METHOD	hy	(Lcu;III)F	i	func_270_i
-METHOD	hy	(II)I	a	func_232_a
-METHOD	hy	()I	g	func_210_f
+METHOD	hy	(II)I	a	getSlotIndex
+METHOD	hy	()I	g	getDropItemId
 METHOD	hy	(Lcu;IIII)V	b	func_252_b
 METHOD	hy	(ILjava/util/Random;)I	a	idDropped
 METHOD	hy	(Ljava/util/Random;)I	a	quantityDropped
 CLASS	hz	BlockIce
-METHOD	hz	()I	c	func_234_g
+METHOD	hz	()I	c	getItemStackLimit
 METHOD	hz	(Lox;IIII)Z	b	func_260_c
 METHOD	hz	(Lcu;III)V	b	func_214_b
 METHOD	hz	(Ljava/util/Random;)I	a	quantityDropped
@@ -2423,7 +2423,7 @@ FIELD	ia	I	b	animate
 METHOD	ia	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	ia	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	ia	(Lmc;)V	a	processPacket
-METHOD	ia	()I	a	getPacketSize
+METHOD	ia	()I	a	getHash
 CLASS	ib	ModelQuadraped
 FIELD	ib	Ljp;	d	field_1266_d
 FIELD	ib	Ljp;	e	field_1265_e
@@ -2432,22 +2432,22 @@ FIELD	ib	Ljp;	g	field_1263_g
 FIELD	ib	Ljp;	h	field_1262_h
 FIELD	ib	Ljp;	i	field_1261_i
 METHOD	ib	(FFFFFF)V	b	func_864_b
-METHOD	ib	(FFFFFF)V	a	func_863_a
+METHOD	ib	(FFFFFF)V	a	func_213_a
 CLASS	ic	ModelSlime
 FIELD	ic	Ljp;	a	field_1258_a
 FIELD	ic	Ljp;	b	field_1257_b
 FIELD	ic	Ljp;	c	field_1260_c
 FIELD	ic	Ljp;	d	field_1259_d
-METHOD	ic	(FFFFFF)V	a	func_863_a
+METHOD	ic	(FFFFFF)V	a	func_213_a
 METHOD	ic	(FFFFFF)V	b	func_864_b
 CLASS	id	BlockLeavesBase
 FIELD	id	Z	a	field_4070_a
-METHOD	id	()Z	a	func_217_b
+METHOD	id	()Z	a	isAssigned
 METHOD	id	(Lox;IIII)Z	b	func_260_c
 CLASS	ie	ModelMinecart
 FIELD	ie	[Ljp;	a	field_1256_a
 METHOD	ie	(FFFFFF)V	b	func_864_b
-METHOD	ie	(FFFFFF)V	a	func_863_a
+METHOD	ie	(FFFFFF)V	a	func_213_a
 CLASS	if	MusInputStream
 FIELD	if	I	c	hash
 FIELD	if	Ljava/io/InputStream;	d	inputStream
@@ -2488,7 +2488,7 @@ METHOD	ih	(Ljava/lang/String;)Z	m	getBoolean
 METHOD	ih	()Ljava/lang/String;	toString	toString
 CLASS	ii	BlockStationary
 METHOD	ii	(Lcu;IIII)V	a	func_226_a
-METHOD	ii	(Lcu;III)V	j	func_4030_j
+METHOD	ii	(Lcu;III)V	j	func_287_j
 METHOD	ii	(Lcu;IIILjava/util/Random;)V	a	func_208_a
 METHOD	ii	(Lcu;III)Z	k	func_301_k
 CLASS	ij	Tessellator
@@ -2520,19 +2520,19 @@ FIELD	ij	Ljava/nio/IntBuffer;	y	field_1486_y
 FIELD	ij	I	z	field_1485_z
 FIELD	ij	I	A	field_1496_A
 FIELD	ij	I	B	field_1494_B
-METHOD	ij	()V	a	func_982_a
-METHOD	ij	()V	d	func_985_d
-METHOD	ij	()V	b	func_977_b
-METHOD	ij	(I)V	a	func_992_a
+METHOD	ij	()V	a	clear
+METHOD	ij	()V	d	handleInput
+METHOD	ij	()V	b	close
+METHOD	ij	(I)V	a	sortBack
 METHOD	ij	(DD)V	a	func_981_a
-METHOD	ij	(FFF)V	a	func_987_a
+METHOD	ij	(FFF)V	a	func_351_a
 METHOD	ij	(FFFF)V	a	func_986_a
-METHOD	ij	(III)V	a	func_979_a
-METHOD	ij	(IIII)V	a	func_978_a
+METHOD	ij	(III)V	a	mouseClicked
+METHOD	ij	(IIII)V	a	hitBlock
 METHOD	ij	(DDDDD)V	a	func_983_a
-METHOD	ij	(DDD)V	a	func_991_a
-METHOD	ij	(I)V	b	func_990_b
-METHOD	ij	()V	c	func_989_c
+METHOD	ij	(DDD)V	a	setPosition
+METHOD	ij	(I)V	b	bindTexture
+METHOD	ij	()V	c	readPacket
 METHOD	ij	(FFF)V	b	func_980_b
 METHOD	ij	(DDD)V	b	func_984_b
 METHOD	ij	(FFF)V	c	func_988_c
@@ -2548,67 +2548,67 @@ FIELD	il	B	e	field_4073_e
 METHOD	il	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	il	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	il	(Lmc;)V	a	processPacket
-METHOD	il	()I	a	getPacketSize
+METHOD	il	()I	a	getHash
 CLASS	im	PlayerController
 FIELD	im	Lnet/minecraft/client/Minecraft;	a	mc
 FIELD	im	Z	b	field_1064_b
-METHOD	im	(Lcu;)V	a	func_717_a
-METHOD	im	(IIII)V	a	func_719_a
+METHOD	im	(Lcu;)V	a	setWorld
+METHOD	im	(IIII)V	a	hitBlock
 METHOD	im	(IIII)Z	b	func_729_b
 METHOD	im	(IIII)V	c	func_726_c
-METHOD	im	()V	a	func_724_a
-METHOD	im	(F)V	a	func_4088_a
-METHOD	im	()F	b	func_727_b
-METHOD	im	(Ldv;)V	a	func_4091_a
-METHOD	im	()V	c	func_728_c
+METHOD	im	()V	a	clear
+METHOD	im	(F)V	a	rotateAroundX
+METHOD	im	()F	b	func_1147_b
+METHOD	im	(Ldv;)V	a	onCraftGuiClosed
+METHOD	im	()V	c	readPacket
 METHOD	im	()Z	d	func_4089_d
-METHOD	im	(Ldv;)V	b	func_4090_b
+METHOD	im	(Ldv;)V	b	func_4040_b
 METHOD	im	(Ldv;Lcu;Lfi;IIII)Z	a	func_722_a
 METHOD	im	(Lcu;)Ldv;	b	func_4087_b
 CLASS	in	RecipesFood
-METHOD	in	(Leh;)V	a	func_976_a
+METHOD	in	(Leh;)V	a	func_1051_a
 CLASS	io	InventoryLargeChest
 FIELD	io	Ljava/lang/String;	a	name
 FIELD	io	Lha;	b	upperChest
 FIELD	io	Lha;	c	lowerChest
-METHOD	io	()I	c	getSizeInventory
-METHOD	io	()Ljava/lang/String;	d	getName
+METHOD	io	()I	c	getItemStackLimit
+METHOD	io	()Ljava/lang/String;	d	getLivingSound
 METHOD	io	(I)Lfi;	c	getStackInSlot
 METHOD	io	(II)Lfi;	a	decrStackSize
 METHOD	io	(ILfi;)V	a	setInventorySlotContents
 METHOD	io	()I	n_	getInventoryStackLimit
-METHOD	io	()V	h	func_474_j_
+METHOD	io	()V	h	dispose
 CLASS	ip	BlockButton
 METHOD	ip	(Lcu;III)Lcl;	d	func_221_d
-METHOD	ip	()I	d	func_4025_d
-METHOD	ip	()Z	a	func_217_b
-METHOD	ip	()Z	b	func_242_c
+METHOD	ip	()I	d	getMaxDamage
+METHOD	ip	()Z	a	isAssigned
+METHOD	ip	()Z	b	isFinished
 METHOD	ip	(Lcu;III)Z	a	func_243_a
 METHOD	ip	(Lcu;IIII)V	d	func_258_d
 METHOD	ip	(Lcu;III)V	e	func_235_e
 METHOD	ip	(Lcu;IIII)V	a	func_226_a
-METHOD	ip	(Lcu;III)Z	h	func_305_h
+METHOD	ip	(Lcu;III)Z	h	func_263_h
 METHOD	ip	(Lox;III)V	a	func_238_a
 METHOD	ip	(Lcu;IIILdv;)V	b	func_233_b
 METHOD	ip	(Lcu;IIILdv;)Z	a	blockActivated
 METHOD	ip	(Lcu;III)V	b	func_214_b
 METHOD	ip	(Lox;IIII)Z	c	func_231_b
 METHOD	ip	(Lcu;IIII)Z	c	func_228_c
-METHOD	ip	()Z	e	func_209_d
+METHOD	ip	()Z	e	getBurning
 METHOD	ip	(Lcu;IIILjava/util/Random;)V	a	func_208_a
-METHOD	ip	()V	f	func_237_e
+METHOD	ip	()V	f	handleKeyboardInput
 CLASS	iq	TexureWaterFlowFX
 FIELD	iq	[F	g	field_1138_g
 FIELD	iq	[F	h	field_1137_h
 FIELD	iq	[F	i	field_1136_i
 FIELD	iq	[F	j	field_1135_j
 FIELD	iq	I	k	field_1134_k
-METHOD	iq	()V	a	func_783_a
+METHOD	iq	()V	a	clear
 CLASS	ir	BlockFlowing
 FIELD	ir	I	a	field_460_a
 FIELD	ir	[Z	b	field_459_b
 FIELD	ir	[I	c	field_461_c
-METHOD	ir	(Lcu;III)V	j	func_4029_j
+METHOD	ir	(Lcu;III)V	j	func_287_j
 METHOD	ir	(Lcu;IIILjava/util/Random;)V	a	func_208_a
 METHOD	ir	(Lcu;IIII)V	g	func_299_g
 METHOD	ir	(Lcu;IIIII)I	a	func_300_a
@@ -2624,8 +2624,8 @@ METHOD	is	(Llk;DDDFF)V	a	func_147_a
 CLASS	it	GuiCrafting
 FIELD	it	Lfg;	j	field_979_j
 METHOD	it	()V	h	dispose
-METHOD	it	()V	j	func_587_j
-METHOD	it	(F)V	a	func_589_a
+METHOD	it	()V	j	initGui2
+METHOD	it	(F)V	a	rotateAroundX
 CLASS	iu	EntityPortalFX
 FIELD	iu	F	a	field_4083_a
 FIELD	iu	D	o	field_4087_o
@@ -2633,16 +2633,16 @@ FIELD	iu	D	p	field_4086_p
 FIELD	iu	D	q	field_4085_q
 FIELD	iu	D	r	field_4084_r
 METHOD	iu	(Lij;FFFFFF)V	a	func_406_a
-METHOD	iu	(F)F	a	func_382_a
+METHOD	iu	(F)F	a	func_1106_a
 METHOD	iu	()V	e_	func_370_e_
 CLASS	iv	BlockCactus
 METHOD	iv	(Lcu;IIILjava/util/Random;)V	a	func_208_a
 METHOD	iv	(Lcu;III)Lcl;	d	func_221_d
 METHOD	iv	(Lcu;III)Lcl;	f	func_246_f
-METHOD	iv	(I)I	a	func_218_a
-METHOD	iv	()Z	b	func_242_c
-METHOD	iv	()Z	a	func_217_b
-METHOD	iv	()I	g	func_210_f
+METHOD	iv	(I)I	a	generateDisplayLists
+METHOD	iv	()Z	b	isFinished
+METHOD	iv	()Z	a	isAssigned
+METHOD	iv	()I	g	getDropItemId
 METHOD	iv	(Lcu;III)Z	a	func_243_a
 METHOD	iv	(Lcu;IIII)V	a	func_226_a
 METHOD	iv	(Lcu;III)Z	g	func_223_g
@@ -2656,15 +2656,15 @@ FIELD	ix	F	f	field_1071_f
 FIELD	ix	F	g	field_1070_g
 FIELD	ix	F	h	field_1069_h
 FIELD	ix	I	i	field_1068_i
-METHOD	ix	(Ldv;)V	a	func_4091_a
+METHOD	ix	(Ldv;)V	a	onCraftGuiClosed
 METHOD	ix	(IIII)Z	b	func_729_b
-METHOD	ix	(IIII)V	a	func_719_a
-METHOD	ix	()V	a	func_724_a
+METHOD	ix	(IIII)V	a	hitBlock
+METHOD	ix	()V	a	clear
 METHOD	ix	(IIII)V	c	func_726_c
-METHOD	ix	(F)V	a	func_4088_a
-METHOD	ix	()F	b	func_727_b
-METHOD	ix	(Lcu;)V	a	func_717_a
-METHOD	ix	()V	c	func_728_c
+METHOD	ix	(F)V	a	rotateAroundX
+METHOD	ix	()F	b	func_1147_b
+METHOD	ix	(Lcu;)V	a	setWorld
+METHOD	ix	()V	c	readPacket
 CLASS	iy	GuiDeleteWorld
 METHOD	iy	()V	j	initGui2
 METHOD	iy	(I)V	c	selectWorld
@@ -2678,43 +2678,43 @@ FIELD	iz	I	g	y
 FIELD	iz	I	h	z
 METHOD	iz	(Ljava/lang/Class;Ljava/lang/String;)V	a	addMapping
 METHOD	iz	(Lih;)V	a	readFromNBT
-METHOD	iz	(Lih;)V	b	writeToNBT
-METHOD	iz	()V	b	updateEntity
+METHOD	iz	(Lih;)V	b	readEntityFromNBT
+METHOD	iz	()V	b	close
 METHOD	iz	(Lih;)Liz;	c	createAndLoadEntity
 METHOD	iz	()I	f	getBlockMetadata
-METHOD	iz	()V	h	func_474_j_
-METHOD	iz	(DDD)D	a	getDistanceFrom
+METHOD	iz	()V	h	dispose
+METHOD	iz	(DDD)D	a	generateNoise
 METHOD	iz	()Lne;	g	getBlockType
 CLASS	j	RenderHelper
 FIELD	j	Ljava/nio/FloatBuffer;	a	field_1695_a
-METHOD	j	()V	a	func_1159_a
-METHOD	j	()V	b	func_1158_b
+METHOD	j	()V	a	clear
+METHOD	j	()V	b	close
 METHOD	j	(DDDD)Ljava/nio/FloatBuffer;	a	func_1157_a
 METHOD	j	(FFFF)Ljava/nio/FloatBuffer;	a	func_1156_a
 CLASS	ja	GuiFurnace
 FIELD	ja	Llh;	j	field_978_j
-METHOD	ja	()V	j	func_587_j
-METHOD	ja	(F)V	a	func_589_a
+METHOD	ja	()V	j	initGui2
+METHOD	ja	(F)V	a	rotateAroundX
 CLASS	jb	GuiIngameMenu
 FIELD	jb	I	a	updateCounter2
 FIELD	jb	I	h	updateCounter
-METHOD	jb	()V	a	initGui
+METHOD	jb	()V	a	clear
 METHOD	jb	(Lfz;)V	a	actionPerformed
-METHOD	jb	()V	g	updateScreen
+METHOD	jb	()V	g	dropAllItems
 METHOD	jb	(IIF)V	a	drawScreen
 CLASS	jc	BlockMinecartTrack
 METHOD	jc	(Lcu;III)Lcl;	d	func_221_d
-METHOD	jc	()Z	a	func_217_b
+METHOD	jc	()Z	a	isAssigned
 METHOD	jc	(Lcu;IIILam;Lam;)Lnl;	a	func_255_a
 METHOD	jc	(Lox;III)V	a	func_238_a
-METHOD	jc	(II)I	a	func_232_a
-METHOD	jc	()Z	b	func_242_c
-METHOD	jc	()I	g	func_210_f
+METHOD	jc	(II)I	a	getSlotIndex
+METHOD	jc	()Z	b	isFinished
+METHOD	jc	()I	g	getDropItemId
 METHOD	jc	(Ljava/util/Random;)I	a	quantityDropped
 METHOD	jc	(Lcu;III)Z	a	func_243_a
 METHOD	jc	(Lcu;III)V	e	func_235_e
 METHOD	jc	(Lcu;IIII)V	a	func_226_a
-METHOD	jc	(Lcu;III)V	h	func_4031_h
+METHOD	jc	(Lcu;III)V	h	func_268_h
 CLASS	jd	EntitySlimeFX
 METHOD	jd	()I	k_	func_404_c
 METHOD	jd	(Lij;FFFFFF)V	a	func_406_a
@@ -2749,11 +2749,11 @@ FIELD	jf	I	r	timeSinceLastRead
 FIELD	jf	I	s	sendQueueByteLength
 FIELD	jf	I	t	chunkDataSendCounter
 METHOD	jf	(Lgc;)V	a	addToSendQueue
-METHOD	jf	()V	b	sendPacket
+METHOD	jf	()V	b	close
 METHOD	jf	()V	c	readPacket
 METHOD	jf	(Ljava/lang/Exception;)V	a	onNetworkError
-METHOD	jf	(Ljava/lang/String;)V	a	networkShutdown
-METHOD	jf	()V	a	processReadPackets
+METHOD	jf	(Ljava/lang/String;)V	a	handleErrorMessage
+METHOD	jf	()V	a	clear
 METHOD	jf	(Ljf;)Z	a	isRunning
 METHOD	jf	(Ljf;)Z	b	isServerTerminating
 METHOD	jf	(Ljf;)V	c	readNetworkPacket
@@ -2765,14 +2765,14 @@ FIELD	jg	Ljava/lang/String;	a	message
 METHOD	jg	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	jg	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	jg	(Lmc;)V	a	processPacket
-METHOD	jg	()I	a	getPacketSize
+METHOD	jg	()I	a	getHash
 CLASS	jh	WorldGenerator
-METHOD	jh	(DDD)V	a	func_517_a
+METHOD	jh	(DDD)V	a	setPosition
 CLASS	ji	PlayerControllerTest
-METHOD	ji	(Ldv;)V	b	func_4090_b
+METHOD	ji	(Ldv;)V	b	func_4040_b
 METHOD	ji	()Z	d	func_4089_d
-METHOD	ji	(Lcu;)V	a	func_717_a
-METHOD	ji	()V	c	func_728_c
+METHOD	ji	(Lcu;)V	a	setWorld
+METHOD	ji	()V	c	readPacket
 CLASS	jj	MapGenCavesHell
 METHOD	jj	(II[BDDD)V	a	func_4129_a
 METHOD	jj	(II[BDDDFFFIID)V	a	func_4128_a
@@ -2784,7 +2784,7 @@ METHOD	jl	(Llk;DDDFF)V	a	func_147_a
 CLASS	jm	TileEntitySignRenderer
 FIELD	jm	Lkm;	b	field_1413_b
 METHOD	jm	(Lpp;DDDF)V	a	func_932_a
-METHOD	jm	(Liz;DDDF)V	a	func_930_a
+METHOD	jm	(Liz;DDDF)V	a	func_1032_a
 CLASS	jn	NBTTagInt
 FIELD	jn	I	a	intValue
 METHOD	jn	(Ljava/io/DataOutput;)V	a	write
@@ -2812,10 +2812,10 @@ FIELD	jp	Z	h	field_1403_h
 FIELD	jp	Z	i	field_1402_i
 METHOD	jp	(FFFIII)V	a	func_921_a
 METHOD	jp	(FFFIIIF)V	a	func_923_a
-METHOD	jp	(FFF)V	a	func_925_a
-METHOD	jp	(F)V	a	func_922_a
-METHOD	jp	(F)V	b	func_926_b
-METHOD	jp	(F)V	c	func_924_c
+METHOD	jp	(FFF)V	a	func_351_a
+METHOD	jp	(F)V	a	rotateAroundX
+METHOD	jp	(F)V	b	rotateAroundY
+METHOD	jp	(F)V	c	fall
 CLASS	jq	EntityRenderer
 FIELD	jq	Lnet/minecraft/client/Minecraft;	h	mc
 FIELD	jq	F	i	field_1387_i
@@ -2832,21 +2832,21 @@ FIELD	jq	F	f	field_4269_f
 FIELD	jq	F	g	field_4268_g
 FIELD	jq	F	n	field_1382_n
 FIELD	jq	F	o	field_1381_o
-METHOD	jq	()V	a	func_911_a
-METHOD	jq	(F)V	a	func_910_a
-METHOD	jq	(F)F	d	func_914_d
+METHOD	jq	()V	a	clear
+METHOD	jq	(F)V	a	rotateAroundX
+METHOD	jq	(F)F	d	func_431_d
 METHOD	jq	(F)V	e	func_920_e
 METHOD	jq	(F)V	f	func_917_f
 METHOD	jq	(F)V	g	func_4138_g
 METHOD	jq	(FI)V	a	func_4139_a
 METHOD	jq	(FI)V	b	func_4135_b
-METHOD	jq	(F)V	b	func_4136_b
-METHOD	jq	(F)V	c	func_4134_c
-METHOD	jq	()V	c	func_916_c
-METHOD	jq	()V	b	func_905_b
+METHOD	jq	(F)V	b	rotateAroundY
+METHOD	jq	(F)V	c	fall
+METHOD	jq	()V	c	readPacket
+METHOD	jq	()V	b	close
 METHOD	jq	(F)V	h	func_4137_h
-METHOD	jq	(I)V	a	func_4140_a
-METHOD	jq	(FFFF)Ljava/nio/FloatBuffer;	a	func_908_a
+METHOD	jq	(I)V	a	sortBack
+METHOD	jq	(FFFF)Ljava/nio/FloatBuffer;	a	func_1156_a
 CLASS	jr	Timer
 FIELD	jr	F	a	field_1380_a
 FIELD	jr	D	f	field_1375_f
@@ -2857,11 +2857,11 @@ FIELD	jr	F	e	field_1376_e
 FIELD	jr	J	g	field_1374_g
 FIELD	jr	J	h	field_1373_h
 FIELD	jr	D	i	field_1372_i
-METHOD	jr	()V	a	func_904_a
+METHOD	jr	()V	a	clear
 CLASS	js	Packet33RelEntityMoveLook
 METHOD	js	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	js	(Ljava/io/DataOutputStream;)V	a	writePacketData
-METHOD	js	()I	a	getPacketSize
+METHOD	js	()I	a	getHash
 CLASS	jt	KeyBinding
 FIELD	jt	Ljava/lang/String;	a	keyDescription
 FIELD	jt	I	b	keyCode
@@ -2873,12 +2873,12 @@ FIELD	jv	I	a	field_319_a
 METHOD	jv	(Lfi;Lne;)F	a	getStrVsBlock
 METHOD	jv	(Lfi;Lgx;)V	a	func_4021_a
 METHOD	jv	(Lfi;IIII)V	a	hitBlock
-METHOD	jv	(Llk;)I	a	func_4020_a
-METHOD	jv	()Z	a	func_4017_a
+METHOD	jv	(Llk;)I	a	getDamageVsEntity
+METHOD	jv	()Z	a	isAssigned
 CLASS	jw	GuiConflictWarning
 FIELD	jw	I	a	updateCounter
-METHOD	jw	()V	g	updateScreen
-METHOD	jw	()V	a	initGui
+METHOD	jw	()V	g	dropAllItems
+METHOD	jw	()V	a	clear
 METHOD	jw	(Lfz;)V	a	actionPerformed
 METHOD	jw	(IIF)V	a	drawScreen
 CLASS	jx	EntityDiggingFX
@@ -2910,11 +2910,11 @@ METHOD	jy	(II[B)V	a	func_4059_a
 METHOD	jy	(II[B)V	b	func_4058_b
 METHOD	jy	(II)Lgs;	b	func_533_b
 METHOD	jy	([DIIIIII)[D	a	func_4057_a
-METHOD	jy	(II)Z	a	func_537_a
+METHOD	jy	(II)Z	a	isAtCursorPos
 METHOD	jy	(Lbb;II)V	a	populate
 METHOD	jy	(ZLph;)Z	a	func_535_a
-METHOD	jy	()Z	a	func_532_a
-METHOD	jy	()Z	b	func_536_b
+METHOD	jy	()Z	a	isAssigned
+METHOD	jy	()Z	b	isFinished
 CLASS	jz	NBTTagByte
 FIELD	jz	B	a	byteValue
 METHOD	jz	(Ljava/io/DataOutput;)V	a	write
@@ -2928,17 +2928,17 @@ CLASS	ka	ScaledResolution
 FIELD	ka	I	b	scaledWidth
 FIELD	ka	I	c	scaledHeight
 FIELD	ka	I	a	scaleFactor
-METHOD	ka	()I	a	getScaledWidth
-METHOD	ka	()I	b	getScaledHeight
+METHOD	ka	()I	a	getHash
+METHOD	ka	()I	b	getIconIndex
 CLASS	kb	BlockLeaves
 FIELD	kb	I	b	baseIndexInPNG
 FIELD	kb	I	c	field_464_c
 METHOD	kb	(Lox;III)I	b	func_207_d
 METHOD	kb	(Lcu;IIII)V	a	func_226_a
-METHOD	kb	(Lcu;III)V	h	func_308_h
+METHOD	kb	(Lcu;III)V	h	func_268_h
 METHOD	kb	(Ljava/util/Random;)I	a	quantityDropped
 METHOD	kb	(ILjava/util/Random;)I	a	idDropped
-METHOD	kb	()Z	a	func_217_b
+METHOD	kb	()Z	a	isAssigned
 METHOD	kb	(Z)V	a	setGraphicsLevel
 METHOD	kb	(Lcu;IIILlk;)V	b	func_254_a
 CLASS	kc	GuiYesNo
@@ -2946,13 +2946,13 @@ FIELD	kc	Lbn;	a	parentScreen
 FIELD	kc	Ljava/lang/String;	h	message1
 FIELD	kc	Ljava/lang/String;	i	message2
 FIELD	kc	I	j	worldNumber
-METHOD	kc	()V	a	initGui
+METHOD	kc	()V	a	clear
 METHOD	kc	(Lfz;)V	a	actionPerformed
 METHOD	kc	(IIF)V	a	drawScreen
 CLASS	kd	EntityFlameFX
 FIELD	kd	F	a	field_672_a
 METHOD	kd	(Lij;FFFFFF)V	a	func_406_a
-METHOD	kd	(F)F	a	func_382_a
+METHOD	kd	(F)F	a	func_1106_a
 METHOD	kd	()V	e_	func_370_e_
 CLASS	ke	EntityPainting
 FIELD	ke	I	c	field_695_c
@@ -2961,13 +2961,13 @@ FIELD	ke	I	d	field_694_d
 FIELD	ke	I	e	field_693_e
 FIELD	ke	I	f	field_692_f
 FIELD	ke	Lfe;	b	field_690_b
-METHOD	ke	(I)V	b	func_412_b
-METHOD	ke	(I)F	c	func_411_c
+METHOD	ke	(I)V	b	bindTexture
+METHOD	ke	(I)F	c	getOptionFloatValue
 METHOD	ke	()V	e_	func_370_e_
-METHOD	ke	()Z	i	func_410_i
+METHOD	ke	()Z	i	func_212_i
 METHOD	ke	()Z	m_	func_401_c_
 METHOD	ke	(Llk;I)Z	a	attackEntity
-METHOD	ke	(Lih;)V	a	writeEntityToNBT
+METHOD	ke	(Lih;)V	a	readFromNBT
 METHOD	ke	(Lih;)V	b	readEntityFromNBT
 CLASS	kf	NextTickListEntry
 FIELD	kf	J	f	field_1363_f
@@ -2986,8 +2986,8 @@ CLASS	kg	EntityTNTPrimed
 FIELD	kg	I	a	field_689_a
 METHOD	kg	()Z	m_	func_401_c_
 METHOD	kg	()V	e_	func_370_e_
-METHOD	kg	()V	i	func_409_i
-METHOD	kg	(Lih;)V	a	writeEntityToNBT
+METHOD	kg	()V	i	func_111_i
+METHOD	kg	(Lih;)V	a	readFromNBT
 METHOD	kg	(Lih;)V	b	readEntityFromNBT
 METHOD	kg	()F	h_	func_392_h_
 CLASS	kh	Explosion
@@ -3003,14 +3003,14 @@ FIELD	kj	F	c	field_1359_c
 FIELD	kj	F	d	field_1358_d
 FIELD	kj	Lbi;	e	field_1357_e
 METHOD	kj	(Lfi;)V	a	func_4132_a
-METHOD	kj	(F)V	a	func_4133_a
-METHOD	kj	(F)V	b	func_893_b
-METHOD	kj	(FI)V	a	func_898_a
-METHOD	kj	(F)V	c	func_892_c
+METHOD	kj	(F)V	a	rotateAroundX
+METHOD	kj	(F)V	b	rotateAroundY
+METHOD	kj	(FI)V	a	func_4139_a
+METHOD	kj	(F)V	c	fall
 METHOD	kj	(F)V	d	func_890_d
-METHOD	kj	()V	a	func_895_a
-METHOD	kj	()V	b	func_891_b
-METHOD	kj	()V	c	func_896_c
+METHOD	kj	()V	a	clear
+METHOD	kj	()V	b	close
+METHOD	kj	()V	c	readPacket
 CLASS	kk	Packet6SpawnPosition
 FIELD	kk	I	a	xPosition
 FIELD	kk	I	b	yPosition
@@ -3018,7 +3018,7 @@ FIELD	kk	I	c	zPosition
 METHOD	kk	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	kk	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	kk	(Lmc;)V	a	processPacket
-METHOD	kk	()I	a	getPacketSize
+METHOD	kk	()I	a	getHash
 CLASS	kl	IsoImageBuffer
 FIELD	kl	Ljava/awt/image/BufferedImage;	a	field_1348_a
 FIELD	kl	Lcu;	b	worldObj
@@ -3028,12 +3028,12 @@ FIELD	kl	Z	e	field_1352_e
 FIELD	kl	Z	f	field_1351_f
 FIELD	kl	I	g	field_1350_g
 FIELD	kl	Z	h	field_1349_h
-METHOD	kl	(II)V	a	func_889_a
+METHOD	kl	(II)V	a	mouseReleased
 METHOD	kl	(Lcu;II)V	a	func_888_a
 CLASS	km	SignModel
 FIELD	km	Ljp;	a	field_1346_a
 FIELD	km	Ljp;	b	field_1345_b
-METHOD	km	()V	a	func_887_a
+METHOD	km	()V	a	clear
 CLASS	kn	Packet34EntityTeleport
 FIELD	kn	I	a	entityId
 FIELD	kn	I	b	xPosition
@@ -3044,18 +3044,18 @@ FIELD	kn	B	f	pitch
 METHOD	kn	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	kn	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	kn	(Lmc;)V	a	processPacket
-METHOD	kn	()I	a	getPacketSize
+METHOD	kn	()I	a	getHash
 CLASS	ko	BlockReed
 METHOD	ko	(Lcu;IIILjava/util/Random;)V	a	func_208_a
 METHOD	ko	(Lcu;III)Z	a	func_243_a
 METHOD	ko	(Lcu;IIII)V	a	func_226_a
-METHOD	ko	(Lcu;III)V	h	func_303_h
+METHOD	ko	(Lcu;III)V	h	func_268_h
 METHOD	ko	(Lcu;III)Z	g	func_223_g
 METHOD	ko	(Lcu;III)Lcl;	d	func_221_d
 METHOD	ko	(ILjava/util/Random;)I	a	idDropped
-METHOD	ko	()Z	a	func_217_b
-METHOD	ko	()Z	b	func_242_c
-METHOD	ko	()I	g	func_210_f
+METHOD	ko	()Z	a	isAssigned
+METHOD	ko	()Z	b	isFinished
+METHOD	ko	()I	g	getDropItemId
 CLASS	kp	ItemSeeds
 FIELD	kp	I	a	field_318_a
 METHOD	kp	(Lfi;Ldv;Lcu;IIII)Z	a	onItemUse
@@ -3065,35 +3065,35 @@ METHOD	kq	(Lfi;Ldv;Lcu;IIII)Z	a	onItemUse
 CLASS	kr	BlockFluids
 FIELD	kr	I	d	field_458_d
 METHOD	kr	(I)F	b	func_288_b
-METHOD	kr	(I)I	a	func_218_a
+METHOD	kr	(I)I	a	generateDisplayLists
 METHOD	kr	(Lcu;III)I	h	func_290_h
 METHOD	kr	(Lox;III)I	c	func_289_b
-METHOD	kr	()Z	b	func_242_c
-METHOD	kr	()Z	a	func_217_b
+METHOD	kr	()Z	b	isFinished
+METHOD	kr	()Z	a	isAssigned
 METHOD	kr	(IZ)Z	a	func_224_a
 METHOD	kr	(Lox;IIII)Z	b	func_260_c
 METHOD	kr	(Lcu;III)Lcl;	d	func_221_d
-METHOD	kr	()I	g	func_210_f
+METHOD	kr	()I	g	getDropItemId
 METHOD	kr	(ILjava/util/Random;)I	a	idDropped
 METHOD	kr	(Ljava/util/Random;)I	a	quantityDropped
 METHOD	kr	(Lox;III)Lam;	e	func_291_e
 METHOD	kr	(Lcu;IIILlk;Lam;)V	a	func_257_a
-METHOD	kr	()I	d	func_4025_d
+METHOD	kr	()I	d	getMaxDamage
 METHOD	kr	(Lox;III)F	d	func_241_c
 METHOD	kr	(Lcu;IIILjava/util/Random;)V	a	func_208_a
-METHOD	kr	()I	c	func_234_g
+METHOD	kr	()I	c	getItemStackLimit
 METHOD	kr	(Lcu;IIILjava/util/Random;)V	b	func_247_b
 METHOD	kr	(Lox;IIILgt;)D	a	func_293_a
 METHOD	kr	(Lcu;III)V	e	func_235_e
 METHOD	kr	(Lcu;IIII)V	a	func_226_a
 METHOD	kr	(Lcu;III)V	j	func_287_j
-METHOD	kr	(Lcu;III)V	i	func_292_i
+METHOD	kr	(Lcu;III)V	i	func_282_i
 CLASS	ks	GuiSelectWorld
 FIELD	ks	Lbn;	a	parentScreen
 FIELD	ks	Ljava/lang/String;	h	screenTitle
 FIELD	ks	Z	i	selected
-METHOD	ks	()V	a	initGui
-METHOD	ks	(I)Ljava/lang/String;	d	getWorldName
+METHOD	ks	()V	a	clear
+METHOD	ks	(I)Ljava/lang/String;	d	getOptionDisplayString
 METHOD	ks	()V	j	initGui2
 METHOD	ks	(Lfz;)V	a	actionPerformed
 METHOD	ks	(I)V	c	selectWorld
@@ -3103,9 +3103,9 @@ FIELD	kt	[I	a	field_1343_a
 FIELD	kt	I	b	field_1342_b
 FIELD	kt	I	c	field_1344_c
 METHOD	kt	(Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;	a	func_883_a
-METHOD	kt	(IIII)V	a	func_885_a
-METHOD	kt	(IIII)V	b	func_884_b
-METHOD	kt	(IIII)Z	c	func_886_c
+METHOD	kt	(IIII)V	a	hitBlock
+METHOD	kt	(IIII)V	b	setBlockMetadata
+METHOD	kt	(IIII)Z	c	setBlockMetadata
 CLASS	ku	EnumMobType
 FIELD	ku	Lku;	a	everything
 FIELD	ku	Lku;	b	mobs
@@ -3121,7 +3121,7 @@ FIELD	kw	I	a	entityId
 METHOD	kw	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	kw	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	kw	(Lmc;)V	a	processPacket
-METHOD	kw	()I	a	getPacketSize
+METHOD	kw	()I	a	getHash
 CLASS	kx	BlockClay
 METHOD	kx	(ILjava/util/Random;)I	a	idDropped
 METHOD	kx	(Ljava/util/Random;)I	a	quantityDropped
@@ -3131,7 +3131,7 @@ METHOD	ky	(Lfi;Lgx;)V	a	func_4021_a
 CLASS	kz	Packet32EntityLook
 METHOD	kz	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	kz	(Ljava/io/DataOutputStream;)V	a	writePacketData
-METHOD	kz	()I	a	getPacketSize
+METHOD	kz	()I	a	getHash
 CLASS	l	ClippingHelperImplementation
 FIELD	l	Ll;	e	field_1694_e
 FIELD	l	Ljava/nio/FloatBuffer;	f	field_1693_f
@@ -3139,7 +3139,7 @@ FIELD	l	Ljava/nio/FloatBuffer;	g	field_1692_g
 FIELD	l	Ljava/nio/FloatBuffer;	h	field_1691_h
 METHOD	l	()Lbz;	a	func_1155_a
 METHOD	l	([[FI)V	a	func_1154_a
-METHOD	l	()V	b	func_1153_b
+METHOD	l	()V	b	close
 CLASS	la	ModelSpider
 FIELD	la	Ljp;	a	field_1255_a
 FIELD	la	Ljp;	b	field_1254_b
@@ -3153,15 +3153,15 @@ FIELD	la	Ljp;	i	field_1247_i
 FIELD	la	Ljp;	j	field_1246_j
 FIELD	la	Ljp;	m	field_1245_m
 METHOD	la	(FFFFFF)V	b	func_864_b
-METHOD	la	(FFFFFF)V	a	func_863_a
+METHOD	la	(FFFFFF)V	a	func_213_a
 CLASS	lb	TextureFlamesFX
 FIELD	lb	[F	g	field_1133_g
 FIELD	lb	[F	h	field_1132_h
-METHOD	lb	()V	a	func_783_a
+METHOD	lb	()V	a	clear
 CLASS	lc	MaterialLiquid
-METHOD	lc	()Z	d	func_879_d
-METHOD	lc	()Z	c	func_880_c
-METHOD	lc	()Z	a	func_878_a
+METHOD	lc	()Z	d	func_4089_d
+METHOD	lc	()Z	c	isEmpty
+METHOD	lc	()Z	a	isAssigned
 CLASS	ld	Packet50PreChunk
 FIELD	ld	I	a	xPosition
 FIELD	ld	I	b	yPosition
@@ -3169,7 +3169,7 @@ FIELD	ld	Z	c	mode
 METHOD	ld	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	ld	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	ld	(Lmc;)V	a	processPacket
-METHOD	ld	()I	a	getPacketSize
+METHOD	ld	()I	a	getHash
 CLASS	le	WorldGenLightStone2
 METHOD	le	(Lcu;Ljava/util/Random;III)Z	a	func_516_a
 CLASS	lf	LogoEffectRandomizer
@@ -3177,7 +3177,7 @@ FIELD	lf	D	a	field_1312_a
 FIELD	lf	D	b	field_1311_b
 FIELD	lf	D	c	field_1314_c
 FIELD	lf	Ldf;	d	mainMenu
-METHOD	lf	()V	a	func_875_a
+METHOD	lf	()V	a	clear
 CLASS	lg	FontRenderer
 FIELD	lg	[I	b	field_1307_b
 FIELD	lg	I	a	field_1308_a
@@ -3192,42 +3192,42 @@ FIELD	lh	[Lfi;	a	field_833_a
 FIELD	lh	I	b	field_832_b
 FIELD	lh	I	c	field_835_c
 FIELD	lh	I	d	field_834_d
-METHOD	lh	()I	c	getSizeInventory
+METHOD	lh	()I	c	getItemStackLimit
 METHOD	lh	(I)Lfi;	c	getStackInSlot
 METHOD	lh	(II)Lfi;	a	decrStackSize
 METHOD	lh	(ILfi;)V	a	setInventorySlotContents
-METHOD	lh	()Ljava/lang/String;	d	getName
+METHOD	lh	()Ljava/lang/String;	d	getLivingSound
 METHOD	lh	(Lih;)V	a	readFromNBT
-METHOD	lh	(Lih;)V	b	writeToNBT
+METHOD	lh	(Lih;)V	b	readEntityFromNBT
 METHOD	lh	()I	n_	getInventoryStackLimit
-METHOD	lh	(I)I	a	func_490_a
-METHOD	lh	(I)I	b	func_489_b
-METHOD	lh	()Z	a	func_485_a
-METHOD	lh	()V	b	updateEntity
-METHOD	lh	()Z	j	func_491_j
-METHOD	lh	()V	i	func_487_i
-METHOD	lh	(I)I	d	func_486_d
-METHOD	lh	(Lfi;)I	a	func_488_a
+METHOD	lh	(I)I	a	generateDisplayLists
+METHOD	lh	(I)I	b	getOptionControlType
+METHOD	lh	()Z	a	isAssigned
+METHOD	lh	()V	b	close
+METHOD	lh	()Z	j	isMultiplayerWorld
+METHOD	lh	()V	i	func_111_i
+METHOD	lh	(I)I	d	getHash
+METHOD	lh	(Lfi;)I	a	getIconIndex
 CLASS	li	BlockRedstoneWire
 FIELD	li	Z	a	field_453_a
-METHOD	li	(II)I	a	func_232_a
+METHOD	li	(II)I	a	getSlotIndex
 METHOD	li	(Lcu;III)Lcl;	d	func_221_d
-METHOD	li	()Z	a	func_217_b
-METHOD	li	()Z	b	func_242_c
-METHOD	li	()I	g	func_210_f
+METHOD	li	()Z	a	isAssigned
+METHOD	li	()Z	b	isFinished
+METHOD	li	()I	g	getDropItemId
 METHOD	li	(Lcu;III)Z	a	func_243_a
-METHOD	li	(Lcu;III)V	h	func_280_h
+METHOD	li	(Lcu;III)V	h	func_268_h
 METHOD	li	(Lcu;III)V	i	func_282_i
 METHOD	li	(Lcu;III)V	e	func_235_e
 METHOD	li	(Lcu;III)V	b	func_214_b
-METHOD	li	(Lcu;IIII)I	g	func_281_g
+METHOD	li	(Lcu;IIII)I	g	func_265_g
 METHOD	li	(Lcu;IIII)V	a	func_226_a
 METHOD	li	(ILjava/util/Random;)I	a	idDropped
 METHOD	li	(Lcu;IIII)Z	c	func_228_c
 METHOD	li	(Lox;IIII)Z	c	func_231_b
-METHOD	li	()Z	e	func_209_d
+METHOD	li	()Z	e	getBurning
 METHOD	li	(Lcu;IIILjava/util/Random;)V	b	func_247_b
-METHOD	li	(Lox;III)Z	c	func_279_b
+METHOD	li	(Lox;III)Z	c	func_261_b
 CLASS	lj	EntityArrow
 FIELD	lj	I	b	xTile
 FIELD	lj	I	c	yTile
@@ -3238,9 +3238,9 @@ FIELD	lj	I	a	arrowShake
 FIELD	lj	Lgx;	g	field_682_g
 FIELD	lj	I	h	field_681_h
 FIELD	lj	I	i	field_680_i
-METHOD	lj	(DDDFF)V	a	func_408_a
+METHOD	lj	(DDDFF)V	a	func_4042_a
 METHOD	lj	()V	e_	func_370_e_
-METHOD	lj	(Lih;)V	a	writeEntityToNBT
+METHOD	lj	(Lih;)V	a	readFromNBT
 METHOD	lj	(Lih;)V	b	readEntityFromNBT
 METHOD	lj	(Ldv;)V	b	func_4040_b
 METHOD	lj	()F	h_	func_392_h_
@@ -3331,12 +3331,12 @@ METHOD	lk	(Lgt;)Z	a	func_393_a
 METHOD	lk	()F	u	func_373_s
 METHOD	lk	()Z	K	func_359_G
 METHOD	lk	(FFF)V	a	func_351_a
-METHOD	lk	(F)F	a	func_382_a
+METHOD	lk	(F)F	a	func_1106_a
 METHOD	lk	(Lcu;)V	a	setWorld
 METHOD	lk	(DDDFF)V	b	func_399_b
 METHOD	lk	(DDDFF)V	c	func_365_c
 METHOD	lk	(Llk;)F	d	func_379_d
-METHOD	lk	(DDD)D	d	func_360_d
+METHOD	lk	(DDD)D	d	squareDistanceTo
 METHOD	lk	(DDD)D	e	func_361_e
 METHOD	lk	(Llk;)D	e	func_387_e
 METHOD	lk	(Ldv;)V	b	func_4040_b
@@ -3346,12 +3346,12 @@ METHOD	lk	(Llk;I)Z	a	attackEntity
 METHOD	lk	()Z	m_	func_401_c_
 METHOD	lk	()Z	d_	func_385_d_
 METHOD	lk	(Llk;I)V	c	func_364_b
-METHOD	lk	(Lam;)Z	a	func_390_a
+METHOD	lk	(Lam;)Z	a	func_244_a
 METHOD	lk	(D)Z	a	func_384_a
 METHOD	lk	()Ljava/lang/String;	z	func_4036_z
 METHOD	lk	(Lih;)Z	c	func_358_c
 METHOD	lk	(Lih;)V	d	writeToNBT
-METHOD	lk	(Lih;)V	e	readFromNBT
+METHOD	lk	(Lih;)V	e	readFromNBT_e
 METHOD	lk	()Ljava/lang/String;	L	func_389_H
 METHOD	lk	([D)Llm;	a	func_375_a
 METHOD	lk	([F)Llm;	a	func_377_a
@@ -3370,10 +3370,10 @@ METHOD	lk	(Llk;)V	g	func_386_g
 METHOD	lk	(DDDFFI)V	a	func_378_a
 METHOD	lk	()F	j_	func_4035_j_
 METHOD	lk	()Lam;	H	func_4037_H
-METHOD	lk	()V	q	func_4039_q
+METHOD	lk	()V	q	func_104_p
 CLASS	ll	MapGenCaves
-METHOD	ll	(II[BDDD)V	a	func_870_a
-METHOD	ll	(II[BDDDFFFIID)V	a	func_869_a
+METHOD	ll	(II[BDDD)V	a	func_4129_a
+METHOD	ll	(II[BDDDFFFIID)V	a	func_4128_a
 METHOD	ll	(Lcu;IIII[B)V	a	func_868_a
 CLASS	lm	NBTTagList
 FIELD	lm	Ljava/util/List;	a	tagList
@@ -3384,7 +3384,7 @@ METHOD	lm	()B	a	getType
 METHOD	lm	()Ljava/lang/String;	toString	toString
 METHOD	lm	(Ley;)V	a	setTag
 METHOD	lm	(I)Ley;	a	tagAt
-METHOD	lm	()I	c	tagCount
+METHOD	lm	()I	c	getItemStackLimit
 CLASS	ln	Packet23VehicleSpawn
 FIELD	ln	I	a	entityId
 FIELD	ln	I	b	xPosition
@@ -3394,34 +3394,34 @@ FIELD	ln	I	e	type
 METHOD	ln	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	ln	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	ln	(Lmc;)V	a	processPacket
-METHOD	ln	()I	a	getPacketSize
+METHOD	ln	()I	a	getHash
 CLASS	lo	Frustrum
 FIELD	lo	Lbz;	a	field_593_a
 FIELD	lo	D	b	field_592_b
 FIELD	lo	D	c	field_595_c
 FIELD	lo	D	d	field_594_d
-METHOD	lo	(DDD)V	a	func_343_a
-METHOD	lo	(DDDDDD)Z	a	func_344_a
-METHOD	lo	(Lcl;)Z	a	func_342_a
+METHOD	lo	(DDD)V	a	setPosition
+METHOD	lo	(DDDDDD)Z	a	func_1152_a
+METHOD	lo	(Lcl;)Z	a	func_1178_a
 CLASS	lp	BlockStairs
 FIELD	lp	Lne;	a	field_452_a
-METHOD	lp	()Z	a	func_217_b
-METHOD	lp	()Z	b	func_242_c
-METHOD	lp	()I	g	func_210_f
+METHOD	lp	()Z	a	isAssigned
+METHOD	lp	()Z	b	isFinished
+METHOD	lp	()I	g	getDropItemId
 METHOD	lp	(Lox;IIII)Z	b	func_260_c
 METHOD	lp	(Lcu;IIILcl;Ljava/util/ArrayList;)V	a	func_230_a
 METHOD	lp	(Lcu;IIILjava/util/Random;)V	b	func_247_b
 METHOD	lp	(Lcu;IIILdv;)V	b	func_233_b
 METHOD	lp	(Lcu;IIII)V	b	func_252_b
 METHOD	lp	(Lox;III)F	d	func_241_c
-METHOD	lp	(Llk;)F	a	func_227_a
-METHOD	lp	()I	c	func_234_g
+METHOD	lp	(Llk;)F	a	func_1202_a
+METHOD	lp	()I	c	getItemStackLimit
 METHOD	lp	(ILjava/util/Random;)I	a	idDropped
 METHOD	lp	(Ljava/util/Random;)I	a	quantityDropped
-METHOD	lp	(II)I	a	func_232_a
-METHOD	lp	(I)I	a	func_218_a
+METHOD	lp	(II)I	a	getSlotIndex
+METHOD	lp	(I)I	a	generateDisplayLists
 METHOD	lp	(Lox;IIII)I	a	func_211_a
-METHOD	lp	()I	d	func_4025_d
+METHOD	lp	()I	d	getMaxDamage
 METHOD	lp	(Lcu;III)Lcl;	f	func_246_f
 METHOD	lp	(Lcu;IIILlk;Lam;)V	a	func_257_a
 METHOD	lp	()Z	h	func_245_h
@@ -3444,15 +3444,15 @@ FIELD	lq	I	d	field_1303_d
 FIELD	lq	I	e	field_1302_e
 FIELD	lq	I	f	field_1301_f
 FIELD	lq	I	g	field_1300_g
-METHOD	lq	(Lcu;)V	a	func_4127_a
-METHOD	lq	(IIIIII)Z	a	func_866_a
+METHOD	lq	(Lcu;)V	a	setWorld
+METHOD	lq	(IIIIII)Z	a	func_640_a
 CLASS	lr	ChatLine
 FIELD	lr	Ljava/lang/String;	a	message
 FIELD	lr	I	b	updateCounter
 CLASS	ls	Packet31RelEntityMove
 METHOD	ls	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	ls	(Ljava/io/DataOutputStream;)V	a	writePacketData
-METHOD	ls	()I	a	getPacketSize
+METHOD	ls	()I	a	getHash
 CLASS	lt	EntitySplashFX
 CLASS	lu	NBTTagDouble
 FIELD	lu	D	a	doubleValue
@@ -3470,10 +3470,10 @@ CLASS	lx	BlockFurnace
 FIELD	lx	Z	a	field_456_a
 METHOD	lx	(ILjava/util/Random;)I	a	idDropped
 METHOD	lx	(Lcu;III)V	e	func_235_e
-METHOD	lx	(Lcu;III)V	h	func_284_h
+METHOD	lx	(Lcu;III)V	h	func_268_h
 METHOD	lx	(Lox;IIII)I	a	func_211_a
 METHOD	lx	(Lcu;IIILjava/util/Random;)V	b	func_247_b
-METHOD	lx	(I)I	a	func_218_a
+METHOD	lx	(I)I	a	generateDisplayLists
 METHOD	lx	(Lcu;IIILdv;)Z	a	blockActivated
 METHOD	lx	(ZLcu;III)V	a	func_285_a
 METHOD	lx	()Liz;	a_	func_283_a_
@@ -3488,12 +3488,12 @@ FIELD	ly	Ljp;	f	field_1292_f
 FIELD	ly	Ljp;	g	field_1291_g
 FIELD	ly	Ljp;	h	field_1290_h
 METHOD	ly	(FFFFFF)V	b	func_864_b
-METHOD	ly	(FFFFFF)V	a	func_863_a
+METHOD	ly	(FFFFFF)V	a	func_213_a
 CLASS	lz	MobSpawnerSwamp
 CLASS	m	RecipesArmor
 FIELD	m	[[Ljava/lang/String;	a	field_1681_a
 FIELD	m	[[Ljava/lang/Object;	b	field_1680_b
-METHOD	m	(Leh;)V	a	func_1148_a
+METHOD	m	(Leh;)V	a	func_1051_a
 CLASS	ma	RenderList
 FIELD	ma	I	a	field_1242_a
 FIELD	ma	I	b	field_1241_b
@@ -3505,10 +3505,10 @@ FIELD	ma	Ljava/nio/IntBuffer;	g	field_1236_g
 FIELD	ma	Z	h	field_1235_h
 FIELD	ma	Z	i	field_1234_i
 METHOD	ma	(IIIDDD)V	a	func_861_a
-METHOD	ma	(III)Z	a	func_862_a
-METHOD	ma	(I)V	a	func_858_a
-METHOD	ma	()V	a	func_860_a
-METHOD	ma	()V	b	func_859_b
+METHOD	ma	(III)Z	a	func_784_a
+METHOD	ma	(I)V	a	sortBack
+METHOD	ma	()V	a	clear
+METHOD	ma	()V	b	close
 CLASS	mb	RenderManager
 FIELD	mb	Ljava/util/Map;	o	field_4235_o
 FIELD	mb	Lmb;	a	field_1233_a
@@ -3529,11 +3529,11 @@ FIELD	mb	D	n	field_1220_n
 METHOD	mb	(Ljava/lang/Class;)Lao;	a	func_4117_a
 METHOD	mb	(Llk;)Lao;	a	func_855_a
 METHOD	mb	(Lcu;Lfm;Llg;Ldv;Lgi;F)V	a	func_857_a
-METHOD	mb	(Llk;F)V	a	func_854_a
-METHOD	mb	(Llk;DDDFF)V	a	func_853_a
-METHOD	mb	(Lcu;)V	a	func_852_a
-METHOD	mb	(DDD)D	a	func_851_a
-METHOD	mb	()Llg;	a	func_4116_a
+METHOD	mb	(Llk;F)V	a	func_1189_a
+METHOD	mb	(Llk;DDDFF)V	a	func_147_a
+METHOD	mb	(Lcu;)V	a	setWorld
+METHOD	mb	(DDD)D	a	generateNoise
+METHOD	mb	()Llg;	a	func_1029_a
 CLASS	mc	NetHandler
 METHOD	mc	(Lcf;)V	a	handleMapChunk
 METHOD	mc	(Lgc;)V	b	func_4114_b
@@ -3576,12 +3576,12 @@ FIELD	md	Lfh;	bu	field_4140_bu
 FIELD	md	Z	bv	field_4139_bv
 FIELD	md	I	bw	field_4138_bw
 METHOD	md	(Llk;I)Z	a	attackEntity
-METHOD	md	(I)V	b	heal
+METHOD	md	(I)V	b	bindTexture
 METHOD	md	()V	e_	func_370_e_
 METHOD	md	()V	o	func_462_n
 METHOD	md	()V	N	func_4056_N
 METHOD	md	(Lei;)V	a	func_446_a
-METHOD	md	(Ljava/lang/String;)V	a	func_461_a
+METHOD	md	(Ljava/lang/String;)V	a	handleErrorMessage
 METHOD	md	()V	y	func_457_w
 CLASS	me	ThreadDownloadImage
 FIELD	me	Ljava/lang/String;	a	location
@@ -3606,7 +3606,7 @@ FIELD	mh	I	c	durability
 METHOD	mh	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	mh	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	mh	(Lmc;)V	a	processPacket
-METHOD	mh	()I	a	getPacketSize
+METHOD	mh	()I	a	getHash
 CLASS	mi	ChunkLoader
 FIELD	mi	Ljava/io/File;	a	field_1200_a
 FIELD	mi	Z	b	field_1199_b
@@ -3615,12 +3615,12 @@ METHOD	mi	(Lcu;II)Lgs;	a	func_813_a
 METHOD	mi	(Lcu;Lgs;)V	a	func_812_a
 METHOD	mi	(Lgs;Lcu;Lih;)V	a	func_818_a
 METHOD	mi	(Lcu;Lih;)Lgs;	a	func_816_a
-METHOD	mi	()V	a	func_814_a
-METHOD	mi	()V	b	func_811_b
+METHOD	mi	()V	a	clear
+METHOD	mi	()V	b	close
 METHOD	mi	(Lcu;Lgs;)V	b	func_815_b
 CLASS	mj	RecipesIngots
 FIELD	mj	[[Ljava/lang/Object;	a	field_1198_a
-METHOD	mj	(Leh;)V	a	func_810_a
+METHOD	mj	(Leh;)V	a	func_1051_a
 CLASS	mk	ItemRecord
 FIELD	mk	Ljava/lang/String;	a	recordName
 METHOD	mk	(Lfi;Ldv;Lcu;IIII)Z	a	onItemUse
@@ -3633,7 +3633,7 @@ FIELD	ml	I	e	metadata
 METHOD	ml	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	ml	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	ml	(Lmc;)V	a	processPacket
-METHOD	ml	()I	a	getPacketSize
+METHOD	ml	()I	a	getHash
 CLASS	mm	ThreadRunIsoClient
 FIELD	mm	Laf;	a	field_1197_a
 METHOD	mm	()V	run	run
@@ -3644,12 +3644,12 @@ CLASS	mo	SlotArmor
 FIELD	mo	I	c	field_1124_c
 FIELD	mo	Lms;	d	field_1123_d
 METHOD	mo	()I	e	func_4104_e
-METHOD	mo	(Lfi;)Z	a	func_4105_a
-METHOD	mo	()I	c	func_775_c
+METHOD	mo	(Lfi;)Z	a	addItemStackToInventory
+METHOD	mo	()I	c	getItemStackLimit
 CLASS	mp	Gui
 FIELD	mp	F	k	field_923_k
 METHOD	mp	(IIIII)V	a	func_551_a
-METHOD	mp	(IIIIII)V	a	func_549_a
+METHOD	mp	(IIIIII)V	a	func_139_a
 METHOD	mp	(Llg;Ljava/lang/String;III)V	a	drawCenteredString
 METHOD	mp	(Llg;Ljava/lang/String;III)V	b	drawString
 METHOD	mp	(IIIIII)V	b	func_550_b
@@ -3657,7 +3657,7 @@ CLASS	mq	TexturedQuad
 FIELD	mq	[Leq;	a	field_1195_a
 FIELD	mq	I	b	field_1194_b
 FIELD	mq	Z	c	field_1196_c
-METHOD	mq	()V	a	func_809_a
+METHOD	mq	()V	a	clear
 METHOD	mq	(Lij;F)V	a	func_808_a
 CLASS	mr	OsMap
 FIELD	mr	[I	a	field_1193_a
@@ -3665,13 +3665,13 @@ CLASS	ms	GuiInventory
 FIELD	ms	Lo;	j	field_977_j
 FIELD	ms	F	l	xSize_lo
 FIELD	ms	F	m	ySize_lo
-METHOD	ms	()V	j	func_587_j
+METHOD	ms	()V	j	initGui2
 METHOD	ms	(IIF)V	a	drawScreen
-METHOD	ms	(F)V	a	func_589_a
+METHOD	ms	(F)V	a	rotateAroundX
 CLASS	mt	NoiseGeneratorOctaves
 FIELD	mt	[Lx;	a	field_1192_a
 FIELD	mt	I	b	field_1191_b
-METHOD	mt	(DD)D	a	func_806_a
+METHOD	mt	(DD)D	a	abs_max
 METHOD	mt	([DDDDIIIDDD)[D	a	func_807_a
 METHOD	mt	([DIIIIDDD)[D	a	func_4109_a
 CLASS	mu	NoiseGeneratorOctaves2
@@ -3690,16 +3690,16 @@ FIELD	mv	Z	g	rotating
 METHOD	mv	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	mv	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	mv	(Lmc;)V	a	processPacket
-METHOD	mv	()I	a	getPacketSize
+METHOD	mv	()I	a	getHash
 CLASS	mw	BlockSign
 FIELD	mw	Ljava/lang/Class;	a	field_455_a
 FIELD	mw	Z	b	field_454_b
 METHOD	mw	(Lcu;III)Lcl;	d	func_221_d
 METHOD	mw	(Lcu;III)Lcl;	f	func_246_f
 METHOD	mw	(Lox;III)V	a	func_238_a
-METHOD	mw	()I	g	func_210_f
-METHOD	mw	()Z	b	func_242_c
-METHOD	mw	()Z	a	func_217_b
+METHOD	mw	()I	g	getDropItemId
+METHOD	mw	()Z	b	isFinished
+METHOD	mw	()Z	a	isAssigned
 METHOD	mw	()Liz;	a_	func_283_a_
 METHOD	mw	(ILjava/util/Random;)I	a	idDropped
 METHOD	mw	(Lcu;IIII)V	a	func_226_a
@@ -3718,7 +3718,7 @@ FIELD	my	[I	e	field_1184_e
 FIELD	my	[I	f	field_1183_f
 FIELD	my	[I	g	field_1182_g
 METHOD	my	(Lkl;)V	a	func_799_a
-METHOD	my	()V	a	func_800_a
+METHOD	my	()V	a	clear
 CLASS	mz	GuiIngame
 FIELD	mz	Lad;	d	field_930_d
 FIELD	mz	Ljava/util/List;	e	chatMessageList
@@ -3731,26 +3731,26 @@ FIELD	mz	I	j	field_924_j
 FIELD	mz	F	b	field_4186_b
 FIELD	mz	F	c	field_931_c
 METHOD	mz	(FZII)V	a	func_4066_a
-METHOD	mz	(II)V	a	func_4063_a
+METHOD	mz	(II)V	a	mouseReleased
 METHOD	mz	(FII)V	a	func_4064_a
 METHOD	mz	(FII)V	b	func_4065_b
 METHOD	mz	(IIIF)V	a	func_554_a
-METHOD	mz	()V	a	func_555_a
-METHOD	mz	(Ljava/lang/String;)V	a	func_552_a
-METHOD	mz	(Ljava/lang/String;)V	b	func_553_b
+METHOD	mz	()V	a	clear
+METHOD	mz	(Ljava/lang/String;)V	a	handleErrorMessage
+METHOD	mz	(Ljava/lang/String;)V	b	func_1073_b
 CLASS	n	Packet5PlayerInventory
 FIELD	n	I	a	type
 FIELD	n	[Lfi;	b	stacks
 METHOD	n	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	n	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	n	(Lmc;)V	a	processPacket
-METHOD	n	()I	a	getPacketSize
+METHOD	n	()I	a	getHash
 CLASS	na	GuiControls
 FIELD	na	Lbn;	h	parentScreen
 FIELD	na	Ljava/lang/String;	a	screenTitle
 FIELD	na	Lgi;	i	options
 FIELD	na	I	j	buttonId
-METHOD	na	()V	a	initGui
+METHOD	na	()V	a	clear
 METHOD	na	(Lfz;)V	a	actionPerformed
 METHOD	na	(CI)V	a	keyTyped
 METHOD	na	(IIF)V	a	drawScreen
@@ -3760,9 +3760,9 @@ FIELD	nb	F	b	field_1173_b
 FIELD	nb	Z	c	field_1177_c
 FIELD	nb	Z	d	field_1176_d
 FIELD	nb	Z	e	field_1175_e
-METHOD	nb	(Ldv;)V	a	func_797_a
-METHOD	nb	()V	a	func_798_a
-METHOD	nb	(IZ)V	a	func_796_a
+METHOD	nb	(Ldv;)V	a	onCraftGuiClosed
+METHOD	nb	()V	a	clear
+METHOD	nb	(IZ)V	a	func_119_a
 CLASS	nc	Teleporter
 FIELD	nc	Ljava/util/Random;	a	field_4232_a
 METHOD	nc	(Lcu;Llk;)V	a	func_4107_a
@@ -3896,27 +3896,27 @@ METHOD	ne	(I)Lne;	d	func_256_d
 METHOD	ne	(F)Lne;	a	func_215_a
 METHOD	ne	(F)Lne;	b	setHardness
 METHOD	ne	()Z	i	func_212_i
-METHOD	ne	()Z	b	func_242_c
-METHOD	ne	()I	g	func_210_f
+METHOD	ne	()Z	b	isFinished
+METHOD	ne	()I	g	getDropItemId
 METHOD	ne	(F)Lne;	c	func_222_c
 METHOD	ne	(Z)V	b	func_253_b
 METHOD	ne	(FFFFFF)V	a	func_213_a
 METHOD	ne	(Lox;III)F	d	func_241_c
 METHOD	ne	(Lox;IIII)Z	b	func_260_c
 METHOD	ne	(Lox;IIII)I	a	func_211_a
-METHOD	ne	(II)I	a	func_232_a
-METHOD	ne	(I)I	a	func_218_a
+METHOD	ne	(II)I	a	getSlotIndex
+METHOD	ne	(I)I	a	generateDisplayLists
 METHOD	ne	(Lcu;III)Lcl;	f	func_246_f
 METHOD	ne	(Lcu;IIILcl;Ljava/util/ArrayList;)V	a	func_230_a
 METHOD	ne	(Lcu;III)Lcl;	d	func_221_d
-METHOD	ne	()Z	a	func_217_b
+METHOD	ne	()Z	a	isAssigned
 METHOD	ne	(IZ)Z	a	func_224_a
 METHOD	ne	()Z	h	func_245_h
 METHOD	ne	(Lcu;IIILjava/util/Random;)V	a	func_208_a
 METHOD	ne	(Lcu;IIILjava/util/Random;)V	b	func_247_b
 METHOD	ne	(Lcu;IIII)V	b	func_252_b
 METHOD	ne	(Lcu;IIII)V	a	func_226_a
-METHOD	ne	()I	d	func_4025_d
+METHOD	ne	()I	d	getMaxDamage
 METHOD	ne	(Lcu;III)V	e	func_235_e
 METHOD	ne	(Lcu;III)V	b	func_214_b
 METHOD	ne	(Ljava/util/Random;)I	a	quantityDropped
@@ -3924,13 +3924,13 @@ METHOD	ne	(ILjava/util/Random;)I	a	idDropped
 METHOD	ne	(Ldv;)F	a	func_225_a
 METHOD	ne	(Lcu;IIII)V	b_	func_259_b_
 METHOD	ne	(Lcu;IIIIF)V	a	func_216_a
-METHOD	ne	(Llk;)F	a	func_227_a
+METHOD	ne	(Llk;)F	a	func_1202_a
 METHOD	ne	(Lcu;IIILam;Lam;)Lnl;	a	func_255_a
 METHOD	ne	(Lam;)Z	a	func_244_a
-METHOD	ne	(Lam;)Z	b	func_249_b
-METHOD	ne	(Lam;)Z	c	func_251_c
+METHOD	ne	(Lam;)Z	b	func_1167_a
+METHOD	ne	(Lam;)Z	c	func_1175_b
 METHOD	ne	(Lcu;III)V	c	func_4027_c
-METHOD	ne	()I	c	func_234_g
+METHOD	ne	()I	c	getItemStackLimit
 METHOD	ne	(Lcu;III)Z	a	func_243_a
 METHOD	ne	(Lcu;IIILdv;)Z	a	blockActivated
 METHOD	ne	(Lcu;IIILlk;)V	b	func_254_a
@@ -3940,10 +3940,10 @@ METHOD	ne	(Lcu;IIILlk;Lam;)V	a	func_257_a
 METHOD	ne	(Lox;III)V	a	func_238_a
 METHOD	ne	(Lox;III)I	b	func_207_d
 METHOD	ne	(Lox;IIII)Z	c	func_231_b
-METHOD	ne	()Z	e	func_209_d
+METHOD	ne	()Z	e	getBurning
 METHOD	ne	(Lcu;IIILlk;)V	a	func_236_b
 METHOD	ne	(Lcu;IIII)Z	c	func_228_c
-METHOD	ne	()V	f	func_237_e
+METHOD	ne	()V	f	handleKeyboardInput
 METHOD	ne	(Lcu;IIII)V	a_	func_220_a_
 METHOD	ne	(Lcu;III)Z	g	func_223_g
 METHOD	ne	(Lcu;IIILgx;)V	a	func_4026_a
@@ -3952,21 +3952,21 @@ FIELD	nf	Lgs;	a	field_887_a
 FIELD	nf	Ljava/util/Map;	b	field_886_b
 FIELD	nf	Ljava/util/List;	c	field_889_c
 FIELD	nf	Lcu;	d	worldObj
-METHOD	nf	(II)Z	a	func_537_a
+METHOD	nf	(II)Z	a	isAtCursorPos
 METHOD	nf	(II)V	c	func_539_c
 METHOD	nf	(II)Lgs;	d	func_538_d
 METHOD	nf	(II)Lgs;	b	func_533_b
 METHOD	nf	(ZLph;)Z	a	func_535_a
-METHOD	nf	()Z	a	func_532_a
-METHOD	nf	()Z	b	func_536_b
+METHOD	nf	()Z	a	isAssigned
+METHOD	nf	()Z	b	isFinished
 METHOD	nf	(Lbb;II)V	a	populate
 CLASS	ng	EntitySlime
 FIELD	ng	F	a	field_768_a
 FIELD	ng	F	b	field_767_b
 FIELD	ng	I	d	field_769_d
 FIELD	ng	I	c	field_770_c
-METHOD	ng	(I)V	c	func_441_c
-METHOD	ng	(Lih;)V	a	writeEntityToNBT
+METHOD	ng	(I)V	c	selectWorld
+METHOD	ng	(Lih;)V	a	readFromNBT
 METHOD	ng	(Lih;)V	b	readEntityFromNBT
 METHOD	ng	()V	e_	func_370_e_
 METHOD	ng	()V	b_	func_418_b_
@@ -3975,7 +3975,7 @@ METHOD	ng	(Ldv;)V	b	func_4040_b
 METHOD	ng	()Ljava/lang/String;	f_	func_4048_f_
 METHOD	ng	()Ljava/lang/String;	f	func_4046_f
 METHOD	ng	()I	g	getDropItemId
-METHOD	ng	()Z	a	func_433_a
+METHOD	ng	()Z	a	isAssigned
 METHOD	ng	()F	h	getSoundVolume
 CLASS	nh	EntityZombie
 METHOD	nh	()V	k	reactToSunlight
@@ -4002,33 +4002,33 @@ FIELD	nl	Llk;	g	field_1168_g
 CLASS	nm	BlockLog
 METHOD	nm	(Ljava/util/Random;)I	a	quantityDropped
 METHOD	nm	(ILjava/util/Random;)I	a	idDropped
-METHOD	nm	(I)I	a	func_218_a
+METHOD	nm	(I)I	a	generateDisplayLists
 CLASS	nn	Packet12PlayerLook
 METHOD	nn	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	nn	(Ljava/io/DataOutputStream;)V	a	writePacketData
-METHOD	nn	()I	a	getPacketSize
+METHOD	nn	()I	a	getHash
 CLASS	no	BlockSoil
 METHOD	no	(Lcu;III)Lcl;	d	func_221_d
-METHOD	no	()Z	a	func_217_b
-METHOD	no	()Z	b	func_242_c
-METHOD	no	(II)I	a	func_232_a
+METHOD	no	()Z	a	isAssigned
+METHOD	no	()Z	b	isFinished
+METHOD	no	(II)I	a	getSlotIndex
 METHOD	no	(Lcu;IIILjava/util/Random;)V	a	func_208_a
 METHOD	no	(Lcu;IIILlk;)V	b	func_254_a
-METHOD	no	(Lcu;III)Z	h	func_275_h
+METHOD	no	(Lcu;III)Z	h	func_263_h
 METHOD	no	(Lcu;III)Z	i	func_274_i
 METHOD	no	(Lcu;IIII)V	a	func_226_a
 METHOD	no	(ILjava/util/Random;)I	a	idDropped
 CLASS	np	BlockTorch
 METHOD	np	(Lcu;III)Lcl;	d	func_221_d
-METHOD	np	()Z	a	func_217_b
-METHOD	np	()Z	b	func_242_c
-METHOD	np	()I	g	func_210_f
+METHOD	np	()Z	a	isAssigned
+METHOD	np	()Z	b	isFinished
+METHOD	np	()I	g	getDropItemId
 METHOD	np	(Lcu;III)Z	a	func_243_a
 METHOD	np	(Lcu;IIII)V	d	func_258_d
 METHOD	np	(Lcu;IIILjava/util/Random;)V	a	func_208_a
 METHOD	np	(Lcu;III)V	e	func_235_e
 METHOD	np	(Lcu;IIII)V	a	func_226_a
-METHOD	np	(Lcu;III)Z	h	func_271_h
+METHOD	np	(Lcu;III)Z	h	func_263_h
 METHOD	np	(Lcu;IIILam;Lam;)Lnl;	a	func_255_a
 METHOD	np	(Lcu;IIILjava/util/Random;)V	b	func_247_b
 CLASS	nq	MinecartTrackLogic
@@ -4039,17 +4039,17 @@ FIELD	nq	I	e	field_1163_e
 FIELD	nq	I	f	field_1162_f
 FIELD	nq	Ljava/util/List;	g	field_1161_g
 FIELD	nq	Ljc;	a	field_1160_a
-METHOD	nq	()V	a	func_789_a
-METHOD	nq	()V	b	func_785_b
+METHOD	nq	()V	a	clear
+METHOD	nq	()V	b	close
 METHOD	nq	(III)Z	a	func_784_a
 METHOD	nq	(Loa;)Lnq;	a	func_795_a
 METHOD	nq	(Lnq;)Z	b	func_793_b
 METHOD	nq	(III)Z	b	func_794_b
-METHOD	nq	()I	c	func_790_c
+METHOD	nq	()I	c	getItemStackLimit
 METHOD	nq	(Lnq;)Z	c	func_787_c
 METHOD	nq	(Lnq;)V	d	func_788_d
-METHOD	nq	(III)Z	c	func_786_c
-METHOD	nq	(Z)V	a	func_792_a
+METHOD	nq	(III)Z	c	func_1007_c
+METHOD	nq	(Z)V	a	setGraphicsLevel
 METHOD	nq	(Lnq;)I	a	func_791_a
 CLASS	nr	TextureWaterFX
 FIELD	nr	[F	g	field_1158_g
@@ -4057,7 +4057,7 @@ FIELD	nr	[F	h	field_1157_h
 FIELD	nr	[F	i	field_1156_i
 FIELD	nr	[F	j	field_1155_j
 FIELD	nr	I	k	field_1154_k
-METHOD	nr	()V	a	func_783_a
+METHOD	nr	()V	a	clear
 CLASS	ns	SlotInventory
 FIELD	ns	Ler;	c	guiHandler
 FIELD	ns	I	e	xPos
@@ -4066,9 +4066,9 @@ METHOD	ns	(II)Z	a	isAtCursorPos
 CLASS	nt	GuiConnecting
 FIELD	nt	Lht;	a	clientHandler
 FIELD	nt	Z	h	cancelled
-METHOD	nt	()V	g	updateScreen
+METHOD	nt	()V	g	dropAllItems
 METHOD	nt	(CI)V	a	keyTyped
-METHOD	nt	()V	a	initGui
+METHOD	nt	()V	a	clear
 METHOD	nt	(Lfz;)V	a	actionPerformed
 METHOD	nt	(IIF)V	a	drawScreen
 METHOD	nt	(Lnt;Lht;)Lht;	a	setNetClientHandler
@@ -4088,9 +4088,9 @@ FIELD	nv	Lorg/lwjgl/input/Cursor;	d	field_1116_d
 FIELD	nv	I	a	field_1114_a
 FIELD	nv	I	b	field_1113_b
 FIELD	nv	I	e	field_1115_e
-METHOD	nv	()V	a	func_774_a
-METHOD	nv	()V	b	func_773_b
-METHOD	nv	()V	c	func_772_c
+METHOD	nv	()V	a	clear
+METHOD	nv	()V	b	close
+METHOD	nv	()V	c	readPacket
 CLASS	nw	ItemArmor
 FIELD	nw	[I	be	field_315_ba
 FIELD	nw	[I	bf	field_314_bb
@@ -4106,21 +4106,21 @@ METHOD	nx	(Lcu;IIILjava/util/Random;)V	a	func_208_a
 METHOD	nx	(Lcu;III)V	h	func_268_h
 METHOD	nx	(Lcu;III)Z	g	func_223_g
 METHOD	nx	(Lcu;III)Lcl;	d	func_221_d
-METHOD	nx	()Z	a	func_217_b
-METHOD	nx	()Z	b	func_242_c
-METHOD	nx	()I	g	func_210_f
+METHOD	nx	()Z	a	isAssigned
+METHOD	nx	()Z	b	isFinished
+METHOD	nx	()I	g	getDropItemId
 CLASS	ny	ItemSpade
 FIELD	ny	[Lne;	bb	field_326_aX
 METHOD	ny	(Lne;)Z	a	func_4018_a
 CLASS	nz	WorldProviderHell
-METHOD	nz	()V	a	func_4098_a
+METHOD	nz	()V	a	clear
 METHOD	nz	(FF)Lam;	a	func_4096_a
-METHOD	nz	()V	b	func_4093_b
+METHOD	nz	()V	b	close
 METHOD	nz	()Lbb;	c	func_4094_c
 METHOD	nz	(Ljava/io/File;)Lah;	a	func_4092_a
-METHOD	nz	(II)Z	a	func_4102_a
+METHOD	nz	(II)Z	a	isAtCursorPos
 METHOD	nz	(JF)F	a	func_4100_a
-METHOD	nz	()Z	d	func_4099_d
+METHOD	nz	()Z	d	func_4089_d
 CLASS	o	CraftingInventoryPlayerCB
 FIELD	o	Lhp;	a	craftMatrix
 FIELD	o	Lha;	b	craftResult
@@ -4134,12 +4134,12 @@ METHOD	oa	(Ljava/lang/Object;)Z	equals	equals
 METHOD	oa	()I	hashCode	hashCode
 CLASS	ob	NibbleArray
 FIELD	ob	[B	a	data
-METHOD	ob	(III)I	a	getNibble
-METHOD	ob	(IIII)V	a	setNibble
-METHOD	ob	()Z	a	isValid
+METHOD	ob	(III)I	a	getBlockID
+METHOD	ob	(IIII)V	a	hitBlock
+METHOD	ob	()Z	a	isAssigned
 CLASS	oc	EntityPig
 FIELD	oc	Z	a	rideable
-METHOD	oc	(Lih;)V	a	writeEntityToNBT
+METHOD	oc	(Lih;)V	a	readFromNBT
 METHOD	oc	(Lih;)V	b	readEntityFromNBT
 METHOD	oc	()Ljava/lang/String;	d	getLivingSound
 METHOD	oc	()Ljava/lang/String;	f_	func_4048_f_
@@ -4148,13 +4148,13 @@ METHOD	oc	(Ldv;)Z	a	interact
 METHOD	oc	()I	g	getDropItemId
 CLASS	od	InventoryCraftResult
 FIELD	od	[Lfi;	a	stackResult
-METHOD	od	()I	c	getSizeInventory
+METHOD	od	()I	c	getItemStackLimit
 METHOD	od	(I)Lfi;	c	getStackInSlot
-METHOD	od	()Ljava/lang/String;	d	getName
+METHOD	od	()Ljava/lang/String;	d	getLivingSound
 METHOD	od	(II)Lfi;	a	decrStackSize
 METHOD	od	(ILfi;)V	a	setInventorySlotContents
 METHOD	od	()I	n_	getInventoryStackLimit
-METHOD	od	()V	h	func_474_j_
+METHOD	od	()V	h	dispose
 CLASS	oe	HashEntry
 FIELD	oe	I	a	hash
 FIELD	oe	Ljava/lang/Object;	b	value
@@ -4184,7 +4184,7 @@ FIELD	oh	F	h	field_755_h
 FIELD	oh	I	i	timeUntilNextEgg
 METHOD	oh	()V	k	reactToSunlight
 METHOD	oh	(F)V	c	fall
-METHOD	oh	(Lih;)V	a	writeEntityToNBT
+METHOD	oh	(Lih;)V	a	readFromNBT
 METHOD	oh	(Lih;)V	b	readEntityFromNBT
 METHOD	oh	()Ljava/lang/String;	d	getLivingSound
 METHOD	oh	()Ljava/lang/String;	f_	func_4048_f_
@@ -4200,7 +4200,7 @@ FIELD	oi	I	f	size
 METHOD	oi	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	oi	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	oi	(Lmc;)V	a	processPacket
-METHOD	oi	()I	a	getPacketSize
+METHOD	oi	()I	a	getHash
 CLASS	oj	CanvasCrashReport
 CLASS	ok	WorldGenPumpkin
 METHOD	ok	(Lcu;Ljava/util/Random;III)Z	a	func_516_a
@@ -4217,21 +4217,21 @@ FIELD	om	Z	c	field_4220_c
 FIELD	om	[F	d	field_4219_d
 FIELD	om	I	e	field_4218_e
 FIELD	om	[F	f	field_4217_f
-METHOD	om	(Lcu;)V	a	func_4095_a
-METHOD	om	()V	b	func_4093_b
-METHOD	om	()V	a	func_4098_a
+METHOD	om	(Lcu;)V	a	setWorld
+METHOD	om	()V	b	close
+METHOD	om	()V	a	clear
 METHOD	om	()Lbb;	c	func_4094_c
 METHOD	om	(Ljava/io/File;)Lah;	a	func_4092_a
-METHOD	om	(II)Z	a	func_4102_a
+METHOD	om	(II)Z	a	isAtCursorPos
 METHOD	om	(JF)F	a	func_4100_a
 METHOD	om	(FF)[F	b	func_4097_b
 METHOD	om	(FF)Lam;	a	func_4096_a
-METHOD	om	()Z	d	func_4099_d
+METHOD	om	()Z	d	func_4089_d
 METHOD	om	(I)Lom;	a	func_4101_a
 CLASS	on	RecipesWeapons
 FIELD	on	[[Ljava/lang/String;	a	field_1100_a
 FIELD	on	[[Ljava/lang/Object;	b	field_1099_b
-METHOD	on	(Leh;)V	a	func_766_a
+METHOD	on	(Leh;)V	a	func_1051_a
 CLASS	oo	NBTTagString
 FIELD	oo	Ljava/lang/String;	a	stringValue
 METHOD	oo	(Ljava/io/DataOutput;)V	a	write
@@ -4261,16 +4261,16 @@ FIELD	ot	I	i	field_1078_i
 FIELD	ot	Z	j	field_1077_j
 FIELD	ot	Lht;	k	field_1076_k
 FIELD	ot	I	l	field_1075_l
-METHOD	ot	(Ldv;)V	a	func_4091_a
+METHOD	ot	(Ldv;)V	a	onCraftGuiClosed
 METHOD	ot	(IIII)Z	b	func_729_b
-METHOD	ot	(IIII)V	a	func_719_a
-METHOD	ot	()V	a	func_724_a
+METHOD	ot	(IIII)V	a	hitBlock
+METHOD	ot	()V	a	clear
 METHOD	ot	(IIII)V	c	func_726_c
-METHOD	ot	(F)V	a	func_4088_a
-METHOD	ot	()F	b	func_727_b
-METHOD	ot	(Lcu;)V	a	func_717_a
-METHOD	ot	()V	c	func_728_c
-METHOD	ot	()V	e	func_730_e
+METHOD	ot	(F)V	a	rotateAroundX
+METHOD	ot	()F	b	func_1147_b
+METHOD	ot	(Lcu;)V	a	setWorld
+METHOD	ot	()V	c	readPacket
+METHOD	ot	()V	e	handleMouseInput
 METHOD	ot	(Ldv;Lcu;Lfi;IIII)Z	a	func_722_a
 METHOD	ot	(Lcu;)Ldv;	b	func_4087_b
 CLASS	ou	NetworkWriterThread
@@ -4286,21 +4286,21 @@ METHOD	ow	(Lcu;Ljava/util/Random;III)Z	a	func_516_a
 CLASS	ox	IBlockAccess
 CLASS	oy	BlockLever
 METHOD	oy	(Lcu;III)Lcl;	d	func_221_d
-METHOD	oy	()Z	a	func_217_b
-METHOD	oy	()Z	b	func_242_c
-METHOD	oy	()I	g	func_210_f
+METHOD	oy	()Z	a	isAssigned
+METHOD	oy	()Z	b	isFinished
+METHOD	oy	()I	g	getDropItemId
 METHOD	oy	(Lcu;III)Z	a	func_243_a
 METHOD	oy	(Lcu;IIII)V	d	func_258_d
 METHOD	oy	(Lcu;III)V	e	func_235_e
 METHOD	oy	(Lcu;IIII)V	a	func_226_a
-METHOD	oy	(Lcu;III)Z	h	func_267_h
+METHOD	oy	(Lcu;III)Z	h	func_263_h
 METHOD	oy	(Lox;III)V	a	func_238_a
 METHOD	oy	(Lcu;IIILdv;)V	b	func_233_b
 METHOD	oy	(Lcu;IIILdv;)Z	a	blockActivated
 METHOD	oy	(Lcu;III)V	b	func_214_b
 METHOD	oy	(Lox;IIII)Z	c	func_231_b
 METHOD	oy	(Lcu;IIII)Z	c	func_228_c
-METHOD	oy	()Z	e	func_209_d
+METHOD	oy	()Z	e	getBurning
 CLASS	oz	WorldGenFire
 METHOD	oz	(Lcu;Ljava/util/Random;III)Z	a	func_516_a
 CLASS	p	GuiSmallButton
@@ -4344,7 +4344,7 @@ METHOD	pc	(F)Lpc;	d	func_405_d
 METHOD	pc	()V	e_	func_370_e_
 METHOD	pc	(Lij;FFFFFF)V	a	func_406_a
 METHOD	pc	()I	k_	func_404_c
-METHOD	pc	(Lih;)V	a	writeEntityToNBT
+METHOD	pc	(Lih;)V	a	readFromNBT
 METHOD	pc	(Lih;)V	b	readEntityFromNBT
 CLASS	pd	MinecraftError
 CLASS	pe	RenderSheep
@@ -4368,8 +4368,8 @@ FIELD	pg	Z	a	field_4117_a
 FIELD	pg	I	b	field_4116_b
 FIELD	pg	Lfi;	c	field_4118_c
 METHOD	pg	()V	e_	func_370_e_
-METHOD	pg	()Z	a	func_433_a
-METHOD	pg	(Lih;)V	a	writeEntityToNBT
+METHOD	pg	()Z	a	isAssigned
+METHOD	pg	(Lih;)V	a	readFromNBT
 METHOD	pg	(Lih;)V	b	readEntityFromNBT
 METHOD	pg	()Llk;	c_	func_438_i
 METHOD	pg	()V	k	reactToSunlight
@@ -4386,9 +4386,9 @@ FIELD	pi	Ljava/lang/String;	a	screenTitle
 FIELD	pi	Lpp;	h	entitySign
 FIELD	pi	I	i	field_4189_i
 FIELD	pi	I	j	editLine
-METHOD	pi	()V	a	initGui
+METHOD	pi	()V	a	clear
 METHOD	pi	()V	h	dispose
-METHOD	pi	()V	g	updateScreen
+METHOD	pi	()V	g	dropAllItems
 METHOD	pi	(Lfz;)V	a	actionPerformed
 METHOD	pi	(CI)V	a	keyTyped
 METHOD	pi	(IIF)V	a	drawScreen
@@ -4421,12 +4421,12 @@ FIELD	pk	[D	w	field_4178_w
 METHOD	pk	(II[B[Lfy;[D)V	a	func_4060_a
 METHOD	pk	(II[B[Lfy;)V	a	func_4062_a
 METHOD	pk	(II)Lgs;	b	func_533_b
-METHOD	pk	([DIIIIII)[D	a	func_4061_a
-METHOD	pk	(II)Z	a	func_537_a
+METHOD	pk	([DIIIIII)[D	a	func_4057_a
+METHOD	pk	(II)Z	a	isAtCursorPos
 METHOD	pk	(Lbb;II)V	a	populate
 METHOD	pk	(ZLph;)Z	a	func_535_a
-METHOD	pk	()Z	a	func_532_a
-METHOD	pk	()Z	b	func_536_b
+METHOD	pk	()Z	a	isAssigned
+METHOD	pk	()Z	b	isFinished
 CLASS	pl	Packet59ComplexEntity
 FIELD	pl	I	a	xPosition
 FIELD	pl	I	b	yPosition
@@ -4436,7 +4436,7 @@ FIELD	pl	Lih;	e	entityNBT
 METHOD	pl	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	pl	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	pl	(Lmc;)V	a	processPacket
-METHOD	pl	()I	a	getPacketSize
+METHOD	pl	()I	a	getHash
 CLASS	pm	RenderZombieSimple
 FIELD	pm	F	a	field_204_f
 METHOD	pm	(Lig;F)V	a	func_175_a
@@ -4447,7 +4447,7 @@ CLASS	po	BlockBloodStone
 CLASS	pp	TileEntitySign
 FIELD	pp	[Ljava/lang/String;	a	signText
 FIELD	pp	I	b	lineBeingEdited
-METHOD	pp	(Lih;)V	b	writeToNBT
+METHOD	pp	(Lih;)V	b	readEntityFromNBT
 METHOD	pp	(Lih;)V	a	readFromNBT
 CLASS	pq	EntityMinecart
 FIELD	pq	[Lfi;	h	cargoItems
@@ -4476,17 +4476,17 @@ METHOD	pq	()V	I	func_395_F
 METHOD	pq	()V	e_	func_370_e_
 METHOD	pq	(DDDD)Lam;	a	func_515_a
 METHOD	pq	(DDD)Lam;	g	func_514_g
-METHOD	pq	(Lih;)V	a	writeEntityToNBT
+METHOD	pq	(Lih;)V	a	readFromNBT
 METHOD	pq	(Lih;)V	b	readEntityFromNBT
 METHOD	pq	()F	h_	func_392_h_
 METHOD	pq	(Llk;)V	f	func_380_f
-METHOD	pq	()I	c	getSizeInventory
+METHOD	pq	()I	c	getItemStackLimit
 METHOD	pq	(I)Lfi;	c	getStackInSlot
 METHOD	pq	(II)Lfi;	a	decrStackSize
 METHOD	pq	(ILfi;)V	a	setInventorySlotContents
-METHOD	pq	()Ljava/lang/String;	d	getName
+METHOD	pq	()Ljava/lang/String;	d	getLivingSound
 METHOD	pq	()I	n_	getInventoryStackLimit
-METHOD	pq	()V	h	func_474_j_
+METHOD	pq	()V	h	dispose
 METHOD	pq	(Ldv;)Z	a	interact
 METHOD	pq	(DDDFFI)V	a	func_378_a
 CLASS	pr	ItemPainting
@@ -4503,27 +4503,27 @@ FIELD	pt	Z	g	loaded
 FIELD	pt	Ljava/util/Random;	h	rand
 FIELD	pt	I	i	field_583_i
 METHOD	pt	(Lgi;)V	a	func_340_a
-METHOD	pt	()V	d	func_339_d
-METHOD	pt	()V	a	func_335_a
+METHOD	pt	()V	d	handleInput
+METHOD	pt	()V	a	clear
 METHOD	pt	()V	b	close
 METHOD	pt	(Ljava/lang/String;Ljava/io/File;)V	a	addSound
 METHOD	pt	(Ljava/lang/String;Ljava/io/File;)V	b	addStreaming
 METHOD	pt	(Ljava/lang/String;Ljava/io/File;)V	c	addMusic
-METHOD	pt	()V	c	func_4033_c
-METHOD	pt	(Lgx;F)V	a	func_338_a
+METHOD	pt	()V	c	readPacket
+METHOD	pt	(Lgx;F)V	a	func_168_a
 METHOD	pt	(Ljava/lang/String;FFFFF)V	a	func_331_a
 METHOD	pt	(Ljava/lang/String;FFFFF)V	b	func_336_b
 METHOD	pt	(Ljava/lang/String;FF)V	a	func_337_a
 CLASS	pu	BlockFire
 FIELD	pu	[I	a	field_449_a
 FIELD	pu	[I	b	field_448_b
-METHOD	pu	(III)V	a	func_264_a
+METHOD	pu	(III)V	a	mouseClicked
 METHOD	pu	(Lcu;III)Lcl;	d	func_221_d
-METHOD	pu	()Z	a	func_217_b
-METHOD	pu	()Z	b	func_242_c
-METHOD	pu	()I	g	func_210_f
+METHOD	pu	()Z	a	isAssigned
+METHOD	pu	()Z	b	isFinished
+METHOD	pu	()I	g	getDropItemId
 METHOD	pu	(Ljava/util/Random;)I	a	quantityDropped
-METHOD	pu	()I	d	func_4025_d
+METHOD	pu	()I	d	getMaxDamage
 METHOD	pu	(Lcu;IIILjava/util/Random;)V	a	func_208_a
 METHOD	pu	(Lcu;IIIILjava/util/Random;)V	a	func_266_a
 METHOD	pu	(Lcu;III)Z	h	func_263_h
@@ -4540,15 +4540,15 @@ FIELD	pv	Ljava/lang/String;	a	reason
 METHOD	pv	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	pv	(Ljava/io/DataOutputStream;)V	a	writePacketData
 METHOD	pv	(Lmc;)V	a	processPacket
-METHOD	pv	()I	a	getPacketSize
+METHOD	pv	()I	a	getHash
 CLASS	pw	BlockStep
 FIELD	pw	Z	a	field_469_a
-METHOD	pw	(I)I	a	func_218_a
-METHOD	pw	()Z	a	func_217_b
+METHOD	pw	(I)I	a	generateDisplayLists
+METHOD	pw	()Z	a	isAssigned
 METHOD	pw	(Lcu;IIII)V	a	func_226_a
 METHOD	pw	(Lcu;III)V	e	func_235_e
 METHOD	pw	(ILjava/util/Random;)I	a	idDropped
-METHOD	pw	()Z	b	func_242_c
+METHOD	pw	()Z	b	isFinished
 METHOD	pw	(Lox;IIII)Z	b	func_260_c
 CLASS	px	ItemFood
 FIELD	px	I	a	healAmount
@@ -4568,7 +4568,7 @@ METHOD	q	(ILjava/util/Random;)I	a	idDropped
 METHOD	q	(Ljava/util/Random;)I	a	quantityDropped
 METHOD	q	(Lcu;IIILjava/util/Random;)V	a	func_208_a
 CLASS	r	BlockTNT
-METHOD	r	(I)I	a	func_218_a
+METHOD	r	(I)I	a	generateDisplayLists
 METHOD	r	(Lcu;IIII)V	a	func_226_a
 METHOD	r	(Ljava/util/Random;)I	a	quantityDropped
 METHOD	r	(Lcu;III)V	c	func_4027_c
@@ -4576,23 +4576,23 @@ METHOD	r	(Lcu;IIII)V	b	func_252_b
 CLASS	s	TileEntityMobSpawnerRenderer
 FIELD	s	Ljava/util/Map;	b	field_1412_b
 METHOD	s	(Lbj;DDDF)V	a	func_931_a
-METHOD	s	(Liz;DDDF)V	a	func_930_a
+METHOD	s	(Liz;DDDF)V	a	func_1032_a
 CLASS	t	Packet11PlayerPosition
 METHOD	t	(Ljava/io/DataInputStream;)V	a	readPacketData
 METHOD	t	(Ljava/io/DataOutputStream;)V	a	writePacketData
-METHOD	t	()I	a	getPacketSize
+METHOD	t	()I	a	getHash
 CLASS	u	StepSoundSand
 METHOD	u	()Ljava/lang/String;	a	func_1146_a
 CLASS	v	BlockPortal
 METHOD	v	(Lcu;III)Lcl;	d	func_221_d
 METHOD	v	(Lox;III)V	a	func_238_a
-METHOD	v	()Z	a	func_217_b
-METHOD	v	()Z	b	func_242_c
+METHOD	v	()Z	a	isAssigned
+METHOD	v	()Z	b	isFinished
 METHOD	v	(Lcu;III)Z	a_	func_4032_a_
 METHOD	v	(Lcu;IIII)V	a	func_226_a
 METHOD	v	(Lox;IIII)Z	b	func_260_c
 METHOD	v	(Ljava/util/Random;)I	a	quantityDropped
-METHOD	v	()I	c	func_234_g
+METHOD	v	()I	c	getItemStackLimit
 METHOD	v	(Lcu;IIILlk;)V	a	func_236_b
 METHOD	v	(Lcu;IIILjava/util/Random;)V	b	func_247_b
 CLASS	w	StepSoundStone
@@ -4606,12 +4606,12 @@ METHOD	x	(DDD)D	a	generateNoise
 METHOD	x	(DDD)D	b	lerp
 METHOD	x	(IDD)D	a	func_4110_a
 METHOD	x	(IDDD)D	a	grad
-METHOD	x	(DD)D	a	func_801_a
+METHOD	x	(DD)D	a	abs_max
 METHOD	x	([DDDDIIIDDDD)V	a	func_805_a
 CLASS	y	MaterialLogic
-METHOD	y	()Z	a	func_878_a
-METHOD	y	()Z	b	func_881_b
-METHOD	y	()Z	c	func_880_c
+METHOD	y	()Z	a	isAssigned
+METHOD	y	()Z	b	isFinished
+METHOD	y	()Z	c	isEmpty
 CLASS	z	CompressedStreamTools
 METHOD	z	(Ljava/io/InputStream;)Lih;	a	func_1138_a
 METHOD	z	(Lih;Ljava/io/OutputStream;)V	a	func_1143_a
@@ -4632,7 +4632,7 @@ METHOD	paulscode/sound/Channel	()I	buffersProcessed	buffersProcessed
 METHOD	paulscode/sound/Channel	()Z	processBuffer	processBuffer
 METHOD	paulscode/sound/Channel	(Ljavax/sound/sampled/AudioFormat;)V	setAudioFormat	setAudioFormat
 METHOD	paulscode/sound/Channel	()V	flush	flush
-METHOD	paulscode/sound/Channel	()V	close	close
+METHOD	paulscode/sound/Channel	()V	close	close_close
 METHOD	paulscode/sound/Channel	()V	play	play
 METHOD	paulscode/sound/Channel	()V	pause	pause
 METHOD	paulscode/sound/Channel	()V	stop	stop
@@ -5292,7 +5292,7 @@ FIELD	com/jcraft/jogg/StreamState	J	packetno	packetno
 FIELD	com/jcraft/jogg/StreamState	J	granulepos	granulepos
 METHOD	com/jcraft/jogg/StreamState	()V	init	init
 METHOD	com/jcraft/jogg/StreamState	(I)V	init	init
-METHOD	com/jcraft/jogg/StreamState	()V	clear	clear
+METHOD	com/jcraft/jogg/StreamState	()V	clear	clear_clear
 METHOD	com/jcraft/jogg/StreamState	()V	destroy	destroy
 METHOD	com/jcraft/jogg/StreamState	(I)V	body_expand	body_expand
 METHOD	com/jcraft/jogg/StreamState	(I)V	lacing_expand	lacing_expand
@@ -5369,7 +5369,7 @@ METHOD	com/jcraft/jorbis/CodeBook	(Lcom/jcraft/jogg/Buffer;)I	decode	decode
 METHOD	com/jcraft/jorbis/CodeBook	([FILcom/jcraft/jogg/Buffer;II)I	decodevs	decodevs
 METHOD	com/jcraft/jorbis/CodeBook	([FI)I	best	best
 METHOD	com/jcraft/jorbis/CodeBook	([FII)I	besterror	besterror
-METHOD	com/jcraft/jorbis/CodeBook	()V	clear	clear
+METHOD	com/jcraft/jorbis/CodeBook	()V	clear	clear_clear
 METHOD	com/jcraft/jorbis/CodeBook	(I[FI[FI)F	dist	dist
 METHOD	com/jcraft/jorbis/CodeBook	(Lcom/jcraft/jorbis/StaticCodeBook;)I	init_decode	init_decode
 METHOD	com/jcraft/jorbis/CodeBook	([II)[I	make_words	make_words
@@ -5393,7 +5393,7 @@ METHOD	com/jcraft/jorbis/Comment	([BI)I	query	query
 METHOD	com/jcraft/jorbis/Comment	(Lcom/jcraft/jogg/Buffer;)I	unpack	unpack
 METHOD	com/jcraft/jorbis/Comment	(Lcom/jcraft/jogg/Buffer;)I	pack	pack
 METHOD	com/jcraft/jorbis/Comment	(Lcom/jcraft/jogg/Packet;)I	header_out	header_out
-METHOD	com/jcraft/jorbis/Comment	()V	clear	clear
+METHOD	com/jcraft/jorbis/Comment	()V	clear	clear_clear
 METHOD	com/jcraft/jorbis/Comment	()Ljava/lang/String;	getVendor	getVendor
 METHOD	com/jcraft/jorbis/Comment	(I)Ljava/lang/String;	getComment	getComment
 METHOD	com/jcraft/jorbis/Comment	()Ljava/lang/String;	toString	toString
@@ -5409,7 +5409,7 @@ FIELD	com/jcraft/jorbis/Drft	F	taur	taur
 FIELD	com/jcraft/jorbis/Drft	F	sqrt2	sqrt2
 METHOD	com/jcraft/jorbis/Drft	([F)V	backward	backward
 METHOD	com/jcraft/jorbis/Drft	(I)V	init	init
-METHOD	com/jcraft/jorbis/Drft	()V	clear	clear
+METHOD	com/jcraft/jorbis/Drft	()V	clear	clear_clear
 METHOD	com/jcraft/jorbis/Drft	(I[FI[I)V	drfti1	drfti1
 METHOD	com/jcraft/jorbis/Drft	(I[F[I)V	fdrffti	fdrffti
 METHOD	com/jcraft/jorbis/Drft	(II[F[F[FI)V	dradf2	dradf2
@@ -5459,7 +5459,7 @@ METHOD	com/jcraft/jorbis/DspState	(Lcom/jcraft/jorbis/Info;)I	synthesis_init	syn
 METHOD	com/jcraft/jorbis/DspState	(Lcom/jcraft/jorbis/Block;)I	synthesis_blockin	synthesis_blockin
 METHOD	com/jcraft/jorbis/DspState	([[[F[I)I	synthesis_pcmout	synthesis_pcmout
 METHOD	com/jcraft/jorbis/DspState	(I)I	synthesis_read	synthesis_read
-METHOD	com/jcraft/jorbis/DspState	()V	clear	clear
+METHOD	com/jcraft/jorbis/DspState	()V	clear	clear_clear
 CLASS	com/jcraft/jorbis/Floor0$EchstateFloor0	com/jcraft/jorbis/Floor0$EchstateFloor0
 FIELD	com/jcraft/jorbis/Floor0$EchstateFloor0	[I	codewords	codewords
 FIELD	com/jcraft/jorbis/Floor0$EchstateFloor0	[F	curve	curve
@@ -5622,7 +5622,7 @@ FIELD	com/jcraft/jorbis/Info	I	envelopesa	envelopesa
 FIELD	com/jcraft/jorbis/Info	F	preecho_thresh	preecho_thresh
 FIELD	com/jcraft/jorbis/Info	F	preecho_clamp	preecho_clamp
 METHOD	com/jcraft/jorbis/Info	()V	init	init
-METHOD	com/jcraft/jorbis/Info	()V	clear	clear
+METHOD	com/jcraft/jorbis/Info	()V	clear	clear_clear
 METHOD	com/jcraft/jorbis/Info	(Lcom/jcraft/jogg/Buffer;)I	unpack_info	unpack_info
 METHOD	com/jcraft/jorbis/Info	(Lcom/jcraft/jogg/Buffer;)I	unpack_books	unpack_books
 METHOD	com/jcraft/jorbis/Info	(Lcom/jcraft/jorbis/Comment;Lcom/jcraft/jogg/Packet;)I	synthesis_headerin	synthesis_headerin
@@ -5661,7 +5661,7 @@ FIELD	com/jcraft/jorbis/Lpc	I	m	m
 METHOD	com/jcraft/jorbis/Lpc	([F[FII)F	lpc_from_data	lpc_from_data
 METHOD	com/jcraft/jorbis/Lpc	([F[F)F	lpc_from_curve	lpc_from_curve
 METHOD	com/jcraft/jorbis/Lpc	(II)V	init	init
-METHOD	com/jcraft/jorbis/Lpc	()V	clear	clear
+METHOD	com/jcraft/jorbis/Lpc	()V	clear	clear_clear
 METHOD	com/jcraft/jorbis/Lpc	(FF)F	FAST_HYPOT	FAST_HYPOT
 METHOD	com/jcraft/jorbis/Lpc	([F[FF)V	lpc_to_curve	lpc_to_curve
 CLASS	com/jcraft/jorbis/Lsp	com/jcraft/jorbis/Lsp
@@ -5715,7 +5715,7 @@ FIELD	com/jcraft/jorbis/Mdct	F	scale	scale
 FIELD	com/jcraft/jorbis/Mdct	[F	_x	_x
 FIELD	com/jcraft/jorbis/Mdct	[F	_w	_w
 METHOD	com/jcraft/jorbis/Mdct	(I)V	init	init
-METHOD	com/jcraft/jorbis/Mdct	()V	clear	clear
+METHOD	com/jcraft/jorbis/Mdct	()V	clear	clear_clear
 METHOD	com/jcraft/jorbis/Mdct	([F[F)V	forward	forward
 METHOD	com/jcraft/jorbis/Mdct	([F[F)V	backward	backward
 METHOD	com/jcraft/jorbis/Mdct	([F[FIIII)[F	mdct_kernel	mdct_kernel
@@ -5822,7 +5822,7 @@ FIELD	com/jcraft/jorbis/StaticCodeBook	I	VQ_FEXP_BIAS	VQ_FEXP_BIAS
 METHOD	com/jcraft/jorbis/StaticCodeBook	(Lcom/jcraft/jogg/Buffer;)I	pack	pack
 METHOD	com/jcraft/jorbis/StaticCodeBook	(Lcom/jcraft/jogg/Buffer;)I	unpack	unpack
 METHOD	com/jcraft/jorbis/StaticCodeBook	()I	maptype1_quantvals	maptype1_quantvals
-METHOD	com/jcraft/jorbis/StaticCodeBook	()V	clear	clear
+METHOD	com/jcraft/jorbis/StaticCodeBook	()V	clear	clear_clear
 METHOD	com/jcraft/jorbis/StaticCodeBook	()[F	unquantize	unquantize
 METHOD	com/jcraft/jorbis/StaticCodeBook	(F)J	float32_pack	float32_pack
 METHOD	com/jcraft/jorbis/StaticCodeBook	(I)F	float32_unpack	float32_unpack
@@ -5892,44 +5892,44 @@ FIELD	net/minecraft/client/Minecraft	I	Z	field_135_X
 FIELD	net/minecraft/client/Minecraft	Z	L	enableRain
 FIELD	net/minecraft/client/Minecraft	J	M	field_148_K
 FIELD	net/minecraft/client/Minecraft	I	aa	field_134_Y
-METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;I)V	a	func_121_a
-METHOD	net/minecraft/client/Minecraft	()V	a	func_4008_a
+METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;I)V	a	setInteger
+METHOD	net/minecraft/client/Minecraft	()V	a	clear
 METHOD	net/minecraft/client/Minecraft	()V	q	func_104_p
 METHOD	net/minecraft/client/Minecraft	(IIIIII)V	a	func_139_a
-METHOD	net/minecraft/client/Minecraft	()Ljava/io/File;	b	getDataFolder
-METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;)Ljava/io/File;	a	func_127_a
+METHOD	net/minecraft/client/Minecraft	()Ljava/io/File;	b	getDataFolder_b
+METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;)Ljava/io/File;	a	func_1264_a
 METHOD	net/minecraft/client/Minecraft	()Lje;	r	getOs
 METHOD	net/minecraft/client/Minecraft	(Lbn;)V	a	loadScreen
 METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;)V	c	checkGLError
-METHOD	net/minecraft/client/Minecraft	()V	c	func_130_c
+METHOD	net/minecraft/client/Minecraft	()V	c	readPacket
 METHOD	net/minecraft/client/Minecraft	()V	run	run
-METHOD	net/minecraft/client/Minecraft	()V	s	func_4004_s
-METHOD	net/minecraft/client/Minecraft	(J)V	a	func_4002_a
-METHOD	net/minecraft/client/Minecraft	()V	d	shutdown
-METHOD	net/minecraft/client/Minecraft	()V	e	func_123_e
-METHOD	net/minecraft/client/Minecraft	()V	f	func_138_f
-METHOD	net/minecraft/client/Minecraft	()V	g	func_117_g
+METHOD	net/minecraft/client/Minecraft	()V	s	func_374_q
+METHOD	net/minecraft/client/Minecraft	(J)V	a	setWorldTime
+METHOD	net/minecraft/client/Minecraft	()V	d	handleInput
+METHOD	net/minecraft/client/Minecraft	()V	e	handleMouseInput
+METHOD	net/minecraft/client/Minecraft	()V	f	handleKeyboardInput
+METHOD	net/minecraft/client/Minecraft	()V	g	dropAllItems
 METHOD	net/minecraft/client/Minecraft	(IZ)V	a	func_119_a
-METHOD	net/minecraft/client/Minecraft	(I)V	a	func_108_a
-METHOD	net/minecraft/client/Minecraft	()V	h	toggleFullscreen
-METHOD	net/minecraft/client/Minecraft	(II)V	a	resize
+METHOD	net/minecraft/client/Minecraft	(I)V	a	sortBack
+METHOD	net/minecraft/client/Minecraft	()V	h	dispose
+METHOD	net/minecraft/client/Minecraft	(II)V	a	mouseReleased
 METHOD	net/minecraft/client/Minecraft	()V	t	func_114_s
 METHOD	net/minecraft/client/Minecraft	()V	i	func_111_i
 METHOD	net/minecraft/client/Minecraft	()V	u	forceReload
 METHOD	net/minecraft/client/Minecraft	()Z	j	isMultiplayerWorld
-METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;)V	b	func_113_b
-METHOD	net/minecraft/client/Minecraft	()V	k	func_4001_k
-METHOD	net/minecraft/client/Minecraft	(Lcu;)V	a	func_134_a
+METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;)V	b	func_1073_b
+METHOD	net/minecraft/client/Minecraft	()V	k	reactToSunlight
+METHOD	net/minecraft/client/Minecraft	(Lcu;)V	a	setWorld
 METHOD	net/minecraft/client/Minecraft	(Lcu;Ljava/lang/String;)V	a	func_105_a
 METHOD	net/minecraft/client/Minecraft	(Lcu;Ljava/lang/String;Ldv;)V	a	func_4005_a
 METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;)V	d	func_120_d
-METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;Ljava/io/File;)V	a	installResource
+METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;Ljava/io/File;)V	a	addSound
 METHOD	net/minecraft/client/Minecraft	()Lbk;	l	func_137_k
 METHOD	net/minecraft/client/Minecraft	()Ljava/lang/String;	m	func_4003_m
 METHOD	net/minecraft/client/Minecraft	()Ljava/lang/String;	n	func_4006_n
 METHOD	net/minecraft/client/Minecraft	()Ljava/lang/String;	o	func_125_n
 METHOD	net/minecraft/client/Minecraft	()V	p	respawn
-METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;Ljava/lang/String;)V	a	func_132_a
+METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;Ljava/lang/String;)V	a	setString
 METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V	a	func_118_a
 METHOD	net/minecraft/client/Minecraft	([Ljava/lang/String;)V	main	main
 CLASS	net/minecraft/client/MinecraftApplet	net/minecraft/client/MinecraftApplet
@@ -5937,12 +5937,12 @@ FIELD	net/minecraft/client/MinecraftApplet	Ljava/awt/Canvas;	a	mcCanvas
 FIELD	net/minecraft/client/MinecraftApplet	Lnet/minecraft/client/Minecraft;	b	mc
 FIELD	net/minecraft/client/MinecraftApplet	Ljava/lang/Thread;	c	mcThread
 METHOD	net/minecraft/client/MinecraftApplet	()V	init	init
-METHOD	net/minecraft/client/MinecraftApplet	()V	a	func_103_a
+METHOD	net/minecraft/client/MinecraftApplet	()V	a	clear
 METHOD	net/minecraft/client/MinecraftApplet	()V	start	start
 METHOD	net/minecraft/client/MinecraftApplet	()V	stop	stop
 METHOD	net/minecraft/client/MinecraftApplet	()V	destroy	destroy
-METHOD	net/minecraft/client/MinecraftApplet	()V	b	shutdown
-METHOD	net/minecraft/client/MinecraftApplet	()V	c	func_101_c
+METHOD	net/minecraft/client/MinecraftApplet	()V	b	close
+METHOD	net/minecraft/client/MinecraftApplet	()V	c	readPacket
 CLASS	net/minecraft/isom/IsomPreviewApplet	net/minecraft/isom/IsomPreviewApplet
 FIELD	net/minecraft/isom/IsomPreviewApplet	Laf;	a	field_4012_a
 METHOD	net/minecraft/isom/IsomPreviewApplet	()V	start	start
@@ -6028,7 +6028,7 @@ METHOD	paulscode/sound/libraries/ChannelLWJGLOpenAL	([B)Z	queueBuffer	queueBuffe
 METHOD	paulscode/sound/libraries/ChannelLWJGLOpenAL	([B)I	feedRawAudioData	feedRawAudioData
 METHOD	paulscode/sound/libraries/ChannelLWJGLOpenAL	()I	buffersProcessed	buffersProcessed
 METHOD	paulscode/sound/libraries/ChannelLWJGLOpenAL	()V	flush	flush
-METHOD	paulscode/sound/libraries/ChannelLWJGLOpenAL	()V	close	close
+METHOD	paulscode/sound/libraries/ChannelLWJGLOpenAL	()V	close	close_close
 METHOD	paulscode/sound/libraries/ChannelLWJGLOpenAL	()V	play	play
 METHOD	paulscode/sound/libraries/ChannelLWJGLOpenAL	()V	pause	pause
 METHOD	paulscode/sound/libraries/ChannelLWJGLOpenAL	()V	stop	stop

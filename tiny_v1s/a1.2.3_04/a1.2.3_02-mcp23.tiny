@@ -6,11 +6,11 @@ FIELD	a	I	c	field_9278_c
 METHOD	a	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	a	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	a	(Lmm;)V	a	func_323_a
-METHOD	a	()I	a	func_329_a
+METHOD	a	()I	a	getHash
 CLASS	aa	MaterialLogic
-METHOD	aa	()Z	a	func_878_a
-METHOD	aa	()Z	b	func_881_b
-METHOD	aa	()Z	c	func_880_c
+METHOD	aa	()Z	a	allowsAttachment
+METHOD	aa	()Z	b	doesGuiPauseGame
+METHOD	aa	()Z	c	func_1039_c
 CLASS	ab	CompressedStreamTools
 METHOD	ab	(Ljava/io/InputStream;)Lip;	a	func_1138_a
 METHOD	ab	(Lip;Ljava/io/OutputStream;)V	a	writeGzippedCompoundToOutputStream
@@ -29,14 +29,14 @@ FIELD	ad	Z	c	field_1131_c
 FIELD	ad	I	d	field_1130_d
 FIELD	ad	I	e	field_1129_e
 FIELD	ad	I	f	field_1128_f
-METHOD	ad	()V	a	func_783_a
+METHOD	ad	()V	a	clearBoundingBoxPool
 METHOD	ad	(Lft;)V	a	func_782_a
 CLASS	ae	TextureCompassFX
 FIELD	ae	Lnet/minecraft/client/Minecraft;	g	mc
 FIELD	ae	[I	h	field_4230_h
 FIELD	ae	D	i	field_4229_i
 FIELD	ae	D	j	field_4228_j
-METHOD	ae	()V	a	func_783_a
+METHOD	ae	()V	a	clearBoundingBoxPool
 CLASS	af	RenderItem
 FIELD	af	Lbk;	a	renderBlocks
 FIELD	af	Ljava/util/Random;	e	random
@@ -44,7 +44,7 @@ METHOD	af	(Len;DDDFF)V	a	func_165_a
 METHOD	af	(Llq;Lft;Lfo;II)V	a	renderItemIntoGUI
 METHOD	af	(Llq;Lft;Lfo;II)V	b	renderItemOverlayIntoGUI
 METHOD	af	(Lir;IIIII)V	a	renderQuad
-METHOD	af	(IIIIII)V	a	renderTexturedQuad
+METHOD	af	(IIIIII)V	a	drawGradientRect
 METHOD	af	(Llu;DDDFF)V	a	doRender
 CLASS	ag	ItemBucket
 FIELD	ag	I	a	isFull
@@ -63,17 +63,17 @@ FIELD	ah	I	j	field_1784_j
 FIELD	ah	I	k	field_1783_k
 FIELD	ah	I	l	field_1782_l
 METHOD	ah	()Ljava/io/File;	a	getDataFolder
-METHOD	ah	(Ljava/lang/String;)Ljava/io/File;	a	func_1264_a
+METHOD	ah	(Ljava/lang/String;)Ljava/io/File;	a	getAppDir
 METHOD	ah	()Lfv;	e	func_1269_e
-METHOD	ah	(Ljava/lang/String;)V	b	func_1270_b
-METHOD	ah	(I)V	a	func_1266_a
-METHOD	ah	()V	b	func_1272_b
-METHOD	ah	()V	c	func_1273_c
+METHOD	ah	(Ljava/lang/String;)V	b	releaseImageData
+METHOD	ah	(I)V	a	changeCurrentItem
+METHOD	ah	()V	b	closeMinecraft
+METHOD	ah	()V	c	updateDelay
 METHOD	ah	(II)Lkv;	a	func_1267_a
 METHOD	ah	()V	run	run
 METHOD	ah	(Ljava/awt/Graphics;)V	update	update
 METHOD	ah	(Ljava/awt/Graphics;)V	paint	paint
-METHOD	ah	()V	d	func_1265_d
+METHOD	ah	()V	d	handleInput
 METHOD	ah	(Ljava/awt/Graphics2D;)V	a	func_1268_a
 METHOD	ah	(Ljava/awt/event/MouseEvent;)V	mouseDragged	mouseDragged
 METHOD	ah	(Ljava/awt/event/MouseEvent;)V	mouseMoved	mouseMoved
@@ -92,10 +92,10 @@ FIELD	aj	I	a	plantBlockId
 METHOD	aj	(Lcx;Ljava/util/Random;III)Z	a	func_516_a
 CLASS	ak	EntityAnimals
 METHOD	ak	(III)F	a	func_439_a
-METHOD	ak	(Lip;)V	a	writeEntityToNBT
+METHOD	ak	(Lip;)V	a	readFromNBT
 METHOD	ak	(Lip;)V	b	readEntityFromNBT
-METHOD	ak	()Z	a	func_433_a
-METHOD	ak	()I	b	func_421_b
+METHOD	ak	()Z	a	allowsAttachment
+METHOD	ak	()I	b	func_1088_b
 CLASS	al	SoundPoolEntry
 FIELD	al	Ljava/lang/String;	a	soundName
 FIELD	al	Ljava/net/URL;	b	soundUrl
@@ -110,25 +110,25 @@ FIELD	am	I	e	field_4125_e
 FIELD	am	I	f	field_4124_f
 METHOD	am	()V	b_	func_418_b_
 METHOD	am	(DDDD)Z	a	func_4050_a
-METHOD	am	()Ljava/lang/String;	d	func_6389_d
+METHOD	am	()Ljava/lang/String;	d	getInvName
 METHOD	am	()Ljava/lang/String;	f_	func_6394_f_
 METHOD	am	()Ljava/lang/String;	f	func_6390_f
 METHOD	am	()I	g_	func_422_g
 METHOD	am	()F	h	func_6393_h
-METHOD	am	()Z	a	func_433_a
+METHOD	am	()Z	a	allowsAttachment
 METHOD	am	()I	i	func_6391_i
 CLASS	an	BlockRedstoneOre
 FIELD	an	Z	a	field_468_a
-METHOD	an	()I	d	tickRate
+METHOD	an	()I	d	getMaxDamage
 METHOD	an	(Lcx;IIILea;)V	b	onBlockClicked
 METHOD	an	(Lcx;IIILlu;)V	b	onEntityWalking
 METHOD	an	(Lcx;IIILea;)Z	a	blockActivated
-METHOD	an	(Lcx;III)V	h	func_320_h
+METHOD	an	(Lcx;III)V	h	setStateIfMobInteractsWithPlate
 METHOD	an	(Lcx;IIILjava/util/Random;)V	a	updateTick
 METHOD	an	(ILjava/util/Random;)I	a	idDropped
 METHOD	an	(Ljava/util/Random;)I	a	quantityDropped
 METHOD	an	(Lcx;IIILjava/util/Random;)V	b	randomDisplayTick
-METHOD	an	(Lcx;III)V	i	func_319_i
+METHOD	an	(Lcx;III)V	i	notifyWireNeighborsOfNeighborChange
 CLASS	ao	Vec3D
 FIELD	ao	Ljava/util/List;	d	vectorList
 FIELD	ao	I	e	nextVector
@@ -136,7 +136,7 @@ FIELD	ao	D	a	xCoord
 FIELD	ao	D	b	yCoord
 FIELD	ao	D	c	zCoord
 METHOD	ao	(DDD)Lao;	a	createVectorHelper
-METHOD	ao	()V	a	initialize
+METHOD	ao	()V	a	clearBoundingBoxPool
 METHOD	ao	(DDD)Lao;	b	createVector
 METHOD	ao	(DDD)Lao;	e	setComponents
 METHOD	ao	(Lao;)Lao;	a	func_1262_a
@@ -151,14 +151,14 @@ METHOD	ao	(Lao;D)Lao;	a	getIntermediateWithXValue
 METHOD	ao	(Lao;D)Lao;	b	getIntermediateWithYValue
 METHOD	ao	(Lao;D)Lao;	c	getIntermediateWithZValue
 METHOD	ao	()Ljava/lang/String;	toString	toString
-METHOD	ao	(F)V	a	rotateAroundX
-METHOD	ao	(F)V	b	rotateAroundY
+METHOD	ao	(F)V	a	drawGuiContainerBackgroundLayer
+METHOD	ao	(F)V	b	renderOverlays
 CLASS	ap	BlockPressurePlate
 FIELD	ap	Lle;	a	triggerMobType
-METHOD	ap	()I	d	tickRate
+METHOD	ap	()I	d	getMaxDamage
 METHOD	ap	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
 METHOD	ap	()Z	a	allowsAttachment
-METHOD	ap	()Z	b	renderAsNormalBlock
+METHOD	ap	()Z	b	doesGuiPauseGame
 METHOD	ap	(Lcx;III)Z	a	canPlaceBlockAt
 METHOD	ap	(Lcx;III)V	e	onBlockAdded
 METHOD	ap	(Lcx;IIII)V	a	onNeighborBlockChange
@@ -170,16 +170,16 @@ METHOD	ap	(Lpi;III)V	a	setBlockBoundsBasedOnState
 METHOD	ap	(Lpi;IIII)Z	c	isPoweringTo
 METHOD	ap	(Lcx;IIII)Z	c	isIndirectlyPoweringTo
 METHOD	ap	()Z	e	canProvidePower
-METHOD	ap	()V	f	func_237_e
+METHOD	ap	()V	f	MarkDirty
 CLASS	aq	Render
 FIELD	aq	Lml;	b	renderManager
 FIELD	aq	Lgl;	a	field_195_d
 FIELD	aq	Lbk;	e	field_203_d
 FIELD	aq	F	c	field_9246_c
 FIELD	aq	F	d	field_194_c
-METHOD	aq	(Ljava/lang/String;)V	a	loadTexture
+METHOD	aq	(Ljava/lang/String;)V	a	bindTextureByName
 METHOD	aq	(Ljava/lang/String;Ljava/lang/String;)V	a	func_140_a
-METHOD	aq	(Llu;DDDF)V	a	renderEntityOnFire
+METHOD	aq	(Llu;DDDF)V	a	createExplosion
 METHOD	aq	(Llu;DDDFF)V	c	renderShadow
 METHOD	aq	()Lcx;	b	getWorldFromRenderManager
 METHOD	aq	(Lno;DDDIIIFFDDD)V	a	renderShadowOnBlock
@@ -187,16 +187,16 @@ METHOD	aq	(Lcn;DDD)V	a	renderOffsetAABB
 METHOD	aq	(Lcn;)V	a	renderAABB
 METHOD	aq	(Lml;)V	a	setRenderManager
 METHOD	aq	(Llu;DDDFF)V	b	doRenderShadowAndFire
-METHOD	aq	()Llq;	a	getFontRendererFromRenderManager
+METHOD	aq	()Llq;	a	getFontRenderer
 CLASS	ar	SlotCrafting
 FIELD	ar	Lhh;	c	craftMatrix
 METHOD	ar	(Lfo;)Z	a	isItemValid
-METHOD	ar	()V	a	onPickupFromSlot
+METHOD	ar	()V	a	clearBoundingBoxPool
 CLASS	as	EntityCow
 FIELD	as	Z	a	unusedBoolean
-METHOD	as	(Lip;)V	a	writeEntityToNBT
+METHOD	as	(Lip;)V	a	readFromNBT
 METHOD	as	(Lip;)V	b	readEntityFromNBT
-METHOD	as	()Ljava/lang/String;	d	func_6389_d
+METHOD	as	()Ljava/lang/String;	d	getInvName
 METHOD	as	()Ljava/lang/String;	f_	func_6394_f_
 METHOD	as	()Ljava/lang/String;	f	func_6390_f
 METHOD	as	()F	h	func_6393_h
@@ -213,9 +213,9 @@ FIELD	at	Lhe;	g	field_811_g
 FIELD	at	I	h	field_810_h
 FIELD	at	I	i	field_809_i
 METHOD	at	(D)Z	a	func_384_a
-METHOD	at	(DDDFF)V	a	func_467_a
+METHOD	at	(DDDFF)V	a	func_4042_a
 METHOD	at	()V	e_	onUpdate
-METHOD	at	(Lip;)V	a	writeEntityToNBT
+METHOD	at	(Lip;)V	a	readFromNBT
 METHOD	at	(Lip;)V	b	readEntityFromNBT
 METHOD	at	(Lea;)V	b	onCollideWithPlayer
 METHOD	at	()F	i_	func_392_h_
@@ -236,11 +236,11 @@ METHOD	aw	([DDDIIDDD)V	a	func_4157_a
 CLASS	ax	CraftingInventoryCB
 FIELD	ax	Ljava/util/List;	c	unusedList
 METHOD	ax	(Lea;)V	a	onCraftGuiClosed
-METHOD	ax	(Lhh;)V	a	onCraftMatrixChanged
+METHOD	ax	(Lhh;)V	a	displayGUIChest
 CLASS	ay	GuiUnused
 FIELD	ay	Ljava/lang/String;	a	message1
 FIELD	ay	Ljava/lang/String;	h	message2
-METHOD	ay	()V	a	initGui
+METHOD	ay	()V	a	clearBoundingBoxPool
 METHOD	ay	(IIF)V	a	drawScreen
 METHOD	ay	(CI)V	a	keyTyped
 CLASS	az	EntityFireball
@@ -258,7 +258,7 @@ FIELD	az	D	c	field_9404_c
 FIELD	az	D	d	field_9403_d
 METHOD	az	(D)Z	a	func_384_a
 METHOD	az	()V	e_	onUpdate
-METHOD	az	(Lip;)V	a	writeEntityToNBT
+METHOD	az	(Lip;)V	a	readFromNBT
 METHOD	az	(Lip;)V	b	readEntityFromNBT
 METHOD	az	()Z	n_	canBeCollidedWith
 METHOD	az	()F	k_	func_4035_j_
@@ -278,16 +278,16 @@ FIELD	b	Z	j	isFirst
 METHOD	b	(Lb;)F	a	distanceTo
 METHOD	b	(Ljava/lang/Object;)Z	equals	equals
 METHOD	b	()I	hashCode	hashCode
-METHOD	b	()Z	a	isAssigned
+METHOD	b	()Z	a	allowsAttachment
 METHOD	b	()Ljava/lang/String;	toString	toString
 CLASS	ba	TextureLavaFX
 FIELD	ba	[F	g	field_1147_g
 FIELD	ba	[F	h	field_1146_h
 FIELD	ba	[F	i	field_1145_i
 FIELD	ba	[F	j	field_1144_j
-METHOD	ba	()V	a	func_783_a
+METHOD	ba	()V	a	clearBoundingBoxPool
 CLASS	bb	GuiGameOver
-METHOD	bb	()V	a	initGui
+METHOD	bb	()V	a	clearBoundingBoxPool
 METHOD	bb	(CI)V	a	keyTyped
 METHOD	bb	(Lgg;)V	a	actionPerformed
 METHOD	bb	(IIF)V	a	drawScreen
@@ -299,18 +299,18 @@ CLASS	bd	IChunkProvider
 CLASS	be	EntitySpider
 METHOD	be	()D	j	func_402_h
 METHOD	be	()Llu;	c_	findPlayerToAttack
-METHOD	be	()Ljava/lang/String;	d	func_6389_d
+METHOD	be	()Ljava/lang/String;	d	getInvName
 METHOD	be	()Ljava/lang/String;	f_	func_6394_f_
 METHOD	be	()Ljava/lang/String;	f	func_6390_f
-METHOD	be	(Llu;F)V	a	func_437_a
-METHOD	be	(Lip;)V	a	writeEntityToNBT
+METHOD	be	(Llu;F)V	a	func_1189_a
+METHOD	be	(Lip;)V	a	readFromNBT
 METHOD	be	(Lip;)V	b	readEntityFromNBT
 METHOD	be	()I	g_	func_422_g
 CLASS	bf	GuiOptions
 FIELD	bf	Lbp;	h	parentScreen
 FIELD	bf	Ljava/lang/String;	a	screenTitle
 FIELD	bf	Lgp;	i	options
-METHOD	bf	()V	a	initGui
+METHOD	bf	()V	a	clearBoundingBoxPool
 METHOD	bf	(Lgg;)V	a	actionPerformed
 METHOD	bf	(IIF)V	a	drawScreen
 CLASS	bg	SpawnerAnimals
@@ -326,10 +326,10 @@ FIELD	bi	F	c	field_1679_c
 METHOD	bi	()F	b	func_1147_b
 METHOD	bi	()F	c	func_1144_c
 METHOD	bi	()Ljava/lang/String;	a	func_1146_a
-METHOD	bi	()Ljava/lang/String;	d	func_1145_d
+METHOD	bi	()Ljava/lang/String;	d	getInvName
 CLASS	bj	ItemFishingRod
-METHOD	bj	()Z	a	isFull3D
-METHOD	bj	()Z	b	shouldRotateAroundWhenRendering
+METHOD	bj	()Z	a	allowsAttachment
+METHOD	bj	()Z	b	doesGuiPauseGame
 METHOD	bj	(Lfo;Lcx;Lea;)Lfo;	a	onItemRightClick
 CLASS	bk	RenderBlocks
 FIELD	bk	Lpi;	a	field_1772_a
@@ -373,20 +373,20 @@ FIELD	bl	I	a	delay
 FIELD	bl	Ljava/lang/String;	b	entityID
 FIELD	bl	D	c	field_831_c
 FIELD	bl	D	d	field_830_d
-METHOD	bl	()Z	a	anyPlayerInRange
-METHOD	bl	()V	b	updateEntity
+METHOD	bl	()Z	a	allowsAttachment
+METHOD	bl	()V	b	closeMinecraft
 METHOD	bl	()V	c	updateDelay
 METHOD	bl	(Lip;)V	a	readFromNBT
-METHOD	bl	(Lip;)V	b	writeToNBT
+METHOD	bl	(Lip;)V	b	readEntityFromNBT
 CLASS	bm	OpenGlCapsChecker
 FIELD	bm	Z	a	tryCheckOcclusionCapable
-METHOD	bm	()Z	a	checkARBOcclusion
+METHOD	bm	()Z	a	allowsAttachment
 CLASS	bn	ThreadDownloadResources
 FIELD	bn	Ljava/io/File;	a	resourcesFolder
 FIELD	bn	Lnet/minecraft/client/Minecraft;	b	mc
 FIELD	bn	Z	c	closing
 METHOD	bn	()V	run	run
-METHOD	bn	()V	a	reloadResources
+METHOD	bn	()V	a	clearBoundingBoxPool
 METHOD	bn	(Ljava/io/File;Ljava/lang/String;)V	a	loadResource
 METHOD	bn	(Ljava/net/URL;Ljava/lang/String;JI)V	a	downloadAndInstallResource
 METHOD	bn	(Ljava/net/URL;Ljava/io/File;J)V	a	downloadResource
@@ -394,13 +394,13 @@ METHOD	bn	()V	b	closeMinecraft
 CLASS	bo	BlockRedstoneTorch
 FIELD	bo	Z	a	torchActive
 FIELD	bo	Ljava/util/List;	b	torchUpdates
-METHOD	bo	(II)I	a	getBlockTextureFromSideAndMetadata
+METHOD	bo	(II)I	a	averageColor
 METHOD	bo	(Lcx;IIIZ)Z	a	checkForBurnout
-METHOD	bo	()I	d	tickRate
+METHOD	bo	()I	d	getMaxDamage
 METHOD	bo	(Lcx;III)V	e	onBlockAdded
 METHOD	bo	(Lcx;III)V	b	onBlockRemoval
 METHOD	bo	(Lpi;IIII)Z	c	isPoweringTo
-METHOD	bo	(Lcx;III)Z	h	func_9270_h
+METHOD	bo	(Lcx;III)Z	h	checkIfAttachedToBlock
 METHOD	bo	(Lcx;IIILjava/util/Random;)V	a	updateTick
 METHOD	bo	(Lcx;IIII)V	a	onNeighborBlockChange
 METHOD	bo	(Lcx;IIII)Z	c	isIndirectlyPoweringTo
@@ -422,14 +422,14 @@ METHOD	bp	(III)V	a	mouseClicked
 METHOD	bp	(III)V	b	mouseMovedOrUp
 METHOD	bp	(Lgg;)V	a	actionPerformed
 METHOD	bp	(Lnet/minecraft/client/Minecraft;II)V	a	setWorldAndResolution
-METHOD	bp	()V	a	initGui
+METHOD	bp	()V	a	clearBoundingBoxPool
 METHOD	bp	()V	d	handleInput
 METHOD	bp	()V	e	handleMouseInput
-METHOD	bp	()V	f	handleKeyboardInput
-METHOD	bp	()V	g	updateScreen
-METHOD	bp	()V	h	onGuiClosed
+METHOD	bp	()V	f	MarkDirty
+METHOD	bp	()V	g	setChunkModified
+METHOD	bp	()V	h	calculateInitialSkylight
 METHOD	bp	()V	i	drawDefaultBackground
-METHOD	bp	(I)V	a	func_567_a
+METHOD	bp	(I)V	a	changeCurrentItem
 METHOD	bp	(I)V	b	drawBackground
 METHOD	bp	()Z	b	doesGuiPauseGame
 METHOD	bp	(ZI)V	a	deleteWorld
@@ -441,10 +441,10 @@ FIELD	bq	Z	bx	field_9374_bx
 FIELD	bq	F	c	field_4134_c
 FIELD	bq	F	d	field_4133_d
 METHOD	bq	()V	b_	func_418_b_
-METHOD	bq	()V	k	func_425_j
+METHOD	bq	()V	k	func_409_i
 METHOD	bq	()V	m_	func_458_k
-METHOD	bq	(IZ)V	a	func_460_a
-METHOD	bq	(Lip;)V	a	writeEntityToNBT
+METHOD	bq	(IZ)V	a	setCurrentItem
+METHOD	bq	(Lip;)V	a	readFromNBT
 METHOD	bq	(Lip;)V	b	readEntityFromNBT
 METHOD	bq	(Lhh;)V	a	displayGUIChest
 METHOD	bq	(Lqa;)V	a	displayGUIEditSign
@@ -453,10 +453,10 @@ METHOD	bq	(Llr;)V	a	displayGUIFurnace
 METHOD	bq	(Llu;I)V	b	func_443_a_
 METHOD	bq	()I	n	func_6419_n
 METHOD	bq	(Llu;)V	a_	func_6415_a_
-METHOD	bq	(Ljava/lang/String;)V	a	func_461_a
+METHOD	bq	(Ljava/lang/String;)V	a	bindTextureByName
 METHOD	bq	()V	o	func_6420_o
 METHOD	bq	()Z	p	func_381_o
-METHOD	bq	()V	q	func_4039_q
+METHOD	bq	()V	q	loadScreen
 METHOD	bq	(I)V	a_	func_9372_a_
 METHOD	bq	()V	r	func_9367_r
 CLASS	br	BlockMobSpawner
@@ -469,8 +469,8 @@ CLASS	bt	PathEntity
 FIELD	bt	[Lb;	b	points
 FIELD	bt	I	a	pathLength
 FIELD	bt	I	c	pathIndex
-METHOD	bt	()V	a	incrementPathIndex
-METHOD	bt	()Z	b	isFinished
+METHOD	bt	()V	a	clearBoundingBoxPool
+METHOD	bt	()Z	b	doesGuiPauseGame
 METHOD	bt	(Llu;)Lao;	a	getPosition
 CLASS	bu	Packet22Collect
 FIELD	bu	I	a	collectedEntityId
@@ -478,7 +478,7 @@ FIELD	bu	I	b	collectorEntityId
 METHOD	bu	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	bu	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	bu	(Lmm;)V	a	func_323_a
-METHOD	bu	()I	a	func_329_a
+METHOD	bu	()I	a	getHash
 CLASS	bv	WorldRenderer
 FIELD	bv	Lcx;	a	worldObj
 FIELD	bv	I	C	field_1744_C
@@ -512,23 +512,23 @@ FIELD	bv	Z	A	field_1747_A
 FIELD	bv	Z	E	field_1739_E
 FIELD	bv	Ljava/util/List;	B	field_1745_B
 FIELD	bv	Ljava/util/List;	F	field_1737_F
-METHOD	bv	(III)V	a	func_1197_a
-METHOD	bv	()V	g	func_1203_g
-METHOD	bv	()V	a	func_1198_a
+METHOD	bv	(III)V	a	mouseClicked
+METHOD	bv	()V	g	setChunkModified
+METHOD	bv	()V	a	clearBoundingBoxPool
 METHOD	bv	(Llu;)F	a	func_1202_a
-METHOD	bv	()V	b	func_1195_b
-METHOD	bv	()V	c	func_1204_c
-METHOD	bv	(I)I	a	func_1200_a
+METHOD	bv	()V	b	closeMinecraft
+METHOD	bv	()V	c	updateDelay
+METHOD	bv	(I)I	a	generateDisplayLists
 METHOD	bv	(Lqd;)V	a	func_1199_a
-METHOD	bv	()V	d	func_1201_d
-METHOD	bv	()Z	e	func_1196_e
+METHOD	bv	()V	d	handleInput
+METHOD	bv	()Z	e	canProvidePower
 METHOD	bv	()V	f	MarkDirty
 CLASS	bw	EntitySheep
 FIELD	bw	Z	a	sheared
 METHOD	bw	(Llu;I)Z	a	attackEntity
-METHOD	bw	(Lip;)V	a	writeEntityToNBT
+METHOD	bw	(Lip;)V	a	readFromNBT
 METHOD	bw	(Lip;)V	b	readEntityFromNBT
-METHOD	bw	()Ljava/lang/String;	d	func_6389_d
+METHOD	bw	()Ljava/lang/String;	d	getInvName
 METHOD	bw	()Ljava/lang/String;	f_	func_6394_f_
 METHOD	bw	()Ljava/lang/String;	f	func_6390_f
 CLASS	bx	ItemSnowball
@@ -539,18 +539,18 @@ FIELD	by	[Ljava/util/List;	b	field_1728_b
 FIELD	by	Lft;	c	field_1731_c
 FIELD	by	Ljava/util/Random;	d	rand
 METHOD	by	(Lpn;)V	a	func_1192_a
-METHOD	by	()V	a	func_1193_a
+METHOD	by	()V	a	clearBoundingBoxPool
 METHOD	by	(Llu;F)V	a	func_1189_a
 METHOD	by	(Llu;F)V	b	func_1187_b
-METHOD	by	(Lcx;)V	a	func_1188_a
-METHOD	by	(III)V	a	func_1186_a
-METHOD	by	(IIII)V	a	func_1191_a
-METHOD	by	()Ljava/lang/String;	b	func_1190_b
+METHOD	by	(Lcx;)V	a	registerWorld
+METHOD	by	(III)V	a	mouseClicked
+METHOD	by	(IIII)V	a	setNibble
+METHOD	by	()Ljava/lang/String;	b	getKey
 CLASS	bz	BlockLadder
 METHOD	bz	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
 METHOD	bz	(Lcx;III)Lcn;	f	getSelectedBoundingBoxFromPool
 METHOD	bz	()Z	a	allowsAttachment
-METHOD	bz	()Z	b	renderAsNormalBlock
+METHOD	bz	()Z	b	doesGuiPauseGame
 METHOD	bz	()I	g	getRenderType
 METHOD	bz	(Lcx;III)Z	a	canPlaceBlockAt
 METHOD	bz	(Lcx;IIII)V	d	onBlockPlaced
@@ -559,9 +559,9 @@ METHOD	bz	(Ljava/util/Random;)I	a	quantityDropped
 CLASS	c	BlockChest
 FIELD	c	Ljava/util/Random;	a	field_457_a
 METHOD	c	(Lpi;IIII)I	a	getBlockTexture
-METHOD	c	(I)I	a	getBlockTextureFromSide
+METHOD	c	(I)I	a	generateDisplayLists
 METHOD	c	(Lcx;III)Z	a	canPlaceBlockAt
-METHOD	c	(Lcx;III)Z	h	isThereANeighborChest
+METHOD	c	(Lcx;III)Z	h	checkIfAttachedToBlock
 METHOD	c	(Lcx;III)V	b	onBlockRemoval
 METHOD	c	(Lcx;IIILea;)Z	a	blockActivated
 METHOD	c	()Ljh;	a_	SetBlockEntity
@@ -574,7 +574,7 @@ METHOD	ca	(Lfo;Lno;)F	a	getStrVsBlock
 METHOD	ca	(Lfo;Lhe;)V	a	hitEntity
 METHOD	ca	(Lfo;IIII)V	a	hitBlock
 METHOD	ca	(Llu;)I	a	getDamageVsEntity
-METHOD	ca	()Z	a	isFull3D
+METHOD	ca	()Z	a	allowsAttachment
 CLASS	cb	ClippingHelper
 FIELD	cb	[[F	a	field_1688_a
 FIELD	cb	[F	b	field_1687_b
@@ -590,8 +590,8 @@ METHOD	cc	(Lea;I)Z	a	func_187_a
 METHOD	cc	(Lea;DDDFF)V	a	func_188_a
 METHOD	cc	(Lea;F)V	a	func_4015_a
 METHOD	cc	(Lea;F)V	b	func_186_b
-METHOD	cc	()V	b	func_185_b
-METHOD	cc	(Lhe;F)V	a	func_6330_a
+METHOD	cc	()V	b	closeMinecraft
+METHOD	cc	(Lhe;F)V	a	func_338_a
 METHOD	cc	(Lhe;I)Z	a	func_166_a
 METHOD	cc	(Lhe;F)V	b	func_6331_b
 METHOD	cc	(Lhe;DDDFF)V	a	func_171_a
@@ -605,7 +605,7 @@ FIELD	cd	I	a	resultId
 METHOD	cd	([I)Z	a	matchRecipe
 METHOD	cd	([IIIZ)Z	a	matches
 METHOD	cd	([I)Lfo;	b	createResult
-METHOD	cd	()I	a	getRecipeSize
+METHOD	cd	()I	a	getHash
 CLASS	ce	RenderPainting
 FIELD	ce	Ljava/util/Random;	a	rand
 METHOD	ce	(Lko;DDDFF)V	a	func_158_a
@@ -632,10 +632,10 @@ FIELD	ch	I	h	chunkSize
 METHOD	ch	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	ch	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	ch	(Lmm;)V	a	func_323_a
-METHOD	ch	()I	a	func_329_a
+METHOD	ch	()I	a	getHash
 CLASS	ci	ModelPig
 CLASS	cj	ModelZombie
-METHOD	cj	(FFFFFF)V	a	func_863_a
+METHOD	cj	(FFFFFF)V	a	setBlockBounds
 CLASS	ck	ThreadDownloadImageData
 FIELD	ck	Ljava/awt/image/BufferedImage;	a	image
 FIELD	ck	I	b	referenceCount
@@ -690,11 +690,11 @@ FIELD	cp	I	a	field_9275_a
 METHOD	cp	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	cp	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	cp	(Lmm;)V	a	func_323_a
-METHOD	cp	()I	a	func_329_a
+METHOD	cp	()I	a	getHash
 CLASS	cq	Packet13PlayerLookMove
 METHOD	cq	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	cq	(Ljava/io/DataOutputStream;)V	a	func_322_a
-METHOD	cq	()I	a	func_329_a
+METHOD	cq	()I	a	getHash
 CLASS	cr	ChunkCache
 FIELD	cr	I	a	field_1060_a
 FIELD	cr	I	b	field_1059_b
@@ -704,7 +704,7 @@ METHOD	cr	(III)I	a	getBlockId
 METHOD	cr	(III)Ljh;	b	getBlockTileEntity
 METHOD	cr	(III)F	c	getLightBrightness
 METHOD	cr	(III)I	d	func_4086_d
-METHOD	cr	(IIIZ)I	a	func_716_a
+METHOD	cr	(IIIZ)I	a	getBlockLightValue
 METHOD	cr	(III)I	e	getBlockMetadata
 METHOD	cr	(III)Lha;	f	getBlockMaterial
 METHOD	cr	(III)Z	g	doesBlockAllowAttachment
@@ -712,9 +712,9 @@ METHOD	cr	()Lpm;	a	func_4075_a
 CLASS	cs	GuiConnectFailed
 FIELD	cs	Ljava/lang/String;	a	errorMessage
 FIELD	cs	Ljava/lang/String;	h	errorDetail
-METHOD	cs	()V	g	updateScreen
+METHOD	cs	()V	g	setChunkModified
 METHOD	cs	(CI)V	a	keyTyped
-METHOD	cs	()V	a	initGui
+METHOD	cs	()V	a	clearBoundingBoxPool
 METHOD	cs	(Lgg;)V	a	actionPerformed
 METHOD	cs	(IIF)V	a	drawScreen
 CLASS	ct	ChunkProviderIso
@@ -722,24 +722,24 @@ FIELD	ct	[Lgz;	b	chunks
 FIELD	ct	Lcx;	c	worldObj
 FIELD	ct	Lai;	d	chunkLoader
 FIELD	ct	[B	a	field_899_a
-METHOD	ct	(II)Z	a	chunkExists
-METHOD	ct	(II)Lgz;	b	provideChunk
-METHOD	ct	(II)Lgz;	c	func_543_c
+METHOD	ct	(II)Z	a	canCoordinateBeSpawn
+METHOD	ct	(II)Lgz;	b	getChunkFromBlockCoords
+METHOD	ct	(II)Lgz;	c	getChunkFromChunkCoords
 METHOD	ct	(Lbd;II)V	a	populate
 METHOD	ct	(ZLps;)Z	a	saveChunks
-METHOD	ct	()Z	a	func_532_a
-METHOD	ct	()Z	b	func_536_b
+METHOD	ct	()Z	a	allowsAttachment
+METHOD	ct	()Z	b	doesGuiPauseGame
 CLASS	cu	ModelBoat
 FIELD	cu	[Ljz;	a	field_1287_a
 METHOD	cu	(FFFFFF)V	b	func_864_b
-METHOD	cu	(FFFFFF)V	a	func_863_a
+METHOD	cu	(FFFFFF)V	a	setBlockBounds
 CLASS	cv	BlockObsidian
 METHOD	cv	(Ljava/util/Random;)I	a	quantityDropped
 METHOD	cv	(ILjava/util/Random;)I	a	idDropped
 CLASS	cw	BlockPumpkin
 FIELD	cw	Z	a	field_4072_a
-METHOD	cw	(II)I	a	getBlockTextureFromSideAndMetadata
-METHOD	cw	(I)I	a	getBlockTextureFromSide
+METHOD	cw	(II)I	a	averageColor
+METHOD	cw	(I)I	a	generateDisplayLists
 METHOD	cw	(Lcx;III)V	e	onBlockAdded
 METHOD	cw	(Lcx;III)Z	a	canPlaceBlockAt
 METHOD	cw	(Lcx;IIILhe;)V	a	onBlockPlacedBy
@@ -788,13 +788,13 @@ METHOD	cx	(Ljava/io/File;Ljava/lang/String;)V	b	deleteWorld
 METHOD	cx	([Ljava/io/File;)V	a	deleteFiles
 METHOD	cx	()Lpm;	a	func_4075_a
 METHOD	cx	(Ljava/io/File;)Lbd;	a	func_4081_a
-METHOD	cx	()V	b	func_4076_b
-METHOD	cx	(II)I	a	func_614_g
-METHOD	cx	()V	c	func_6464_c
-METHOD	cx	(Lea;)V	a	func_608_a
+METHOD	cx	()V	b	closeMinecraft
+METHOD	cx	(II)I	a	averageColor
+METHOD	cx	()V	c	updateDelay
+METHOD	cx	(Lea;)V	a	onCraftGuiClosed
 METHOD	cx	(ZLps;)V	a	saveWorld
-METHOD	cx	()V	o	func_9424_o
-METHOD	cx	(I)Z	a	func_650_a
+METHOD	cx	()V	o	func_6420_o
+METHOD	cx	(I)Z	a	func_1219_a
 METHOD	cx	(III)I	a	getBlockId
 METHOD	cx	(III)Z	d	blockExists
 METHOD	cx	(IIIIII)Z	a	checkChunksExist
@@ -812,7 +812,7 @@ METHOD	cx	(IIIII)Z	b	setBlockAndMetadataWithNotify
 METHOD	cx	(III)V	h	func_665_h
 METHOD	cx	(IIII)V	e	notifyBlockChange
 METHOD	cx	(IIII)V	f	func_680_f
-METHOD	cx	(IIIIII)V	b	func_701_b
+METHOD	cx	(IIIIII)V	b	drawTexturedModalRect
 METHOD	cx	(IIII)V	g	notifyBlocksOfNeighborChange
 METHOD	cx	(IIII)V	l	notifyBlockOfNeighborChange
 METHOD	cx	(III)Z	i	canBlockSeeTheSky
@@ -825,32 +825,32 @@ METHOD	cx	(Lcg;III)I	a	getSavedLightValue
 METHOD	cx	(Lcg;IIII)V	b	setLightValue
 METHOD	cx	(III)F	c	getLightBrightness
 METHOD	cx	()Z	d	isDaytime
-METHOD	cx	(Lao;Lao;)Lnv;	a	func_645_a
+METHOD	cx	(Lao;Lao;)Lnv;	a	func_1169_a
 METHOD	cx	(Lao;Lao;Z)Lnv;	a	func_642_a
 METHOD	cx	(Llu;Ljava/lang/String;FF)V	a	playSoundAtEntity
 METHOD	cx	(DDDLjava/lang/String;FF)V	a	playSoundEffect
-METHOD	cx	(Ljava/lang/String;III)V	a	playRecord
+METHOD	cx	(Ljava/lang/String;III)V	a	drawStringWithShadow
 METHOD	cx	(Ljava/lang/String;DDDDDD)V	a	spawnParticle
 METHOD	cx	(Llu;)Z	a	entityJoinedWorld
-METHOD	cx	(Llu;)V	b	obtainEntitySkin
-METHOD	cx	(Llu;)V	c	releaseEntitySkin
+METHOD	cx	(Llu;)V	b	obtainEntitySkin_b
+METHOD	cx	(Llu;)V	c	becomeAngryAt
 METHOD	cx	(Llu;)V	d	setEntityDead
 METHOD	cx	(Lju;)V	a	addWorldAccess
 METHOD	cx	(Lju;)V	b	removeWorldAccess
 METHOD	cx	(Llu;Lcn;)Ljava/util/List;	a	getCollidingBoundingBoxes
 METHOD	cx	(F)I	a	calculateSkylightSubtracted
 METHOD	cx	(Llu;F)Lao;	a	func_4079_a
-METHOD	cx	(F)F	b	func_619_c
+METHOD	cx	(F)F	b	cos
 METHOD	cx	(F)Lao;	c	func_628_d
 METHOD	cx	(F)Lao;	d	func_4082_d
 METHOD	cx	(II)I	e	func_4083_e
 METHOD	cx	(II)I	f	func_696_e
-METHOD	cx	(F)F	e	func_679_f
+METHOD	cx	(F)F	e	abs
 METHOD	cx	(IIII)V	h	scheduleBlockUpdate
-METHOD	cx	()V	e	func_633_c
+METHOD	cx	()V	e	handleMouseInput
 METHOD	cx	(Llu;)V	e	func_667_e
 METHOD	cx	(Llu;Z)V	a	func_4084_a
-METHOD	cx	(Lcn;)Z	a	func_604_a
+METHOD	cx	(Lcn;)Z	a	intersectsWith
 METHOD	cx	(Lcn;)Z	b	getIsAnyLiquid
 METHOD	cx	(Lcn;)Z	c	isBoundingBoxBurning
 METHOD	cx	(Lcn;Lha;Llu;)Z	a	func_682_a
@@ -860,7 +860,7 @@ METHOD	cx	(Llu;DDDF)V	a	createExplosion
 METHOD	cx	(Lao;Lcn;)F	a	func_675_a
 METHOD	cx	(IIII)V	i	func_612_i
 METHOD	cx	(Ljava/lang/Class;)Llu;	a	func_4085_a
-METHOD	cx	()Ljava/lang/String;	f	func_687_d
+METHOD	cx	()Ljava/lang/String;	f	func_6390_f
 METHOD	cx	(III)Ljh;	b	getBlockTileEntity
 METHOD	cx	(IIILjh;)V	a	setBlockTileEntity
 METHOD	cx	(III)V	l	removeBlockTileEntity
@@ -870,8 +870,8 @@ METHOD	cx	()Z	g	func_6465_g
 METHOD	cx	(Lcg;IIIIII)V	a	func_616_a
 METHOD	cx	(Lcg;IIIIIIZ)V	a	func_627_a
 METHOD	cx	()V	h	calculateInitialSkylight
-METHOD	cx	()V	i	tick
-METHOD	cx	()V	j	func_4080_j
+METHOD	cx	()V	i	drawDefaultBackground
+METHOD	cx	()V	j	drawGuiContainerForegroundLayer
 METHOD	cx	(Z)Z	a	TickUpdates
 METHOD	cx	(III)V	m	randomDisplayUpdates
 METHOD	cx	(Llu;Lcn;)Ljava/util/List;	b	getEntitiesWithinAABBExcludingEntity
@@ -883,8 +883,8 @@ METHOD	cx	(Ljava/util/List;)V	a	func_636_a
 METHOD	cx	(Ljava/util/List;)V	b	func_632_b
 METHOD	cx	()V	l	func_656_j
 METHOD	cx	(IIIIZ)Z	a	func_695_a
-METHOD	cx	(Llu;Llu;F)Lbt;	a	func_702_a
-METHOD	cx	(Llu;IIIF)Lbt;	a	func_637_a
+METHOD	cx	(Llu;Llu;F)Lbt;	a	createEntityPathTo
+METHOD	cx	(Llu;IIIF)Lbt;	a	createEntityPathTo
 METHOD	cx	(IIII)Z	j	isBlockProvidingPowerTo
 METHOD	cx	(III)Z	n	isBlockGettingPowered
 METHOD	cx	(IIII)Z	k	isBlockIndirectlyProvidingPowerTo
@@ -892,7 +892,7 @@ METHOD	cx	(III)Z	o	isBlockIndirectlyGettingPowered
 METHOD	cx	(Llu;D)Lea;	a	getClosestPlayerToEntity
 METHOD	cx	(DDDD)Lea;	a	getClosestPlayer
 METHOD	cx	(IIIIII[B)V	a	func_693_a
-METHOD	cx	()V	m	sendQuittingDisconnectingPacket
+METHOD	cx	()V	m	displayGUICrafting
 METHOD	cx	()V	n	func_663_l
 METHOD	cx	(J)V	a	setWorldTime
 METHOD	cx	(Llu;)V	f	func_705_f
@@ -908,8 +908,8 @@ FIELD	d	Ljava/lang/String;	a	field_6487_a
 FIELD	d	Ljava/lang/String;	b	field_6486_b
 FIELD	d	Ljava/lang/String;	c	field_6489_c
 FIELD	d	Ljava/lang/String;	d	field_6488_d
-METHOD	d	()V	a	func_6482_a
-METHOD	d	()V	b	func_6480_b
+METHOD	d	()V	a	clearBoundingBoxPool
+METHOD	d	()V	b	closeMinecraft
 METHOD	d	(Lnet/minecraft/client/Minecraft;)V	a	func_6485_a
 METHOD	d	(Lnet/minecraft/client/Minecraft;)V	b	func_6484_b
 METHOD	d	(Lnet/minecraft/client/Minecraft;)V	c	func_6483_c
@@ -931,9 +931,9 @@ FIELD	db	Z	h	field_1279_h
 FIELD	db	Z	i	field_1278_i
 FIELD	db	Z	j	field_1277_j
 METHOD	db	(FFFFFF)V	b	func_864_b
-METHOD	db	(FFFFFF)V	a	func_863_a
+METHOD	db	(FFFFFF)V	a	setBlockBounds
 CLASS	dc	BlockWorkbench
-METHOD	dc	(I)I	a	getBlockTextureFromSide
+METHOD	dc	(I)I	a	generateDisplayLists
 METHOD	dc	(Lcx;IIILea;)Z	a	blockActivated
 CLASS	dd	BlockGlass
 METHOD	dd	(Ljava/util/Random;)I	a	quantityDropped
@@ -942,18 +942,18 @@ FIELD	de	I	a	minableBlockId
 FIELD	de	I	b	numberOfBlocks
 METHOD	de	(Lcx;Ljava/util/Random;III)Z	a	func_516_a
 CLASS	df	BlockJukeBox
-METHOD	df	(I)I	a	getBlockTextureFromSide
+METHOD	df	(I)I	a	generateDisplayLists
 METHOD	df	(Lcx;IIILea;)Z	a	blockActivated
 METHOD	df	(Lcx;IIII)V	e	ejectRecord
 METHOD	df	(Lcx;IIIIF)V	a	dropBlockAsItemWithChance
 CLASS	dg	EntitySkeleton
 FIELD	dg	Lfo;	a	defaultHeldItem
-METHOD	dg	()Ljava/lang/String;	d	func_6389_d
+METHOD	dg	()Ljava/lang/String;	d	getInvName
 METHOD	dg	()Ljava/lang/String;	f_	func_6394_f_
 METHOD	dg	()Ljava/lang/String;	f	func_6390_f
-METHOD	dg	()V	k	func_425_j
-METHOD	dg	(Llu;F)V	a	func_437_a
-METHOD	dg	(Lip;)V	a	writeEntityToNBT
+METHOD	dg	()V	k	func_409_i
+METHOD	dg	(Llu;F)V	a	func_1189_a
+METHOD	dg	(Lip;)V	a	readFromNBT
 METHOD	dg	(Lip;)V	b	readEntityFromNBT
 METHOD	dg	()I	g_	func_422_g
 METHOD	dg	()Lfo;	l	getHeldItem
@@ -964,12 +964,12 @@ FIELD	di	[Ljava/lang/String;	a	minecraftLogo
 FIELD	di	[[Llp;	i	logoEffects
 FIELD	di	F	j	updateCounter
 FIELD	di	Ljava/lang/String;	l	splashText
-METHOD	di	()V	g	updateScreen
+METHOD	di	()V	g	setChunkModified
 METHOD	di	(CI)V	a	keyTyped
-METHOD	di	()V	a	initGui
+METHOD	di	()V	a	clearBoundingBoxPool
 METHOD	di	(Lgg;)V	a	actionPerformed
 METHOD	di	(IIF)V	a	drawScreen
-METHOD	di	(F)V	a	drawLogo
+METHOD	di	(F)V	a	drawGuiContainerBackgroundLayer
 METHOD	di	()Ljava/util/Random;	j	getRand
 CLASS	dj	GuiTexturePacks
 FIELD	dj	Lbp;	a	field_6461_a
@@ -981,13 +981,13 @@ FIELD	dj	I	m	field_6456_m
 FIELD	dj	I	n	field_6455_n
 FIELD	dj	I	o	field_6454_o
 FIELD	dj	Ljava/lang/String;	p	field_6453_p
-METHOD	dj	()V	a	initGui
+METHOD	dj	()V	a	clearBoundingBoxPool
 METHOD	dj	(Lgg;)V	a	actionPerformed
 METHOD	dj	(III)V	a	mouseClicked
 METHOD	dj	(III)V	b	mouseMovedOrUp
 METHOD	dj	(IIF)V	a	drawScreen
-METHOD	dj	()V	g	updateScreen
-METHOD	dj	(IIII)V	a	func_6452_a
+METHOD	dj	()V	g	setChunkModified
+METHOD	dj	(IIII)V	a	setNibble
 CLASS	dk	MapGenBase
 FIELD	dk	I	a	field_1306_a
 FIELD	dk	Ljava/util/Random;	b	field_1305_b
@@ -1030,13 +1030,13 @@ METHOD	do	()Lcn;	e	func_372_f_
 METHOD	do	()Z	d_	canBePushed
 METHOD	do	()D	j	func_402_h
 METHOD	do	(Llu;I)Z	a	attackEntity
-METHOD	do	()V	g	func_9280_g
+METHOD	do	()V	g	setChunkModified
 METHOD	do	()Z	n_	canBeCollidedWith
 METHOD	do	(DDDFFI)V	a	setPositionAndRotation2
 METHOD	do	(DDD)V	a	setVelocity
 METHOD	do	()V	e_	onUpdate
 METHOD	do	()V	j_	func_366_i_
-METHOD	do	(Lip;)V	a	writeEntityToNBT
+METHOD	do	(Lip;)V	a	readFromNBT
 METHOD	do	(Lip;)V	b	readEntityFromNBT
 METHOD	do	()F	i_	func_392_h_
 METHOD	do	(Lea;)Z	a	interact
@@ -1045,21 +1045,21 @@ FIELD	dp	I	a	timeSinceIgnited
 FIELD	dp	I	b	lastActiveTime
 FIELD	dp	I	c	fuseTime
 FIELD	dp	I	d	creeperState
-METHOD	dp	(Lip;)V	a	writeEntityToNBT
+METHOD	dp	(Lip;)V	a	readFromNBT
 METHOD	dp	(Lip;)V	b	readEntityFromNBT
 METHOD	dp	()V	b_	func_418_b_
 METHOD	dp	()Ljava/lang/String;	f_	func_6394_f_
 METHOD	dp	()Ljava/lang/String;	f	func_6390_f
-METHOD	dp	(Llu;)V	b	func_419_b
-METHOD	dp	(Llu;F)V	a	func_437_a
-METHOD	dp	(F)F	b	func_440_b
+METHOD	dp	(Llu;)V	b	obtainEntitySkin_b
+METHOD	dp	(Llu;F)V	a	func_1189_a
+METHOD	dp	(F)F	b	cos
 METHOD	dp	()I	g_	func_422_g
 CLASS	dq	GuiChat
 FIELD	dq	Ljava/lang/String;	a	message
 FIELD	dq	I	h	updateCounter
-METHOD	dq	()V	a	initGui
-METHOD	dq	()V	h	onGuiClosed
-METHOD	dq	()V	g	updateScreen
+METHOD	dq	()V	a	clearBoundingBoxPool
+METHOD	dq	()V	h	calculateInitialSkylight
+METHOD	dq	()V	g	setChunkModified
 METHOD	dq	(CI)V	a	keyTyped
 METHOD	dq	(IIF)V	a	drawScreen
 METHOD	dq	(III)V	a	mouseClicked
@@ -1068,7 +1068,7 @@ FIELD	dr	Ljava/util/List;	a	displayLists
 FIELD	dr	Ljava/util/List;	b	textureNames
 METHOD	dr	(I)I	a	generateDisplayLists
 METHOD	dr	(Ljava/nio/IntBuffer;)V	a	generateTextureNames
-METHOD	dr	()V	a	deleteTexturesAndDisplayLists
+METHOD	dr	()V	a	clearBoundingBoxPool
 METHOD	dr	(I)Ljava/nio/ByteBuffer;	b	createDirectByteBuffer
 METHOD	dr	(I)Ljava/nio/IntBuffer;	c	createDirectIntBuffer
 METHOD	dr	(I)Ljava/nio/FloatBuffer;	d	createDirectFloatBuffer
@@ -1078,8 +1078,8 @@ CLASS	dt	GuiDownloadTerrain
 FIELD	dt	Lia;	a	netHandler
 FIELD	dt	I	h	updateCounter
 METHOD	dt	(CI)V	a	keyTyped
-METHOD	dt	()V	a	initGui
-METHOD	dt	()V	g	updateScreen
+METHOD	dt	()V	a	clearBoundingBoxPool
+METHOD	dt	()V	g	setChunkModified
 METHOD	dt	(Lgg;)V	a	actionPerformed
 METHOD	dt	(IIF)V	a	drawScreen
 CLASS	du	Packet28
@@ -1090,14 +1090,14 @@ FIELD	du	I	d	field_6368_d
 METHOD	du	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	du	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	du	(Lmm;)V	a	func_323_a
-METHOD	du	()I	a	func_329_a
+METHOD	du	()I	a	getHash
 CLASS	dv	BlockSand
 FIELD	dv	Z	a	fallInstantly
 METHOD	dv	(Lcx;III)V	e	onBlockAdded
 METHOD	dv	(Lcx;IIII)V	a	onNeighborBlockChange
 METHOD	dv	(Lcx;IIILjava/util/Random;)V	a	updateTick
-METHOD	dv	(Lcx;III)V	h	tryToFall
-METHOD	dv	()I	d	tickRate
+METHOD	dv	(Lcx;III)V	h	setStateIfMobInteractsWithPlate
+METHOD	dv	()I	d	getMaxDamage
 METHOD	dv	(Lcx;III)Z	b_	canFallBelow
 CLASS	dw	Item
 FIELD	dw	Ljava/util/Random;	b	itemRand
@@ -1217,8 +1217,8 @@ METHOD	dw	(Llu;)I	a	getDamageVsEntity
 METHOD	dw	(Lno;)Z	a	canHarvestBlock
 METHOD	dw	(Lfo;Lhe;)V	b	func_4019_b
 METHOD	dw	()Ldw;	e	setFull3D
-METHOD	dw	()Z	a	isFull3D
-METHOD	dw	()Z	b	shouldRotateAroundWhenRendering
+METHOD	dw	()Z	a	allowsAttachment
+METHOD	dw	()Z	b	doesGuiPauseGame
 CLASS	dx	RenderFallingSand
 FIELD	dx	Lbk;	a	field_197_d
 METHOD	dx	(Lga;DDDFF)V	a	func_156_a
@@ -1226,12 +1226,12 @@ METHOD	dx	(Llu;DDDFF)V	a	doRender
 CLASS	dy	Slot
 FIELD	dy	I	a	slotIndex
 FIELD	dy	Lhh;	b	inventory
-METHOD	dy	()V	a	onPickupFromSlot
+METHOD	dy	()V	a	clearBoundingBoxPool
 METHOD	dy	(Lfo;)Z	a	isItemValid
 METHOD	dy	()Lfo;	b	getStack
 METHOD	dy	(Lfo;)V	b	putStack
-METHOD	dy	()I	c	func_775_c
-METHOD	dy	()V	d	onSlotChanged
+METHOD	dy	()I	c	getItemStackLimit
+METHOD	dy	()V	d	handleInput
 METHOD	dy	()I	e	getSlotStackLimit
 CLASS	dz	Session
 FIELD	dz	Ljava/util/List;	a	field_1667_a
@@ -1239,7 +1239,7 @@ FIELD	dz	Ljava/lang/String;	b	field_1666_b
 FIELD	dz	Ljava/lang/String;	c	field_6543_c
 FIELD	dz	Ljava/lang/String;	d	field_6542_d
 CLASS	e	BlockOreBlock
-METHOD	e	(I)I	a	getBlockTextureFromSide
+METHOD	e	(I)I	a	generateDisplayLists
 CLASS	ea	EntityPlayer
 FIELD	ea	Lfn;	e	inventory
 FIELD	ea	B	f	field_9371_f
@@ -1255,24 +1255,24 @@ FIELD	ea	Lhi;	n	field_4128_n
 METHOD	ea	()V	s	func_350_p
 METHOD	ea	()V	t	preparePlayerToSpawn
 METHOD	ea	()V	b_	func_418_b_
-METHOD	ea	()V	k	func_425_j
+METHOD	ea	()V	k	func_409_i
 METHOD	ea	(Llu;)V	i	func_451_h
 METHOD	ea	()I	u	func_6417_t
-METHOD	ea	(Llu;)V	b	func_419_b
+METHOD	ea	(Llu;)V	b	obtainEntitySkin_b
 METHOD	ea	(Llu;I)V	c	addToPlayerScore
-METHOD	ea	(Lfo;)V	a	func_449_a
+METHOD	ea	(Lfo;)V	a	renderItem
 METHOD	ea	(Lfo;Z)V	a	func_444_a
 METHOD	ea	(Len;)V	a	func_446_a
 METHOD	ea	(Lno;)F	a	getCurrentPlayerStrVsBlock
-METHOD	ea	(Lno;)Z	b	canHarvestBlock
+METHOD	ea	(Lno;)Z	b	canHarvestBlock_b
 METHOD	ea	(Lip;)V	b	readEntityFromNBT
-METHOD	ea	(Lip;)V	a	writeEntityToNBT
+METHOD	ea	(Lip;)V	a	readFromNBT
 METHOD	ea	(Lhh;)V	a	displayGUIChest
 METHOD	ea	()V	m	displayGUICrafting
 METHOD	ea	(Llu;I)V	b	func_443_a_
 METHOD	ea	()F	v	func_373_s
 METHOD	ea	(Llu;I)Z	a	attackEntity
-METHOD	ea	(I)V	b	func_4044_a
+METHOD	ea	(I)V	b	drawBackground
 METHOD	ea	(Llr;)V	a	displayGUIFurnace
 METHOD	ea	(Lqa;)V	a	displayGUIEditSign
 METHOD	ea	(Llu;)V	a_	func_6415_a_
@@ -1280,7 +1280,7 @@ METHOD	ea	()Lfo;	w	func_6416_v
 METHOD	ea	()V	x	func_448_u
 METHOD	ea	()D	y	func_388_v
 METHOD	ea	()V	z	func_457_w
-METHOD	ea	(Llu;)V	c	func_463_a
+METHOD	ea	(Llu;)V	c	becomeAngryAt
 METHOD	ea	()V	r	func_9367_r
 CLASS	eb	RenderLiving
 FIELD	eb	Lgl;	e	field_203_d
@@ -1293,7 +1293,7 @@ METHOD	eb	(Lhe;F)V	b	func_6331_b
 METHOD	eb	(Lhe;I)Z	a	func_166_a
 METHOD	eb	(Lhe;)F	a	func_172_a
 METHOD	eb	(Lhe;FF)I	a	func_173_a
-METHOD	eb	(Lhe;F)V	a	func_6330_a
+METHOD	eb	(Lhe;F)V	a	func_338_a
 METHOD	eb	(Llu;DDDFF)V	a	doRender
 CLASS	ec	Packet15Place
 FIELD	ec	I	a	id
@@ -1304,27 +1304,27 @@ FIELD	ec	I	e	direction
 METHOD	ec	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	ec	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	ec	(Lmm;)V	a	func_323_a
-METHOD	ec	()I	a	func_329_a
+METHOD	ec	()I	a	getHash
 CLASS	ed	EntityExplodeFX
 METHOD	ed	(Lir;FFFFFF)V	a	func_406_a
 METHOD	ed	()V	e_	onUpdate
 CLASS	ee	EntityMobs
 FIELD	ee	I	e	field_762_e
-METHOD	ee	()V	k	func_425_j
+METHOD	ee	()V	k	func_409_i
 METHOD	ee	()V	e_	onUpdate
 METHOD	ee	()Llu;	c_	findPlayerToAttack
 METHOD	ee	(Llu;I)Z	a	attackEntity
-METHOD	ee	(Llu;F)V	a	func_437_a
+METHOD	ee	(Llu;F)V	a	func_1189_a
 METHOD	ee	(III)F	a	func_439_a
-METHOD	ee	(Lip;)V	a	writeEntityToNBT
+METHOD	ee	(Lip;)V	a	readFromNBT
 METHOD	ee	(Lip;)V	b	readEntityFromNBT
-METHOD	ee	()Z	a	func_433_a
+METHOD	ee	()Z	a	allowsAttachment
 CLASS	ef	RecipesTools
 FIELD	ef	[[Ljava/lang/String;	a	field_1665_a
 FIELD	ef	[[Ljava/lang/Object;	b	field_1664_b
-METHOD	ef	(Lem;)V	a	func_1122_a
+METHOD	ef	(Lem;)V	a	func_1051_a
 CLASS	eg	BlockBookshelf
-METHOD	eg	(I)I	a	getBlockTextureFromSide
+METHOD	eg	(I)I	a	generateDisplayLists
 METHOD	eg	(Ljava/util/Random;)I	a	quantityDropped
 CLASS	eh	WorldChunkManagerHell
 FIELD	eh	Lgf;	e	field_4201_e
@@ -1343,13 +1343,13 @@ FIELD	ej	J	a	time
 METHOD	ej	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	ej	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	ej	(Lmm;)V	a	func_323_a
-METHOD	ej	()I	a	func_329_a
+METHOD	ej	()I	a	getHash
 CLASS	ek	ModelCow
 FIELD	ek	Ljz;	a	field_1268_a
 FIELD	ek	Ljz;	b	field_1267_b
 FIELD	ek	Ljz;	c	field_1269_c
 METHOD	ek	(FFFFFF)V	b	func_864_b
-METHOD	ek	(FFFFFF)V	a	func_863_a
+METHOD	ek	(FFFFFF)V	a	setBlockBounds
 CLASS	el	ScreenShotHelper
 FIELD	el	Ljava/text/DateFormat;	a	field_4287_a
 FIELD	el	Ljava/nio/ByteBuffer;	b	field_4286_b
@@ -1372,9 +1372,9 @@ FIELD	en	F	d	field_804_d
 METHOD	en	()V	e_	onUpdate
 METHOD	en	()Z	h_	handleWaterMovement
 METHOD	en	(DDD)Z	h	func_466_g
-METHOD	en	(I)V	a	func_355_a
+METHOD	en	(I)V	a	changeCurrentItem
 METHOD	en	(Llu;I)Z	a	attackEntity
-METHOD	en	(Lip;)V	a	writeEntityToNBT
+METHOD	en	(Lip;)V	a	readFromNBT
 METHOD	en	(Lip;)V	b	readEntityFromNBT
 METHOD	en	(Lea;)V	b	onCollideWithPlayer
 CLASS	eo	NBTTagByteArray
@@ -1389,7 +1389,7 @@ FIELD	ep	I	b	id
 METHOD	ep	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	ep	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	ep	(Lmm;)V	a	func_323_a
-METHOD	ep	()I	a	func_329_a
+METHOD	ep	()I	a	getHash
 CLASS	eq	GuiChest
 FIELD	eq	Lhh;	j	field_982_j
 FIELD	eq	Lhh;	l	field_981_l
@@ -1408,13 +1408,13 @@ METHOD	er	()Lal;	a	func_1116_a
 CLASS	es	TexturePortalFX
 FIELD	es	I	g	field_4227_g
 FIELD	es	[[B	h	field_4226_h
-METHOD	es	()V	a	func_783_a
+METHOD	es	()V	a	clearBoundingBoxPool
 CLASS	et	ItemDoor
 FIELD	et	Lha;	a	field_321_a
 METHOD	et	(Lfo;Lea;Lcx;IIII)Z	a	onItemUse
 CLASS	eu	ColorizerGrass
 FIELD	eu	[I	a	field_6540_a
-METHOD	eu	(DD)I	a	func_4147_a
+METHOD	eu	(DD)I	a	func_4146_a
 CLASS	ev	PositionTexureVertex
 FIELD	ev	Lao;	a	field_1655_a
 FIELD	ev	F	b	field_1654_b
@@ -1432,7 +1432,7 @@ METHOD	ew	(II)Ldy;	a	getSlotAtPosition
 METHOD	ew	(III)V	a	mouseClicked
 METHOD	ew	(III)V	b	mouseMovedOrUp
 METHOD	ew	(CI)V	a	keyTyped
-METHOD	ew	()V	h	onGuiClosed
+METHOD	ew	()V	h	calculateInitialSkylight
 METHOD	ew	()Z	b	doesGuiPauseGame
 CLASS	ex	ItemRedstone
 METHOD	ex	(Lfo;Lea;Lcx;IIII)Z	a	onItemUse
@@ -1442,7 +1442,7 @@ FIELD	ey	[F	h	field_1142_h
 FIELD	ey	[F	i	field_1141_i
 FIELD	ey	[F	j	field_1140_j
 FIELD	ey	I	k	field_1139_k
-METHOD	ey	()V	a	func_783_a
+METHOD	ey	()V	a	clearBoundingBoxPool
 CLASS	ez	Packet10Flying
 FIELD	ez	D	a	xPosition
 FIELD	ez	D	b	yPosition
@@ -1456,7 +1456,7 @@ FIELD	ez	Z	i	rotating
 METHOD	ez	(Lmm;)V	a	func_323_a
 METHOD	ez	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	ez	(Ljava/io/DataOutputStream;)V	a	func_322_a
-METHOD	ez	()I	a	func_329_a
+METHOD	ez	()I	a	getHash
 CLASS	f	RenderGlobal
 FIELD	f	Ljava/util/List;	a	field_1458_a
 FIELD	f	Lcx;	k	worldObj
@@ -1503,36 +1503,36 @@ FIELD	f	D	g	field_1452_g
 FIELD	f	D	h	field_1451_h
 FIELD	f	F	i	field_1450_i
 FIELD	f	I	j	field_1449_j
-METHOD	f	()V	f	func_950_f
-METHOD	f	(Lcx;)V	a	func_946_a
-METHOD	f	()V	a	func_958_a
+METHOD	f	()V	f	MarkDirty
+METHOD	f	(Lcx;)V	a	registerWorld
+METHOD	f	()V	a	clearBoundingBoxPool
 METHOD	f	(Lao;Lqd;F)V	a	func_951_a
-METHOD	f	()Ljava/lang/String;	b	func_953_b
-METHOD	f	()Ljava/lang/String;	c	func_957_c
-METHOD	f	(III)V	b	func_956_b
+METHOD	f	()Ljava/lang/String;	b	getKey
+METHOD	f	()Ljava/lang/String;	c	getClipboardString
+METHOD	f	(III)V	b	mouseMovedOrUp
 METHOD	f	(Lea;ID)I	a	func_943_a
-METHOD	f	(II)V	a	func_962_a
+METHOD	f	(II)V	a	resize
 METHOD	f	(IIID)I	a	func_952_a
 METHOD	f	(ID)V	a	func_944_a
-METHOD	f	()V	d	func_945_d
-METHOD	f	(F)V	a	func_4142_a
-METHOD	f	(F)V	b	func_4141_b
-METHOD	f	(F)V	c	func_6510_c
+METHOD	f	()V	d	handleInput
+METHOD	f	(F)V	a	drawGuiContainerBackgroundLayer
+METHOD	f	(F)V	b	renderOverlays
+METHOD	f	(F)V	c	fall
 METHOD	f	(Lea;Z)Z	a	func_948_a
 METHOD	f	(Lea;Lnv;ILfo;F)V	a	func_959_a
 METHOD	f	(Lea;Lnv;ILfo;F)V	b	func_955_b
-METHOD	f	(Lcn;)V	a	func_942_a
-METHOD	f	(IIIIII)V	a	func_949_a
-METHOD	f	(III)V	a	func_934_a
-METHOD	f	(IIIIII)V	b	func_937_b
+METHOD	f	(Lcn;)V	a	renderAABB
+METHOD	f	(IIIIII)V	a	drawGradientRect
+METHOD	f	(III)V	a	mouseClicked
+METHOD	f	(IIIIII)V	b	drawTexturedModalRect
 METHOD	f	(Lqd;F)V	a	func_960_a
-METHOD	f	(Ljava/lang/String;III)V	a	func_933_a
+METHOD	f	(Ljava/lang/String;III)V	a	drawStringWithShadow
 METHOD	f	(Ljava/lang/String;DDDFF)V	a	func_940_a
-METHOD	f	(Ljava/lang/String;DDDDDD)V	a	func_939_a
+METHOD	f	(Ljava/lang/String;DDDDDD)V	a	spawnParticle
 METHOD	f	(Llu;)V	a	obtainEntitySkin
-METHOD	f	(Llu;)V	b	releaseEntitySkin
-METHOD	f	()V	e	func_936_e
-METHOD	f	(IIILjh;)V	a	func_935_a
+METHOD	f	(Llu;)V	b	obtainEntitySkin_b
+METHOD	f	()V	e	handleMouseInput
+METHOD	f	(IIILjh;)V	a	setBlockTileEntity
 CLASS	fa	RenderSnowball
 METHOD	fa	(Lat;DDDFF)V	a	func_155_a
 METHOD	fa	(Llu;DDDFF)V	a	doRender
@@ -1541,10 +1541,10 @@ FIELD	fb	Lbt;	a	field_749_a
 FIELD	fb	Llu;	f	playerToAttack
 FIELD	fb	Z	g	field_750_g
 METHOD	fb	()V	b_	func_418_b_
-METHOD	fb	(Llu;F)V	a	func_437_a
+METHOD	fb	(Llu;F)V	a	func_1189_a
 METHOD	fb	(III)F	a	func_439_a
 METHOD	fb	()Llu;	c_	findPlayerToAttack
-METHOD	fb	()Z	a	func_433_a
+METHOD	fb	()Z	a	allowsAttachment
 CLASS	fc	NBTBase
 FIELD	fc	Ljava/lang/String;	a	key
 METHOD	fc	()Ljava/lang/String;	b	getKey
@@ -1569,19 +1569,19 @@ FIELD	fd	I	l	field_871_l
 FIELD	fd	I	m	field_870_m
 FIELD	fd	I	n	field_869_n
 FIELD	fd	[[I	o	field_868_o
-METHOD	fd	()V	a	func_521_a
+METHOD	fd	()V	a	clearBoundingBoxPool
 METHOD	fd	(IIIFBI)V	a	func_523_a
 METHOD	fd	(I)F	a	func_528_a
-METHOD	fd	(I)F	b	func_526_b
-METHOD	fd	(III)V	a	func_520_a
+METHOD	fd	(I)F	b	func_288_b
+METHOD	fd	(III)V	a	mouseClicked
 METHOD	fd	([I[II)V	a	func_522_a
-METHOD	fd	()V	b	func_518_b
+METHOD	fd	()V	b	closeMinecraft
 METHOD	fd	(I)Z	c	func_527_c
-METHOD	fd	()V	c	func_529_c
-METHOD	fd	()V	d	func_525_d
+METHOD	fd	()V	c	updateDelay
+METHOD	fd	()V	d	handleInput
 METHOD	fd	([I[I)I	a	func_524_a
-METHOD	fd	()Z	e	func_519_e
-METHOD	fd	(DDD)V	a	func_517_a
+METHOD	fd	()Z	e	canProvidePower
+METHOD	fd	(DDD)V	a	setVelocity
 METHOD	fd	(Lcx;Ljava/util/Random;III)Z	a	func_516_a
 CLASS	fe	TexturePackList
 FIELD	fe	Ljava/util/List;	b	field_6533_b
@@ -1592,7 +1592,7 @@ FIELD	fe	Lnet/minecraft/client/Minecraft;	e	field_6537_e
 FIELD	fe	Ljava/io/File;	f	field_6536_f
 FIELD	fe	Ljava/lang/String;	g	field_6535_g
 METHOD	fe	(Ld;)Z	a	func_6531_a
-METHOD	fe	()V	a	func_6532_a
+METHOD	fe	()V	a	clearBoundingBoxPool
 METHOD	fe	()Ljava/util/List;	b	func_6530_b
 CLASS	ff	ModelCreeper
 FIELD	ff	Ljz;	a	field_1271_a
@@ -1603,14 +1603,14 @@ FIELD	ff	Ljz;	e	field_1274_e
 FIELD	ff	Ljz;	f	field_1273_f
 FIELD	ff	Ljz;	g	field_1272_g
 METHOD	ff	(FFFFFF)V	b	func_864_b
-METHOD	ff	(FFFFFF)V	a	func_863_a
+METHOD	ff	(FFFFFF)V	a	setBlockBounds
 CLASS	fg	EntityReddustFX
 FIELD	fg	F	a	field_673_a
 METHOD	fg	(Lir;FFFFFF)V	a	func_406_a
 METHOD	fg	()V	e_	onUpdate
 CLASS	fh	MathHelper
 FIELD	fh	[F	a	field_1653_a
-METHOD	fh	(F)F	a	sin
+METHOD	fh	(F)F	a	getEntityBrightness
 METHOD	fh	(F)F	b	cos
 METHOD	fh	(F)F	c	sqrt_float
 METHOD	fh	(D)F	a	sqrt_double
@@ -1618,7 +1618,7 @@ METHOD	fh	(F)I	d	convertToBlockCoord_float
 METHOD	fh	(D)I	b	convertToBlockCoord_double
 METHOD	fh	(F)F	e	abs
 METHOD	fh	(DD)D	a	abs_max
-METHOD	fh	(II)I	a	bucketInt
+METHOD	fh	(II)I	a	averageColor
 CLASS	fi	CodecMus
 METHOD	fi	()Ljava/io/InputStream;	openInputStream	openInputStream
 CLASS	fj	RenderChicken
@@ -1665,7 +1665,7 @@ METHOD	fl	(Lcx;Ljava/util/Random;III)Z	a	func_516_a
 CLASS	fm	CraftingInventoryWorkbenchCB
 FIELD	fm	Lhw;	a	craftMatrix
 FIELD	fm	Lhh;	b	craftResult
-METHOD	fm	(Lhh;)V	a	onCraftMatrixChanged
+METHOD	fm	(Lhh;)V	a	displayGUIChest
 METHOD	fm	(Lea;)V	a	onCraftGuiClosed
 CLASS	fn	InventoryPlayer
 FIELD	fn	[Lfo;	a	mainInventory
@@ -1682,25 +1682,25 @@ METHOD	fn	()I	j	getFirstEmptyStack
 METHOD	fn	(IZ)V	a	setCurrentItem
 METHOD	fn	(I)V	a	changeCurrentItem
 METHOD	fn	(II)I	b	addItemsToInventory
-METHOD	fn	()V	b	func_511_b
-METHOD	fn	(I)Z	b	consumeInventoryItem
-METHOD	fn	(Lfo;)Z	a	func_504_a
+METHOD	fn	()V	b	closeMinecraft
+METHOD	fn	(I)Z	b	canThisPlantGrowOnThisBlockID
+METHOD	fn	(Lfo;)Z	a	isItemValid
 METHOD	fn	(II)Lfo;	a	decrStackSize
 METHOD	fn	(ILfo;)V	a	setInventorySlotContents
-METHOD	fn	(Lno;)F	a	func_508_a
+METHOD	fn	(Lno;)F	a	getCurrentPlayerStrVsBlock
 METHOD	fn	(Llw;)Llw;	a	writeToNBT
 METHOD	fn	(Llw;)V	b	readFromNBT
-METHOD	fn	()I	c	getSizeInventory
+METHOD	fn	()I	c	getItemStackLimit
 METHOD	fn	(I)Lfo;	c	getStackInSlot
 METHOD	fn	()Ljava/lang/String;	d	getInvName
 METHOD	fn	()I	o_	getInventoryStackLimit
 METHOD	fn	(Llu;)I	a	getDamageVsEntity
-METHOD	fn	(Lno;)Z	b	func_509_b
+METHOD	fn	(Lno;)Z	b	canHarvestBlock_b
 METHOD	fn	(I)Lfo;	d	armorItemInSlot
-METHOD	fn	()I	f	func_506_f
+METHOD	fn	()I	f	func_479_f
 METHOD	fn	(I)V	e	func_507_e
-METHOD	fn	()V	g	func_503_g
-METHOD	fn	()V	h	onInventoryChanged
+METHOD	fn	()V	g	setChunkModified
+METHOD	fn	()V	h	calculateInitialSkylight
 METHOD	fn	(Lfn;)Z	a	func_500_a
 METHOD	fn	(Lfo;Lfo;)Z	a	func_501_a
 METHOD	fn	()Lfn;	i	func_512_i
@@ -1713,18 +1713,18 @@ METHOD	fo	(I)Lfo;	a	func_1085_a
 METHOD	fo	()Ldw;	a	func_1091_a
 METHOD	fo	()I	b	func_1088_b
 METHOD	fo	(Lea;Lcx;IIII)Z	a	func_1090_a
-METHOD	fo	(Lno;)F	a	func_1098_a
+METHOD	fo	(Lno;)F	a	getCurrentPlayerStrVsBlock
 METHOD	fo	(Lcx;Lea;)Lfo;	a	func_1093_a
 METHOD	fo	(Lip;)Lip;	a	func_1086_a
-METHOD	fo	(Lip;)V	b	func_1096_b
-METHOD	fo	()I	c	func_1089_c
-METHOD	fo	()I	d	func_1094_d
-METHOD	fo	(I)V	b	func_1101_b
+METHOD	fo	(Lip;)V	b	readEntityFromNBT
+METHOD	fo	()I	c	getItemStackLimit
+METHOD	fo	()I	d	getMaxDamage
+METHOD	fo	(I)V	b	drawBackground
 METHOD	fo	(Lhe;)V	a	func_1092_a
-METHOD	fo	(IIII)V	a	func_1087_a
-METHOD	fo	(Llu;)I	a	func_1095_a
-METHOD	fo	(Lno;)Z	b	canHarvestBlock
-METHOD	fo	(Lea;)V	a	func_1097_a
+METHOD	fo	(IIII)V	a	setNibble
+METHOD	fo	(Llu;)I	a	getDamageVsEntity
+METHOD	fo	(Lno;)Z	b	canHarvestBlock_b
+METHOD	fo	(Lea;)V	a	onCraftGuiClosed
 METHOD	fo	(Lhe;)V	b	func_1100_b
 METHOD	fo	()Lfo;	e	func_1102_e
 CLASS	fp	EntityList
@@ -1736,7 +1736,7 @@ METHOD	fp	(Ljava/lang/Class;Ljava/lang/String;I)V	a	addMapping
 METHOD	fp	(Ljava/lang/String;Lcx;)Llu;	a	createEntityInWorld
 METHOD	fp	(Lip;Lcx;)Llu;	a	createEntityFromNBT
 METHOD	fp	(ILcx;)Llu;	a	createEntity
-METHOD	fp	(Llu;)I	a	getEntityID
+METHOD	fp	(Llu;)I	a	getDamageVsEntity
 METHOD	fp	(Llu;)Ljava/lang/String;	b	getEntityString
 CLASS	fq	TileEntitySpecialRenderer
 FIELD	fq	Lgy;	a	tileEntityRenderer
@@ -1749,7 +1749,7 @@ FIELD	fr	B	b	field_9273_b
 METHOD	fr	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	fr	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	fr	(Lmm;)V	a	func_323_a
-METHOD	fr	()I	a	func_329_a
+METHOD	fr	()I	a	getHash
 CLASS	fs	ColorizerFoliage
 FIELD	fs	[I	a	field_6529_a
 METHOD	fs	(DD)I	a	func_4146_a
@@ -1765,21 +1765,21 @@ FIELD	ft	Lgp;	h	options
 FIELD	ft	Z	i	clampTexture
 FIELD	ft	Z	j	blurTexture
 FIELD	ft	Lfe;	k	field_6527_k
-METHOD	ft	(Ljava/lang/String;)I	a	func_1070_a
+METHOD	ft	(Ljava/lang/String;)I	a	getStringWidth
 METHOD	ft	(Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;	b	unwrapImageByColumns
 METHOD	ft	(Ljava/awt/image/BufferedImage;)I	a	allocateAndSetupTexture
 METHOD	ft	(Ljava/awt/image/BufferedImage;I)V	a	setupTexture
-METHOD	ft	(I)V	a	deleteTexture
+METHOD	ft	(I)V	a	changeCurrentItem
 METHOD	ft	(Ljava/lang/String;Ljava/lang/String;)I	a	getTextureForDownloadableImage
 METHOD	ft	(Ljava/lang/String;Lid;)Lck;	a	obtainImageData
 METHOD	ft	(Ljava/lang/String;)V	b	releaseImageData
 METHOD	ft	(Lad;)V	a	func_1066_a
-METHOD	ft	()V	a	func_1067_a
+METHOD	ft	()V	a	clearBoundingBoxPool
 METHOD	ft	(II)I	a	averageColor
-METHOD	ft	(II)I	b	weightedAverageColor
-METHOD	ft	()V	b	refreshTextures
+METHOD	ft	(II)I	b	addItemsToInventory
+METHOD	ft	()V	b	closeMinecraft
 METHOD	ft	(Ljava/io/InputStream;)Ljava/awt/image/BufferedImage;	a	readTextureImage
-METHOD	ft	(I)V	b	func_1076_b
+METHOD	ft	(I)V	b	drawBackground
 CLASS	fu	Packet24MobSpawn
 FIELD	fu	I	a	entityId
 FIELD	fu	B	b	type
@@ -1791,7 +1791,7 @@ FIELD	fu	B	g	pitch
 METHOD	fu	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	fu	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	fu	(Lmm;)V	a	func_323_a
-METHOD	fu	()I	a	func_329_a
+METHOD	fu	()I	a	getHash
 CLASS	fv	EnumOS1
 FIELD	fv	Lfv;	a	linux
 FIELD	fv	Lfv;	b	solaris
@@ -1812,10 +1812,10 @@ METHOD	fx	(Lpi;IIII)Z	b	isSideInsideCoordinate
 CLASS	fy	BlockSnow
 METHOD	fy	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
 METHOD	fy	()Z	a	allowsAttachment
-METHOD	fy	()Z	b	renderAsNormalBlock
+METHOD	fy	()Z	b	doesGuiPauseGame
 METHOD	fy	(Lcx;III)Z	a	canPlaceBlockAt
 METHOD	fy	(Lcx;IIII)V	a	onNeighborBlockChange
-METHOD	fy	(Lcx;III)Z	h	func_314_h
+METHOD	fy	(Lcx;III)Z	h	checkIfAttachedToBlock
 METHOD	fy	(Lcx;IIII)V	a_	func_220_a_
 METHOD	fy	(ILjava/util/Random;)I	a	idDropped
 METHOD	fy	(Ljava/util/Random;)I	a	quantityDropped
@@ -1823,25 +1823,25 @@ METHOD	fy	(Lcx;IIILjava/util/Random;)V	a	updateTick
 METHOD	fy	(Lpi;IIII)Z	b	isSideInsideCoordinate
 CLASS	fz	TileEntityChest
 FIELD	fz	[Lfo;	a	field_827_a
-METHOD	fz	()I	c	getSizeInventory
+METHOD	fz	()I	c	getItemStackLimit
 METHOD	fz	(I)Lfo;	c	getStackInSlot
 METHOD	fz	(II)Lfo;	a	decrStackSize
 METHOD	fz	(ILfo;)V	a	setInventorySlotContents
 METHOD	fz	()Ljava/lang/String;	d	getInvName
 METHOD	fz	(Lip;)V	a	readFromNBT
-METHOD	fz	(Lip;)V	b	writeToNBT
+METHOD	fz	(Lip;)V	b	readEntityFromNBT
 METHOD	fz	()I	o_	getInventoryStackLimit
 CLASS	g	RenderCreeper
 METHOD	g	(Ldp;F)V	a	func_184_a
 METHOD	g	(Ldp;FF)I	a	func_183_a
-METHOD	g	(Lhe;F)V	a	func_6330_a
+METHOD	g	(Lhe;F)V	a	func_338_a
 METHOD	g	(Lhe;FF)I	a	func_173_a
 CLASS	ga	EntityFallingSand
 FIELD	ga	I	a	field_799_a
 FIELD	ga	I	b	field_798_b
 METHOD	ga	()Z	n_	canBeCollidedWith
 METHOD	ga	()V	e_	onUpdate
-METHOD	ga	(Lip;)V	a	writeEntityToNBT
+METHOD	ga	(Lip;)V	a	readFromNBT
 METHOD	ga	(Lip;)V	b	readEntityFromNBT
 METHOD	ga	()F	i_	func_392_h_
 METHOD	ga	()Lcx;	k	func_465_i
@@ -1854,12 +1854,12 @@ FIELD	gb	I	e	status
 METHOD	gb	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	gb	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	gb	(Lmm;)V	a	func_323_a
-METHOD	gb	()I	a	func_329_a
+METHOD	gb	()I	a	getHash
 CLASS	gc	BlockFence
 METHOD	gc	(Lcx;IIILcn;Ljava/util/ArrayList;)V	a	getCollidingBoundingBoxes
 METHOD	gc	(Lcx;III)Z	a	canPlaceBlockAt
 METHOD	gc	()Z	a	allowsAttachment
-METHOD	gc	()Z	b	renderAsNormalBlock
+METHOD	gc	()Z	b	doesGuiPauseGame
 METHOD	gc	()I	g	getRenderType
 CLASS	gd	MCHashTable
 FIELD	gd	[Lop;	a	slots
@@ -1868,16 +1868,16 @@ FIELD	gd	I	c	threshold
 FIELD	gd	F	d	growFactor
 FIELD	gd	I	e	versionStamp
 METHOD	gd	(I)I	e	func_1055_e
-METHOD	gd	(II)I	a	func_1062_a
+METHOD	gd	(II)I	a	averageColor
 METHOD	gd	(I)Ljava/lang/Object;	a	func_1057_a
 METHOD	gd	(ILjava/lang/Object;)V	a	func_1061_a
 METHOD	gd	(I)V	f	func_1060_f
 METHOD	gd	([Lop;)V	a	func_1059_a
 METHOD	gd	(I)Ljava/lang/Object;	b	func_1052_b
 METHOD	gd	(I)Lop;	c	func_1054_c
-METHOD	gd	()V	a	func_1058_a
+METHOD	gd	()V	a	clearBoundingBoxPool
 METHOD	gd	(IILjava/lang/Object;I)V	a	func_1053_a
-METHOD	gd	(I)I	d	func_1056_d
+METHOD	gd	(I)I	d	getSmeltingResultItem
 CLASS	ge	RecipesCrafting
 METHOD	ge	(Lem;)V	a	func_1051_a
 CLASS	gf	MobSpawnerBase
@@ -1901,14 +1901,14 @@ FIELD	gf	I	q	field_6502_q
 FIELD	gf	[Ljava/lang/Class;	r	biomeMonsters
 FIELD	gf	[Ljava/lang/Class;	s	biomeCreatures
 FIELD	gf	[Lgf;	t	biomeLookupTable
-METHOD	gf	()V	a	generateBiomeLookup
+METHOD	gf	()V	a	clearBoundingBoxPool
 METHOD	gf	()Lgf;	b	func_4122_b
 METHOD	gf	(Ljava/lang/String;)Lgf;	a	setBiomeName
 METHOD	gf	(I)Lgf;	a	func_4124_a
 METHOD	gf	(I)Lgf;	b	func_4123_b
 METHOD	gf	(DD)Lgf;	a	getBiomeFromLookup
 METHOD	gf	(FF)Lgf;	a	getBiome
-METHOD	gf	(F)I	a	func_4126_a
+METHOD	gf	(F)I	a	calculateSkylightSubtracted
 METHOD	gf	(Lgx;)[Ljava/lang/Class;	a	getEntitiesForType
 CLASS	gg	GuiButton
 FIELD	gg	I	a	width
@@ -1920,9 +1920,9 @@ FIELD	gg	I	f	id
 FIELD	gg	Z	g	enabled
 FIELD	gg	Z	h	enabled2
 METHOD	gg	(Z)I	a	func_558_a
-METHOD	gg	(Lnet/minecraft/client/Minecraft;II)V	a	func_561_a
+METHOD	gg	(Lnet/minecraft/client/Minecraft;II)V	a	setWorldAndResolution
 METHOD	gg	(Lnet/minecraft/client/Minecraft;II)V	b	func_560_b
-METHOD	gg	(II)V	a	func_559_a
+METHOD	gg	(II)V	a	resize
 METHOD	gg	(Lnet/minecraft/client/Minecraft;II)Z	c	func_562_c
 CLASS	gh	ThreadSleepForever
 FIELD	gh	Lnet/minecraft/client/Minecraft;	a	mc
@@ -1936,7 +1936,7 @@ FIELD	gj	Ljava/util/Map;	b	packetClassToIdMap
 FIELD	gj	Z	j	isChunkDataPacket
 METHOD	gj	(ILjava/lang/Class;)V	a	func_321_a
 METHOD	gj	(I)Lgj;	a	func_325_a
-METHOD	gj	()I	b	func_326_b
+METHOD	gj	()I	b	func_1088_b
 METHOD	gj	(Ljava/io/DataInputStream;)Lgj;	b	func_324_b
 METHOD	gj	(Lgj;Ljava/io/DataOutputStream;)V	a	func_328_a
 CLASS	gk	RenderFireball
@@ -1946,7 +1946,7 @@ CLASS	gl	ModelBase
 FIELD	gl	F	k	field_1244_k
 FIELD	gl	Z	l	field_1243_l
 METHOD	gl	(FFFFFF)V	b	func_864_b
-METHOD	gl	(FFFFFF)V	a	func_863_a
+METHOD	gl	(FFFFFF)V	a	setBlockBounds
 CLASS	gm	GameWindowListener
 FIELD	gm	Lnet/minecraft/client/Minecraft;	a	mc
 FIELD	gm	Ljava/lang/Thread;	b	mcThread
@@ -1959,7 +1959,7 @@ FIELD	go	[I	h	field_4224_h
 FIELD	go	[I	i	field_4223_i
 FIELD	go	D	j	field_4222_j
 FIELD	go	D	k	field_4221_k
-METHOD	go	()V	a	func_783_a
+METHOD	go	()V	a	clearBoundingBoxPool
 CLASS	gp	GameSettings
 FIELD	gp	[Ljava/lang/String;	z	RENDER_DISTANCES
 FIELD	gp	[Ljava/lang/String;	A	DIFFICULTY_LEVELS
@@ -1990,15 +1990,15 @@ FIELD	gp	I	w	numberOfOptions
 FIELD	gp	I	x	difficulty
 FIELD	gp	Z	y	thirdPersonView
 METHOD	gp	(I)Ljava/lang/String;	a	func_1043_a
-METHOD	gp	(II)V	a	func_1042_a
+METHOD	gp	(II)V	a	resize
 METHOD	gp	(IF)V	a	func_1048_a
 METHOD	gp	(II)V	b	func_1045_b
-METHOD	gp	(I)I	b	func_1046_b
+METHOD	gp	(I)I	b	getBurnTimeRemainingScaled
 METHOD	gp	(I)F	c	func_1049_c
-METHOD	gp	(I)Ljava/lang/String;	d	func_1047_d
-METHOD	gp	()V	a	func_6519_a
+METHOD	gp	(I)Ljava/lang/String;	d	getWorldName
+METHOD	gp	()V	a	clearBoundingBoxPool
 METHOD	gp	(Ljava/lang/String;)F	a	func_1050_a
-METHOD	gp	()V	b	func_1041_b
+METHOD	gp	()V	b	closeMinecraft
 CLASS	gq	RecipeSorter
 FIELD	gq	Lem;	a	field_1557_a
 METHOD	gq	(Lcd;Lcd;)I	a	func_1040_a
@@ -2012,28 +2012,28 @@ FIELD	gr	Lcx;	g	worldObj
 FIELD	gr	I	a	lastQueriedChunkXPos
 FIELD	gr	I	b	lastQueriedChunkZPos
 FIELD	gr	Lgz;	h	lastQueriedChunk
-METHOD	gr	(II)Z	a	chunkExists
-METHOD	gr	(II)Lgz;	b	provideChunk
-METHOD	gr	(II)Lgz;	c	func_542_c
+METHOD	gr	(II)Z	a	canCoordinateBeSpawn
+METHOD	gr	(II)Lgz;	b	getChunkFromBlockCoords
+METHOD	gr	(II)Lgz;	c	getChunkFromChunkCoords
 METHOD	gr	(Lgz;)V	a	saveExtraChunkData
 METHOD	gr	(Lgz;)V	b	saveChunk
 METHOD	gr	(Lbd;II)V	a	populate
 METHOD	gr	(ZLps;)Z	a	saveChunks
-METHOD	gr	()Z	a	func_532_a
-METHOD	gr	()Z	b	func_536_b
+METHOD	gr	()Z	a	allowsAttachment
+METHOD	gr	()Z	b	doesGuiPauseGame
 CLASS	gs	ItemHoe
 METHOD	gs	(Lfo;Lea;Lcx;IIII)Z	a	onItemUse
-METHOD	gs	()Z	a	isFull3D
+METHOD	gs	()Z	a	allowsAttachment
 CLASS	gt	ModelSkeleton
 CLASS	gu	BlockDoor
-METHOD	gu	(II)I	a	getBlockTextureFromSideAndMetadata
+METHOD	gu	(II)I	a	averageColor
 METHOD	gu	()Z	a	allowsAttachment
-METHOD	gu	()Z	b	renderAsNormalBlock
+METHOD	gu	()Z	b	doesGuiPauseGame
 METHOD	gu	()I	g	getRenderType
 METHOD	gu	(Lcx;III)Lcn;	f	getSelectedBoundingBoxFromPool
 METHOD	gu	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
 METHOD	gu	(Lpi;III)V	a	setBlockBoundsBasedOnState
-METHOD	gu	(I)V	b	func_313_b
+METHOD	gu	(I)V	b	drawBackground
 METHOD	gu	(Lcx;IIILea;)V	b	onBlockClicked
 METHOD	gu	(Lcx;IIILea;)Z	a	blockActivated
 METHOD	gu	(Lcx;IIIZ)V	a	func_311_a
@@ -2046,11 +2046,11 @@ CLASS	gv	Path
 FIELD	gv	[Lb;	a	pathPoints
 FIELD	gv	I	b	count
 METHOD	gv	(Lb;)Lb;	a	func_1034_a
-METHOD	gv	()V	a	func_1038_a
+METHOD	gv	()V	a	clearBoundingBoxPool
 METHOD	gv	()Lb;	b	func_1036_b
 METHOD	gv	(Lb;F)V	a	func_1035_a
-METHOD	gv	(I)V	a	func_1033_a
-METHOD	gv	(I)V	b	func_1037_b
+METHOD	gv	(I)V	a	changeCurrentItem
+METHOD	gv	(I)V	b	drawBackground
 METHOD	gv	()Z	c	func_1039_c
 CLASS	gw	NBTTagEnd
 METHOD	gw	(Ljava/io/DataInput;)V	a	readTagContents
@@ -2107,37 +2107,37 @@ FIELD	gz	Z	p	neverSave
 FIELD	gz	Z	q	field_1524_q
 FIELD	gz	Z	r	hasEntities
 FIELD	gz	J	s	lastSaveTime
-METHOD	gz	(II)Z	a	isAtLocation
-METHOD	gz	(II)I	b	func_999_b
-METHOD	gz	()V	a	func_1014_a
-METHOD	gz	()V	b	func_1018_b
-METHOD	gz	()V	c	func_1024_c
-METHOD	gz	()V	d	func_4143_d
-METHOD	gz	(II)V	c	func_996_c
+METHOD	gz	(II)Z	a	canCoordinateBeSpawn
+METHOD	gz	(II)I	b	addItemsToInventory
+METHOD	gz	()V	a	clearBoundingBoxPool
+METHOD	gz	()V	b	closeMinecraft
+METHOD	gz	()V	c	updateDelay
+METHOD	gz	()V	d	handleInput
+METHOD	gz	(II)V	c	func_539_c
 METHOD	gz	(III)V	f	func_1020_f
 METHOD	gz	(III)V	g	func_1003_g
-METHOD	gz	(III)I	a	func_1008_a
-METHOD	gz	(IIIII)Z	a	func_1010_a
-METHOD	gz	(IIII)Z	a	func_1022_a
+METHOD	gz	(III)I	a	getBlockId
+METHOD	gz	(IIIII)Z	a	setBlockAndMetadata
+METHOD	gz	(IIII)Z	a	setBlock
 METHOD	gz	(III)I	b	func_1021_b
-METHOD	gz	(IIII)V	b	func_1009_b
-METHOD	gz	(Lcg;III)I	a	func_1025_a
-METHOD	gz	(Lcg;IIII)V	a	func_1011_a
+METHOD	gz	(IIII)V	b	setBlockMetadataWithNotify
+METHOD	gz	(Lcg;III)I	a	getSavedLightValue
+METHOD	gz	(Lcg;IIII)V	a	neighborLightPropagationChanged
 METHOD	gz	(IIII)I	c	func_1019_c
-METHOD	gz	(Llu;)V	a	func_1000_a
-METHOD	gz	(Llu;)V	b	func_1015_b
+METHOD	gz	(Llu;)V	a	obtainEntitySkin
+METHOD	gz	(Llu;)V	b	obtainEntitySkin_b
 METHOD	gz	(Llu;I)V	a	func_1016_a
 METHOD	gz	(III)Z	c	func_1007_c
 METHOD	gz	(III)Ljh;	d	getChunkBlockTileEntity
 METHOD	gz	(Ljh;)V	a	func_1001_a
-METHOD	gz	(IIILjh;)V	a	setChunkBlockTileEntity
+METHOD	gz	(IIILjh;)V	a	setBlockTileEntity
 METHOD	gz	(III)V	e	removeChunkBlockTileEntity
-METHOD	gz	()V	e	onChunkLoad
-METHOD	gz	()V	f	onChunkUnload
+METHOD	gz	()V	e	handleMouseInput
+METHOD	gz	()V	f	MarkDirty
 METHOD	gz	()V	g	setChunkModified
 METHOD	gz	(Llu;Lcn;Ljava/util/List;)V	a	func_994_a
 METHOD	gz	(Ljava/lang/Class;Lcn;Ljava/util/List;)V	a	func_1013_a
-METHOD	gz	(Z)Z	a	needsSaving
+METHOD	gz	(Z)Z	a	TickUpdates
 METHOD	gz	([BIIIIIII)I	a	func_1004_a
 METHOD	gz	(J)Ljava/util/Random;	a	func_997_a
 CLASS	h	NBTTagFloat
@@ -2172,23 +2172,23 @@ FIELD	ha	Lha;	v	clay
 FIELD	ha	Lha;	w	canBurn
 FIELD	ha	Lha;	x	field_4260_x
 FIELD	ha	Z	y	burning
-METHOD	ha	()Z	d	func_879_d
-METHOD	ha	()Z	a	func_878_a
-METHOD	ha	()Z	b	func_881_b
-METHOD	ha	()Z	c	func_880_c
+METHOD	ha	()Z	d	isDaytime
+METHOD	ha	()Z	a	allowsAttachment
+METHOD	ha	()Z	b	doesGuiPauseGame
+METHOD	ha	()Z	c	func_1039_c
 METHOD	ha	()Lha;	f	func_4130_f
-METHOD	ha	()Z	e	func_876_e
+METHOD	ha	()Z	e	canProvidePower
 CLASS	hb	ModelGhast
 FIELD	hb	Ljz;	a	field_4258_a
 FIELD	hb	[Ljz;	b	field_4257_b
-METHOD	hb	(FFFFFF)V	a	func_863_a
+METHOD	hb	(FFFFFF)V	a	setBlockBounds
 METHOD	hb	(FFFFFF)V	b	func_864_b
 CLASS	hc	GuiMultiplayer
 FIELD	hc	Lbp;	a	updateCounter
 FIELD	hc	I	h	parentScreen
 FIELD	hc	Ljava/lang/String;	i	serverAddress
-METHOD	hc	()V	g	updateScreen
-METHOD	hc	()V	a	initGui
+METHOD	hc	()V	g	setChunkModified
+METHOD	hc	()V	a	clearBoundingBoxPool
 METHOD	hc	(Lgg;)V	a	actionPerformed
 METHOD	hc	(Ljava/lang/String;I)I	a	func_4067_a
 METHOD	hc	(CI)V	a	keyTyped
@@ -2196,9 +2196,9 @@ METHOD	hc	(IIF)V	a	drawScreen
 CLASS	hd	MovementInputFromOptions
 FIELD	hd	[Z	f	field_1179_f
 FIELD	hd	Lgp;	g	field_1178_g
-METHOD	hd	(IZ)V	a	func_796_a
-METHOD	hd	()V	a	func_798_a
-METHOD	hd	(Lea;)V	a	func_797_a
+METHOD	hd	(IZ)V	a	setCurrentItem
+METHOD	hd	()V	a	clearBoundingBoxPool
+METHOD	hd	(Lea;)V	a	onCraftGuiClosed
 CLASS	he	EntityLiving
 FIELD	he	I	o	field_9366_o
 FIELD	he	F	p	field_9365_p
@@ -2259,7 +2259,7 @@ METHOD	he	()Ljava/lang/String;	A	func_6376_z
 METHOD	he	()Z	n_	canBeCollidedWith
 METHOD	he	()Z	d_	canBePushed
 METHOD	he	()F	v	func_373_s
-METHOD	he	()I	b	func_421_b
+METHOD	he	()I	b	func_1088_b
 METHOD	he	()V	B	func_391_y
 METHOD	he	()V	C	func_415_z
 METHOD	he	()V	s	func_350_p
@@ -2268,28 +2268,28 @@ METHOD	he	()V	e_	onUpdate
 METHOD	he	(FF)V	a	setSize
 METHOD	he	(I)V	c	func_432_b
 METHOD	he	(Llu;I)Z	a	attackEntity
-METHOD	he	()V	g	func_9280_g
-METHOD	he	(I)V	b	func_4044_a
+METHOD	he	()V	g	setChunkModified
+METHOD	he	(I)V	b	drawBackground
 METHOD	he	()F	h	func_6393_h
-METHOD	he	()Ljava/lang/String;	d	func_6389_d
+METHOD	he	()Ljava/lang/String;	d	getInvName
 METHOD	he	()Ljava/lang/String;	f_	func_6394_f_
 METHOD	he	()Ljava/lang/String;	f	func_6390_f
 METHOD	he	(Llu;IDD)V	a	func_434_a
-METHOD	he	(Llu;)V	b	func_419_b
+METHOD	he	(Llu;)V	b	obtainEntitySkin_b
 METHOD	he	()I	g_	func_422_g
 METHOD	he	(F)V	c	fall
 METHOD	he	(FF)V	b	func_435_b
 METHOD	he	()Z	D	func_429_A
-METHOD	he	(Lip;)V	a	writeEntityToNBT
+METHOD	he	(Lip;)V	a	readFromNBT
 METHOD	he	(Lip;)V	b	readEntityFromNBT
 METHOD	he	()Z	E	func_354_B
-METHOD	he	()V	k	func_425_j
+METHOD	he	()V	k	func_409_i
 METHOD	he	()V	F	func_424_C
 METHOD	he	()V	b_	func_418_b_
-METHOD	he	(Llu;F)V	b	func_426_b
+METHOD	he	(Llu;F)V	b	func_1187_b
 METHOD	he	(FFF)F	b	func_417_b
 METHOD	he	()V	G	func_6392_F
-METHOD	he	()Z	a	func_433_a
+METHOD	he	()Z	a	allowsAttachment
 METHOD	he	()V	H	func_4034_G
 METHOD	he	(F)F	d	getSwingProgress
 METHOD	he	(F)Lao;	e	func_427_e
@@ -2300,9 +2300,9 @@ METHOD	he	()I	i	func_6391_i
 METHOD	he	()Lfo;	l	getHeldItem
 METHOD	he	(B)V	a	func_9282_a
 CLASS	hf	MaterialTransparent
-METHOD	hf	()Z	a	func_878_a
-METHOD	hf	()Z	b	func_881_b
-METHOD	hf	()Z	c	func_880_c
+METHOD	hf	()Z	a	allowsAttachment
+METHOD	hf	()Z	b	doesGuiPauseGame
+METHOD	hf	()Z	c	func_1039_c
 CLASS	hg	ItemReed
 FIELD	hg	I	a	field_320_a
 METHOD	hg	(Lfo;Lea;Lcx;IIII)Z	a	onItemUse
@@ -2333,7 +2333,7 @@ METHOD	hi	(DDDFF)V	a	func_4042_a
 METHOD	hi	(DDDFFI)V	a	setPositionAndRotation2
 METHOD	hi	(DDD)V	a	setVelocity
 METHOD	hi	()V	e_	onUpdate
-METHOD	hi	(Lip;)V	a	writeEntityToNBT
+METHOD	hi	(Lip;)V	a	readFromNBT
 METHOD	hi	(Lip;)V	b	readEntityFromNBT
 METHOD	hi	()F	i_	func_392_h_
 METHOD	hi	()I	k	func_4043_i
@@ -2343,7 +2343,7 @@ CLASS	hk	Packet0KeepAlive
 METHOD	hk	(Lmm;)V	a	func_323_a
 METHOD	hk	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	hk	(Ljava/io/DataOutputStream;)V	a	func_322_a
-METHOD	hk	()I	a	func_329_a
+METHOD	hk	()I	a	getHash
 CLASS	hl	RenderEntity
 METHOD	hl	(Llu;DDDFF)V	a	doRender
 CLASS	hm	RenderArrow
@@ -2351,7 +2351,7 @@ METHOD	hm	(Llt;DDDFF)V	a	func_154_a
 METHOD	hm	(Llu;DDDFF)V	a	doRender
 CLASS	hn	RenderSorter
 FIELD	hn	Lea;	a	field_4274_a
-METHOD	hn	(Lbv;Lbv;)I	a	func_993_a
+METHOD	hn	(Lbv;Lbv;)I	a	func_1063_a
 METHOD	hn	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare
 CLASS	ho	RenderPig
 METHOD	ho	(Lon;I)Z	a	func_180_a
@@ -2377,12 +2377,12 @@ FIELD	hr	I	h	currentItem
 METHOD	hr	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	hr	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	hr	(Lmm;)V	a	func_323_a
-METHOD	hr	()I	a	func_329_a
+METHOD	hr	()I	a	getHash
 CLASS	hs	RenderSlime
 FIELD	hs	Lgl;	a	field_205_f
 METHOD	hs	(Lnq;I)Z	a	func_179_a
 METHOD	hs	(Lnq;F)V	a	func_178_a
-METHOD	hs	(Lhe;F)V	a	func_6330_a
+METHOD	hs	(Lhe;F)V	a	func_338_a
 METHOD	hs	(Lhe;I)Z	a	func_166_a
 CLASS	ht	LoadingScreenRenderer
 FIELD	ht	Ljava/lang/String;	a	field_1004_a
@@ -2390,11 +2390,11 @@ FIELD	ht	Lnet/minecraft/client/Minecraft;	b	mc
 FIELD	ht	Ljava/lang/String;	c	field_1007_c
 FIELD	ht	J	d	field_1006_d
 FIELD	ht	Z	e	field_1005_e
-METHOD	ht	(Ljava/lang/String;)V	a	func_596_a
-METHOD	ht	(Ljava/lang/String;)V	b	func_594_b
-METHOD	ht	(Ljava/lang/String;)V	c	func_597_c
+METHOD	ht	(Ljava/lang/String;)V	a	bindTextureByName
+METHOD	ht	(Ljava/lang/String;)V	b	releaseImageData
+METHOD	ht	(Ljava/lang/String;)V	c	checkGLError
 METHOD	ht	(Ljava/lang/String;)V	d	func_595_d
-METHOD	ht	(I)V	a	func_593_a
+METHOD	ht	(I)V	a	changeCurrentItem
 CLASS	hu	WorldClient
 FIELD	hu	Ljava/util/LinkedList;	A	field_1057_z
 FIELD	hu	Lia;	B	sendQueue
@@ -2403,18 +2403,18 @@ FIELD	hu	Z	D	field_1056_C
 FIELD	hu	Lgd;	E	field_1055_D
 FIELD	hu	Ljava/util/Set;	F	field_1054_E
 FIELD	hu	Ljava/util/Set;	G	field_1053_F
-METHOD	hu	()V	i	tick
+METHOD	hu	()V	i	drawDefaultBackground
 METHOD	hu	(IIIIII)V	c	func_711_c
 METHOD	hu	(Ljava/io/File;)Lbd;	a	func_4081_a
-METHOD	hu	()V	b	func_4076_b
-METHOD	hu	()V	j	func_4080_j
+METHOD	hu	()V	b	closeMinecraft
+METHOD	hu	()V	j	drawGuiContainerForegroundLayer
 METHOD	hu	(IIII)V	h	scheduleBlockUpdate
 METHOD	hu	(Z)Z	a	TickUpdates
 METHOD	hu	(IIZ)V	a	func_713_a
 METHOD	hu	(Llu;)Z	a	entityJoinedWorld
 METHOD	hu	(Llu;)V	d	setEntityDead
-METHOD	hu	(Llu;)V	b	obtainEntitySkin
-METHOD	hu	(Llu;)V	c	releaseEntitySkin
+METHOD	hu	(Llu;)V	b	obtainEntitySkin_b
+METHOD	hu	(Llu;)V	c	becomeAngryAt
 METHOD	hu	(ILlu;)V	a	func_712_a
 METHOD	hu	(I)Llu;	b	func_709_b
 METHOD	hu	(I)Llu;	c	func_710_c
@@ -2423,24 +2423,24 @@ METHOD	hu	(IIIII)Z	a	setBlockAndMetadata
 METHOD	hu	(IIII)Z	a	setBlock
 METHOD	hu	(IIIII)Z	c	func_714_c
 METHOD	hu	(IIILjh;)V	b	func_698_b
-METHOD	hu	()V	m	sendQuittingDisconnectingPacket
+METHOD	hu	()V	m	displayGUICrafting
 CLASS	hv	Packet2Handshake
 FIELD	hv	Ljava/lang/String;	a	username
 METHOD	hv	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	hv	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	hv	(Lmm;)V	a	func_323_a
-METHOD	hv	()I	a	func_329_a
+METHOD	hv	()I	a	getHash
 CLASS	hw	InventoryCrafting
 FIELD	hw	[Lfo;	a	stackList
 FIELD	hw	I	b	nbrSlots
 FIELD	hw	Lax;	c	eventHandler
-METHOD	hw	()I	c	getSizeInventory
+METHOD	hw	()I	c	getItemStackLimit
 METHOD	hw	(I)Lfo;	c	getStackInSlot
 METHOD	hw	()Ljava/lang/String;	d	getInvName
 METHOD	hw	(II)Lfo;	a	decrStackSize
 METHOD	hw	(ILfo;)V	a	setInventorySlotContents
 METHOD	hw	()I	o_	getInventoryStackLimit
-METHOD	hw	()V	h	onInventoryChanged
+METHOD	hw	()V	h	calculateInitialSkylight
 CLASS	hx	WorldGenClay
 FIELD	hx	I	a	clayBlockId
 FIELD	hx	I	b	numberOfBlocks
@@ -2460,7 +2460,7 @@ FIELD	ia	Lnet/minecraft/client/Minecraft;	e	mc
 FIELD	ia	Lhu;	f	field_1211_f
 FIELD	ia	Z	g	field_1210_g
 FIELD	ia	Ljava/util/Random;	b	rand
-METHOD	ia	()V	a	processReadPackets
+METHOD	ia	()V	a	clearBoundingBoxPool
 METHOD	ia	(Lit;)V	a	handleLogin
 METHOD	ia	(Lic;)V	a	handlePickupSpawn
 METHOD	ia	(Llx;)V	a	handleVehicleSpawn
@@ -2475,7 +2475,7 @@ METHOD	ia	(Lot;)V	a	handleMultiBlockChange
 METHOD	ia	(Lch;)V	a	handleMapChunk
 METHOD	ia	(Lmv;)V	a	handleBlockChange
 METHOD	ia	(Lqg;)V	a	handleKickDisconnect
-METHOD	ia	(Ljava/lang/String;)V	a	handleErrorMessage
+METHOD	ia	(Ljava/lang/String;)V	a	bindTextureByName
 METHOD	ia	(Lgj;)V	a	addToSendQueue
 METHOD	ia	(Lbu;)V	a	handleCollect
 METHOD	ia	(Lep;)V	a	handleBlockItemSwitch
@@ -2483,7 +2483,7 @@ METHOD	ia	(Ljq;)V	a	handleChat
 METHOD	ia	(Lih;)V	a	handleArmAnimation
 METHOD	ia	(Lmr;)V	a	handleAddToInventory
 METHOD	ia	(Lhv;)V	a	handleHandshake
-METHOD	ia	()V	b	func_849_b
+METHOD	ia	()V	b	closeMinecraft
 METHOD	ia	(Lfu;)V	a	handleMobSpawn
 METHOD	ia	(Lej;)V	a	handleUpdateTime
 METHOD	ia	(Lp;)V	a	handlePlayerInventory
@@ -2508,7 +2508,7 @@ FIELD	ic	I	i	count
 METHOD	ic	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	ic	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	ic	(Lmm;)V	a	func_323_a
-METHOD	ic	()I	a	func_329_a
+METHOD	ic	()I	a	getHash
 CLASS	id	ImageBuffer
 CLASS	ie	ChunkCoordinates
 FIELD	ie	I	a	field_1518_a
@@ -2519,13 +2519,13 @@ CLASS	if	BlockCrops
 METHOD	if	(I)Z	b	canThisPlantGrowOnThisBlockID
 METHOD	if	(Lcx;IIILjava/util/Random;)V	a	updateTick
 METHOD	if	(Lcx;III)F	i	func_270_i
-METHOD	if	(II)I	a	getBlockTextureFromSideAndMetadata
+METHOD	if	(II)I	a	averageColor
 METHOD	if	()I	g	getRenderType
 METHOD	if	(Lcx;IIII)V	b	onBlockDestroyedByPlayer
 METHOD	if	(ILjava/util/Random;)I	a	idDropped
 METHOD	if	(Ljava/util/Random;)I	a	quantityDropped
 CLASS	ig	BlockIce
-METHOD	ig	()I	c	func_234_g
+METHOD	ig	()I	c	getItemStackLimit
 METHOD	ig	(Lpi;IIII)Z	b	isSideInsideCoordinate
 METHOD	ig	(Lcx;III)V	b	onBlockRemoval
 METHOD	ig	(Ljava/util/Random;)I	a	quantityDropped
@@ -2536,7 +2536,7 @@ FIELD	ih	I	b	animate
 METHOD	ih	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	ih	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	ih	(Lmm;)V	a	func_323_a
-METHOD	ih	()I	a	func_329_a
+METHOD	ih	()I	a	getHash
 CLASS	ii	ModelQuadraped
 FIELD	ii	Ljz;	d	field_1266_d
 FIELD	ii	Ljz;	e	field_1265_e
@@ -2545,13 +2545,13 @@ FIELD	ii	Ljz;	g	field_1263_g
 FIELD	ii	Ljz;	h	field_1262_h
 FIELD	ii	Ljz;	i	field_1261_i
 METHOD	ii	(FFFFFF)V	b	func_864_b
-METHOD	ii	(FFFFFF)V	a	func_863_a
+METHOD	ii	(FFFFFF)V	a	setBlockBounds
 CLASS	ij	ModelSlime
 FIELD	ij	Ljz;	a	field_1258_a
 FIELD	ij	Ljz;	b	field_1257_b
 FIELD	ij	Ljz;	c	field_1260_c
 FIELD	ij	Ljz;	d	field_1259_d
-METHOD	ij	(FFFFFF)V	a	func_863_a
+METHOD	ij	(FFFFFF)V	a	setBlockBounds
 METHOD	ij	(FFFFFF)V	b	func_864_b
 CLASS	ik	BlockLeavesBase
 FIELD	ik	Z	a	graphicsLevel
@@ -2560,7 +2560,7 @@ METHOD	ik	(Lpi;IIII)Z	b	isSideInsideCoordinate
 CLASS	il	ModelMinecart
 FIELD	il	[Ljz;	a	field_1256_a
 METHOD	il	(FFFFFF)V	b	func_864_b
-METHOD	il	(FFFFFF)V	a	func_863_a
+METHOD	il	(FFFFFF)V	a	setBlockBounds
 CLASS	im	MusInputStream
 FIELD	im	I	c	hash
 FIELD	im	Ljava/io/InputStream;	d	inputStream
@@ -2571,7 +2571,7 @@ METHOD	im	([BII)I	read	read
 CLASS	in	Packet39
 FIELD	in	I	a	field_6365_a
 FIELD	in	I	b	field_6364_b
-METHOD	in	()I	a	func_329_a
+METHOD	in	()I	a	getHash
 METHOD	in	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	in	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	in	(Lmm;)V	a	func_323_a
@@ -2585,11 +2585,11 @@ METHOD	ip	()B	a	getType
 METHOD	ip	(Ljava/lang/String;Lfc;)V	a	func_762_a
 METHOD	ip	(Ljava/lang/String;B)V	a	func_761_a
 METHOD	ip	(Ljava/lang/String;S)V	a	func_749_a
-METHOD	ip	(Ljava/lang/String;I)V	a	func_758_a
+METHOD	ip	(Ljava/lang/String;I)V	a	func_6258_a
 METHOD	ip	(Ljava/lang/String;J)V	a	func_750_a
 METHOD	ip	(Ljava/lang/String;F)V	a	func_744_a
 METHOD	ip	(Ljava/lang/String;D)V	a	func_765_a
-METHOD	ip	(Ljava/lang/String;Ljava/lang/String;)V	a	func_754_a
+METHOD	ip	(Ljava/lang/String;Ljava/lang/String;)V	a	func_140_a
 METHOD	ip	(Ljava/lang/String;[B)V	a	func_747_a
 METHOD	ip	(Ljava/lang/String;Lip;)V	a	func_763_a
 METHOD	ip	(Ljava/lang/String;Z)V	a	func_748_a
@@ -2608,7 +2608,7 @@ METHOD	ip	(Ljava/lang/String;)Z	m	func_760_m
 METHOD	ip	()Ljava/lang/String;	toString	toString
 CLASS	iq	BlockStationary
 METHOD	iq	(Lcx;IIII)V	a	onNeighborBlockChange
-METHOD	iq	(Lcx;III)V	j	func_9272_j
+METHOD	iq	(Lcx;III)V	j	func_287_j
 METHOD	iq	(Lcx;IIILjava/util/Random;)V	a	updateTick
 METHOD	iq	(Lcx;III)Z	k	func_301_k
 CLASS	ir	Tessellator
@@ -2640,22 +2640,22 @@ FIELD	ir	Ljava/nio/IntBuffer;	y	vertexBuffers
 FIELD	ir	I	z	vboIndex
 FIELD	ir	I	A	vboCount
 FIELD	ir	I	B	bufferSize
-METHOD	ir	()V	a	func_982_a
-METHOD	ir	()V	d	func_985_d
-METHOD	ir	()V	b	func_977_b
-METHOD	ir	(I)V	a	func_992_a
+METHOD	ir	()V	a	clearBoundingBoxPool
+METHOD	ir	()V	d	handleInput
+METHOD	ir	()V	b	closeMinecraft
+METHOD	ir	(I)V	a	changeCurrentItem
 METHOD	ir	(DD)V	a	func_981_a
-METHOD	ir	(FFF)V	a	func_987_a
+METHOD	ir	(FFF)V	a	func_351_a
 METHOD	ir	(FFFF)V	a	func_986_a
-METHOD	ir	(III)V	a	func_979_a
-METHOD	ir	(IIII)V	a	func_978_a
+METHOD	ir	(III)V	a	mouseClicked
+METHOD	ir	(IIII)V	a	setNibble
 METHOD	ir	(DDDDD)V	a	func_983_a
-METHOD	ir	(DDD)V	a	func_991_a
-METHOD	ir	(I)V	b	func_990_b
-METHOD	ir	(II)V	a	func_6513_a
-METHOD	ir	()V	c	func_989_c
+METHOD	ir	(DDD)V	a	setVelocity
+METHOD	ir	(I)V	b	drawBackground
+METHOD	ir	(II)V	a	resize
+METHOD	ir	()V	c	updateDelay
 METHOD	ir	(FFF)V	b	func_980_b
-METHOD	ir	(DDD)V	b	func_984_b
+METHOD	ir	(DDD)V	b	setPosition
 METHOD	ir	(FFF)V	c	func_988_c
 CLASS	is	BlockSlowSand
 METHOD	is	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
@@ -2669,49 +2669,49 @@ FIELD	it	B	e	field_4073_e
 METHOD	it	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	it	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	it	(Lmm;)V	a	func_323_a
-METHOD	it	()I	a	func_329_a
+METHOD	it	()I	a	getHash
 CLASS	iu	PlayerController
 FIELD	iu	Lnet/minecraft/client/Minecraft;	a	mc
 FIELD	iu	Z	b	field_1064_b
-METHOD	iu	(Lcx;)V	a	func_717_a
-METHOD	iu	(IIII)V	a	func_719_a
+METHOD	iu	(Lcx;)V	a	registerWorld
+METHOD	iu	(IIII)V	a	setNibble
 METHOD	iu	(IIII)Z	b	func_729_b
 METHOD	iu	(IIII)V	c	func_6470_c
-METHOD	iu	()V	a	func_6468_a
-METHOD	iu	(F)V	a	func_6467_a
-METHOD	iu	()F	b	func_727_b
+METHOD	iu	()V	a	clearBoundingBoxPool
+METHOD	iu	(F)V	a	drawGuiContainerBackgroundLayer
+METHOD	iu	()F	b	func_1147_b
 METHOD	iu	(Lea;Lcx;Lfo;)Z	a	func_6471_a
-METHOD	iu	(Lea;)V	a	func_6476_a
-METHOD	iu	()V	c	func_6474_c
-METHOD	iu	()Z	d	func_6469_d
-METHOD	iu	(Lea;)V	b	func_6473_b
+METHOD	iu	(Lea;)V	a	onCraftGuiClosed
+METHOD	iu	()V	c	updateDelay
+METHOD	iu	()Z	d	isDaytime
+METHOD	iu	(Lea;)V	b	onCollideWithPlayer
 METHOD	iu	(Lea;Lcx;Lfo;IIII)Z	a	func_722_a
 METHOD	iu	(Lcx;)Lea;	b	func_4087_b
 METHOD	iu	(Lea;Llu;)V	a	func_6475_a
 METHOD	iu	(Lea;Llu;)V	b	func_6472_b
 CLASS	iv	RecipesFood
-METHOD	iv	(Lem;)V	a	func_976_a
+METHOD	iv	(Lem;)V	a	func_1051_a
 CLASS	iw	InventoryLargeChest
 FIELD	iw	Ljava/lang/String;	a	name
 FIELD	iw	Lhh;	b	upperChest
 FIELD	iw	Lhh;	c	lowerChest
-METHOD	iw	()I	c	getSizeInventory
+METHOD	iw	()I	c	getItemStackLimit
 METHOD	iw	()Ljava/lang/String;	d	getInvName
 METHOD	iw	(I)Lfo;	c	getStackInSlot
 METHOD	iw	(II)Lfo;	a	decrStackSize
 METHOD	iw	(ILfo;)V	a	setInventorySlotContents
 METHOD	iw	()I	o_	getInventoryStackLimit
-METHOD	iw	()V	h	onInventoryChanged
+METHOD	iw	()V	h	calculateInitialSkylight
 CLASS	ix	BlockButton
 METHOD	ix	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
-METHOD	ix	()I	d	tickRate
+METHOD	ix	()I	d	getMaxDamage
 METHOD	ix	()Z	a	allowsAttachment
-METHOD	ix	()Z	b	renderAsNormalBlock
+METHOD	ix	()Z	b	doesGuiPauseGame
 METHOD	ix	(Lcx;III)Z	a	canPlaceBlockAt
 METHOD	ix	(Lcx;IIII)V	d	onBlockPlaced
 METHOD	ix	(Lcx;III)V	e	onBlockAdded
 METHOD	ix	(Lcx;IIII)V	a	onNeighborBlockChange
-METHOD	ix	(Lcx;III)Z	h	func_305_h
+METHOD	ix	(Lcx;III)Z	h	checkIfAttachedToBlock
 METHOD	ix	(Lpi;III)V	a	setBlockBoundsBasedOnState
 METHOD	ix	(Lcx;IIILea;)V	b	onBlockClicked
 METHOD	ix	(Lcx;IIILea;)Z	a	blockActivated
@@ -2720,19 +2720,19 @@ METHOD	ix	(Lpi;IIII)Z	c	isPoweringTo
 METHOD	ix	(Lcx;IIII)Z	c	isIndirectlyPoweringTo
 METHOD	ix	()Z	e	canProvidePower
 METHOD	ix	(Lcx;IIILjava/util/Random;)V	a	updateTick
-METHOD	ix	()V	f	func_237_e
+METHOD	ix	()V	f	MarkDirty
 CLASS	iy	TexureWaterFlowFX
 FIELD	iy	[F	g	field_1138_g
 FIELD	iy	[F	h	field_1137_h
 FIELD	iy	[F	i	field_1136_i
 FIELD	iy	[F	j	field_1135_j
 FIELD	iy	I	k	field_1134_k
-METHOD	iy	()V	a	func_783_a
+METHOD	iy	()V	a	clearBoundingBoxPool
 CLASS	iz	BlockFlowing
 FIELD	iz	I	a	field_460_a
 FIELD	iz	[Z	b	field_459_b
 FIELD	iz	[I	c	field_461_c
-METHOD	iz	(Lcx;III)V	j	func_9271_j
+METHOD	iz	(Lcx;III)V	j	func_287_j
 METHOD	iz	(Lcx;IIILjava/util/Random;)V	a	updateTick
 METHOD	iz	(Lcx;IIII)V	g	func_299_g
 METHOD	iz	(Lcx;IIIII)I	a	func_300_a
@@ -2751,7 +2751,7 @@ METHOD	ja	(Lkq;DDDFF)V	a	func_153_a
 METHOD	ja	(Llu;DDDFF)V	a	doRender
 CLASS	jb	GuiCrafting
 FIELD	jb	Lfm;	j	field_979_j
-METHOD	jb	()V	h	onGuiClosed
+METHOD	jb	()V	h	calculateInitialSkylight
 METHOD	jb	()V	j	drawGuiContainerForegroundLayer
 METHOD	jb	(F)V	a	drawGuiContainerBackgroundLayer
 CLASS	jc	EntityPortalFX
@@ -2766,8 +2766,8 @@ CLASS	jd	BlockCactus
 METHOD	jd	(Lcx;IIILjava/util/Random;)V	a	updateTick
 METHOD	jd	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
 METHOD	jd	(Lcx;III)Lcn;	f	getSelectedBoundingBoxFromPool
-METHOD	jd	(I)I	a	getBlockTextureFromSide
-METHOD	jd	()Z	b	renderAsNormalBlock
+METHOD	jd	(I)I	a	generateDisplayLists
+METHOD	jd	()Z	b	doesGuiPauseGame
 METHOD	jd	()Z	a	allowsAttachment
 METHOD	jd	()I	g	getRenderType
 METHOD	jd	(Lcx;III)Z	a	canPlaceBlockAt
@@ -2783,18 +2783,18 @@ FIELD	jf	F	f	field_1071_f
 FIELD	jf	F	g	field_1070_g
 FIELD	jf	F	h	field_1069_h
 FIELD	jf	I	i	field_1068_i
-METHOD	jf	(Lea;)V	a	func_6476_a
+METHOD	jf	(Lea;)V	a	onCraftGuiClosed
 METHOD	jf	(IIII)Z	b	func_729_b
-METHOD	jf	(IIII)V	a	func_719_a
-METHOD	jf	()V	a	func_6468_a
+METHOD	jf	(IIII)V	a	setNibble
+METHOD	jf	()V	a	clearBoundingBoxPool
 METHOD	jf	(IIII)V	c	func_6470_c
-METHOD	jf	(F)V	a	func_6467_a
-METHOD	jf	()F	b	func_727_b
-METHOD	jf	(Lcx;)V	a	func_717_a
-METHOD	jf	()V	c	func_6474_c
+METHOD	jf	(F)V	a	drawGuiContainerBackgroundLayer
+METHOD	jf	()F	b	func_1147_b
+METHOD	jf	(Lcx;)V	a	registerWorld
+METHOD	jf	()V	c	updateDelay
 CLASS	jg	GuiDeleteWorld
-METHOD	jg	()V	j	func_585_j
-METHOD	jg	(I)V	c	func_584_c
+METHOD	jg	()V	j	drawGuiContainerForegroundLayer
+METHOD	jg	(I)V	c	func_432_b
 METHOD	jg	(ZI)V	a	deleteWorld
 CLASS	jh	TileEntity
 FIELD	jh	Ljava/util/Map;	a	nameToClassMap
@@ -2805,12 +2805,12 @@ FIELD	jh	I	g	yCoord
 FIELD	jh	I	h	zCoord
 METHOD	jh	(Ljava/lang/Class;Ljava/lang/String;)V	a	func_476_a
 METHOD	jh	(Lip;)V	a	readFromNBT
-METHOD	jh	(Lip;)V	b	writeToNBT
-METHOD	jh	()V	b	updateEntity
+METHOD	jh	(Lip;)V	b	readEntityFromNBT
+METHOD	jh	()V	b	closeMinecraft
 METHOD	jh	(Lip;)Ljh;	c	func_477_c
 METHOD	jh	()I	f	func_479_f
-METHOD	jh	()V	h	onInventoryChanged
-METHOD	jh	(DDD)D	a	func_480_a
+METHOD	jh	()V	h	calculateInitialSkylight
+METHOD	jh	(DDD)D	a	generateNoise
 METHOD	jh	()Lno;	g	func_478_g
 CLASS	ji	GuiFurnace
 FIELD	ji	Llr;	j	field_978_j
@@ -2820,13 +2820,13 @@ CLASS	jj	Packet9
 METHOD	jj	(Lmm;)V	a	func_323_a
 METHOD	jj	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	jj	(Ljava/io/DataOutputStream;)V	a	func_322_a
-METHOD	jj	()I	a	func_329_a
+METHOD	jj	()I	a	getHash
 CLASS	jk	GuiIngameMenu
 FIELD	jk	I	a	updateCounter2
 FIELD	jk	I	h	updateCounter
-METHOD	jk	()V	a	initGui
+METHOD	jk	()V	a	clearBoundingBoxPool
 METHOD	jk	(Lgg;)V	a	actionPerformed
-METHOD	jk	()V	g	updateScreen
+METHOD	jk	()V	g	setChunkModified
 METHOD	jk	(IIF)V	a	drawScreen
 CLASS	jl	TexturePackDefault
 FIELD	jl	I	e	field_6491_e
@@ -2838,14 +2838,14 @@ METHOD	jm	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
 METHOD	jm	()Z	a	allowsAttachment
 METHOD	jm	(Lcx;IIILao;Lao;)Lnv;	a	collisionRayTrace
 METHOD	jm	(Lpi;III)V	a	setBlockBoundsBasedOnState
-METHOD	jm	(II)I	a	getBlockTextureFromSideAndMetadata
-METHOD	jm	()Z	b	renderAsNormalBlock
+METHOD	jm	(II)I	a	averageColor
+METHOD	jm	()Z	b	doesGuiPauseGame
 METHOD	jm	()I	g	getRenderType
 METHOD	jm	(Ljava/util/Random;)I	a	quantityDropped
 METHOD	jm	(Lcx;III)Z	a	canPlaceBlockAt
 METHOD	jm	(Lcx;III)V	e	onBlockAdded
 METHOD	jm	(Lcx;IIII)V	a	onNeighborBlockChange
-METHOD	jm	(Lcx;III)V	h	func_4031_h
+METHOD	jm	(Lcx;III)V	h	setStateIfMobInteractsWithPlate
 CLASS	jn	EntitySlimeFX
 METHOD	jn	()I	l_	func_404_c
 METHOD	jn	(Lir;FFFFFF)V	a	func_406_a
@@ -2879,12 +2879,12 @@ FIELD	jp	Ljava/lang/String;	q	terminationReason
 FIELD	jp	I	r	timeSinceLastRead
 FIELD	jp	I	s	sendQueueByteLength
 FIELD	jp	I	t	chunkDataSendCounter
-METHOD	jp	(Lgj;)V	a	func_972_a
-METHOD	jp	()V	b	func_964_b
-METHOD	jp	()V	c	func_973_c
+METHOD	jp	(Lgj;)V	a	addToSendQueue
+METHOD	jp	()V	b	closeMinecraft
+METHOD	jp	()V	c	updateDelay
 METHOD	jp	(Ljava/lang/Exception;)V	a	func_970_a
-METHOD	jp	(Ljava/lang/String;)V	a	func_974_a
-METHOD	jp	()V	a	func_967_a
+METHOD	jp	(Ljava/lang/String;)V	a	bindTextureByName
+METHOD	jp	()V	a	clearBoundingBoxPool
 METHOD	jp	(Ljp;)Z	a	func_971_a
 METHOD	jp	(Ljp;)Z	b	func_968_b
 METHOD	jp	(Ljp;)V	c	func_966_c
@@ -2896,14 +2896,14 @@ FIELD	jq	Ljava/lang/String;	a	message
 METHOD	jq	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	jq	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	jq	(Lmm;)V	a	func_323_a
-METHOD	jq	()I	a	func_329_a
+METHOD	jq	()I	a	getHash
 CLASS	jr	WorldGenerator
-METHOD	jr	(DDD)V	a	func_517_a
+METHOD	jr	(DDD)V	a	setVelocity
 CLASS	js	PlayerControllerTest
-METHOD	js	(Lea;)V	b	func_6473_b
-METHOD	js	()Z	d	func_6469_d
-METHOD	js	(Lcx;)V	a	func_717_a
-METHOD	js	()V	c	func_6474_c
+METHOD	js	(Lea;)V	b	onCollideWithPlayer
+METHOD	js	()Z	d	isDaytime
+METHOD	js	(Lcx;)V	a	registerWorld
+METHOD	js	()V	c	updateDelay
 CLASS	jt	MapGenCavesHell
 METHOD	jt	(II[BDDD)V	a	func_4129_a
 METHOD	jt	(II[BDDDFFFIID)V	a	func_4128_a
@@ -2924,7 +2924,7 @@ METHOD	jx	()B	a	getType
 METHOD	jx	()Ljava/lang/String;	toString	toString
 CLASS	jy	RenderGhast
 METHOD	jy	(Lam;F)V	a	func_4014_a
-METHOD	jy	(Lhe;F)V	a	func_6330_a
+METHOD	jy	(Lhe;F)V	a	func_338_a
 CLASS	jz	ModelRenderer
 FIELD	jz	[Lev;	j	corners
 FIELD	jz	[Lna;	k	faces
@@ -2943,10 +2943,10 @@ FIELD	jz	Z	h	field_1403_h
 FIELD	jz	Z	i	field_1402_i
 METHOD	jz	(FFFIII)V	a	func_921_a
 METHOD	jz	(FFFIIIF)V	a	entityLimbDefine
-METHOD	jz	(FFF)V	a	func_925_a
-METHOD	jz	(F)V	a	func_922_a
-METHOD	jz	(F)V	b	func_926_b
-METHOD	jz	(F)V	c	func_924_c
+METHOD	jz	(FFF)V	a	func_351_a
+METHOD	jz	(F)V	a	drawGuiContainerBackgroundLayer
+METHOD	jz	(F)V	b	renderOverlays
+METHOD	jz	(F)V	c	fall
 CLASS	k	MobSpawnerHell
 CLASS	ka	EntityRenderer
 FIELD	ka	Lnet/minecraft/client/Minecraft;	h	mc
@@ -2964,21 +2964,21 @@ FIELD	ka	F	f	field_4269_f
 FIELD	ka	F	g	field_4268_g
 FIELD	ka	F	n	field_1382_n
 FIELD	ka	F	o	field_1381_o
-METHOD	ka	()V	a	func_911_a
-METHOD	ka	(F)V	a	func_910_a
-METHOD	ka	(F)F	d	func_914_d
+METHOD	ka	()V	a	clearBoundingBoxPool
+METHOD	ka	(F)V	a	drawGuiContainerBackgroundLayer
+METHOD	ka	(F)F	d	getSwingProgress
 METHOD	ka	(F)V	e	func_920_e
 METHOD	ka	(F)V	f	func_917_f
 METHOD	ka	(F)V	g	func_4138_g
-METHOD	ka	(FI)V	a	func_4139_a
+METHOD	ka	(FI)V	a	renderInsideOfBlock
 METHOD	ka	(FI)V	b	func_4135_b
-METHOD	ka	(F)V	b	func_4136_b
-METHOD	ka	(F)V	c	func_4134_c
-METHOD	ka	()V	c	func_916_c
-METHOD	ka	()V	b	func_905_b
+METHOD	ka	(F)V	b	renderOverlays
+METHOD	ka	(F)V	c	fall
+METHOD	ka	()V	c	updateDelay
+METHOD	ka	()V	b	closeMinecraft
 METHOD	ka	(F)V	h	func_4137_h
-METHOD	ka	(I)V	a	func_4140_a
-METHOD	ka	(FFFF)Ljava/nio/FloatBuffer;	a	func_908_a
+METHOD	ka	(I)V	a	changeCurrentItem
+METHOD	ka	(FFFF)Ljava/nio/FloatBuffer;	a	func_1156_a
 CLASS	kb	Timer
 FIELD	kb	F	a	ticksPerSecond
 FIELD	kb	D	f	lastHRTime
@@ -2989,11 +2989,11 @@ FIELD	kb	F	e	elapsedPartialTicks
 FIELD	kb	J	g	lastSyncSysClock
 FIELD	kb	J	h	lastSyncHRClock
 FIELD	kb	D	i	timeSyncAdjustment
-METHOD	kb	()V	a	updateTimer
+METHOD	kb	()V	a	clearBoundingBoxPool
 CLASS	kc	Packet33RelEntityMoveLook
 METHOD	kc	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	kc	(Ljava/io/DataOutputStream;)V	a	func_322_a
-METHOD	kc	()I	a	func_329_a
+METHOD	kc	()I	a	getHash
 CLASS	kd	KeyBinding
 FIELD	kd	Ljava/lang/String;	a	keyDescription
 FIELD	kd	I	b	keyCode
@@ -3006,11 +3006,11 @@ METHOD	kf	(Lfo;Lno;)F	a	getStrVsBlock
 METHOD	kf	(Lfo;Lhe;)V	a	hitEntity
 METHOD	kf	(Lfo;IIII)V	a	hitBlock
 METHOD	kf	(Llu;)I	a	getDamageVsEntity
-METHOD	kf	()Z	a	isFull3D
+METHOD	kf	()Z	a	allowsAttachment
 CLASS	kg	GuiConflictWarning
 FIELD	kg	I	a	updateCounter
-METHOD	kg	()V	g	updateScreen
-METHOD	kg	()V	a	initGui
+METHOD	kg	()V	g	setChunkModified
+METHOD	kg	()V	a	clearBoundingBoxPool
 METHOD	kg	(Lgg;)V	a	actionPerformed
 METHOD	kg	(IIF)V	a	drawScreen
 CLASS	kh	EntityDiggingFX
@@ -3040,13 +3040,13 @@ FIELD	ki	[D	f	field_4172_f
 FIELD	ki	[D	g	field_4171_g
 METHOD	ki	(II[B)V	a	func_4059_a
 METHOD	ki	(II[B)V	b	func_4058_b
-METHOD	ki	(II)Lgz;	b	provideChunk
+METHOD	ki	(II)Lgz;	b	getChunkFromBlockCoords
 METHOD	ki	([DIIIIII)[D	a	func_4057_a
-METHOD	ki	(II)Z	a	chunkExists
+METHOD	ki	(II)Z	a	canCoordinateBeSpawn
 METHOD	ki	(Lbd;II)V	a	populate
 METHOD	ki	(ZLps;)Z	a	saveChunks
-METHOD	ki	()Z	a	func_532_a
-METHOD	ki	()Z	b	func_536_b
+METHOD	ki	()Z	a	allowsAttachment
+METHOD	ki	()Z	b	doesGuiPauseGame
 CLASS	kj	NBTTagByte
 FIELD	kj	B	a	byteValue
 METHOD	kj	(Ljava/io/DataOutput;)V	a	writeTagContents
@@ -3057,18 +3057,18 @@ CLASS	kk	ScaledResolution
 FIELD	kk	I	b	scaledWidth
 FIELD	kk	I	c	scaledHeight
 FIELD	kk	I	a	scaleFactor
-METHOD	kk	()I	a	func_903_a
-METHOD	kk	()I	b	func_902_b
+METHOD	kk	()I	a	getHash
+METHOD	kk	()I	b	func_1088_b
 CLASS	kl	BlockLeaves
 FIELD	kl	I	b	baseIndexInPNG
 FIELD	kl	I	c	field_464_c
 METHOD	kl	(Lpi;III)I	b	colorMultiplier
 METHOD	kl	(Lcx;IIII)V	a	onNeighborBlockChange
 METHOD	kl	(Lcx;IIII)V	f	func_6361_f
-METHOD	kl	(Lcx;III)V	h	func_308_h
-METHOD	kl	(Lcx;IIII)I	g	func_6362_g
+METHOD	kl	(Lcx;III)V	h	setStateIfMobInteractsWithPlate
+METHOD	kl	(Lcx;IIII)I	g	getChanceToEncourageFire
 METHOD	kl	(Lcx;IIILjava/util/Random;)V	a	updateTick
-METHOD	kl	(Lcx;III)V	i	func_6360_i
+METHOD	kl	(Lcx;III)V	i	notifyWireNeighborsOfNeighborChange
 METHOD	kl	(Ljava/util/Random;)I	a	quantityDropped
 METHOD	kl	(ILjava/util/Random;)I	a	idDropped
 METHOD	kl	()Z	a	allowsAttachment
@@ -3079,7 +3079,7 @@ FIELD	km	Lbp;	a	parentScreen
 FIELD	km	Ljava/lang/String;	h	message1
 FIELD	km	Ljava/lang/String;	i	message2
 FIELD	km	I	j	worldNumber
-METHOD	km	()V	a	initGui
+METHOD	km	()V	a	clearBoundingBoxPool
 METHOD	km	(Lgg;)V	a	actionPerformed
 METHOD	km	(IIF)V	a	drawScreen
 CLASS	kn	EntityFlameFX
@@ -3094,13 +3094,13 @@ FIELD	ko	I	d	field_9322_d
 FIELD	ko	I	e	field_9321_e
 FIELD	ko	I	f	field_9320_f
 FIELD	ko	Lfk;	b	field_690_b
-METHOD	ko	(I)V	b	func_412_b
-METHOD	ko	(I)F	c	func_411_c
+METHOD	ko	(I)V	b	drawBackground
+METHOD	ko	(I)F	c	func_1049_c
 METHOD	ko	()V	e_	onUpdate
 METHOD	ko	()Z	k	func_410_i
 METHOD	ko	()Z	n_	canBeCollidedWith
 METHOD	ko	(Llu;I)Z	a	attackEntity
-METHOD	ko	(Lip;)V	a	writeEntityToNBT
+METHOD	ko	(Lip;)V	a	readFromNBT
 METHOD	ko	(Lip;)V	b	readEntityFromNBT
 CLASS	kp	NextTickListEntry
 FIELD	kp	J	f	nextTickEntryID
@@ -3120,7 +3120,7 @@ FIELD	kq	I	a	fuse
 METHOD	kq	()Z	n_	canBeCollidedWith
 METHOD	kq	()V	e_	onUpdate
 METHOD	kq	()V	k	func_409_i
-METHOD	kq	(Lip;)V	a	writeEntityToNBT
+METHOD	kq	(Lip;)V	a	readFromNBT
 METHOD	kq	(Lip;)V	b	readEntityFromNBT
 METHOD	kq	()F	i_	func_392_h_
 CLASS	kr	Explosion
@@ -3136,14 +3136,14 @@ FIELD	kt	F	c	field_9453_c
 FIELD	kt	F	d	field_9452_d
 FIELD	kt	Lbk;	e	field_1357_e
 METHOD	kt	(Lfo;)V	a	renderItem
-METHOD	kt	(F)V	a	renderItemInFirstPerson
+METHOD	kt	(F)V	a	drawGuiContainerBackgroundLayer
 METHOD	kt	(F)V	b	renderOverlays
 METHOD	kt	(FI)V	a	renderInsideOfBlock
-METHOD	kt	(F)V	c	renderWarpedTextureOverlay
+METHOD	kt	(F)V	c	fall
 METHOD	kt	(F)V	d	renderFireInFirstPerson
-METHOD	kt	()V	a	func_895_a
-METHOD	kt	()V	b	func_9449_b
-METHOD	kt	()V	c	func_9450_c
+METHOD	kt	()V	a	clearBoundingBoxPool
+METHOD	kt	()V	b	closeMinecraft
+METHOD	kt	()V	c	updateDelay
 CLASS	ku	Packet6SpawnPosition
 FIELD	ku	I	a	xPosition
 FIELD	ku	I	b	yPosition
@@ -3151,7 +3151,7 @@ FIELD	ku	I	c	zPosition
 METHOD	ku	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	ku	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	ku	(Lmm;)V	a	func_323_a
-METHOD	ku	()I	a	func_329_a
+METHOD	ku	()I	a	getHash
 CLASS	kv	IsoImageBuffer
 FIELD	kv	Ljava/awt/image/BufferedImage;	a	field_1348_a
 FIELD	kv	Lcx;	b	worldObj
@@ -3161,12 +3161,12 @@ FIELD	kv	Z	e	field_1352_e
 FIELD	kv	Z	f	field_1351_f
 FIELD	kv	I	g	field_1350_g
 FIELD	kv	Z	h	field_1349_h
-METHOD	kv	(II)V	a	func_889_a
+METHOD	kv	(II)V	a	resize
 METHOD	kv	(Lcx;II)V	a	func_888_a
 CLASS	kw	SignModel
 FIELD	kw	Ljz;	a	field_1346_a
 FIELD	kw	Ljz;	b	field_1345_b
-METHOD	kw	()V	a	func_887_a
+METHOD	kw	()V	a	clearBoundingBoxPool
 CLASS	kx	Packet34EntityTeleport
 FIELD	kx	I	a	entityId
 FIELD	kx	I	b	xPosition
@@ -3177,25 +3177,25 @@ FIELD	kx	B	f	pitch
 METHOD	kx	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	kx	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	kx	(Lmm;)V	a	func_323_a
-METHOD	kx	()I	a	func_329_a
+METHOD	kx	()I	a	getHash
 CLASS	ky	BlockReed
 METHOD	ky	(Lcx;IIILjava/util/Random;)V	a	updateTick
 METHOD	ky	(Lcx;III)Z	a	canPlaceBlockAt
 METHOD	ky	(Lcx;IIII)V	a	onNeighborBlockChange
-METHOD	ky	(Lcx;III)V	h	func_303_h
+METHOD	ky	(Lcx;III)V	h	setStateIfMobInteractsWithPlate
 METHOD	ky	(Lcx;III)Z	g	canBlockStay
 METHOD	ky	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
 METHOD	ky	(ILjava/util/Random;)I	a	idDropped
 METHOD	ky	()Z	a	allowsAttachment
-METHOD	ky	()Z	b	renderAsNormalBlock
+METHOD	ky	()Z	b	doesGuiPauseGame
 METHOD	ky	()I	g	getRenderType
 CLASS	kz	ItemSeeds
 FIELD	kz	I	a	field_318_a
 METHOD	kz	(Lfo;Lea;Lcx;IIII)Z	a	onItemUse
 CLASS	l	RenderHelper
 FIELD	l	Ljava/nio/FloatBuffer;	a	field_1695_a
-METHOD	l	()V	a	disableStandardItemLighting
-METHOD	l	()V	b	enableStandardItemLighting
+METHOD	l	()V	a	clearBoundingBoxPool
+METHOD	l	()V	b	closeMinecraft
 METHOD	l	(DDDD)Ljava/nio/FloatBuffer;	a	func_1157_a
 METHOD	l	(FFFF)Ljava/nio/FloatBuffer;	a	func_1156_a
 CLASS	la	ItemMinecart
@@ -3203,10 +3203,10 @@ FIELD	la	I	a	field_317_a
 METHOD	la	(Lfo;Lea;Lcx;IIII)Z	a	onItemUse
 CLASS	lb	BlockFluids
 METHOD	lb	(I)F	b	func_288_b
-METHOD	lb	(I)I	a	getBlockTextureFromSide
+METHOD	lb	(I)I	a	generateDisplayLists
 METHOD	lb	(Lcx;III)I	h	func_290_h
 METHOD	lb	(Lpi;III)I	c	func_289_b
-METHOD	lb	()Z	b	renderAsNormalBlock
+METHOD	lb	()Z	b	doesGuiPauseGame
 METHOD	lb	()Z	a	allowsAttachment
 METHOD	lb	(IZ)Z	a	canCollideCheck
 METHOD	lb	(Lpi;IIII)Z	b	isSideInsideCoordinate
@@ -3216,34 +3216,34 @@ METHOD	lb	(ILjava/util/Random;)I	a	idDropped
 METHOD	lb	(Ljava/util/Random;)I	a	quantityDropped
 METHOD	lb	(Lpi;III)Lao;	e	func_291_e
 METHOD	lb	(Lcx;IIILlu;Lao;)V	a	velocityToAddToEntity
-METHOD	lb	()I	d	tickRate
+METHOD	lb	()I	d	getMaxDamage
 METHOD	lb	(Lpi;III)F	d	getBlockBrightness
 METHOD	lb	(Lcx;IIILjava/util/Random;)V	a	updateTick
-METHOD	lb	()I	c	func_234_g
+METHOD	lb	()I	c	getItemStackLimit
 METHOD	lb	(Lcx;IIILjava/util/Random;)V	b	randomDisplayTick
 METHOD	lb	(Lpi;IIILha;)D	a	func_293_a
 METHOD	lb	(Lcx;III)V	e	onBlockAdded
 METHOD	lb	(Lcx;IIII)V	a	onNeighborBlockChange
 METHOD	lb	(Lcx;III)V	j	func_287_j
-METHOD	lb	(Lcx;III)V	i	func_292_i
+METHOD	lb	(Lcx;III)V	i	notifyWireNeighborsOfNeighborChange
 CLASS	lc	GuiSelectWorld
 FIELD	lc	Lbp;	a	parentScreen
 FIELD	lc	Ljava/lang/String;	h	screenTitle
 FIELD	lc	Z	i	selected
-METHOD	lc	()V	a	initGui
+METHOD	lc	()V	a	clearBoundingBoxPool
 METHOD	lc	(I)Ljava/lang/String;	d	getWorldName
-METHOD	lc	()V	j	func_585_j
+METHOD	lc	()V	j	drawGuiContainerForegroundLayer
 METHOD	lc	(Lgg;)V	a	actionPerformed
-METHOD	lc	(I)V	c	func_584_c
+METHOD	lc	(I)V	c	func_432_b
 METHOD	lc	(IIF)V	a	drawScreen
 CLASS	ld	ImageBufferDownload
 FIELD	ld	[I	a	field_1343_a
 FIELD	ld	I	b	field_1342_b
 FIELD	ld	I	c	field_1344_c
 METHOD	ld	(Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;	a	func_883_a
-METHOD	ld	(IIII)V	a	func_885_a
-METHOD	ld	(IIII)V	b	func_884_b
-METHOD	ld	(IIII)Z	c	func_886_c
+METHOD	ld	(IIII)V	a	setNibble
+METHOD	ld	(IIII)V	b	setBlockMetadataWithNotify
+METHOD	ld	(IIII)Z	c	setBlockMetadata
 CLASS	le	EnumMobType
 FIELD	le	Lle;	a	everything
 FIELD	le	Lle;	b	mobs
@@ -3259,7 +3259,7 @@ FIELD	lg	I	a	entityId
 METHOD	lg	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	lg	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	lg	(Lmm;)V	a	func_323_a
-METHOD	lg	()I	a	func_329_a
+METHOD	lg	()I	a	getHash
 CLASS	lh	BlockClay
 METHOD	lh	(ILjava/util/Random;)I	a	idDropped
 METHOD	lh	(Ljava/util/Random;)I	a	quantityDropped
@@ -3269,7 +3269,7 @@ METHOD	li	(Lfo;Lhe;)V	a	hitEntity
 CLASS	lj	Packet32EntityLook
 METHOD	lj	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	lj	(Ljava/io/DataOutputStream;)V	a	func_322_a
-METHOD	lj	()I	a	func_329_a
+METHOD	lj	()I	a	getHash
 CLASS	lk	ModelSpider
 FIELD	lk	Ljz;	a	field_1255_a
 FIELD	lk	Ljz;	b	field_1254_b
@@ -3283,15 +3283,15 @@ FIELD	lk	Ljz;	i	field_1247_i
 FIELD	lk	Ljz;	j	field_1246_j
 FIELD	lk	Ljz;	m	field_1245_m
 METHOD	lk	(FFFFFF)V	b	func_864_b
-METHOD	lk	(FFFFFF)V	a	func_863_a
+METHOD	lk	(FFFFFF)V	a	setBlockBounds
 CLASS	ll	TextureFlamesFX
 FIELD	ll	[F	g	field_1133_g
 FIELD	ll	[F	h	field_1132_h
-METHOD	ll	()V	a	func_783_a
+METHOD	ll	()V	a	clearBoundingBoxPool
 CLASS	lm	MaterialLiquid
-METHOD	lm	()Z	d	func_879_d
-METHOD	lm	()Z	c	func_880_c
-METHOD	lm	()Z	a	func_878_a
+METHOD	lm	()Z	d	isDaytime
+METHOD	lm	()Z	c	func_1039_c
+METHOD	lm	()Z	a	allowsAttachment
 CLASS	ln	WorldGenLightStone2
 METHOD	ln	(Lcx;Ljava/util/Random;III)Z	a	func_516_a
 CLASS	lo	Packet50PreChunk
@@ -3301,13 +3301,13 @@ FIELD	lo	Z	c	mode
 METHOD	lo	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	lo	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	lo	(Lmm;)V	a	func_323_a
-METHOD	lo	()I	a	func_329_a
+METHOD	lo	()I	a	getHash
 CLASS	lp	LogoEffectRandomizer
 FIELD	lp	D	a	field_1312_a
 FIELD	lp	D	b	field_1311_b
 FIELD	lp	D	c	field_1314_c
 FIELD	lp	Ldi;	d	mainMenu
-METHOD	lp	()V	a	func_875_a
+METHOD	lp	()V	a	clearBoundingBoxPool
 CLASS	lq	FontRenderer
 FIELD	lq	[I	b	field_1307_b
 FIELD	lq	I	a	field_1308_a
@@ -3322,42 +3322,42 @@ FIELD	lr	[Lfo;	a	furnaceItemStacks
 FIELD	lr	I	b	furnaceBurnTime
 FIELD	lr	I	c	currentItemBurnTime
 FIELD	lr	I	d	furnaceCookTime
-METHOD	lr	()I	c	getSizeInventory
+METHOD	lr	()I	c	getItemStackLimit
 METHOD	lr	(I)Lfo;	c	getStackInSlot
 METHOD	lr	(II)Lfo;	a	decrStackSize
 METHOD	lr	(ILfo;)V	a	setInventorySlotContents
 METHOD	lr	()Ljava/lang/String;	d	getInvName
 METHOD	lr	(Lip;)V	a	readFromNBT
-METHOD	lr	(Lip;)V	b	writeToNBT
+METHOD	lr	(Lip;)V	b	readEntityFromNBT
 METHOD	lr	()I	o_	getInventoryStackLimit
-METHOD	lr	(I)I	a	getCookProgressScaled
+METHOD	lr	(I)I	a	generateDisplayLists
 METHOD	lr	(I)I	b	getBurnTimeRemainingScaled
-METHOD	lr	()Z	a	isBurning
-METHOD	lr	()V	b	updateEntity
+METHOD	lr	()Z	a	allowsAttachment
+METHOD	lr	()V	b	closeMinecraft
 METHOD	lr	()Z	j	canSmelt
-METHOD	lr	()V	i	smeltItem
+METHOD	lr	()V	i	drawDefaultBackground
 METHOD	lr	(I)I	d	getSmeltingResultItem
-METHOD	lr	(Lfo;)I	a	getItemBurnTime
+METHOD	lr	(Lfo;)I	a	getIconIndex
 CLASS	ls	BlockRedstoneWire
 FIELD	ls	Z	a	wiresProvidePower
-METHOD	ls	(II)I	a	getBlockTextureFromSideAndMetadata
+METHOD	ls	(II)I	a	averageColor
 METHOD	ls	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
 METHOD	ls	()Z	a	allowsAttachment
-METHOD	ls	()Z	b	renderAsNormalBlock
+METHOD	ls	()Z	b	doesGuiPauseGame
 METHOD	ls	()I	g	getRenderType
 METHOD	ls	(Lcx;III)Z	a	canPlaceBlockAt
-METHOD	ls	(Lcx;III)V	h	updateAndPropagateCurrentStrength
+METHOD	ls	(Lcx;III)V	h	setStateIfMobInteractsWithPlate
 METHOD	ls	(Lcx;III)V	i	notifyWireNeighborsOfNeighborChange
 METHOD	ls	(Lcx;III)V	e	onBlockAdded
 METHOD	ls	(Lcx;III)V	b	onBlockRemoval
-METHOD	ls	(Lcx;IIII)I	g	getMaxCurrentStrength
+METHOD	ls	(Lcx;IIII)I	g	getChanceToEncourageFire
 METHOD	ls	(Lcx;IIII)V	a	onNeighborBlockChange
 METHOD	ls	(ILjava/util/Random;)I	a	idDropped
 METHOD	ls	(Lcx;IIII)Z	c	isIndirectlyPoweringTo
 METHOD	ls	(Lpi;IIII)Z	c	isPoweringTo
 METHOD	ls	()Z	e	canProvidePower
 METHOD	ls	(Lcx;IIILjava/util/Random;)V	b	randomDisplayTick
-METHOD	ls	(Lpi;III)Z	c	isPowerProviderOrWire
+METHOD	ls	(Lpi;III)Z	c	canBlockCatchFire
 CLASS	lt	EntityArrow
 FIELD	lt	I	c	field_9319_c
 FIELD	lt	I	d	field_9318_d
@@ -3368,9 +3368,9 @@ FIELD	lt	I	a	arrowShake
 FIELD	lt	Lhe;	b	field_682_g
 FIELD	lt	I	h	field_681_h
 FIELD	lt	I	i	field_680_i
-METHOD	lt	(DDDFF)V	a	func_408_a
+METHOD	lt	(DDDFF)V	a	func_4042_a
 METHOD	lt	()V	e_	onUpdate
-METHOD	lt	(Lip;)V	a	writeEntityToNBT
+METHOD	lt	(Lip;)V	a	readFromNBT
 METHOD	lt	(Lip;)V	b	readEntityFromNBT
 METHOD	lt	(Lea;)V	b	onCollideWithPlayer
 METHOD	lt	()F	i_	func_392_h_
@@ -3458,7 +3458,7 @@ METHOD	lu	(DDD)V	d	moveEntity
 METHOD	lu	(DZ)V	a	func_9279_a
 METHOD	lu	()Z	p	func_381_o
 METHOD	lu	()Lcn;	e	func_372_f_
-METHOD	lu	(I)V	a	func_355_a
+METHOD	lu	(I)V	a	changeCurrentItem
 METHOD	lu	(F)V	c	fall
 METHOD	lu	()Z	h_	handleWaterMovement
 METHOD	lu	(Lha;)Z	a	isInsideOfMaterial
@@ -3466,7 +3466,7 @@ METHOD	lu	()F	v	func_373_s
 METHOD	lu	()Z	L	func_359_G
 METHOD	lu	(FFF)V	a	func_351_a
 METHOD	lu	(F)F	a	getEntityBrightness
-METHOD	lu	(Lcx;)V	a	setWorld
+METHOD	lu	(Lcx;)V	a	registerWorld
 METHOD	lu	(DDDFF)V	b	setPositionAndRotation
 METHOD	lu	(DDDFF)V	c	setLocationAndAngles
 METHOD	lu	(Llu;)F	e	getDistanceToEntity
@@ -3481,12 +3481,12 @@ METHOD	lu	(Llu;I)Z	a	attackEntity
 METHOD	lu	()Z	n_	canBeCollidedWith
 METHOD	lu	()Z	d_	canBePushed
 METHOD	lu	(Llu;I)V	c	addToPlayerScore
-METHOD	lu	(Lao;)Z	a	func_390_a
+METHOD	lu	(Lao;)Z	a	isVecInside
 METHOD	lu	(D)Z	a	func_384_a
 METHOD	lu	()Ljava/lang/String;	A	func_6376_z
 METHOD	lu	(Lip;)Z	c	func_358_c
 METHOD	lu	(Lip;)V	d	writeToNBT
-METHOD	lu	(Lip;)V	e	readFromNBT
+METHOD	lu	(Lip;)V	e	readFromNBT_e
 METHOD	lu	()Ljava/lang/String;	N	getEntityString
 METHOD	lu	([D)Llw;	a	func_375_a
 METHOD	lu	([F)Llw;	a	func_377_a
@@ -3505,13 +3505,13 @@ METHOD	lu	(Llu;)V	h	mountEntity
 METHOD	lu	(DDDFFI)V	a	setPositionAndRotation2
 METHOD	lu	()F	k_	func_4035_j_
 METHOD	lu	()Lao;	I	func_4037_H
-METHOD	lu	()V	q	func_4039_q
+METHOD	lu	()V	q	loadScreen
 METHOD	lu	(DDD)V	a	setVelocity
 METHOD	lu	(B)V	a	func_9282_a
-METHOD	lu	()V	g	func_9280_g
+METHOD	lu	()V	g	setChunkModified
 CLASS	lv	MapGenCaves
-METHOD	lv	(II[BDDD)V	a	func_870_a
-METHOD	lv	(II[BDDDFFFIID)V	a	func_869_a
+METHOD	lv	(II[BDDD)V	a	func_4129_a
+METHOD	lv	(II[BDDDFFFIID)V	a	func_4128_a
 METHOD	lv	(Lcx;IIII[B)V	a	func_868_a
 CLASS	lw	NBTTagList
 FIELD	lw	Ljava/util/List;	a	tagList
@@ -3522,7 +3522,7 @@ METHOD	lw	()B	a	getType
 METHOD	lw	()Ljava/lang/String;	toString	toString
 METHOD	lw	(Lfc;)V	a	setTag
 METHOD	lw	(I)Lfc;	a	tagAt
-METHOD	lw	()I	c	tagCount
+METHOD	lw	()I	c	getItemStackLimit
 CLASS	lx	Packet23VehicleSpawn
 FIELD	lx	I	a	entityId
 FIELD	lx	I	b	xPosition
@@ -3532,21 +3532,21 @@ FIELD	lx	I	e	type
 METHOD	lx	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	lx	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	lx	(Lmm;)V	a	func_323_a
-METHOD	lx	()I	a	func_329_a
+METHOD	lx	()I	a	getHash
 CLASS	ly	Frustrum
 FIELD	ly	Lcb;	a	field_593_a
 FIELD	ly	D	b	field_592_b
 FIELD	ly	D	c	field_595_c
 FIELD	ly	D	d	field_594_d
-METHOD	ly	(DDD)V	a	func_343_a
-METHOD	ly	(DDDDDD)Z	a	func_344_a
-METHOD	ly	(Lcn;)Z	a	func_342_a
+METHOD	ly	(DDD)V	a	setVelocity
+METHOD	ly	(DDDDDD)Z	a	func_1152_a
+METHOD	ly	(Lcn;)Z	a	intersectsWith
 CLASS	lz	BlockStairs
 FIELD	lz	Lno;	a	field_452_a
 METHOD	lz	(Lpi;III)V	a	setBlockBoundsBasedOnState
 METHOD	lz	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
 METHOD	lz	()Z	a	allowsAttachment
-METHOD	lz	()Z	b	renderAsNormalBlock
+METHOD	lz	()Z	b	doesGuiPauseGame
 METHOD	lz	()I	g	getRenderType
 METHOD	lz	(Lpi;IIII)Z	b	isSideInsideCoordinate
 METHOD	lz	(Lcx;IIILcn;Ljava/util/ArrayList;)V	a	getCollidingBoundingBoxes
@@ -3554,14 +3554,14 @@ METHOD	lz	(Lcx;IIILjava/util/Random;)V	b	randomDisplayTick
 METHOD	lz	(Lcx;IIILea;)V	b	onBlockClicked
 METHOD	lz	(Lcx;IIII)V	b	onBlockDestroyedByPlayer
 METHOD	lz	(Lpi;III)F	d	getBlockBrightness
-METHOD	lz	(Llu;)F	a	func_227_a
-METHOD	lz	()I	c	func_234_g
+METHOD	lz	(Llu;)F	a	func_1202_a
+METHOD	lz	()I	c	getItemStackLimit
 METHOD	lz	(ILjava/util/Random;)I	a	idDropped
 METHOD	lz	(Ljava/util/Random;)I	a	quantityDropped
-METHOD	lz	(II)I	a	getBlockTextureFromSideAndMetadata
-METHOD	lz	(I)I	a	getBlockTextureFromSide
+METHOD	lz	(II)I	a	averageColor
+METHOD	lz	(I)I	a	generateDisplayLists
 METHOD	lz	(Lpi;IIII)I	a	getBlockTexture
-METHOD	lz	()I	d	tickRate
+METHOD	lz	()I	d	getMaxDamage
 METHOD	lz	(Lcx;III)Lcn;	f	getSelectedBoundingBoxFromPool
 METHOD	lz	(Lcx;IIILlu;Lao;)V	a	velocityToAddToEntity
 METHOD	lz	()Z	h	isCollidable
@@ -3587,12 +3587,12 @@ FIELD	ma	I	d	field_1303_d
 FIELD	ma	I	e	field_1302_e
 FIELD	ma	I	f	field_1301_f
 FIELD	ma	I	g	field_1300_g
-METHOD	ma	(Lcx;)V	a	func_4127_a
-METHOD	ma	(IIIIII)Z	a	func_866_a
+METHOD	ma	(Lcx;)V	a	registerWorld
+METHOD	ma	(IIIIII)Z	a	checkChunksExist
 CLASS	mb	Packet31RelEntityMove
 METHOD	mb	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	mb	(Ljava/io/DataOutputStream;)V	a	func_322_a
-METHOD	mb	()I	a	func_329_a
+METHOD	mb	()I	a	getHash
 CLASS	mc	ChatLine
 FIELD	mc	Ljava/lang/String;	a	message
 FIELD	mc	I	b	updateCounter
@@ -3613,10 +3613,10 @@ CLASS	mh	BlockFurnace
 FIELD	mh	Z	a	field_456_a
 METHOD	mh	(ILjava/util/Random;)I	a	idDropped
 METHOD	mh	(Lcx;III)V	e	onBlockAdded
-METHOD	mh	(Lcx;III)V	h	func_284_h
+METHOD	mh	(Lcx;III)V	h	setStateIfMobInteractsWithPlate
 METHOD	mh	(Lpi;IIII)I	a	getBlockTexture
 METHOD	mh	(Lcx;IIILjava/util/Random;)V	b	randomDisplayTick
-METHOD	mh	(I)I	a	getBlockTextureFromSide
+METHOD	mh	(I)I	a	generateDisplayLists
 METHOD	mh	(Lcx;IIILea;)Z	a	blockActivated
 METHOD	mh	(ZLcx;III)V	a	updateFurnaceBlockState
 METHOD	mh	()Ljh;	a_	SetBlockEntity
@@ -3631,7 +3631,7 @@ FIELD	mi	Ljz;	f	field_1292_f
 FIELD	mi	Ljz;	g	field_1291_g
 FIELD	mi	Ljz;	h	field_1290_h
 METHOD	mi	(FFFFFF)V	b	func_864_b
-METHOD	mi	(FFFFFF)V	a	func_863_a
+METHOD	mi	(FFFFFF)V	a	setBlockBounds
 CLASS	mj	MobSpawnerSwamp
 CLASS	mk	RenderList
 FIELD	mk	I	a	field_1242_a
@@ -3644,10 +3644,10 @@ FIELD	mk	Ljava/nio/IntBuffer;	g	field_1236_g
 FIELD	mk	Z	h	field_1235_h
 FIELD	mk	Z	i	field_1234_i
 METHOD	mk	(IIIDDD)V	a	func_861_a
-METHOD	mk	(III)Z	a	func_862_a
-METHOD	mk	(I)V	a	func_858_a
-METHOD	mk	()V	a	func_860_a
-METHOD	mk	()V	b	func_859_b
+METHOD	mk	(III)Z	a	func_784_a
+METHOD	mk	(I)V	a	changeCurrentItem
+METHOD	mk	()V	a	clearBoundingBoxPool
+METHOD	mk	()V	b	closeMinecraft
 CLASS	ml	RenderManager
 FIELD	ml	Ljava/util/Map;	o	entityRenderMap
 FIELD	ml	Lml;	a	instance
@@ -3668,15 +3668,15 @@ FIELD	ml	D	n	field_1220_n
 METHOD	ml	(Ljava/lang/Class;)Laq;	a	func_4117_a
 METHOD	ml	(Llu;)Laq;	a	func_855_a
 METHOD	ml	(Lcx;Lft;Llq;Lea;Lgp;F)V	a	func_857_a
-METHOD	ml	(Llu;F)V	a	func_854_a
-METHOD	ml	(Llu;DDDFF)V	a	func_853_a
-METHOD	ml	(Lcx;)V	a	func_852_a
-METHOD	ml	(DDD)D	a	func_851_a
+METHOD	ml	(Llu;F)V	a	func_1189_a
+METHOD	ml	(Llu;DDDFF)V	a	doRender
+METHOD	ml	(Lcx;)V	a	registerWorld
+METHOD	ml	(DDD)D	a	generateNoise
 METHOD	ml	()Llq;	a	getFontRenderer
 CLASS	mm	NetHandler
 METHOD	mm	(Lch;)V	a	handleMapChunk
 METHOD	mm	(Lgj;)V	b	func_4114_b
-METHOD	mm	(Ljava/lang/String;)V	a	handleErrorMessage
+METHOD	mm	(Ljava/lang/String;)V	a	bindTextureByName
 METHOD	mm	(Lqg;)V	a	handleKickDisconnect
 METHOD	mm	(Lit;)V	a	handleLogin
 METHOD	mm	(Lez;)V	a	handleFlying
@@ -3727,7 +3727,7 @@ METHOD	mn	()V	o	func_6420_o
 METHOD	mn	()V	P	func_4056_N
 METHOD	mn	()V	Q	func_9375_Q
 METHOD	mn	(Len;)V	a	func_446_a
-METHOD	mn	(Ljava/lang/String;)V	a	func_461_a
+METHOD	mn	(Ljava/lang/String;)V	a	bindTextureByName
 METHOD	mn	()V	z	func_457_w
 METHOD	mn	()V	r	func_9367_r
 CLASS	mo	ThreadDownloadImage
@@ -3753,7 +3753,7 @@ FIELD	mr	I	c	durability
 METHOD	mr	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	mr	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	mr	(Lmm;)V	a	func_323_a
-METHOD	mr	()I	a	func_329_a
+METHOD	mr	()I	a	getHash
 CLASS	ms	ChunkLoader
 FIELD	ms	Ljava/io/File;	a	saveDir
 FIELD	ms	Z	b	createIfNecessary
@@ -3762,12 +3762,12 @@ METHOD	ms	(Lcx;II)Lgz;	a	loadChunk
 METHOD	ms	(Lcx;Lgz;)V	a	saveChunk
 METHOD	ms	(Lgz;Lcx;Lip;)V	a	storeChunkInCompound
 METHOD	ms	(Lcx;Lip;)Lgz;	a	loadChunkIntoWorldFromCompound
-METHOD	ms	()V	a	func_814_a
-METHOD	ms	()V	b	saveExtraData
+METHOD	ms	()V	a	clearBoundingBoxPool
+METHOD	ms	()V	b	closeMinecraft
 METHOD	ms	(Lcx;Lgz;)V	b	saveExtraChunkData
 CLASS	mt	RecipesIngots
 FIELD	mt	[[Ljava/lang/Object;	a	field_1198_a
-METHOD	mt	(Lem;)V	a	func_810_a
+METHOD	mt	(Lem;)V	a	func_1051_a
 CLASS	mu	ItemRecord
 FIELD	mu	Ljava/lang/String;	a	recordName
 METHOD	mu	(Lfo;Lea;Lcx;IIII)Z	a	onItemUse
@@ -3780,7 +3780,7 @@ FIELD	mv	I	e	metadata
 METHOD	mv	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	mv	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	mv	(Lmm;)V	a	func_323_a
-METHOD	mv	()I	a	func_329_a
+METHOD	mv	()I	a	getHash
 CLASS	mw	ThreadRunIsoClient
 FIELD	mw	Lah;	a	field_1197_a
 METHOD	mw	()V	run	run
@@ -3792,7 +3792,7 @@ FIELD	my	I	c	field_1124_c
 FIELD	my	Lnc;	d	field_1123_d
 METHOD	my	()I	e	getSlotStackLimit
 METHOD	my	(Lfo;)Z	a	isItemValid
-METHOD	my	()I	c	func_775_c
+METHOD	my	()I	c	getItemStackLimit
 CLASS	mz	Gui
 FIELD	mz	F	k	zLevel
 METHOD	mz	(IIIII)V	a	drawRect
@@ -3807,12 +3807,12 @@ FIELD	n	Ljava/nio/FloatBuffer;	g	field_1692_g
 FIELD	n	Ljava/nio/FloatBuffer;	h	field_1691_h
 METHOD	n	()Lcb;	a	func_1155_a
 METHOD	n	([[FI)V	a	func_1154_a
-METHOD	n	()V	b	func_1153_b
+METHOD	n	()V	b	closeMinecraft
 CLASS	na	TexturedQuad
 FIELD	na	[Lev;	a	field_1195_a
 FIELD	na	I	b	field_1194_b
 FIELD	na	Z	c	field_1196_c
-METHOD	na	()V	a	func_809_a
+METHOD	na	()V	a	clearBoundingBoxPool
 METHOD	na	(Lir;F)V	a	func_808_a
 CLASS	nb	OsMap
 FIELD	nb	[I	a	field_1193_a
@@ -3826,7 +3826,7 @@ METHOD	nc	(F)V	a	drawGuiContainerBackgroundLayer
 CLASS	nd	NoiseGeneratorOctaves
 FIELD	nd	[Lz;	a	field_1192_a
 FIELD	nd	I	b	field_1191_b
-METHOD	nd	(DD)D	a	func_806_a
+METHOD	nd	(DD)D	a	abs_max
 METHOD	nd	([DDDDIIIDDD)[D	a	func_807_a
 METHOD	nd	([DIIIIDDD)[D	a	func_4109_a
 CLASS	ne	NoiseGeneratorOctaves2
@@ -3845,7 +3845,7 @@ FIELD	nf	Z	g	rotating
 METHOD	nf	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	nf	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	nf	(Lmm;)V	a	func_323_a
-METHOD	nf	()I	a	func_329_a
+METHOD	nf	()I	a	getHash
 CLASS	ng	BlockSign
 FIELD	ng	Ljava/lang/Class;	a	signEntityClass
 FIELD	ng	Z	b	isFreestanding
@@ -3853,7 +3853,7 @@ METHOD	ng	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
 METHOD	ng	(Lcx;III)Lcn;	f	getSelectedBoundingBoxFromPool
 METHOD	ng	(Lpi;III)V	a	setBlockBoundsBasedOnState
 METHOD	ng	()I	g	getRenderType
-METHOD	ng	()Z	b	renderAsNormalBlock
+METHOD	ng	()Z	b	doesGuiPauseGame
 METHOD	ng	()Z	a	allowsAttachment
 METHOD	ng	()Ljh;	a_	SetBlockEntity
 METHOD	ng	(ILjava/util/Random;)I	a	idDropped
@@ -3873,7 +3873,7 @@ FIELD	ni	[I	e	field_1184_e
 FIELD	ni	[I	f	field_1183_f
 FIELD	ni	[I	g	field_1182_g
 METHOD	ni	(Lkv;)V	a	func_799_a
-METHOD	ni	()V	a	func_800_a
+METHOD	ni	()V	a	clearBoundingBoxPool
 CLASS	nj	GuiIngame
 FIELD	nj	Laf;	d	itemRenderer
 FIELD	nj	Ljava/util/List;	e	chatMessageList
@@ -3886,19 +3886,19 @@ FIELD	nj	I	j	field_9419_j
 FIELD	nj	F	b	field_6446_b
 FIELD	nj	F	c	field_931_c
 METHOD	nj	(FZII)V	a	renderGameOverlay
-METHOD	nj	(II)V	a	func_4063_a
+METHOD	nj	(II)V	a	resize
 METHOD	nj	(FII)V	a	func_4064_a
 METHOD	nj	(FII)V	b	func_4065_b
 METHOD	nj	(IIIF)V	a	func_554_a
-METHOD	nj	()V	a	func_555_a
-METHOD	nj	(Ljava/lang/String;)V	a	func_552_a
-METHOD	nj	(Ljava/lang/String;)V	b	func_553_b
+METHOD	nj	()V	a	clearBoundingBoxPool
+METHOD	nj	(Ljava/lang/String;)V	a	bindTextureByName
+METHOD	nj	(Ljava/lang/String;)V	b	releaseImageData
 CLASS	nk	GuiControls
 FIELD	nk	Lbp;	h	parentScreen
 FIELD	nk	Ljava/lang/String;	a	screenTitle
 FIELD	nk	Lgp;	i	options
 FIELD	nk	I	j	buttonId
-METHOD	nk	()V	a	initGui
+METHOD	nk	()V	a	clearBoundingBoxPool
 METHOD	nk	(Lgg;)V	a	actionPerformed
 METHOD	nk	(CI)V	a	keyTyped
 METHOD	nk	(IIF)V	a	drawScreen
@@ -3908,9 +3908,9 @@ FIELD	nl	F	b	field_1173_b
 FIELD	nl	Z	c	field_1177_c
 FIELD	nl	Z	d	field_1176_d
 FIELD	nl	Z	e	field_1175_e
-METHOD	nl	(Lea;)V	a	func_797_a
-METHOD	nl	()V	a	func_798_a
-METHOD	nl	(IZ)V	a	func_796_a
+METHOD	nl	(Lea;)V	a	onCraftGuiClosed
+METHOD	nl	()V	a	clearBoundingBoxPool
+METHOD	nl	(IZ)V	a	setCurrentItem
 CLASS	nm	Teleporter
 FIELD	nm	Ljava/util/Random;	a	field_4232_a
 METHOD	nm	(Lcx;Llu;)V	a	func_4107_a
@@ -4044,7 +4044,7 @@ METHOD	no	(I)Lno;	d	setLightOpacity
 METHOD	no	(F)Lno;	a	setLightValue
 METHOD	no	(F)Lno;	b	setResistance
 METHOD	no	()Z	i	unusedMethod
-METHOD	no	()Z	b	renderAsNormalBlock
+METHOD	no	()Z	b	doesGuiPauseGame
 METHOD	no	()I	g	getRenderType
 METHOD	no	(F)Lno;	c	setHardness
 METHOD	no	(Z)V	b	setTickOnLoad
@@ -4052,8 +4052,8 @@ METHOD	no	(FFFFFF)V	a	setBlockBounds
 METHOD	no	(Lpi;III)F	d	getBlockBrightness
 METHOD	no	(Lpi;IIII)Z	b	isSideInsideCoordinate
 METHOD	no	(Lpi;IIII)I	a	getBlockTexture
-METHOD	no	(II)I	a	getBlockTextureFromSideAndMetadata
-METHOD	no	(I)I	a	getBlockTextureFromSide
+METHOD	no	(II)I	a	averageColor
+METHOD	no	(I)I	a	generateDisplayLists
 METHOD	no	(Lcx;III)Lcn;	f	getSelectedBoundingBoxFromPool
 METHOD	no	(Lcx;IIILcn;Ljava/util/ArrayList;)V	a	getCollidingBoundingBoxes
 METHOD	no	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
@@ -4064,7 +4064,7 @@ METHOD	no	(Lcx;IIILjava/util/Random;)V	a	updateTick
 METHOD	no	(Lcx;IIILjava/util/Random;)V	b	randomDisplayTick
 METHOD	no	(Lcx;IIII)V	b	onBlockDestroyedByPlayer
 METHOD	no	(Lcx;IIII)V	a	onNeighborBlockChange
-METHOD	no	()I	d	tickRate
+METHOD	no	()I	d	getMaxDamage
 METHOD	no	(Lcx;III)V	e	onBlockAdded
 METHOD	no	(Lcx;III)V	b	onBlockRemoval
 METHOD	no	(Ljava/util/Random;)I	a	quantityDropped
@@ -4072,13 +4072,13 @@ METHOD	no	(ILjava/util/Random;)I	a	idDropped
 METHOD	no	(Lea;)F	a	func_225_a
 METHOD	no	(Lcx;IIII)V	b_	dropBlockAsItem
 METHOD	no	(Lcx;IIIIF)V	a	dropBlockAsItemWithChance
-METHOD	no	(Llu;)F	a	func_227_a
+METHOD	no	(Llu;)F	a	func_1202_a
 METHOD	no	(Lcx;IIILao;Lao;)Lnv;	a	collisionRayTrace
-METHOD	no	(Lao;)Z	a	isVecInsideYZBounds
-METHOD	no	(Lao;)Z	b	isVecInsideXZBounds
-METHOD	no	(Lao;)Z	c	isVecInsideXYBounds
+METHOD	no	(Lao;)Z	a	isVecInside
+METHOD	no	(Lao;)Z	b	isVecInYZ
+METHOD	no	(Lao;)Z	c	isVecInXZ
 METHOD	no	(Lcx;III)V	c	onBlockDestroyedByExplosion
-METHOD	no	()I	c	func_234_g
+METHOD	no	()I	c	getItemStackLimit
 METHOD	no	(Lcx;III)Z	a	canPlaceBlockAt
 METHOD	no	(Lcx;IIILea;)Z	a	blockActivated
 METHOD	no	(Lcx;IIILlu;)V	b	onEntityWalking
@@ -4091,7 +4091,7 @@ METHOD	no	(Lpi;IIII)Z	c	isPoweringTo
 METHOD	no	()Z	e	canProvidePower
 METHOD	no	(Lcx;IIILlu;)V	a	onEntityCollidedWithBlock
 METHOD	no	(Lcx;IIII)Z	c	isIndirectlyPoweringTo
-METHOD	no	()V	f	func_237_e
+METHOD	no	()V	f	MarkDirty
 METHOD	no	(Lcx;IIII)V	a_	func_220_a_
 METHOD	no	(Lcx;III)Z	g	canBlockStay
 METHOD	no	(Lcx;IIILhe;)V	a	onBlockPlacedBy
@@ -4100,13 +4100,13 @@ FIELD	np	Lgz;	a	blankChunk
 FIELD	np	Ljava/util/Map;	b	chunkMapping
 FIELD	np	Ljava/util/List;	c	unusedChunkList
 FIELD	np	Lcx;	d	worldObj
-METHOD	np	(II)Z	a	chunkExists
+METHOD	np	(II)Z	a	canCoordinateBeSpawn
 METHOD	np	(II)V	c	func_539_c
 METHOD	np	(II)Lgz;	d	func_538_d
-METHOD	np	(II)Lgz;	b	provideChunk
+METHOD	np	(II)Lgz;	b	getChunkFromBlockCoords
 METHOD	np	(ZLps;)Z	a	saveChunks
-METHOD	np	()Z	a	func_532_a
-METHOD	np	()Z	b	func_536_b
+METHOD	np	()Z	a	allowsAttachment
+METHOD	np	()Z	b	doesGuiPauseGame
 METHOD	np	(Lbd;II)V	a	populate
 CLASS	nq	EntitySlime
 FIELD	nq	F	a	field_768_a
@@ -4114,7 +4114,7 @@ FIELD	nq	F	b	field_767_b
 FIELD	nq	I	d	field_769_d
 FIELD	nq	I	c	field_770_c
 METHOD	nq	(I)V	d	func_441_c
-METHOD	nq	(Lip;)V	a	writeEntityToNBT
+METHOD	nq	(Lip;)V	a	readFromNBT
 METHOD	nq	(Lip;)V	b	readEntityFromNBT
 METHOD	nq	()V	e_	onUpdate
 METHOD	nq	()V	b_	func_418_b_
@@ -4123,11 +4123,11 @@ METHOD	nq	(Lea;)V	b	onCollideWithPlayer
 METHOD	nq	()Ljava/lang/String;	f_	func_6394_f_
 METHOD	nq	()Ljava/lang/String;	f	func_6390_f
 METHOD	nq	()I	g_	func_422_g
-METHOD	nq	()Z	a	func_433_a
+METHOD	nq	()Z	a	allowsAttachment
 METHOD	nq	()F	h	func_6393_h
 CLASS	nr	EntityZombie
-METHOD	nr	()V	k	func_425_j
-METHOD	nr	()Ljava/lang/String;	d	func_6389_d
+METHOD	nr	()V	k	func_409_i
+METHOD	nr	()Ljava/lang/String;	d	getInvName
 METHOD	nr	()Ljava/lang/String;	f_	func_6394_f_
 METHOD	nr	()Ljava/lang/String;	f	func_6390_f
 METHOD	nr	()I	g_	func_422_g
@@ -4150,39 +4150,39 @@ FIELD	nv	Llu;	g	entityHit
 CLASS	nw	BlockLog
 METHOD	nw	(Ljava/util/Random;)I	a	quantityDropped
 METHOD	nw	(ILjava/util/Random;)I	a	idDropped
-METHOD	nw	(I)I	a	getBlockTextureFromSide
+METHOD	nw	(I)I	a	generateDisplayLists
 CLASS	nx	Packet12PlayerLook
 METHOD	nx	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	nx	(Ljava/io/DataOutputStream;)V	a	func_322_a
-METHOD	nx	()I	a	func_329_a
+METHOD	nx	()I	a	getHash
 CLASS	ny	BlockSoil
 METHOD	ny	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
 METHOD	ny	()Z	a	allowsAttachment
-METHOD	ny	()Z	b	renderAsNormalBlock
-METHOD	ny	(II)I	a	getBlockTextureFromSideAndMetadata
+METHOD	ny	()Z	b	doesGuiPauseGame
+METHOD	ny	(II)I	a	averageColor
 METHOD	ny	(Lcx;IIILjava/util/Random;)V	a	updateTick
 METHOD	ny	(Lcx;IIILlu;)V	b	onEntityWalking
-METHOD	ny	(Lcx;III)Z	h	func_275_h
+METHOD	ny	(Lcx;III)Z	h	checkIfAttachedToBlock
 METHOD	ny	(Lcx;III)Z	i	func_274_i
 METHOD	ny	(Lcx;IIII)V	a	onNeighborBlockChange
 METHOD	ny	(ILjava/util/Random;)I	a	idDropped
 CLASS	nz	BlockTorch
 METHOD	nz	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
 METHOD	nz	()Z	a	allowsAttachment
-METHOD	nz	()Z	b	renderAsNormalBlock
+METHOD	nz	()Z	b	doesGuiPauseGame
 METHOD	nz	()I	g	getRenderType
 METHOD	nz	(Lcx;III)Z	a	canPlaceBlockAt
 METHOD	nz	(Lcx;IIII)V	d	onBlockPlaced
 METHOD	nz	(Lcx;IIILjava/util/Random;)V	a	updateTick
 METHOD	nz	(Lcx;III)V	e	onBlockAdded
 METHOD	nz	(Lcx;IIII)V	a	onNeighborBlockChange
-METHOD	nz	(Lcx;III)Z	h	func_271_h
+METHOD	nz	(Lcx;III)Z	h	checkIfAttachedToBlock
 METHOD	nz	(Lcx;IIILao;Lao;)Lnv;	a	collisionRayTrace
 METHOD	nz	(Lcx;IIILjava/util/Random;)V	b	randomDisplayTick
 CLASS	o	RecipesArmor
 FIELD	o	[[Ljava/lang/String;	a	field_1681_a
 FIELD	o	[[Ljava/lang/Object;	b	field_1680_b
-METHOD	o	(Lem;)V	a	func_1148_a
+METHOD	o	(Lem;)V	a	func_1051_a
 CLASS	oa	MinecartTrackLogic
 FIELD	oa	Lcx;	b	worldObj
 FIELD	oa	I	c	field_1165_c
@@ -4191,17 +4191,17 @@ FIELD	oa	I	e	field_1163_e
 FIELD	oa	I	f	field_1162_f
 FIELD	oa	Ljava/util/List;	g	field_1161_g
 FIELD	oa	Ljm;	a	field_1160_a
-METHOD	oa	()V	a	func_789_a
-METHOD	oa	()V	b	func_785_b
+METHOD	oa	()V	a	clearBoundingBoxPool
+METHOD	oa	()V	b	closeMinecraft
 METHOD	oa	(III)Z	a	func_784_a
 METHOD	oa	(Lol;)Loa;	a	func_795_a
 METHOD	oa	(Loa;)Z	b	func_793_b
 METHOD	oa	(III)Z	b	func_794_b
-METHOD	oa	()I	c	func_790_c
+METHOD	oa	()I	c	getItemStackLimit
 METHOD	oa	(Loa;)Z	c	func_787_c
 METHOD	oa	(Loa;)V	d	func_788_d
-METHOD	oa	(III)Z	c	func_786_c
-METHOD	oa	(Z)V	a	func_792_a
+METHOD	oa	(III)Z	c	func_1007_c
+METHOD	oa	(Z)V	a	func_310_a
 METHOD	oa	(Loa;)I	a	func_791_a
 CLASS	ob	TexturePackCustom
 FIELD	ob	Ljava/util/zip/ZipFile;	e	field_6496_e
@@ -4212,8 +4212,8 @@ METHOD	ob	(Ljava/lang/String;)Ljava/lang/String;	b	func_6492_b
 METHOD	ob	(Lnet/minecraft/client/Minecraft;)V	a	func_6485_a
 METHOD	ob	(Lnet/minecraft/client/Minecraft;)V	b	func_6484_b
 METHOD	ob	(Lnet/minecraft/client/Minecraft;)V	c	func_6483_c
-METHOD	ob	()V	a	func_6482_a
-METHOD	ob	()V	b	func_6480_b
+METHOD	ob	()V	a	clearBoundingBoxPool
+METHOD	ob	()V	b	closeMinecraft
 METHOD	ob	(Ljava/lang/String;)Ljava/io/InputStream;	a	func_6481_a
 CLASS	oc	TextureWaterFX
 FIELD	oc	[F	g	field_1158_g
@@ -4221,18 +4221,18 @@ FIELD	oc	[F	h	field_1157_h
 FIELD	oc	[F	i	field_1156_i
 FIELD	oc	[F	j	field_1155_j
 FIELD	oc	I	k	field_1154_k
-METHOD	oc	()V	a	func_783_a
+METHOD	oc	()V	a	clearBoundingBoxPool
 CLASS	od	SlotInventory
 FIELD	od	Lew;	c	guiHandler
 FIELD	od	I	e	xPos
 FIELD	od	I	f	yPos
-METHOD	od	(II)Z	a	isAtCursorPos
+METHOD	od	(II)Z	a	canCoordinateBeSpawn
 CLASS	oe	GuiConnecting
 FIELD	oe	Lia;	a	clientHandler
 FIELD	oe	Z	h	cancelled
-METHOD	oe	()V	g	updateScreen
+METHOD	oe	()V	g	setChunkModified
 METHOD	oe	(CI)V	a	keyTyped
-METHOD	oe	()V	a	initGui
+METHOD	oe	()V	a	clearBoundingBoxPool
 METHOD	oe	(Lgg;)V	a	actionPerformed
 METHOD	oe	(IIF)V	a	drawScreen
 METHOD	oe	(Loe;Lia;)Lia;	a	setNetClientHandler
@@ -4245,16 +4245,16 @@ FIELD	of	I	l	idFloat
 METHOD	of	(Z)I	a	func_558_a
 METHOD	of	(Lnet/minecraft/client/Minecraft;II)V	b	func_560_b
 METHOD	of	(Lnet/minecraft/client/Minecraft;II)Z	c	func_562_c
-METHOD	of	(II)V	a	func_559_a
+METHOD	of	(II)V	a	resize
 CLASS	og	MouseHelper
 FIELD	og	Ljava/awt/Component;	c	field_1117_c
 FIELD	og	Lorg/lwjgl/input/Cursor;	d	field_1116_d
 FIELD	og	I	a	field_1114_a
 FIELD	og	I	b	field_1113_b
 FIELD	og	I	e	field_1115_e
-METHOD	og	()V	a	func_774_a
-METHOD	og	()V	b	func_773_b
-METHOD	og	()V	c	func_772_c
+METHOD	og	()V	a	clearBoundingBoxPool
+METHOD	og	()V	b	closeMinecraft
+METHOD	og	()V	c	updateDelay
 CLASS	oh	ItemArmor
 FIELD	oh	[I	be	field_315_ba
 FIELD	oh	[I	bf	field_314_bb
@@ -4267,24 +4267,24 @@ METHOD	oi	(Lcx;III)Z	a	canPlaceBlockAt
 METHOD	oi	(I)Z	b	canThisPlantGrowOnThisBlockID
 METHOD	oi	(Lcx;IIII)V	a	onNeighborBlockChange
 METHOD	oi	(Lcx;IIILjava/util/Random;)V	a	updateTick
-METHOD	oi	(Lcx;III)V	h	func_268_h
+METHOD	oi	(Lcx;III)V	h	setStateIfMobInteractsWithPlate
 METHOD	oi	(Lcx;III)Z	g	canBlockStay
 METHOD	oi	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
 METHOD	oi	()Z	a	allowsAttachment
-METHOD	oi	()Z	b	renderAsNormalBlock
+METHOD	oi	()Z	b	doesGuiPauseGame
 METHOD	oi	()I	g	getRenderType
 CLASS	oj	ItemSpade
 FIELD	oj	[Lno;	bb	field_326_aX
 METHOD	oj	(Lno;)Z	a	canHarvestBlock
 CLASS	ok	WorldProviderHell
-METHOD	ok	()V	a	registerWorldChunkManager
+METHOD	ok	()V	a	clearBoundingBoxPool
 METHOD	ok	(FF)Lao;	a	func_4096_a
-METHOD	ok	()V	b	generateLightBrightnessTable
+METHOD	ok	()V	b	closeMinecraft
 METHOD	ok	()Lbd;	c	getChunkProvider
 METHOD	ok	(Ljava/io/File;)Lai;	a	getChunkLoader
 METHOD	ok	(II)Z	a	canCoordinateBeSpawn
 METHOD	ok	(JF)F	a	calculateCelestialAngle
-METHOD	ok	()Z	d	func_6477_d
+METHOD	ok	()Z	d	isDaytime
 CLASS	ol	ChunkPosition
 FIELD	ol	I	a	field_1111_a
 FIELD	ol	I	b	field_1110_b
@@ -4293,27 +4293,27 @@ METHOD	ol	(Ljava/lang/Object;)Z	equals	equals
 METHOD	ol	()I	hashCode	hashCode
 CLASS	om	NibbleArray
 FIELD	om	[B	a	data
-METHOD	om	(III)I	a	getNibble
+METHOD	om	(III)I	a	getBlockId
 METHOD	om	(IIII)V	a	setNibble
-METHOD	om	()Z	a	isValid
+METHOD	om	()Z	a	allowsAttachment
 CLASS	on	EntityPig
 FIELD	on	Z	a	rideable
-METHOD	on	(Lip;)V	a	writeEntityToNBT
+METHOD	on	(Lip;)V	a	readFromNBT
 METHOD	on	(Lip;)V	b	readEntityFromNBT
-METHOD	on	()Ljava/lang/String;	d	func_6389_d
+METHOD	on	()Ljava/lang/String;	d	getInvName
 METHOD	on	()Ljava/lang/String;	f_	func_6394_f_
 METHOD	on	()Ljava/lang/String;	f	func_6390_f
 METHOD	on	(Lea;)Z	a	interact
 METHOD	on	()I	g_	func_422_g
 CLASS	oo	InventoryCraftResult
 FIELD	oo	[Lfo;	a	stackResult
-METHOD	oo	()I	c	getSizeInventory
+METHOD	oo	()I	c	getItemStackLimit
 METHOD	oo	(I)Lfo;	c	getStackInSlot
 METHOD	oo	()Ljava/lang/String;	d	getInvName
 METHOD	oo	(II)Lfo;	a	decrStackSize
 METHOD	oo	(ILfo;)V	a	setInventorySlotContents
 METHOD	oo	()I	o_	getInventoryStackLimit
-METHOD	oo	()V	h	onInventoryChanged
+METHOD	oo	()V	h	calculateInitialSkylight
 CLASS	op	HashEntry
 FIELD	op	I	a	hashEntry
 FIELD	op	Ljava/lang/Object;	b	valueEntry
@@ -4341,11 +4341,11 @@ FIELD	os	F	d	field_757_d
 FIELD	os	F	e	field_756_e
 FIELD	os	F	h	field_755_h
 FIELD	os	I	i	timeUntilNextEgg
-METHOD	os	()V	k	func_425_j
+METHOD	os	()V	k	func_409_i
 METHOD	os	(F)V	c	fall
-METHOD	os	(Lip;)V	a	writeEntityToNBT
+METHOD	os	(Lip;)V	a	readFromNBT
 METHOD	os	(Lip;)V	b	readEntityFromNBT
-METHOD	os	()Ljava/lang/String;	d	func_6389_d
+METHOD	os	()Ljava/lang/String;	d	getInvName
 METHOD	os	()Ljava/lang/String;	f_	func_6394_f_
 METHOD	os	()Ljava/lang/String;	f	func_6390_f
 METHOD	os	()I	g_	func_422_g
@@ -4359,7 +4359,7 @@ FIELD	ot	I	f	size
 METHOD	ot	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	ot	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	ot	(Lmm;)V	a	func_323_a
-METHOD	ot	()I	a	func_329_a
+METHOD	ot	()I	a	getHash
 CLASS	ou	CanvasCrashReport
 CLASS	ov	WorldGenPumpkin
 METHOD	ov	(Lcx;Ljava/util/Random;III)Z	a	func_516_a
@@ -4379,20 +4379,20 @@ FIELD	ox	[F	f	lightBrightnessTable
 FIELD	ox	I	g	field_4218_e
 FIELD	ox	[F	h	field_4217_f
 METHOD	ox	(Lcx;)V	a	registerWorld
-METHOD	ox	()V	b	generateLightBrightnessTable
-METHOD	ox	()V	a	registerWorldChunkManager
+METHOD	ox	()V	b	closeMinecraft
+METHOD	ox	()V	a	clearBoundingBoxPool
 METHOD	ox	()Lbd;	c	getChunkProvider
 METHOD	ox	(Ljava/io/File;)Lai;	a	getChunkLoader
 METHOD	ox	(II)Z	a	canCoordinateBeSpawn
 METHOD	ox	(JF)F	a	calculateCelestialAngle
 METHOD	ox	(FF)[F	b	func_4097_b
 METHOD	ox	(FF)Lao;	a	func_4096_a
-METHOD	ox	()Z	d	func_6477_d
+METHOD	ox	()Z	d	isDaytime
 METHOD	ox	(I)Lox;	a	func_4101_a
 CLASS	oy	RecipesWeapons
 FIELD	oy	[[Ljava/lang/String;	a	field_1100_a
 FIELD	oy	[[Ljava/lang/Object;	b	field_1099_b
-METHOD	oy	(Lem;)V	a	func_766_a
+METHOD	oy	(Lem;)V	a	func_1051_a
 CLASS	oz	NBTTagString
 FIELD	oz	Ljava/lang/String;	a	stringValue
 METHOD	oz	(Ljava/io/DataOutput;)V	a	writeTagContents
@@ -4405,7 +4405,7 @@ FIELD	p	[Lfo;	b	stacks
 METHOD	p	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	p	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	p	(Lmm;)V	a	func_323_a
-METHOD	p	()I	a	func_329_a
+METHOD	p	()I	a	getHash
 CLASS	pa	EntityRainFX
 METHOD	pa	(Lir;FFFFFF)V	a	func_406_a
 METHOD	pa	()V	e_	onUpdate
@@ -4429,16 +4429,16 @@ FIELD	pe	I	i	field_9440_i
 FIELD	pe	Z	j	field_9439_j
 FIELD	pe	Lia;	k	field_9438_k
 FIELD	pe	I	l	field_1075_l
-METHOD	pe	(Lea;)V	a	func_6476_a
+METHOD	pe	(Lea;)V	a	onCraftGuiClosed
 METHOD	pe	(IIII)Z	b	func_729_b
-METHOD	pe	(IIII)V	a	func_719_a
-METHOD	pe	()V	a	func_6468_a
+METHOD	pe	(IIII)V	a	setNibble
+METHOD	pe	()V	a	clearBoundingBoxPool
 METHOD	pe	(IIII)V	c	func_6470_c
-METHOD	pe	(F)V	a	func_6467_a
-METHOD	pe	()F	b	func_727_b
-METHOD	pe	(Lcx;)V	a	func_717_a
-METHOD	pe	()V	c	func_6474_c
-METHOD	pe	()V	e	func_730_e
+METHOD	pe	(F)V	a	drawGuiContainerBackgroundLayer
+METHOD	pe	()F	b	func_1147_b
+METHOD	pe	(Lcx;)V	a	registerWorld
+METHOD	pe	()V	c	updateDelay
+METHOD	pe	()V	e	handleMouseInput
 METHOD	pe	(Lea;Lcx;Lfo;IIII)Z	a	func_722_a
 METHOD	pe	(Lea;Lcx;Lfo;)Z	a	func_6471_a
 METHOD	pe	(Lcx;)Lea;	b	func_4087_b
@@ -4458,7 +4458,7 @@ CLASS	pi	IBlockAccess
 CLASS	pj	BlockLever
 METHOD	pj	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
 METHOD	pj	()Z	a	allowsAttachment
-METHOD	pj	()Z	b	renderAsNormalBlock
+METHOD	pj	()Z	b	doesGuiPauseGame
 METHOD	pj	()I	g	getRenderType
 METHOD	pj	(Lcx;III)Z	a	canPlaceBlockAt
 METHOD	pj	(Lcx;IIII)V	d	onBlockPlaced
@@ -4512,7 +4512,7 @@ METHOD	pn	(F)Lpn;	d	func_405_d
 METHOD	pn	()V	e_	onUpdate
 METHOD	pn	(Lir;FFFFFF)V	a	func_406_a
 METHOD	pn	()I	l_	func_404_c
-METHOD	pn	(Lip;)V	a	writeEntityToNBT
+METHOD	pn	(Lip;)V	a	readFromNBT
 METHOD	pn	(Lip;)V	b	readEntityFromNBT
 CLASS	po	MinecraftError
 CLASS	pp	RenderSheep
@@ -4530,20 +4530,20 @@ METHOD	pq	(Llu;I)Z	a	attackEntity
 METHOD	pq	(DDDFFI)V	a	setPositionAndRotation2
 METHOD	pq	()V	e_	onUpdate
 METHOD	pq	()F	i_	func_392_h_
-METHOD	pq	()V	k	func_425_j
+METHOD	pq	()V	k	func_409_i
 CLASS	pr	EntityPigZombie
 FIELD	pr	I	a	angerLevel
 FIELD	pr	I	b	randomSoundDelay
 FIELD	pr	Lfo;	c	defaultHeldItem
 METHOD	pr	()V	e_	onUpdate
-METHOD	pr	()Z	a	func_433_a
-METHOD	pr	(Lip;)V	a	writeEntityToNBT
+METHOD	pr	()Z	a	allowsAttachment
+METHOD	pr	(Lip;)V	a	readFromNBT
 METHOD	pr	(Lip;)V	b	readEntityFromNBT
 METHOD	pr	()Llu;	c_	findPlayerToAttack
-METHOD	pr	()V	k	func_425_j
+METHOD	pr	()V	k	func_409_i
 METHOD	pr	(Llu;I)Z	a	attackEntity
 METHOD	pr	(Llu;)V	c	becomeAngryAt
-METHOD	pr	()Ljava/lang/String;	d	func_6389_d
+METHOD	pr	()Ljava/lang/String;	d	getInvName
 METHOD	pr	()Ljava/lang/String;	f_	func_6394_f_
 METHOD	pr	()Ljava/lang/String;	f	func_6390_f
 METHOD	pr	()I	g_	func_422_g
@@ -4554,9 +4554,9 @@ FIELD	pt	Ljava/lang/String;	a	screenTitle
 FIELD	pt	Lqa;	h	entitySign
 FIELD	pt	I	i	updateCounter
 FIELD	pt	I	j	editLine
-METHOD	pt	()V	a	initGui
-METHOD	pt	()V	h	onGuiClosed
-METHOD	pt	()V	g	updateScreen
+METHOD	pt	()V	a	clearBoundingBoxPool
+METHOD	pt	()V	h	calculateInitialSkylight
+METHOD	pt	()V	g	setChunkModified
 METHOD	pt	(Lgg;)V	a	actionPerformed
 METHOD	pt	(CI)V	a	keyTyped
 METHOD	pt	(IIF)V	a	drawScreen
@@ -4588,13 +4588,13 @@ FIELD	pv	[[I	i	field_914_i
 FIELD	pv	[D	w	field_4178_w
 METHOD	pv	(II[B[Lgf;[D)V	a	generateTerrain
 METHOD	pv	(II[B[Lgf;)V	a	replaceBlocksForBiome
-METHOD	pv	(II)Lgz;	b	provideChunk
-METHOD	pv	([DIIIIII)[D	a	func_4061_a
-METHOD	pv	(II)Z	a	chunkExists
+METHOD	pv	(II)Lgz;	b	getChunkFromBlockCoords
+METHOD	pv	([DIIIIII)[D	a	func_4057_a
+METHOD	pv	(II)Z	a	canCoordinateBeSpawn
 METHOD	pv	(Lbd;II)V	a	populate
 METHOD	pv	(ZLps;)Z	a	saveChunks
-METHOD	pv	()Z	a	func_532_a
-METHOD	pv	()Z	b	func_536_b
+METHOD	pv	()Z	a	allowsAttachment
+METHOD	pv	()Z	b	doesGuiPauseGame
 CLASS	pw	Packet59ComplexEntity
 FIELD	pw	I	a	xPosition
 FIELD	pw	I	b	yPosition
@@ -4604,23 +4604,23 @@ FIELD	pw	Lip;	e	entityNBT
 METHOD	pw	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	pw	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	pw	(Lmm;)V	a	func_323_a
-METHOD	pw	()I	a	func_329_a
+METHOD	pw	()I	a	getHash
 CLASS	px	RenderZombieSimple
 FIELD	px	F	a	field_204_f
 METHOD	px	(Lio;F)V	a	func_175_a
-METHOD	px	(Lhe;F)V	a	func_6330_a
+METHOD	px	(Lhe;F)V	a	func_338_a
 CLASS	py	WorldGenTrees
 METHOD	py	(Lcx;Ljava/util/Random;III)Z	a	func_516_a
 CLASS	pz	BlockBloodStone
 CLASS	q	CraftingInventoryPlayerCB
 FIELD	q	Lhw;	a	craftMatrix
 FIELD	q	Lhh;	b	craftResult
-METHOD	q	(Lhh;)V	a	onCraftMatrixChanged
+METHOD	q	(Lhh;)V	a	displayGUIChest
 METHOD	q	(Lea;)V	a	onCraftGuiClosed
 CLASS	qa	TileEntitySign
 FIELD	qa	[Ljava/lang/String;	a	signText
 FIELD	qa	I	b	lineBeingEdited
-METHOD	qa	(Lip;)V	b	writeToNBT
+METHOD	qa	(Lip;)V	b	readEntityFromNBT
 METHOD	qa	(Lip;)V	a	readFromNBT
 CLASS	qb	EntityMinecart
 FIELD	qb	[Lfo;	h	cargoItems
@@ -4647,23 +4647,23 @@ METHOD	qb	()Lcn;	e	func_372_f_
 METHOD	qb	()Z	d_	canBePushed
 METHOD	qb	()D	j	func_402_h
 METHOD	qb	(Llu;I)Z	a	attackEntity
-METHOD	qb	()V	g	func_9280_g
+METHOD	qb	()V	g	setChunkModified
 METHOD	qb	()Z	n_	canBeCollidedWith
 METHOD	qb	()V	J	setEntityDead
 METHOD	qb	()V	e_	onUpdate
 METHOD	qb	(DDDD)Lao;	a	func_515_a
 METHOD	qb	(DDD)Lao;	h	func_514_g
-METHOD	qb	(Lip;)V	a	writeEntityToNBT
+METHOD	qb	(Lip;)V	a	readFromNBT
 METHOD	qb	(Lip;)V	b	readEntityFromNBT
 METHOD	qb	()F	i_	func_392_h_
 METHOD	qb	(Llu;)V	g	applyEntityCollision
-METHOD	qb	()I	c	getSizeInventory
+METHOD	qb	()I	c	getItemStackLimit
 METHOD	qb	(I)Lfo;	c	getStackInSlot
 METHOD	qb	(II)Lfo;	a	decrStackSize
 METHOD	qb	(ILfo;)V	a	setInventorySlotContents
 METHOD	qb	()Ljava/lang/String;	d	getInvName
 METHOD	qb	()I	o_	getInventoryStackLimit
-METHOD	qb	()V	h	onInventoryChanged
+METHOD	qb	()V	h	calculateInitialSkylight
 METHOD	qb	(Lea;)Z	a	interact
 METHOD	qb	(DDDFFI)V	a	setPositionAndRotation2
 METHOD	qb	(DDD)V	a	setVelocity
@@ -4681,13 +4681,13 @@ FIELD	qe	Z	g	loaded
 FIELD	qe	Ljava/util/Random;	h	rand
 FIELD	qe	I	i	field_583_i
 METHOD	qe	(Lgp;)V	a	func_340_a
-METHOD	qe	()V	d	func_339_d
-METHOD	qe	()V	a	func_335_a
+METHOD	qe	()V	d	handleInput
+METHOD	qe	()V	a	clearBoundingBoxPool
 METHOD	qe	()V	b	closeMinecraft
-METHOD	qe	(Ljava/lang/String;Ljava/io/File;)V	a	func_6372_a
+METHOD	qe	(Ljava/lang/String;Ljava/io/File;)V	a	installResource
 METHOD	qe	(Ljava/lang/String;Ljava/io/File;)V	b	addStreaming
 METHOD	qe	(Ljava/lang/String;Ljava/io/File;)V	c	addMusic
-METHOD	qe	()V	c	func_4033_c
+METHOD	qe	()V	c	updateDelay
 METHOD	qe	(Lhe;F)V	a	func_338_a
 METHOD	qe	(Ljava/lang/String;FFFFF)V	a	func_331_a
 METHOD	qe	(Ljava/lang/String;FFFFF)V	b	func_336_b
@@ -4695,16 +4695,16 @@ METHOD	qe	(Ljava/lang/String;FF)V	a	func_337_a
 CLASS	qf	BlockFire
 FIELD	qf	[I	a	chanceToEncourageFire
 FIELD	qf	[I	b	abilityToCatchFire
-METHOD	qf	(III)V	a	setBurnRate
+METHOD	qf	(III)V	a	mouseClicked
 METHOD	qf	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
 METHOD	qf	()Z	a	allowsAttachment
-METHOD	qf	()Z	b	renderAsNormalBlock
+METHOD	qf	()Z	b	doesGuiPauseGame
 METHOD	qf	()I	g	getRenderType
 METHOD	qf	(Ljava/util/Random;)I	a	quantityDropped
-METHOD	qf	()I	d	tickRate
+METHOD	qf	()I	d	getMaxDamage
 METHOD	qf	(Lcx;IIILjava/util/Random;)V	a	updateTick
 METHOD	qf	(Lcx;IIIILjava/util/Random;)V	a	tryToCatchBlockOnFire
-METHOD	qf	(Lcx;III)Z	h	func_263_h
+METHOD	qf	(Lcx;III)Z	h	checkIfAttachedToBlock
 METHOD	qf	(Lcx;III)I	i	getChanceOfNeighborsEncouragingFire
 METHOD	qf	()Z	h	isCollidable
 METHOD	qf	(Lpi;III)Z	c	canBlockCatchFire
@@ -4718,15 +4718,15 @@ FIELD	qg	Ljava/lang/String;	a	reason
 METHOD	qg	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	qg	(Ljava/io/DataOutputStream;)V	a	func_322_a
 METHOD	qg	(Lmm;)V	a	func_323_a
-METHOD	qg	()I	a	func_329_a
+METHOD	qg	()I	a	getHash
 CLASS	qh	BlockStep
 FIELD	qh	Z	a	field_469_a
-METHOD	qh	(I)I	a	getBlockTextureFromSide
+METHOD	qh	(I)I	a	generateDisplayLists
 METHOD	qh	()Z	a	allowsAttachment
 METHOD	qh	(Lcx;IIII)V	a	onNeighborBlockChange
 METHOD	qh	(Lcx;III)V	e	onBlockAdded
 METHOD	qh	(ILjava/util/Random;)I	a	idDropped
-METHOD	qh	()Z	b	renderAsNormalBlock
+METHOD	qh	()Z	b	doesGuiPauseGame
 METHOD	qh	(Lpi;IIII)Z	b	isSideInsideCoordinate
 CLASS	qi	ItemFood
 FIELD	qi	I	a	healAmount
@@ -4749,13 +4749,13 @@ METHOD	s	(Lcx;IIILjava/util/Random;)V	a	updateTick
 CLASS	t	Packet11PlayerPosition
 METHOD	t	(Ljava/io/DataInputStream;)V	a	func_327_a
 METHOD	t	(Ljava/io/DataOutputStream;)V	a	func_322_a
-METHOD	t	()I	a	func_329_a
+METHOD	t	()I	a	getHash
 CLASS	u	TileEntityMobSpawnerRenderer
 FIELD	u	Ljava/util/Map;	b	field_1412_b
 METHOD	u	(Lbl;DDDF)V	a	func_931_a
 METHOD	u	(Ljh;DDDF)V	a	renderTileEntityAt
 CLASS	v	BlockTNT
-METHOD	v	(I)I	a	getBlockTextureFromSide
+METHOD	v	(I)I	a	generateDisplayLists
 METHOD	v	(Lcx;IIII)V	a	onNeighborBlockChange
 METHOD	v	(Ljava/util/Random;)I	a	quantityDropped
 METHOD	v	(Lcx;III)V	c	onBlockDestroyedByExplosion
@@ -4766,12 +4766,12 @@ CLASS	x	BlockPortal
 METHOD	x	(Lcx;III)Lcn;	d	getCollisionBoundingBoxFromPool
 METHOD	x	(Lpi;III)V	a	setBlockBoundsBasedOnState
 METHOD	x	()Z	a	allowsAttachment
-METHOD	x	()Z	b	renderAsNormalBlock
+METHOD	x	()Z	b	doesGuiPauseGame
 METHOD	x	(Lcx;III)Z	a_	tryToCreatePortal
 METHOD	x	(Lcx;IIII)V	a	onNeighborBlockChange
 METHOD	x	(Lpi;IIII)Z	b	isSideInsideCoordinate
 METHOD	x	(Ljava/util/Random;)I	a	quantityDropped
-METHOD	x	()I	c	func_234_g
+METHOD	x	()I	c	getItemStackLimit
 METHOD	x	(Lcx;IIILlu;)V	a	onEntityCollidedWithBlock
 METHOD	x	(Lcx;IIILjava/util/Random;)V	b	randomDisplayTick
 CLASS	y	StepSoundStone
@@ -4785,7 +4785,7 @@ METHOD	z	(DDD)D	a	generateNoise
 METHOD	z	(DDD)D	b	lerp
 METHOD	z	(IDD)D	a	func_4110_a
 METHOD	z	(IDDD)D	a	grad
-METHOD	z	(DD)D	a	func_801_a
+METHOD	z	(DD)D	a	abs_max
 METHOD	z	([DDDDIIIDDDD)V	a	func_805_a
 CLASS	paulscode/sound/Channel	paulscode/sound/Channel
 FIELD	paulscode/sound/Channel	Ljava/lang/Class;	libraryType	libraryType
@@ -4873,8 +4873,8 @@ FIELD	paulscode/sound/FilenameURL	Ljava/lang/String;	filename	field_9179_filenam
 FIELD	paulscode/sound/FilenameURL	Ljava/net/URL;	url	field_9180_url
 METHOD	paulscode/sound/FilenameURL	()Ljava/lang/String;	getFilename	getFilename
 METHOD	paulscode/sound/FilenameURL	()Ljava/net/URL;	getURL	getURL
-METHOD	paulscode/sound/FilenameURL	(Ljava/lang/String;)V	errorMessage	func_9178_errorMessage
-METHOD	paulscode/sound/FilenameURL	(Ljava/lang/Exception;)V	printStackTrace	func_9177_printStackTrace
+METHOD	paulscode/sound/FilenameURL	(Ljava/lang/String;)V	errorMessage	errorMessage
+METHOD	paulscode/sound/FilenameURL	(Ljava/lang/Exception;)V	printStackTrace	printStackTrace
 CLASS	paulscode/sound/ICodec	paulscode/sound/ICodec
 CLASS	paulscode/sound/Library	paulscode/sound/Library
 FIELD	paulscode/sound/Library	Lpaulscode/sound/SoundSystemLogger;	logger	field_9035_logger
@@ -4993,13 +4993,13 @@ FIELD	paulscode/sound/MidiChannel	J	fadeOutMilis	fadeOutMilis
 FIELD	paulscode/sound/MidiChannel	J	fadeInMilis	fadeInMilis
 FIELD	paulscode/sound/MidiChannel	J	lastFadeCheck	lastFadeCheck
 FIELD	paulscode/sound/MidiChannel	Lpaulscode/sound/MidiChannel$FadeThread;	fadeThread	field_9220_fadeThread
-METHOD	paulscode/sound/MidiChannel	()V	init	func_9212_init
+METHOD	paulscode/sound/MidiChannel	()V	init	init
 METHOD	paulscode/sound/MidiChannel	()V	cleanup	cleanup
 METHOD	paulscode/sound/MidiChannel	(Lpaulscode/sound/FilenameURL;)V	queueSound	queueSound
 METHOD	paulscode/sound/MidiChannel	(Ljava/lang/String;)V	dequeueSound	dequeueSound
 METHOD	paulscode/sound/MidiChannel	(Lpaulscode/sound/FilenameURL;J)V	fadeOut	fadeOut
 METHOD	paulscode/sound/MidiChannel	(Lpaulscode/sound/FilenameURL;JJ)V	fadeOutIn	fadeOutIn
-METHOD	paulscode/sound/MidiChannel	()Z	checkFadeOut	func_9207_checkFadeOut
+METHOD	paulscode/sound/MidiChannel	()Z	checkFadeOut	checkFadeOut
 METHOD	paulscode/sound/MidiChannel	()Z	incrementSequence	func_9211_incrementSequence
 METHOD	paulscode/sound/MidiChannel	()V	play	play
 METHOD	paulscode/sound/MidiChannel	()V	stop	stop
@@ -5010,7 +5010,7 @@ METHOD	paulscode/sound/MidiChannel	()F	getVolume	getVolume
 METHOD	paulscode/sound/MidiChannel	(ZLjava/lang/String;Ljava/lang/String;)V	switchSource	switchSource
 METHOD	paulscode/sound/MidiChannel	(ZLjava/lang/String;Ljava/net/URL;Ljava/lang/String;)V	switchSource	switchSource
 METHOD	paulscode/sound/MidiChannel	(ZLjava/lang/String;Lpaulscode/sound/FilenameURL;)V	switchSource	switchSource
-METHOD	paulscode/sound/MidiChannel	()V	reset	func_9205_reset
+METHOD	paulscode/sound/MidiChannel	()V	reset	reset
 METHOD	paulscode/sound/MidiChannel	(Z)V	setLooping	setLooping
 METHOD	paulscode/sound/MidiChannel	()Z	getLooping	getLooping
 METHOD	paulscode/sound/MidiChannel	(ZZ)Z	toLoop	func_9200_toLoop
@@ -5176,7 +5176,7 @@ METHOD	paulscode/sound/SoundSystem	()Ljava/lang/Class;	currentLibrary	currentLib
 METHOD	paulscode/sound/SoundSystem	()Z	initialized	initialized
 METHOD	paulscode/sound/SoundSystem	()Lpaulscode/sound/SoundSystemException;	getLastException	getLastException
 METHOD	paulscode/sound/SoundSystem	(Lpaulscode/sound/SoundSystemException;)V	setException	setException
-METHOD	paulscode/sound/SoundSystem	(ZZ)Z	initialized	func_9142_initialized
+METHOD	paulscode/sound/SoundSystem	(ZZ)Z	initialized	func_9069_initialized
 METHOD	paulscode/sound/SoundSystem	(ZLjava/lang/Class;)Ljava/lang/Class;	currentLibrary	func_9157_currentLibrary
 METHOD	paulscode/sound/SoundSystem	(ZLpaulscode/sound/SoundSystemException;)Lpaulscode/sound/SoundSystemException;	lastException	func_9166_lastException
 METHOD	paulscode/sound/SoundSystem	(J)V	snooze	snooze
@@ -5246,7 +5246,7 @@ METHOD	paulscode/sound/SoundSystemConfig	()I	getFileChunkSize	getFileChunkSize
 METHOD	paulscode/sound/SoundSystemConfig	(Ljava/lang/String;Ljava/lang/Class;)V	setCodec	setCodec
 METHOD	paulscode/sound/SoundSystemConfig	(Ljava/lang/String;)Lpaulscode/sound/ICodec;	getCodec	getCodec
 METHOD	paulscode/sound/SoundSystemConfig	()Z	midiCodec	midiCodec
-METHOD	paulscode/sound/SoundSystemConfig	(Ljava/lang/String;)V	errorMessage	func_9183_errorMessage
+METHOD	paulscode/sound/SoundSystemConfig	(Ljava/lang/String;)V	errorMessage	errorMessage
 METHOD	paulscode/sound/SoundSystemConfig	(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;	runMethod	func_9184_runMethod
 METHOD	paulscode/sound/SoundSystemConfig	(Ljava/lang/String;)V	access$000	access$000
 CLASS	paulscode/sound/SoundSystemException	paulscode/sound/SoundSystemException
@@ -5365,10 +5365,10 @@ FIELD	paulscode/sound/StreamThread	Ljava/lang/Object;	listLock	field_9129_listLo
 METHOD	paulscode/sound/StreamThread	()V	cleanup	cleanup
 METHOD	paulscode/sound/StreamThread	()V	run	run
 METHOD	paulscode/sound/StreamThread	(Lpaulscode/sound/Source;)V	watch	watch
-METHOD	paulscode/sound/StreamThread	(Ljava/lang/String;)V	message	func_9124_message
-METHOD	paulscode/sound/StreamThread	(Ljava/lang/String;)V	importantMessage	func_9126_importantMessage
-METHOD	paulscode/sound/StreamThread	(ZLjava/lang/String;)Z	errorCheck	func_9125_errorCheck
-METHOD	paulscode/sound/StreamThread	(Ljava/lang/String;)V	errorMessage	func_9123_errorMessage
+METHOD	paulscode/sound/StreamThread	(Ljava/lang/String;)V	message	message
+METHOD	paulscode/sound/StreamThread	(Ljava/lang/String;)V	importantMessage	importantMessage
+METHOD	paulscode/sound/StreamThread	(ZLjava/lang/String;)Z	errorCheck	errorCheck
+METHOD	paulscode/sound/StreamThread	(Ljava/lang/String;)V	errorMessage	errorMessage
 CLASS	paulscode/sound/Vector3D	paulscode/sound/Vector3D
 FIELD	paulscode/sound/Vector3D	F	x	x
 FIELD	paulscode/sound/Vector3D	F	y	y
@@ -6062,43 +6062,43 @@ FIELD	net/minecraft/client/Minecraft	Z	M	field_6288_M
 FIELD	net/minecraft/client/Minecraft	J	N	field_6287_N
 FIELD	net/minecraft/client/Minecraft	I	ab	field_6300_ab
 METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;I)V	a	func_6258_a
-METHOD	net/minecraft/client/Minecraft	()V	a	func_6271_a
+METHOD	net/minecraft/client/Minecraft	()V	a	clearBoundingBoxPool
 METHOD	net/minecraft/client/Minecraft	()V	q	loadScreen
-METHOD	net/minecraft/client/Minecraft	(IIIIII)V	a	func_6274_a
+METHOD	net/minecraft/client/Minecraft	(IIIIII)V	a	drawGradientRect
 METHOD	net/minecraft/client/Minecraft	()Ljava/io/File;	b	getMinecraftDir
 METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;)Ljava/io/File;	a	getAppDir
 METHOD	net/minecraft/client/Minecraft	()Ljo;	r	getOs
 METHOD	net/minecraft/client/Minecraft	(Lbp;)V	a	displayGuiScreen
 METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;)V	c	checkGLError
-METHOD	net/minecraft/client/Minecraft	()V	c	func_6266_c
+METHOD	net/minecraft/client/Minecraft	()V	c	updateDelay
 METHOD	net/minecraft/client/Minecraft	()V	run	run
-METHOD	net/minecraft/client/Minecraft	()V	s	func_6248_s
-METHOD	net/minecraft/client/Minecraft	(J)V	a	func_6238_a
-METHOD	net/minecraft/client/Minecraft	()V	d	shutdown
-METHOD	net/minecraft/client/Minecraft	()V	e	func_6259_e
-METHOD	net/minecraft/client/Minecraft	()V	f	func_6273_f
-METHOD	net/minecraft/client/Minecraft	()V	g	func_6252_g
-METHOD	net/minecraft/client/Minecraft	(IZ)V	a	func_6254_a
-METHOD	net/minecraft/client/Minecraft	(I)V	a	func_6243_a
-METHOD	net/minecraft/client/Minecraft	()V	h	toggleFullscreen
+METHOD	net/minecraft/client/Minecraft	()V	s	func_350_p
+METHOD	net/minecraft/client/Minecraft	(J)V	a	setWorldTime
+METHOD	net/minecraft/client/Minecraft	()V	d	handleInput
+METHOD	net/minecraft/client/Minecraft	()V	e	handleMouseInput
+METHOD	net/minecraft/client/Minecraft	()V	f	MarkDirty
+METHOD	net/minecraft/client/Minecraft	()V	g	setChunkModified
+METHOD	net/minecraft/client/Minecraft	(IZ)V	a	setCurrentItem
+METHOD	net/minecraft/client/Minecraft	(I)V	a	changeCurrentItem
+METHOD	net/minecraft/client/Minecraft	()V	h	calculateInitialSkylight
 METHOD	net/minecraft/client/Minecraft	(II)V	a	resize
-METHOD	net/minecraft/client/Minecraft	()V	t	func_6265_t
-METHOD	net/minecraft/client/Minecraft	()V	i	func_6246_i
+METHOD	net/minecraft/client/Minecraft	()V	t	preparePlayerToSpawn
+METHOD	net/minecraft/client/Minecraft	()V	i	drawDefaultBackground
 METHOD	net/minecraft/client/Minecraft	()V	u	forceReload
-METHOD	net/minecraft/client/Minecraft	()Z	j	isMultiplayerWorld
-METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;)V	b	func_6247_b
-METHOD	net/minecraft/client/Minecraft	()V	k	func_6237_k
-METHOD	net/minecraft/client/Minecraft	(Lcx;)V	a	func_6261_a
+METHOD	net/minecraft/client/Minecraft	()Z	j	canSmelt
+METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;)V	b	releaseImageData
+METHOD	net/minecraft/client/Minecraft	()V	k	func_409_i
+METHOD	net/minecraft/client/Minecraft	(Lcx;)V	a	registerWorld
 METHOD	net/minecraft/client/Minecraft	(Lcx;Ljava/lang/String;)V	a	func_6263_a
 METHOD	net/minecraft/client/Minecraft	(Lcx;Ljava/lang/String;Lea;)V	a	func_6256_a
-METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;)V	d	func_6255_d
+METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;)V	d	func_595_d
 METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;Ljava/io/File;)V	a	installResource
 METHOD	net/minecraft/client/Minecraft	()Lbm;	l	func_6251_l
 METHOD	net/minecraft/client/Minecraft	()Ljava/lang/String;	m	func_6241_m
 METHOD	net/minecraft/client/Minecraft	()Ljava/lang/String;	n	func_6262_n
 METHOD	net/minecraft/client/Minecraft	()Ljava/lang/String;	o	func_6245_o
 METHOD	net/minecraft/client/Minecraft	()V	p	respawn
-METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;Ljava/lang/String;)V	a	func_6269_a
+METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;Ljava/lang/String;)V	a	func_140_a
 METHOD	net/minecraft/client/Minecraft	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V	a	func_6253_a
 METHOD	net/minecraft/client/Minecraft	([Ljava/lang/String;)V	main	main
 CLASS	net/minecraft/client/MinecraftApplet	net/minecraft/client/MinecraftApplet
@@ -6106,12 +6106,12 @@ FIELD	net/minecraft/client/MinecraftApplet	Ljava/awt/Canvas;	a	mcCanvas
 FIELD	net/minecraft/client/MinecraftApplet	Lnet/minecraft/client/Minecraft;	b	mc
 FIELD	net/minecraft/client/MinecraftApplet	Ljava/lang/Thread;	c	mcThread
 METHOD	net/minecraft/client/MinecraftApplet	()V	init	init
-METHOD	net/minecraft/client/MinecraftApplet	()V	a	func_6233_a
+METHOD	net/minecraft/client/MinecraftApplet	()V	a	clearBoundingBoxPool
 METHOD	net/minecraft/client/MinecraftApplet	()V	start	start
 METHOD	net/minecraft/client/MinecraftApplet	()V	stop	stop
 METHOD	net/minecraft/client/MinecraftApplet	()V	destroy	destroy
-METHOD	net/minecraft/client/MinecraftApplet	()V	b	shutdown
-METHOD	net/minecraft/client/MinecraftApplet	()V	c	func_6231_c
+METHOD	net/minecraft/client/MinecraftApplet	()V	b	closeMinecraft
+METHOD	net/minecraft/client/MinecraftApplet	()V	c	updateDelay
 CLASS	net/minecraft/isom/IsomPreviewApplet	net/minecraft/isom/IsomPreviewApplet
 FIELD	net/minecraft/isom/IsomPreviewApplet	Lah;	a	field_9245_a
 METHOD	net/minecraft/isom/IsomPreviewApplet	()V	start	start
@@ -6158,8 +6158,8 @@ METHOD	paulscode/sound/codecs/CodecJOrbis	(ZZ)Z	initialized	func_9069_initialize
 METHOD	paulscode/sound/codecs/CodecJOrbis	(ZZ)Z	endOfStream	func_9072_endOfStream
 METHOD	paulscode/sound/codecs/CodecJOrbis	([BI)[B	trimArray	func_9073_trimArray
 METHOD	paulscode/sound/codecs/CodecJOrbis	([B[B)[B	appendByteArrays	func_9070_appendByteArrays
-METHOD	paulscode/sound/codecs/CodecJOrbis	(Ljava/lang/String;)V	errorMessage	func_9076_errorMessage
-METHOD	paulscode/sound/codecs/CodecJOrbis	(Ljava/lang/Exception;)V	printStackTrace	func_9074_printStackTrace
+METHOD	paulscode/sound/codecs/CodecJOrbis	(Ljava/lang/String;)V	errorMessage	errorMessage
+METHOD	paulscode/sound/codecs/CodecJOrbis	(Ljava/lang/Exception;)V	printStackTrace	printStackTrace
 CLASS	paulscode/sound/codecs/CodecWav	paulscode/sound/codecs/CodecWav
 FIELD	paulscode/sound/codecs/CodecWav	Z	GET	field_9107_GET
 FIELD	paulscode/sound/codecs/CodecWav	Z	SET	field_9110_SET
@@ -6176,13 +6176,13 @@ METHOD	paulscode/sound/codecs/CodecWav	()Lpaulscode/sound/SoundBuffer;	readAll	r
 METHOD	paulscode/sound/codecs/CodecWav	()Z	endOfStream	endOfStream
 METHOD	paulscode/sound/codecs/CodecWav	()V	cleanup	cleanup
 METHOD	paulscode/sound/codecs/CodecWav	()Ljavax/sound/sampled/AudioFormat;	getAudioFormat	getAudioFormat
-METHOD	paulscode/sound/codecs/CodecWav	(ZZ)Z	initialized	func_9106_initialized
-METHOD	paulscode/sound/codecs/CodecWav	(ZZ)Z	endOfStream	func_9101_endOfStream
-METHOD	paulscode/sound/codecs/CodecWav	([BI)[B	trimArray	func_9105_trimArray
+METHOD	paulscode/sound/codecs/CodecWav	(ZZ)Z	initialized	func_9069_initialized
+METHOD	paulscode/sound/codecs/CodecWav	(ZZ)Z	endOfStream	func_9072_endOfStream
+METHOD	paulscode/sound/codecs/CodecWav	([BI)[B	trimArray	func_9073_trimArray
 METHOD	paulscode/sound/codecs/CodecWav	([BZ)[B	convertAudioBytes	func_9103_convertAudioBytes
 METHOD	paulscode/sound/codecs/CodecWav	([B[BI)[B	appendByteArrays	func_9104_appendByteArrays
-METHOD	paulscode/sound/codecs/CodecWav	(Ljava/lang/String;)V	errorMessage	func_9100_errorMessage
-METHOD	paulscode/sound/codecs/CodecWav	(Ljava/lang/Exception;)V	printStackTrace	func_9102_printStackTrace
+METHOD	paulscode/sound/codecs/CodecWav	(Ljava/lang/String;)V	errorMessage	errorMessage
+METHOD	paulscode/sound/codecs/CodecWav	(Ljava/lang/Exception;)V	printStackTrace	printStackTrace
 CLASS	paulscode/sound/libraries/ChannelLWJGLOpenAL	paulscode/sound/libraries/ChannelLWJGLOpenAL
 FIELD	paulscode/sound/libraries/ChannelLWJGLOpenAL	Ljava/nio/IntBuffer;	ALSource	ALSource
 FIELD	paulscode/sound/libraries/ChannelLWJGLOpenAL	I	ALformat	ALformat
@@ -6203,7 +6203,7 @@ METHOD	paulscode/sound/libraries/ChannelLWJGLOpenAL	()V	pause	pause
 METHOD	paulscode/sound/libraries/ChannelLWJGLOpenAL	()V	stop	stop
 METHOD	paulscode/sound/libraries/ChannelLWJGLOpenAL	()V	rewind	rewind
 METHOD	paulscode/sound/libraries/ChannelLWJGLOpenAL	()Z	playing	playing
-METHOD	paulscode/sound/libraries/ChannelLWJGLOpenAL	()Z	checkALError	func_9067_checkALError
+METHOD	paulscode/sound/libraries/ChannelLWJGLOpenAL	()Z	checkALError	func_9037_checkALError
 CLASS	paulscode/sound/libraries/LibraryLWJGLOpenAL	paulscode/sound/libraries/LibraryLWJGLOpenAL
 FIELD	paulscode/sound/libraries/LibraryLWJGLOpenAL	Z	GET	field_9038_GET
 FIELD	paulscode/sound/libraries/LibraryLWJGLOpenAL	Z	SET	field_9042_SET
@@ -6256,4 +6256,4 @@ METHOD	paulscode/sound/libraries/SourceLWJGLOpenAL	()Z	preLoad	preLoad
 METHOD	paulscode/sound/libraries/SourceLWJGLOpenAL	()V	resetALInformation	func_9059_resetALInformation
 METHOD	paulscode/sound/libraries/SourceLWJGLOpenAL	()V	calculateDistance	func_9056_calculateDistance
 METHOD	paulscode/sound/libraries/SourceLWJGLOpenAL	()V	calculateGain	func_9057_calculateGain
-METHOD	paulscode/sound/libraries/SourceLWJGLOpenAL	()Z	checkALError	func_9060_checkALError
+METHOD	paulscode/sound/libraries/SourceLWJGLOpenAL	()Z	checkALError	func_9037_checkALError

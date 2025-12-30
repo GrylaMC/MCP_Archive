@@ -318,7 +318,7 @@ METHOD	bf	()V	run	run
 METHOD	bf	()V	a	func_1210_a
 METHOD	bf	(Ljava/io/File;Ljava/lang/String;)V	a	func_1209_a
 METHOD	bf	(Ljava/net/URL;Ljava/lang/String;I)V	a	func_1739_a
-METHOD	bf	(Ljava/net/URL;Ljava/io/File;I)V	a	func_1740_a
+METHOD	bf	(Ljava/net/URL;Ljava/io/File;I)V	a	func_1741_a
 METHOD	bf	()V	b	func_1208_b
 CLASS	bg	BlockRedstoneTorch
 FIELD	bg	Z	a	field_451_a
