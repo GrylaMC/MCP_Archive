@@ -416,7 +416,29 @@ if __name__ == "__main__":
             for version in versions
         ],
     )
+    style_retroguard_only(*stdname("a1.1.2/revengpack16.zip", ["a1.1.2"]))
 
+    for zip, versions, *args in [
+        ("a1.2.1_01/mcp20.zip", ["a1.2.1_01"]),
+        ("a1.2.1_01/mcp20a.zip", ["a1.2.1_01"]),
+        # Note: the a versions are debug releases
+        ("a1.2.2/mcp21.zip", ["a1.2.2-1624", "a1.2.2-1938"], True),
+        ("a1.2.2/mcp22.zip", ["a1.2.2-1624", "a1.2.2-1938"], True),
+        ("a1.2.2/mcp22a.zip", ["a1.2.2-1624", "a1.2.2-1938"], True),
+        ("a1.2.3_04/mcp23.zip", ["a1.2.3_02"]),
+        ("a1.2.5/mcp24.zip", ["a1.2.5"]),
+        ("a1.2.6/mcp25.zip", ["a1.2.6"]),
+        # Beta versions that use the alpha format
+        ("b1.1_02/mcp26.zip", ["b1.1_02"], True),
+        ("b1.2_01/mcp27.zip", ["b1.2_01"]),
+        ("b1.2_01/mcp28.zip", ["b1.2_01"]),
+        ("b1.3_01/mcp29.zip", ["b1.3_01"]),
+        ("b1.3_01/mcp29a.zip", ["b1.3_01"]),
+        ("b1.4/mcp210.zip", ["1.4-pre"]),
+        ("b1.4_01/mcp211.zip", ["b1.4_01"]),
+        ("b1.5._01/mcp212.zip", ["b1.5_01"]),
+    ]:
+        style_alpha(*stdname(zip, versions), *args)
     for zip, versions in [
         ("b1.4_01/mcp30.zip", ["b1.4_01"]),
         ("b1.5._01/mcp31.zip", ["b1.5_01"]),
@@ -433,33 +455,22 @@ if __name__ == "__main__":
         ("b1.7.3/mcp43.zip", ["b1.7.3"]),
         ("b1.8.1/mcp44.zip", ["b1.8.1"]),
         ("b1.9pre-5/mcp45pre.zip", ["b1.9-pre5"]),
+
+        ("1.0.0/mcp50.zip", ["1.0.0"]),
+        ("1.1.0/mcp56.zip", ["1.1"]),
     ]:
         _style_python_with_renamer(
             *stdname(zip, versions), "mcp_early_exceptor_remap.py"
         )
-
-    exit()
-
-    style_retroguard_only(*stdname("a1.1.2/revengpack16.zip", ["a1.1.2"]))
-
-    for zip, versions, *args in [
-        ("a1.2.1_01/mcp20.zip", ["a1.2.1_01"]),
-        ("a1.2.1_01/mcp20a.zip", ["a1.2.1_01"]),
-        # Note: the a versions are debug releases
-        ("a1.2.2/mcp21.zip", ["a1.2.2a", "a1.2.2b"], True),
-        ("a1.2.2/mcp22.zip", ["a1.2.2a", "a1.2.2b"], True),
-        ("a1.2.2/mcp22a.zip", ["a1.2.2a", "a1.2.2b"], True),
-        ("a1.2.3_04/mcp23.zip", ["a1.2.3_02"]),
-        ("a1.2.5/mcp24.zip", ["a1.2.5"]),
-        ("a1.2.6/mcp25.zip", ["a1.2.6"]),
-        # Beta versions that use the alpha format
-        ("b1.1_02/mcp26.zip", ["b1.1_02"], True),
-        ("b1.2_01/mcp27.zip", ["b1.2_01"]),
-        ("b1.2_01/mcp28.zip", ["b1.2_01"]),
-        ("b1.3_01/mcp29.zip", ["b1.3_01"]),
-        ("b1.3_01/mcp29a.zip", ["b1.3_01"]),
-        ("b1.4/mcp210.zip", ["b1.4"]),
-        ("b1.4_01/mcp211.zip", ["b1.4_01"]),
-        ("b1.5._01/mcp212.zip", ["b1.5_01"]),
+    for zip, versions in [
+        ("1.2.3/mcp60.zip", ["1.2.3"]),
+        ("1.2.4/mcp61.zip", ["1.2.4"]),
+        ("1.2.5/mcp62.zip", ["1.2.5"]),
     ]:
-        style_alpha(*stdname(zip, versions), *args)
+        _style_python_with_renamer(
+            *stdname(zip, versions), "mcp_mid_exceptor.py"
+        )
+
+
+
+

@@ -11,7 +11,6 @@ commands = Commands(os.path.join("conf", "mcp.cfg"))
 
 commands.jarclient = abspath(sys.argv[1])
 
-
 commands.logger.info ('> Creating Retroguard config files')
 commands.creatergcfg()
 

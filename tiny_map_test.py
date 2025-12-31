@@ -33,9 +33,8 @@ def get_namespaces(mapping_file):
 
 
 if __name__ == "__main__":
-    with tempfile.TemporaryDirectory(delete=False) as tempdir:
+    with tempfile.TemporaryDirectory(delete=True) as tempdir:
         for diR in sorted(os.listdir("tiny_v1s")):
-            if not diR.startswith("b1.9"): continue
 
             full_dir = os.path.join("tiny_v1s", diR)
             # for file in sorted(os.listdir(full_dir)):
@@ -48,11 +47,8 @@ if __name__ == "__main__":
                 print(f"Attempting to map with {file}")
 
                 # Fix for rengpack16
-                mc_version = file.split("-")[0] if "-" in file else diR
+                mc_version = file.split("-mcp")[0] if "-mcp" in file else diR
 
-                # Fix for b1.9-pre5
-                if "-pre" in file:
-                    mc_version = file.split("-mcp")[0]
 
 
                 client_jar_path = get_piston_file(mc_version, "client") 
