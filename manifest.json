@@ -1,0 +1,168 @@
+{
+  "1.0.0": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.0.0/1.0.0-mcp50.tiny"
+  ],
+  "1.1": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.1.0/1.1-mcp56.tiny"
+  ],
+  "1.10.2": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.10.2/1.10.2-mcp931.tiny"
+  ],
+  "1.11.2": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.11.2/1.11.2-mcp937.tiny"
+  ],
+  "1.12": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.12/1.12-mcp940.tiny"
+  ],
+  "1.2.3": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.2.3/1.2.3-mcp60.tiny"
+  ],
+  "1.2.4": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.2.4/1.2.4-mcp61.tiny"
+  ],
+  "1.2.5": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.2.5/1.2.5-mcp62.tiny"
+  ],
+  "1.3.1": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.3.1/1.3.1-mcp70a.tiny",
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.3.1/1.3.1-mcp70.tiny"
+  ],
+  "1.3.2": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.3.2/1.3.2-mcp72.tiny"
+  ],
+  "1.4.2": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.4.2/1.4.2-mcp719.tiny"
+  ],
+  "1.4.4": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.4.4/1.4.4-mcp721.tiny"
+  ],
+  "1.4.5": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.4.5/1.4.5-mcp723.tiny"
+  ],
+  "1.4.6": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.4.6/1.4.6-mcp725.tiny"
+  ],
+  "1.4.7": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.4.7/1.4.7-mcp726a.tiny"
+  ],
+  "1.5": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.5/1.5-mcp742.tiny"
+  ],
+  "1.5.1": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.5.1/1.5.1-mcp744.tiny"
+  ],
+  "1.5.2": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.5.2/1.5.2-mcp751.tiny"
+  ],
+  "1.6.1": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.6.1/1.6.1-mcp803.tiny"
+  ],
+  "1.6.2": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.6.2/1.6.2-mcp805.tiny",
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.6.2/1.6.2-mcp804.tiny"
+  ],
+  "1.6.3": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.6.4/1.6.3-mcp811.tiny"
+  ],
+  "1.7.10": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.7.10/1.7.10-mcp908.tiny"
+  ],
+  "1.7.2": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.7.2/1.7.2-mcp903.tiny"
+  ],
+  "1.8": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.8/1.8-mcp910-pre1.tiny"
+  ],
+  "1.8.8": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.8.8/1.8.8-mcp918.tiny"
+  ],
+  "1.9": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.9/1.9-mcp924-beta1.tiny"
+  ],
+  "1.9.4": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.9.4/1.9.4-mcp928.tiny"
+  ],
+  "@omni@12w17a-1424": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/12w17a/@omni@12w17a-1424-mcp65.tiny"
+  ],
+  "@omni@12w26a": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/12w26a/@omni@12w26a-mcp615.tiny"
+  ],
+  "@omni@13w02b": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/13w02b/@omni@13w02b-mcp730c.tiny"
+  ],
+  "@omni@13w09c": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/13w09c/@omni@13w09c-mcp739.tiny"
+  ],
+  "a1.1.2": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/a1.1.2/a1.1.2-revengpack16.tiny"
+  ],
+  "a1.2.1_01": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/a1.2.1_01/a1.2.1_01-mcp20a.tiny",
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/a1.2.1_01/a1.2.1_01-mcp20.tiny"
+  ],
+  "a1.2.2a": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/a1.2.2/a1.2.2a-mcp21.tiny",
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/a1.2.2/a1.2.2a-mcp22.tiny",
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/a1.2.2/a1.2.2a-mcp22a.tiny"
+  ],
+  "a1.2.2b": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/a1.2.2/a1.2.2b-mcp21.tiny",
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/a1.2.2/a1.2.2b-mcp22.tiny",
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/a1.2.2/a1.2.2b-mcp22a.tiny"
+  ],
+  "a1.2.3_02": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/a1.2.3_04/a1.2.3_02-mcp23.tiny"
+  ],
+  "a1.2.5": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/a1.2.5/a1.2.5-mcp24.tiny"
+  ],
+  "a1.2.6": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/a1.2.6/a1.2.6-mcp25.tiny"
+  ],
+  "b1.1_02": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.1_02/b1.1_02-mcp26.tiny"
+  ],
+  "b1.2_01": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.2_01/b1.2_01-mcp27.tiny",
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.2_01/b1.2_01-mcp28.tiny"
+  ],
+  "b1.3_01": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.3_01/b1.3_01-mcp29.tiny",
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.3_01/b1.3_01-mcp29a.tiny"
+  ],
+  "b1.4": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.4/b1.4-mcp210.tiny"
+  ],
+  "b1.4_01": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.4_01/b1.4_01-mcp211.tiny",
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.4_01/b1.4_01-mcp30.tiny"
+  ],
+  "b1.5_01": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.5._01/b1.5_01-mcp31.tiny",
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.5._01/b1.5_01-mcp212.tiny"
+  ],
+  "b1.6.4": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.6.4/b1.6.4-mcp32.tiny"
+  ],
+  "b1.6.5": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.6.5/b1.6.5-mcp33.tiny"
+  ],
+  "b1.6.6": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.6.6/b1.6.6-mcp34.tiny",
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.6.6/b1.6.6-mcp41.tiny",
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.6.6/b1.6.6-mcp40.tiny"
+  ],
+  "b1.7.2": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.7.2/b1.7.2-mcp42.tiny"
+  ],
+  "b1.7.3": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.7.3/b1.7.3-mcp43.tiny"
+  ],
+  "b1.8.1": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.8.1/b1.8.1-mcp44.tiny"
+  ],
+  "@omni@b1.9-pre5": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/b1.9pre-5/@omni@b1.9-pre5-mcp45pre.tiny"
+  ]
+}
