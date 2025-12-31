@@ -11,7 +11,7 @@ if not exists(SCRIPTS_DIR):
 
 sys.path.append(SCRIPTS_DIR)
 
-from mcjar import get_piston_file, REMAPPER
+from mcjar import get_piston_file, get_piston_json_path
 
 
 USE_WINE = sys.platform != "wine32"
@@ -347,18 +347,36 @@ def style_alpha(
         shutil.rmtree(mcp_dir)
 
 
+def apply_patch(file_to_patch, patch_file):
+    try:
+        result = subprocess.run(
+            ["patch", file_to_patch, "-i", patch_file],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+        print("Patch applied successfully:")
+        print(result.stdout)
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to apply patch: {e.stderr}")
+
+
 # Used in b1.4_01 (MCP 30) - TODO
 # This, and future versions require python injection.
 # However, is still requires the jar to be renamed using the CSVs.
 #
 # Note: The CSV format is different to alpha
-def _style_python_with_renamer(
+def style_python_with_renamer(
     mcp_zip,
     mc_versions: list[tuple[str, str]],
     script,
     field_loader=load_beta_csv,
     method_loader=load_beta_csv,
+    patches: None | list[tuple[str, str]] = None,
+    use_piston_json=False,
 ):
+    patches = patches if patches is not None else []
+
     mcp_dir = None
     mcp_fields = {}
     mcp_methods = {}
@@ -370,6 +388,11 @@ def _style_python_with_renamer(
             mcp_dir = get_mcp_temp(mcp_zip)
             mcp_fields = field_loader(join(mcp_dir, "conf", "fields.csv"))
             mcp_methods = method_loader(join(mcp_dir, "conf", "methods.csv"))
+
+            for patch_file, file_to_patch in patches:
+                print(join(mcp_dir, file_to_patch))
+                apply_patch(join(mcp_dir, file_to_patch), patch_file)
+
             print(
                 f"=========== {basename(mcp_zip)}: Style MCP with renamer ==========="
             )
@@ -385,7 +408,8 @@ def _style_python_with_renamer(
                 join(mcp_dir, "runtime", "bin", "python", "python_mcp.exe"),
                 abspath(join("libs", script)),
                 tainted_jar,
-            ],
+            ]
+            + ([] if not use_piston_json else [get_piston_json_path(mc_ver)]),
             cwd=mcp_dir,
             env=WINE_ENV,
         )
@@ -400,7 +424,6 @@ def _style_python_with_renamer(
 
 
 if __name__ == "__main__":
-
     stdname = lambda zip, versions, *args: (
         join("complete_packs", zip),
         [
@@ -421,10 +444,11 @@ if __name__ == "__main__":
     for zip, versions, *args in [
         ("a1.2.1_01/mcp20.zip", ["a1.2.1_01"]),
         ("a1.2.1_01/mcp20a.zip", ["a1.2.1_01"]),
+
         # Note: the a versions are debug releases
-        ("a1.2.2/mcp21.zip", ["a1.2.2-1624", "a1.2.2-1938"], True),
-        ("a1.2.2/mcp22.zip", ["a1.2.2-1624", "a1.2.2-1938"], True),
-        ("a1.2.2/mcp22a.zip", ["a1.2.2-1624", "a1.2.2-1938"], True),
+        ("a1.2.2/mcp21.zip", ["a1.2.2a", "a1.2.2b"], True),
+        ("a1.2.2/mcp22.zip", ["a1.2.2a", "a1.2.2b"], True),
+        ("a1.2.2/mcp22a.zip", ["a1.2.2a", "a1.2.2b"], True),
         ("a1.2.3_04/mcp23.zip", ["a1.2.3_02"]),
         ("a1.2.5/mcp24.zip", ["a1.2.5"]),
         ("a1.2.6/mcp25.zip", ["a1.2.6"]),
@@ -434,7 +458,7 @@ if __name__ == "__main__":
         ("b1.2_01/mcp28.zip", ["b1.2_01"]),
         ("b1.3_01/mcp29.zip", ["b1.3_01"]),
         ("b1.3_01/mcp29a.zip", ["b1.3_01"]),
-        ("b1.4/mcp210.zip", ["1.4-pre"]),
+        ("b1.4/mcp210.zip", ["b1.4"]),
         ("b1.4_01/mcp211.zip", ["b1.4_01"]),
         ("b1.5._01/mcp212.zip", ["b1.5_01"]),
     ]:
@@ -446,7 +470,7 @@ if __name__ == "__main__":
         ("b1.6.5/mcp33.zip", ["b1.6.5"]),
         ("b1.6.6/mcp34.zip", ["b1.6.6"]),
     ]:
-        _style_python_with_renamer(*stdname(zip, versions), "mcp_midbeta_remap.py")
+        style_python_with_renamer(*stdname(zip, versions), "mcp_midbeta_remap.py")
 
     for zip, versions in [
         ("b1.6.6/mcp40.zip", ["b1.6.6"]),
@@ -454,45 +478,70 @@ if __name__ == "__main__":
         ("b1.7.2/mcp42.zip", ["b1.7.2"]),
         ("b1.7.3/mcp43.zip", ["b1.7.3"]),
         ("b1.8.1/mcp44.zip", ["b1.8.1"]),
-        ("b1.9pre-5/mcp45pre.zip", ["b1.9-pre5"]),
-
+        ("b1.9pre-5/mcp45pre.zip", ["@omni@b1.9-pre5"]),
         ("1.0.0/mcp50.zip", ["1.0.0"]),
         ("1.1.0/mcp56.zip", ["1.1"]),
     ]:
-        _style_python_with_renamer(
+        style_python_with_renamer(
             *stdname(zip, versions), "mcp_early_exceptor_remap.py"
         )
     for zip, versions in [
         ("1.2.3/mcp60.zip", ["1.2.3"]),
         ("1.2.4/mcp61.zip", ["1.2.4"]),
+
+        ("12w26a/mcp615.zip", ["@omni@12w26a"]),
+
         ("1.2.5/mcp62.zip", ["1.2.5"]),
+
+        ("12w17a/mcp65.zip", ["@omni@12w17a-1424"]),
+        ("12w26a/mcp615.zip", ["@omni@12w26a"]),
 
         ("1.3.1/mcp70.zip", ["1.3.1"]),
         ("1.3.1/mcp70a.zip", ["1.3.1"]),
-
         ("1.3.2/mcp72.zip", ["1.3.2"]),
-
         ("1.4.2/mcp719.zip", ["1.4.2"]),
         ("1.4.4/mcp721.zip", ["1.4.4"]),
         ("1.4.5/mcp723.zip", ["1.4.5"]),
         ("1.4.6/mcp725.zip", ["1.4.6"]),
         ("1.4.7/mcp726a.zip", ["1.4.7"]),
 
+
+        ("13w02b/mcp730c.zip", ["@omni@13w02b"]),
+
+        # Fails to generate
+        #("13w05b/mcp734.zip", ["@omni@13w05b"]),
+
+        ("13w09c/mcp739.zip", ["@omni@13w09c"]),
+
         ("1.5/mcp742.zip", ["1.5"]),
         ("1.5.1/mcp744.zip", ["1.5.1"]),
         ("1.5.2/mcp751.zip", ["1.5.2"]),
+    ]:
+        style_python_with_renamer(*stdname(zip, versions), "mcp_mid_exceptor.py")
 
+    for zip, versions in [
         ("1.6.1/mcp803.zip", ["1.6.1"]),
+
         ("1.6.2/mcp804.zip", ["1.6.2"]),
         ("1.6.2/mcp805.zip", ["1.6.2"]),
 
-        ("1.6.4/mcp811.zip", ["1.6.4"]),
+        ("1.6.4/mcp811.zip", ["1.6.3"]),
+        ("1.6.4/mcp811.zip", ["1.6.3"]),
+
+        ("1.7.2/mcp903.zip", ["1.7.2"]),
+        ("1.7.10/mcp908.zip", ["1.7.10"]),
+
+        ("1.8/mcp910-pre1.zip", ["1.8"]),
+        ("1.8.8/mcp918.zip", ["1.8.8"]),
+
+        ("1.9/mcp924-beta1.zip", ["1.9"]),
+        ("1.9.4/mcp928.zip", ["1.9.4"]),
+
+        ("1.10.2/mcp931.zip", ["1.10.2"]),
+        ("1.11.2/mcp937.zip", ["1.11.2"]),
+        ("1.12/mcp940.zip", ["1.12"]),
 
     ]:
-        _style_python_with_renamer(
-            *stdname(zip, versions), "mcp_mid_exceptor.py"
+        style_python_with_renamer(
+            *stdname(zip, versions), "mcp_later_exceptor.py", patches=[], use_piston_json=True
         )
-
-
-
-

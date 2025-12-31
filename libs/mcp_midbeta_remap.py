@@ -12,6 +12,9 @@ sys.path.insert(0, os.path.join("runtime"))
 from commands import *
 
 
+fake_commands = Commands(os.path.join("conf", "mcp.cfg"))
+
+
 commands = Commands(os.path.join("conf", "mcp.cfg"))
 
 commands.readconf()
