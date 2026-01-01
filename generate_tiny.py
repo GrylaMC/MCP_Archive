@@ -1,7 +1,8 @@
 from logging import RootLogger
-from os.path import basename, dirname, exists, join, abspath, splitext
+from os.path import basename, dirname, exists, isdir, join, abspath, splitext
 import os, sys, subprocess, tempfile, shutil
 from typing import Generator
+import json
 
 from libs.jar_marker import taint_jar, generate_tiny
 
@@ -11,7 +12,7 @@ if not exists(SCRIPTS_DIR):
 
 sys.path.append(SCRIPTS_DIR)
 
-from mcjar import get_piston_file, get_piston_json_path
+from mcjar import get_piston_file, get_piston_json_path, MAPPINGIO, download_cached
 
 
 USE_WINE = sys.platform != "wine32"
@@ -361,7 +362,7 @@ def apply_patch(file_to_patch, patch_file):
         print(f"Failed to apply patch: {e.stderr}")
 
 
-# Used in b1.4_01 (MCP 30) - TODO
+# Used in b1.4_01 (MCP 30) onwards (BUT NOT FORGE VERSIONS)
 # This, and future versions require python injection.
 # However, is still requires the jar to be renamed using the CSVs.
 #
@@ -402,6 +403,7 @@ def style_python_with_renamer(
         tainted_jar: str = tempfile.mktemp(".jar")
         taint_jar(get_piston_file(mc_ver, "client"), tainted_jar)
 
+        print(f"[*] Running python script inside mcp")
         subprocess.check_call(
             EXE_PREPEND
             + [
@@ -423,7 +425,103 @@ def style_python_with_renamer(
         shutil.rmtree(mcp_dir)
 
 
+SPECIAL_SOURCE_URL = "https://repo1.maven.org/maven2/net/md-5/SpecialSource/1.11.5/SpecialSource-1.11.5-shaded.jar"
+SPECIAL_SOURCE = download_cached(SPECIAL_SOURCE_URL, "SpecialSource.jar")
+FORGE_MAPPINGS = join("newer_mappings", "versions")
+
+
+
+
+
+
+def special_source_map(jar, mapping):
+    temp = tempfile.mktemp(".jar")
+    subprocess.check_call([
+        "java", "-jar", SPECIAL_SOURCE,
+        "-i", jar,
+        "-o", temp,
+        "-m",  mapping
+    ])
+
+    return temp
+
+
+
+# Works with mcp and mcp-tsrg types
+def forge_mcp_style(mc_ver, diR, mapping_json): 
+    tiny_dir = join("tiny_v1s", mc_ver)
+    os.makedirs(tiny_dir, exist_ok=True)
+    tiny = join(tiny_dir, mc_ver + "-mcpFORGE.tiny")
+
+    if exists(tiny):
+        return
+
+
+    print(
+                f"=========== {mc_ver}: Style Forge MCP with renamer ==========="
+            )
+    tainted_jar = tempfile.mktemp(".jar")
+    taint_jar(get_piston_file(mc_ver, "client"), tainted_jar)
+
+    
+    mapping_file = mapping_json["files"]["srg"] if mapping_json["type"] == "mcp" else mapping_json["files"]["tsrg"]
+
+    print("[*] Running SpecialSource remapper")
+    tainted_mapped_jar = special_source_map(
+        tainted_jar,
+        join(diR, mapping_file)
+    )
+    os.remove(tainted_jar)
+
+
+
+
+    generate_tiny(tainted_mapped_jar, tiny)
+    tiny_renamer(
+        load_beta_csv(join(diR, "fields.csv")),
+        load_beta_csv(join(diR, "methods.csv")),
+        tiny
+    )
+
+    os.remove(tainted_mapped_jar)
+
+
+
+def convert_from_forge():
+    for diR in os.listdir(FORGE_MAPPINGS):
+        mc_ver = diR
+        diR = join(FORGE_MAPPINGS, diR)
+        assert isdir(diR)
+        with open(join(diR, "mapping.json"), "r") as f:
+            mapping_json = json.load(f)
+        typE = mapping_json["type"]
+
+        if typE == "mcp-tsrg" and "csv" in mapping_json["files"]:
+            if mc_ver == "1.16.5":
+                # TODO: This version is invalid
+                continue
+
+
+            forge_mcp_style(mc_ver, diR, mapping_json)
+        elif typE == "mcp":
+            forge_mcp_style(mc_ver, diR, mapping_json)
+        elif typE !=  "mcp-tsrg":
+            print(f"UNKNOWN TYPE: {typE}")
+
+
+
+
+
+
+        
+
+
+
 if __name__ == "__main__":
+    convert_from_forge()
+
+
+    exit()
     stdname = lambda zip, versions, *args: (
         join("complete_packs", zip),
         [
