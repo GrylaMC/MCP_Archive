@@ -521,7 +521,6 @@ if __name__ == "__main__":
     convert_from_forge()
 
 
-    exit()
     stdname = lambda zip, versions, *args: (
         join("complete_packs", zip),
         [
@@ -622,6 +621,8 @@ if __name__ == "__main__":
 
         ("1.6.2/mcp804.zip", ["1.6.2"]),
         ("1.6.2/mcp805.zip", ["1.6.2"]),
+
+        ("1.6.3/mcp809.zip", ["1.6.3"]),
 
         ("1.6.4/mcp811.zip", ["1.6.3"]),
         ("1.6.4/mcp811.zip", ["1.6.3"]),
