@@ -1,5 +1,8 @@
 import os
 
+from os.path import dirname, abspath
+os.chdir(dirname(dirname(abspath(__file__))))
+
 def main():
     # Data structure: data[mc_version][mcp_version] = set(found_attributes)
     data = {}

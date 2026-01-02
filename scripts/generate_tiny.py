@@ -4,9 +4,16 @@ import os, sys, subprocess, tempfile, shutil
 from typing import Generator
 import json
 
+
+PARENT = dirname(dirname(abspath(__file__)))
+os.chdir(PARENT)
+
+sys.path.append(PARENT)
+
 from libs.jar_marker import taint_jar, generate_tiny
 
-SCRIPTS_DIR = join(dirname(dirname(abspath(__file__))), "utils", "scripts")
+SCRIPTS_DIR = join(dirname(PARENT), "utils", "scripts")
+print(SCRIPTS_DIR)
 if not exists(SCRIPTS_DIR):
     raise RuntimeError("Refusing to run without use of official workspace")
 

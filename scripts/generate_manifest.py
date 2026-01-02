@@ -1,7 +1,8 @@
 import os, json
 
-from os.path import join, splitext
+from os.path import join, splitext, dirname, abspath
 
+os.chdir(dirname(dirname(abspath(__file__))))
 
 versions = {}
 

@@ -1,7 +1,14 @@
 import os, subprocess, sys
 import tempfile
 from os.path import abspath, dirname, exists, join
-SCRIPTS_DIR = join(dirname(dirname(abspath(__file__))), "utils", "scripts")
+
+PARENT = dirname(dirname(abspath(__file__)))
+os.chdir(PARENT)
+
+
+
+
+SCRIPTS_DIR = join(dirname(PARENT), "utils", "scripts")
 if not exists(SCRIPTS_DIR):
     raise RuntimeError("Refusing to run without use of official workspace")
 

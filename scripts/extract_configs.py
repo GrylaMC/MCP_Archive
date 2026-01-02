@@ -4,7 +4,9 @@ Go through and extract all the configs.
 import subprocess, os
 import sys
 
+from os.path import dirname, abspath, exists
 
+os.chdir(dirname(dirname(abspath(__file__))))
 
 
 for x in os.listdir("complete_packs"):
@@ -23,6 +25,9 @@ for x in os.listdir("complete_packs"):
 
 
         out = os.path.join("configs", x, z.split(".")[0])
+        if exists(out):
+            continue
+
         os.makedirs(out)
         p = subprocess.Popen(["unzip",
                   "-j", '-q', *extra,
