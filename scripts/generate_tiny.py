@@ -670,6 +670,7 @@ if __name__ == "__main__":
         ("1.10.2/mcp931.zip", ["1.10.2"]),
         ("1.11.2/mcp937.zip", ["1.11.2"]),
         ("1.12/mcp940.zip", ["1.12"]),
+        ("1.12.2/mcp942.zip", ["1.12.2"]),
     ]:
         style_python_with_renamer(
             *stdname(zip, versions),
