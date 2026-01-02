@@ -655,10 +655,13 @@ if __name__ == "__main__":
             use_piston_json=True,
         )
 
-    convert_srg_config(
-        "1.7.10",
-        join(EXTRACTED_FORGE_DIR, "1.7.10", "mcp905"),
-        tinyname("1.7.10", "mcp905"),
-    )
+    for mc_ver, mcp_ver in [
+        ("1.7.9", "mcp904"),
+        ("1.7.10", "mcp905")]:
+        convert_srg_config(
+            mc_ver,
+            join(EXTRACTED_FORGE_DIR, mc_ver, mcp_ver),
+            tinyname(mc_ver, mcp_ver),
+        )
 
     convert_from_modern_forge()
