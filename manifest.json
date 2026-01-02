@@ -11,6 +11,9 @@
   "1.10.2": [
     "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.10.2/1.10.2-mcp931.tiny"
   ],
+  "1.11": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.11/1.11-mcp935-rc1.tiny"
+  ],
   "1.11.2": [
     "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.11.2/1.11.2-mcp937.tiny",
     "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.11.2/1.11.2-mcpFORGE.tiny"
@@ -87,6 +90,7 @@
     "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.3.2/1.3.2-mcp72.tiny"
   ],
   "1.4": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.4/1.4-mcp717_pre3.tiny",
     "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.4/1.4-mcp717.tiny"
   ],
   "1.4.1": [
@@ -121,12 +125,13 @@
   "1.5.2": [
     "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.5.2/1.5.2-mcp751.tiny"
   ],
-  "1.6": [
-    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.6/1.6-mcp801.tiny"
-  ],
   "1.6.1": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.6/1.6.1-mcp801-pre.tiny",
     "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.6.1/1.6.1-mcp803.tiny",
     "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.6.1/1.6.1-mcp802.tiny"
+  ],
+  "1.6": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.6/1.6-mcp801.tiny"
   ],
   "1.6.2": [
     "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.6.2/1.6.2-mcp805.tiny",
@@ -142,6 +147,7 @@
     "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.7.10/1.7.10-mcp908.tiny"
   ],
   "1.7.2": [
+    "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.7.2/1.7.2-mcp902beta.tiny",
     "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.7.2/1.7.2-mcp901-alpha.tiny",
     "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/1.7.2/1.7.2-mcp903.tiny"
   ],
