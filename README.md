@@ -14,6 +14,7 @@ In addition, MCP is under an extremly restrictive license. So use with caution!
 
 
 
-
+Also see [MCP-Archive](https://github.com/Aizistral-Studios/MCP-Archive.git) by 
+Aizistral Studios, with an extensive archive of MCP CSVs. 
 
 
