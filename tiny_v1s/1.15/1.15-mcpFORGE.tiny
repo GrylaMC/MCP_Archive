@@ -1328,7 +1328,7 @@ METHOD	dnn	()Ljava/util/stream/Stream;	o	getRecipeResourceLocations
 METHOD	dnn	(I)Z	c	hasPermissionLevel
 METHOD	dnn	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	a	getSuggestionsFromServer
 METHOD	dnn	(D)Ljava/lang/String;	a	formatDouble
-METHOD	dnn	(I)Ljava/lang/String;	a	format_a
+METHOD	dnn	(I)Ljava/lang/String;	a	format
 METHOD	dnn	()Ljava/util/Collection;	q	func_217294_q
 METHOD	dnn	()Ljava/util/Collection;	r	func_217293_r
 METHOD	dnn	(ILcom/mojang/brigadier/suggestion/Suggestions;)V	a	handleResponse
@@ -1556,7 +1556,7 @@ FIELD	edg	I	i	maxStringLength
 METHOD	edg	(Ljava/lang/Object;Ljava/lang/String;)V	a	add
 METHOD	edg	()V	a	addButtons
 METHOD	edg	()V	b	addDoneButton
-METHOD	edg	(I)Ljava/lang/String;	a	format_a
+METHOD	edg	(I)Ljava/lang/String;	a	format
 METHOD	edg	(Ljava/lang/String;I)I	a	compare
 METHOD	edg	(Ljava/lang/String;)Ljava/util/List;	a	getDataPoints
 METHOD	edg	([I[I[III)V	a	func_194054_a
@@ -12981,7 +12981,7 @@ METHOD	dak	(J)Ljava/lang/String;	b	getDebugString
 METHOD	dak	()V	removed	removed
 METHOD	dak	(III)Z	keyPressed	keyPressed
 METHOD	dak	(IIF)V	render	render
-METHOD	dak	(I)Ljava/lang/String;	a	format_a
+METHOD	dak	(I)Ljava/lang/String;	a	format
 METHOD	dak	(Ldak;)Lcom/mojang/realmsclient/dto/RealmsServer;	a	func_224575_a
 METHOD	dak	(Ldak;)Lnet/minecraft/realms/RealmsScreen;	b	func_224577_b
 METHOD	dak	()Lorg/apache/logging/log4j/Logger;	a	access$000
@@ -13809,7 +13809,7 @@ METHOD	cwr	()F	a	getBearingX
 METHOD	cwr	()V	b	addDoneButton
 CLASS	cwt	net/minecraft/client/audio/ALUtils
 FIELD	cwt	Lorg/apache/logging/log4j/Logger;	a	LOGGER
-METHOD	cwt	(I)Ljava/lang/String;	a	format_a
+METHOD	cwt	(I)Ljava/lang/String;	a	format
 METHOD	cwt	(Ljava/lang/String;)Z	a	addTag
 METHOD	cwt	(I)Ljava/lang/String;	b	getKeyNameFromScanCode
 METHOD	cwt	(JLjava/lang/String;)Z	a	func_216481_a
@@ -14684,7 +14684,7 @@ FIELD	cxg	Ljava/util/Map;	g	GL_CONSTANT_NAMES
 FIELD	cxg	Ljava/util/List;	h	field_209257_h
 FIELD	cxg	Ljava/util/List;	i	field_209258_i
 FIELD	cxg	Ljava/util/Map;	j	field_209259_j
-METHOD	cxg	(I)Ljava/lang/String;	a	format_a
+METHOD	cxg	(I)Ljava/lang/String;	a	format
 METHOD	cxg	(I)Ljava/lang/String;	b	getKeyNameFromScanCode
 METHOD	cxg	(I)Ljava/lang/String;	c	getType
 METHOD	cxg	(I)Ljava/lang/String;	d	getSeverity
@@ -15132,7 +15132,7 @@ METHOD	cxj	(JLorg/lwjgl/glfw/GLFWCursorPosCallbackI;Lorg/lwjgl/glfw/GLFWMouseBut
 METHOD	cxj	(JIDD)V	a	setCursorPosAndMode
 METHOD	cxj	()Z	a	allowsOverlap
 METHOD	cxj	(JZ)V	a	onWindowFocusUpdate
-METHOD	cxj	(I)Ljava/lang/String;	a	format_a
+METHOD	cxj	(I)Ljava/lang/String;	a	format
 METHOD	cxj	(I)Ljava/lang/String;	b	getKeyNameFromScanCode
 CLASS	cxh$s	com/mojang/blaze3d/platform/GlStateManager$StencilState
 FIELD	cxh$s	Lcxh$r;	a	field_179078_a
@@ -20708,7 +20708,7 @@ METHOD	lf$a	()Lcom/google/gson/Gson;	c	func_199852_b
 CLASS	lf	net/minecraft/util/text/ITextComponent
 METHOD	lf	(Ljava/lang/String;)Llf;	a	appendText
 METHOD	lf	()Ljava/lang/String;	getString	getString_getString
-METHOD	lf	(I)Ljava/lang/String;	a	format_a
+METHOD	lf	(I)Ljava/lang/String;	a	format
 METHOD	lf	()Ljava/lang/String;	e	getCompleteReport
 METHOD	lf	()Ljava/util/stream/Stream;	f	func_212637_f
 METHOD	lf	()Ljava/util/Iterator;	iterator	iterator
@@ -27959,7 +27959,7 @@ METHOD	aao	(Laaq;Ljava/lang/Object;)Ljava/lang/String;	a	buildName
 METHOD	aao	(Lsm;)Ljava/lang/String;	a	locationToKey
 METHOD	aao	()Laaq;	a	getType
 METHOD	aao	()Ljava/lang/Object;	b	getB
-METHOD	aao	(I)Ljava/lang/String;	a	format_a
+METHOD	aao	(I)Ljava/lang/String;	a	format
 METHOD	aao	(Ljava/lang/Object;)Z	equals	equals
 METHOD	aao	()I	hashCode	hashCode
 METHOD	aao	()Ljava/lang/String;	toString	toString
@@ -27969,7 +27969,7 @@ FIELD	aap	Laap;	b	DEFAULT
 FIELD	aap	Laap;	c	DIVIDE_BY_TEN
 FIELD	aap	Laap;	d	DISTANCE
 FIELD	aap	Laap;	e	TIME
-METHOD	aap	(I)Ljava/lang/String;	a	format_a
+METHOD	aap	(I)Ljava/lang/String;	a	format
 METHOD	aap	(I)Ljava/lang/String;	b	getKeyNameFromScanCode
 METHOD	aap	(I)Ljava/lang/String;	c	getType
 METHOD	aap	(Ljava/text/DecimalFormat;)V	a	func_212730_a
@@ -28627,7 +28627,7 @@ METHOD	abw	(Labw;I)V	a	func_226174_a_
 CLASS	abx	net/minecraft/util/IStringSerializable
 CLASS	aby	net/minecraft/util/StringUtils
 FIELD	aby	Ljava/util/regex/Pattern;	a	PATTERN_CONTROL_CODE
-METHOD	aby	(I)Ljava/lang/String;	a	format_a
+METHOD	aby	(I)Ljava/lang/String;	a	format
 METHOD	aby	(Ljava/lang/String;)Ljava/lang/String;	a	bidiReorder
 METHOD	aby	(Ljava/lang/String;)Z	b	exists
 CLASS	abz	net/minecraft/util/Tuple
@@ -28807,7 +28807,7 @@ METHOD	acx	(ILjava/lang/String;[Ljava/lang/String;)V	a	addEntry
 METHOD	acx	()V	a	addButtons
 METHOD	acx	(Lcom/mojang/datafixers/Dynamic;)Lcom/mojang/datafixers/Dynamic;	a	fix
 METHOD	acx	(Ljava/lang/String;)Ljava/lang/String;	a	bidiReorder
-METHOD	acx	(I)Ljava/lang/String;	a	format_a
+METHOD	acx	(I)Ljava/lang/String;	a	format
 METHOD	acx	(Ljava/lang/String;)Lcom/mojang/datafixers/Dynamic;	b	makeDynamic
 METHOD	acx	(I)Lcom/mojang/datafixers/Dynamic;	b	getFixedNBTForID
 METHOD	acx	(Lit/unimi/dsi/fastutil/objects/Object2IntOpenHashMap;)V	a	func_208417_a
@@ -29159,7 +29159,7 @@ METHOD	aep	(Lcom/mojang/datafixers/OpticFinder;Lcom/mojang/datafixers/Typed;)Lco
 METHOD	aep	(Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;	a	fix
 CLASS	aeq	net/minecraft/util/datafix/fixes/ItemIntIDToString
 FIELD	aeq	Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;	a	ID_MAP
-METHOD	aeq	(I)Ljava/lang/String;	a	format_a
+METHOD	aeq	(I)Ljava/lang/String;	a	format
 METHOD	aeq	()Lcom/mojang/datafixers/TypeRewriteRule;	makeRule	makeRule
 METHOD	aeq	(Lcom/mojang/datafixers/OpticFinder;Lcom/mojang/datafixers/types/Type;Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;	a	func_206331_a
 METHOD	aeq	(Lcom/mojang/datafixers/util/Either;)Lcom/mojang/datafixers/util/Pair;	a	func_206350_a
@@ -41866,7 +41866,7 @@ METHOD	bep	(Lbek;Lbjt;)Lcrd;	a	getData
 METHOD	bep	(Lbek;Lbjt;)Lcrd;	b	getMapData
 METHOD	bep	(Lbek;)I	e	getChargeTime
 METHOD	bep	(Lbek;Lbjt;IIIZZLcbf;)Lcrd;	a	createMapData
-METHOD	bep	(I)Ljava/lang/String;	a	format_a
+METHOD	bep	(I)Ljava/lang/String;	a	format
 METHOD	bep	(Lbjt;Lakn;Lcrd;)V	a	updateMapData
 METHOD	bep	(Lbjt;Lbyg;Lfk;)Lbyg;	a	func_211698_a
 METHOD	bep	([Lbkq;III)Z	a	func_195954_a

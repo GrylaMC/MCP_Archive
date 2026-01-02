@@ -14571,13 +14571,13 @@ METHOD	nr	(Llu;)V	a	addPlayer
 METHOD	nr	(Llu;)V	b	addTrackingPlayer
 METHOD	nr	()Z	e	canRespawnHere
 CLASS	ns$1	net/minecraft/stats/StatBase$1
-METHOD	ns$1	(I)Ljava/lang/String;	a	format_a
+METHOD	ns$1	(I)Ljava/lang/String;	a	format
 CLASS	ns$2	net/minecraft/stats/StatBase$2
-METHOD	ns$2	(I)Ljava/lang/String;	a	format_a
+METHOD	ns$2	(I)Ljava/lang/String;	a	format
 CLASS	ns$3	net/minecraft/stats/StatBase$3
-METHOD	ns$3	(I)Ljava/lang/String;	a	format_a
+METHOD	ns$3	(I)Ljava/lang/String;	a	format
 CLASS	ns$4	net/minecraft/stats/StatBase$4
-METHOD	ns$4	(I)Ljava/lang/String;	a	format_a
+METHOD	ns$4	(I)Ljava/lang/String;	a	format
 CLASS	ns	net/minecraft/stats/StatBase
 FIELD	ns	Ljava/lang/String;	e	statId
 FIELD	ns	Ley;	a	statName
@@ -14594,7 +14594,7 @@ FIELD	ns	Lnt;	j	divideByTen
 METHOD	ns	()Lns;	i	initIndependentStat
 METHOD	ns	()Lns;	h	registerStat
 METHOD	ns	()Z	d	canAddStructurePieces
-METHOD	ns	(I)Ljava/lang/String;	a	format_a
+METHOD	ns	(I)Ljava/lang/String;	a	format
 METHOD	ns	()Ley;	e	getName_e
 METHOD	ns	()Ley;	j	createChatComponent
 METHOD	ns	(Ljava/lang/Object;)Z	equals	equals
@@ -14986,7 +14986,7 @@ METHOD	os	()V	a	apply
 CLASS	ot	net/minecraft/util/IStringSerializable
 CLASS	ou	net/minecraft/util/StringUtils
 FIELD	ou	Ljava/util/regex/Pattern;	a	PATTERN_CONTROL_CODE
-METHOD	ou	(I)Ljava/lang/String;	a	format_a
+METHOD	ou	(I)Ljava/lang/String;	a	format
 METHOD	ou	(Ljava/lang/String;)Ljava/lang/String;	a	filterAllowedCharacters
 METHOD	ou	(Ljava/lang/String;)Z	b	getBoolean
 CLASS	ow	net/minecraft/util/Tuple
@@ -31053,7 +31053,7 @@ FIELD	baz$a	Ljava/util/UUID;	e	uuid
 FIELD	baz$a	[Lsb;	f	slots
 METHOD	baz$a	(Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonObject;	a	serialize
 METHOD	baz$a	(Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lbaz$a;	a	deserialize
-METHOD	baz$a	(I)Ljava/lang/String;	a	format_a
+METHOD	baz$a	(I)Ljava/lang/String;	a	format
 METHOD	baz$a	(Ljava/lang/String;)I	a	getIDFromString
 METHOD	baz$a	(Lbaz$a;)Ljava/util/UUID;	a	access$000
 METHOD	baz$a	(Lbaz$a;)[Lsb;	b	access$100

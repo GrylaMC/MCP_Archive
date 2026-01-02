@@ -1366,7 +1366,7 @@ METHOD	dhj	()Ljava/util/stream/Stream;	o	getRecipeResourceLocations
 METHOD	dhj	(I)Z	c	hasPermissionLevel
 METHOD	dhj	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	a	getSuggestionsFromServer
 METHOD	dhj	(D)Ljava/lang/String;	a	formatDouble
-METHOD	dhj	(I)Ljava/lang/String;	a	format_a
+METHOD	dhj	(I)Ljava/lang/String;	a	format
 METHOD	dhj	()Ljava/util/Collection;	q	func_217294_q
 METHOD	dhj	()Ljava/util/Collection;	r	func_217293_r
 METHOD	dhj	(ILcom/mojang/brigadier/suggestion/Suggestions;)V	a	handleResponse
@@ -1589,7 +1589,7 @@ FIELD	dxe	I	i	field_194069_i
 METHOD	dxe	(Ljava/lang/Object;Ljava/lang/String;)V	a	add
 METHOD	dxe	()V	a	advancementsCleared
 METHOD	dxe	()V	b	addMemoryStatsToSnooper
-METHOD	dxe	(I)Ljava/lang/String;	a	format_a
+METHOD	dxe	(I)Ljava/lang/String;	a	format
 METHOD	dxe	(Ljava/lang/String;I)I	a	compare
 METHOD	dxe	(Ljava/lang/String;)Ljava/util/List;	a	search
 METHOD	dxe	([I[I[III)V	a	func_194054_a
@@ -10885,7 +10885,7 @@ METHOD	cte	()F	a	getBearingX
 METHOD	cte	()V	b	addMemoryStatsToSnooper
 CLASS	ctg	net/minecraft/client/audio/ALUtils
 FIELD	ctg	Lorg/apache/logging/log4j/Logger;	a	field_216484_a
-METHOD	ctg	(I)Ljava/lang/String;	a	format_a
+METHOD	ctg	(I)Ljava/lang/String;	a	format
 METHOD	ctg	(Ljava/lang/String;)Z	a	addTag
 METHOD	ctg	(I)Ljava/lang/String;	b	getObjectiveDisplaySlot
 METHOD	ctg	(JLjava/lang/String;)Z	a	func_216481_a
@@ -11455,7 +11455,7 @@ FIELD	ctq	Ljava/util/Map;	g	field_209256_g
 FIELD	ctq	Ljava/util/List;	h	field_209257_h
 FIELD	ctq	Ljava/util/List;	i	field_209258_i
 FIELD	ctq	Ljava/util/Map;	j	field_209259_j
-METHOD	ctq	(I)Ljava/lang/String;	a	format_a
+METHOD	ctq	(I)Ljava/lang/String;	a	format
 METHOD	ctq	(I)Ljava/lang/String;	b	getObjectiveDisplaySlot
 METHOD	ctq	(I)Ljava/lang/String;	c	getType
 METHOD	ctq	(I)Ljava/lang/String;	d	getSeverity
@@ -11863,7 +11863,7 @@ METHOD	ctr	(JI)Z	a	func_216506_a
 METHOD	ctr	(JLorg/lwjgl/glfw/GLFWKeyCallbackI;Lorg/lwjgl/glfw/GLFWCharModsCallbackI;)V	a	func_216505_a
 METHOD	ctr	(JLorg/lwjgl/glfw/GLFWCursorPosCallbackI;Lorg/lwjgl/glfw/GLFWMouseButtonCallbackI;Lorg/lwjgl/glfw/GLFWScrollCallbackI;)V	a	func_216503_a
 METHOD	ctr	(JIDD)V	a	func_216504_a
-METHOD	ctr	(I)Ljava/lang/String;	a	format_a
+METHOD	ctr	(I)Ljava/lang/String;	a	format
 METHOD	ctr	(I)Ljava/lang/String;	b	getObjectiveDisplaySlot
 CLASS	com/mojang/blaze3d/platform/GlStateManager$r	com/mojang/blaze3d/platform/GlStateManager$StencilState
 FIELD	com/mojang/blaze3d/platform/GlStateManager$r	Lcom/mojang/blaze3d/platform/GlStateManager$q;	a	field_179078_a
@@ -16341,7 +16341,7 @@ METHOD	ib	(Ljava/lang/String;)Ljava/lang/String;	s	handleEscape
 METHOD	ib	(Ljava/lang/String;)Ljm;	t	func_197642_t
 METHOD	ib	(Ljava/lang/String;I)Ljm;	a	toFormattedComponent
 METHOD	ib	()Lis;	b	copy
-METHOD	ib	(I)Ljava/lang/String;	a	format_a
+METHOD	ib	(I)Ljava/lang/String;	a	format
 METHOD	ib	(Ljava/lang/String;)Ljava/lang/String;	u	func_207101_q
 CLASS	ic	net/minecraft/nbt/DoubleNBT
 FIELD	ic	D	f	field_74755_a
@@ -17121,7 +17121,7 @@ METHOD	jm$a	()Lcom/google/gson/Gson;	c	func_199852_b
 CLASS	jm	net/minecraft/util/text/ITextComponent
 METHOD	jm	(Ljava/lang/String;)Ljm;	a	appendText
 METHOD	jm	()Ljava/lang/String;	getString	getString_getString
-METHOD	jm	(I)Ljava/lang/String;	a	format_a
+METHOD	jm	(I)Ljava/lang/String;	a	format
 METHOD	jm	()Ljava/lang/String;	e	getCompleteReport
 METHOD	jm	()Ljava/util/stream/Stream;	f	func_212637_f
 METHOD	jm	()Ljava/util/Iterator;	iterator	iterator
@@ -24182,7 +24182,7 @@ METHOD	yq	(Lys;Ljava/lang/Object;)Ljava/lang/String;	a	buildName
 METHOD	yq	(Lqs;)Ljava/lang/String;	a	locationToKey
 METHOD	yq	()Lys;	a	getType
 METHOD	yq	()Ljava/lang/Object;	b	getB
-METHOD	yq	(I)Ljava/lang/String;	a	format_a
+METHOD	yq	(I)Ljava/lang/String;	a	format
 METHOD	yq	(Ljava/lang/Object;)Z	equals	equals
 METHOD	yq	()I	hashCode	hashCode
 METHOD	yq	()Ljava/lang/String;	toString	toString
@@ -24192,7 +24192,7 @@ FIELD	yr	Lyr;	b	DEFAULT
 FIELD	yr	Lyr;	c	DIVIDE_BY_TEN
 FIELD	yr	Lyr;	d	DISTANCE
 FIELD	yr	Lyr;	e	TIME
-METHOD	yr	(I)Ljava/lang/String;	a	format_a
+METHOD	yr	(I)Ljava/lang/String;	a	format
 METHOD	yr	(I)Ljava/lang/String;	b	getObjectiveDisplaySlot
 METHOD	yr	(I)Ljava/lang/String;	c	getType
 METHOD	yr	(Ljava/text/DecimalFormat;)V	a	lambda$static$0
@@ -24781,7 +24781,7 @@ METHOD	zw	()V	a	advancementsCleared
 CLASS	zx	net/minecraft/util/IStringSerializable
 CLASS	zy	net/minecraft/util/StringUtils
 FIELD	zy	Ljava/util/regex/Pattern;	a	field_76339_a
-METHOD	zy	(I)Ljava/lang/String;	a	format_a
+METHOD	zy	(I)Ljava/lang/String;	a	format
 METHOD	zy	(Ljava/lang/String;)Ljava/lang/String;	a	bidiReorder
 METHOD	zy	(Ljava/lang/String;)Z	b	exists
 CLASS	zz	net/minecraft/util/Tuple
@@ -24952,7 +24952,7 @@ FIELD	aav	Lit/unimi/dsi/fastutil/objects/Object2IntMap;	d	field_199202_d
 METHOD	aav	(ILjava/lang/String;[Ljava/lang/String;)V	a	addEntry
 METHOD	aav	(Lcom/mojang/datafixers/Dynamic;)Lcom/mojang/datafixers/Dynamic;	a	fix
 METHOD	aav	(Ljava/lang/String;)Ljava/lang/String;	a	bidiReorder
-METHOD	aav	(I)Ljava/lang/String;	a	format_a
+METHOD	aav	(I)Ljava/lang/String;	a	format
 METHOD	aav	(Ljava/lang/String;)Lcom/mojang/datafixers/Dynamic;	b	makeDynamic
 METHOD	aav	(I)Lcom/mojang/datafixers/Dynamic;	b	getFixedNBTForID
 METHOD	aav	(Lit/unimi/dsi/fastutil/objects/Object2IntOpenHashMap;)V	a	func_208417_a
@@ -25291,7 +25291,7 @@ METHOD	acm	(Lcom/mojang/datafixers/OpticFinder;Lcom/mojang/datafixers/Typed;)Lco
 METHOD	acm	(Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;	a	fix
 CLASS	acn	net/minecraft/util/datafix/fixes/ItemIntIDToString
 FIELD	acn	Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;	a	field_188221_a
-METHOD	acn	(I)Ljava/lang/String;	a	format_a
+METHOD	acn	(I)Ljava/lang/String;	a	format
 METHOD	acn	()Lcom/mojang/datafixers/TypeRewriteRule;	makeRule	makeRule
 METHOD	acn	(Lcom/mojang/datafixers/OpticFinder;Lcom/mojang/datafixers/types/Type;Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;	a	func_206331_a
 METHOD	acn	(Lcom/mojang/datafixers/util/Either;)Lcom/mojang/datafixers/util/Pair;	a	func_206350_a
@@ -37489,7 +37489,7 @@ METHOD	bcf	(Lbca;Lbhh;)Lcnv;	a	func_219994_a
 METHOD	bcf	(Lbca;Lbhh;)Lcnv;	b	getMapData
 METHOD	bcf	(Lbca;)I	e	getGeneration
 METHOD	bcf	(Lbca;Lbhh;IIIZZLbyd;)Lcnv;	a	createMapData
-METHOD	bcf	(I)Ljava/lang/String;	a	format_a
+METHOD	bcf	(I)Ljava/lang/String;	a	format
 METHOD	bcf	(Lbhh;Laif;Lcnv;)V	a	updateMapData
 METHOD	bcf	(Lbhh;Lbvj;Lev;)Lbvj;	a	func_211698_a
 METHOD	bcf	([Lbie;III)Z	a	func_195954_a

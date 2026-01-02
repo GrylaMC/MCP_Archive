@@ -14374,13 +14374,13 @@ METHOD	np	(Lls;)V	a	addPlayer
 METHOD	np	(Lls;)V	b	addTrackingPlayer
 METHOD	np	()Z	e	canRepeat
 CLASS	nq$1	net/minecraft/stats/StatBase$1
-METHOD	nq$1	(I)Ljava/lang/String;	a	format_a
+METHOD	nq$1	(I)Ljava/lang/String;	a	format
 CLASS	nq$2	net/minecraft/stats/StatBase$2
-METHOD	nq$2	(I)Ljava/lang/String;	a	format_a
+METHOD	nq$2	(I)Ljava/lang/String;	a	format
 CLASS	nq$3	net/minecraft/stats/StatBase$3
-METHOD	nq$3	(I)Ljava/lang/String;	a	format_a
+METHOD	nq$3	(I)Ljava/lang/String;	a	format
 CLASS	nq$4	net/minecraft/stats/StatBase$4
-METHOD	nq$4	(I)Ljava/lang/String;	a	format_a
+METHOD	nq$4	(I)Ljava/lang/String;	a	format
 CLASS	nq	net/minecraft/stats/StatBase
 FIELD	nq	Ljava/lang/String;	e	statId
 FIELD	nq	Lew;	a	statName
@@ -14397,7 +14397,7 @@ FIELD	nq	Lnr;	j	divideByTen
 METHOD	nq	()Lnq;	i	initIndependentStat
 METHOD	nq	()Lnq;	h	registerStat
 METHOD	nq	()Z	d	canAddStructurePieces
-METHOD	nq	(I)Ljava/lang/String;	a	format_a
+METHOD	nq	(I)Ljava/lang/String;	a	format
 METHOD	nq	()Lew;	e	getName_e
 METHOD	nq	()Lew;	j	createChatComponent
 METHOD	nq	(Ljava/lang/Object;)Z	equals	equals
@@ -14789,7 +14789,7 @@ METHOD	oq	()V	a	apply
 CLASS	or	net/minecraft/util/IStringSerializable
 CLASS	os	net/minecraft/util/StringUtils
 FIELD	os	Ljava/util/regex/Pattern;	a	PATTERN_CONTROL_CODE
-METHOD	os	(I)Ljava/lang/String;	a	format_a
+METHOD	os	(I)Ljava/lang/String;	a	format
 METHOD	os	(Ljava/lang/String;)Ljava/lang/String;	a	filterAllowedCharacters
 METHOD	os	(Ljava/lang/String;)Z	b	getBoolean
 CLASS	ou	net/minecraft/util/Tuple
@@ -30498,7 +30498,7 @@ FIELD	bag$a	Ljava/util/UUID;	e	uuid
 FIELD	bag$a	[Lrw;	f	slots
 METHOD	bag$a	(Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonObject;	a	serialize
 METHOD	bag$a	(Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lbag$a;	a	deserialize
-METHOD	bag$a	(I)Ljava/lang/String;	a	format_a
+METHOD	bag$a	(I)Ljava/lang/String;	a	format
 METHOD	bag$a	(Ljava/lang/String;)I	a	getIDFromString
 METHOD	bag$a	(Lbag$a;)Ljava/util/UUID;	a	access$000
 METHOD	bag$a	(Lbag$a;)[Lrw;	b	access$100
