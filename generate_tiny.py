@@ -617,6 +617,7 @@ if __name__ == "__main__":
         style_python_with_renamer(*stdname(zip, versions), "mcp_mid_exceptor.py")
 
     for zip, versions in [
+        ("1.6.1/mcp802.zip", ["1.6.1"]),
         ("1.6.1/mcp803.zip", ["1.6.1"]),
 
         ("1.6.2/mcp804.zip", ["1.6.2"]),
