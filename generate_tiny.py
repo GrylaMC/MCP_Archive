@@ -655,7 +655,18 @@ if __name__ == "__main__":
             use_piston_json=True,
         )
 
+
+
+    convert_srg_config(
+        "@omni@13w02b",
+        join(EXTRACTED_FORGE_DIR, "13w02b", "mcp730"),
+        tinyname("13w02b", "mcp730"),
+    )
     for mc_ver, mcp_ver in [
+        ("1.4.3", "mcp720"),
+        ("1.4.5", "mcp722"),
+        ("1.6", "mcp801"),
+        ("1.7.2", "mcp901-alpha"),
         ("1.7.9", "mcp904"),
         ("1.7.10", "mcp905")]:
         convert_srg_config(
