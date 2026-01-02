@@ -1,3 +1,20 @@
+"""
+The inject python script for later MCP exceptor versions.
+For more information see generate_tiny.py.
+
+Input: 
+    sys.argv[1] for the jar file to be mapped
+    sys.argv[2] for the client JSON for the jar to be mapped
+
+Output: 
+    Mapped jar file goes to MCP_DIR/temp/out.jar
+
+
+Copyright (C) 2026 - PsychedelicPalimpsest
+Feel free to share this within the bounds of 
+CC0 1.0 Universal
+"""
+
 from os.path import abspath, exists, join 
 import sys, os
 import shutil

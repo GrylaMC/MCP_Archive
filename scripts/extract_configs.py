@@ -1,5 +1,10 @@
 """
 Go through and extract all the configs.
+
+
+Copyright (C) 2026 - PsychedelicPalimpsest
+Feel free to share this within the bounds of 
+CC0 1.0 Universal
 """
 import subprocess, os
 import sys

@@ -1,3 +1,9 @@
+"""
+Copyright (C) 2026 - PsychedelicPalimpsest
+Feel free to share this within the bounds of 
+CC0 1.0 Universal
+"""
+
 import os, subprocess, sys
 import tempfile
 from os.path import abspath, dirname, exists, join

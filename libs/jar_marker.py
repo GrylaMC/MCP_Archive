@@ -1,3 +1,15 @@
+"""
+This is an EVIL file. It generates corruped jar files, 
+and uses that to track the actions of mappers.
+
+
+Copyright (C) 2026 - PsychedelicPalimpsest
+Feel free to share this within the bounds of 
+CC0 1.0 Universal
+"""
+
+
+
 import jpype
 import jpype.imports
 from jpype.types import *

@@ -1,3 +1,9 @@
+"""
+Copyright (C) 2026 - PsychedelicPalimpsest
+Feel free to share this within the bounds of 
+CC0 1.0 Universal
+"""
+
 from logging import RootLogger
 from os.path import basename, dirname, exists, isdir, join, abspath, splitext
 import os, sys, subprocess, tempfile, shutil

@@ -1,3 +1,11 @@
+"""
+Copyright (C) 2026 - PsychedelicPalimpsest
+Feel free to share this within the bounds of 
+CC0 1.0 Universal
+"""
+
+
+
 import os, json
 
 from os.path import join, splitext, dirname, abspath

@@ -1,8 +1,18 @@
-# This file is meant to be executed within the embeded MCP python interpreter
-# and will simply instruct MCP to remap the jar. However, due to this being
-# the beta version, it still requires field renaming after this!
+"""
+The inject python script for later MCP exceptor versions.
+For more information see generate_tiny.py.
 
-# Outputs: temp/minecraft_rg.jar
+Input: 
+    sys.argv[1] for the jar file to be mapped
+
+Output: 
+    Mapped jar file goes to MCP_DIR/temp/out.jar
+
+
+Copyright (C) 2026 - PsychedelicPalimpsest
+Feel free to share this within the bounds of 
+CC0 1.0 Universal
+"""
 
 from os.path import abspath, join
 import sys, os
