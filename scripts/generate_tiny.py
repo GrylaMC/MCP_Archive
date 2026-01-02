@@ -40,7 +40,7 @@ WINE_ENV["WINEDEBUG"] = "err-all,fixme-all"
 def get_mcp_temp(zip_file: str, replace_cfg: None | str = None, config_dir="conf"):
     with tempfile.TemporaryDirectory(delete=False) as f:
         if subprocess.call(["unzip", "-q", zip_file, "-d", f]) > 1:
-            raise RuntimeError("Cannot unzip")
+            raise RuntimeError("Cannot unzip: " + zip_file)
         if replace_cfg is not None:
             shutil.rmtree(join(f, config_dir))
             shutil.copytree(replace_cfg, join(f, config_dir))
@@ -633,16 +633,20 @@ if __name__ == "__main__":
         ("1.2.5/mcp62.zip", ["1.2.5"]),
         ("12w17a/mcp65.zip", ["@omni@12w17a-1424"]),
         ("12w26a/mcp615.zip", ["@omni@12w26a"]),
+
         ("1.3.1/mcp70.zip", ["1.3.1"]),
         ("1.3.1/mcp70a.zip", ["1.3.1"]),
         ("1.3.2/mcp72.zip", ["1.3.2"]),
+
         ("1.4/mcp717_pre3.zip", ["1.4"]),
         ("1.4.2/mcp719.zip", ["1.4.2"]),
+        ("1.4.3/mcp720pre1.zip", ["1.4.3"]),
         ("1.4.4/mcp721.zip", ["1.4.4"]),
         ("1.4.5/mcp723.zip", ["1.4.5"]),
         ("1.4.6/mcp725.zip", ["1.4.6"]),
         ("1.4.7/mcp726.zip", ["1.4.7"]),
         ("1.4.7/mcp726a.zip", ["1.4.7"]),
+
         ("13w02b/mcp730c.zip", ["@omni@13w02b"]),
         # Fails to generate
         # ("13w05b/mcp734.zip", ["@omni@13w05b"]),
