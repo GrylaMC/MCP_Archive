@@ -24,10 +24,13 @@ WINE_ENV = os.environ.copy()
 WINE_ENV["WINEDEBUG"] = "err-all,fixme-all"
 
 
-def get_mcp_temp(zip_file: str):
+def get_mcp_temp(zip_file: str, replace_cfg: None | str = None, config_dir="conf"):
     with tempfile.TemporaryDirectory(delete=False) as f:
         if subprocess.call(["unzip", "-q", zip_file, "-d", f]) > 1:
             raise RuntimeError("Cannot unzip")
+        if replace_cfg is not None:
+            shutil.rmtree(join(f, config_dir))
+            shutil.copytree(replace_cfg, join(f, config_dir))
         return f
 
 
@@ -296,7 +299,11 @@ def tiny_renamer(mcp_fields, mcp_methods, tiny_file, ignore_conflicts: bool = Fa
 # Used in a1.2.1_01-b1.3_01 (MCP 29a), and then for a few three digit MCP versions after.
 # This format is differentiated by its dual use of retroguard and CSVs.
 def style_alpha(
-    mcp_zip, mc_versions: list[tuple[str, str]], ignore_conflicts: bool = False
+    mcp_zip,
+    mc_versions: list[tuple[str, str]],
+    ignore_conflicts: bool = False,
+    replace_cfg: None | str = None,
+    config_dir="conf",
 ):
     mcp_dir = None
     mcp_fields = {}
@@ -306,7 +313,9 @@ def style_alpha(
             continue
 
         if mcp_dir is None:
-            mcp_dir = get_mcp_temp(mcp_zip)
+            mcp_dir = get_mcp_temp(
+                mcp_zip, replace_cfg=replace_cfg, config_dir=config_dir
+            )
             mcp_fields = load_alpha_field_csv(join(mcp_dir, "conf", "fields.csv"))
             mcp_methods = load_alpha_method_csv(join(mcp_dir, "conf", "methods.csv"))
             print(f"=========== {basename(mcp_zip)}: Style Alpha ===========")
@@ -362,7 +371,7 @@ def apply_patch(file_to_patch, patch_file):
         print(f"Failed to apply patch: {e.stderr}")
 
 
-# Used in b1.4_01 (MCP 30) onwards (BUT NOT FORGE VERSIONS)
+# Used in b1.4_01 (MCP 30) onwards (BUT NOT ALL FORGE VERSIONS)
 # This, and future versions require python injection.
 # However, is still requires the jar to be renamed using the CSVs.
 #
@@ -375,6 +384,8 @@ def style_python_with_renamer(
     method_loader=load_beta_csv,
     patches: None | list[tuple[str, str]] = None,
     use_piston_json=False,
+    replace_cfg: None | str = None,
+    config_dir="conf",
 ):
     patches = patches if patches is not None else []
 
@@ -386,7 +397,9 @@ def style_python_with_renamer(
             continue
 
         if mcp_dir is None:
-            mcp_dir = get_mcp_temp(mcp_zip)
+            mcp_dir = get_mcp_temp(
+                mcp_zip, replace_cfg=replace_cfg, config_dir=config_dir
+            )
             mcp_fields = field_loader(join(mcp_dir, "conf", "fields.csv"))
             mcp_methods = method_loader(join(mcp_dir, "conf", "methods.csv"))
 
@@ -425,30 +438,52 @@ def style_python_with_renamer(
         shutil.rmtree(mcp_dir)
 
 
+EXTRACTED_FORGE_DIR = "extracted_forge_configs"
+
+
 SPECIAL_SOURCE_URL = "https://repo1.maven.org/maven2/net/md-5/SpecialSource/1.11.5/SpecialSource-1.11.5-shaded.jar"
 SPECIAL_SOURCE = download_cached(SPECIAL_SOURCE_URL, "SpecialSource.jar")
 FORGE_MAPPINGS = join("newer_mappings", "versions")
 
 
-
-
-
-
 def special_source_map(jar, mapping):
     temp = tempfile.mktemp(".jar")
-    subprocess.check_call([
-        "java", "-jar", SPECIAL_SOURCE,
-        "-i", jar,
-        "-o", temp,
-        "-m",  mapping
-    ])
+    subprocess.check_call(
+        ["java", "-jar", SPECIAL_SOURCE, "-i", jar, "-o", temp, "-m", mapping]
+    )
 
     return temp
 
 
+def convert_srg_config(mc_ver, diR, tiny):
+    tiny_dir = join("tiny_v1s", mc_ver)
+    os.makedirs(tiny_dir, exist_ok=True)
+
+    if exists(tiny):
+        return
+
+    print(f"=========== {mc_ver}: Style MCP Config with renamer ===========")
+    tainted_jar = tempfile.mktemp(".jar")
+    taint_jar(get_piston_file(mc_ver, "client"), tainted_jar)
+
+    mapping_file = "joined.srg"
+
+    print("[*] Running SpecialSource remapper")
+    tainted_mapped_jar = special_source_map(tainted_jar, join(diR, mapping_file))
+    os.remove(tainted_jar)
+
+    generate_tiny(tainted_mapped_jar, tiny)
+    tiny_renamer(
+        load_beta_csv(join(diR, "fields.csv")),
+        load_beta_csv(join(diR, "methods.csv")),
+        tiny,
+    )
+
+    os.remove(tainted_mapped_jar)
+
 
 # Works with mcp and mcp-tsrg types
-def forge_mcp_style(mc_ver, diR, mapping_json): 
+def forge_mcp_style(mc_ver, diR, mapping_json):
     tiny_dir = join("tiny_v1s", mc_ver)
     os.makedirs(tiny_dir, exist_ok=True)
     tiny = join(tiny_dir, mc_ver + "-mcpFORGE.tiny")
@@ -456,38 +491,31 @@ def forge_mcp_style(mc_ver, diR, mapping_json):
     if exists(tiny):
         return
 
-
-    print(
-                f"=========== {mc_ver}: Style Forge MCP with renamer ==========="
-            )
+    print(f"=========== {mc_ver}: Style Forge MCP with renamer ===========")
     tainted_jar = tempfile.mktemp(".jar")
     taint_jar(get_piston_file(mc_ver, "client"), tainted_jar)
 
-    
-    mapping_file = mapping_json["files"]["srg"] if mapping_json["type"] == "mcp" else mapping_json["files"]["tsrg"]
+    mapping_file = (
+        mapping_json["files"]["srg"]
+        if mapping_json["type"] == "mcp"
+        else mapping_json["files"]["tsrg"]
+    )
 
     print("[*] Running SpecialSource remapper")
-    tainted_mapped_jar = special_source_map(
-        tainted_jar,
-        join(diR, mapping_file)
-    )
+    tainted_mapped_jar = special_source_map(tainted_jar, join(diR, mapping_file))
     os.remove(tainted_jar)
-
-
-
 
     generate_tiny(tainted_mapped_jar, tiny)
     tiny_renamer(
         load_beta_csv(join(diR, "fields.csv")),
         load_beta_csv(join(diR, "methods.csv")),
-        tiny
+        tiny,
     )
 
     os.remove(tainted_mapped_jar)
 
 
-
-def convert_from_forge():
+def convert_from_modern_forge():
     for diR in os.listdir(FORGE_MAPPINGS):
         mc_ver = diR
         diR = join(FORGE_MAPPINGS, diR)
@@ -501,25 +529,20 @@ def convert_from_forge():
                 # TODO: This version is invalid
                 continue
 
-
             forge_mcp_style(mc_ver, diR, mapping_json)
         elif typE == "mcp":
             forge_mcp_style(mc_ver, diR, mapping_json)
-        elif typE !=  "mcp-tsrg":
+        elif typE != "mcp-tsrg":
             print(f"UNKNOWN TYPE: {typE}")
 
 
-
-
-
-
-        
-
-
-
 if __name__ == "__main__":
-    convert_from_forge()
 
+    tinyname = lambda mc_ver, mcp_ver: join(
+        "tiny_v1s",
+        mc_ver,
+        f"{mc_ver}-{mcp_ver}.tiny",
+    )
 
     stdname = lambda zip, versions, *args: (
         join("complete_packs", zip),
@@ -541,7 +564,6 @@ if __name__ == "__main__":
     for zip, versions, *args in [
         ("a1.2.1_01/mcp20.zip", ["a1.2.1_01"]),
         ("a1.2.1_01/mcp20a.zip", ["a1.2.1_01"]),
-
         # Note: the a versions are debug releases
         ("a1.2.2/mcp21.zip", ["a1.2.2a", "a1.2.2b"], True),
         ("a1.2.2/mcp22.zip", ["a1.2.2a", "a1.2.2b"], True),
@@ -585,14 +607,10 @@ if __name__ == "__main__":
     for zip, versions in [
         ("1.2.3/mcp60.zip", ["1.2.3"]),
         ("1.2.4/mcp61.zip", ["1.2.4"]),
-
         ("12w26a/mcp615.zip", ["@omni@12w26a"]),
-
         ("1.2.5/mcp62.zip", ["1.2.5"]),
-
         ("12w17a/mcp65.zip", ["@omni@12w17a-1424"]),
         ("12w26a/mcp615.zip", ["@omni@12w26a"]),
-
         ("1.3.1/mcp70.zip", ["1.3.1"]),
         ("1.3.1/mcp70a.zip", ["1.3.1"]),
         ("1.3.2/mcp72.zip", ["1.3.2"]),
@@ -600,16 +618,12 @@ if __name__ == "__main__":
         ("1.4.4/mcp721.zip", ["1.4.4"]),
         ("1.4.5/mcp723.zip", ["1.4.5"]),
         ("1.4.6/mcp725.zip", ["1.4.6"]),
+        ("1.4.7/mcp726.zip", ["1.4.7"]),
         ("1.4.7/mcp726a.zip", ["1.4.7"]),
-
-
         ("13w02b/mcp730c.zip", ["@omni@13w02b"]),
-
         # Fails to generate
-        #("13w05b/mcp734.zip", ["@omni@13w05b"]),
-
+        # ("13w05b/mcp734.zip", ["@omni@13w05b"]),
         ("13w09c/mcp739.zip", ["@omni@13w09c"]),
-
         ("1.5/mcp742.zip", ["1.5"]),
         ("1.5.1/mcp744.zip", ["1.5.1"]),
         ("1.5.2/mcp751.zip", ["1.5.2"]),
@@ -619,29 +633,32 @@ if __name__ == "__main__":
     for zip, versions in [
         ("1.6.1/mcp802.zip", ["1.6.1"]),
         ("1.6.1/mcp803.zip", ["1.6.1"]),
-
         ("1.6.2/mcp804.zip", ["1.6.2"]),
         ("1.6.2/mcp805.zip", ["1.6.2"]),
-
         ("1.6.3/mcp809.zip", ["1.6.3"]),
-
         ("1.6.4/mcp811.zip", ["1.6.3"]),
         ("1.6.4/mcp811.zip", ["1.6.3"]),
-
         ("1.7.2/mcp903.zip", ["1.7.2"]),
         ("1.7.10/mcp908.zip", ["1.7.10"]),
-
         ("1.8/mcp910-pre1.zip", ["1.8"]),
         ("1.8.8/mcp918.zip", ["1.8.8"]),
-
         ("1.9/mcp924-beta1.zip", ["1.9"]),
         ("1.9.4/mcp928.zip", ["1.9.4"]),
-
         ("1.10.2/mcp931.zip", ["1.10.2"]),
         ("1.11.2/mcp937.zip", ["1.11.2"]),
         ("1.12/mcp940.zip", ["1.12"]),
-
     ]:
         style_python_with_renamer(
-            *stdname(zip, versions), "mcp_later_exceptor.py", patches=[], use_piston_json=True
+            *stdname(zip, versions),
+            "mcp_later_exceptor.py",
+            patches=[],
+            use_piston_json=True,
         )
+
+    convert_srg_config(
+        "1.7.10",
+        join(EXTRACTED_FORGE_DIR, "1.7.10", "mcp905"),
+        tinyname("1.7.10", "mcp905"),
+    )
+
+    convert_from_modern_forge()
