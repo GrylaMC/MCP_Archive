@@ -14870,13 +14870,13 @@ METHOD	nv	(Lly;)V	a	addPlayer
 METHOD	nv	(Lly;)V	b	addTrackingPlayer
 METHOD	nv	()Z	e	canRespawnHere
 CLASS	nw$1	net/minecraft/stats/StatBase$1
-METHOD	nw$1	(I)Ljava/lang/String;	a	format
+METHOD	nw$1	(I)Ljava/lang/String;	a	format_a
 CLASS	nw$2	net/minecraft/stats/StatBase$2
-METHOD	nw$2	(I)Ljava/lang/String;	a	format
+METHOD	nw$2	(I)Ljava/lang/String;	a	format_a
 CLASS	nw$3	net/minecraft/stats/StatBase$3
-METHOD	nw$3	(I)Ljava/lang/String;	a	format
+METHOD	nw$3	(I)Ljava/lang/String;	a	format_a
 CLASS	nw$4	net/minecraft/stats/StatBase$4
-METHOD	nw$4	(I)Ljava/lang/String;	a	format
+METHOD	nw$4	(I)Ljava/lang/String;	a	format_a
 CLASS	nw	net/minecraft/stats/StatBase
 FIELD	nw	Ljava/lang/String;	e	statId
 FIELD	nw	Lfb;	a	statName
@@ -14893,7 +14893,7 @@ FIELD	nw	Lnx;	j	divideByTen
 METHOD	nw	()Lnw;	i	initIndependentStat
 METHOD	nw	()Lnw;	h	registerStat
 METHOD	nw	()Z	d	canAddStructurePieces
-METHOD	nw	(I)Ljava/lang/String;	a	format
+METHOD	nw	(I)Ljava/lang/String;	a	format_a
 METHOD	nw	()Lfb;	e	getName_e
 METHOD	nw	()Lfb;	j	createChatComponent
 METHOD	nw	(Ljava/lang/Object;)Z	equals	equals
@@ -15285,7 +15285,7 @@ METHOD	ow	()V	a	apply
 CLASS	ox	net/minecraft/util/IStringSerializable
 CLASS	oy	net/minecraft/util/StringUtils
 FIELD	oy	Ljava/util/regex/Pattern;	a	PATTERN_CONTROL_CODE
-METHOD	oy	(I)Ljava/lang/String;	a	format
+METHOD	oy	(I)Ljava/lang/String;	a	format_a
 METHOD	oy	(Ljava/lang/String;)Ljava/lang/String;	a	filterAllowedCharacters
 METHOD	oy	(Ljava/lang/String;)Z	b	getBoolean
 CLASS	pa	net/minecraft/util/Tuple
@@ -32194,7 +32194,7 @@ FIELD	bcu$a	Ljava/util/UUID;	e	uuid
 FIELD	bcu$a	[Lss;	f	slots
 METHOD	bcu$a	(Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonObject;	a	serialize
 METHOD	bcu$a	(Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lbcu$a;	a	deserialize
-METHOD	bcu$a	(I)Ljava/lang/String;	a	format
+METHOD	bcu$a	(I)Ljava/lang/String;	a	format_a
 METHOD	bcu$a	(Ljava/lang/String;)I	a	getOperationFromInt
 METHOD	bcu$a	(Lbcu$a;)Ljava/util/UUID;	a	access$000
 METHOD	bcu$a	(Lbcu$a;)[Lss;	b	access$100

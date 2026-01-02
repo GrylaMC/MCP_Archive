@@ -212,20 +212,33 @@ def tiny_renamer(mcp_fields, mcp_methods, tiny_file, ignore_conflicts: bool = Fa
     # Final Map: (Obf, Desc) -> FinalUniqueName
     final_sig_map = {}
 
+    # Hardcoded known conflicts where the TargetName exists in the source JAR (unmapped)
+    # causing a collision between MappedName and UnmappedName.
+    # Format: (TargetName, Descriptor)
+    KNOWN_JAR_CONFLICTS = {
+        ("format", "(I)Ljava/lang/String;")
+    }
+
     for (t_name, desc), obf_list in target_claims.items():
-        if len(obf_list) > 1:
-            # Collision detected! multiple obf names want this target+desc
+        is_jar_conflict = (t_name, desc) in KNOWN_JAR_CONFLICTS
+
+        if len(obf_list) > 1 or is_jar_conflict:
+            # Collision detected! multiple obf names want this target+desc OR jar conflict
             # Sort to ensure 'a' always wins over 'e' (stability)
             obf_list.sort()
 
-            winner = obf_list[0]
-            print(f"[WARN] Target Collision on {t_name}{desc}: claimed by {obf_list}")
+            if is_jar_conflict:
+                 print(f"[WARN] JAR Conflict on {t_name}{desc}: claimed by {obf_list}. Renaming all.")
+                 start_idx = 0
+            else:
+                winner = obf_list[0]
+                print(f"[WARN] Target Collision on {t_name}{desc}: claimed by {obf_list}")
+                # Winner keeps the clean name
+                final_sig_map[(winner, desc)] = t_name
+                start_idx = 1
 
-            # Winner keeps the clean name
-            final_sig_map[(winner, desc)] = t_name
-
-            # Losers get suffixed with their obf name to prevent crash
-            for loser in obf_list[1:]:
+            # Losers (or all if jar conflict) get suffixed with their obf name to prevent crash
+            for loser in obf_list[start_idx:]:
                 new_name = f"{t_name}_{loser}"
                 final_sig_map[(loser, desc)] = new_name
                 print(f"       -> Renaming {loser} to {new_name}")
@@ -236,8 +249,6 @@ def tiny_renamer(mcp_fields, mcp_methods, tiny_file, ignore_conflicts: bool = Fa
     final_lines = []
 
     # For local class deduplication (Pass 3 safety)
-    used_field_keys = set()
-    used_method_keys = set()
     lines_to_check = []
 
     print("[*] Applying resolved mappings...")
@@ -294,7 +305,6 @@ def tiny_renamer(mcp_fields, mcp_methods, tiny_file, ignore_conflicts: bool = Fa
     with open(tiny_file, "w") as fout:
         fout.writelines(final_lines)
     print("[*] Finished renaming operations")
-
 
 # Used in a1.2.1_01-b1.3_01 (MCP 29a), and then for a few three digit MCP versions after.
 # This format is differentiated by its dual use of retroguard and CSVs.
@@ -660,9 +670,11 @@ if __name__ == "__main__":
     convert_srg_config(
         "@omni@13w02b",
         join(EXTRACTED_FORGE_DIR, "13w02b", "mcp730"),
-        tinyname("13w02b", "mcp730"),
+        tinyname("@omni@13w02b", "mcp730"),
     )
     for mc_ver, mcp_ver in [
+        ("1.4", "mcp717"),
+        ("1.4.1", "mcp718"),
         ("1.4.3", "mcp720"),
         ("1.4.5", "mcp722"),
         ("1.6", "mcp801"),

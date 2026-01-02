@@ -10380,13 +10380,13 @@ METHOD	pg	(Lmw;)V	a	addPlayer
 METHOD	pg	(Lmw;)V	b	filterChunkLoadQueue
 METHOD	pg	()Z	e	areAllPlayersAsleep
 CLASS	pi	net/minecraft/stats/StatBase$1
-METHOD	pi	(I)Ljava/lang/String;	a	format
+METHOD	pi	(I)Ljava/lang/String;	a	format_a
 CLASS	pj	net/minecraft/stats/StatBase$2
-METHOD	pj	(I)Ljava/lang/String;	a	format
+METHOD	pj	(I)Ljava/lang/String;	a	format_a
 CLASS	pk	net/minecraft/stats/StatBase$3
-METHOD	pk	(I)Ljava/lang/String;	a	format
+METHOD	pk	(I)Ljava/lang/String;	a	format_a
 CLASS	pl	net/minecraft/stats/StatBase$4
-METHOD	pl	(I)Ljava/lang/String;	a	format
+METHOD	pl	(I)Ljava/lang/String;	a	format_a
 CLASS	ph	net/minecraft/stats/StatBase
 FIELD	ph	Ljava/lang/String;	e	statId
 FIELD	ph	Lfj;	a	statName
@@ -10403,7 +10403,7 @@ FIELD	ph	Lpm;	j	field_111202_k
 METHOD	ph	()Lph;	i	initIndependentStat
 METHOD	ph	()Lph;	h	registerStat
 METHOD	ph	()Z	d	canAddStructurePieces
-METHOD	ph	(I)Ljava/lang/String;	a	format
+METHOD	ph	(I)Ljava/lang/String;	a	format_a
 METHOD	ph	()Lfj;	e	getStatName
 METHOD	ph	()Lfj;	j	func_150955_j
 METHOD	ph	(Ljava/lang/Object;)Z	equals	equals
@@ -10699,7 +10699,7 @@ FIELD	qm	F	c	field_76335_c
 METHOD	qm	(FF)F	a	smooth
 CLASS	qn	net/minecraft/util/StringUtils
 FIELD	qn	Ljava/util/regex/Pattern;	a	patternControlCode
-METHOD	qn	(I)Ljava/lang/String;	a	format
+METHOD	qn	(I)Ljava/lang/String;	a	format_a
 METHOD	qn	(Ljava/lang/String;)Ljava/lang/String;	a	filterAllowedCharacters
 METHOD	qn	(Ljava/lang/String;)Z	b	containsKey
 CLASS	qu	net/minecraft/util/Tuple
