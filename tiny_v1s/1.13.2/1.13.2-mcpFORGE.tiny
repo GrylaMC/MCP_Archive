@@ -460,7 +460,7 @@ METHOD	cgd	()Z	d	active_d
 METHOD	cgd	(Z)V	a	applyFog
 METHOD	cgd	()Ljava/util/Optional;	e	getVideoMode
 METHOD	cgd	()I	f	getChatHeight
-METHOD	cgd	(I)Ljava/lang/String;	a	format
+METHOD	cgd	(I)Ljava/lang/String;	a	format_a
 METHOD	cgd	(I)V	b	bindTexture
 METHOD	cgd	()V	g	alertOthers
 METHOD	cgd	()V	z	disableTexture2D
@@ -1105,7 +1105,7 @@ METHOD	cre	()Ljava/util/Collection;	o	getRecipeResourceLocations
 METHOD	cre	(I)Z	c	hasPermissionLevel
 METHOD	cre	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	a	getSuggestionsFromServer
 METHOD	cre	(D)Ljava/lang/String;	a	formatDouble
-METHOD	cre	(I)Ljava/lang/String;	a	format
+METHOD	cre	(I)Ljava/lang/String;	a	format_a
 METHOD	cre	(Z)Ljava/util/Collection;	a	getCoordinates
 METHOD	cre	(ILcom/mojang/brigadier/suggestion/Suggestions;)V	a	handleResponse
 CLASS	cfo$b	net/minecraft/client/util/InputMappings$Type
@@ -1175,7 +1175,7 @@ FIELD	dge	I	i	maxStringLength
 METHOD	dge	(Ljava/lang/Object;Ljava/lang/String;)V	a	add
 METHOD	dge	()V	a	addStructureFeatures
 METHOD	dge	()V	b	addMemoryStatsToSnooper
-METHOD	dge	(I)Ljava/lang/String;	a	format
+METHOD	dge	(I)Ljava/lang/String;	a	format_a
 METHOD	dge	(Ljava/lang/String;I)I	a	compare
 METHOD	dge	(Ljava/lang/String;)Ljava/util/List;	a	search
 METHOD	dge	([I[I[III)V	a	func_194054_a
@@ -14589,7 +14589,7 @@ METHOD	gy	(Ljava/lang/String;)Ljava/lang/String;	s	handleEscape
 METHOD	gy	(Ljava/lang/String;)Lij;	t	func_197642_t
 METHOD	gy	(Ljava/lang/String;I)Lij;	a	toFormattedComponent
 METHOD	gy	()Lho;	b	copy
-METHOD	gy	(I)Ljava/lang/String;	a	format
+METHOD	gy	(I)Ljava/lang/String;	a	format_a
 METHOD	gy	(Ljava/lang/String;)Ljava/lang/String;	u	func_210337_u
 CLASS	gz	net/minecraft/nbt/NBTTagDouble
 FIELD	gz	D	f	data
@@ -15342,7 +15342,7 @@ METHOD	ij$a	()Lcom/google/gson/Gson;	c	func_199852_b
 CLASS	ij	net/minecraft/util/text/ITextComponent
 METHOD	ij	(Ljava/lang/String;)Lij;	a	appendText
 METHOD	ij	()Ljava/lang/String;	getString	getString_getString
-METHOD	ij	(I)Ljava/lang/String;	a	format
+METHOD	ij	(I)Ljava/lang/String;	a	format_a
 METHOD	ij	()Ljava/lang/String;	e	getCompleteReport
 METHOD	ij	()Ljava/util/stream/Stream;	f	getJvmFlags
 METHOD	ij	()Ljava/util/Iterator;	iterator	iterator
@@ -21467,7 +21467,7 @@ METHOD	wp	(Lwr;Ljava/lang/Object;)Ljava/lang/String;	a	buildName
 METHOD	wp	(Lpc;)Ljava/lang/String;	a	locationToKey
 METHOD	wp	()Lwr;	a	getType
 METHOD	wp	()Ljava/lang/Object;	b	getB
-METHOD	wp	(I)Ljava/lang/String;	a	format
+METHOD	wp	(I)Ljava/lang/String;	a	format_a
 METHOD	wp	(Ljava/lang/Object;)Z	equals	equals
 METHOD	wp	()I	hashCode	hashCode
 METHOD	wp	()Ljava/lang/String;	toString	toString
@@ -22060,7 +22060,7 @@ METHOD	xu	()V	a	addStructureFeatures
 CLASS	xv	net/minecraft/util/IStringSerializable
 CLASS	xw	net/minecraft/util/StringUtils
 FIELD	xw	Ljava/util/regex/Pattern;	a	PATTERN_CONTROL_CODE
-METHOD	xw	(I)Ljava/lang/String;	a	format
+METHOD	xw	(I)Ljava/lang/String;	a	format_a
 METHOD	xw	(Ljava/lang/String;)Ljava/lang/String;	a	copyValue
 METHOD	xw	(Ljava/lang/String;)Z	b	exists
 CLASS	xx	net/minecraft/util/Tuple
@@ -22202,7 +22202,7 @@ FIELD	yp	Lit/unimi/dsi/fastutil/objects/Object2IntMap;	d	NAME_TO_ID
 METHOD	yp	(ILjava/lang/String;[Ljava/lang/String;)V	a	addEntry
 METHOD	yp	(Lcom/mojang/datafixers/Dynamic;)Lcom/mojang/datafixers/Dynamic;	a	fix
 METHOD	yp	(Ljava/lang/String;)Ljava/lang/String;	a	copyValue
-METHOD	yp	(I)Ljava/lang/String;	a	format
+METHOD	yp	(I)Ljava/lang/String;	a	format_a
 METHOD	yp	(Ljava/lang/String;)Lcom/mojang/datafixers/Dynamic;	b	makeDynamic
 METHOD	yp	(I)Lcom/mojang/datafixers/Dynamic;	b	getFixedNBTForID
 METHOD	yp	(Lit/unimi/dsi/fastutil/objects/Object2IntOpenHashMap;)V	a	func_208417_a
@@ -22518,7 +22518,7 @@ METHOD	zy	(Lcom/mojang/datafixers/OpticFinder;Lcom/mojang/datafixers/Typed;)Lcom
 METHOD	zy	(Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;	a	fix
 CLASS	zz	net/minecraft/util/datafix/fixes/ItemIntIDToString
 FIELD	zz	Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;	a	ID_MAP
-METHOD	zz	(I)Ljava/lang/String;	a	format
+METHOD	zz	(I)Ljava/lang/String;	a	format_a
 METHOD	zz	()Lcom/mojang/datafixers/TypeRewriteRule;	makeRule	makeRule
 METHOD	zz	(Lcom/mojang/datafixers/OpticFinder;Lcom/mojang/datafixers/types/Type;Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;	a	func_206331_a
 METHOD	zz	(Lcom/mojang/datafixers/util/Either;)Lcom/mojang/datafixers/util/Pair;	a	func_206350_a
@@ -43009,7 +43009,7 @@ FIELD	cdb$a	Ljava/util/UUID;	e	uuid
 FIELD	cdb$a	[Laew;	f	slots
 METHOD	cdb$a	(Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonObject;	a	serialize
 METHOD	cdb$a	(Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lcdb$a;	a	deserialize
-METHOD	cdb$a	(I)Ljava/lang/String;	a	format
+METHOD	cdb$a	(I)Ljava/lang/String;	a	format_a
 METHOD	cdb$a	(Ljava/lang/String;)I	a	firstNonSpace
 METHOD	cdb$a	(Lcdb$a;)Ljava/util/UUID;	a	access$000
 METHOD	cdb$a	(Lcdb$a;)[Laew;	b	access$100
