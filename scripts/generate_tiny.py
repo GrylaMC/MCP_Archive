@@ -14,9 +14,6 @@ import json
 PARENT = dirname(dirname(abspath(__file__)))
 os.chdir(PARENT)
 
-sys.path.append(PARENT)
-
-from libs.jar_marker import taint_jar, generate_tiny
 
 SCRIPTS_DIR = join(dirname(PARENT), "utils", "scripts")
 print(SCRIPTS_DIR)
@@ -27,6 +24,7 @@ sys.path.append(SCRIPTS_DIR)
 
 from mcjar import get_piston_file, get_piston_json_path, MAPPINGIO, download_cached
 
+from jar_marker import taint_jar, generate_tiny
 
 USE_WINE = sys.platform != "wine32"
 
