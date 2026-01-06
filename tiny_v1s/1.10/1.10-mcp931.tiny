@@ -1252,15 +1252,15 @@ METHOD	bft	(I)Z	f	isEnabled
 METHOD	bft	(I)Z	g	isKeyComboCtrlA
 METHOD	bft	(Lbcx;II)V	b	drawLabelBackground
 CLASS	bhg	net/minecraft/client/gui/inventory/GuiEditStructure
-FIELD	bhg	Lorg/apache/logging/log4j/Logger;	f	field_189846_f
-FIELD	bhg	[I	a	field_189845_a
-FIELD	bhg	Lare;	g	field_189847_g
-FIELD	bhg	Lanf;	h	field_189848_h
-FIELD	bhg	Laos;	i	field_189849_i
-FIELD	bhg	Lare$a;	r	field_189850_r
+FIELD	bhg	Lorg/apache/logging/log4j/Logger;	a	field_189845_a
+FIELD	bhg	Lare;	f	field_189846_f
+FIELD	bhg	Lanf;	g	field_189847_g
+FIELD	bhg	Laos;	h	field_189848_h
+FIELD	bhg	Lare$a;	i	field_189849_i
+FIELD	bhg	Z	r	field_189850_r
 FIELD	bhg	Z	s	field_189851_s
 FIELD	bhg	Z	t	field_189852_t
-FIELD	bhg	Z	u	field_189853_u
+FIELD	bhg	Lbdv;	u	field_189853_u
 FIELD	bhg	Lbdv;	v	field_189854_v
 FIELD	bhg	Lbdv;	w	field_189855_w
 FIELD	bhg	Lbdv;	x	field_189856_x
@@ -1270,7 +1270,7 @@ FIELD	bhg	Lbdv;	A	field_189825_A
 FIELD	bhg	Lbdv;	B	field_189826_B
 FIELD	bhg	Lbdv;	C	field_189827_C
 FIELD	bhg	Lbdv;	D	field_189828_D
-FIELD	bhg	Lbdv;	E	field_189829_E
+FIELD	bhg	Lbdr;	E	field_189829_E
 FIELD	bhg	Lbdr;	F	field_189830_F
 FIELD	bhg	Lbdr;	G	field_189831_G
 FIELD	bhg	Lbdr;	H	field_189832_H
@@ -1284,9 +1284,8 @@ FIELD	bhg	Lbdr;	O	field_189839_O
 FIELD	bhg	Lbdr;	P	field_189840_P
 FIELD	bhg	Lbdr;	Q	field_189841_Q
 FIELD	bhg	Lbdr;	R	field_189842_R
-FIELD	bhg	Lbdr;	S	field_189843_S
-FIELD	bhg	Ljava/util/List;	T	field_189844_T
-FIELD	bhg	Ljava/text/DecimalFormat;	U	U
+FIELD	bhg	Ljava/util/List;	S	field_189843_S
+FIELD	bhg	Ljava/text/DecimalFormat;	T	field_189844_T
 METHOD	bhg	()V	e	cancelDestroyingBlock
 METHOD	bhg	()V	b	addMemoryStatsToSnooper
 METHOD	bhg	()V	m	checkForAdjacentChests
@@ -1302,7 +1301,7 @@ METHOD	bhg	(Ljava/lang/String;)J	a	func_189821_a
 METHOD	bhg	(Ljava/lang/String;)F	b	func_189819_b
 METHOD	bhg	(Ljava/lang/String;)I	c	getInt
 METHOD	bhg	(CI)V	a	keyTyped
-METHOD	bhg	(CI)Z	b	b
+METHOD	bhg	(C)Z	a	isAllowedCharacter
 METHOD	bhg	(III)V	a	allocateTexture
 METHOD	bhg	(IIF)V	a	drawScreen
 METHOD	bhg	()Z	d	canAddStructurePieces
@@ -6601,7 +6600,7 @@ FIELD	bqy	Z	n	needsUpdate
 FIELD	bqy	Lcm$a;	o	position
 FIELD	bqy	[Lcm$a;	p	mapEnumFacing
 FIELD	bqy	Z	q	needsUpdateCustom
-FIELD	bqy	Laim;	r	field_189564_r
+FIELD	bqy	Laih;	r	field_189564_r
 METHOD	bqy	(I)Z	a	canSpawnMoreStructuresOfType
 METHOD	bqy	(I)Lbwn;	b	getVertexBufferByLayer
 METHOD	bqy	(III)V	a	allocateTexture
@@ -12723,13 +12722,12 @@ METHOD	kk$a	()Z	c	blocksMovement
 METHOD	kk$a	(Z)V	a	bindFramebuffer
 METHOD	kk$a	(Lkk$a;Z)Z	a	access$002
 CLASS	kk	net/minecraft/network/datasync/EntityDataManager
-FIELD	kk	Lorg/apache/logging/log4j/Logger;	a	NEXT_ID_MAP
-FIELD	kk	Ljava/util/Map;	b	entity
-FIELD	kk	Lrw;	c	entries
-FIELD	kk	Ljava/util/Map;	d	lock
-FIELD	kk	Ljava/util/concurrent/locks/ReadWriteLock;	e	empty
+FIELD	kk	Ljava/util/Map;	a	NEXT_ID_MAP
+FIELD	kk	Lrw;	b	entity
+FIELD	kk	Ljava/util/Map;	c	entries
+FIELD	kk	Ljava/util/concurrent/locks/ReadWriteLock;	d	lock
+FIELD	kk	Z	e	empty
 FIELD	kk	Z	f	dirty
-FIELD	kk	Z	g	g
 METHOD	kk	(Ljava/lang/Class;Lki;)Lkh;	a	createKey
 METHOD	kk	(Lkh;Ljava/lang/Object;)V	a	register
 METHOD	kk	(Lkh;Ljava/lang/Object;)V	c	setEntry
@@ -14573,13 +14571,13 @@ METHOD	nr	(Llu;)V	a	addPlayer
 METHOD	nr	(Llu;)V	b	addTrackingPlayer
 METHOD	nr	()Z	e	canRespawnHere
 CLASS	ns$1	net/minecraft/stats/StatBase$1
-METHOD	ns$1	(I)Ljava/lang/String;	a	format
+METHOD	ns$1	(I)Ljava/lang/String;	a	format_a
 CLASS	ns$2	net/minecraft/stats/StatBase$2
-METHOD	ns$2	(I)Ljava/lang/String;	a	format
+METHOD	ns$2	(I)Ljava/lang/String;	a	format_a
 CLASS	ns$3	net/minecraft/stats/StatBase$3
-METHOD	ns$3	(I)Ljava/lang/String;	a	format
+METHOD	ns$3	(I)Ljava/lang/String;	a	format_a
 CLASS	ns$4	net/minecraft/stats/StatBase$4
-METHOD	ns$4	(I)Ljava/lang/String;	a	format
+METHOD	ns$4	(I)Ljava/lang/String;	a	format_a
 CLASS	ns	net/minecraft/stats/StatBase
 FIELD	ns	Ljava/lang/String;	e	statId
 FIELD	ns	Ley;	a	statName
@@ -14596,7 +14594,7 @@ FIELD	ns	Lnt;	j	divideByTen
 METHOD	ns	()Lns;	i	initIndependentStat
 METHOD	ns	()Lns;	h	registerStat
 METHOD	ns	()Z	d	canAddStructurePieces
-METHOD	ns	(I)Ljava/lang/String;	a	format
+METHOD	ns	(I)Ljava/lang/String;	a	format_a
 METHOD	ns	()Ley;	e	getName_e
 METHOD	ns	()Ley;	j	createChatComponent
 METHOD	ns	(Ljava/lang/Object;)Z	equals	equals
@@ -14988,7 +14986,7 @@ METHOD	os	()V	a	apply
 CLASS	ot	net/minecraft/util/IStringSerializable
 CLASS	ou	net/minecraft/util/StringUtils
 FIELD	ou	Ljava/util/regex/Pattern;	a	PATTERN_CONTROL_CODE
-METHOD	ou	(I)Ljava/lang/String;	a	format
+METHOD	ou	(I)Ljava/lang/String;	a	format_a
 METHOD	ou	(Ljava/lang/String;)Ljava/lang/String;	a	filterAllowedCharacters
 METHOD	ou	(Ljava/lang/String;)Z	b	getBoolean
 CLASS	ow	net/minecraft/util/Tuple
@@ -22900,6 +22898,7 @@ METHOD	aid	(Lzs;ILcm;I)V	a	playEvent
 METHOD	aid	()I	Y	getHeight
 METHOD	aid	()I	Z	getActualHeight
 METHOD	aid	(III)Ljava/util/Random;	a	setRandomSeed
+METHOD	aid	()Z	aa	extendedLevelsInChunkCache
 METHOD	aid	()D	ab	getHorizon
 METHOD	aid	(Lb;)Lc;	a	addWorldInfoToCrashReport
 METHOD	aid	(ILcm;I)V	c	sendBlockBreakProgress
@@ -23004,7 +23003,6 @@ FIELD	aim	Z	d	hasExtendedLevels
 FIELD	aim	Laid;	e	worldObj
 METHOD	aim	()Z	aa	extendedLevelsInChunkCache
 METHOD	aim	(Lcm;)Laqk;	r	getTileEntity
-METHOD	aim	(Lcm;Lasv$a;)Laqk;	a	a
 METHOD	aim	(Lcm;I)I	b	getCombinedLight
 METHOD	aim	(Lcm;)Lars;	o	getBlockState_o
 METHOD	aim	(Lcm;)Laiq;	b	getBiomeGenForCoords
@@ -24844,6 +24842,7 @@ CLASS	alv	net/minecraft/block/BlockFarmland
 FIELD	alv	Lash;	a	MOISTURE
 FIELD	alv	Lbby;	b	FARMLAND_AABB
 METHOD	alv	(Lars;Laih;Lcm;)Lbby;	a	getBoundingBox
+METHOD	alv	(Lars;Laid;Lcm;)Lbby;	a	getCollisionBoundingBox
 METHOD	alv	(Lars;)Z	b	canHarvestBlock
 METHOD	alv	(Lars;)Z	c	isFullCube
 METHOD	alv	(Laid;Lcm;Lars;Ljava/util/Random;)V	b	updateTick
@@ -28086,7 +28085,7 @@ METHOD	ass	(Lrw;)V	a	addEntity
 METHOD	ass	(Lrw;)V	b	onEnchantmentCritical
 METHOD	ass	(Lrw;I)V	a	onItemPickup
 METHOD	ass	(Lcm;)Z	c	canSeeSky
-METHOD	ass	(Lcm;Lasv$a;)Laqk;	a	a
+METHOD	ass	(Lcm;Lasv$a;)Laqk;	a	getTileEntity
 METHOD	ass	(Laqk;)V	a	addTileEntity
 METHOD	ass	(Lcm;Laqk;)V	a	addTileEntity
 METHOD	ass	(Lcm;)V	d	addToNewDoorsList
@@ -28180,7 +28179,7 @@ METHOD	asv	(Lrw;)V	b	onEnchantmentCritical
 METHOD	asv	(Lrw;I)V	a	onItemPickup
 METHOD	asv	(Lcm;)Z	c	canSeeSky
 METHOD	asv	(Lcm;)Laqk;	g	createNewTileEntity
-METHOD	asv	(Lcm;Lasv$a;)Laqk;	a	a
+METHOD	asv	(Lcm;Lasv$a;)Laqk;	a	getTileEntity
 METHOD	asv	(Laqk;)V	a	addTileEntity
 METHOD	asv	(Lcm;Laqk;)V	a	addTileEntity
 METHOD	asv	(Lcm;)V	d	addToNewDoorsList
@@ -31054,7 +31053,7 @@ FIELD	baz$a	Ljava/util/UUID;	e	uuid
 FIELD	baz$a	[Lsb;	f	slots
 METHOD	baz$a	(Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonObject;	a	serialize
 METHOD	baz$a	(Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lbaz$a;	a	deserialize
-METHOD	baz$a	(I)Ljava/lang/String;	a	format
+METHOD	baz$a	(I)Ljava/lang/String;	a	format_a
 METHOD	baz$a	(Ljava/lang/String;)I	a	getIDFromString
 METHOD	baz$a	(Lbaz$a;)Ljava/util/UUID;	a	access$000
 METHOD	baz$a	(Lbaz$a;)[Lsb;	b	access$100
