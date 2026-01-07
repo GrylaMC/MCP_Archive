@@ -297,7 +297,7 @@ def generate_readme_table(entries):
         elif entry["type"] == "extracted forge config":
             status = f"🟢 Early Forge Config ([link]({entry['link']}))"
         elif entry["type"] == "generated forge config":
-            status = f"🟣 MCPBot/Forge config ([link]({entry['link']}))"
+            status = f"🔵 MCPBot/Forge config ([link]({entry['link']}))"
         elif entry["type"] == "generated zffu config":
             status = f"🟣 MCPBot/Zffu config ([link]({entry['link']}))"
         elif entry["type"] == "zffu config":
