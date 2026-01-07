@@ -293,20 +293,20 @@ def generate_readme_table(entries):
         tiny_name = entry["tiny"].split("/")[-1]
 
         if entry["type"] == "complete mcp":
-            status = f"🟢 Found Completely ([link]({entry['link']}))"
+            status = f"⭐ Found Completely ([link]({entry['link']}))"
         elif entry["type"] == "extracted forge config":
-            status = f"🟡 Early Forge Config ([link]({entry['link']}))"
+            status = f"🟢 Early Forge Config ([link]({entry['link']}))"
         elif entry["type"] == "generated forge config":
             status = f"🟣 MCPBot/Forge config ([link]({entry['link']}))"
         elif entry["type"] == "generated zffu config":
-            status = f"⚫ MCPBot/Zffu config ([link]({entry['link']}))"
+            status = f"🟣 MCPBot/Zffu config ([link]({entry['link']}))"
         elif entry["type"] == "zffu config":
-            status = f"🟤 Zffu Config ([link]({entry['link']}))"
+            status = f"⚠️ Zffu Config ([link]({entry['link']}))"
         else:
             assert False
 
 
-        out += f"| {status} | {mc_version} | {mcp_version} | [{tiny_name}]({entry['tiny']}) |\n"
+        out += f"| {status} | {mcp_version} | {mc_version} | [{tiny_name}]({entry['tiny']}) |\n"
 
     return out
 
