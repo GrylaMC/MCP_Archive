@@ -482,7 +482,7 @@ MODERN_FORGE_OUT = "generated_forge_mcpbot_configs"
 ZFFU_HYBRID = "generated_zffu_mcpbot_configs"
 
 
-ZFFU_MAPPING_URL = "https://githubraw.com/GrylaMC/newer_forge_mappings/main/versions"
+ZFFU_MAPPING_URL = "https://raw.githubusercontent.com/GrylaMC/newer_forge_mappings/refs/heads/main/versions"
 
 MCPBOT_JSON = download_cached(
     "https://github.com/Aizistral-Studios/MCP-Archive/raw/refs/heads/dungeon-master/real_versions.json",
@@ -650,7 +650,7 @@ def mcp_config_build(version):
             os.rename(join(config_path, "config", child), join(config_path, child))
         os.rmdir(join(config_path, "config"))
 
-    tiny = join("tiny_v1s", version, f"{version}-mcpFORGE.tiny")
+    tiny = join("tiny_v1s", version, f"{version}-mcpbotFORGE.tiny")
     _mcpbot_build_with_partial_config(version, config_path, tiny)
 
 
@@ -674,10 +674,9 @@ def mcpbot_zffu_build(version, is_srg=False):
         join(config_path, f"joined.{ext}"),
     )
 
-    tiny = join("tiny_v1s", version, f"{version}-mcpMCPBOT.tiny")
+    tiny = join("tiny_v1s", version, f"{version}-mcpbotZFFU.tiny")
 
     _mcpbot_build_with_partial_config(version, config_path, tiny, is_srg=is_srg)
-
 
 if __name__ == "__main__":
     tinyname = lambda mc_ver, mcp_ver: join(
@@ -701,6 +700,10 @@ if __name__ == "__main__":
             for version in versions
         ],
     )
+
+
+
+
     style_retroguard_only(*stdname("a1.1.2/revengpack16.zip", ["a1.1.2"]))
 
     for zip, versions, *args in [
@@ -740,7 +743,7 @@ if __name__ == "__main__":
         ("b1.7.3/mcp43.zip", ["b1.7.3"]),
         ("b1.8.1/mcp44.zip", ["b1.8.1"]),
         ("b1.9pre-5/mcp45pre.zip", ["@omni@b1.9-pre5"]),
-        ("1.0.0/mcp50.zip", ["1.0.0"]),
+        ("1.0.0/mcp50.zip", ["1.0"]),
         ("1.1.0/mcp56.zip", ["1.1"]),
     ]:
         style_python_with_renamer(
@@ -827,6 +830,7 @@ if __name__ == "__main__":
 
     # Suprisingly, not a lot of forge MCP versions that are also in MCPBot
     for version in [
+
         "1.13",
         "1.13.1",
         "1.13.2",
@@ -854,7 +858,8 @@ if __name__ == "__main__":
         "1.10",
         "1.11.2",
 
-        "1.12.2",
+        # Does not exist
+        # "1.12.2",
 
         "1.16",
         "1.16.1",
@@ -863,7 +868,6 @@ if __name__ == "__main__":
         "1.16.4",
     ]:
         zffu_mcp_style(version)
-
 
 
 

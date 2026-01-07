@@ -18,6 +18,7 @@ COMPLETE_PACKS_DIR = join(PARENT_DIR, "complete_packs")
 EXTRACTED_DIR = join(PARENT_DIR, "extracted_forge_configs")
 NEWER_MAPPINGS = join(PARENT_DIR, "newer_mappings")
 
+
 TINY_V1S = join(PARENT_DIR, "tiny_v1s")
 
 
