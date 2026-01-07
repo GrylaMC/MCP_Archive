@@ -13060,13 +13060,13 @@ METHOD	tp	(Lqw;)V	a	addPlayer
 METHOD	tp	(Lqw;)V	b	filterChunkLoadQueue
 METHOD	tp	()Z	e	canRespawnHere
 CLASS	tr	net/minecraft/stats/StatBase$1
-METHOD	tr	(I)Ljava/lang/String;	a	format
+METHOD	tr	(I)Ljava/lang/String;	a	format_a
 CLASS	ts	net/minecraft/stats/StatBase$2
-METHOD	ts	(I)Ljava/lang/String;	a	format
+METHOD	ts	(I)Ljava/lang/String;	a	format_a
 CLASS	tt	net/minecraft/stats/StatBase$3
-METHOD	tt	(I)Ljava/lang/String;	a	format
+METHOD	tt	(I)Ljava/lang/String;	a	format_a
 CLASS	tu	net/minecraft/stats/StatBase$4
-METHOD	tu	(I)Ljava/lang/String;	a	format
+METHOD	tu	(I)Ljava/lang/String;	a	format_a
 CLASS	tq	net/minecraft/stats/StatBase
 FIELD	tq	Ljava/lang/String;	e	statId
 FIELD	tq	Lho;	a	statName
@@ -13083,7 +13083,7 @@ FIELD	tq	Ltv;	j	field_111202_k
 METHOD	tq	()Ltq;	i	initIndependentStat
 METHOD	tq	()Ltq;	h	registerStat
 METHOD	tq	()Z	d	canAddStructurePieces
-METHOD	tq	(I)Ljava/lang/String;	a	format
+METHOD	tq	(I)Ljava/lang/String;	a	format_a
 METHOD	tq	()Lho;	e	getStatName
 METHOD	tq	()Lho;	j	getExitMessage
 METHOD	tq	(Ljava/lang/Object;)Z	equals	equals
@@ -13419,7 +13419,7 @@ METHOD	uz	()V	a	autocompletePlayerNames
 CLASS	va	net/minecraft/util/IStringSerializable
 CLASS	vb	net/minecraft/util/StringUtils
 FIELD	vb	Ljava/util/regex/Pattern;	a	patternControlCode
-METHOD	vb	(I)Ljava/lang/String;	a	format
+METHOD	vb	(I)Ljava/lang/String;	a	format_a
 METHOD	vb	(Ljava/lang/String;)Ljava/lang/String;	a	filterAllowedCharacters
 METHOD	vb	(Ljava/lang/String;)Z	b	getGameRuleBooleanValue
 CLASS	vi	net/minecraft/util/Tuple

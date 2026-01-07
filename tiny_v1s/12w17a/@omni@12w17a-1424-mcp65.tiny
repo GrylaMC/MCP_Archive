@@ -149,7 +149,7 @@ FIELD	ih	F	U	gammaSetting
 FIELD	ih	I	V	guiScale
 FIELD	ih	I	W	particleSetting
 FIELD	ih	Ljava/lang/String;	X	language
-METHOD	ih	(I)Ljava/lang/String;	a	format
+METHOD	ih	(I)Ljava/lang/String;	a	format_a
 METHOD	ih	(I)Ljava/lang/String;	b	getOptionDisplayString
 METHOD	ih	(I)Ljava/lang/String;	c	getKeyDisplayString
 METHOD	ih	(II)V	a	addRecipes
@@ -679,7 +679,7 @@ FIELD	nr	Ladi;	n	buttonSelect
 FIELD	nr	Ladi;	o	buttonDelete
 METHOD	nr	()V	c	clearApplet
 METHOD	nr	()V	g	checkForAdjacentChests
-METHOD	nr	(I)Ljava/lang/String;	a	format
+METHOD	nr	(I)Ljava/lang/String;	a	format_a
 METHOD	nr	(I)Ljava/lang/String;	b	getOptionDisplayString
 METHOD	nr	()V	d	addHeaderButtons
 METHOD	nr	(Ladi;)V	a	actionPerformed
@@ -1148,7 +1148,7 @@ CLASS	ez	net/minecraft/src/GuiSlotStatsBlock
 FIELD	ez	Ldh;	a	field_27274_a
 METHOD	ez	(IILafw;)V	a	func_27260_a
 METHOD	ez	(IIIILafw;)V	a	drawSlot
-METHOD	ez	(I)Ljava/lang/String;	a	format
+METHOD	ez	(I)Ljava/lang/String;	a	format_a
 CLASS	ahn	net/minecraft/src/SorterStatsBlock
 FIELD	ahn	Ldh;	a	statsGUI
 FIELD	ahn	Lez;	b	slotStatsBlockGUI
@@ -1166,7 +1166,7 @@ CLASS	ca	net/minecraft/src/GuiSlotStatsItem
 FIELD	ca	Ldh;	a	field_27275_a
 METHOD	ca	(IILafw;)V	a	func_27260_a
 METHOD	ca	(IIIILafw;)V	a	drawSlot
-METHOD	ca	(I)Ljava/lang/String;	a	format
+METHOD	ca	(I)Ljava/lang/String;	a	format_a
 CLASS	abf	net/minecraft/src/GuiChest
 FIELD	abf	Ljb;	h	upperChestInventory
 FIELD	abf	Ljb;	i	lowerChestInventory
@@ -6296,11 +6296,11 @@ CLASS	akk	net/minecraft/src/StatCrafting
 FIELD	akk	I	a	itemID
 METHOD	akk	()I	b	getAdjacentTracks
 CLASS	bp	net/minecraft/src/StatTypeSimple
-METHOD	bp	(I)Ljava/lang/String;	a	format
+METHOD	bp	(I)Ljava/lang/String;	a	format_a
 CLASS	bn	net/minecraft/src/StatTypeTime
-METHOD	bn	(I)Ljava/lang/String;	a	format
+METHOD	bn	(I)Ljava/lang/String;	a	format_a
 CLASS	bk	net/minecraft/src/StatTypeDistance
-METHOD	bk	(I)Ljava/lang/String;	a	format
+METHOD	bk	(I)Ljava/lang/String;	a	format_a
 CLASS	amb	net/minecraft/src/StatBase
 FIELD	amb	I	e	statId
 FIELD	amb	Ljava/lang/String;	a	statName
@@ -6315,7 +6315,7 @@ FIELD	amb	Lrz;	j	distanceStatType
 METHOD	amb	()Lamb;	h	initIndependentStat
 METHOD	amb	()Lamb;	a	registerStat
 METHOD	amb	()Z	e	isAchievement
-METHOD	amb	(I)Ljava/lang/String;	a	format
+METHOD	amb	(I)Ljava/lang/String;	a	format_a
 METHOD	amb	()Ljava/lang/String;	i	getName
 METHOD	amb	()Ljava/lang/String;	toString	toString
 METHOD	amb	()Ljava/text/NumberFormat;	j	getNumberFormat
@@ -6369,7 +6369,7 @@ METHOD	hg	(I)Lamb;	a	getOneShotStat
 CLASS	b	net/minecraft/src/AchievementMap
 FIELD	b	Lb;	a	instance
 FIELD	b	Ljava/util/Map;	b	guidMap
-METHOD	b	(I)Ljava/lang/String;	a	format
+METHOD	b	(I)Ljava/lang/String;	a	format_a
 CLASS	agv	net/minecraft/src/PostHttp
 METHOD	agv	(Ljava/util/Map;)Ljava/lang/String;	a	func_52016_a
 METHOD	agv	(Ljava/net/URL;Ljava/util/Map;Z)Ljava/lang/String;	a	func_52018_a
@@ -6745,7 +6745,7 @@ METHOD	acg	(Lafu;Lyu;)Loj;	a	createEntityFromNBT
 METHOD	acg	(ILyu;)Loj;	a	createEntityByID
 METHOD	acg	(Loj;)I	a	getDamageVsEntity
 METHOD	acg	(Loj;)Ljava/lang/String;	b	getEntityString
-METHOD	acg	(I)Ljava/lang/String;	a	format
+METHOD	acg	(I)Ljava/lang/String;	a	format_a
 CLASS	cc	net/minecraft/src/EntityXPOrb
 FIELD	cc	I	a	xpColor
 FIELD	cc	I	b	xpOrbAge
@@ -13350,7 +13350,7 @@ FIELD	ck	F	c	field_22389_c
 METHOD	ck	(FF)F	a	func_22386_a
 CLASS	adv	net/minecraft/src/StringUtils
 FIELD	adv	Ljava/util/regex/Pattern;	a	field_55395_a
-METHOD	adv	(I)Ljava/lang/String;	a	format
+METHOD	adv	(I)Ljava/lang/String;	a	format_a
 METHOD	adv	(Ljava/lang/String;)Ljava/lang/String;	a	formatString
 CLASS	abx	net/minecraft/src/ProfilerResult
 FIELD	abx	D	a	sectionPercentage

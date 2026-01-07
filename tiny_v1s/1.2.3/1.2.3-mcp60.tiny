@@ -182,7 +182,7 @@ METHOD	aaj	(Ladt;Lwz;)Lnk;	a	createEntityFromNBT
 METHOD	aaj	(ILwz;)Lnk;	a	createEntity
 METHOD	aaj	(Lnk;)I	a	getDamageVsEntity
 METHOD	aaj	(Lnk;)Ljava/lang/String;	b	getEntityString
-METHOD	aaj	(I)Ljava/lang/String;	a	format
+METHOD	aaj	(I)Ljava/lang/String;	a	format_a
 CLASS	aak	net/minecraft/src/ContainerBrewingStand
 FIELD	aak	Lalw;	a	tileBrewingStand
 FIELD	aak	I	b	brewTime
@@ -2829,7 +2829,7 @@ FIELD	ajq	Lqp;	j	distanceStatType
 METHOD	ajq	()Lajq;	h	initIndependentStat
 METHOD	ajq	()Lajq;	a	registerStat
 METHOD	ajq	()Z	e	isAchievement
-METHOD	ajq	(I)Ljava/lang/String;	a	format
+METHOD	ajq	(I)Ljava/lang/String;	a	format_a
 METHOD	ajq	()Ljava/lang/String;	i	getName
 METHOD	ajq	()Ljava/lang/String;	toString	toString
 METHOD	ajq	()Ljava/text/NumberFormat;	j	getNumberFormat
@@ -3652,7 +3652,7 @@ METHOD	az	(Ljava/lang/Object;)Ljava/lang/Object;	a	applyTo
 CLASS	b	net/minecraft/src/AchievementMap
 FIELD	b	Lb;	a	instance
 FIELD	b	Ljava/util/Map;	b	guidMap
-METHOD	b	(I)Ljava/lang/String;	a	format
+METHOD	b	(I)Ljava/lang/String;	a	format_a
 CLASS	ba	net/minecraft/src/ItemBucket
 FIELD	ba	I	a	isFull
 METHOD	ba	(Laai;Lwz;Lyr;)Laai;	a	onItemRightClick
@@ -3698,7 +3698,7 @@ METHOD	bf	(Laai;IIIILacl;)Z	a	onBlockDestroyed
 METHOD	bf	(Lox;)Z	a	canHarvestBlock
 METHOD	bf	(Laai;Lox;)F	a	getStrVsBlock
 CLASS	bg	net/minecraft/src/StatTypeDistance
-METHOD	bg	(I)Ljava/lang/String;	a	format
+METHOD	bg	(I)Ljava/lang/String;	a	format_a
 CLASS	bh	net/minecraft/src/EntityPotion
 FIELD	bh	I	d	potionDamage
 METHOD	bh	()F	e	getSpawningChance
@@ -3714,9 +3714,9 @@ FIELD	bi	[Lbi;	d	$VALUES
 METHOD	bi	()[Lbi;	values	values
 METHOD	bi	(Ljava/lang/String;)Lbi;	valueOf	valueOf
 CLASS	bj	net/minecraft/src/StatTypeTime
-METHOD	bj	(I)Ljava/lang/String;	a	format
+METHOD	bj	(I)Ljava/lang/String;	a	format_a
 CLASS	bk	net/minecraft/src/StatTypeSimple
-METHOD	bk	(I)Ljava/lang/String;	a	format
+METHOD	bk	(I)Ljava/lang/String;	a	format_a
 CLASS	bl	net/minecraft/src/BiomeGenJungle
 METHOD	bl	(Ljava/util/Random;)Llf;	a	getRandomWorldGenForTrees
 METHOD	bl	(Ljava/util/Random;)Llf;	b	func_48410_b
@@ -3811,7 +3811,7 @@ CLASS	bv	net/minecraft/src/GuiSlotStatsItem
 FIELD	bv	Lda;	a	field_27275_a
 METHOD	bv	(IILadu;)V	a	func_27260_a
 METHOD	bv	(IIIILadu;)V	a	drawSlot
-METHOD	bv	(I)Ljava/lang/String;	a	format
+METHOD	bv	(I)Ljava/lang/String;	a	format_a
 CLASS	bw	net/minecraft/src/ThreadPollServers
 FIELD	bw	Lnw;	a	server
 FIELD	bw	Lqd;	b	serverSlotContainer
@@ -4563,7 +4563,7 @@ CLASS	eo	net/minecraft/src/GuiSlotStatsBlock
 FIELD	eo	Lda;	a	field_27274_a
 METHOD	eo	(IILadu;)V	a	func_27260_a
 METHOD	eo	(IIIILadu;)V	a	drawSlot
-METHOD	eo	(I)Ljava/lang/String;	a	format
+METHOD	eo	(I)Ljava/lang/String;	a	format_a
 CLASS	ep	net/minecraft/src/OpenGlHelper
 FIELD	ep	I	a	lightmapDisabled
 FIELD	ep	I	b	lightmapEnabled
@@ -5318,7 +5318,7 @@ FIELD	hr	F	N	gammaSetting
 FIELD	hr	I	O	guiScale
 FIELD	hr	I	P	particleSetting
 FIELD	hr	Ljava/lang/String;	Q	language
-METHOD	hr	(I)Ljava/lang/String;	a	format
+METHOD	hr	(I)Ljava/lang/String;	a	format_a
 METHOD	hr	(I)Ljava/lang/String;	b	getOptionDisplayString
 METHOD	hr	(I)Ljava/lang/String;	c	getKeyDisplayString
 METHOD	hr	(II)V	a	addRecipes
@@ -6724,7 +6724,7 @@ FIELD	mt	Labk;	n	buttonSelect
 FIELD	mt	Labk;	o	buttonDelete
 METHOD	mt	()V	c	clearApplet
 METHOD	mt	()V	g	checkForAdjacentChests
-METHOD	mt	(I)Ljava/lang/String;	a	format
+METHOD	mt	(I)Ljava/lang/String;	a	format_a
 METHOD	mt	(I)Ljava/lang/String;	b	getOptionDisplayString
 METHOD	mt	()V	d	addHeaderButtons
 METHOD	mt	(Labk;)V	a	actionPerformed

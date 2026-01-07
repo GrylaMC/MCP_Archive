@@ -1314,7 +1314,7 @@ FIELD	bdt	Lbca;	A	field_146630_A
 FIELD	bdt	Lbca;	B	field_146631_B
 METHOD	bdt	()V	r_	initGui
 METHOD	bdt	()V	h	clearMSBArray
-METHOD	bdt	(I)Ljava/lang/String;	a	format
+METHOD	bdt	(I)Ljava/lang/String;	a	format_a
 METHOD	bdt	(I)Ljava/lang/String;	d	func_146614_d
 METHOD	bdt	()V	g	addNewDoorsToVillageOrCreateVillage
 METHOD	bdt	(Lbca;)V	a	actionPerformed
@@ -2803,7 +2803,7 @@ METHOD	bij	()Ljava/lang/String;	g	getBackgroundImageName
 METHOD	bij	(Ljava/lang/String;)V	a	addToSentMessages
 METHOD	bij	(III)V	a	addVillagerPosition
 METHOD	bij	(IIF)V	a	drawScreen
-METHOD	bij	(I)Ljava/lang/String;	a	format
+METHOD	bij	(I)Ljava/lang/String;	a	format_a
 METHOD	bij	()Ljava/lang/String;	h	func_148961_h
 CLASS	bik	net/minecraft/client/gui/GuiMultiplayer
 FIELD	bik	Lorg/apache/logging/log4j/Logger;	a	logger
@@ -10826,13 +10826,13 @@ METHOD	pf	(Lmv;)V	a	addPlayer
 METHOD	pf	(Lmv;)V	b	filterChunkLoadQueue
 METHOD	pf	()Z	e	areAllPlayersAsleep
 CLASS	ph	net/minecraft/stats/StatBase$1
-METHOD	ph	(I)Ljava/lang/String;	a	format
+METHOD	ph	(I)Ljava/lang/String;	a	format_a
 CLASS	pi	net/minecraft/stats/StatBase$2
-METHOD	pi	(I)Ljava/lang/String;	a	format
+METHOD	pi	(I)Ljava/lang/String;	a	format_a
 CLASS	pj	net/minecraft/stats/StatBase$3
-METHOD	pj	(I)Ljava/lang/String;	a	format
+METHOD	pj	(I)Ljava/lang/String;	a	format_a
 CLASS	pk	net/minecraft/stats/StatBase$4
-METHOD	pk	(I)Ljava/lang/String;	a	format
+METHOD	pk	(I)Ljava/lang/String;	a	format_a
 CLASS	pg	net/minecraft/stats/StatBase
 FIELD	pg	Ljava/lang/String;	e	statId
 FIELD	pg	Lfj;	a	statName
@@ -10849,7 +10849,7 @@ FIELD	pg	Lpl;	j	field_111202_k
 METHOD	pg	()Lpg;	i	initIndependentStat
 METHOD	pg	()Lpg;	h	registerStat
 METHOD	pg	()Z	d	canAddStructurePieces
-METHOD	pg	(I)Ljava/lang/String;	a	format
+METHOD	pg	(I)Ljava/lang/String;	a	format_a
 METHOD	pg	()Lfj;	e	func_150951_e
 METHOD	pg	()Lfj;	j	func_150955_j
 METHOD	pg	(Ljava/lang/Object;)Z	equals	equals
@@ -11143,7 +11143,7 @@ FIELD	ql	F	c	field_76335_c
 METHOD	ql	(FF)F	a	smooth
 CLASS	qm	net/minecraft/util/StringUtils
 FIELD	qm	Ljava/util/regex/Pattern;	a	patternControlCode
-METHOD	qm	(I)Ljava/lang/String;	a	format
+METHOD	qm	(I)Ljava/lang/String;	a	format_a
 METHOD	qm	(Ljava/lang/String;)Ljava/lang/String;	a	filerAllowedCharacters
 METHOD	qm	(Ljava/lang/String;)Z	b	containsKey
 CLASS	qt	net/minecraft/util/Tuple

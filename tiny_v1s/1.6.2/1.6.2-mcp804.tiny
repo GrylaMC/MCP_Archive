@@ -378,7 +378,7 @@ FIELD	aui	F	ak	gammaSetting
 FIELD	aui	I	al	guiScale
 FIELD	aui	I	am	particleSetting
 FIELD	aui	Ljava/lang/String;	an	language
-METHOD	aui	(I)Ljava/lang/String;	a	format
+METHOD	aui	(I)Ljava/lang/String;	a	format_a
 METHOD	aui	(I)Ljava/lang/String;	b	getObjectiveDisplaySlot
 METHOD	aui	(I)Ljava/lang/String;	c	getFullSlabName
 METHOD	aui	(Latp;)Z	a	isKeyDown
@@ -1090,7 +1090,7 @@ FIELD	awe	Lauq;	x	buttonRename
 FIELD	awe	Lauq;	y	buttonRecreate
 METHOD	awe	()V	A_	initGui
 METHOD	awe	()V	h	addBaseDataToSnooper
-METHOD	awe	(I)Ljava/lang/String;	a	format
+METHOD	awe	(I)Ljava/lang/String;	a	format_a
 METHOD	awe	(I)Ljava/lang/String;	d	getSaveName
 METHOD	awe	()V	g	addHeaderButtons
 METHOD	awe	(Lauq;)V	a	actionPerformed
@@ -8342,13 +8342,13 @@ FIELD	kr	I	a	itemID
 METHOD	kr	()I	a	draw
 CLASS	ks	net/minecraft/src/StatPlaceholder
 CLASS	ku	net/minecraft/src/StatTypeSimple
-METHOD	ku	(I)Ljava/lang/String;	a	format
+METHOD	ku	(I)Ljava/lang/String;	a	format_a
 CLASS	kv	net/minecraft/src/StatTypeTime
-METHOD	kv	(I)Ljava/lang/String;	a	format
+METHOD	kv	(I)Ljava/lang/String;	a	format_a
 CLASS	kw	net/minecraft/src/StatTypeDistance
-METHOD	kw	(I)Ljava/lang/String;	a	format
+METHOD	kw	(I)Ljava/lang/String;	a	format_a
 CLASS	kx	net/minecraft/src/StatTypeFloat
-METHOD	kx	(I)Ljava/lang/String;	a	format
+METHOD	kx	(I)Ljava/lang/String;	a	format_a
 CLASS	kt	net/minecraft/src/StatBase
 FIELD	kt	I	e	statId
 FIELD	kt	Ljava/lang/String;	a	statName
@@ -8364,7 +8364,7 @@ FIELD	kt	Lky;	k	field_111202_k
 METHOD	kt	()Lkt;	h	initIndependentStat
 METHOD	kt	()Lkt;	g	registerStat
 METHOD	kt	()Z	d	canSave
-METHOD	kt	(I)Ljava/lang/String;	a	format
+METHOD	kt	(I)Ljava/lang/String;	a	format_a
 METHOD	kt	()Ljava/lang/String;	i	getName
 METHOD	kt	()Ljava/lang/String;	toString	toString
 METHOD	kt	()Ljava/text/NumberFormat;	j	getNumberFormat
@@ -8418,7 +8418,7 @@ METHOD	kz	(I)Lkt;	a	getOneShotStat
 CLASS	la	net/minecraft/src/AchievementMap
 FIELD	la	Lla;	a	instance
 FIELD	la	Ljava/util/Map;	b	guidMap
-METHOD	la	(I)Ljava/lang/String;	a	format
+METHOD	la	(I)Ljava/lang/String;	a	format_a
 CLASS	lc	net/minecraft/src/LogAgentEmptyAnon
 CLASS	ld	net/minecraft/src/LogFormatter
 FIELD	ld	Ljava/text/SimpleDateFormat;	b	field_98228_b
@@ -8597,7 +8597,7 @@ FIELD	ly	F	c	field_76335_c
 METHOD	ly	(FF)F	a	smooth
 CLASS	lz	net/minecraft/src/StringUtils
 FIELD	lz	Ljava/util/regex/Pattern;	a	patternControlCode
-METHOD	lz	(I)Ljava/lang/String;	a	format
+METHOD	lz	(I)Ljava/lang/String;	a	format_a
 METHOD	lz	(Ljava/lang/String;)Ljava/lang/String;	a	filerAllowedCharacters
 CLASS	mg	net/minecraft/src/Tuple
 FIELD	mg	Ljava/lang/Object;	a	first

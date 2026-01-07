@@ -2067,7 +2067,7 @@ FIELD	cgx	I	i	field_194069_i
 METHOD	cgx	(Ljava/lang/Object;Ljava/lang/String;)V	a	func_194041_a
 METHOD	cgx	()V	a	apply
 METHOD	cgx	()V	b	addMemoryStatsToSnooper
-METHOD	cgx	(I)Ljava/lang/String;	a	format
+METHOD	cgx	(I)Ljava/lang/String;	a	format_a
 METHOD	cgx	(Ljava/lang/String;I)I	a	getInt
 METHOD	cgx	(Ljava/lang/String;)Ljava/util/List;	a	func_194038_a
 METHOD	cgx	([I[I[III)V	a	func_194054_a
@@ -8745,7 +8745,7 @@ FIELD	bib	I	aH	particleSetting
 FIELD	bib	I	aI	field_192571_R
 FIELD	bib	Ljava/lang/String;	aJ	language
 FIELD	bib	Z	aK	forceUnicodeFont
-METHOD	bib	(I)Ljava/lang/String;	a	format
+METHOD	bib	(I)Ljava/lang/String;	a	format_a
 METHOD	bib	(Lbhw;)Z	a	isKeyDown
 METHOD	bib	(Lbhw;I)V	a	setOptionKeyBinding
 METHOD	bib	(Lbib$a;F)V	a	setOptionFloatValue
@@ -16911,13 +16911,13 @@ METHOD	ql	(Ljava/util/Map;)Ljava/lang/String;	a	buildPostString
 METHOD	ql	()V	c	bindFramebufferTexture
 METHOD	ql	(Loo;)V	a	addPlayer
 CLASS	qm$1	net/minecraft/stats/StatBase$1
-METHOD	qm$1	(I)Ljava/lang/String;	a	format
+METHOD	qm$1	(I)Ljava/lang/String;	a	format_a
 CLASS	qm$2	net/minecraft/stats/StatBase$2
-METHOD	qm$2	(I)Ljava/lang/String;	a	format
+METHOD	qm$2	(I)Ljava/lang/String;	a	format_a
 CLASS	qm$3	net/minecraft/stats/StatBase$3
-METHOD	qm$3	(I)Ljava/lang/String;	a	format
+METHOD	qm$3	(I)Ljava/lang/String;	a	format_a
 CLASS	qm$4	net/minecraft/stats/StatBase$4
-METHOD	qm$4	(I)Ljava/lang/String;	a	format
+METHOD	qm$4	(I)Ljava/lang/String;	a	format_a
 CLASS	qm	net/minecraft/stats/StatBase
 FIELD	qm	Ljava/lang/String;	a	statId
 FIELD	qm	Lhh;	g	statName
@@ -16933,7 +16933,7 @@ FIELD	qm	Lqn;	e	distanceStatType
 FIELD	qm	Lqn;	f	divideByTen
 METHOD	qm	()Lqm;	c	initIndependentStat
 METHOD	qm	()Lqm;	a	registerStat
-METHOD	qm	(I)Ljava/lang/String;	a	format
+METHOD	qm	(I)Ljava/lang/String;	a	format_a
 METHOD	qm	()Lhh;	d	getDisplayName
 METHOD	qm	(Ljava/lang/Object;)Z	equals	equals
 METHOD	qm	()I	hashCode	hashCode
@@ -17316,7 +17316,7 @@ METHOD	rl	()V	a	apply
 CLASS	rm	net/minecraft/util/IStringSerializable
 CLASS	rn	net/minecraft/util/StringUtils
 FIELD	rn	Ljava/util/regex/Pattern;	a	PATTERN_CONTROL_CODE
-METHOD	rn	(I)Ljava/lang/String;	a	format
+METHOD	rn	(I)Ljava/lang/String;	a	format_a
 METHOD	rn	(Ljava/lang/String;)Ljava/lang/String;	a	filterAllowedCharacters
 METHOD	rn	(Ljava/lang/String;)Z	b	getBoolean
 CLASS	rp	net/minecraft/util/Tuple
@@ -34716,7 +34716,7 @@ FIELD	bga$a	Ljava/util/UUID;	e	uuid
 FIELD	bga$a	[Lvj;	f	slots
 METHOD	bga$a	(Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonObject;	a	serialize
 METHOD	bga$a	(Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lbga$a;	a	deserialize
-METHOD	bga$a	(I)Ljava/lang/String;	a	format
+METHOD	bga$a	(I)Ljava/lang/String;	a	format_a
 METHOD	bga$a	(Ljava/lang/String;)I	a	getOperationFromInt
 METHOD	bga$a	(Lbga$a;)Ljava/util/UUID;	a	access$000
 METHOD	bga$a	(Lbga$a;)[Lvj;	b	access$100

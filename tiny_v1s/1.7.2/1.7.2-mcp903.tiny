@@ -1242,7 +1242,7 @@ FIELD	bce	Lban;	A	field_146630_A
 FIELD	bce	Lban;	B	field_146631_B
 METHOD	bce	()V	r_	initGui
 METHOD	bce	()V	h	addBaseDataToSnooper
-METHOD	bce	(I)Ljava/lang/String;	a	format
+METHOD	bce	(I)Ljava/lang/String;	a	format_a
 METHOD	bce	(I)Ljava/lang/String;	d	func_146614_d
 METHOD	bce	()V	g	addNewDoorsToVillageOrCreateVillage
 METHOD	bce	(Lban;)V	a	actionPerformed
@@ -9789,13 +9789,13 @@ METHOD	nu	(Lmm;)V	a	addPlayer
 METHOD	nu	(Lmm;)V	b	filterChunkLoadQueue
 METHOD	nu	()Z	e	areAllPlayersAsleep
 CLASS	nw	net/minecraft/stats/StatBase$1
-METHOD	nw	(I)Ljava/lang/String;	a	format
+METHOD	nw	(I)Ljava/lang/String;	a	format_a
 CLASS	nx	net/minecraft/stats/StatBase$2
-METHOD	nx	(I)Ljava/lang/String;	a	format
+METHOD	nx	(I)Ljava/lang/String;	a	format_a
 CLASS	ny	net/minecraft/stats/StatBase$3
-METHOD	ny	(I)Ljava/lang/String;	a	format
+METHOD	ny	(I)Ljava/lang/String;	a	format_a
 CLASS	nz	net/minecraft/stats/StatBase$4
-METHOD	nz	(I)Ljava/lang/String;	a	format
+METHOD	nz	(I)Ljava/lang/String;	a	format_a
 CLASS	nv	net/minecraft/stats/StatBase
 FIELD	nv	Ljava/lang/String;	e	statId
 FIELD	nv	Lfa;	a	statName
@@ -9812,7 +9812,7 @@ FIELD	nv	Loa;	j	field_111202_k
 METHOD	nv	()Lnv;	i	initIndependentStat
 METHOD	nv	()Lnv;	h	registerStat
 METHOD	nv	()Z	d	canAddStructurePieces
-METHOD	nv	(I)Ljava/lang/String;	a	format
+METHOD	nv	(I)Ljava/lang/String;	a	format_a
 METHOD	nv	()Lfa;	e	func_150951_e
 METHOD	nv	()Lfa;	j	func_150955_j
 METHOD	nv	(Ljava/lang/Object;)Z	equals	equals
@@ -10094,7 +10094,7 @@ FIELD	oz	F	c	field_76335_c
 METHOD	oz	(FF)F	a	smooth
 CLASS	pa	net/minecraft/util/StringUtils
 FIELD	pa	Ljava/util/regex/Pattern;	a	patternControlCode
-METHOD	pa	(I)Ljava/lang/String;	a	format
+METHOD	pa	(I)Ljava/lang/String;	a	format_a
 METHOD	pa	(Ljava/lang/String;)Ljava/lang/String;	a	filerAllowedCharacters
 METHOD	pa	(Ljava/lang/String;)Z	b	containsKey
 CLASS	ph	net/minecraft/util/Tuple

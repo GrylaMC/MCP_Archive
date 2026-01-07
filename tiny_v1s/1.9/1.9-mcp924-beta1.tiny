@@ -14367,13 +14367,13 @@ METHOD	no	(Llr;)V	a	addPlayer
 METHOD	no	(Llr;)V	b	removePlayer
 METHOD	no	()Z	e	canRepeat
 CLASS	np$1	net/minecraft/stats/StatBase$1
-METHOD	np$1	(I)Ljava/lang/String;	a	format
+METHOD	np$1	(I)Ljava/lang/String;	a	format_a
 CLASS	np$2	net/minecraft/stats/StatBase$2
-METHOD	np$2	(I)Ljava/lang/String;	a	format
+METHOD	np$2	(I)Ljava/lang/String;	a	format_a
 CLASS	np$3	net/minecraft/stats/StatBase$3
-METHOD	np$3	(I)Ljava/lang/String;	a	format
+METHOD	np$3	(I)Ljava/lang/String;	a	format_a
 CLASS	np$4	net/minecraft/stats/StatBase$4
-METHOD	np$4	(I)Ljava/lang/String;	a	format
+METHOD	np$4	(I)Ljava/lang/String;	a	format_a
 CLASS	np	net/minecraft/stats/StatBase
 FIELD	np	Ljava/lang/String;	e	statId
 FIELD	np	Leu;	a	statName
@@ -14390,7 +14390,7 @@ FIELD	np	Lnq;	j	field_111202_k
 METHOD	np	()Lnp;	i	initIndependentStat
 METHOD	np	()Lnp;	h	registerStat
 METHOD	np	()Z	d	canAddStructurePieces
-METHOD	np	(I)Ljava/lang/String;	a	format
+METHOD	np	(I)Ljava/lang/String;	a	format_a
 METHOD	np	()Leu;	e	getName_e
 METHOD	np	()Leu;	j	createChatComponent
 METHOD	np	(Ljava/lang/Object;)Z	equals	equals
@@ -14811,7 +14811,7 @@ METHOD	oq	()V	a	bindBuffer
 CLASS	or	net/minecraft/util/IStringSerializable
 CLASS	os	net/minecraft/util/StringUtils
 FIELD	os	Ljava/util/regex/Pattern;	a	patternControlCode
-METHOD	os	(I)Ljava/lang/String;	a	format
+METHOD	os	(I)Ljava/lang/String;	a	format_a
 METHOD	os	(Ljava/lang/String;)Ljava/lang/String;	a	filterAllowedCharacters
 METHOD	os	(Ljava/lang/String;)Z	b	getBoolean
 CLASS	ou	net/minecraft/util/Tuple
@@ -30505,7 +30505,7 @@ FIELD	bai$a	Ljava/util/UUID;	e	field_186600_e
 FIELD	bai$a	[Lrw;	f	field_186601_f
 METHOD	bai$a	(Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonObject;	a	func_186592_a
 METHOD	bai$a	(Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lbai$a;	a	func_186586_a
-METHOD	bai$a	(I)Ljava/lang/String;	a	format
+METHOD	bai$a	(I)Ljava/lang/String;	a	format_a
 METHOD	bai$a	(Ljava/lang/String;)I	a	getIDFromString
 METHOD	bai$a	(Lbai$a;)Ljava/util/UUID;	a	access$000
 METHOD	bai$a	(Lbai$a;)[Lrw;	b	access$100

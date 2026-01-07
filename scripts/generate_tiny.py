@@ -1,6 +1,6 @@
 """
 Copyright (C) 2026 - PsychedelicPalimpsest
-Feel free to share this within the bounds of 
+Feel free to share this within the bounds of
 CC0 1.0 Universal
 """
 
@@ -11,18 +11,26 @@ from typing import Generator
 import json
 
 
+import zipfile
+
+
 PARENT = dirname(dirname(abspath(__file__)))
 os.chdir(PARENT)
 
 
 SCRIPTS_DIR = join(dirname(PARENT), "utils", "scripts")
-print(SCRIPTS_DIR)
 if not exists(SCRIPTS_DIR):
     raise RuntimeError("Refusing to run without use of official workspace")
 
 sys.path.append(SCRIPTS_DIR)
 
-from mcjar import get_piston_file, get_piston_json_path, MAPPINGIO, download_cached
+from mcjar import (
+    get_piston_file,
+    get_piston_json_path,
+    MAPPINGIO,
+    download_cached,
+    download_file,
+)
 
 from jar_marker import taint_jar, generate_tiny
 
@@ -226,9 +234,7 @@ def tiny_renamer(mcp_fields, mcp_methods, tiny_file, ignore_conflicts: bool = Fa
     # Hardcoded known conflicts where the TargetName exists in the source JAR (unmapped)
     # causing a collision between MappedName and UnmappedName.
     # Format: (TargetName, Descriptor)
-    KNOWN_JAR_CONFLICTS = {
-        ("format", "(I)Ljava/lang/String;")
-    }
+    KNOWN_JAR_CONFLICTS = {("format", "(I)Ljava/lang/String;")}
 
     for (t_name, desc), obf_list in target_claims.items():
         is_jar_conflict = (t_name, desc) in KNOWN_JAR_CONFLICTS
@@ -239,11 +245,15 @@ def tiny_renamer(mcp_fields, mcp_methods, tiny_file, ignore_conflicts: bool = Fa
             obf_list.sort()
 
             if is_jar_conflict:
-                 print(f"[WARN] JAR Conflict on {t_name}{desc}: claimed by {obf_list}. Renaming all.")
-                 start_idx = 0
+                print(
+                    f"[WARN] JAR Conflict on {t_name}{desc}: claimed by {obf_list}. Renaming all."
+                )
+                start_idx = 0
             else:
                 winner = obf_list[0]
-                print(f"[WARN] Target Collision on {t_name}{desc}: claimed by {obf_list}")
+                print(
+                    f"[WARN] Target Collision on {t_name}{desc}: claimed by {obf_list}"
+                )
                 # Winner keeps the clean name
                 final_sig_map[(winner, desc)] = t_name
                 start_idx = 1
@@ -316,6 +326,7 @@ def tiny_renamer(mcp_fields, mcp_methods, tiny_file, ignore_conflicts: bool = Fa
     with open(tiny_file, "w") as fout:
         fout.writelines(final_lines)
     print("[*] Finished renaming operations")
+
 
 # Used in a1.2.1_01-b1.3_01 (MCP 29a), and then for a few three digit MCP versions after.
 # This format is differentiated by its dual use of retroguard and CSVs.
@@ -466,6 +477,18 @@ SPECIAL_SOURCE_URL = "https://repo1.maven.org/maven2/net/md-5/SpecialSource/1.11
 SPECIAL_SOURCE = download_cached(SPECIAL_SOURCE_URL, "SpecialSource.jar")
 FORGE_MAPPINGS = join("newer_mappings", "versions")
 
+MODERN_FORGE_OUT = "generated_forge_mcpbot_configs"
+
+ZFFU_HYBRID = "generated_zffu_mcpbot_configs"
+
+
+ZFFU_MAPPING_URL = "https://githubraw.com/GrylaMC/newer_forge_mappings/main/versions"
+
+MCPBOT_JSON = download_cached(
+    "https://github.com/Aizistral-Studios/MCP-Archive/raw/refs/heads/dungeon-master/real_versions.json",
+    "real_version.json",
+)
+
 
 def special_source_map(jar, mapping):
     temp = tempfile.mktemp(".jar")
@@ -503,18 +526,26 @@ def convert_srg_config(mc_ver, diR, tiny):
     os.remove(tainted_mapped_jar)
 
 
-# Works with mcp and mcp-tsrg types
-def forge_mcp_style(mc_ver, diR, mapping_json):
-    tiny_dir = join("tiny_v1s", mc_ver)
+# Works with mcp and mcp-tsrg types.
+# Completely trusts the zffu mappings.
+def zffu_mcp_style(version):
+
+    mapping_json_path = download_cached(
+        f"{ZFFU_MAPPING_URL}/{version}/mapping.json", "mapping.json"
+    )
+    with open(mapping_json_path, "r") as f:
+        mapping_json = json.load(f)
+
+    tiny_dir = join("tiny_v1s", version)
     os.makedirs(tiny_dir, exist_ok=True)
-    tiny = join(tiny_dir, mc_ver + "-mcpFORGE.tiny")
+    tiny = join(tiny_dir, version + "-mcpZFFU.tiny")
 
     if exists(tiny):
         return
 
-    print(f"=========== {mc_ver}: Style Forge MCP with renamer ===========")
+    print(f"=========== {version}: Style Zffu MCP with renamer ===========")
     tainted_jar = tempfile.mktemp(".jar")
-    taint_jar(get_piston_file(mc_ver, "client"), tainted_jar)
+    taint_jar(get_piston_file(version, "client"), tainted_jar)
 
     mapping_file = (
         mapping_json["files"]["srg"]
@@ -523,38 +554,129 @@ def forge_mcp_style(mc_ver, diR, mapping_json):
     )
 
     print("[*] Running SpecialSource remapper")
-    tainted_mapped_jar = special_source_map(tainted_jar, join(diR, mapping_file))
+    tainted_mapped_jar = special_source_map(
+        tainted_jar,
+        download_cached(f"{ZFFU_MAPPING_URL}/{version}/{mapping_file}", mapping_file),
+    )
     os.remove(tainted_jar)
 
     generate_tiny(tainted_mapped_jar, tiny)
     tiny_renamer(
-        load_beta_csv(join(diR, "fields.csv")),
-        load_beta_csv(join(diR, "methods.csv")),
+        load_beta_csv(
+            download_cached(f"{ZFFU_MAPPING_URL}/{version}/fields.csv", "fields.csv")
+        ),
+        load_beta_csv(
+            download_cached(f"{ZFFU_MAPPING_URL}/{version}/methods.csv", "methods.csv")
+        ),
         tiny,
     )
 
     os.remove(tainted_mapped_jar)
 
 
-def convert_from_modern_forge():
-    for diR in os.listdir(FORGE_MAPPINGS):
-        mc_ver = diR
-        diR = join(FORGE_MAPPINGS, diR)
-        assert isdir(diR)
-        with open(join(diR, "mapping.json"), "r") as f:
-            mapping_json = json.load(f)
-        typE = mapping_json["type"]
+# Assumes a joined.tsrg file exists in config_path
+def _mcpbot_build_with_partial_config(version, config_path, tiny, is_srg=False):
+    with open(MCPBOT_JSON) as f:
+        mcpbot = json.load(f)
 
-        if typE == "mcp-tsrg" and "csv" in mapping_json["files"]:
-            if mc_ver == "1.16.5":
-                # TODO: This version is invalid
-                continue
+    assert version in mcpbot
 
-            forge_mcp_style(mc_ver, diR, mapping_json)
-        elif typE == "mcp":
-            forge_mcp_style(mc_ver, diR, mapping_json)
-        elif typE != "mcp-tsrg":
-            print(f"UNKNOWN TYPE: {typE}")
+    print("[*] Downloading MCP CSVs")
+
+    # I was hoping that these MCPbot numbers would just be MCP versions, NOPE, it is some other versioning system
+    # so it really makes no difference what version is used, in that case just choose the most recent one.
+    if mcpbot[version]["stable"]:
+        num = mcpbot[version]["stable"][-1]
+
+        url = f"https://githubraw.com/Aizistral-Studios/MCP-Archive/refs/heads/dungeon-master/de/oceanlabs/mcp/mcp_stable/{num}-{version}/mcp_stable-{num}-{version}.zip"
+    else:
+        num = mcpbot[version]["snapshot"][-1]
+        url = f"https://githubraw.com/Aizistral-Studios/MCP-Archive/refs/heads/dungeon-master/de/oceanlabs/mcp/mcp_snapshot/{num}-{version}/mcp_snapshot-{num}-{version}.zip"
+
+    path = download_cached(url, basename(url))
+    with zipfile.ZipFile(path, "r") as zf:
+        zf.extractall(config_path)
+
+    tainted_jar = tempfile.mktemp(".jar")
+    taint_jar(get_piston_file(version, "client"), tainted_jar)
+
+    tainted_mapped_jar = special_source_map(
+        tainted_jar, join(config_path, "joined.srg" if is_srg else "joined.tsrg")
+    )
+    os.remove(tainted_jar)
+
+    os.makedirs(join("tiny_v1s", version), exist_ok=True)
+
+    generate_tiny(tainted_mapped_jar, tiny)
+    tiny_renamer(
+        load_beta_csv(join(config_path, "fields.csv")),
+        load_beta_csv(join(config_path, "methods.csv")),
+        tiny,
+        True,
+    )
+
+    os.remove(tainted_mapped_jar)
+
+
+# Build with MCP_config
+# Uses the mcp_config files on NeoForged's maven
+# to generate a config that can be built
+#
+# https://maven.neoforged.net/#/releases/de/oceanlabs/mcp/mcp_config
+def mcp_config_build(version):
+    config_path = join(MODERN_FORGE_OUT, version)
+
+    if exists(config_path):
+        return
+
+    print(f"=========== {version}: Style Forge MCP with renamer ===========")
+
+    os.makedirs(config_path)
+
+    print("[*] Downloading mcp config")
+    zip_out = join(config_path, f"mcp_config-{version}.zip")
+    download_file(
+        f"https://maven.neoforged.net/releases/de/oceanlabs/mcp/mcp_config/{version}/mcp_config-{version}.zip",
+        zip_out,
+    )
+
+    print("[*] Extracting")
+    with zipfile.ZipFile(zip_out, "r") as zf:
+        zf.extractall(
+            config_path,
+            [item for item in zf.filelist if item.filename.startswith("config/")],
+        )
+        for child in os.listdir(join(config_path, "config")):
+            os.rename(join(config_path, "config", child), join(config_path, child))
+        os.rmdir(join(config_path, "config"))
+
+    tiny = join("tiny_v1s", version, f"{version}-mcpFORGE.tiny")
+    _mcpbot_build_with_partial_config(version, config_path, tiny)
+
+
+# Tries to split the difference, and only use the zffu joined.tsrg file.
+# This is because I am unsure of where these are from, and want to keep this MCP
+# focused.
+def mcpbot_zffu_build(version, is_srg=False):
+    config_path = join(ZFFU_HYBRID, version)
+
+    if exists(config_path):
+        return
+
+    print(f"=========== {version}: Style Hybrid Zffu/MCPBot with renamer ===========")
+
+    ext = "srg" if is_srg else "tsrg"
+
+    os.makedirs(config_path)
+
+    download_file(
+        f"{ZFFU_MAPPING_URL}/{version}/joined.{ext}",
+        join(config_path, f"joined.{ext}"),
+    )
+
+    tiny = join("tiny_v1s", version, f"{version}-mcpMCPBOT.tiny")
+
+    _mcpbot_build_with_partial_config(version, config_path, tiny, is_srg=is_srg)
 
 
 if __name__ == "__main__":
@@ -631,11 +753,9 @@ if __name__ == "__main__":
         ("1.2.5/mcp62.zip", ["1.2.5"]),
         ("12w17a/mcp65.zip", ["@omni@12w17a-1424"]),
         ("12w26a/mcp615.zip", ["@omni@12w26a"]),
-
         ("1.3.1/mcp70.zip", ["1.3.1"]),
         ("1.3.1/mcp70a.zip", ["1.3.1"]),
         ("1.3.2/mcp72.zip", ["1.3.2"]),
-
         ("1.4/mcp717_pre3.zip", ["1.4"]),
         ("1.4.2/mcp719.zip", ["1.4.2"]),
         ("1.4.3/mcp720pre1.zip", ["1.4.3"]),
@@ -644,7 +764,6 @@ if __name__ == "__main__":
         ("1.4.6/mcp725.zip", ["1.4.6"]),
         ("1.4.7/mcp726.zip", ["1.4.7"]),
         ("1.4.7/mcp726a.zip", ["1.4.7"]),
-
         ("13w02b/mcp730c.zip", ["@omni@13w02b"]),
         # Fails to generate
         # ("13w05b/mcp734.zip", ["@omni@13w05b"]),
@@ -684,8 +803,6 @@ if __name__ == "__main__":
             use_piston_json=True,
         )
 
-
-
     convert_srg_config(
         "@omni@13w02b",
         join(EXTRACTED_FORGE_DIR, "13w02b", "mcp730"),
@@ -699,11 +816,54 @@ if __name__ == "__main__":
         ("1.6", "mcp801"),
         ("1.7.2", "mcp901-alpha"),
         ("1.7.9", "mcp904"),
-        ("1.7.10", "mcp905")]:
+        ("1.7.10", "mcp905"),
+    ]:
         convert_srg_config(
             mc_ver,
             join(EXTRACTED_FORGE_DIR, mc_ver, mcp_ver),
             tinyname(mc_ver, mcp_ver),
         )
 
-    convert_from_modern_forge()
+
+    # Suprisingly, not a lot of forge MCP versions that are also in MCPBot
+    for version in [
+        "1.13",
+        "1.13.1",
+        "1.13.2",
+
+        "1.14",
+        "1.14.1",
+        "1.14.2",
+        "1.14.3",
+        "1.14.4",
+
+        "1.15",
+        "1.15.1",
+    ]:
+        mcp_config_build(version)
+
+
+    for version in ["1.12", "1.7.10", "1.8.8", "1.8.9", "1.9.4"]:
+        mcpbot_zffu_build(version, is_srg=True)
+    for version in [
+    ]:
+        mcpbot_zffu_build(version, is_srg=False)
+
+    # These versions could not be found in MCPBot
+    for version in [
+        "1.10",
+        "1.11.2",
+
+        "1.12.2",
+
+        "1.16",
+        "1.16.1",
+        "1.16.2",
+        "1.16.3",
+        "1.16.4",
+    ]:
+        zffu_mcp_style(version)
+
+
+
+

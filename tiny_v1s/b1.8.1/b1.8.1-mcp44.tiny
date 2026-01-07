@@ -453,7 +453,7 @@ FIELD	acc	Lna;	k	distanceStatType
 METHOD	acc	()Lacc;	h	initIndependentStat
 METHOD	acc	()Lacc;	a	registerStat
 METHOD	acc	()Z	e	doesGuiPauseGame
-METHOD	acc	(I)Ljava/lang/String;	a	format
+METHOD	acc	(I)Ljava/lang/String;	a	format_a
 METHOD	acc	()Ljava/lang/String;	toString	toString
 METHOD	acc	()Ljava/text/NumberFormat;	i	getNumberFormat
 METHOD	acc	()Ljava/text/DecimalFormat;	j	getDecimalFormat
@@ -1046,11 +1046,11 @@ METHOD	at	(Lul;IIIILwd;)Z	a	onBlockDestroyed
 METHOD	at	(Llr;)Z	a	canHarvestBlock
 METHOD	at	(Lul;Llr;)F	a	getStrVsBlock
 CLASS	au	net/minecraft/src/StatTypeDistance
-METHOD	au	(I)Ljava/lang/String;	a	format
+METHOD	au	(I)Ljava/lang/String;	a	format_a
 CLASS	av	net/minecraft/src/StatTypeTime
-METHOD	av	(I)Ljava/lang/String;	a	format
+METHOD	av	(I)Ljava/lang/String;	a	format_a
 CLASS	aw	net/minecraft/src/StatTypeSimple
-METHOD	aw	(I)Ljava/lang/String;	a	format
+METHOD	aw	(I)Ljava/lang/String;	a	format_a
 CLASS	ax	net/minecraft/src/Vec3D
 FIELD	ax	Ljava/util/List;	d	vectorList
 FIELD	ax	I	e	nextVector
@@ -1088,7 +1088,7 @@ METHOD	az	(Lsz;)V	a	flipPlayer
 CLASS	b	net/minecraft/src/AchievementMap
 FIELD	b	Lb;	a	instance
 FIELD	b	Ljava/util/Map;	b	guidMap
-METHOD	b	(I)Ljava/lang/String;	a	format
+METHOD	b	(I)Ljava/lang/String;	a	format_a
 CLASS	ba	net/minecraft/src/EntityFireball
 FIELD	ba	I	ap	xTile
 FIELD	ba	I	aq	yTile
@@ -1121,7 +1121,7 @@ CLASS	bc	net/minecraft/src/GuiSlotStatsItem
 FIELD	bc	Lce;	a	field_27275_a
 METHOD	bc	(IILxe;)V	a	func_27260_a
 METHOD	bc	(IIIILxe;)V	a	drawSlot
-METHOD	bc	(I)Ljava/lang/String;	a	format
+METHOD	bc	(I)Ljava/lang/String;	a	format_a
 CLASS	bd	net/minecraft/src/ThreadPollServers
 FIELD	bd	Lkv;	a	field_35601_a
 FIELD	bd	Lmr;	b	field_35600_b
@@ -1682,7 +1682,7 @@ CLASS	dj	net/minecraft/src/GuiSlotStatsBlock
 FIELD	dj	Lce;	a	field_27274_a
 METHOD	dj	(IILxe;)V	a	func_27260_a
 METHOD	dj	(IIIILxe;)V	a	drawSlot
-METHOD	dj	(I)Ljava/lang/String;	a	format
+METHOD	dj	(I)Ljava/lang/String;	a	format_a
 CLASS	dk	net/minecraft/src/WorldGenSand
 FIELD	dk	I	a	field_35264_a
 FIELD	dk	I	b	field_35263_b
@@ -2326,7 +2326,7 @@ FIELD	fv	F	K	field_22271_G
 FIELD	fv	F	L	field_35379_L
 FIELD	fv	F	M	field_35380_M
 FIELD	fv	I	N	guiScale
-METHOD	fv	(I)Ljava/lang/String;	a	format
+METHOD	fv	(I)Ljava/lang/String;	a	format_a
 METHOD	fv	(I)Ljava/lang/String;	b	getOptionDisplayString
 METHOD	fv	(II)V	a	addRecipes
 METHOD	fv	(Ltq;F)V	a	setOptionFloatValue
@@ -3377,7 +3377,7 @@ FIELD	jv	Lvj;	u	buttonSelect
 FIELD	jv	Lvj;	v	buttonDelete
 METHOD	jv	()V	a	addEntity
 METHOD	jv	()V	g	clearPistonTileEntity
-METHOD	jv	(I)Ljava/lang/String;	a	format
+METHOD	jv	(I)Ljava/lang/String;	a	format_a
 METHOD	jv	(I)Ljava/lang/String;	b	getOptionDisplayString
 METHOD	jv	()V	c	clearApplet
 METHOD	jv	(Lvj;)V	a	actionPerformed

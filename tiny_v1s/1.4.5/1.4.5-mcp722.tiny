@@ -181,7 +181,7 @@ FIELD	asl	F	ad	gammaSetting
 FIELD	asl	I	ae	guiScale
 FIELD	asl	I	af	particleSetting
 FIELD	asl	Ljava/lang/String;	ag	language
-METHOD	asl	(I)Ljava/lang/String;	a	format
+METHOD	asl	(I)Ljava/lang/String;	a	format_a
 METHOD	asl	(I)Ljava/lang/String;	b	getOptionDisplayString
 METHOD	asl	(I)Ljava/lang/String;	c	getKeyDisplayString
 METHOD	asl	(II)V	a	addObjectByDataType
@@ -814,7 +814,7 @@ FIELD	auh	Last;	w	buttonDelete
 FIELD	auh	Last;	x	field_82316_w
 METHOD	auh	()V	A_	initGui
 METHOD	auh	()V	h	addJvmArgsToSnooper
-METHOD	auh	(I)Ljava/lang/String;	a	format
+METHOD	auh	(I)Ljava/lang/String;	a	format_a
 METHOD	auh	(I)Ljava/lang/String;	d	getFullSlabName
 METHOD	auh	()V	g	addBaseDataToSnooper
 METHOD	auh	(Last;)V	a	actionPerformed
@@ -8506,11 +8506,11 @@ CLASS	jk	net/minecraft/src/StatCrafting
 FIELD	jk	I	a	itemID
 METHOD	jk	()I	a	draw
 CLASS	jm	net/minecraft/src/StatTypeSimple
-METHOD	jm	(I)Ljava/lang/String;	a	format
+METHOD	jm	(I)Ljava/lang/String;	a	format_a
 CLASS	jn	net/minecraft/src/StatTypeTime
-METHOD	jn	(I)Ljava/lang/String;	a	format
+METHOD	jn	(I)Ljava/lang/String;	a	format_a
 CLASS	jo	net/minecraft/src/StatTypeDistance
-METHOD	jo	(I)Ljava/lang/String;	a	format
+METHOD	jo	(I)Ljava/lang/String;	a	format_a
 CLASS	jl	net/minecraft/src/StatBase
 FIELD	jl	I	e	statId
 FIELD	jl	Ljava/lang/String;	a	statName
@@ -8525,7 +8525,7 @@ FIELD	jl	Ljp;	j	distanceStatType
 METHOD	jl	()Ljl;	h	initIndependentStat
 METHOD	jl	()Ljl;	g	registerStat
 METHOD	jl	()Z	d	canSpawnLightningBolt
-METHOD	jl	(I)Ljava/lang/String;	a	format
+METHOD	jl	(I)Ljava/lang/String;	a	format_a
 METHOD	jl	()Ljava/lang/String;	i	getName
 METHOD	jl	()Ljava/lang/String;	toString	toString
 METHOD	jl	()Ljava/text/NumberFormat;	j	getNumberFormat
@@ -8579,7 +8579,7 @@ METHOD	jq	(I)Ljl;	a	getOneShotStat
 CLASS	jr	net/minecraft/src/AchievementMap
 FIELD	jr	Ljr;	a	instance
 FIELD	jr	Ljava/util/Map;	b	guidMap
-METHOD	jr	(I)Ljava/lang/String;	a	format
+METHOD	jr	(I)Ljava/lang/String;	a	format_a
 CLASS	jt	net/minecraft/src/CryptManager
 FIELD	jt	Ljava/nio/charset/Charset;	a	charSet
 METHOD	jt	()Ljavax/crypto/SecretKey;	a	func_75890_a
@@ -8751,7 +8751,7 @@ FIELD	kl	F	c	field_76335_c
 METHOD	kl	(FF)F	a	func_76333_a
 CLASS	km	net/minecraft/src/StringUtils
 FIELD	km	Ljava/util/regex/Pattern;	a	patternControlCode
-METHOD	km	(I)Ljava/lang/String;	a	format
+METHOD	km	(I)Ljava/lang/String;	a	format_a
 METHOD	km	(Ljava/lang/String;)Ljava/lang/String;	a	filerAllowedCharacters
 CLASS	kt	net/minecraft/src/Tuple
 FIELD	kt	Ljava/lang/Object;	a	first

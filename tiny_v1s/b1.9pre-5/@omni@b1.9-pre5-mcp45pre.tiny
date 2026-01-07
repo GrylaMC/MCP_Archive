@@ -1464,7 +1464,7 @@ FIELD	agf	Lpe;	k	distanceStatType
 METHOD	agf	()Lagf;	h	initIndependentStat
 METHOD	agf	()Lagf;	a	registerStat
 METHOD	agf	()Z	e	doesGuiPauseGame
-METHOD	agf	(I)Ljava/lang/String;	a	format
+METHOD	agf	(I)Ljava/lang/String;	a	format_a
 METHOD	agf	()Ljava/lang/String;	toString	toString
 METHOD	agf	()Ljava/text/NumberFormat;	i	getNumberFormat
 METHOD	agf	()Ljava/text/DecimalFormat;	j	getDecimalFormat
@@ -2192,11 +2192,11 @@ METHOD	ay	(Lxs;IIIILzs;)Z	a	onBlockDestroyed
 METHOD	ay	(Lno;)Z	a	canHarvestBlock
 METHOD	ay	(Lxs;Lno;)F	a	getStrVsBlock
 CLASS	az	net/minecraft/src/StatTypeDistance
-METHOD	az	(I)Ljava/lang/String;	a	format
+METHOD	az	(I)Ljava/lang/String;	a	format_a
 CLASS	b	net/minecraft/src/AchievementMap
 FIELD	b	Lb;	a	instance
 FIELD	b	Ljava/util/Map;	b	guidMap
-METHOD	b	(I)Ljava/lang/String;	a	format
+METHOD	b	(I)Ljava/lang/String;	a	format_a
 CLASS	ba	net/minecraft/src/EntityPotion
 FIELD	ba	I	d	field_40089_d
 METHOD	ba	()F	e	getCloudHeight
@@ -2212,9 +2212,9 @@ FIELD	bb	[Lbb;	d	field_40586_d
 METHOD	bb	()[Lbb;	values	values
 METHOD	bb	(Ljava/lang/String;)Lbb;	valueOf	valueOf
 CLASS	bc	net/minecraft/src/StatTypeTime
-METHOD	bc	(I)Ljava/lang/String;	a	format
+METHOD	bc	(I)Ljava/lang/String;	a	format_a
 CLASS	bd	net/minecraft/src/StatTypeSimple
-METHOD	bd	(I)Ljava/lang/String;	a	format
+METHOD	bd	(I)Ljava/lang/String;	a	format_a
 CLASS	be	net/minecraft/src/Vec3D
 FIELD	be	Ljava/util/List;	d	vectorList
 FIELD	be	I	e	nextVector
@@ -2284,7 +2284,7 @@ CLASS	bk	net/minecraft/src/GuiSlotStatsItem
 FIELD	bk	Lcq;	a	field_27275_a
 METHOD	bk	(IILaaw;)V	a	func_27260_a
 METHOD	bk	(IIIILaaw;)V	a	drawSlot
-METHOD	bk	(I)Ljava/lang/String;	a	format
+METHOD	bk	(I)Ljava/lang/String;	a	format_a
 CLASS	bl	net/minecraft/src/ThreadPollServers
 FIELD	bl	Lmp;	a	server
 FIELD	bl	Los;	b	serverSlotContainer
@@ -2958,7 +2958,7 @@ CLASS	eb	net/minecraft/src/GuiSlotStatsBlock
 FIELD	eb	Lcq;	a	field_27274_a
 METHOD	eb	(IILaaw;)V	a	func_27260_a
 METHOD	eb	(IIIILaaw;)V	a	drawSlot
-METHOD	eb	(I)Ljava/lang/String;	a	format
+METHOD	eb	(I)Ljava/lang/String;	a	format_a
 CLASS	ec	net/minecraft/src/OpenGlHelper
 FIELD	ec	I	a	field_40457_a
 FIELD	ec	I	b	field_40455_b
@@ -3649,7 +3649,7 @@ FIELD	gv	F	L	field_22271_G
 FIELD	gv	F	M	fovSetting
 FIELD	gv	F	N	gammaSetting
 FIELD	gv	I	O	guiScale
-METHOD	gv	(I)Ljava/lang/String;	a	format
+METHOD	gv	(I)Ljava/lang/String;	a	format_a
 METHOD	gv	(I)Ljava/lang/String;	b	getOptionDisplayString
 METHOD	gv	(II)V	a	addRecipes
 METHOD	gv	(Lwv;F)V	a	setOptionFloatValue
@@ -4925,7 +4925,7 @@ FIELD	lq	Lys;	n	buttonSelect
 FIELD	lq	Lys;	o	buttonDelete
 METHOD	lq	()V	a	addEntity
 METHOD	lq	()V	g	clearPistonTileEntity
-METHOD	lq	(I)Ljava/lang/String;	a	format
+METHOD	lq	(I)Ljava/lang/String;	a	format_a
 METHOD	lq	(I)Ljava/lang/String;	b	getOptionDisplayString
 METHOD	lq	()V	c	clearApplet
 METHOD	lq	(Lys;)V	a	actionPerformed

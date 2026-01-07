@@ -2109,7 +2109,7 @@ FIELD	ahm	Lpw;	j	distanceStatType
 METHOD	ahm	()Lahm;	h	initIndependentStat
 METHOD	ahm	()Lahm;	a	registerStat
 METHOD	ahm	()Z	e	isAchievement
-METHOD	ahm	(I)Ljava/lang/String;	a	format
+METHOD	ahm	(I)Ljava/lang/String;	a	format_a
 METHOD	ahm	()Ljava/lang/String;	i	func_44020_i
 METHOD	ahm	()Ljava/lang/String;	toString	toString
 METHOD	ahm	()Ljava/text/NumberFormat;	j	getNumberFormat
@@ -2860,7 +2860,7 @@ METHOD	az	(Lyq;Lvq;Lxb;)Lyq;	a	onItemRightClick
 CLASS	b	net/minecraft/src/AchievementMap
 FIELD	b	Lb;	a	instance
 FIELD	b	Ljava/util/Map;	b	guidMap
-METHOD	b	(I)Ljava/lang/String;	a	format
+METHOD	b	(I)Ljava/lang/String;	a	format_a
 CLASS	ba	net/minecraft/src/EntityAnimal
 FIELD	ba	I	a	inLove
 FIELD	ba	I	b	breeding
@@ -2908,7 +2908,7 @@ METHOD	be	(Lyq;IIIILaar;)Z	a	onBlockDestroyed
 METHOD	be	(Loe;)Z	a	canHarvestBlock
 METHOD	be	(Lyq;Loe;)F	a	getStrVsBlock
 CLASS	bf	net/minecraft/src/StatTypeDistance
-METHOD	bf	(I)Ljava/lang/String;	a	format
+METHOD	bf	(I)Ljava/lang/String;	a	format_a
 CLASS	bg	net/minecraft/src/EntityPotion
 FIELD	bg	I	d	potionDamage
 METHOD	bg	()F	e	getCloudHeight
@@ -2924,9 +2924,9 @@ FIELD	bh	[Lbh;	d	allCreatureAttributes
 METHOD	bh	()[Lbh;	values	values
 METHOD	bh	(Ljava/lang/String;)Lbh;	valueOf	valueOf
 CLASS	bi	net/minecraft/src/StatTypeTime
-METHOD	bi	(I)Ljava/lang/String;	a	format
+METHOD	bi	(I)Ljava/lang/String;	a	format_a
 CLASS	bj	net/minecraft/src/StatTypeSimple
-METHOD	bj	(I)Ljava/lang/String;	a	format
+METHOD	bj	(I)Ljava/lang/String;	a	format_a
 CLASS	bk	net/minecraft/src/Vec3D
 FIELD	bk	Ljava/util/List;	d	vectorList
 FIELD	bk	I	e	nextVector
@@ -2996,7 +2996,7 @@ CLASS	bq	net/minecraft/src/GuiSlotStatsItem
 FIELD	bq	Lcw;	a	field_27275_a
 METHOD	bq	(IILaby;)V	a	func_27260_a
 METHOD	bq	(IIIILaby;)V	a	drawSlot
-METHOD	bq	(I)Ljava/lang/String;	a	format
+METHOD	bq	(I)Ljava/lang/String;	a	format_a
 CLASS	br	net/minecraft/src/ThreadPollServers
 FIELD	br	Lne;	a	server
 FIELD	br	Lpj;	b	serverSlotContainer
@@ -3733,7 +3733,7 @@ CLASS	el	net/minecraft/src/GuiSlotStatsBlock
 FIELD	el	Lcw;	a	field_27274_a
 METHOD	el	(IILaby;)V	a	func_27260_a
 METHOD	el	(IIIILaby;)V	a	drawSlot
-METHOD	el	(I)Ljava/lang/String;	a	format
+METHOD	el	(I)Ljava/lang/String;	a	format_a
 CLASS	em	net/minecraft/src/OpenGlHelper
 FIELD	em	I	a	lightmapDisabled
 FIELD	em	I	b	lightmapEnabled
@@ -4443,7 +4443,7 @@ FIELD	hh	F	N	gammaSetting
 FIELD	hh	I	O	guiScale
 FIELD	hh	I	P	particles
 FIELD	hh	Ljava/lang/String;	Q	field_44018_Q
-METHOD	hh	(I)Ljava/lang/String;	a	format
+METHOD	hh	(I)Ljava/lang/String;	a	format_a
 METHOD	hh	(I)Ljava/lang/String;	b	getOptionDisplayString
 METHOD	hh	(I)Ljava/lang/String;	c	getKeyDisplayString
 METHOD	hh	(II)V	a	addRecipes
@@ -5748,7 +5748,7 @@ FIELD	md	Lzr;	n	buttonSelect
 FIELD	md	Lzr;	o	buttonDelete
 METHOD	md	()V	c	clearApplet
 METHOD	md	()V	g	checkForAdjacentChests
-METHOD	md	(I)Ljava/lang/String;	a	format
+METHOD	md	(I)Ljava/lang/String;	a	format_a
 METHOD	md	(I)Ljava/lang/String;	b	getOptionDisplayString
 METHOD	md	()V	d	addHeaderButtons
 METHOD	md	(Lzr;)V	a	actionPerformed
@@ -10076,7 +10076,7 @@ METHOD	yr	(Labx;Lvq;)Lms;	a	createEntityFromNBT
 METHOD	yr	(ILvq;)Lms;	a	createEntity
 METHOD	yr	(Lms;)I	a	getDamageVsEntity
 METHOD	yr	(Lms;)Ljava/lang/String;	b	getEntityString
-METHOD	yr	(I)Ljava/lang/String;	a	format
+METHOD	yr	(I)Ljava/lang/String;	a	format_a
 CLASS	ys	net/minecraft/src/ContainerBrewingStand
 FIELD	ys	Lajn;	a	tileBrewingStand
 FIELD	ys	I	b	brewTime
