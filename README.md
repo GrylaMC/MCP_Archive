@@ -4,13 +4,7 @@ An archive most public MCP versions. Along with my attempt at translating them i
 
 Please note here, due to the legacy nature of these mappings, they lack the 'intermediary' mappings needed for loom, and such require more work to be useful (beyond just remapping jars)
 
-
-In addition, MCP is under an extremly restrictive license. So use with caution!
-
-
-
-
-
+In addition, MCP is under an extremely restrictive license. So use with caution!
 
 
 
@@ -18,3 +12,133 @@ Also see [MCP-Archive](https://github.com/Aizistral-Studios/MCP-Archive.git) by
 Aizistral Studios, with an extensive archive of MCP CSVs. 
 
 
+
+## Notes:
+* These are collected from 3 primary sources:
+    1. Complete MCP packs found from across the internet
+    2. MCP configs extracted from old Forge versions
+        * These versions do not seem to be preserved elsewhere
+        * Are also typically pre-release, beta, or development builds
+        * And do not contain any MCP build tools
+    3. The [Zffu/mappings](https://github.com/Zffu/mappings) repo, with what I believe to be newer MCP versions. 
+        * These versions authenticity is **in question**
+            * In the versions that overlap with other MCP builds, there are differences.  
+                * Ex in 1.12 with the `IntegratedServe`r Class:
+                    * MCP:  theWorldSettings
+                    * Zffu: worldSettings
+
+                    * MCP: getShowArms
+                    * Zffu: causesSuffocation
+        * Also lacks any MCP build tools
+        * **TODO:** 
+            * For a more authentic mapping set, combine the Zffu `joined.tsrg` files with the [MCP-Archive](https://github.com/Aizistral-Studios/MCP-Archive.git) CSVs
+            * Or better yet, use the MinecraftForge/MCPConfig `joined.tsrg` files
+
+----------------
+| Finding State     |  MCP Version   |   Tiny V1    | Minecraft Version |
+|-------------------|----------------|--------------|-------------------|
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/a1.1.2/revengpack16.zip)) | a1.1.2 | revengpack16 | [a1.1.2-revengpack16.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/a1.1.2/a1.1.2-revengpack16.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/a1.2.1_01/mcp20a.zip)) | a1.2.1_01 | mcp20a | [a1.2.1_01-mcp20a.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/a1.2.1_01/a1.2.1_01-mcp20a.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/a1.2.1_01/mcp20.zip)) | a1.2.1_01 | mcp20 | [a1.2.1_01-mcp20.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/a1.2.1_01/a1.2.1_01-mcp20.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/a1.2.2/mcp21.zip)) | a1.2.2a | mcp21 | [a1.2.2a-mcp21.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/a1.2.2/a1.2.2a-mcp21.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/a1.2.2/mcp22.zip)) | a1.2.2a | mcp22 | [a1.2.2a-mcp22.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/a1.2.2/a1.2.2a-mcp22.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/a1.2.2/mcp22a.zip)) | a1.2.2a | mcp22a | [a1.2.2a-mcp22a.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/a1.2.2/a1.2.2a-mcp22a.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/a1.2.2/mcp21.zip)) | a1.2.2b | mcp21 | [a1.2.2b-mcp21.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/a1.2.2/a1.2.2b-mcp21.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/a1.2.2/mcp22.zip)) | a1.2.2b | mcp22 | [a1.2.2b-mcp22.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/a1.2.2/a1.2.2b-mcp22.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/a1.2.2/mcp22a.zip)) | a1.2.2b | mcp22a | [a1.2.2b-mcp22a.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/a1.2.2/a1.2.2b-mcp22a.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/a1.2.3_04/mcp23.zip)) | a1.2.3_02 | mcp23 | [a1.2.3_02-mcp23.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/a1.2.3_04/a1.2.3_02-mcp23.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/a1.2.5/mcp24.zip)) | a1.2.5 | mcp24 | [a1.2.5-mcp24.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/a1.2.5/a1.2.5-mcp24.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/a1.2.6/mcp25.zip)) | a1.2.6 | mcp25 | [a1.2.6-mcp25.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/a1.2.6/a1.2.6-mcp25.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.1_02/mcp26.zip)) | b1.1_02 | mcp26 | [b1.1_02-mcp26.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.1_02/b1.1_02-mcp26.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.2_01/mcp27.zip)) | b1.2_01 | mcp27 | [b1.2_01-mcp27.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.2_01/b1.2_01-mcp27.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.2_01/mcp28.zip)) | b1.2_01 | mcp28 | [b1.2_01-mcp28.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.2_01/b1.2_01-mcp28.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.3_01/mcp29.zip)) | b1.3_01 | mcp29 | [b1.3_01-mcp29.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.3_01/b1.3_01-mcp29.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.3_01/mcp29a.zip)) | b1.3_01 | mcp29a | [b1.3_01-mcp29a.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.3_01/b1.3_01-mcp29a.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.4/mcp210.zip)) | b1.4 | mcp210 | [b1.4-mcp210.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.4/b1.4-mcp210.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.4_01/mcp30.zip)) | b1.4_01 | mcp30 | [b1.4_01-mcp30.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.4_01/b1.4_01-mcp30.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.4_01/mcp211.zip)) | b1.4_01 | mcp211 | [b1.4_01-mcp211.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.4_01/b1.4_01-mcp211.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.5._01/mcp31.zip)) | b1.5_01 | mcp31 | [b1.5_01-mcp31.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.5._01/b1.5_01-mcp31.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.5._01/mcp212.zip)) | b1.5_01 | mcp212 | [b1.5_01-mcp212.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.5._01/b1.5_01-mcp212.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.6.4/mcp32.zip)) | b1.6.4 | mcp32 | [b1.6.4-mcp32.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.6.4/b1.6.4-mcp32.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.6.5/mcp33.zip)) | b1.6.5 | mcp33 | [b1.6.5-mcp33.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.6.5/b1.6.5-mcp33.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.6.6/mcp34.zip)) | b1.6.6 | mcp34 | [b1.6.6-mcp34.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.6.6/b1.6.6-mcp34.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.6.6/mcp40.zip)) | b1.6.6 | mcp40 | [b1.6.6-mcp40.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.6.6/b1.6.6-mcp40.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.6.6/mcp41.zip)) | b1.6.6 | mcp41 | [b1.6.6-mcp41.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.6.6/b1.6.6-mcp41.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.7.2/mcp42.zip)) | b1.7.2 | mcp42 | [b1.7.2-mcp42.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.7.2/b1.7.2-mcp42.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.7.3/mcp43.zip)) | b1.7.3 | mcp43 | [b1.7.3-mcp43.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.7.3/b1.7.3-mcp43.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.8.1/mcp44.zip)) | b1.8.1 | mcp44 | [b1.8.1-mcp44.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.8.1/b1.8.1-mcp44.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/b1.9pre-5/mcp45pre.zip)) | b1.9-pre5 | mcp45pre | [@omni@b1.9-pre5-mcp45pre.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/b1.9pre-5/@omni@b1.9-pre5-mcp45pre.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.0.0/mcp50.zip)) | 1.0.0 | mcp50 | [1.0.0-mcp50.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.0.0/1.0.0-mcp50.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.1.0/mcp56.zip)) | 1.1 | mcp56 | [1.1-mcp56.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.1.0/1.1-mcp56.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/12w17a/mcp65.zip)) | 12w17a-1424 | mcp65 | [@omni@12w17a-1424-mcp65.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/12w17a/@omni@12w17a-1424-mcp65.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/12w26a/mcp615.zip)) | 12w26a | mcp615 | [@omni@12w26a-mcp615.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/12w26a/@omni@12w26a-mcp615.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.2.3/mcp60.zip)) | 1.2.3 | mcp60 | [1.2.3-mcp60.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.2.3/1.2.3-mcp60.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.2.4/mcp61.zip)) | 1.2.4 | mcp61 | [1.2.4-mcp61.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.2.4/1.2.4-mcp61.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.2.5/mcp62.zip)) | 1.2.5 | mcp62 | [1.2.5-mcp62.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.2.5/1.2.5-mcp62.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.3.1/mcp70a.zip)) | 1.3.1 | mcp70a | [1.3.1-mcp70a.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.3.1/1.3.1-mcp70a.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.3.1/mcp70.zip)) | 1.3.1 | mcp70 | [1.3.1-mcp70.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.3.1/1.3.1-mcp70.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.3.2/mcp72.zip)) | 1.3.2 | mcp72 | [1.3.2-mcp72.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.3.2/1.3.2-mcp72.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.4/mcp717_pre3.zip)) | 1.4 | mcp717_pre3 | [1.4-mcp717_pre3.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.4/1.4-mcp717_pre3.tiny) |
+| 🟡 Early Forge Config ([link](https://github.com/GrylaMC/MCP_Archive/tree/main/extracted_forge_configs/1.4/mcp717)) | 1.4 | mcp717 | [1.4-mcp717.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.4/1.4-mcp717.tiny) |
+| 🟡 Early Forge Config ([link](https://github.com/GrylaMC/MCP_Archive/tree/main/extracted_forge_configs/1.4.1/mcp718)) | 1.4.1 | mcp718 | [1.4.1-mcp718.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.4.1/1.4.1-mcp718.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.4.2/mcp719.zip)) | 1.4.2 | mcp719 | [1.4.2-mcp719.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.4.2/1.4.2-mcp719.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.4.3/mcp720pre1.zip)) | 1.4.3 | mcp720pre1 | [1.4.3-mcp720pre1.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.4.3/1.4.3-mcp720pre1.tiny) |
+| 🟡 Early Forge Config ([link](https://github.com/GrylaMC/MCP_Archive/tree/main/extracted_forge_configs/1.4.3/mcp720)) | 1.4.3 | mcp720 | [1.4.3-mcp720.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.4.3/1.4.3-mcp720.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.4.4/mcp721.zip)) | 1.4.4 | mcp721 | [1.4.4-mcp721.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.4.4/1.4.4-mcp721.tiny) |
+| 🟡 Early Forge Config ([link](https://github.com/GrylaMC/MCP_Archive/tree/main/extracted_forge_configs/1.4.5/mcp722)) | 1.4.5 | mcp722 | [1.4.5-mcp722.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.4.5/1.4.5-mcp722.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.4.5/mcp723.zip)) | 1.4.5 | mcp723 | [1.4.5-mcp723.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.4.5/1.4.5-mcp723.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.4.6/mcp725.zip)) | 1.4.6 | mcp725 | [1.4.6-mcp725.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.4.6/1.4.6-mcp725.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.4.7/mcp726.zip)) | 1.4.7 | mcp726 | [1.4.7-mcp726.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.4.7/1.4.7-mcp726.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.4.7/mcp726a.zip)) | 1.4.7 | mcp726a | [1.4.7-mcp726a.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.4.7/1.4.7-mcp726a.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/13w02b/mcp730c.zip)) | 13w02b | mcp730c | [@omni@13w02b-mcp730c.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/13w02b/@omni@13w02b-mcp730c.tiny) |
+| 🟡 Early Forge Config ([link](https://github.com/GrylaMC/MCP_Archive/tree/main/extracted_forge_configs/13w02b/mcp730)) | 13w02b | mcp730 | [@omni@13w02b-mcp730.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/@omni@13w02b/@omni@13w02b-mcp730.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/13w09c/mcp739.zip)) | 13w09c | mcp739 | [@omni@13w09c-mcp739.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/13w09c/@omni@13w09c-mcp739.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.5/mcp742.zip)) | 1.5 | mcp742 | [1.5-mcp742.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.5/1.5-mcp742.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.5.1/mcp744.zip)) | 1.5.1 | mcp744 | [1.5.1-mcp744.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.5.1/1.5.1-mcp744.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.5.2/mcp751.zip)) | 1.5.2 | mcp751 | [1.5.2-mcp751.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.5.2/1.5.2-mcp751.tiny) |
+| 🟡 Early Forge Config ([link](https://github.com/GrylaMC/MCP_Archive/tree/main/extracted_forge_configs/1.6/mcp801)) | 1.6 | mcp801 | [1.6-mcp801.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.6/1.6-mcp801.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.6/mcp801-pre.zip)) | 1.6.1 | mcp801-pre | [1.6.1-mcp801-pre.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.6/1.6.1-mcp801-pre.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.6.1/mcp802.zip)) | 1.6.1 | mcp802 | [1.6.1-mcp802.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.6.1/1.6.1-mcp802.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.6.1/mcp803.zip)) | 1.6.1 | mcp803 | [1.6.1-mcp803.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.6.1/1.6.1-mcp803.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.6.2/mcp804.zip)) | 1.6.2 | mcp804 | [1.6.2-mcp804.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.6.2/1.6.2-mcp804.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.6.2/mcp805.zip)) | 1.6.2 | mcp805 | [1.6.2-mcp805.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.6.2/1.6.2-mcp805.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.6.3/mcp809.zip)) | 1.6.3 | mcp809 | [1.6.3-mcp809.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.6.3/1.6.3-mcp809.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.6.4/mcp811.zip)) | 1.6.3 | mcp811 | [1.6.3-mcp811.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.6.4/1.6.3-mcp811.tiny) |
+| 🟡 Early Forge Config ([link](https://github.com/GrylaMC/MCP_Archive/tree/main/extracted_forge_configs/1.7.2/mcp901-alpha)) | 1.7.2 | mcp901-alpha | [1.7.2-mcp901-alpha.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.7.2/1.7.2-mcp901-alpha.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.7.2/mcp902beta.zip)) | 1.7.2 | mcp902beta | [1.7.2-mcp902beta.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.7.2/1.7.2-mcp902beta.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.7.2/mcp903.zip)) | 1.7.2 | mcp903 | [1.7.2-mcp903.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.7.2/1.7.2-mcp903.tiny) |
+| 🟡 Early Forge Config ([link](https://github.com/GrylaMC/MCP_Archive/tree/main/extracted_forge_configs/1.7.9/mcp904)) | 1.7.9 | mcp904 | [1.7.9-mcp904.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.7.9/1.7.9-mcp904.tiny) |
+| 🟡 Early Forge Config ([link](https://github.com/GrylaMC/MCP_Archive/tree/main/extracted_forge_configs/1.7.10/mcp905)) | 1.7.10 | mcp905 | [1.7.10-mcp905.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.7.10/1.7.10-mcp905.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.7.10/mcp908.zip)) | 1.7.10 | mcp908 | [1.7.10-mcp908.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.7.10/1.7.10-mcp908.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.7.10/)) | 1.7.10 |  | [1.7.10-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.7.10/1.7.10-mcpFORGE.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.8/mcp910-pre1.zip)) | 1.8 | mcp910-pre1 | [1.8-mcp910-pre1.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.8/1.8-mcp910-pre1.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.8.8/mcp918.zip)) | 1.8.8 | mcp918 | [1.8.8-mcp918.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.8.8/1.8.8-mcp918.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.8.8/)) | 1.8.8 |  | [1.8.8-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.8.8/1.8.8-mcpFORGE.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.8.9/)) | 1.8.9 |  | [1.8.9-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.8.9/1.8.9-mcpFORGE.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.9/mcp924-beta1.zip)) | 1.9 | mcp924-beta1 | [1.9-mcp924-beta1.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.9/1.9-mcp924-beta1.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.9.4/mcp928.zip)) | 1.9.4 | mcp928 | [1.9.4-mcp928.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.9.4/1.9.4-mcp928.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.9.4/)) | 1.9.4 |  | [1.9.4-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.9.4/1.9.4-mcpFORGE.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.10/mcp931.zip)) | 1.10 | mcp931 | [1.10-mcp931.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.10/1.10-mcp931.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.10/)) | 1.10 |  | [1.10-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.10/1.10-mcpFORGE.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.11/mcp935-rc1.zip)) | 1.11 | mcp935-rc1 | [1.11-mcp935-rc1.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.11/1.11-mcp935-rc1.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.11.2/mcp937.zip)) | 1.11.2 | mcp937 | [1.11.2-mcp937.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.11.2/1.11.2-mcp937.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.11.2/)) | 1.11.2 |  | [1.11.2-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.11.2/1.11.2-mcpFORGE.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.12/mcp940.zip)) | 1.12 | mcp940 | [1.12-mcp940.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.12/1.12-mcp940.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.12/)) | 1.12 |  | [1.12-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.12/1.12-mcpFORGE.tiny) |
+| 🟢 Found Completely ([link](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.12.2/mcp942.zip)) | 1.12.2 | mcp942 | [1.12.2-mcp942.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.12.2/1.12.2-mcp942.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.13/)) | 1.13 |  | [1.13-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.13/1.13-mcpFORGE.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.13.1/)) | 1.13.1 |  | [1.13.1-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.13.1/1.13.1-mcpFORGE.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.13.2/)) | 1.13.2 |  | [1.13.2-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.13.2/1.13.2-mcpFORGE.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.14/)) | 1.14 |  | [1.14-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.14/1.14-mcpFORGE.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.14.1/)) | 1.14.1 |  | [1.14.1-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.14.1/1.14.1-mcpFORGE.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.14.2/)) | 1.14.2 |  | [1.14.2-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.14.2/1.14.2-mcpFORGE.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.14.3/)) | 1.14.3 |  | [1.14.3-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.14.3/1.14.3-mcpFORGE.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.14.4/)) | 1.14.4 |  | [1.14.4-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.14.4/1.14.4-mcpFORGE.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.15/)) | 1.15 |  | [1.15-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.15/1.15-mcpFORGE.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.15.1/)) | 1.15.1 |  | [1.15.1-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.15.1/1.15.1-mcpFORGE.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.15.2/)) | 1.15.2 |  | [1.15.2-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.15.2/1.15.2-mcpFORGE.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.16/)) | 1.16 |  | [1.16-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.16/1.16-mcpFORGE.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.16.1/)) | 1.16.1 |  | [1.16.1-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.16.1/1.16.1-mcpFORGE.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.16.2/)) | 1.16.2 |  | [1.16.2-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.16.2/1.16.2-mcpFORGE.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.16.3/)) | 1.16.3 |  | [1.16.3-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.16.3/1.16.3-mcpFORGE.tiny) |
+| 🟤 Zffu Config ([link](https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.16.4/)) | 1.16.4 |  | [1.16.4-mcpFORGE.tiny](https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.16.4/1.16.4-mcpFORGE.tiny) |
