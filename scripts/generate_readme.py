@@ -15,8 +15,10 @@ os.chdir(PARENT_DIR)
 
 
 COMPLETE_PACKS_DIR = join(PARENT_DIR, "complete_packs")
-EXTRACTED_DIR = join(PARENT_DIR, "extracted_forge_configs")
-NEWER_MAPPINGS = join(PARENT_DIR, "newer_mappings")
+FORGE_EXTRACTED = "extracted_forge_configs"
+
+GEN_FORGEBOT = "generated_forge_mcpbot_configs"
+GEN_ZFFUBOT = "generated_zffu_mcpbot_configs"
 
 
 TINY_V1S = join(PARENT_DIR, "tiny_v1s")
@@ -142,8 +144,8 @@ def complete_packs_data():
 def extracted_forge_data():
     data = []
 
-    for version_dir in os.listdir(EXTRACTED_DIR):
-        version_path = join(EXTRACTED_DIR, version_dir)
+    for version_dir in os.listdir(FORGE_EXTRACTED):
+        version_path = join(FORGE_EXTRACTED, version_dir)
 
         if isfile(version_path):
             continue
@@ -153,8 +155,6 @@ def extracted_forge_data():
     return data
 
 
-def newer_mappings_data():
-    return set(os.listdir(join(NEWER_MAPPINGS, "versions")))
 
 
 def tiny_v1s():
@@ -178,7 +178,6 @@ def generate_data():
     forge = extracted_forge_data()
     forge_mcps = {mcp: (version_dir, mcp) for version_dir, mcp in forge}
 
-    newer = newer_mappings_data()
 
     tinys = tiny_v1s()
 
@@ -207,21 +206,21 @@ def generate_data():
 
         return True
 
-    tinys = list(filter(complete_pack_helper, tinys))
+    tinys = filter(complete_pack_helper, tinys)
 
     def extracted_config_helper(tiny):
         mcp_version = "mcp" + splitext(tiny[3])[0]
         if mcp_version in forge_mcps:
             conf = forge_mcps[mcp_version]
 
-            assert exists(join(EXTRACTED_DIR, conf[0], conf[1]))
+            assert exists(join(FORGE_EXTRACTED, conf[0], conf[1]))
 
             entries.append(
                 {
                     "type": "extracted forge config",
                     "mcp version": mcp_version,
                     "mc version": tiny[2],
-                    "link": f"https://github.com/GrylaMC/MCP_Archive/tree/main/extracted_forge_configs/{conf[0]}/{conf[1]}",
+                    "link": f"https://github.com/GrylaMC/MCP_Archive/tree/main/{FORGE_EXTRACTED}/{conf[0]}/{conf[1]}",
                     "tiny": f"https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/{tiny[0]}/{tiny[1]}",
                 }
             )
@@ -231,24 +230,52 @@ def generate_data():
         return True
 
 
-    tinys = list(filter(extracted_config_helper, tinys))
+    tinys = filter(extracted_config_helper, tinys)
 
-    def new_mapping_helper(tiny):
-        if tiny[3] != "FORGE.tiny" or not tiny[2] in newer:
+    def zffu_helper(tiny):
+        if tiny[3] != "ZFFU.tiny":
             return True
+        entries.append(
+        {
+            "type": "zffu config",
+            "mcp version": "UNKNOWN",
+            "mc version": tiny[2],
+            "link": f"https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/{tiny[2]}/",
+            "tiny": f"https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/{tiny[0]}/{tiny[1]}",
+        }
+        )
+
+        return False
+
+    tinys = filter(zffu_helper, tinys)
+
+
+    def gen_mcpbot_helper(tiny):
+        if not tiny[3].startswith("bot"):
+            return True
+        bot_path = GEN_FORGEBOT if tiny[3] == "botFORGE.tiny" else GEN_ZFFUBOT
+        entry_type = "generated forge config" if tiny[3] == "botFORGE.tiny" else "generated zffu config" 
+
+        assert exists(join(
+            bot_path, tiny[2]
+        ))
+
 
         entries.append(
-            {
-                "type": "newer config mapping",
-                "mcp version": "UNKNOWN",
-                "mc version": tiny[2],
-                "link": f"https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/{tiny[2]}/",
-                "tiny": f"https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/{tiny[0]}/{tiny[1]}",
-            }
+        {
+            "type": entry_type,
+            "mcp version": "UNKNOWN",
+            "mc version": tiny[2],
+            "link": f"https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/{bot_path}/{tiny[2]}/",
+            "tiny": f"https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/{tiny[0]}/{tiny[1]}",
+        }
         )
         return False
 
-    tinys = list(filter(new_mapping_helper, tinys))
+        
+    tinys = list(filter(gen_mcpbot_helper, tinys))
+
+
     assert not tinys
     return sorted(entries, key=sort_key)
 
@@ -269,8 +296,14 @@ def generate_readme_table(entries):
             status = f"🟢 Found Completely ([link]({entry['link']}))"
         elif entry["type"] == "extracted forge config":
             status = f"🟡 Early Forge Config ([link]({entry['link']}))"
-        else: # == "newer config mapping"
+        elif entry["type"] == "generated forge config":
+            status = f"🟣 MCPBot/Forge config ([link]({entry['link']}))"
+        elif entry["type"] == "generated zffu config":
+            status = f"⚫ MCPBot/Zffu config ([link]({entry['link']}))"
+        elif entry["type"] == "zffu config":
             status = f"🟤 Zffu Config ([link]({entry['link']}))"
+        else:
+            assert False
 
 
         out += f"| {status} | {mc_version} | {mcp_version} | [{tiny_name}]({entry['tiny']}) |\n"

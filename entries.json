@@ -219,9 +219,9 @@
   {
     "type": "complete mcp",
     "mcp version": "mcp50",
-    "mc version": "1.0.0",
+    "mc version": "1.0",
     "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/1.0.0/mcp50.zip",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.0.0/1.0.0-mcp50.tiny"
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.0.0/1.0-mcp50.tiny"
   },
   {
     "type": "complete mcp",
@@ -371,18 +371,18 @@
     "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.4.7/1.4.7-mcp726a.tiny"
   },
   {
-    "type": "complete mcp",
-    "mcp version": "mcp730c",
-    "mc version": "@omni@13w02b",
-    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/13w02b/mcp730c.zip",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/13w02b/@omni@13w02b-mcp730c.tiny"
-  },
-  {
     "type": "extracted forge config",
     "mcp version": "mcp730",
     "mc version": "@omni@13w02b",
     "link": "https://github.com/GrylaMC/MCP_Archive/tree/main/extracted_forge_configs/13w02b/mcp730",
     "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/@omni@13w02b/@omni@13w02b-mcp730.tiny"
+  },
+  {
+    "type": "complete mcp",
+    "mcp version": "mcp730c",
+    "mc version": "@omni@13w02b",
+    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/13w02b/mcp730c.zip",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/13w02b/@omni@13w02b-mcp730c.tiny"
   },
   {
     "type": "complete mcp",
@@ -511,11 +511,11 @@
     "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.7.10/1.7.10-mcp908.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "generated zffu config",
     "mcp version": "UNKNOWN",
     "mc version": "1.7.10",
-    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.7.10/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.7.10/1.7.10-mcpFORGE.tiny"
+    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/generated_zffu_mcpbot_configs/1.7.10/",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.7.10/1.7.10-mcpbotZFFU.tiny"
   },
   {
     "type": "complete mcp",
@@ -532,18 +532,18 @@
     "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.8.8/1.8.8-mcp918.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "generated zffu config",
     "mcp version": "UNKNOWN",
     "mc version": "1.8.8",
-    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.8.8/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.8.8/1.8.8-mcpFORGE.tiny"
+    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/generated_zffu_mcpbot_configs/1.8.8/",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.8.8/1.8.8-mcpbotZFFU.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "generated zffu config",
     "mcp version": "UNKNOWN",
     "mc version": "1.8.9",
-    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.8.9/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.8.9/1.8.9-mcpFORGE.tiny"
+    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/generated_zffu_mcpbot_configs/1.8.9/",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.8.9/1.8.9-mcpbotZFFU.tiny"
   },
   {
     "type": "complete mcp",
@@ -560,11 +560,11 @@
     "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.9.4/1.9.4-mcp928.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "generated zffu config",
     "mcp version": "UNKNOWN",
     "mc version": "1.9.4",
-    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.9.4/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.9.4/1.9.4-mcpFORGE.tiny"
+    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/generated_zffu_mcpbot_configs/1.9.4/",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.9.4/1.9.4-mcpbotZFFU.tiny"
   },
   {
     "type": "complete mcp",
@@ -574,11 +574,11 @@
     "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.10/1.10-mcp931.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "zffu config",
     "mcp version": "UNKNOWN",
     "mc version": "1.10",
     "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.10/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.10/1.10-mcpFORGE.tiny"
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.10/1.10-mcpZFFU.tiny"
   },
   {
     "type": "complete mcp",
@@ -595,11 +595,11 @@
     "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.11.2/1.11.2-mcp937.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "zffu config",
     "mcp version": "UNKNOWN",
     "mc version": "1.11.2",
     "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.11.2/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.11.2/1.11.2-mcpFORGE.tiny"
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.11.2/1.11.2-mcpZFFU.tiny"
   },
   {
     "type": "complete mcp",
@@ -609,11 +609,11 @@
     "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.12/1.12-mcp940.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "generated zffu config",
     "mcp version": "UNKNOWN",
     "mc version": "1.12",
-    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.12/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.12/1.12-mcpFORGE.tiny"
+    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/generated_zffu_mcpbot_configs/1.12/",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.12/1.12-mcpbotZFFU.tiny"
   },
   {
     "type": "complete mcp",
@@ -623,115 +623,115 @@
     "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.12.2/1.12.2-mcp942.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "zffu config",
+    "mcp version": "UNKNOWN",
+    "mc version": "1.12.2",
+    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.12.2/",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.12.2/1.12.2-mcpZFFU.tiny"
+  },
+  {
+    "type": "generated forge config",
     "mcp version": "UNKNOWN",
     "mc version": "1.13",
-    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.13/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.13/1.13-mcpFORGE.tiny"
+    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/generated_forge_mcpbot_configs/1.13/",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.13/1.13-mcpbotFORGE.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "generated forge config",
     "mcp version": "UNKNOWN",
     "mc version": "1.13.1",
-    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.13.1/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.13.1/1.13.1-mcpFORGE.tiny"
+    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/generated_forge_mcpbot_configs/1.13.1/",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.13.1/1.13.1-mcpbotFORGE.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "generated forge config",
     "mcp version": "UNKNOWN",
     "mc version": "1.13.2",
-    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.13.2/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.13.2/1.13.2-mcpFORGE.tiny"
+    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/generated_forge_mcpbot_configs/1.13.2/",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.13.2/1.13.2-mcpbotFORGE.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "generated forge config",
     "mcp version": "UNKNOWN",
     "mc version": "1.14",
-    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.14/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.14/1.14-mcpFORGE.tiny"
+    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/generated_forge_mcpbot_configs/1.14/",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.14/1.14-mcpbotFORGE.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "generated forge config",
     "mcp version": "UNKNOWN",
     "mc version": "1.14.1",
-    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.14.1/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.14.1/1.14.1-mcpFORGE.tiny"
+    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/generated_forge_mcpbot_configs/1.14.1/",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.14.1/1.14.1-mcpbotFORGE.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "generated forge config",
     "mcp version": "UNKNOWN",
     "mc version": "1.14.2",
-    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.14.2/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.14.2/1.14.2-mcpFORGE.tiny"
+    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/generated_forge_mcpbot_configs/1.14.2/",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.14.2/1.14.2-mcpbotFORGE.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "generated forge config",
     "mcp version": "UNKNOWN",
     "mc version": "1.14.3",
-    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.14.3/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.14.3/1.14.3-mcpFORGE.tiny"
+    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/generated_forge_mcpbot_configs/1.14.3/",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.14.3/1.14.3-mcpbotFORGE.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "generated forge config",
     "mcp version": "UNKNOWN",
     "mc version": "1.14.4",
-    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.14.4/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.14.4/1.14.4-mcpFORGE.tiny"
+    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/generated_forge_mcpbot_configs/1.14.4/",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.14.4/1.14.4-mcpbotFORGE.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "generated forge config",
     "mcp version": "UNKNOWN",
     "mc version": "1.15",
-    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.15/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.15/1.15-mcpFORGE.tiny"
+    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/generated_forge_mcpbot_configs/1.15/",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.15/1.15-mcpbotFORGE.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "generated forge config",
     "mcp version": "UNKNOWN",
     "mc version": "1.15.1",
-    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.15.1/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.15.1/1.15.1-mcpFORGE.tiny"
+    "link": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/generated_forge_mcpbot_configs/1.15.1/",
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.15.1/1.15.1-mcpbotFORGE.tiny"
   },
   {
-    "type": "newer config mapping",
-    "mcp version": "UNKNOWN",
-    "mc version": "1.15.2",
-    "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.15.2/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.15.2/1.15.2-mcpFORGE.tiny"
-  },
-  {
-    "type": "newer config mapping",
+    "type": "zffu config",
     "mcp version": "UNKNOWN",
     "mc version": "1.16",
     "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.16/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.16/1.16-mcpFORGE.tiny"
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.16/1.16-mcpZFFU.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "zffu config",
     "mcp version": "UNKNOWN",
     "mc version": "1.16.1",
     "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.16.1/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.16.1/1.16.1-mcpFORGE.tiny"
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.16.1/1.16.1-mcpZFFU.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "zffu config",
     "mcp version": "UNKNOWN",
     "mc version": "1.16.2",
     "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.16.2/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.16.2/1.16.2-mcpFORGE.tiny"
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.16.2/1.16.2-mcpZFFU.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "zffu config",
     "mcp version": "UNKNOWN",
     "mc version": "1.16.3",
     "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.16.3/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.16.3/1.16.3-mcpFORGE.tiny"
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.16.3/1.16.3-mcpZFFU.tiny"
   },
   {
-    "type": "newer config mapping",
+    "type": "zffu config",
     "mcp version": "UNKNOWN",
     "mc version": "1.16.4",
     "link": "https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/1.16.4/",
-    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.16.4/1.16.4-mcpFORGE.tiny"
+    "tiny": "https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/1.16.4/1.16.4-mcpZFFU.tiny"
   }
 ]
