@@ -197,8 +197,8 @@ def generate_data():
                     "type": "complete mcp",
                     "mcp version": mcp_version,
                     "mc version": tiny[2],
-                    "link": f"https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/complete_packs/{pack[0]}/{pack[1]}",
-                    "tiny": f"https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/{tiny[0]}/{tiny[1]}",
+                    "link": f"https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/complete_packs/{pack[0]}/{pack[1]}",
+                    "tiny": f"https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/{tiny[0]}/{tiny[1]}",
                 }
             )
 
@@ -221,7 +221,7 @@ def generate_data():
                     "mcp version": mcp_version,
                     "mc version": tiny[2],
                     "link": f"https://github.com/GrylaMC/MCP_Archive/tree/main/{FORGE_EXTRACTED}/{conf[0]}/{conf[1]}",
-                    "tiny": f"https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/{tiny[0]}/{tiny[1]}",
+                    "tiny": f"https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/{tiny[0]}/{tiny[1]}",
                 }
             )
 
@@ -241,7 +241,7 @@ def generate_data():
             "mcp version": "UNKNOWN",
             "mc version": tiny[2],
             "link": f"https://github.com/GrylaMC/newer_forge_mappings/tree/main/versions/{tiny[2]}/",
-            "tiny": f"https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/{tiny[0]}/{tiny[1]}",
+            "tiny": f"https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/{tiny[0]}/{tiny[1]}",
         }
         )
 
@@ -266,8 +266,8 @@ def generate_data():
             "type": entry_type,
             "mcp version": "UNKNOWN",
             "mc version": tiny[2],
-            "link": f"https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/{bot_path}/{tiny[2]}/",
-            "tiny": f"https://cdn.githubraw.com/GrylaMC/MCP_Archive/main/tiny_v1s/{tiny[0]}/{tiny[1]}",
+            "link": f"https://github.com/GrylaMC/MCP_Archive/tree/main/{bot_path}/{tiny[2]}/",
+            "tiny": f"https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/{tiny[0]}/{tiny[1]}",
         }
         )
         return False
