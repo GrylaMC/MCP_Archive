@@ -1,6 +1,20 @@
 [
   {
     "type": "complete mcp",
+    "mcp version": "revengpack14",
+    "mc version": "a1.1.2",
+    "link": "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/complete_packs/a1.1.2/revengpack14.zip",
+    "tiny": "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/a1.1.2/a1.1.2-revengpack14.tiny"
+  },
+  {
+    "type": "complete mcp",
+    "mcp version": "revengpack15",
+    "mc version": "a1.1.2",
+    "link": "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/complete_packs/a1.1.2/revengpack15.zip",
+    "tiny": "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/tiny_v1s/a1.1.2/a1.1.2-revengpack15.tiny"
+  },
+  {
+    "type": "complete mcp",
     "mcp version": "revengpack16",
     "mc version": "a1.1.2",
     "link": "https://github.com/GrylaMC/MCP_Archive/raw/refs/heads/main/complete_packs/a1.1.2/revengpack16.zip",

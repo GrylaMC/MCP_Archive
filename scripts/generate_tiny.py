@@ -704,7 +704,12 @@ if __name__ == "__main__":
 
 
 
-    style_retroguard_only(*stdname("a1.1.2/revengpack16.zip", ["a1.1.2"]))
+    for zip, versions in [
+        ("a1.1.2/revengpack14.zip", ["a1.1.2"]),
+        ("a1.1.2/revengpack15.zip", ["a1.1.2"]),
+        ("a1.1.2/revengpack16.zip", ["a1.1.2"])
+    ]:
+        style_retroguard_only(*stdname(zip, versions))
 
     for zip, versions, *args in [
         ("a1.2.1_01/mcp20.zip", ["a1.2.1_01"]),
